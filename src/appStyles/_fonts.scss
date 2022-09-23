@@ -1,0 +1,52 @@
+@use "./color" as *;
+
+@mixin H1Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 4.1875rem;
+  line-height: 6.28rem;
+}
+
+@mixin H2Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.1875rem !important;
+  line-height: 4.78rem;
+}
+
+@mixin H3Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.375rem;
+  line-height: 3.56rem;
+}
+
+@mixin H4Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+}
+
+@mixin H5Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+}
+
+@mixin H6Font {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin pFont {
+  font-family: "Open Sans";
+  font-size: 1.333rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+@mixin mutedFont {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 4px;
+}
