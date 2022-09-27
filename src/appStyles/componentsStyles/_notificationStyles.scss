@@ -1,0 +1,83 @@
+@use "../color" as *;
+@use "../fonts" as *;
+$completedBackgroundColor: rgba(0, 103, 71, 0.2);
+$canceledTextColor: rgba(255, 0, 0);
+$canceledBgColor: rgba(255, 0, 0, 0.1);
+$refundedTextColor: rgba(0, 97, 103);
+$refundedBgColor: rgba(0, 97, 103, 0.1);
+$inDisputeTextColor: rgba(103, 0, 99);
+$inDisputeBgColor: rgba(103, 0, 99, 0.1);
+$pendingConfirmationTextColor: rgba(0, 103, 4);
+$pendingConfirmationBgColor: rgba(0, 103, 4, 0.1);
+$awaitingDeliveryTextColor: rgba(14, 10, 10, 0.9);
+$awaitingDeliveryBgColor: rgba(0, 0, 0, 0.1);
+$pendingPaymentTextColor: rgba(165, 42, 42);
+$pendingPaymentBgColor: rgba(165, 42, 42, 0.1);
+
+@mixin notificationStyle {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin notificationFont {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.completed,
+.resolved {
+  @include notificationStyle;
+  @include notificationFont;
+  color: $pryColor !important;
+  background-color: $completedBackgroundColor;
+}
+
+.canceled,
+.unresolved {
+  @include notificationStyle;
+  @include notificationFont;
+  color: $canceledTextColor;
+  background-color: $canceledBgColor;
+}
+
+.refunded {
+  @include notificationStyle;
+  @include notificationFont;
+  color: $refundedTextColor;
+  background-color: $refundedBgColor;
+}
+
+.dispute {
+  @include notificationFont;
+  @include notificationStyle;
+  color: $inDisputeTextColor;
+  background-color: $inDisputeBgColor;
+}
+.pending-confirmation {
+  @include notificationFont;
+  @include notificationStyle;
+  color: $pendingConfirmationTextColor;
+  background-color: $pendingConfirmationBgColor;
+}
+
+.awaiting {
+  @include notificationStyle;
+  @include notificationFont;
+  color: $awaitingDeliveryTextColor;
+  background-color: $awaitingDeliveryBgColor;
+}
+
+.pending-payment {
+  @include notificationStyle;
+  @include notificationFont;
+  color: $pendingPaymentTextColor;
+  background-color: $pendingPaymentBgColor;
+}
