@@ -1,6 +1,6 @@
 import { Nav, Navbar, Button } from "react-bootstrap";
-import logo from "../../doshlogo.jpg";
-import logo2 from "../../doshlogolight.jpg";
+import logo from "../../assets/images/doshlogo.jpg";
+import logo2 from "../../assets/images/doshlogolight.jpg";
 
 export const GuestNavbar = () => {
   return (
