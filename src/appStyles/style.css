@@ -17,6 +17,66 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.nav-link {
+  font-family: "Open Sans";
+  font-size: 1.333rem;
+  color: #4b4453 255, 255, 255, 0.7;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  margin: 10px 15px;
+  color: black !important;
+}
+
+.hamburgerIcon,
+.closeIcon {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.guest-nav {
+  margin: 0 20px;
+}
+
+.bigLogo {
+  transform: translateY(-25px);
+}
+
+.smallLogo {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    background-color: #006747;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50px);
+  }
+  .nav-link {
+    color: white !important;
+    padding-left: 50px !important;
+    margin-top: 5px;
+  }
+  .guest-nav {
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+  }
+  .closeIcon {
+    display: block;
+    box-shadow: none !important;
+  }
+  .bigLogo {
+    transform: translateY(0);
+  }
+  .smallLogo {
+    display: block;
+  }
+}
 .completed,
 .resolved {
   width: 180px;
