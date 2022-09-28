@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -54,10 +55,31 @@ body::-webkit-scrollbar {
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453 255, 255, 255, 0.7;
+=======
+.Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: rgba(0, 103, 71, 0.9) !important;
+  color: #ffffff;
+}
+
+.ModalPopUp {
+  width: 31rem !important;
+}
+
+.ModalMessage {
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+>>>>>>> ModalComponents
   line-height: 1.5rem;
   letter-spacing: 0rem;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 992px) {
   .nav-text {
     background-color: #006747;
@@ -205,5 +227,11 @@ body::-webkit-scrollbar {
   letter-spacing: 0rem;
   color: rgb(165, 42, 42);
   background-color: rgba(165, 42, 42, 0.1);
+=======
+.ModalTitle {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+>>>>>>> ModalComponents
 }
 /*# sourceMappingURL=style.css.map */
