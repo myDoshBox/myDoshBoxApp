@@ -49,8 +49,17 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.userDashboardNav {
+  padding-right: 30px;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453 255, 255, 255, 0.7;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
 @media screen and (max-width: 992px) {
-  .navbar-nav {
+  .nav-text {
     background-color: #006747;
     position: absolute;
     width: 100%;

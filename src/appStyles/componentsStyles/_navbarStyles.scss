@@ -27,9 +27,13 @@
 .smallLogo {
   display: none;
 }
+.userDashboardNav {
+  padding-right: 30px;
+  @include userNavFont;
+}
 
 @media screen and (max-width: 992px) {
-  .navbar-nav {
+  .nav-text {
     background-color: $pryColor;
     position: absolute;
     width: 100%;

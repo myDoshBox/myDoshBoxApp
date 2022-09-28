@@ -1,19 +1,5 @@
 @use "../color" as *;
 @use "../fonts" as *;
-$completedBackgroundColor: rgba(0, 103, 71, 0.2);
-$canceledTextColor: rgba(255, 0, 0);
-$canceledBgColor: rgba(255, 0, 0, 0.1);
-$refundedTextColor: rgba(0, 97, 103);
-$refundedBgColor: rgba(0, 97, 103, 0.1);
-$inDisputeTextColor: rgba(103, 0, 99);
-$inDisputeBgColor: rgba(103, 0, 99, 0.1);
-$pendingConfirmationTextColor: rgba(0, 103, 4);
-$pendingConfirmationBgColor: rgba(0, 103, 4, 0.1);
-$awaitingDeliveryTextColor: rgba(14, 10, 10, 0.9);
-$awaitingDeliveryBgColor: rgba(0, 0, 0, 0.1);
-$pendingPaymentTextColor: rgba(165, 42, 42);
-$pendingPaymentBgColor: rgba(165, 42, 42, 0.1);
-
 @mixin notificationStyle {
   width: 180px;
   height: 30px;
@@ -22,14 +8,6 @@ $pendingPaymentBgColor: rgba(165, 42, 42, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@mixin notificationFont {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: $bodyTextColor;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
 }
 
 .completed,

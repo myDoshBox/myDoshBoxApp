@@ -1,6 +1,7 @@
-import { Nav, Navbar, Button } from "react-bootstrap";
+import { Nav, Navbar, Button, Container, Form } from "react-bootstrap";
 import logo from "../../assets/images/doshlogo.jpg";
 import logo2 from "../../assets/images/doshlogolight.jpg";
+import image from "../../assets/images/image.jpg";
 
 export const GuestNavbar = () => {
   return (
@@ -24,7 +25,7 @@ export const GuestNavbar = () => {
         <img src={logo} alt="logo" className="my-auto" />
       </Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
+        <Nav className="ms-auto nav-text">
           <div className="d-flex">
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"

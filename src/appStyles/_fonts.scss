@@ -50,3 +50,19 @@
   line-height: 1.5rem;
   letter-spacing: 4px;
 }
+
+@mixin notificationFont {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+@mixin userNavFont {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
