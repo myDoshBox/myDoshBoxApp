@@ -1,4 +1,28 @@
-.ThankYouPopUp-LaunchBtn {
+.Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
   background-color: rgba(0, 103, 71, 0.9) !important;
+  color: #ffffff;
+}
+
+.ModalPopUp {
+  width: 31rem !important;
+}
+
+.ModalMessage {
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.ModalTitle {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
 }
 /*# sourceMappingURL=style.css.map */
