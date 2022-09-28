@@ -1,8 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {ThankYouPopUp} from "./components/ModalComponents/ThankYouPopup"
 
 function App() {
-  return;
+  return (
+    <div>
+      <ThankYouPopUp/>
+    </div>
+  );
 }
 
 export default App;
