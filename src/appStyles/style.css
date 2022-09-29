@@ -50,14 +50,39 @@ body::-webkit-scrollbar {
 }
 
 .userDashboardNav {
-  padding-right: 30px;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453 255, 255, 255, 0.7;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  font-size: 12px !important;
 }
 
+.form-control {
+  box-shadow: none !important;
+}
+
+.search {
+  border: none !important;
+  border-radius: 15px !important;
+  background: #fdfafa !important;
+}
+
+@media screen and (max-width: 280px) {
+  .search {
+    height: 30px;
+    width: 120px !important;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 540px) {
+  .search {
+    height: 30px;
+    width: 150px !important;
+  }
+  .searchField {
+    margin-right: 20px;
+  }
+}
 @media screen and (max-width: 992px) {
   .nav-text {
     background-color: #006747;

@@ -71,3 +71,26 @@ export const GuestNavbar = () => {
     </Navbar>
   );
 };
+
+export const UserDashboardNavbar = () => {
+  return (
+    <Container>
+      <Nav className="justify-content-end userDashboardNav" activeKey="/home">
+        <Nav.Item className=" mx-md-5 mt-2">
+          <Form className="searchField">
+            <Form.Control type="text" placeholder="search" className="search" />
+          </Form>
+        </Nav.Item>
+        <Nav.Item className="d-flex ms-md-5">
+          <div>
+            <span className="d-block text-end">John Doe</span>
+            <span className="d-block text-end">Admin</span>
+          </div>
+          <div className="mt-1 ms-2">
+            <img src={image} alt="" />
+          </div>
+        </Nav.Item>
+      </Nav>
+    </Container>
+  );
+};
