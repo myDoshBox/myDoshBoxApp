@@ -17,10 +17,45 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: #4d957e !important;
+  color: #ffffff;
+  border-radius: 4.5px !important;
+}
+
+.Modal-Btn:hover,
+.Modal-Btn:focus {
+  background-color: #006747 !important;
+}
+
+.ModalMessage {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.ModalTitle {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+}
+
 .nav-link {
-  font-family: "Open Sans";
-  font-size: 1.333rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   margin: 10px 15px;
@@ -52,7 +87,7 @@ body::-webkit-scrollbar {
 .userDashboardNav {
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-size: 12px !important;
@@ -122,7 +157,7 @@ body::-webkit-scrollbar {
   align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: #006747 !important;
@@ -140,7 +175,7 @@ body::-webkit-scrollbar {
   align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: rgb(255, 0, 0);
@@ -157,7 +192,7 @@ body::-webkit-scrollbar {
   align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: rgb(0, 97, 103);
@@ -167,7 +202,7 @@ body::-webkit-scrollbar {
 .dispute {
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   width: 180px;
@@ -184,7 +219,7 @@ body::-webkit-scrollbar {
 .pending-confirmation {
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   width: 180px;
@@ -208,7 +243,7 @@ body::-webkit-scrollbar {
   align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: rgba(14, 10, 10, 0.9);
@@ -225,7 +260,7 @@ body::-webkit-scrollbar {
   align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: rgb(165, 42, 42);

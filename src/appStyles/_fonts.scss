@@ -19,8 +19,8 @@
 }
 
 @mixin H4Font {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.75rem;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
   line-height: 2.625rem;
 }
 
@@ -37,8 +37,9 @@
 }
 
 @mixin pFont {
-  font-family: "Open Sans";
-  font-size: 1.333rem;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
   color: $bodyTextColor;
   line-height: 1.5rem;
   letter-spacing: 0rem;
