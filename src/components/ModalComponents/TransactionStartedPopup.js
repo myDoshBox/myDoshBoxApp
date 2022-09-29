@@ -14,7 +14,7 @@ export const BuyerTransactionStartedPopUp = () => {
   return (
     <>
       <Button className="border border-0 Modal-Btn" variant="primary" onClick={handleShow}>
-        Confirm
+        I Agree
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header className='text-center border border-0 justify-content-center flex-column pb-0'>
@@ -41,7 +41,7 @@ export const SellerTransactionStartedPopUp = () => {
   return (
     <>
       <Button className="border border-0 Modal-Btn" variant="primary" onClick={handleShow}>
-        Confirm
+        I Agree
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header className='text-center border border-0 justify-content-center flex-column pb-0'>
