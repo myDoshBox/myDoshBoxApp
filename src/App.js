@@ -1,9 +1,9 @@
-import {ThankYouPopUp} from "./components/ModalComponents/ThankYouPopup"
+import { NeutralsSidenav } from "./components/NavbarComponents/SideNavbar"
 
 function App() {
   return (
     <div>
-      <ThankYouPopUp/>
+      <NeutralsSidenav />
     </div>
   );
 }
