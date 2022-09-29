@@ -16,4 +16,37 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: #4d957e !important;
+  color: #ffffff;
+  border-radius: 4.5px !important;
+}
+
+.Modal-Btn:hover {
+  background-color: #006747 !important;
+}
+
+.ModalMessage {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.ModalTitle {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+}
 /*# sourceMappingURL=style.css.map */

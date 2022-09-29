@@ -1,9 +1,10 @@
-import {ThankYouPopUp} from "./components/ModalComponents/ThankYouPopup"
+import {SellerTransactionStartedPopUp, BuyerTransactionStartedPopUp} from "./components/ModalComponents/TransactionStartedPopup"
 
 function App() {
   return (
     <div>
-      <ThankYouPopUp/>
+      <SellerTransactionStartedPopUp />
+      <BuyerTransactionStartedPopUp />
     </div>
   );
 }
