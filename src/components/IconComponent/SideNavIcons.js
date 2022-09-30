@@ -1,8 +1,8 @@
 export const DashboardIcon = () => {
   return (
     <svg
-      width="35"
-      height="35"
+      width="30"
+      height="30"
       viewBox="0 0 35 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,8 @@ export const AnalyticsIcon = () => {
 export const NotificationIcon = () => {
   return (
     <svg
-      width="36"
-      height="37"
+      width="30"
+      height="30"
       viewBox="0 0 36 37"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -90,8 +90,8 @@ export const NotificationIcon = () => {
 export const TicketsIcon = () => {
   return (
     <svg
-      width="35"
-      height="36"
+      width="30"
+      height="30"
       viewBox="0 0 35 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -108,8 +108,8 @@ export const TicketsIcon = () => {
 export const SettingsIcon = () => {
   return (
     <svg
-      width="32"
-      height="33"
+      width="30"
+      height="30"
       viewBox="0 0 32 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +128,8 @@ export const SettingsIcon = () => {
 
 export const UsersIcon = () => {
   <svg
-    width="36"
-    height="36"
+    width="30"
+    height="30"
     viewBox="0 0 36 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ export const UsersIcon = () => {
 export const ChatIcon = () => {
   return (
     <svg
-      width="33"
+      width="30"
       height="30"
       viewBox="0 0 33 30"
       fill="none"
@@ -192,8 +192,8 @@ export const ChatIcon = () => {
 export const NavTransactionIcon = () => {
   return (
     <svg
-      width="32"
-      height="36"
+      width="30"
+      height="30"
       viewBox="0 0 32 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -210,8 +210,8 @@ export const NavTransactionIcon = () => {
 export const LogoutIcon = () => {
   return (
     <svg
-      width="27"
-      height="27"
+      width="30"
+      height="30"
       viewBox="0 0 27 27"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -229,8 +229,8 @@ export const LogoutIcon = () => {
 export const DisputeIcon = () => {
   return (
     <svg
-      width="36"
-      height="36"
+      width="30"
+      height="30"
       viewBox="0 0 36 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
