@@ -1,11 +1,13 @@
-export const ClosedTicketsIcon = () => {
+export const ClosedTicketsIcon = (props) => {
+  const { width, height, className } = props;
   return (
     <svg
-      width="70"
-      height="70"
+      width={width}
+      height={height}
       viewBox="0 0 70 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M61.625 3L26.75 41.3522L16.625 33.6834H11L26.75 59.25L67.25 3H61.625Z"
@@ -16,14 +18,17 @@ export const ClosedTicketsIcon = () => {
   );
 };
 
-export const OpenTicketsIcon = () => {
+export const OpenTicketsIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="70"
-      height="75"
+      width={width}
+      height={height}
       viewBox="0 0 70 75"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <circle cx="35" cy="40" r="33.5" stroke="#B90E0A" stroke-width="3" />
       <path
@@ -34,14 +39,17 @@ export const OpenTicketsIcon = () => {
   );
 };
 
-export const TotalUsersIcon = () => {
+export const TotalUsersIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="63"
-      height="60"
+      width={width}
+      height={height}
       viewBox="0 0 63 60"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clip-path="url(#clip0_164_719)">
         <path
@@ -83,14 +91,17 @@ export const TotalUsersIcon = () => {
   );
 };
 
-export const CompletedTransactionIcon = () => {
+export const CompletedTransactionIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="63"
-      height="55"
+      width={width}
+      height={height}
       viewBox="0 0 63 55"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M37.8687 0.0546875C31.245 0.0546875 24.8925 2.58325 20.2088 7.08413C15.525 11.585 12.8938 17.6895 12.8937 24.0547C12.8938 30.4199 15.525 36.5244 20.2088 41.0253C24.8925 45.5261 31.245 48.0547 37.8687 48.0547C44.4925 48.0547 50.845 45.5261 55.5287 41.0253C60.2125 36.5244 62.8438 30.4199 62.8438 24.0547H56.6C56.6 34.0147 48.2334 42.0547 37.8687 42.0547C32.9009 42.0547 28.1365 40.1583 24.6238 36.7826C21.111 33.407 19.1375 28.8286 19.1375 24.0547C19.1375 19.2808 21.111 14.7024 24.6238 11.3268C28.1365 7.95111 32.9009 6.05469 37.8687 6.05469C39.2112 6.05469 40.5536 6.20469 41.8335 6.47469L46.8597 1.67469C43.9876 0.594687 40.9906 0.0546875 37.8687 0.0546875ZM58.4419 4.79469L37.8687 24.5647L30.4387 17.4247L26.0368 21.6847L37.8687 33.0547L62.8438 9.05469M9.55334 11.5147C6.69908 13.7646 4.39861 16.5938 2.81709 19.7994C1.23558 23.0049 0.412262 26.5071 0.40625 30.0547C0.40625 36.4199 3.03754 42.5244 7.72126 47.0253C12.405 51.5261 18.7575 54.0547 25.3812 54.0547C27.3792 54.0547 29.346 53.8147 31.2504 53.3647C25.7559 52.1947 20.6984 49.5547 16.5463 45.9247C13.5567 44.3876 11.0573 42.0996 9.31442 39.3048C7.57158 36.5099 6.65071 33.3129 6.65 30.0547C6.65 29.1547 6.74366 28.2847 6.86853 27.3847C6.74366 26.2747 6.65 25.1647 6.65 24.0547C6.65 19.7347 7.649 15.4447 9.55334 11.5147Z"

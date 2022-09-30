@@ -1,5 +1,11 @@
+import { AnalyticsIcon } from "./components/IconComponent/SideNavIcons";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <AnalyticsIcon />
+    </div>
+  );
 }
 
 export default App;
