@@ -93,3 +93,23 @@
     display: block;
   }
 }
+
+/**SideNav Styling**/
+.SideNav {
+  background-color: $pryColor;
+  color: $secColor;
+  width: 15rem;
+  height: 100vh !important;
+}
+.SideNavLogo{
+  width: 6rem;
+}
+.SideNavItem{
+  @include pFont;
+  color: $secColor;
+}
+.SideNavItem:hover, :focus {
+  border-right: 4px solid white;
+  width: 12rem;
+  border-radius: 3px !important;
+}

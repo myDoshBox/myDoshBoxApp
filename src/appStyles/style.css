@@ -18,9 +18,9 @@ body::-webkit-scrollbar {
 }
 
 .nav-link {
-  font-family: "Open Sans";
-  font-size: 1.333rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   margin: 10px 15px;
@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
 .userDashboardNav {
   font-family: "Open Sans";
   font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-size: 12px !important;
@@ -111,124 +111,30 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-.completed,
-.resolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #006747 !important;
-  background-color: rgba(0, 103, 71, 0.2);
+/**SideNav Styling**/
+.SideNav {
+  background-color: #006747;
+  color: #ffffff;
+  width: 15rem;
+  height: 100vh !important;
 }
 
-.canceled,
-.unresolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(255, 0, 0);
-  background-color: rgba(255, 0, 0, 0.1);
+.SideNavLogo {
+  width: 6rem;
 }
 
-.refunded {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
+.SideNavItem {
+  font-family: "Open Sans" !important;
+  font-size: 1rem !important;
+  color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  color: rgb(0, 97, 103);
-  background-color: rgba(0, 97, 103, 0.1);
+  color: #ffffff;
 }
 
-.dispute {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(103, 0, 99);
-  background-color: rgba(103, 0, 99, 0.1);
-}
-
-.pending-confirmation {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 103, 4);
-  background-color: rgba(0, 103, 4, 0.1);
-}
-
-.awaiting {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgba(14, 10, 10, 0.9);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453 255, 255, 255, 0.7;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(165, 42, 42);
-  background-color: rgba(165, 42, 42, 0.1);
+.SideNavItem:hover, :focus {
+  border-right: 4px solid white;
+  width: 12rem;
+  border-radius: 3px !important;
 }
 /*# sourceMappingURL=style.css.map */
