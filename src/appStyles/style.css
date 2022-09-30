@@ -30,16 +30,7 @@ body::-webkit-scrollbar {
   background-color: #4d957e !important;
 }
 
-.SignInBtn:hover,
-.SignInBtn:focus,
-.SignUpBtn:hover,
-.SignUpBtn:focus,
-.SignInBtn2:hover,
-.SignInBtn2:focus,
-.edit-profile-btn:hover,
-.edit-profile-btn:focus,
-.edit-ticket-btn:focus,
-.edit-ticket-btn:hover {
+.all-btn:hover {
   background-color: #006747 !important;
 }
 
@@ -147,6 +138,51 @@ body::-webkit-scrollbar {
   font-size: 1.3125rem;
   line-height: 1.96rem;
   font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
+.start-transaction-btn {
+  width: 323px;
+  height: 60px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.new-transaction-btn {
+  width: 215px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.confirm-delivery-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #006747 !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.i-agree-btn {
+  width: 170px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
   letter-spacing: 0.08em;
 }
 
