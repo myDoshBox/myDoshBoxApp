@@ -14,7 +14,11 @@
 .SignUpBtn:hover,
 .SignUpBtn:focus,
 .SignInBtn2:hover,
-.SignInBtn2:focus {
+.SignInBtn2:focus,
+.edit-profile-btn:hover,
+.edit-profile-btn:focus,
+.edit-ticket-btn:focus,
+.edit-ticket-btn:hover {
   background-color: $pryColor !important;
 }
 
@@ -75,6 +79,25 @@
   @include H5Font;
   font-size: 25px !important;
 }
+
+.edit-profile-btn {
+  width: 106px;
+  height: 31px;
+  background-color: $buttonColor !important;
+  border-radius: 5px !important;
+  @include H6Font;
+  font-weight: 500 !important;
+}
+
+.edit-ticket-btn {
+  width: 250px;
+  height: 50px;
+  background-color: $buttonColor !important;
+  @include H5Font;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
 @media screen and (max-width: 540px) {
   .SignInBtn,
   .GoogleSignInBtn {
