@@ -11,7 +11,7 @@ export const SignInButton = () => {
 
 // GuestNavSignInButton
 export const GuestNavSignInButton = () => {
-  return <Button className=" SignInBtn2 border-0 mt-3">Sign In</Button>;
+  return <Button className=" SignInBtn2 border-0 mb-5">Sign In</Button>;
 };
 //GoogleSignUpButton
 export const GoogleSignUpButton = () => {
