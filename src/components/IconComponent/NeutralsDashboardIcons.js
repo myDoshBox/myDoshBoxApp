@@ -1,11 +1,14 @@
-export const OpenConflictIcon = () => {
+export const OpenConflictIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="63"
-      height="60"
+      width={width}
+      height={height}
       viewBox="0 0 63 60"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clip-path="url(#clip0_585_5574)">
         <path
@@ -47,14 +50,17 @@ export const OpenConflictIcon = () => {
   );
 };
 
-export const OngoingConflictIcon = () => {
+export const OngoingConflictIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="44"
-      height="44"
+      width={width}
+      height={height}
       viewBox="0 0 44 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clip-path="url(#clip0_586_5854)">
         <path
@@ -71,14 +77,17 @@ export const OngoingConflictIcon = () => {
   );
 };
 
-export const ClosedConflictIcon = () => {
+export const ClosedConflictIcon = (props) => {
+  const { width, height, className } = props;
+
   return (
     <svg
-      width="50"
-      height="50"
+      width={width}
+      height={height}
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M35.4167 6.25H14.5833C9.98096 6.25 6.25 9.98096 6.25 14.5833V35.4167C6.25 40.019 9.98096 43.75 14.5833 43.75H35.4167C40.019 43.75 43.75 40.019 43.75 35.4167V14.5833C43.75 9.98096 40.019 6.25 35.4167 6.25Z"
