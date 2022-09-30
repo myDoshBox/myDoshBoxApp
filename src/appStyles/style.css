@@ -17,6 +17,119 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.SignInBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  width: 400px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.SignInBtn:hover,
+.SignInBtn:focus,
+.SignUpBtn:hover,
+.SignUpBtn:focus,
+.SignInBtn2:hover,
+.SignInBtn2:focus {
+  background-color: #006747 !important;
+}
+
+.SignUpBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  background-color: #4d957e !important;
+  width: 230px;
+  height: 42px;
+}
+
+.SignInBtn2 {
+  width: 157px;
+  height: 50px;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  background-color: #4d957e !important;
+}
+
+.GoogleSignInBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453 !important;
+  background-color: inherit !important;
+  border: 1px solid #4d957e !important;
+  width: 400px;
+  height: 44px;
+}
+
+.GoogleSignUpBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453 !important;
+  background-color: inherit !important;
+  border: 1px solid #4d957e !important;
+  width: 230px;
+  height: 42px;
+}
+
+.SignUpGroup {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 14px !important;
+  width: 186px;
+  height: 46px;
+  background-color: inherit !important;
+  color: #006747 !important;
+  border: 1px solid #4d957e !important;
+}
+
+.SignUpGroup:hover,
+.SignUpGroup:focus {
+  background-color: #006747 !important;
+  color: white !important;
+}
+
+.getStarted {
+  width: 228px;
+  height: 60px;
+  background-color: #006747 !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-size: 25px !important;
+}
+
+@media screen and (max-width: 540px) {
+  .SignInBtn,
+.GoogleSignInBtn {
+    width: 80%;
+  }
+}
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
