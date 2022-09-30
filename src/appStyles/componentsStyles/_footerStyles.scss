@@ -1,1 +1,6 @@
 @use "../fonts" as *;
+@use "../color" as *;
+
+.BgColor {
+  background-color: $pryColor;
+}

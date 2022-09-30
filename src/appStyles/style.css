@@ -16,4 +16,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.BgColor {
+  background-color: #006747;
+}
 /*# sourceMappingURL=style.css.map */

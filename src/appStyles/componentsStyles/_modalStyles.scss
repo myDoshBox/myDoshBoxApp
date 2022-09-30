@@ -1,19 +1,2 @@
-@use "../color" as *;
-@use "../fonts" as *;
-$BtnBgColor: rgba(0, 103, 71, 0.9);
-
-
-.Modal-Btn {
-  @include pFont;
-  background-color: $BtnBgColor !important;
-  color:$secColor;
-}
-.ModalPopUp {
-  width: 31rem !important;
-}
-.ModalMessage {
-  @include pFont;
-}
-.ModalTitle {
-  @include H4Font;
-}
+// @use "../color" as *;
+// @use "../fonts" as *;
