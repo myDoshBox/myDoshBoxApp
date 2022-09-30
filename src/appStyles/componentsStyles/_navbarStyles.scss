@@ -103,10 +103,12 @@
 }
 .SideNavLogo{
   width: 6rem;
+  cursor: pointer  !important;
 }
 .SideNavItem{
   @include pFont;
   color: $secColor;
+  cursor: pointer !important;
 }
 .SideNavItem:hover, :focus {
   border-right: 4px solid white;

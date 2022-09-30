@@ -121,6 +121,7 @@ body::-webkit-scrollbar {
 
 .SideNavLogo {
   width: 6rem;
+  cursor: pointer !important;
 }
 
 .SideNavItem {
@@ -130,6 +131,7 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: #ffffff;
+  cursor: pointer !important;
 }
 
 .SideNavItem:hover, :focus {
