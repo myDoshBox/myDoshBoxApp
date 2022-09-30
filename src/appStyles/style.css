@@ -126,19 +126,47 @@ body::-webkit-scrollbar {
 }
 
 .SideNavItem {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
-  letter-spacing: 0rem;
   color: #ffffff;
   cursor: pointer !important;
+  font-weight: 400;
+}
+
+.hoverBlock {
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  position: absolute !important;
+  height: 2rem !important;
+  transform: translate(200px, 0px);
+  display: none;
 }
 
 .SideNavItem:hover, :focus {
-  border-right: 4px solid white;
-  width: 12rem;
-  border-radius: 3px !important;
+  font-weight: 700 !important;
+}
+.SideNavItem:hover .hoverBlock, :focus .hoverBlock {
+  display: block;
+}
+
+.SideNavDropdown button {
+  background-color: unset !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.SideNavDropdown button::after {
+  display: none !important;
+  width: unset !important;
+  outline: unset !important;
+}
+
+.SideNavDropdown .show {
+  transform: translate3d(180px, 1px, 0px) !important;
+}
+
+.SideNavDropdown .show a:hover, :focus {
+  font-weight: 700 !important;
 }
 /*# sourceMappingURL=style.css.map */
