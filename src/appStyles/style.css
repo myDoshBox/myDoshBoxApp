@@ -192,6 +192,24 @@ body::-webkit-scrollbar {
     width: 80%;
   }
 }
+.escrow-form-field {
+  display: flex;
+}
+
+.escrow-input-field {
+  width: 500px !important;
+  margin: 0 15px;
+  left: 500px !important;
+}
+
+@media screen and (max-width: 540px) {
+  .escrow-form-field {
+    flex-direction: column;
+  }
+  .escrow-input-field {
+    width: 90% !important;
+  }
+}
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
