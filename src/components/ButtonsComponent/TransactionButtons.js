@@ -32,7 +32,10 @@ export const NewTransactionButton = () => {
 
 export const ProceedButton = () => {
   return (
-    <Button className="edit-ticket-btn border-0 all-btn rounded-1">
+    <Button
+      type="submit"
+      className="edit-ticket-btn border-0 all-btn rounded-1"
+    >
       PROCEED
     </Button>
   );

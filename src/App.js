@@ -1,9 +1,12 @@
-import { EscrowInitiationForm } from "./components/FormComponents.js/TransactionForms";
-
+import {
+  SellersEscrowInitiationForm,
+  BuyerEscrowInitiationForm,
+} from "./components/FormComponents.js/TransactionForms";
 function App() {
   return (
     <div>
-      <EscrowInitiationForm />
+      <SellersEscrowInitiationForm />
+      <BuyerEscrowInitiationForm />
     </div>
   );
 }
