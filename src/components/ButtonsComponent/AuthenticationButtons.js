@@ -2,16 +2,16 @@ import { Button } from "react-bootstrap";
 
 //SignUpButton
 export const SignUpButton = () => {
-  return <Button className=" SignUpBtn border-0 mt-5">Sign Up</Button>;
+  return <Button className=" SignUpBtn all-btn border-0 mt-5">Sign Up</Button>;
 };
 //SignInButton
 export const SignInButton = () => {
-  return <Button className=" SignInBtn border-0 mt-3">Sign In</Button>;
+  return <Button className=" SignInBtn all-btn border-0 mt-3">Sign In</Button>;
 };
 
 // GuestNavSignInButton
 export const GuestNavSignInButton = () => {
-  return <Button className=" SignInBtn2 border-0 mt-3">Sign In</Button>;
+  return <Button className=" SignInBtn2 all-btn border-0 mb-5">Sign In</Button>;
 };
 //GoogleSignUpButton
 export const GoogleSignUpButton = () => {
