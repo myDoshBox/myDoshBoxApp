@@ -17,179 +17,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.SignInBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 700 !important;
-  width: 400px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
-.SignInBtn:hover,
-.SignInBtn:focus,
-.SignUpBtn:hover,
-.SignUpBtn:focus,
-.SignInBtn2:hover,
-.SignInBtn2:focus,
-.edit-profile-btn:hover,
-.edit-profile-btn:focus,
-.edit-ticket-btn:focus,
-.edit-ticket-btn:hover {
-  background-color: #006747 !important;
-}
-
-.SignUpBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 700 !important;
-  background-color: #4d957e !important;
-  width: 230px;
-  height: 42px;
-}
-
-.SignInBtn2 {
-  width: 157px;
-  height: 50px;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 700 !important;
-  background-color: #4d957e !important;
-}
-
-.GoogleSignInBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #4b4453 !important;
-  background-color: inherit !important;
-  border: 1px solid #4d957e !important;
-  width: 400px;
-  height: 44px;
-}
-
-.GoogleSignUpBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #4b4453 !important;
-  background-color: inherit !important;
-  border: 1px solid #4d957e !important;
-  width: 230px;
-  height: 42px;
-}
-
-.SignUpGroup {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 14px !important;
-  width: 186px;
-  height: 46px;
-  background-color: inherit !important;
-  color: #006747 !important;
-  border: 1px solid #4d957e !important;
-}
-
-.SignUpGroup:hover,
-.SignUpGroup:focus {
-  background-color: #006747 !important;
-  color: white !important;
-}
-
-.getStarted {
-  width: 228px;
-  height: 60px;
-  background-color: #006747 !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  font-size: 25px !important;
-}
-
-.edit-profile-btn {
-  width: 106px;
-  height: 31px;
-  background-color: #4d957e !important;
-  border-radius: 5px !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500 !important;
-}
-
-.edit-ticket-btn {
-  width: 250px;
-  height: 50px;
-  background-color: #4d957e !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em;
-}
-
-@media screen and (max-width: 540px) {
-  .SignInBtn,
-.GoogleSignInBtn {
-    width: 80%;
-  }
-}
-.Modal-Btn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  color: #ffffff;
-  border-radius: 4.5px !important;
-}
-
-.Modal-Btn:hover,
-.Modal-Btn:focus {
-  background-color: #006747 !important;
-}
-
-.ModalMessage {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.ModalTitle {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
-  line-height: 2.625rem;
-}
-
 .nav-link {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -285,124 +112,64 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
-.completed,
-.resolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #006747 !important;
-  background-color: rgba(0, 103, 71, 0.2);
+/**SideNav Styling**/
+.SideNav {
+  background-color: #006747;
+  color: #ffffff;
+  width: 15rem;
+  height: 100vh !important;
 }
 
-.canceled,
-.unresolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(255, 0, 0);
-  background-color: rgba(255, 0, 0, 0.1);
+.SideNavLogo {
+  width: 6rem;
+  cursor: pointer !important;
 }
 
-.refunded {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
+.SideNavItem {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(0, 97, 103);
-  background-color: rgba(0, 97, 103, 0.1);
+  color: #ffffff;
+  cursor: pointer !important;
+  font-weight: 400;
 }
 
-.dispute {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(103, 0, 99);
-  background-color: rgba(103, 0, 99, 0.1);
+.hoverBlock {
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  position: absolute !important;
+  height: 2rem !important;
+  transform: translate(200px, 0px);
+  display: none;
 }
 
-.pending-confirmation {
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 103, 4);
-  background-color: rgba(0, 103, 4, 0.1);
+.SideNavItem:hover,
+:focus {
+  font-weight: 700 !important;
+}
+.SideNavItem:hover .hoverBlock,
+:focus .hoverBlock {
+  display: block;
 }
 
-.awaiting {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgba(14, 10, 10, 0.9);
-  background-color: rgba(0, 0, 0, 0.1);
+.SideNavDropdown button {
+  background-color: unset !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
-.pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(165, 42, 42);
-  background-color: rgba(165, 42, 42, 0.1);
+.SideNavDropdown button::after {
+  display: none !important;
+  width: unset !important;
+  outline: unset !important;
+}
+
+.SideNavDropdown .show {
+  transform: translate3d(180px, 1px, 0px) !important;
+}
+
+.SideNavDropdown .show a:hover,
+:focus {
+  font-weight: 700 !important;
 }
 /*# sourceMappingURL=style.css.map */
