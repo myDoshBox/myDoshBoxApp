@@ -22,7 +22,7 @@
   margin: 0 20px;
 }
 .bigLogo {
-  transform: translateY(-25px);
+  transform: translateY(-50px);
 }
 
 .smallLogo {
@@ -45,6 +45,9 @@
   border-radius: 15px !important;
 
   background: #fdfafa !important;
+}
+.nav-btn {
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 280px) {
