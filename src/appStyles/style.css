@@ -192,14 +192,17 @@ body::-webkit-scrollbar {
     width: 80%;
   }
 }
-.escrow-form {
+.escrow-form,
+.bank-transfer-form {
   overflow-x: hidden;
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #4b4453;
 }
 
-.escrow-form-label {
+.escrow-form-label,
+.bank-transfer-form-label {
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
@@ -207,7 +210,8 @@ body::-webkit-scrollbar {
   font-size: 18px !important;
 }
 
-.escrow-input-field {
+.escrow-input-field,
+.bank-transfer-input-field {
   width: 90% !important;
   margin: 0 15px;
 }
@@ -247,6 +251,75 @@ body::-webkit-scrollbar {
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
+.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.escrow-input-field::placeholder,
+.escrow-price-field::placeholder,
+.bank-transfer-input-field::placeholder {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.form-check-label {
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.confirm-delivery-head {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+  font-weight: 500 !important;
+}
+
+.confirm-delivery-pText {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.deliver-goods-form {
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.account-details {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  transform: translateX(200px);
+  padding: 20px;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 14px !important;
+}
+
 @media screen and (max-width: 687px) {
   .total-input {
     width: 100% !important;
@@ -263,11 +336,46 @@ body::-webkit-scrollbar {
   .escrow-price-field {
     width: 75.5% !important;
   }
+  .escrow-form-label,
+.bank-transfer-form-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-size: 14px !important;
+  }
+  .confirm-delivery-head {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3125rem;
+    line-height: 1.96rem;
+  }
+  .deliver-goods-form {
+    margin: 30px 10px !important;
+    padding: 10px !important;
+  }
+  .account-details {
+    transform: translateX(0) !important;
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    font-size: 12px !important;
+  }
 }
 @media screen and (max-width: 280px) {
   .escrow-price-field {
     width: 68% !important;
     border-radius: 5px 0 0 5px !important;
+  }
+  .account-details {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    font-size: 12px !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -275,10 +383,16 @@ body::-webkit-scrollbar {
     width: 0 !important;
     transform: translateX(-5px);
   }
+  .account-details {
+    transform: translateX(30px);
+  }
 }
 @media screen and (max-width: 1023px) {
   .total-input {
     width: 70% !important;
+  }
+  .account-details {
+    transform: translateX(10px);
   }
 }
 @media screen and (min-width: 1025px) {
@@ -286,7 +400,8 @@ body::-webkit-scrollbar {
     width: 80% !important;
     border-radius: 5px 0 0 5px !important;
   }
-  .escrow-form {
+  .escrow-form,
+.bank-transfer-form {
     width: 1041px !important;
   }
 }

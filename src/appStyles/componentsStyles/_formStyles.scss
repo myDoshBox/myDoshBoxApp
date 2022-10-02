@@ -1,20 +1,24 @@
 @use "../color" as *;
 @use "../fonts" as *;
 
-.escrow-form {
+.escrow-form,
+.bank-transfer-form {
   overflow-x: hidden;
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  color: $bodyTextColor;
 }
 
-.escrow-form-label {
+.escrow-form-label,
+.bank-transfer-form-label {
   margin-left: 15px;
   @include H5Font;
   font-size: 18px !important;
 }
 
-.escrow-input-field {
+.escrow-input-field,
+.bank-transfer-input-field {
   width: 90% !important;
   margin: 0 15px;
 }
@@ -55,6 +59,49 @@
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
+.escrow-input-field::placeholder,
+.escrow-price-field::placeholder,
+.bank-transfer-input-field::placeholder {
+  @include pFont;
+  font-size: 12px !important;
+  color: $placeholderTextColor !important;
+}
+
+.form-check-label {
+  color: $placeholderTextColor !important;
+}
+
+.confirm-delivery-head {
+  @include H4Font;
+  font-weight: 500 !important;
+}
+
+.confirm-delivery-pText {
+  @include H6Font;
+  color: $placeholderTextColor !important;
+}
+
+.deliver-goods-form {
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  //   position: absolute;
+  padding: 30px;
+  width: fit-content;
+}
+
+.account-details {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  transform: translateX(200px);
+  padding: 20px;
+  @include pFont;
+  font-size: 14px !important;
+}
+
 @media screen and (max-width: 687px) {
   //   .escrow-form-field {
   //     flex-direction: column;
@@ -74,6 +121,23 @@
   .escrow-price-field {
     width: 75.5% !important;
   }
+  .escrow-form-label,
+  .bank-transfer-form-label {
+    @include H6Font;
+    font-size: 14px !important;
+  }
+  .confirm-delivery-head {
+    @include H5Font;
+  }
+  .deliver-goods-form {
+    margin: 30px 10px !important;
+    padding: 10px !important;
+  }
+  .account-details {
+    transform: translateX(0) !important;
+    @include pFont;
+    font-size: 12px !important;
+  }
 }
 
 @media screen and (max-width: 280px) {
@@ -82,6 +146,11 @@
     //   margin: 0 15px
     border-radius: 5px 0 0 5px !important;
   }
+
+  .account-details {
+    @include pFont;
+    font-size: 12px !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -89,11 +158,17 @@
     width: 0 !important;
     transform: translateX(-5px);
   }
+  .account-details {
+    transform: translateX(30px);
+  }
 }
 
 @media screen and (max-width: 1023px) {
   .total-input {
     width: 70% !important;
+  }
+  .account-details {
+    transform: translateX(10px);
   }
 }
 
@@ -103,7 +178,8 @@
     //   margin: 0 15px
     border-radius: 5px 0 0 5px !important;
   }
-  .escrow-form {
+  .escrow-form,
+  .bank-transfer-form {
     width: 1041px !important;
     // transform: translateX(100px);
   }

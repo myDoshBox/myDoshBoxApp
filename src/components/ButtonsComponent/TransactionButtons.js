@@ -53,7 +53,11 @@ export const IAgreeButton = () => {
 };
 // ConfirmButton
 export const ConfirmButton = () => {
-  return <Button className="confirm-delivery-btn border-0">Confirm</Button>;
+  return (
+    <Button type="submit" className="confirm-delivery-btn border-0">
+      Confirm
+    </Button>
+  );
 };
 // DeliverProductButton
 export const DeliverProductButton = () => {

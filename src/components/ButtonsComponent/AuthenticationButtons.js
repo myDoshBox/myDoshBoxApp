@@ -3,11 +3,19 @@ impo;
 
 //SignUpButton
 export const SignUpButton = () => {
-  return <Button className=" SignUpBtn all-btn border-0 mt-5">Sign Up</Button>;
+  return (
+    <Button type="submit" className=" SignUpBtn all-btn border-0 mt-5">
+      Sign Up
+    </Button>
+  );
 };
 //SignInButton
 export const SignInButton = () => {
-  return <Button className=" SignInBtn all-btn border-0 mt-3">Sign In</Button>;
+  return (
+    <Button type="submit" className=" SignInBtn all-btn border-0 mt-3">
+      Sign In
+    </Button>
+  );
 };
 
 // GuestNavSignInButton
@@ -17,7 +25,7 @@ export const GuestNavSignInButton = () => {
 //GoogleSignUpButton
 export const GoogleSignUpButton = () => {
   return (
-    <Button className=" GoogleSignUpBtn">
+    <Button type="submit" className=" GoogleSignUpBtn">
       <svg
         width="28"
         height="28"
@@ -49,7 +57,7 @@ export const GoogleSignUpButton = () => {
 //GoogleSignInButton
 export const GoogleSignInButton = () => {
   return (
-    <Button className=" GoogleSignInBtn">
+    <Button type="submit" className=" GoogleSignInBtn">
       <svg
         width="28"
         height="28"
