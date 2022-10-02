@@ -30,12 +30,7 @@ body::-webkit-scrollbar {
   background-color: #4d957e !important;
 }
 
-.SignInBtn:hover,
-.SignInBtn:focus,
-.SignUpBtn:hover,
-.SignUpBtn:focus,
-.SignInBtn2:hover,
-.SignInBtn2:focus {
+.all-btn:hover {
   background-color: #006747 !important;
 }
 
@@ -53,8 +48,8 @@ body::-webkit-scrollbar {
 }
 
 .SignInBtn2 {
-  width: 157px;
-  height: 50px;
+  width: 137px;
+  height: 40px;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -122,6 +117,73 @@ body::-webkit-scrollbar {
   font-size: 1.3125rem;
   line-height: 1.96rem;
   font-size: 25px !important;
+}
+
+.edit-profile-btn {
+  width: 106px;
+  height: 31px;
+  background-color: #4d957e !important;
+  border-radius: 5px !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+}
+
+.edit-ticket-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
+.start-transaction-btn {
+  width: 323px;
+  height: 60px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.new-transaction-btn {
+  width: 215px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.confirm-delivery-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #006747 !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.i-agree-btn {
+  width: 170px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
 }
 
 @media screen and (max-width: 540px) {
@@ -379,7 +441,7 @@ body::-webkit-scrollbar {
 }
 
 .bigLogo {
-  transform: translateY(-25px);
+  transform: translateY(-50px);
 }
 
 .smallLogo {
@@ -403,6 +465,10 @@ body::-webkit-scrollbar {
   border: none !important;
   border-radius: 15px !important;
   background: #fdfafa !important;
+}
+
+.nav-btn {
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 280px) {
