@@ -1,11 +1,5 @@
-import {ThankYouPopUp} from "./components/ModalComponents/ThankYouPopup"
-
 function App() {
-  return (
-    <div>
-      <ThankYouPopUp/>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;

@@ -16,4 +16,622 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.SignInBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  width: 400px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.all-btn:hover {
+  background-color: #006747 !important;
+}
+
+.SignUpBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  background-color: #4d957e !important;
+  width: 230px;
+  height: 42px;
+}
+
+.SignInBtn2 {
+  width: 137px;
+  height: 40px;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 700 !important;
+  background-color: #4d957e !important;
+}
+
+.GoogleSignInBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453 !important;
+  background-color: inherit !important;
+  border: 1px solid #4d957e !important;
+  width: 400px;
+  height: 44px;
+}
+
+.GoogleSignUpBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453 !important;
+  background-color: inherit !important;
+  border: 1px solid #4d957e !important;
+  width: 230px;
+  height: 42px;
+}
+
+.SignUpGroup {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 14px !important;
+  width: 186px;
+  height: 46px;
+  background-color: inherit !important;
+  color: #006747 !important;
+  border: 1px solid #4d957e !important;
+}
+
+.SignUpGroup:hover,
+.SignUpGroup:focus {
+  background-color: #006747 !important;
+  color: white !important;
+}
+
+.getStarted {
+  width: 228px;
+  height: 60px;
+  background-color: #006747 !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-size: 25px !important;
+}
+
+.edit-profile-btn {
+  width: 106px;
+  height: 31px;
+  background-color: #4d957e !important;
+  border-radius: 5px !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+}
+
+.edit-ticket-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
+.start-transaction-btn {
+  width: 323px;
+  height: 60px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.new-transaction-btn {
+  width: 215px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+.confirm-delivery-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #006747 !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.i-agree-btn {
+  width: 170px;
+  height: 50px;
+  background-color: #4d957e !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+}
+
+@media screen and (max-width: 540px) {
+  .SignInBtn,
+  .GoogleSignInBtn {
+    width: 80%;
+  }
+}
+.ResolveBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BuyersStatementBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: #006747 !important;
+}
+
+.SellersStatementBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BuyersFaultBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 47px;
+  background-color: #4d957e !important;
+}
+
+.InitiateDisputeBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 50px;
+  background-color: #006747 !important;
+}
+
+.DropConflictBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.SubmitBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.ScrollUpBtnStyle {
+  border: 2px solid black !important;
+  border-radius: 20px;
+}
+
+.PrevioustBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 100px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BtnNextTextStyle {
+  margin-left: 11px;
+}
+
+.BtnPrevTexttStyle {
+  margin-right: 12px;
+}
+
+.BackBtnStyle {
+  margin-left: 1px;
+}
+
+.ViewMoreBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 120px;
+  height: 40px;
+  background-color: #4d957e !important;
+}
+
+.LearnMoreBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 140px;
+  height: 49px;
+  background-color: #4d957e !important;
+}
+
+.ViewComplaintBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 40px;
+  background-color: #4d957e !important;
+}
+
+.CalendarBtnStyle {
+  font-weight: 200 !important;
+  width: 210px;
+  height: 40px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}
+
+.CancelBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 200 !important;
+  width: 120px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.FilteBtnStyle {
+  font-weight: 200 !important;
+  width: 220px;
+  height: 43px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}
+
+.Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: #4d957e !important;
+  color: #ffffff;
+  border-radius: 4.5px !important;
+}
+
+.Modal-Btn:hover,
+.Modal-Btn:focus {
+  background-color: #006747 !important;
+}
+
+.ModalMessage {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.ModalTitle {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+}
+
+.nav-link {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  margin: 10px 15px;
+  color: black !important;
+}
+
+.hamburgerIcon,
+.closeIcon {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.guest-nav {
+  margin: 0 20px;
+}
+
+.bigLogo {
+  transform: translateY(-50px);
+}
+
+.smallLogo {
+  display: none;
+}
+
+.userDashboardNav {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.search {
+  border: none !important;
+  border-radius: 15px !important;
+  background: #fdfafa !important;
+}
+
+.nav-btn {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 280px) {
+  .search {
+    height: 30px;
+    width: 120px !important;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 540px) {
+  .search {
+    height: 30px;
+    width: 150px !important;
+  }
+  .searchField {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-text {
+    background-color: #006747;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50px);
+  }
+  .nav-link {
+    color: white !important;
+    padding-left: 50px !important;
+    margin-top: 5px;
+  }
+  .guest-nav {
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+  }
+  .closeIcon {
+    display: block;
+    box-shadow: none !important;
+  }
+  .bigLogo {
+    transform: translateY(0);
+  }
+  .smallLogo {
+    display: block;
+  }
+}
+.completed,
+.resolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #006747 !important;
+  background-color: rgba(0, 103, 71, 0.2);
+}
+
+.canceled,
+.unresolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.refunded {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(0, 97, 103);
+  background-color: rgba(0, 97, 103, 0.1);
+}
+
+.dispute {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(103, 0, 99);
+  background-color: rgba(103, 0, 99, 0.1);
+}
+
+.pending-confirmation {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 103, 4);
+  background-color: rgba(0, 103, 4, 0.1);
+}
+
+.awaiting {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgba(14, 10, 10, 0.9);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pending-payment {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(165, 42, 42);
+  background-color: rgba(165, 42, 42, 0.1);
+}
 /*# sourceMappingURL=style.css.map */

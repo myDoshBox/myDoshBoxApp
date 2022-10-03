@@ -1,7 +1,8 @@
-import { Nav, Navbar, Button, Container, Form } from "react-bootstrap";
+import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../assets/images/doshlogo.jpg";
 import logo2 from "../../assets/images/doshlogolight.jpg";
 import image from "../../assets/images/image.jpg";
+import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {
   return (
@@ -63,11 +64,34 @@ export const GuestNavbar = () => {
           <Nav.Link href="#link" className="nav-link">
             Contact
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-link pb-5">
-            <Button>Sign In</Button>
+          <Nav.Link href="#link" className="nav-btn pb-5">
+            <GuestNavSignInButton />
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+  );
+};
+
+export const UserDashboardNavbar = () => {
+  return (
+    <Container>
+      <Nav className="justify-content-end userDashboardNav" activeKey="/home">
+        <Nav.Item className=" mx-md-5 mt-2">
+          <Form className="searchField">
+            <Form.Control type="text" placeholder="search" className="search" />
+          </Form>
+        </Nav.Item>
+        <Nav.Item className="d-flex ms-md-5">
+          <div>
+            <span className="d-block text-end">John Doe</span>
+            <span className="d-block text-end">Admin</span>
+          </div>
+          <div className="mt-1 ms-2">
+            <img src={image} alt="" />
+          </div>
+        </Nav.Item>
+      </Nav>
+    </Container>
   );
 };
