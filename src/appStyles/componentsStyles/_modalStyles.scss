@@ -1,5 +1,6 @@
 @use "../color" as *;
 @use "../fonts" as *;
+<<<<<<< HEAD
 $BtnBgColor: rgba(0, 103, 71, 0.9);
 // $BtnBgColor: rgba(0, 103, 71, 0.9);
 
@@ -7,12 +8,24 @@ $BtnBgColor: rgba(0, 103, 71, 0.9);
   @include pFont;
   background-color: $BtnBgColor !important;
   color: $secColor;
+=======
+// $BtnBgColor: rgba(0, 103, 71, 0.9);
+
+
+.Modal-Btn {
+  @include pFont;
+  background-color: $buttonColor !important;
+  color:$secColor;
+  border-radius: 4.5px !important;
+>>>>>>> ModalComponents
 }
-.ModalPopUp {
-  width: 31rem !important;
+.Modal-Btn:hover,
+.Modal-Btn:focus {
+  background-color: $pryColor !important;
 }
 .ModalMessage {
   @include pFont;
+<<<<<<< HEAD
   background-color: $buttonColor !important;
   color: $secColor;
   border-radius: 4.5px !important;
@@ -23,6 +36,8 @@ $BtnBgColor: rgba(0, 103, 71, 0.9);
 }
 .ModalMessage {
   @include pFont;
+=======
+>>>>>>> ModalComponents
   text-align: justify;
   color: $placeholderTextColor;
 }

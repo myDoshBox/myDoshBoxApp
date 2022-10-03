@@ -17,6 +17,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+<<<<<<< HEAD
 .SignInBtn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -381,6 +382,8 @@ body::-webkit-scrollbar {
   background-color: #e5f0ed !important;
 }
 
+=======
+>>>>>>> ModalComponents
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -388,6 +391,7 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+<<<<<<< HEAD
   background-color: rgba(0, 103, 71, 0.9) !important;
   color: #ffffff;
 }
@@ -403,13 +407,19 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+=======
+>>>>>>> ModalComponents
   background-color: #4d957e !important;
   color: #ffffff;
   border-radius: 4.5px !important;
 }
 
+<<<<<<< HEAD
 .Modal-Btn:hover,
 .Modal-Btn:focus {
+=======
+.Modal-Btn:hover {
+>>>>>>> ModalComponents
   background-color: #006747 !important;
 }
 
@@ -429,6 +439,7 @@ body::-webkit-scrollbar {
   font-size: 1.75rem !important;
   line-height: 2.625rem;
 }
+<<<<<<< HEAD
 
 .nav-link {
   font-family: "Open Sans" !important;
@@ -649,4 +660,6 @@ body::-webkit-scrollbar {
   color: rgb(165, 42, 42);
   background-color: rgba(165, 42, 42, 0.1);
 }
+=======
+>>>>>>> ModalComponents
 /*# sourceMappingURL=style.css.map */
