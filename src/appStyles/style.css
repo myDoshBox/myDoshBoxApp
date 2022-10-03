@@ -188,7 +188,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 540px) {
   .SignInBtn,
-  .GoogleSignInBtn {
+.GoogleSignInBtn {
     width: 80%;
   }
 }
@@ -382,6 +382,21 @@ body::-webkit-scrollbar {
 }
 
 .Modal-Btn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: rgba(0, 103, 71, 0.9) !important;
+  color: #ffffff;
+}
+
+.ModalPopUp {
+  width: 31rem !important;
+}
+
+.ModalMessage {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;

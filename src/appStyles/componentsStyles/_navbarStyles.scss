@@ -1,6 +1,7 @@
 @use "../color" as *;
 @use "../fonts" as *;
 
+// GuestNavbar styles
 .nav-link {
   @include pFont;
   margin: 10px 15px;
@@ -21,18 +22,53 @@
   margin: 0 20px;
 }
 .bigLogo {
-  transform: translateY(-25px);
+  transform: translateY(-50px);
 }
 
 .smallLogo {
   display: none;
 }
+
+// User Dashboard Navbar Styles
 .userDashboardNav {
-  padding-right: 30px;
+  //   padding-right: 30px;
   @include userNavFont;
+  font-size: 12px !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.search {
+  border: none !important;
+  border-radius: 15px !important;
+
+  background: #fdfafa !important;
+}
+.nav-btn {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 280px) {
+  .search {
+    height: 30px;
+    width: 120px !important;
+  }
+}
+@media screen and(min-width:281px) and (max-width: 540px) {
+  .search {
+    height: 30px;
+    width: 150px !important;
+  }
+  .searchField {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  // GuestNavbar styles
+
   .nav-text {
     background-color: $pryColor;
     position: absolute;
