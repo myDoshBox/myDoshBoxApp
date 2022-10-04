@@ -638,6 +638,67 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
+/**SideNav Styling**/
+.SideNav {
+  background-color: #006747;
+  color: #ffffff;
+  width: 15rem;
+  height: 100vh !important;
+}
+
+.SideNavLogo {
+  width: 6rem;
+  cursor: pointer !important;
+}
+
+.SideNavItem {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #ffffff;
+  cursor: pointer !important;
+  font-weight: 400;
+}
+
+.hoverBlock {
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  position: absolute !important;
+  height: 2rem !important;
+  transform: translate(200px, 0px);
+  display: none;
+}
+
+.SideNavItem:hover,
+:focus {
+  font-weight: 700 !important;
+}
+.SideNavItem:hover .hoverBlock,
+:focus .hoverBlock {
+  display: block;
+}
+
+.SideNavDropdown button {
+  background-color: unset !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.SideNavDropdown button::after {
+  display: none !important;
+  width: unset !important;
+  outline: unset !important;
+}
+
+.SideNavDropdown .show {
+  transform: translate3d(180px, 1px, 0px) !important;
+}
+
+.SideNavDropdown .show a:hover,
+:focus {
+  font-weight: 700 !important;
+}
+
 .completed,
 .resolved {
   width: 180px;

@@ -96,3 +96,61 @@
     display: block;
   }
 }
+
+/**SideNav Styling**/
+.SideNav {
+  background-color: $pryColor;
+  color: $secColor;
+  width: 15rem;
+  height: 100vh !important;
+}
+.SideNavLogo {
+  width: 6rem;
+  cursor: pointer !important;
+}
+.SideNavItem {
+  @include H6Font;
+  color: $secColor;
+  cursor: pointer !important;
+  font-weight: 400;
+}
+.hoverBlock {
+  border: 3px solid $secColor;
+  border-radius: 5px;
+  position: absolute !important;
+  height: 2rem !important;
+  transform: translate(200px, 0px);
+  display: none;
+}
+.SideNavItem:hover,
+:focus {
+  font-weight: 700 !important;
+  .hoverBlock {
+    display: block;
+  }
+}
+.SideNavDropdown button {
+  background-color: unset !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.SideNavDropdown button::after {
+  display: none !important;
+  width: unset !important;
+  outline: unset !important;
+}
+// .SideNavItemNeutrals:hover, :focus {
+//   svg:focus, :hover {
+//     width: 30% !important;
+//   }
+//   span {
+//     width: 40% !important;
+//   }
+// }
+.SideNavDropdown .show {
+  transform: translate3d(180px, 1px, 0px) !important;
+}
+.SideNavDropdown .show a:hover,
+:focus {
+  font-weight: 700 !important;
+}
