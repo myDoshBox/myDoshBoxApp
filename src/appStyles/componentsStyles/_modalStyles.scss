@@ -2,11 +2,10 @@
 @use "../fonts" as *;
 // $BtnBgColor: rgba(0, 103, 71, 0.9);
 
-
 .Modal-Btn {
   @include pFont;
   background-color: $buttonColor !important;
-  color:$secColor;
+  color: $secColor;
   border-radius: 4.5px !important;
 }
 .Modal-Btn:hover,

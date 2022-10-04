@@ -7,7 +7,7 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  background-color: #ffffff !important;
+  background-color: hsl(0deg, 0%, 100%) !important;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -188,7 +188,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 540px) {
   .SignInBtn,
-.GoogleSignInBtn {
+  .GoogleSignInBtn {
     width: 80%;
   }
   .new-transaction-btn {
@@ -349,7 +349,9 @@ body::-webkit-scrollbar {
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+.escrow-input-field::-moz-placeholder,
+.escrow-price-field::-moz-placeholder,
+.bank-transfer-input-field::-moz-placeholder {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -435,7 +437,7 @@ body::-webkit-scrollbar {
     width: 75.5% !important;
   }
   .escrow-form-label,
-.bank-transfer-form-label {
+  .bank-transfer-form-label {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -499,7 +501,7 @@ body::-webkit-scrollbar {
     border-radius: 5px 0 0 5px !important;
   }
   .escrow-form,
-.bank-transfer-form {
+  .bank-transfer-form {
     width: 1041px !important;
   }
 }
@@ -759,14 +761,14 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 687px) {
   .completed,
-.awaiting,
-.canceled,
-.dispute,
-.pending-confirmation,
-.pending-payment,
-.refunded,
-.resolved,
-.unresolved {
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
     width: 80px !important;
     height: 20px !important;
     font-size: 7px !important;
