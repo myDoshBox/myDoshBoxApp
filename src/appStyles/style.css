@@ -191,6 +191,104 @@ body::-webkit-scrollbar {
 .GoogleSignInBtn {
     width: 80%;
   }
+  .new-transaction-btn {
+    width: 136px;
+    height: 36px;
+    font-size: 12px !important;
+  }
+}
+.contact-card {
+  border: 2.5px solid #006747 !important;
+  border-radius: 10px;
+  padding: 50px 15px;
+}
+.contact-card hr {
+  color: #006747;
+}
+.contact-card a:link {
+  text-decoration: none;
+  color: black;
+}
+.contact-card a:visited {
+  color: black;
+}
+
+.faq-head {
+  border: 1px solid #006747 !important;
+  padding: 16px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  background: #006747 !important;
+}
+
+.accordion-item {
+  border-top: 1px solid !important;
+}
+
+.accordion-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  font-weight: 500;
+  padding: 18px 22px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff !important;
+  color: #4b4453 !important;
+}
+
+.why-choose-us-card-head {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #006747 !important;
+}
+
+.why-choose-us-card-text {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 13.5px !important;
+}
+
+@media screen and (max-width: 687px) {
+  .faq-head {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .accordion-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    padding: 16px 20px !important;
+  }
+  .contact-card {
+    padding: 30px 15px;
+  }
+  .why-choose-us-card-head {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+  .why-choose-us-card-text {
+    font-size: 8px !important;
+    line-height: 12px;
+  }
+  .transaction-table {
+    font-size: 10px !important;
+  }
 }
 .escrow-form,
 .bank-transfer-form {
@@ -657,5 +755,44 @@ body::-webkit-scrollbar {
   letter-spacing: 0rem;
   color: rgb(165, 42, 42);
   background-color: rgba(165, 42, 42, 0.1);
+}
+
+@media screen and (max-width: 687px) {
+  .completed,
+.awaiting,
+.canceled,
+.dispute,
+.pending-confirmation,
+.pending-payment,
+.refunded,
+.resolved,
+.unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 7px !important;
+  }
+}
+.transaction-table thead tr th {
+  color: #4b4453 !important;
+}
+.transaction-table tbody tr {
+  border-bottom: 1px solid gray;
+}
+.transaction-table tbody tr td {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 290px) {
+  .transaction-table thead tr th {
+    font-size: 6px !important;
+  }
+  .transaction-table tbody tr td {
+    font-size: 6px !important;
+  }
+}
+@media screen and (max-width: 687px) {
+  .transaction-table {
+    font-size: 10px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

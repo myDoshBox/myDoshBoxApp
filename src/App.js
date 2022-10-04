@@ -1,18 +1,26 @@
+import { RecentTransactionCard } from "./components/CardComponents/TransactionCards";
 import {
-  SellersEscrowInitiationForm,
-  BuyerEscrowInitiationForm,
-  SellerDeliverGoodsForm,
-  BuyerConfirmProductDeliveryForm,
-  BankTransferForm,
-} from "./components/FormComponents.js/TransactionForms";
+  CompletedNotification,
+  Refunded,
+  Resolved,
+  AwaitingDelivery,
+  Unresolved,
+  PendingConfirmation,
+  PendingPayment,
+  InDispute,
+} from "./components/NotificationComponent/NotificationComponents";
 function App() {
   return (
     <div>
-      <SellerDeliverGoodsForm />
-      <BuyerConfirmProductDeliveryForm />
-      <SellersEscrowInitiationForm />
-      <BuyerEscrowInitiationForm />
-      <BankTransferForm />
+      <RecentTransactionCard />
+      <CompletedNotification />
+      <AwaitingDelivery />
+      <InDispute />
+      <PendingConfirmation />
+      <PendingPayment />
+      <Unresolved />
+      <Refunded />
+      <Resolved />
     </div>
   );
 }

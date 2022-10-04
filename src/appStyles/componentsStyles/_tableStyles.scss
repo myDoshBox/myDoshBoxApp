@@ -1,0 +1,45 @@
+@use "../color" as *;
+@use "../fonts" as *;
+
+.transaction-table {
+  thead {
+    tr {
+      th {
+        color: $bodyTextColor !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-bottom: none;
+      }
+      border-bottom: 1px solid gray;
+    }
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .transaction-table {
+    thead {
+      tr {
+        th {
+          font-size: 6px !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 6px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .transaction-table {
+    font-size: 10px !important;
+  }
+}

@@ -1,0 +1,86 @@
+@use "../color" as *;
+@use "../fonts" as *;
+
+.contact-card {
+  border: 2.5px solid $pryColor !important;
+  border-radius: 10px;
+  padding: 50px 15px;
+
+  hr {
+    color: $pryColor;
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+}
+
+.faq-head {
+  border: 1px solid $pryColor !important;
+  //   border-radius: 3px 3px 0 0;
+  padding: 16px 20px;
+  @include H5Font;
+  color: $secColor;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  background: $pryColor !important;
+}
+
+.accordion-item {
+  border-top: 1px solid !important;
+}
+
+.accordion-button {
+  @include H6Font;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  font-weight: 500;
+
+  padding: 18px 22px !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $secColor !important;
+  color: $bodyTextColor !important;
+}
+
+.why-choose-us-card-head {
+  @include H6Font;
+  color: $pryColor !important;
+}
+
+.why-choose-us-card-text {
+  @include pFont;
+  font-size: 13.5px !important;
+}
+
+@media screen and (max-width: 687px) {
+  .faq-head {
+    @include H6Font;
+  }
+
+  .accordion-button {
+    @include H6Font;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    padding: 16px 20px !important;
+  }
+
+  .contact-card {
+    padding: 30px 15px;
+  }
+  .why-choose-us-card-head {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+
+  .why-choose-us-card-text {
+    font-size: 8px !important;
+    line-height: 12px;
+  }
+  .transaction-table {
+    font-size: 10px !important;
+  }
+}
