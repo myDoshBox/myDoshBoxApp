@@ -1,13 +1,9 @@
-// import Tablecomponents from "./components/TableComponents/PricingTable";
-// import FooterComponents from "./components/FooterComponents";
-import { AdminSidenav } from "./components/NavbarComponents/SideNavbar";
+import Tablecomponents from "./components/TableComponents/PricingTable";
 
 function App() {
   return (
     <div>
-      {/* <Tablecomponents /> */}
-      {/* <FooterComponents /> */}
-      <AdminSidenav />
+      <Tablecomponents />
     </div>
   );
 }
