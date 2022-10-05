@@ -596,4 +596,8 @@ body::-webkit-scrollbar {
 :focus {
   font-weight: 700 !important;
 }
+
+.BgColor {
+  background-color: #006747;
+}
 /*# sourceMappingURL=style.css.map */
