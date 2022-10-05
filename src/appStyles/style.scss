@@ -7,5 +7,5 @@
 // @use "./componentsStyles/modalStyles";
 // @use "./componentsStyles/navbarStyles";
 // @use "./componentsStyles/notificationStyles";
-// @use "./componentsStyles/footerStyles";
-// @use "./componentsStyles/tableStyles" as *;
+@use "./componentsStyles/footerStyles";
+@use "./componentsStyles/tableStyles" as *;
