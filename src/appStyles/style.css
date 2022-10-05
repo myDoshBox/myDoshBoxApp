@@ -7,7 +7,7 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  background-color: #ffffff !important;
+  background-color: hsl(0deg, 0%, 100%) !important;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -17,8 +17,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .SignInBtn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -383,8 +381,6 @@ body::-webkit-scrollbar {
   background-color: #e5f0ed !important;
 }
 
-=======
->>>>>>> ModalComponents
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -392,39 +388,40 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-<<<<<<< HEAD
   background-color: rgba(0, 103, 71, 0.9) !important;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
 }
-
-.ModalPopUp {
-  width: 31rem !important;
-}
-
-.ModalMessage {
+.Modal-Btn .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-=======
->>>>>>> ModalComponents
   background-color: #4d957e !important;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   border-radius: 4.5px !important;
 }
-
-<<<<<<< HEAD
-.Modal-Btn:hover,
-.Modal-Btn:focus {
-=======
-.Modal-Btn:hover {
->>>>>>> ModalComponents
+.Modal-Btn .Modal-Btn:hover,
+.Modal-Btn .Modal-Btn:focus {
   background-color: #006747 !important;
 }
-
-.ModalMessage {
+.Modal-Btn .ModalMessage {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: #4d957e !important;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 4.5px !important;
+}
+.Modal-Btn .Modal-Btn:hover,
+.Modal-Btn .Modal-Btn:focus {
+  background-color: #006747 !important;
+}
+.Modal-Btn .ModalMessage {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -434,16 +431,12 @@ body::-webkit-scrollbar {
   text-align: justify;
   color: rgba(75, 68, 83, 0.5);
 }
-
-.ModalTitle {
+.Modal-Btn .ModalTitle {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.75rem !important;
   line-height: 2.625rem;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/NavbarComponents
 .nav-link {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -546,7 +539,7 @@ body::-webkit-scrollbar {
 /**SideNav Styling**/
 .SideNav {
   background-color: #006747;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   width: 15rem;
   height: 100vh !important;
 }
@@ -560,13 +553,13 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   cursor: pointer !important;
   font-weight: 400;
 }
 
 .hoverBlock {
-  border: 3px solid #ffffff;
+  border: 3px solid hsl(0deg, 0%, 100%);
   border-radius: 5px;
   position: absolute !important;
   height: 2rem !important;
@@ -574,10 +567,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.SideNavItem:hover, :focus {
+.SideNavItem:hover,
+:focus {
   font-weight: 700 !important;
 }
-.SideNavItem:hover .hoverBlock, :focus .hoverBlock {
+.SideNavItem:hover .hoverBlock,
+:focus .hoverBlock {
   display: block;
 }
 
@@ -587,23 +582,6 @@ body::-webkit-scrollbar {
   padding: 0 !important;
 }
 
-<<<<<<< HEAD
-.pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
-  font-size: 0.875rem;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgb(165, 42, 42);
-  background-color: rgba(165, 42, 42, 0.1);
-=======
 .SideNavDropdown button::after {
   display: none !important;
   width: unset !important;
@@ -614,10 +592,8 @@ body::-webkit-scrollbar {
   transform: translate3d(180px, 1px, 0px) !important;
 }
 
-.SideNavDropdown .show a:hover, :focus {
+.SideNavDropdown .show a:hover,
+:focus {
   font-weight: 700 !important;
->>>>>>> origin/NavbarComponents
 }
-=======
->>>>>>> ModalComponents
 /*# sourceMappingURL=style.css.map */

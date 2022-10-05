@@ -4,20 +4,34 @@
 //UserSidenav
 
 import logo from "../../assets/images/doshlogo.jpg";
-import { ChatIcon, DashboardIcon, DisputeIcon, LogoutIcon, NavTransactionIcon, NotificationIcon, SettingsIcon, UsersIcon, TicketsIcon } from '../IconComponent/SideNavIcons'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import {
+  ChatIcon,
+  DashboardIcon,
+  DisputeIcon,
+  LogoutIcon,
+  NavTransactionIcon,
+  NotificationIcon,
+  SettingsIcon,
+  UsersIcon,
+  TicketsIcon,
+} from "../IconComponent/SideNavIcons";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 export const UserSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column" >
+    <aside className="SideNav d-flex align-center flex-column">
       <div>
-        <img className="SideNavLogo ms-3 mt-3" src={logo} alt="MyDoshBox Logo" />
+        <img
+          className="SideNavLogo ms-3 mt-3"
+          src={logo}
+          alt="MyDoshBox Logo"
+        />
       </div>
       <div className="SideNavItems d-flex justify-content-between align-center flex-column mt-5 h-100">
         <ul className="ps-3">
           <li className="d-flex align-center SideNavItem mt-3">
-            <DashboardIcon width="30" height="30" className="me-3"/>
+            <DashboardIcon width="30" height="30" className="me-3" />
             <span className="my-1">Dashboard</span>
             <div className="hoverBlock"></div>
           </li>
@@ -27,12 +41,12 @@ export const UserSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <UsersIcon width="30" height="30" className="me-3"  />
+            <UsersIcon width="30" height="30" className="me-3" />
             <span className="my-1">History</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <ChatIcon width="30" height="30" className="me-3"/>
+            <ChatIcon width="30" height="30" className="me-3" />
             <span className="my-1">Chats</span>
             <div className="hoverBlock"></div>
           </li>
@@ -42,12 +56,12 @@ export const UserSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex  align-center SideNavItem mt-3">
-            <DisputeIcon width="30" height="30" className="me-3"/>
+            <DisputeIcon width="30" height="30" className="me-3" />
             <span className="my-2">Disputes</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <SettingsIcon width="30" height="30" className="me-3"/>
+            <SettingsIcon width="30" height="30" className="me-3" />
             <span className="my-1">Settings</span>
             <div className="hoverBlock"></div>
           </li>
@@ -66,21 +80,25 @@ export const UserSidenav = () => {
 
 export const NeutralsSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column" >
+    <aside className="SideNav d-flex align-center flex-column">
       <div>
-        <img className="SideNavLogo ms-3 mt-3" src={logo} alt="MyDoshBox Logo" />
+        <img
+          className="SideNavLogo ms-3 mt-3"
+          src={logo}
+          alt="MyDoshBox Logo"
+        />
       </div>
       <div className="SideNavItems d-flex justify-content-between align-center flex-column mt-5 h-100">
         <ul className="ps-3">
           <li className="d-flex align-center SideNavItem mt-3">
-            <DashboardIcon width="30" height="30" className="me-3"/>
+            <DashboardIcon width="30" height="30" className="me-3" />
             <span className="my-1">Dashboard</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
             <NavTransactionIcon width="30" height="30" className="me-3" />
             <span className="my-1">
-              {['end'].map((direction) => (
+              {["end"].map((direction) => (
                 <DropdownButton
                   key={direction}
                   id={`dropdown-button-drop-${direction}`}
@@ -103,7 +121,7 @@ export const NeutralsSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <SettingsIcon width="30" height="30" className="me-3"/>
+            <SettingsIcon width="30" height="30" className="me-3" />
             <span className="my-1">Settings</span>
             <div className="hoverBlock"></div>
           </li>
@@ -122,14 +140,18 @@ export const NeutralsSidenav = () => {
 
 export const CustomerCareSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column" >
+    <aside className="SideNav d-flex align-center flex-column">
       <div>
-        <img className="SideNavLogo ms-3 mt-3" src={logo} alt="MyDoshBox Logo" />
+        <img
+          className="SideNavLogo ms-3 mt-3"
+          src={logo}
+          alt="MyDoshBox Logo"
+        />
       </div>
       <div className="SideNavItems d-flex justify-content-between align-center flex-column mt-5 h-100">
         <ul className="ps-3">
           <li className="d-flex align-center SideNavItem mt-3">
-            <DashboardIcon width="30" height="30" className="me-3"/>
+            <DashboardIcon width="30" height="30" className="me-3" />
             <span className="my-1">Dashboard</span>
             <div className="hoverBlock"></div>
           </li>
@@ -139,12 +161,12 @@ export const CustomerCareSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <UsersIcon width="30" height="30" className="me-3"  />
+            <UsersIcon width="30" height="30" className="me-3" />
             <span className="my-1">Users</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <ChatIcon width="30" height="30" className="me-3"/>
+            <ChatIcon width="30" height="30" className="me-3" />
             <span className="my-1">Chats</span>
             <div className="hoverBlock"></div>
           </li>
@@ -154,12 +176,12 @@ export const CustomerCareSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex  align-center SideNavItem mt-3">
-            <TicketsIcon width="30" height="30" className="me-3"/>
+            <TicketsIcon width="30" height="30" className="me-3" />
             <span className="my-2">Tickets</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <SettingsIcon width="30" height="30" className="me-3"/>
+            <SettingsIcon width="30" height="30" className="me-3" />
             <span className="my-1">Settings</span>
             <div className="hoverBlock"></div>
           </li>
@@ -178,14 +200,18 @@ export const CustomerCareSidenav = () => {
 
 export const AdminSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column" >
+    <aside className="SideNav d-flex align-center flex-column">
       <div>
-        <img className="SideNavLogo ms-3 mt-3" src={logo} alt="MyDoshBox Logo" />
+        <img
+          className="SideNavLogo ms-3 mt-3"
+          src={logo}
+          alt="MyDoshBox Logo"
+        />
       </div>
       <div className="SideNavItems d-flex justify-content-between align-center flex-column mt-5 h-100">
         <ul className="ps-3">
           <li className="d-flex align-center SideNavItem mt-3">
-            <DashboardIcon width="30" height="30" className="me-3"/>
+            <DashboardIcon width="30" height="30" className="me-3" />
             <span className="my-1">Dashboard</span>
             <div className="hoverBlock"></div>
           </li>
@@ -195,12 +221,12 @@ export const AdminSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <UsersIcon width="30" height="30" className="me-3"  />
+            <UsersIcon width="30" height="30" className="me-3" />
             <span className="my-1">Users</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <ChatIcon width="30" height="30" className="me-3"/>
+            <ChatIcon width="30" height="30" className="me-3" />
             <span className="my-1">Chats</span>
             <div className="hoverBlock"></div>
           </li>
@@ -210,12 +236,12 @@ export const AdminSidenav = () => {
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex  align-center SideNavItem mt-3">
-            <TicketsIcon width="30" height="30" className="me-3"/>
+            <TicketsIcon width="30" height="30" className="me-3" />
             <span className="my-2">Tickets</span>
             <div className="hoverBlock"></div>
           </li>
           <li className="d-flex align-center SideNavItem mt-3">
-            <SettingsIcon width="30" height="30" className="me-3"/>
+            <SettingsIcon width="30" height="30" className="me-3" />
             <span className="my-1">Settings</span>
             <div className="hoverBlock"></div>
           </li>
@@ -231,4 +257,3 @@ export const AdminSidenav = () => {
     </aside>
   );
 };
-
