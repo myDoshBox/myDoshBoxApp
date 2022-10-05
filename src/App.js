@@ -1,4 +1,9 @@
-import { RecentTransactionCard } from "./components/CardComponents/TransactionCards";
+import {
+  RecentTransactionCard,
+  AdminRecentTransactionsCard,
+  EscrowInitiationsTermsAndConditionCard,
+  PaymentGatewayCard,
+} from "./components/CardComponents/TransactionCards";
 import {
   CompletedNotification,
   Refunded,
@@ -13,6 +18,9 @@ function App() {
   return (
     <div>
       <RecentTransactionCard />
+      <AdminRecentTransactionsCard />
+      <EscrowInitiationsTermsAndConditionCard />
+      <PaymentGatewayCard />
       <CompletedNotification />
       <AwaitingDelivery />
       <InDispute />

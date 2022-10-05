@@ -56,6 +56,28 @@
   font-size: 13.5px !important;
 }
 
+.transaction-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.escrow-terms-condition {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 00.08em;
+  }
+}
+
+.payment-gateway-image {
+  width: 165px;
+  height: 165px;
+}
+
+.payment-gateway-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (max-width: 687px) {
   .faq-head {
     @include H6Font;
@@ -82,5 +104,17 @@
   }
   .transaction-table {
     font-size: 10px !important;
+  }
+  .escrow-terms-condition {
+    font-size: 12px !important;
+    h2 {
+      font-size: 16px !important;
+      line-height: 24px !important;
+      text-align: center;
+    }
+  }
+  .payment-gateway-image {
+    width: 100px;
+    height: 100px;
   }
 }

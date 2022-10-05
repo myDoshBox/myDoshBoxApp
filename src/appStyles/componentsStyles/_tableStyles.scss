@@ -42,6 +42,28 @@
   .transaction-table {
     font-size: 10px !important;
   }
+  .small-hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 688px) and (max-width: 992px) {
+  .transaction-table {
+    thead {
+      tr {
+        th {
+          font-size: 12px !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
 }
 
 // .BgColor {

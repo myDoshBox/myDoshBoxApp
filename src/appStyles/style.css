@@ -450,6 +450,30 @@ body::-webkit-scrollbar {
   font-size: 13.5px !important;
 }
 
+.transaction-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.escrow-terms-condition {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.escrow-terms-condition h2 {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.payment-gateway-image {
+  width: 165px;
+  height: 165px;
+}
+
+.payment-gateway-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (max-width: 687px) {
   .faq-head {
     font-family: "Roboto", sans-serif;
@@ -477,6 +501,18 @@ body::-webkit-scrollbar {
   }
   .transaction-table {
     font-size: 10px !important;
+  }
+  .escrow-terms-condition {
+    font-size: 12px !important;
+  }
+  .escrow-terms-condition h2 {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    text-align: center;
+  }
+  .payment-gateway-image {
+    width: 100px;
+    height: 100px;
   }
 }
 .escrow-form,
@@ -1043,6 +1079,17 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 687px) {
   .transaction-table {
     font-size: 10px !important;
+  }
+  .small-hide {
+    display: none;
+  }
+}
+@media screen and (min-width: 688px) and (max-width: 992px) {
+  .transaction-table thead tr th {
+    font-size: 12px !important;
+  }
+  .transaction-table tbody tr td {
+    font-size: 12px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
