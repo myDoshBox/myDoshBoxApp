@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Tablecomponents from "./components/TableComponents/PricingTable";
+
+import { ComplaintForm } from "./components/FormComponents.js/IssuesComplaintForms";
 
 function App() {
   return (
     <>
-      <Tablecomponents />
+      <ComplaintForm />
     </>
   );
 }

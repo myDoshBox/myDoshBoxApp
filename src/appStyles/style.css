@@ -17,6 +17,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.BtnColor {
+  background-color: #66a491;
+}
+
 .BgColor {
   background-color: #006747;
 }
