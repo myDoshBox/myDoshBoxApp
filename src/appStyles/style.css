@@ -16,7 +16,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-<<<<<<< HEAD
 
 .SignInBtn {
   font-family: "Open Sans" !important;
@@ -117,6 +116,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
+  letter-spacing: 0.08em;
   font-size: 25px !important;
 }
 
@@ -138,6 +138,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
+  letter-spacing: 0.08em;
   font-weight: 700 !important;
   letter-spacing: 0.08em;
 }
@@ -149,6 +150,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
+  letter-spacing: 0.08em;
   font-weight: 500 !important;
   letter-spacing: 0.08em;
 }
@@ -183,6 +185,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
+  letter-spacing: 0.08em;
   font-weight: 500 !important;
   letter-spacing: 0.08em;
 }
@@ -382,6 +385,291 @@ body::-webkit-scrollbar {
   background-color: #e5f0ed !important;
 }
 
+.Email, .Password {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  color: rgba(75, 68, 83, 0.8);
+  font-size: 1rem !important;
+  font-weight: 700;
+}
+
+.Email input::-moz-placeholder, .Password input::-moz-placeholder {
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.Email input::placeholder, .Password input::placeholder {
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.AccountNum label, .AccountName label, .BankName label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4b4453;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.AccountNum input, .AccountName input, .BankName input {
+  border: 1.5px solid rgba(0, 103, 71, 0.3);
+}
+
+.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.AccountNum input::placeholder, .AccountName input::placeholder, .BankName input::placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.Name label, .UpdateEmail label, .Phone label, .Pass label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4b4453;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.Name input, .UpdateEmail input, .Phone input, .Pass input {
+  border: 1.5px solid rgba(0, 103, 71, 0.3);
+}
+
+.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.Name input::placeholder, .UpdateEmail input::placeholder, .Phone input::placeholder, .Pass input::placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.escrow-form,
+.bank-transfer-form {
+  overflow-x: hidden;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #4b4453;
+}
+
+.escrow-form-label,
+.bank-transfer-form-label {
+  margin-left: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  font-size: 18px !important;
+}
+
+.escrow-input-field,
+.bank-transfer-input-field {
+  width: 90% !important;
+  margin: 0 15px;
+}
+
+.escrow-price-field {
+  width: 78% !important;
+  border-radius: 5px 0 0 5px !important;
+}
+
+.price-field {
+  transform: translateX(12px);
+}
+
+.total-input {
+  width: 38% !important;
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+  border-radius: 0 5px 5px 0 !important;
+}
+
+.ngn {
+  background-color: #006747 !important;
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px 0 0 5px;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.ngn2 {
+  border: 1px solid none;
+  background-color: #006747 !important;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0 5px 5px 0;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.escrow-images {
+  border: 1px dashed rgba(75, 68, 83, 0.3) !important;
+}
+
+.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.escrow-input-field::placeholder,
+.escrow-price-field::placeholder,
+.bank-transfer-input-field::placeholder {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.form-check-label {
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.confirm-delivery-head {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+  font-weight: 500 !important;
+}
+
+.confirm-delivery-pText {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.deliver-goods-form {
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.account-details {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  transform: translateX(200px);
+  padding: 20px;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 687px) {
+  .total-input {
+    width: 100% !important;
+  }
+  .escrow-input-field {
+    width: 90% !important;
+    margin: 0 15px;
+  }
+  .escrow-card {
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+  }
+  .escrow-price-field {
+    width: 75.5% !important;
+  }
+  .escrow-form-label,
+.bank-transfer-form-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-size: 14px !important;
+  }
+  .confirm-delivery-head {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3125rem;
+    line-height: 1.96rem;
+    letter-spacing: 0.08em;
+  }
+  .deliver-goods-form {
+    margin: 30px 10px !important;
+    padding: 10px !important;
+  }
+  .account-details {
+    transform: translateX(0) !important;
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 280px) {
+  .escrow-price-field {
+    width: 68% !important;
+    border-radius: 5px 0 0 5px !important;
+  }
+  .account-details {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .total-input {
+    width: 0 !important;
+    transform: translateX(-5px);
+  }
+  .account-details {
+    transform: translateX(30px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .total-input {
+    width: 70% !important;
+  }
+  .account-details {
+    transform: translateX(10px);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .escrow-price-field {
+    width: 80% !important;
+    border-radius: 5px 0 0 5px !important;
+  }
+  .escrow-form,
+.bank-transfer-form {
+    width: 1041px !important;
+  }
+}
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -609,6 +897,4 @@ body::-webkit-scrollbar {
 .TableRowColor {
   background-color: #66a491;
 }
-=======
->>>>>>> origin/FormComponents
 /*# sourceMappingURL=style.css.map */
