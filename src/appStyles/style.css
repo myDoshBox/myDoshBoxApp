@@ -16,6 +16,7 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+<<<<<<< HEAD
 
 .SignInBtn {
   font-family: "Open Sans" !important;
@@ -608,4 +609,6 @@ body::-webkit-scrollbar {
 .TableRowColor {
   background-color: #66a491;
 }
+=======
+>>>>>>> origin/FormComponents
 /*# sourceMappingURL=style.css.map */

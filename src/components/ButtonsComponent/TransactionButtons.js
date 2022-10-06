@@ -32,7 +32,10 @@ export const NewTransactionButton = () => {
 
 export const ProceedButton = () => {
   return (
-    <Button className="edit-ticket-btn border-0 all-btn rounded-1">
+    <Button
+      type="submit"
+      className="edit-ticket-btn border-0 all-btn rounded-1"
+    >
       PROCEED
     </Button>
   );
@@ -50,7 +53,11 @@ export const IAgreeButton = () => {
 };
 // ConfirmButton
 export const ConfirmButton = () => {
-  return <Button className="confirm-delivery-btn border-0">Confirm</Button>;
+  return (
+    <Button type="submit" className="confirm-delivery-btn border-0">
+      Confirm
+    </Button>
+  );
 };
 // DeliverProductButton
 export const DeliverProductButton = () => {
