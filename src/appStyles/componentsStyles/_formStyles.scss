@@ -2,52 +2,64 @@
 @use "../color" as *;
 $inputFieldColor: rgba(75, 68, 83, 0.8);
 
-.Email, .Password{
+.Email,
+.Password {
   @include H5Font;
   color: $inputFieldColor;
   font-size: 1rem !important;
   font-weight: 700;
 }
-.Email input::placeholder,.Password input::placeholder  {
-  color:$placeholderTextColor  !important;
+.Email input::placeholder,
+.Password input::placeholder {
+  color: $placeholderTextColor !important;
 }
-.AccountNum, .AccountName, .BankName {
+.AccountNum,
+.AccountName,
+.BankName {
   label {
     @include H6Font;
     color: $bodyTextColor;
     letter-spacing: 0.08em;
     font-weight: 700;
   }
-  input{
+  input {
     border: 1.5px solid rgba(0, 103, 71, 0.3);
   }
 }
-.AccountNum, .AccountName, .BankName {
-  input::placeholder{
+.AccountNum,
+.AccountName,
+.BankName {
+  input::placeholder {
     font-weight: 300 !important;
-  font-size: 1rem !important;
+    font-size: 1rem !important;
     letter-spacing: 0.04em !important;
-    color:$placeholderTextColor;
+    color: $placeholderTextColor;
   }
 }
 
-.Name, .UpdateEmail, .Phone, .Pass {
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
   label {
     @include H6Font;
     color: $bodyTextColor;
     letter-spacing: 0.08em;
     font-weight: 700;
   }
-  input{
+  input {
     border: 1.5px solid rgba(0, 103, 71, 0.3);
   }
 }
-.Name, .UpdateEmail, .Phone, .Pass {
-  input::placeholder{
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  input::placeholder {
     font-weight: 300 !important;
-  font-size: 1rem !important;
+    font-size: 1rem !important;
     letter-spacing: 0.04em !important;
-    color:$placeholderTextColor;
+    color: $placeholderTextColor;
   }
 }
 
@@ -233,4 +245,57 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
     width: 1041px !important;
     // transform: translateX(100px);
   }
+}
+
+// Authentication Form Style
+// SignIn Form Styling
+
+.inputFormStyle {
+  width: 500px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.inputStyle {
+  input {
+    text-indent: 10px !important;
+    border-color: #ced4da !important;
+  }
+}
+
+.toggleBtnStyle {
+  margin-left: -3rem;
+}
+
+.checkboxStyle label {
+  color: $pryColorVariant !important;
+}
+
+.signUpStyle {
+  width: 240px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+// CONTACT US STYLING
+.textAreaStyle {
+  width: 500px !important;
+  // height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.labelStyle {
+  color: #8cbbac !important;
+}
+
+.labelStyle::placeholder {
+  color: #8cbbac !important;
+}
+
+.titleStyle {
+  @include H1Font;
+  color: $pryColor !important;
 }
