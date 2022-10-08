@@ -3,6 +3,12 @@ import {
   AdminRecentTransactionsCard,
   EscrowInitiationsTermsAndConditionCard,
   PaymentGatewayCard,
+  BuyerTransactCard,
+  SellerTransactCard,
+  TransactionSummaryCard,
+  TransactionAgreedCard,
+  TransactionCompletionCard,
+  PaymentMadeCard,
 } from "./components/CardComponents/TransactionCards";
 import {
   CompletedNotification,
@@ -21,6 +27,12 @@ function App() {
       <AdminRecentTransactionsCard />
       <EscrowInitiationsTermsAndConditionCard />
       <PaymentGatewayCard />
+      <BuyerTransactCard />
+      <SellerTransactCard />
+      <TransactionSummaryCard />
+      <TransactionAgreedCard />
+      <TransactionCompletionCard />
+      <PaymentMadeCard />
       <CompletedNotification />
       <AwaitingDelivery />
       <InDispute />

@@ -76,6 +76,87 @@
 
 .payment-gateway-card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    color: $placeholderTextColor !important;
+    @include pFont;
+    font-size: 16px !important;
+  }
+  h2 {
+    @include H3Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  h4 {
+    @include H5Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+}
+
+.buying-selling-card {
+  width: 468px;
+  height: 227px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    @include H4Font;
+    font-size: 25px !important;
+  }
+}
+
+.transaction-summary-card {
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .header-text,
+  .transaction-summary-info-title {
+    color: $placeholderTextColor !important;
+    font-family: "Open Sans" !important;
+  }
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+  }
+}
+.transaction-images {
+  width: 80%;
+  height: 300px;
+}
+
+@media screen and (max-width: 300px) {
+  .payment-gateway-image {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 8px !important;
+      line-height: 12px !important;
+    }
+    h2 {
+      font-size: 16px !important;
+    }
+    h4 {
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  }
+  .transaction-images {
+    height: 100px !important;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 8px !important;
+  }
 }
 
 @media screen and (max-width: 687px) {
@@ -116,5 +197,77 @@
   .payment-gateway-image {
     width: 100px;
     height: 100px;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 12px !important;
+      line-height: 20px !important;
+    }
+    h2 {
+      @include H5Font;
+    }
+    h4 {
+      @include H6Font;
+    }
+  }
+  .buying-selling-card {
+    width: 80%;
+    height: 160px;
+    p {
+      font-size: 16px !important;
+    }
+    svg {
+      width: 45.5px !important;
+      height: 45.5px !important;
+    }
+  }
+  .transaction-summary-card {
+    h2 {
+      @include H6Font;
+    }
+    .header-text {
+      font-size: 12px;
+      font-family: "Open Sans";
+    }
+    .transaction-summary-info-title {
+      font-size: 12px !important;
+      font-weight: 400;
+    }
+    .transaction-summary-info-text {
+      font-size: 10px !important;
+    }
+  }
+  .transaction-images {
+    width: 90%;
+    height: 150px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .transaction-images {
+    width: 90%;
+    height: 200px;
+  }
+  .transaction-summary-card {
+    h2 {
+      @include H5Font;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .transaction-summary-info-text {
+    transform: translateX(-70px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(70px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .transaction-summary-info-text {
+    transform: translateX(-90px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(90px);
   }
 }

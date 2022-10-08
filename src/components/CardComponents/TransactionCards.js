@@ -16,6 +16,7 @@ import {
 import { BuyingIcon, SellingIcon } from "../IconComponent/UserdashboardIcons";
 import bank from "../../assets/images/bank.jpg";
 import atm from "../../assets/images/atm.jpg";
+import product from "../../assets/images/productimage.jpg";
 
 // RecentTransactionCard
 export const RecentTransactionCard = () => {
@@ -94,10 +95,92 @@ export const AdminRecentTransactionsCard = () => {
 };
 // IndividualTransactionsCard
 // BuyerTransactCard
-
+export const BuyerTransactCard = () => {
+  return (
+    <Container>
+      <div className="d-flex align-items-center justify-content-center buying-selling-card mt-5">
+        <BuyingIcon width={"65"} height={"65"} className={"me-3"} />
+        <p className="mt-2">BUYING</p>
+      </div>
+    </Container>
+  );
+};
 // SellerTransactCard
+export const SellerTransactCard = () => {
+  return (
+    <Container>
+      <div className="d-flex align-items-center justify-content-center buying-selling-card mt-5">
+        <SellingIcon width={"65"} height={"65"} className={"me-3"} />
+        <p className="mt-2">SELLING</p>
+      </div>
+    </Container>
+  );
+};
 // TransactionCompletedCard
+
 // TransactionSummary
+export const TransactionSummaryCard = () => {
+  return (
+    <Container>
+      <Card className="transaction-summary-card p-2 p-lg-4 d-flex flex-column">
+        <div className=" d-flex flex-column align-items-center mb-5">
+          <h2 className="text-center">Transaction Summary</h2>
+          <p className="text-center header-text">
+            Please Confirm the following transaction initiated by user Eland
+            Aaronson
+          </p>
+          <img src={product} alt="" className="transaction-images" />
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Seller Email
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            ClidsawFurniture@gmail.com
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Transaction Id
+          </p>
+          <p className="transaction-summary-info-text px-md-3">AXSQWEDSC</p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Description
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            Brown lightweight italian <br /> leather three seater sofa
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Quantity
+          </p>
+          <p className="transaction-summary-info-text px-md-3">30 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Price
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N 150,000 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Delivery / Completion Date
+          </p>
+          <p className="transaction-summary-info-text px-md-3">14 Aug 2022 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Total
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N3,600,000 </p>
+        </div>
+      </Card>
+    </Container>
+  );
+};
 // EscrowInitiationsTerms&ConditionCard
 export const EscrowInitiationsTermsAndConditionCard = () => {
   return (
@@ -113,20 +196,143 @@ export const EscrowInitiationsTermsAndConditionCard = () => {
   );
 };
 // TransactionsAgreedCard
+export const TransactionAgreedCard = () => {
+  return (
+    <Container>
+      <Card className="transaction-summary-card p-2 p-lg-4 d-flex flex-column">
+        <div className=" d-flex flex-column align-items-center mb-5">
+          <h2 className="text-center">Transaction Agreed</h2>
+          <p className="text-center header-text">
+            Please Confirm the following transaction initiated by user Eland
+            Aaronson
+          </p>
+          <img src={product} alt="" className="transaction-images" />
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Seller
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            ClidsawFurniture@gmail.com
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Transaction Id
+          </p>
+          <p className="transaction-summary-info-text px-md-3">AXSQWEDSC</p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Description
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            Brown lightweight italian <br /> leather three seater sofa
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Quantity
+          </p>
+          <p className="transaction-summary-info-text px-md-3">30 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Price
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N 150,000 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Delivery / Completion Date
+          </p>
+          <p className="transaction-summary-info-text px-md-3">14 Aug 2022 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Total
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N3,600,000 </p>
+        </div>
+      </Card>
+    </Container>
+  );
+};
 // PaymentMadeCard
-
+export const PaymentMadeCard = () => {
+  return (
+    <Container>
+      <Card className="transaction-summary-card p-2 p-lg-4 d-flex flex-column">
+        <div className=" d-flex flex-column align-items-center mb-5">
+          <h2 className="text-center">Payment Made</h2>
+          <p className="text-center header-text">
+            Buyer Elland Aaronson has made payment into MyDoshBox account for
+            this transaction
+          </p>
+          <img src={product} alt="" className="transaction-images" />
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Seller
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            ClidsawFurniture@gmail.com
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Transaction Id
+          </p>
+          <p className="transaction-summary-info-text px-md-3">AXSQWEDSC</p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Description
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            Brown lightweight italian <br /> leather three seater sofa
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Quantity
+          </p>
+          <p className="transaction-summary-info-text px-md-3">30 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Price
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N 150,000 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Delivery / Completion Date
+          </p>
+          <p className="transaction-summary-info-text px-md-3">14 Aug 2022 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Total
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N3,600,000 </p>
+        </div>
+      </Card>
+    </Container>
+  );
+};
 // PaymentGatewayCard
 export const PaymentGatewayCard = () => {
   return (
     <Container>
-      <Card className="payment-gateway-card">
+      <Card className="payment-gateway-card p-lg-5 p-3 mt-5">
         <Container>
-          <div className="row p-3">
+          <div className="row p-lg-3 p-2">
             <h2 className="text-center">Payment Gateway</h2>
             <p className="text-center">
               Please choose your preferred mode of payment
             </p>
-            <div className="col-12 col-md-6 mt-3">
+            <div className="col-12 col-lg-6 mt-3">
               <Card className="d-flex flex-row align-items-center p-3 p-md-4">
                 <img
                   src={atm}
@@ -134,12 +340,12 @@ export const PaymentGatewayCard = () => {
                   className="payment-gateway-image"
                 />
                 <div>
-                  <h5>Paystack</h5>
+                  <h4>Paystack</h4>
                   <p>Proceed to pay using your atm card</p>
                 </div>
               </Card>
             </div>
-            <div className="col-12 col-md-6 mt-3 mb-3">
+            <div className="col-12 col-lg-6 mt-3 mb-3">
               <Card className="d-flex flex-row align-items-center p-3 p-md-4">
                 <img
                   src={bank}
@@ -147,7 +353,7 @@ export const PaymentGatewayCard = () => {
                   className="payment-gateway-image"
                 />
                 <div>
-                  <h5>Bank Transfer</h5>
+                  <h4>Bank Transfer</h4>
                   <p>Proceed to pay by transferring to our account</p>
                 </div>
               </Card>
@@ -159,5 +365,66 @@ export const PaymentGatewayCard = () => {
   );
 };
 // TransactionCompletionCard
+export const TransactionCompletionCard = () => {
+  return (
+    <Container>
+      <Card className="transaction-summary-card p-2 p-lg-4 d-flex flex-column">
+        <div className=" d-flex flex-column align-items-center mb-5">
+          <h2 className="text-center">Transaction Completion</h2>
+          <p className="text-center header-text">
+            Please confirm the receipt of the goods purchased
+          </p>
+          <img src={product} alt="" className="transaction-images" />
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Seller Email
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            ClidsawFurniture@gmail.com
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Transaction Id
+          </p>
+          <p className="transaction-summary-info-text px-md-3">AXSQWEDSC</p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Description
+          </p>
+          <p className="transaction-summary-info-text px-md-3">
+            Brown lightweight italian <br /> leather three seater sofa
+          </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Quantity
+          </p>
+          <p className="transaction-summary-info-text px-md-3">30 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Price
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N 150,000 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Delivery / Completion Date
+          </p>
+          <p className="transaction-summary-info-text px-md-3">14 Aug 2022 </p>
+        </div>
+        <div className="d-flex justify-content-between px-3 p-lg-0">
+          <p className="transaction-summary-info-title text-start px-md-3">
+            Total
+          </p>
+          <p className="transaction-summary-info-text px-md-3">N3,600,000 </p>
+        </div>
+      </Card>
+    </Container>
+  );
+};
 // InitiateTransactionsCard
 // SettledTransactionsCards
