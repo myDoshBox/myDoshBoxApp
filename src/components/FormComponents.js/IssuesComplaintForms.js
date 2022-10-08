@@ -95,9 +95,9 @@ export const Reportissuesform = () => {
 };
 // Reportissuesform Section Starts
 
-// ComplaintForm Section Starts
+// ContestForm Section Starts
 
-export const ComplaintForm = () => {
+export const ContestForm = () => {
   const [firstName, setFirstName] = useState("");
 
   const [email, setEmail] = useState("");
@@ -112,7 +112,6 @@ export const ComplaintForm = () => {
     e.preventDefault();
   };
 
-  const [submitted, setSubmitted] = useState(false);
   return (
     <>
       <Container className="col-7 mt-5">
@@ -128,7 +127,7 @@ export const ComplaintForm = () => {
               placeholder="First Name"
               type="FirstName"
               className="form-control fw-italic"
-              aria-describedby="emailHelp"
+              aria-describedby="firstNameHelp"
             />
 
             <span
@@ -210,6 +209,162 @@ export const ComplaintForm = () => {
     </>
   );
 };
-// ComplaintForm Section Ends
+// ContestForm Section Ends
 
-// ContestComplaintForm
+// ComplaintForm starts
+
+export const ComplaintForm = () => {
+  const [FirstName, setFirstName] = useState("");
+
+  const [Email, setEmail] = useState("");
+
+  const [PhoneNumber, setPhoneNumber] = useState("");
+
+  const [TransactionID, setTransactionID] = useState("");
+
+  const [ComplaintType, setComplaintType] = useState("");
+
+  const [File, setFile] = useState("");
+
+  const [ProvideDetails, setProvideDetails] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  return (
+    <>
+      <Container className="col-8">
+        <div className="mt-5 text-center ">
+          <h4 className="fw-bold">COMPLAINT FORM</h4>
+        </div>
+
+        {/* Form Section Starts */}
+
+        <form className="form mt-5">
+          <div className="mb-4">
+            <input
+              onChange={(e) => setFirstName(e.target.value)}
+              value={FirstName}
+              placeholder="First Name"
+              type="FirstName"
+              className="form-control fw-italic"
+              aria-describedby="firstNameHelp"
+            />
+
+            <span
+              id="nameHelp"
+              className="form-text text-danger fst-italic fw-lighter"
+            >
+              *This field is required
+            </span>
+          </div>
+          <div className="mb-4">
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={Email}
+              placeholder="Email"
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+
+            <span
+              id="nameHelp"
+              className="form-text text-danger fst-italic fw-lighter"
+            >
+              *This field is required
+            </span>
+          </div>
+          <div className="mb-4">
+            <input
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              value={PhoneNumber}
+              placeholder="Phone Number"
+              type="tel"
+              className="form-control"
+              id="exampleInputPassword1"
+            />
+
+            <span
+              id="nameHelp"
+              className="form-text text-danger fst-italic fw-lighter"
+            >
+              *This field is required
+            </span>
+          </div>
+          <div className="mb-4">
+            <input
+              onChange={(e) => setTransactionID(e.target.value)}
+              value={TransactionID}
+              placeholder="Transaction ID"
+              type="text"
+              className="form-control"
+            />
+
+            <span
+              id="nameHelp"
+              className="form-text text-danger fst-italic fw-lighter"
+            >
+              *This field is required
+            </span>
+          </div>
+
+          <div>
+            <select
+              onChange={(e) => setComplaintType(e.target.value)}
+              value={ComplaintType}
+              className="form-select mb-4"
+              aria-label="Default select example"
+            >
+              <option selected>Failed Transactions</option>
+              <option value="1">Wrong Items</option>
+              <option value="2">Incomplete Items</option>
+              <option value="3">Other</option>
+            </select>
+
+            <span
+              id="nameHelp"
+              className="form-text text-danger fst-italic fw-lighter"
+            >
+              *This field is required
+            </span>
+          </div>
+
+          <div className="input-group mb-3">
+            <input
+              onChange={(e) => setFile(e.target.value)}
+              value={File}
+              type="file"
+              className="form-control"
+              id="inputGroupFile02"
+              placeholder="Attach Image(s)"
+            />
+          </div>
+
+          <div className="mb-3 mt-4">
+            <textarea
+              onChange={(e) => setProvideDetails(e.target.value)}
+              value={ProvideDetails}
+              placeholder="Reasons for contesting this complaint"
+              className="form-control "
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div className="d-grid gap-2 col-2 mx-auto mt-4 ">
+            <button
+              className="btn btn-success"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </Container>
+    </>
+  );
+};
+// ComplaintForm Ends
