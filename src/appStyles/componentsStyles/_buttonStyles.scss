@@ -130,6 +130,17 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .SignUpGroup {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .SignUpGroup {
+    width: 65%;
+  }
+}
+
 // CONFLICT BUTTON STYLE
 .ResolveBtn {
   @include pFont;

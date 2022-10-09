@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import { SignInButton } from "../ButtonsComponent/AuthenticationButtons";
+import { SignUpButton } from "../ButtonsComponent/AuthenticationButtons";
 import { GoogleSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 import { GoogleSignUpButton } from "../ButtonsComponent/AuthenticationButtons";
 import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
@@ -145,23 +146,23 @@ export const SignUpIndividualForm = () => {
         <p>Lorem ipsum dolor sit amet </p>
       </div>
 
-      <div className="d-flex justify-content-inbetween pb-5 mx-5 ">
+      <div className="d-flex  pb-5 flex-column flex-lg-row mx-0 mx-lg-5">
         <div className="signUpNavStyle">
           <SignUpIndividual />
         </div>
 
-        <div className="ms-3 signUpNavStyle">
+        <div className=" ms-sm-0 ms-lg-3 signUpNavStyle">
           <SignUpOrganization />
         </div>
       </div>
 
-      <Form>
-        <Form.Group className="d-flex justify-content-inbetween">
+      <Form className>
+        <Form.Group className="d-flex justify-content-inbetween flex-column flex-lg-row">
           <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center ">
+            <div className="col-12 col-md-8 col-lg-6 align-items-center ">
               <Form.Control
                 type="text"
-                placeholder="Firstname"
+                placeholder="First Name"
                 id="firstname"
                 name="firstname"
                 value={signUp.firstname}
@@ -171,16 +172,16 @@ export const SignUpIndividualForm = () => {
             </div>
           </div>
           <Form.Group>
-            <div className="row ms-2 ">
-              <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+            <div className="row ms-sm-0 ms-lg-2 mt-3 mt-lg-0">
+              <div className="col-12 col-md-8 col-lg-6 align-items-center">
                 <Form.Control
                   type="text"
-                  placeholder="Lastname"
+                  placeholder="Last Name"
                   id="lastname"
                   name="lastname"
                   value={signUp.lastname}
                   onChange={handleChange}
-                  className="signUpStyle  mb-1"
+                  className="signUpStyle"
                 />
               </div>
             </div>
@@ -284,18 +285,20 @@ export const SignUpIndividualForm = () => {
 
         <Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
           <Form.Check
-            className="w-50"
+            className="w-75"
             type="checkbox"
             label="By ticking this box you are indicating you have read and accept our terms and privacy policy."
           />
         </Form.Group>
-        <div className="d-flex mt-4 ">
-          <GuestNavSignInButton />
+        <div className="sign-up-section">
+          <div className="d-flex mt-4 ">
+            <SignUpButton />
+          </div>
+          <div className="d-flex pb-2 mt-3 ">
+            <GoogleSignUpButton />
+          </div>
+          <p className=""> Already have an account? Sign in</p>
         </div>
-        <div className="d-flex pb-2 ">
-          <GoogleSignUpButton />
-        </div>
-        <p className=" ms-5"> Already have an account? Sign in</p>
       </Form>
     </Container>
   );
@@ -344,19 +347,18 @@ export const SignUpOrganizationForm = () => {
         <h2>Set up your Dosh account</h2>
         <p>Lorem ipsum dolor sit amet </p>
       </div>
-
-      <div className="d-flex justify-content-inbetween pb-5 mx-5 ">
-        <div className="">
+      <div className="d-flex  pb-5 flex-column flex-lg-row mx-0 mx-lg-5">
+        <div className="signUpNavStyle">
           <SignUpIndividual />
         </div>
 
-        <div className="ms-3">
+        <div className=" ms-sm-0 ms-lg-3 signUpNavStyle">
           <SignUpOrganization />
         </div>
       </div>
 
       <Form>
-        <Form.Group className="my-3">
+        <Form.Group className="">
           <div className="row ">
             <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
               <Form.Control
@@ -486,19 +488,21 @@ export const SignUpOrganizationForm = () => {
 
         <Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
           <Form.Check
-            className=" w-50"
+            className=" w-75"
             type="checkbox"
             label="By ticking this box you are indicating you have read and accept our terms and privacy policy."
           />
         </Form.Group>
 
-        <div className="pb-3 mt-4 ">
-          <GuestNavSignInButton />
+        <div className="sign-up-section">
+          <div className="pb-3 mt-4 ">
+            <SignUpButton />
+          </div>
+          <div className=" pb-2 ">
+            <GoogleSignUpButton />
+          </div>
+          <p className="mb-5"> Already have an account? Sign in</p>
         </div>
-        <div className=" pb-2 ">
-          <GoogleSignUpButton />
-        </div>
-        <p className="mb-5 ms-5"> Already have an account? Sign in</p>
       </Form>
     </Container>
   );

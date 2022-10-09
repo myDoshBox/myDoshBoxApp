@@ -196,6 +196,16 @@ body::-webkit-scrollbar {
     width: 80%;
   }
 }
+@media screen and (max-width: 767px) {
+  .SignUpGroup {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .SignUpGroup {
+    width: 65%;
+  }
+}
 .ResolveBtn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -714,6 +724,10 @@ body::-webkit-scrollbar {
   border: 1px solid;
 }
 
+.sign-up-section {
+  transform: translateX(130px);
+}
+
 .contactInputFormStyle {
   width: 500px !important;
   height: 55px !important;
@@ -782,6 +796,12 @@ body::-webkit-scrollbar {
   .signUpNavStyle {
     width: 100% !important;
   }
+  .signUpStyle {
+    width: 80% !important;
+  }
+  .sign-up-section {
+    transform: translate(50px, -30px);
+  }
 }
 @media screen and (max-width: 280px) {
   .contactStyle {
@@ -800,7 +820,7 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 767px) {
   .inputFormStyle {
-    width: 100 !important;
+    width: 100% !important;
   }
   .contactInputFormStyle {
     width: 70% !important;
@@ -809,11 +829,20 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column-reverse;
   }
+  .signUpStyle {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .signUpStyle {
+    width: 100% !important;
+    max-width: 500px !important;
+  }
+  .inputFormStyle {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 1023px) {
-  .inputFormStyle {
-    width: 80% !important;
-  }
   .contactInputFormStyle {
     width: 80% !important;
   }
