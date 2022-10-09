@@ -129,3 +129,135 @@
     width: 80%;
   }
 }
+
+// CONFLICT BUTTON STYLE
+.ResolveBtn {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: $buttonColor !important;
+}
+
+.BuyersStatementBtn {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: $pryColor !important;
+}
+
+.SellersStatementBtn {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: $buttonColor !important;
+}
+
+.BuyersFaultBtn {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 47px;
+  background-color: $buttonColor !important;
+}
+
+.InitiateDisputeBtn {
+  @include pFont;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 50px;
+  background-color: $pryColor !important;
+}
+
+.DropConflictBtn {
+  @include pFont;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 44px;
+  background-color: $buttonColor !important;
+}
+
+.SubmitBtn {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: $buttonColor !important;
+}
+
+// NAVIGATION AND VIEW STYLING
+.ScrollUpBtnStyle {
+  border: 2px solid black !important;
+  border-radius: 20px;
+}
+
+.PrevioustBtnStyle {
+  @include pFont;
+  font-weight: 300 !important;
+  width: 100px;
+  height: 44px;
+  background-color: $buttonColor !important;
+}
+
+.BtnNextTextStyle {
+  margin-left: 11px;
+}
+
+.BtnPrevTexttStyle {
+  margin-right: 12px;
+}
+
+.BackBtnStyle {
+  margin-left: 1px;
+}
+
+.ViewMoreBtnStyle {
+  @include pFont;
+  font-weight: 300 !important;
+  width: 120px;
+  height: 40px;
+  background-color: $buttonColor !important;
+}
+
+.LearnMoreBtnStyle {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 140px;
+  height: 49px;
+  background-color: $buttonColor !important;
+}
+
+.ViewComplaintBtnStyle {
+  @include pFont;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 40px;
+  background-color: $buttonColor !important;
+}
+
+// OTHER BUTTON STYLING
+.CalendarBtnStyle {
+  font-weight: 200 !important;
+  width: 210px;
+  height: 40px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}
+
+.CancelBtn {
+  @include pFont;
+  font-weight: 200 !important;
+  width: 120px;
+  height: 50px;
+  background-color: $cancelBtnColor !important;
+}
+
+.FilteBtnStyle {
+  font-weight: 200 !important;
+  width: 220px;
+  height: 43px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}

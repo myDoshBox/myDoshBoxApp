@@ -139,18 +139,18 @@ export const SignUpIndividualForm = () => {
   };
 
   return (
-    <Container>
+    <Container className="">
       <div className="pt-5">
         <h2>Set up your Dosh account</h2>
         <p>Lorem ipsum dolor sit amet </p>
       </div>
 
       <div className="d-flex justify-content-inbetween pb-5 mx-5 ">
-        <div>
+        <div className="signUpNavStyle">
           <SignUpIndividual />
         </div>
 
-        <div className="ms-3">
+        <div className="ms-3 signUpNavStyle">
           <SignUpOrganization />
         </div>
       </div>
@@ -158,7 +158,7 @@ export const SignUpIndividualForm = () => {
       <Form>
         <Form.Group className="d-flex justify-content-inbetween">
           <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center ">
               <Form.Control
                 type="text"
                 placeholder="Firstname"
@@ -180,7 +180,7 @@ export const SignUpIndividualForm = () => {
                   name="lastname"
                   value={signUp.lastname}
                   onChange={handleChange}
-                  className="signUpStyle mb-1"
+                  className="signUpStyle  mb-1"
                 />
               </div>
             </div>
@@ -346,7 +346,7 @@ export const SignUpOrganizationForm = () => {
       </div>
 
       <div className="d-flex justify-content-inbetween pb-5 mx-5 ">
-        <div>
+        <div className="">
           <SignUpIndividual />
         </div>
 

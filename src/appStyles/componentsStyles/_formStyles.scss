@@ -280,6 +280,13 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 }
 
 // CONTACT US STYLING
+.contactInputFormStyle {
+  width: 500px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
 .textAreaStyle {
   width: 500px !important;
   // height: 55px !important;
@@ -298,4 +305,92 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 .titleStyle {
   @include H1Font;
   color: $pryColor !important;
+}
+
+.contactStyle {
+  border: 2px solid $pryColor;
+  border-radius: 15px;
+}
+.colorStyle h5 {
+  color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+
+  // .contactStyle {
+  //   display: flex;
+  //   flex-direction: column-reverse;
+  //   overflow: hidden;
+  // }
+}
+
+@media screen and (max-width: 687px) {
+  .inputFormStyle {
+    width: 100% !important;
+  }
+
+  .contactInputFormStyle {
+    width: 100% !important;
+  }
+
+  .textAreaStyle {
+    width: 100% !important;
+  }
+
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signUpNavStyle {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .contactStyle {
+    width: 70% !important;
+    border-radius: 5px 0 0 5px !important;
+  }
+
+  .textStyle {
+    @include pFont;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inputFormStyle {
+    width: 100 !important;
+  }
+  .contactInputFormStyle {
+    width: 70% !important;
+  }
+
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .inputFormStyle {
+    width: 80% !important;
+  }
+
+  .contactInputFormStyle {
+    width: 80% !important;
+  }
+
+  .textAreaStyle {
+    width: 100% !important;
+  }
 }

@@ -196,6 +196,195 @@ body::-webkit-scrollbar {
     width: 80%;
   }
 }
+.ResolveBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BuyersStatementBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: #006747 !important;
+}
+
+.SellersStatementBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 170px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BuyersFaultBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 47px;
+  background-color: #4d957e !important;
+}
+
+.InitiateDisputeBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 50px;
+  background-color: #006747 !important;
+}
+
+.DropConflictBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.SubmitBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 150px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.ScrollUpBtnStyle {
+  border: 2px solid black !important;
+  border-radius: 20px;
+}
+
+.PrevioustBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 100px;
+  height: 44px;
+  background-color: #4d957e !important;
+}
+
+.BtnNextTextStyle {
+  margin-left: 11px;
+}
+
+.BtnPrevTexttStyle {
+  margin-right: 12px;
+}
+
+.BackBtnStyle {
+  margin-left: 1px;
+}
+
+.ViewMoreBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+  width: 120px;
+  height: 40px;
+  background-color: #4d957e !important;
+}
+
+.LearnMoreBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 140px;
+  height: 49px;
+  background-color: #4d957e !important;
+}
+
+.ViewComplaintBtnStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 600 !important;
+  width: 160px;
+  height: 40px;
+  background-color: #4d957e !important;
+}
+
+.CalendarBtnStyle {
+  font-weight: 200 !important;
+  width: 210px;
+  height: 40px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}
+
+.CancelBtn {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 200 !important;
+  width: 120px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.FilteBtnStyle {
+  font-weight: 200 !important;
+  width: 220px;
+  height: 43px;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
+}
+
 .Email,
 .Password {
   font-family: "Roboto", sans-serif;
@@ -525,6 +714,13 @@ body::-webkit-scrollbar {
   border: 1px solid;
 }
 
+.contactInputFormStyle {
+  width: 500px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
 .textAreaStyle {
   width: 500px !important;
   border-radius: 13px !important;
@@ -548,5 +744,81 @@ body::-webkit-scrollbar {
   font-size: 4.1875rem;
   line-height: 6.28rem;
   color: #006747 !important;
+}
+
+.contactStyle {
+  border: 2px solid #006747;
+  border-radius: 15px;
+}
+
+.colorStyle h5 {
+  color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+}
+@media screen and (max-width: 687px) {
+  .inputFormStyle {
+    width: 100% !important;
+  }
+  .contactInputFormStyle {
+    width: 100% !important;
+  }
+  .textAreaStyle {
+    width: 100% !important;
+  }
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signUpNavStyle {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 280px) {
+  .contactStyle {
+    width: 70% !important;
+    border-radius: 5px 0 0 5px !important;
+  }
+  .textStyle {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inputFormStyle {
+    width: 100 !important;
+  }
+  .contactInputFormStyle {
+    width: 70% !important;
+  }
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .inputFormStyle {
+    width: 80% !important;
+  }
+  .contactInputFormStyle {
+    width: 80% !important;
+  }
+  .textAreaStyle {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
