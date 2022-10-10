@@ -1,3 +1,10 @@
+//SignUpButton
+//SignInButton
+//GoogleSignUpButton
+//GoogleSignInButton
+//SignUpIndividual
+//SignUpOrganization
+//GetStarted
 import { Button } from "react-bootstrap";
 impo;
 

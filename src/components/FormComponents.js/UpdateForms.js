@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // This file contains these components
 // UpdateProfile
 // UpdatePassword
@@ -97,3 +99,4 @@ export const UserUpdateProfile = () => {
     </Form>
   );
 }
+>>>>>>> origin/FormComponents
