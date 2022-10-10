@@ -1,0 +1,64 @@
+@use "../color" as *;
+@use "../fonts" as *;
+
+.LearnMoreCardWrapper{
+  background-color: $pryColor7;
+  color: $secColor;
+  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  border-radius: 9.72321px;
+  .KnowMore{
+    width: 50%;
+
+    h5 {
+      @include H5Font;
+      font-weight: 700;
+    }
+
+    p {
+      @include pFont;
+      color: $secColor;
+      font-size: 15.5571px;
+      line-height: 23px;
+      text-align: justify;
+    }
+  }
+  .KnowMoreImg {
+    width: 35%;
+  }
+}
+.button {
+  width: 140.99px;
+height: 43.75px !important;
+background: rgba(0, 103, 71, 0.9);
+border: 1.94464px solid #FFFFFF;
+border-radius: 7.4966px;
+color: white !important;
+}
+
+@media screen and (min-width: 1023px) {
+  .KnowMore{
+    width: 40%;
+  }
+  
+  .LearnMoreCardWrapper{
+    height: 11rem;
+    width: 41rem;
+  }
+}
+
+// NotificationCard
+
+.NotificationCardWrapper {
+  width: 70rem;
+background-color: $secColor;
+border-radius: 9.50212px;
+filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  .dropdown-toggle span {
+    @include pFont;
+    font-weight: 300 !important;
+  }
+}

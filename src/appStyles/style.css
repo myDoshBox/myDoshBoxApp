@@ -16,4 +16,73 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.LearnMoreCardWrapper {
+  background-color: rgba(0, 103, 71, 0.7);
+  color: #ffffff;
+  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  border-radius: 9.72321px;
+}
+.LearnMoreCardWrapper .KnowMore {
+  width: 50%;
+}
+.LearnMoreCardWrapper .KnowMore h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.LearnMoreCardWrapper .KnowMore p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #ffffff;
+  font-size: 15.5571px;
+  line-height: 23px;
+  text-align: justify;
+}
+.LearnMoreCardWrapper .KnowMoreImg {
+  width: 35%;
+}
+
+.button {
+  width: 140.99px;
+  height: 43.75px !important;
+  background: rgba(0, 103, 71, 0.9);
+  border: 1.94464px solid #FFFFFF;
+  border-radius: 7.4966px;
+  color: white !important;
+}
+
+@media screen and (min-width: 1023px) {
+  .KnowMore {
+    width: 40%;
+  }
+  .LearnMoreCardWrapper {
+    height: 11rem;
+    width: 41rem;
+  }
+}
+.NotificationCardWrapper {
+  width: 70rem;
+  background-color: #ffffff;
+  border-radius: 9.50212px;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+.NotificationCardWrapper .dropdown-toggle::after {
+  display: none !important;
+}
+.NotificationCardWrapper .dropdown-toggle span {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 300 !important;
+}
 /*# sourceMappingURL=style.css.map */
