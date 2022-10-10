@@ -3,20 +3,14 @@ import {
   SignUpOrganizationForm,
   SignUpIndividualForm,
 } from "./components/FormComponents.js/AuthenticationForms";
+import { ContactUsForm } from "./components/FormComponents.js/ContactForms";
+import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
 
 function App() {
   return (
     <div>
-      <SignInForm />
-
-      <div className="row">
-        <div className="col-12 col-lg-6">
-          <SignUpIndividualForm />
-        </div>
-        <div className="col-12 col-lg-6">
-          <SignUpOrganizationForm />
-        </div>
-      </div>
+      <ContactUsForm />
+      <ContactUsCard />
     </div>
   );
 }

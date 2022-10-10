@@ -314,6 +314,18 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 .contactStyle {
   border: 2px solid $pryColor;
   border-radius: 15px;
+  padding: 50px 15px;
+
+  hr {
+    color: $pryColor;
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
 }
 .colorStyle h5 {
   color: red !important;
@@ -350,10 +362,6 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
     width: 100% !important;
   }
 
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
   .signUpNavStyle {
     width: 100% !important;
   }
@@ -384,7 +392,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
     width: 100% !important;
   }
   .contactInputFormStyle {
-    width: 70% !important;
+    width: 100% !important;
   }
 
   .contactStyle {
@@ -404,6 +412,10 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   .inputFormStyle {
     width: 100% !important;
   }
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -411,11 +423,11 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   //   width: 80% !important;
   // }
 
-  .contactInputFormStyle {
-    width: 80% !important;
-  }
+  // .contactInputFormStyle {
+  //   width: 100% !important;
+  // }
 
-  .textAreaStyle {
-    width: 100% !important;
-  }
+  // .textAreaStyle {
+  //   width: 100% !important;
+  // }
 }

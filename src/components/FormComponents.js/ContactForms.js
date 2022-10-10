@@ -18,39 +18,7 @@ export const ContactUsForm = () => {
   };
 
   return (
-    <Container className="d-flex contactStyle p-5 mb-5 ">
-      <div className="row ms-5 textStyle">
-        <div className="ms-5">
-          <h2>Get in touch</h2>
-          <p className="w-50">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et mass
-            hendrerit
-          </p>
-          <p className="w-50 pb-5">Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-
-        <div className="d-flex pb-5 ">
-          <Icon icon="codicon:location" color="#006747" width="65" />
-
-          <div className="ms-2">
-            <h5>Our Office Location</h5>
-            <p className="w-50 mt-1 ">
-              Lorem ipsum dolor sit amet consectetur dolor sit amet
-            </p>
-          </div>
-        </div>
-
-        <div className="d-flex pb-5">
-          <Icon icon="fluent:call-24-filled" color="#006747" width="50" />
-          <div className="ms-3 colorStyle">
-            <h5>Phone</h5>
-            <p>
-              +234 703 231 45 <br /> +234 703 231 45
-            </p>
-          </div>
-        </div>
-      </div>
-
+    <Container className=" p-2 mb-5 ">
       <Form className="formStyle">
         <div className="titleStyle">
           <div>
@@ -59,7 +27,7 @@ export const ContactUsForm = () => {
         </div>
         <Form.Group className="my-3">
           <div className="row ">
-            <div className="col-sm-10 col-md-8 col-lg-6 align-items-center">
+            <div className="col-12 col-md-8 col-lg-6 align-items-center">
               <Form.Control
                 type="text"
                 placeholder="Name"
@@ -75,7 +43,7 @@ export const ContactUsForm = () => {
 
         <Form.Group className="my-3 ">
           <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+            <div className="col-12 col-md-8 col-lg-6 align-items-center">
               <Form.Control
                 type="email"
                 placeholder="Email"
@@ -91,7 +59,7 @@ export const ContactUsForm = () => {
 
         <Form.Group className="my-3">
           <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+            <div className="col-12 col-md-8 col-lg-6 align-items-center">
               <FloatingLabel
                 className="labelStyle"
                 controlId="floatingTextarea2"
@@ -110,7 +78,7 @@ export const ContactUsForm = () => {
 
         <Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
           <Form.Check
-            className="checkboxStyle w-50"
+            className="checkboxStyle"
             type="checkbox"
             label="I accept the Terms of Sevice"
           />

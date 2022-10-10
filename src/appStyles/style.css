@@ -400,22 +400,6 @@ body::-webkit-scrollbar {
   background-color: #e5f0ed !important;
 }
 
-.contact-card {
-  border: 2.5px solid #006747 !important;
-  border-radius: 10px;
-  padding: 50px 15px;
-}
-.contact-card hr {
-  color: #006747;
-}
-.contact-card a:link {
-  text-decoration: none;
-  color: black;
-}
-.contact-card a:visited {
-  color: black;
-}
-
 .faq-head {
   border: 1px solid #006747 !important;
   padding: 16px 20px;
@@ -1070,6 +1054,17 @@ body::-webkit-scrollbar {
 .contactStyle {
   border: 2px solid #006747;
   border-radius: 15px;
+  padding: 50px 15px;
+}
+.contactStyle hr {
+  color: #006747;
+}
+.contactStyle a:link {
+  text-decoration: none;
+  color: black;
+}
+.contactStyle a:visited {
+  color: black;
 }
 
 .colorStyle h5 {
@@ -1095,10 +1090,6 @@ body::-webkit-scrollbar {
   }
   .textAreaStyle {
     width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
   }
   .signUpNavStyle {
     width: 100% !important;
@@ -1130,7 +1121,7 @@ body::-webkit-scrollbar {
     width: 100% !important;
   }
   .contactInputFormStyle {
-    width: 70% !important;
+    width: 100% !important;
   }
   .contactStyle {
     display: flex;
@@ -1148,13 +1139,9 @@ body::-webkit-scrollbar {
   .inputFormStyle {
     width: 100% !important;
   }
-}
-@media screen and (max-width: 1023px) {
-  .contactInputFormStyle {
-    width: 80% !important;
-  }
-  .textAreaStyle {
-    width: 100% !important;
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 .Modal-Btn {

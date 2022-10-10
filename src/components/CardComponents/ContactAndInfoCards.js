@@ -1,12 +1,13 @@
 import { Accordion, Container } from "react-bootstrap";
+import { ContactUsForm } from "../FormComponents.js/ContactForms";
 
 // ContactUsCard
 
 export const ContactUsCard = () => {
   return (
     <Container>
-      <div className="row contact-card">
-        <div className="col-sm-12 col-lg-6">
+      <div className="row contactStyle p-2 p-md-5 mx-1 mb-5">
+        <div className="col-12 col-lg-6">
           <h3>Get in touch</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et mass
@@ -17,7 +18,7 @@ export const ContactUsCard = () => {
             <hr />
           </p>
           <div className="row align-items-center">
-            <div className="col-sm-2 col-lg-1">
+            <div className="col-2 col-md-1">
               <svg
                 width="37"
                 height="55"
@@ -42,7 +43,7 @@ export const ContactUsCard = () => {
               </svg>
             </div>
 
-            <div className="col-sm-10 col-lg-9 mx-lg-3">
+            <div className="col-10 col-md-9 mx-lg-3">
               <h4>Our Office Location</h4>
               <a href="https://goo.gl/maps/f1zEmLsMM2L9SHY89" target={"_blank"}>
                 The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate
@@ -50,8 +51,8 @@ export const ContactUsCard = () => {
               </a>
             </div>
           </div>
-          <div className="row align-items-center mt-5">
-            <div className="col-sm-2 col-lg-1">
+          <div className="row align-items-center mt-5 mb-5">
+            <div className="col-2 col-md-1">
               <svg
                 width="35"
                 height="52"
@@ -66,7 +67,7 @@ export const ContactUsCard = () => {
               </svg>
             </div>
 
-            <div className="col-sm-10 col-lg-9 mx-lg-3">
+            <div className="col-10 col-md-9 mx-lg-3">
               <h4>Phone</h4>
               <a href="tel:+2349012345678" className="d-block ">
                 +234 901 234 5678
@@ -77,7 +78,9 @@ export const ContactUsCard = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-lg-6"></div>
+        <div className="col-12 col-lg-6">
+          <ContactUsForm />
+        </div>
       </div>
     </Container>
   );

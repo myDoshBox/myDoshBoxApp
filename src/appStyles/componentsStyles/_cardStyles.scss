@@ -1,23 +1,6 @@
 @use "../color" as *;
 @use "../fonts" as *;
 
-.contact-card {
-  border: 2.5px solid $pryColor !important;
-  border-radius: 10px;
-  padding: 50px 15px;
-
-  hr {
-    color: $pryColor;
-  }
-  a:link {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    color: black;
-  }
-}
-
 .faq-head {
   border: 1px solid $pryColor !important;
   //   border-radius: 3px 3px 0 0;
