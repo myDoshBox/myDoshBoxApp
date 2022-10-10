@@ -1,46 +1,22 @@
 import {
-  RecentTransactionCard,
-  AdminRecentTransactionsCard,
-  EscrowInitiationsTermsAndConditionCard,
-  PaymentGatewayCard,
-  BuyerTransactCard,
-  SellerTransactCard,
-  TransactionSummaryCard,
-  TransactionAgreedCard,
-  TransactionCompletionCard,
-  PaymentMadeCard,
-} from "./components/CardComponents/TransactionCards";
-import {
-  CompletedNotification,
-  Refunded,
-  Resolved,
-  AwaitingDelivery,
-  Unresolved,
-  PendingConfirmation,
-  PendingPayment,
-  InDispute,
-} from "./components/NotificationComponent/NotificationComponents";
+  SignInForm,
+  SignUpOrganizationForm,
+  SignUpIndividualForm,
+} from "./components/FormComponents.js/AuthenticationForms";
+
 function App() {
   return (
     <div>
-      <RecentTransactionCard />
-      <AdminRecentTransactionsCard />
-      <EscrowInitiationsTermsAndConditionCard />
-      <PaymentGatewayCard />
-      <BuyerTransactCard />
-      <SellerTransactCard />
-      <TransactionSummaryCard />
-      <TransactionAgreedCard />
-      <TransactionCompletionCard />
-      <PaymentMadeCard />
-      <CompletedNotification />
-      <AwaitingDelivery />
-      <InDispute />
-      <PendingConfirmation />
-      <PendingPayment />
-      <Unresolved />
-      <Refunded />
-      <Resolved />
+      <SignInForm />
+
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <SignUpIndividualForm />
+        </div>
+        <div className="col-12 col-lg-6">
+          <SignUpOrganizationForm />
+        </div>
+      </div>
     </div>
   );
 }

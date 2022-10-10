@@ -80,7 +80,7 @@ export const BuyerEscrowInitiationForm = () => {
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
-            <div className="col-md-4 col-sm-12 text-md-end">
+            <div className="col-sm-12 col-md-4  text-md-end ">
               <Form.Label className="escrow-form-label">
                 Item Description
               </Form.Label>
