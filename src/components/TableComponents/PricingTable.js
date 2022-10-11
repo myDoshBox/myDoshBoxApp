@@ -12,29 +12,29 @@ const Tablecomponents = () => {
       </div>
       {/* table Section starts */}
       <section className="container ">
-        <table className=" table table-bordered border-white  w-75">
+        <table className=" table table-bordered border-white  w-75 ">
           <thead className="">
             <tr className="BgColor ">
-              <th className="text-white p-4">Transaction Amount</th>
-              <th className="text-white col-7 p-4">Doshbox Fess</th>
+              <th className="text-white p-4 text-center">Transaction Amount</th>
+              <th className="text-white col-7 p-4 text-center">Doshbox Fess</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="p-3">N1000-N10,000</td>
-              <td className="p-3">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
             </tr>
             <tr className="TableRowColor">
-              <td className="p-3 ">N1000-N10,000</td>
-              <td className="p-3">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
             </tr>
             <tr>
-              <td className="p-3">N1000-N10,000</td>
-              <td className="p-3">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
+              <td className="p-3 text-center ">N1000-N10,000</td>
             </tr>
             <tr className="TableRowColor">
-              <td className="p-3">N1000-N10,000</td>
-              <td className="p-3">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
+              <td className="p-3 text-center">N1000-N10,000</td>
             </tr>
           </tbody>
         </table>
