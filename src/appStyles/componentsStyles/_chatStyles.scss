@@ -1,0 +1,20 @@
+@use "../color" as *;
+
+.BgColor {
+  background-color: #459079;
+}
+.BgColorScreen {
+  background-color: $pryColor;
+}
+
+.ScreenBgColor {
+  background-color: #e6f0ed;
+}
+
+.InputBgColor {
+  background-color: #b7bdbc;
+}
+
+.ActiveChat {
+  background-color: #68e443ad !important;
+}

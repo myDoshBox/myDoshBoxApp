@@ -385,6 +385,26 @@ body::-webkit-scrollbar {
   background-color: #e5f0ed !important;
 }
 
+.BgColor {
+  background-color: #459079;
+}
+
+.BgColorScreen {
+  background-color: #006747;
+}
+
+.ScreenBgColor {
+  background-color: #e6f0ed;
+}
+
+.InputBgColor {
+  background-color: #b7bdbc;
+}
+
+.ActiveChat {
+  background-color: rgba(104, 228, 67, 0.6784313725) !important;
+}
+
 .Email, .Password {
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;

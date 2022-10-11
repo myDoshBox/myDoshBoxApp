@@ -2,8 +2,9 @@
 
 @use "./componentsStyles/buttonStyles";
 @use "./componentsStyles/cardStyles";
-@use "./componentsStyles/chatStyles";
+@use "./componentsStyles/chatStyles" as *;
 @use "./componentsStyles/formStyles";
+@use "./color" as *;
 @use "./componentsStyles/modalStyles";
 @use "./componentsStyles/navbarStyles";
 
