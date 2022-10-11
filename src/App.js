@@ -1,16 +1,21 @@
 import {
-  SignInForm,
-  SignUpOrganizationForm,
-  SignUpIndividualForm,
-} from "./components/FormComponents.js/AuthenticationForms";
-import { ContactUsForm } from "./components/FormComponents.js/ContactForms";
-import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
+  OpenConflictsCard,
+  OngoingConflictCard,
+  ClosedConflictsCard,
+  AllConflictsCard,
+  ReportDefectCard,
+  InitiateDisputeCard,
+} from "./components/CardComponents/ConflictIssuesCards";
 
 function App() {
   return (
     <div>
-      <ContactUsForm />
-      <ContactUsCard />
+      <OpenConflictsCard />
+      <OngoingConflictCard />
+      <ClosedConflictsCard />
+      <AllConflictsCard />
+      <ReportDefectCard />
+      <InitiateDisputeCard />
     </div>
   );
 }

@@ -449,8 +449,11 @@ body::-webkit-scrollbar {
   font-size: 13.5px !important;
 }
 
-.transaction-card {
+.transaction-card,
+.all-conflicts-card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid none !important;
+  border-radius: 10px;
 }
 
 .escrow-terms-condition {
@@ -541,6 +544,58 @@ body::-webkit-scrollbar {
 .transaction-images {
   width: 80%;
   height: 300px;
+}
+
+.initiate-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
+  width: 311.14px;
+  height: 145.85px;
+  display: inline !important;
+}
+.initiate-transaction-card p {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.75rem !important;
+  line-height: 2.625rem;
+}
+
+.update-cards {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
+  width: 292px;
+  height: 136.88px;
+}
+.update-cards p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+}
+
+.conflicts-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
+  width: 333px;
+  height: 150px;
+}
+
+.conflicts-count {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3125rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  font-weight: 400 !important;
+}
+
+.conflicts-type {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500 !important;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 300px) {
@@ -656,6 +711,35 @@ body::-webkit-scrollbar {
   .transaction-images {
     width: 90%;
     height: 150px !important;
+  }
+  .initiate-transaction-card {
+    width: 186px;
+    height: 75px;
+  }
+  .initiate-transaction-card p {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+  }
+  .update-cards {
+    width: 90%;
+    height: 60px;
+    padding: 10px 0 !important;
+    border: 2px solid rgba(0, 103, 71, 0.3);
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  .update-cards svg {
+    width: 24px;
+    height: 24px;
+  }
+  .update-cards p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -1474,32 +1558,42 @@ body::-webkit-scrollbar {
     font-size: 7px !important;
   }
 }
-.transaction-table thead tr th {
+.transaction-table thead tr th,
+.all-conflicts-table thead tr th {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   color: #bdbdbd !important;
   font-weight: 400 !important;
 }
-.transaction-table tbody tr {
+.transaction-table tbody tr,
+.all-conflicts-table tbody tr {
   border-bottom: 1px solid gray;
 }
-.transaction-table tbody tr td {
+.transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   border-bottom: none;
   color: #4b4453;
 }
 
+.all-conflicts-table tbody tr {
+  border-bottom: none !important;
+}
+
 @media screen and (max-width: 290px) {
-  .transaction-table thead tr th {
+  .transaction-table thead tr th,
+.all-conflicts-table thead tr th {
     font-size: 6px !important;
   }
-  .transaction-table tbody tr td {
+  .transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
     font-size: 6px !important;
   }
 }
 @media screen and (max-width: 700px) {
-  .transaction-table {
+  .transaction-table,
+.all-conflicts-table {
     font-size: 10px !important;
   }
   .small-hide {
@@ -1507,10 +1601,12 @@ body::-webkit-scrollbar {
   }
 }
 @media screen and (min-width: 688px) and (max-width: 992px) {
-  .transaction-table thead tr th {
+  .transaction-table thead tr th,
+.all-conflicts-table thead tr th {
     font-size: 12px !important;
   }
-  .transaction-table tbody tr td {
+  .transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
     font-size: 12px !important;
   }
 }

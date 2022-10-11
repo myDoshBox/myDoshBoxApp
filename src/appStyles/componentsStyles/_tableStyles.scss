@@ -6,7 +6,8 @@
   font-weight: 400 !important;
 }
 
-.transaction-table {
+.transaction-table,
+.all-conflicts-table {
   thead {
     tr {
       th {
@@ -28,8 +29,17 @@
   }
 }
 
+.all-conflicts-table {
+  tbody {
+    tr {
+      border-bottom: none !important;
+    }
+  }
+}
+
 @media screen and (max-width: 290px) {
-  .transaction-table {
+  .transaction-table,
+  .all-conflicts-table {
     thead {
       tr {
         th {
@@ -48,7 +58,8 @@
 }
 
 @media screen and (max-width: 700px) {
-  .transaction-table {
+  .transaction-table,
+  .all-conflicts-table {
     font-size: 10px !important;
   }
   .small-hide {
@@ -57,7 +68,8 @@
 }
 
 @media screen and (min-width: 688px) and (max-width: 992px) {
-  .transaction-table {
+  .transaction-table,
+  .all-conflicts-table {
     thead {
       tr {
         th {

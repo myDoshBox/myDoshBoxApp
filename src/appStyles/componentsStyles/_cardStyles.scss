@@ -39,8 +39,11 @@
   font-size: 13.5px !important;
 }
 
-.transaction-card {
+.transaction-card,
+.all-conflicts-card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid none !important;
+  border-radius: 10px;
 }
 
 .escrow-terms-condition {
@@ -109,6 +112,48 @@
 .transaction-images {
   width: 80%;
   height: 300px;
+}
+
+.initiate-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 311.14px;
+  height: 145.85px;
+  display: inline !important;
+  p {
+    @include H4Font;
+  }
+}
+
+.update-cards {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 292px;
+  height: 136.88px;
+  p {
+    @include H5Font;
+  }
+}
+
+.conflicts-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 333px;
+  height: 150px;
+}
+
+.conflicts-count {
+  @include H5Font;
+  font-weight: 400 !important;
+}
+
+.conflicts-type {
+  @include H6Font;
+  font-weight: 500 !important;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 300px) {
@@ -223,6 +268,29 @@
   .transaction-images {
     width: 90%;
     height: 150px !important;
+  }
+  .initiate-transaction-card {
+    width: 186px;
+    height: 75px;
+    p {
+      @include pFont;
+    }
+  }
+  .update-cards {
+    width: 90%;
+    height: 60px;
+    padding: 10px 0 !important;
+    border: 2px solid rgba(0, 103, 71, 0.3);
+    border-radius: 5px;
+    box-shadow: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      @include H6Font;
+    }
   }
 }
 

@@ -17,6 +17,10 @@ import { BuyingIcon, SellingIcon } from "../IconComponent/UserdashboardIcons";
 import bank from "../../assets/images/bank.jpg";
 import atm from "../../assets/images/atm.jpg";
 import product from "../../assets/images/productimage.jpg";
+import {
+  InitiateTransactionIcon,
+  SettledTransactionIcon,
+} from "../IconComponent/UserdashboardIcons";
 
 // RecentTransactionCard
 export const RecentTransactionCard = () => {
@@ -427,4 +431,22 @@ export const TransactionCompletionCard = () => {
   );
 };
 // InitiateTransactionsCard
+export const InitiateTransactionsCard = () => {
+  return (
+    <div className="initiate-transaction-card d-flex align-items-center p-3 ">
+      <InitiateTransactionIcon width={"60"} height={"60"} className={"ms-3"} />
+
+      <p className="ms-3">Initiate Transaction</p>
+    </div>
+  );
+};
 // SettledTransactionsCards
+export const SettledTransactionsCard = () => {
+  return (
+    <div className="initiate-transaction-card d-flex align-items-center p-3 ">
+      <SettledTransactionIcon width={"60"} height={"60"} className={"ms-3"} />
+
+      <p className="ms-3">Settled Transaction</p>
+    </div>
+  );
+};
