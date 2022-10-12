@@ -126,6 +126,36 @@
   }
 }
 
+.individual-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+    color: $placeholderTextColor !important;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+    font-size: 12px !important;
+  }
+}
+
+.individual-transaction-image {
+  // width: 320px;
+  // height: 200px;
+  width: 100%;
+  height: 379.79px;
+  // width: 25vw;
+  // height: 60vh;
+  // object-fit: cover;
+}
+
+.small-inidividual-transaction-image {
+  width: 92.65px;
+  height: 55.04px;
+}
+
 .update-cards {
   border: 1px solid none;
   border-radius: 10px;
@@ -191,6 +221,56 @@
     border-radius: 4.86161px;
     width: 76.81px;
     height: 27.22px;
+    font-size: 12px !important;
+  }
+
+  .disputes-view-btn:hover,
+  .disputes-view-btn:focus {
+    background: rgba(0, 103, 71, 0.1) !important;
+    border: none !important;
+    font-weight: 400 !important;
+  }
+
+  .disputes-sort-btn {
+    background: rgba(0, 103, 71, 0.1) !important;
+    width: 70px;
+    height: 36.95px;
+    @include pFont;
+    border: none;
+  }
+
+  .dropdown-menu.show {
+    background: #e5f0ec !important;
+    @include pFont;
+    font-size: 12px !important;
+  }
+
+  .dropdown-menu {
+    border: none;
+    min-width: 7rem;
+    padding: 0 0 !important;
+  }
+
+  .dropdown-item:hover {
+    background: #e5f0ec !important;
+    border-radius: inherit;
+  }
+
+  .disputes-sort-btn:hover {
+    color: $bodyTextColor !important;
+  }
+}
+
+.issues-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 400px;
+  height: 277px !important;
+  h6 {
+    @include H6Font;
+    font-weight: 700;
+    letter-spacing: 00.06em;
   }
 }
 
@@ -329,6 +409,18 @@
     p {
       @include H6Font;
     }
+  }
+
+  .individual-transaction-image {
+    width: 100%;
+    height: 187px;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 10px !important;
   }
 }
 

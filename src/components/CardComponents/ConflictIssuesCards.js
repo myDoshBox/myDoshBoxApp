@@ -9,7 +9,12 @@ import {
   InitiateDisputeIcon,
   SettledTransactionIcon,
 } from "../IconComponent/UserdashboardIcons";
+import { CalendarButton } from "../ButtonsComponent/OtherButtons";
 
+// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+// import { Pie, Doughnut } from "react-chartjs-2";
+
+// ChartJS.register(ArcElement, Tooltip, Legend);
 // OpenConflictsCard
 export const OpenConflictsCard = () => {
   return (
@@ -94,7 +99,56 @@ export const AllConflictsCard = () => {
 };
 // IssuesCard
 
+// export const data = {
+//   labels: ["Open", "Closed"],
+//   datasets: [
+//     {
+//       label: "# of Votes",
+//       data: [12, 19],
+//       backgroundColor: ["#B90E0ACC", "#37FD12CC"],
+//     },
+//   ],
+// };
+
+// export const IssuesCard = () => {
+//   return (
+//     <Card className="issues-card">
+//       <div className="d-flex justify-content-between align-items-center px-3 mt-2">
+//         <h6>Issues</h6>
+//         <CalendarButton />
+//       </div>
+//       <div style={{ width: "200px" }} className="m-auto">
+//         <Pie data={data} />
+//       </div>
+//     </Card>
+//   );
+// };
+
 // ComplaintTypeCard
+// export const data2 = {
+//   labels: ["Other", "Failed ", "Wrong", "Incomplete"],
+//   datasets: [
+//     {
+//       label: "# of Votes",
+//       data: [12, 19, 3, 5],
+//       backgroundColor: ["#55DA47", "#55DA47CC", "#55DA4799", "#55DA4766"],
+//     },
+//   ],
+// };
+
+export const ComplaintTypeCard = () => {
+  //   return (
+  //     // <Card className="issues-card">
+  //     //   <div className="d-flex justify-content-between align-items-center px-3 mt-2">
+  //     //     <h6>Complaint Type</h6>
+  //     //     <CalendarButton />
+  //     //   </div>
+  //     //   <div style={{ width: "200px" }} className="m-auto">
+  //     //     <Doughnut data={data2} />
+  //     //   </div>
+  //     // </Card>
+  //   );
+};
 
 // ReportDefectCard
 export const ReportDefectCard = () => {
@@ -118,7 +172,7 @@ export const InitiateDisputeCard = () => {
 // DisputesCard
 export const MiniDisputesCard = () => {
   return (
-    <div className="mini-disputes-card mx-auto">
+    <div className="mini-disputes-card">
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <div className="row">
           <div className="col-12">
@@ -129,8 +183,12 @@ export const MiniDisputesCard = () => {
               <Nav.Item>
                 <Nav.Link eventKey="second">History</Nav.Link>
               </Nav.Item>
-              <Dropdown className="mt-2 mt-md-3 ms-0 ms-md-5">
-                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+              <Dropdown className="mt-2 mt-lg-3 ms-0 ms-lg-5">
+                <Dropdown.Toggle
+                  variant="secondary"
+                  id="dropdown-basic"
+                  className="disputes-sort-btn"
+                >
                   Sort
                 </Dropdown.Toggle>
 

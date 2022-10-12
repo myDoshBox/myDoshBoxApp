@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 // CalendarButton
 export const CalendarButton = () => {
   return (
-    <Button className="CalendarBtnStyle border-0 mt-5 ms-3">
+    <Button className="CalendarBtnStyle border-0 ms-3">
       <span className="">
         <Icon
           className="mx-2"
