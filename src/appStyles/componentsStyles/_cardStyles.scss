@@ -156,6 +156,44 @@
   text-transform: uppercase;
 }
 
+.mini-disputes-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 389px;
+  height: 326px;
+
+  .nav-pills .nav-link.active {
+    color: $bodyTextColor;
+    border-bottom: 2.91696px solid #4b4453;
+    background-color: inherit !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-link {
+    color: $bodyTextColor !important;
+  }
+
+  .mini-disputes-mail {
+    color: $placeholderTextColor;
+    font-size: 10px;
+  }
+
+  .mini-disputes-name {
+    font-size: 14px;
+    color: $bodyTextColor;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .disputes-view-btn {
+    background: rgba(0, 103, 71, 0.1);
+    border-radius: 4.86161px;
+    width: 76.81px;
+    height: 27.22px;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .payment-gateway-image {
     width: 70px !important;

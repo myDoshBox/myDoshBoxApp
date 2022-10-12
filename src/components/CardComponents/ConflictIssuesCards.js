@@ -3,7 +3,7 @@ import {
   ClosedConflictIcon,
   OngoingConflictIcon,
 } from "../IconComponent/NeutralsDashboardIcons";
-import { Table, Card, Container } from "react-bootstrap";
+import { Table, Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
 import {
   FeedbackIcon,
   InitiateDisputeIcon,
@@ -116,3 +116,80 @@ export const InitiateDisputeCard = () => {
   );
 };
 // DisputesCard
+export const MiniDisputesCard = () => {
+  return (
+    <div className="mini-disputes-card mx-auto">
+      <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <div className="row">
+          <div className="col-12">
+            <Nav variant="pills" className="disputes-tab">
+              <Nav.Item>
+                <Nav.Link eventKey="first">Disputes</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="second">History</Nav.Link>
+              </Nav.Item>
+              <Dropdown className="mt-2 mt-md-3 ms-0 ms-md-5">
+                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                  Sort
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="text-center">
+                  <Dropdown.Item className="border-bottom">Name</Dropdown.Item>
+                  <Dropdown.Item className="border-bottom">
+                    Newest
+                  </Dropdown.Item>
+                  <Dropdown.Item>Oldest</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </Nav>
+          </div>
+          <div className="col-12">
+            <Tab.Content>
+              <Tab.Pane eventKey="first">
+                <div className="d-flex justify-content-between px-4">
+                  <div className="d-flex">
+                    <div className=" rounded-circle p-3 bg-primary"></div>
+                    <div className="d-flex flex-column ms-3">
+                      <span className=" mini-disputes-name">
+                        Korode Okesanya
+                      </span>
+                      <span className=" mini-disputes-mail">
+                        emmywears@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <button className="btn disputes-view-btn d-flex justify-content-center align-items-center">
+                      View
+                    </button>
+                  </div>
+                </div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">
+                <div className="d-flex justify-content-between px-4">
+                  <div className="d-flex">
+                    <div className=" rounded-circle p-3 bg-primary"></div>
+                    <div className="d-flex flex-column ms-3">
+                      <span className=" mini-disputes-name">
+                        Olasukanmi Idris
+                      </span>
+                      <span className=" mini-disputes-mail">
+                        emmywears@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <button className="btn disputes-view-btn d-flex justify-content-center align-items-center">
+                      View
+                    </button>
+                  </div>
+                </div>
+              </Tab.Pane>
+            </Tab.Content>
+          </div>
+        </div>
+      </Tab.Container>
+    </div>
+  );
+};
