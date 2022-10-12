@@ -1,6 +1,6 @@
 @use "./reset" as *;
 
-// @use "./componentsStyles/buttonStyles";
+@use "./componentsStyles/buttonStyles";
 @use "./componentsStyles/cardStyles";
 // @use "./componentsStyles/chatStyles";
 // @use "./componentsStyles/formStyles";
@@ -9,3 +9,4 @@
 // @use "./componentsStyles/notificationStyles";
 // @use "./componentsStyles/footerStyles";
 // @use "./componentsStyles/tableStyles";
+@use "./componentsStyles/paginationStyles";

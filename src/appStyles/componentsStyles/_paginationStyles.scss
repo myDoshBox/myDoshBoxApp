@@ -1,0 +1,17 @@
+@use "../fonts" as *;
+@use "../color" as *;
+
+.page-item button {
+  margin: 0 !important;
+}
+
+.page-item a:hover, a:focus {
+  @include H6Font;
+  font-size: 1.3rem !important;
+  color: $bodyTextColor;
+}
+
+.page-item a {
+  @include pFont;
+  color: $placeholderTextColor;
+}

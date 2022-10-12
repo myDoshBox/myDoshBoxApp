@@ -26,14 +26,6 @@
     width: 35%;
   }
 }
-.button {
-  width: 140.99px;
-height: 43.75px !important;
-background: rgba(0, 103, 71, 0.9);
-border: 1.94464px solid #FFFFFF;
-border-radius: 7.4966px;
-color: white !important;
-}
 
 @media screen and (min-width: 1023px) {
   .KnowMore{
@@ -49,16 +41,50 @@ color: white !important;
 // NotificationCard
 
 .NotificationCardWrapper {
-  width: 70rem;
-background-color: $secColor;
-border-radius: 9.50212px;
-filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-
-  .dropdown-toggle::after {
-    display: none !important;
+  background-color: $secColor;
+  border-radius: 9.50212px;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+.NotificationCardHeader {
+  border-bottom: $NotificationsBorderStyle;
+  button {
+    margin: 0 !important;
+    width: unset !important; 
+    height: unset !important; 
+    background-color: transparent !important;
   }
-  .dropdown-toggle span {
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 26.6059px;
+    line-height: 30px !important;
+    height: 31px !important;
+  }
+}
+
+.NotificationCardDetails  {
+  border-bottom: $NotificationsBorderStyle;
+  padding-inline: 3.5% !important;
+
+  h3 {
+    @include H6Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $bodyTextColor;
+  }
+
+  p {
     @include pFont;
-    font-weight: 300 !important;
+    text-align: justify;
+    width: 95%;
+  }
+
+  button {
+    @include H6Font;
+    font-weight: 700;
+    text-align: justify;
+    letter-spacing: 0.08em;
+    color: $pryColor;
   }
 }
