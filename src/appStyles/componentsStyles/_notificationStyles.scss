@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550
 @use "../color" as *;
 @use "../fonts" as *;
 
@@ -11,7 +14,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .completed,
 .resolved {
   @include notificationStyle;
@@ -61,7 +63,42 @@
   color: $pendingPaymentTextColor;
   background-color: $pendingPaymentBgColor;
 }
+<<<<<<< HEAD
 =======
 // @use "../color" as *;
 // @use "../fonts" as *;
 >>>>>>> origin/chris
+=======
+
+// @media screen and (max-width: 290px) {
+//   .completed,
+//   .awaiting,
+//   .canceled,
+//   .dispute,
+//   .pending-confirmation,
+//   .pending-payment,
+//   .refunded,
+//   .resolved,
+//   .unresolved {
+//     width: 80px !important;
+//     height: 20px !important;
+//     font-size: 12px !important;
+//   }
+// }
+
+@media screen and (max-width: 687px) {
+  .completed,
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 7px !important;
+  }
+}
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550

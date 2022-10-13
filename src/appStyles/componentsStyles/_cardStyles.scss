@@ -146,3 +146,454 @@
   height: 9rem;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
+.faq-head {
+  border: 1px solid $pryColor !important;
+  //   border-radius: 3px 3px 0 0;
+  padding: 16px 20px;
+  @include H5Font;
+  color: $secColor;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  background: $pryColor !important;
+}
+
+.accordion-item {
+  border-top: 1px solid !important;
+}
+
+.accordion-button {
+  @include H6Font;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  font-weight: 500;
+
+  padding: 18px 22px !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $secColor !important;
+  color: $bodyTextColor !important;
+}
+
+.why-choose-us-card-head {
+  @include H6Font;
+  color: $pryColor !important;
+}
+
+.why-choose-us-card-text {
+  @include pFont;
+  font-size: 13.5px !important;
+}
+
+.transaction-card,
+.all-conflicts-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid none !important;
+  border-radius: 10px;
+}
+
+.escrow-terms-condition {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 00.08em;
+  }
+}
+
+.payment-gateway-image {
+  width: 165px;
+  height: 165px;
+}
+
+.payment-gateway-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    color: $placeholderTextColor !important;
+    @include pFont;
+    font-size: 16px !important;
+  }
+  h2 {
+    @include H3Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  h4 {
+    @include H5Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+}
+
+.buying-selling-card {
+  width: 468px;
+  height: 227px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    @include H4Font;
+    font-size: 25px !important;
+  }
+}
+
+.transaction-summary-card {
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .header-text,
+  .transaction-summary-info-title {
+    color: $placeholderTextColor !important;
+    font-family: "Open Sans" !important;
+  }
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+  }
+}
+.transaction-images {
+  width: 80%;
+  height: 300px;
+}
+
+.initiate-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 311.14px;
+  height: 145.85px;
+  display: inline !important;
+  p {
+    @include H4Font;
+  }
+}
+
+.individual-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+    color: $placeholderTextColor !important;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+    font-size: 12px !important;
+  }
+}
+
+.individual-transaction-image {
+  // width: 320px;
+  // height: 200px;
+  width: 100%;
+  height: 379.79px;
+  // width: 25vw;
+  // height: 60vh;
+  // object-fit: cover;
+}
+
+.small-inidividual-transaction-image {
+  width: 92.65px;
+  height: 55.04px;
+}
+
+.update-cards {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 292px;
+  height: 136.88px;
+  p {
+    @include H5Font;
+  }
+}
+
+.conflicts-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 333px;
+  height: 150px;
+}
+
+.conflicts-count {
+  @include H5Font;
+  font-weight: 400 !important;
+}
+
+.conflicts-type {
+  @include H6Font;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.mini-disputes-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 389px;
+  height: 326px;
+
+  .nav-pills .nav-link.active {
+    color: $bodyTextColor;
+    border-bottom: 2.91696px solid #4b4453;
+    background-color: inherit !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-link {
+    color: $bodyTextColor !important;
+  }
+
+  .mini-disputes-mail {
+    color: $placeholderTextColor;
+    font-size: 10px;
+  }
+
+  .mini-disputes-name {
+    font-size: 14px;
+    color: $bodyTextColor;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .disputes-view-btn {
+    background: rgba(0, 103, 71, 0.1);
+    border-radius: 4.86161px;
+    width: 76.81px;
+    height: 27.22px;
+    font-size: 12px !important;
+  }
+
+  .disputes-view-btn:hover,
+  .disputes-view-btn:focus {
+    background: rgba(0, 103, 71, 0.1) !important;
+    border: none !important;
+    font-weight: 400 !important;
+  }
+
+  .disputes-sort-btn {
+    background: rgba(0, 103, 71, 0.1) !important;
+    width: 70px;
+    height: 36.95px;
+    @include pFont;
+    border: none;
+  }
+
+  .dropdown-menu.show {
+    background: #e5f0ec !important;
+    @include pFont;
+    font-size: 12px !important;
+  }
+
+  .dropdown-menu {
+    border: none;
+    min-width: 7rem;
+    padding: 0 0 !important;
+  }
+
+  .dropdown-item:hover {
+    background: #e5f0ec !important;
+    border-radius: inherit;
+  }
+
+  .disputes-sort-btn:hover {
+    color: $bodyTextColor !important;
+  }
+}
+
+.issues-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 400px;
+  height: 277px !important;
+  h6 {
+    @include H6Font;
+    font-weight: 700;
+    letter-spacing: 00.06em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .payment-gateway-image {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 8px !important;
+      line-height: 12px !important;
+    }
+    h2 {
+      font-size: 16px !important;
+    }
+    h4 {
+      font-size: 12px !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  }
+  .transaction-images {
+    height: 100px !important;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 8px !important;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .faq-head {
+    @include H6Font;
+  }
+
+  .accordion-button {
+    @include H6Font;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    padding: 16px 20px !important;
+  }
+
+  .contact-card {
+    padding: 30px 15px;
+  }
+  .why-choose-us-card-head {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+
+  .why-choose-us-card-text {
+    font-size: 8px !important;
+    line-height: 12px;
+  }
+  .transaction-table {
+    font-size: 10px !important;
+  }
+  .escrow-terms-condition {
+    font-size: 12px !important;
+    h2 {
+      font-size: 16px !important;
+      line-height: 24px !important;
+      text-align: center;
+    }
+  }
+  .payment-gateway-image {
+    width: 100px;
+    height: 100px;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 12px !important;
+      line-height: 20px !important;
+    }
+    h2 {
+      @include H5Font;
+    }
+    h4 {
+      @include H6Font;
+    }
+  }
+  .buying-selling-card {
+    width: 80%;
+    height: 160px;
+    p {
+      font-size: 16px !important;
+    }
+    svg {
+      width: 45.5px !important;
+      height: 45.5px !important;
+    }
+  }
+  .transaction-summary-card {
+    h2 {
+      @include H6Font;
+    }
+    .header-text {
+      font-size: 12px;
+      font-family: "Open Sans";
+    }
+    .transaction-summary-info-title {
+      font-size: 12px !important;
+      font-weight: 400;
+    }
+    .transaction-summary-info-text {
+      font-size: 10px !important;
+    }
+  }
+  .transaction-images {
+    width: 90%;
+    height: 150px !important;
+  }
+  .initiate-transaction-card {
+    width: 186px;
+    height: 75px;
+    p {
+      @include pFont;
+    }
+  }
+  .update-cards {
+    width: 90%;
+    height: 60px;
+    padding: 10px 0 !important;
+    border: 2px solid rgba(0, 103, 71, 0.3);
+    border-radius: 5px;
+    box-shadow: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      @include H6Font;
+    }
+  }
+
+  .individual-transaction-image {
+    width: 100%;
+    height: 187px;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .transaction-images {
+    width: 90%;
+    height: 200px;
+  }
+  .transaction-summary-card {
+    h2 {
+      @include H5Font;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .transaction-summary-info-text {
+    transform: translateX(-70px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(70px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .transaction-summary-info-text {
+    transform: translateX(-90px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(90px);
+  }
+}
