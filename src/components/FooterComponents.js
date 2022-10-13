@@ -107,7 +107,7 @@ const FooterComponents = () => {
                     aria-label="Recipient's Email"
                     aria-describedby="basic-addon2"
                   />
-                  <span className="input-group-text" id="basic-addon2">
+                  <span className="input-group-text " id="basic-addon2">
                     SUBSCRIBE
                   </span>
                   {/* input section End */}

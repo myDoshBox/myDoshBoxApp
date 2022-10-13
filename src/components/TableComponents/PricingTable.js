@@ -12,7 +12,7 @@ const Tablecomponents = () => {
       </div>
       {/* table Section starts */}
       <section className="container ">
-        <table className=" table table-bordered border-white  w-75">
+        <table className=" table table-bordered border-white  w-75 ">
           <thead className="">
             <tr className="BgColor ">
               <th className="text-white p-4 text-center">Transaction Amount</th>

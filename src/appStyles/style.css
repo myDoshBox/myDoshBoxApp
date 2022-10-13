@@ -1792,6 +1792,10 @@ body::-webkit-scrollbar {
   background-color: #006747;
 }
 
+.BgColor {
+  background-color: #006747;
+}
+
 .TableRowColor {
   background-color: #66a491;
 }
