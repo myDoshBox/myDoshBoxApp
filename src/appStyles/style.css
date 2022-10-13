@@ -559,6 +559,29 @@ body::-webkit-scrollbar {
   height: 9rem;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
+.TotalUsersCard .TotalUsersCardText {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.TotalUsersCard .small {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.75em !important;
+  left: 45%;
+  bottom: 4%;
+}
+
+.LogoutCard p {
+  color: rgba(255, 0, 0, 0.7) !important;
+}
 
 .faq-head {
   border: 1px solid #006747 !important;

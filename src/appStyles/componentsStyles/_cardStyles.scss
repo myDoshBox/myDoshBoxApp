@@ -145,6 +145,32 @@
   width: 20rem;
   height: 9rem;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  .TotalUsersCardText {
+    @include pFont;
+  }
+
+  .small {
+    @include pFont;
+    font-size: .75em !important;
+    left: 45%;
+    bottom: 4%;
+
+  }
+
+}
+
+// .ContactCustomerCareCard {
+//   width: 20rem;
+//   height: 9rem;
+//   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+//   p {
+//     @include H4Font;
+//   }
+//   font-weight: ;
+// }
+.LogoutCard p {
+  color: $LogoutBtnColor !important;
 }
 .faq-head {
   border: 1px solid $pryColor !important;
