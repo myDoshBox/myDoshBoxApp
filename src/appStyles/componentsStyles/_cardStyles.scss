@@ -159,7 +159,24 @@
   }
 
 }
+.UserProfileCard {
+  @include pFont;
+  width: 22rem ;
+  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
+  font-size: 14.6px !important;
 
+  img {
+    cursor: pointer;
+  }
+  .UserProfileCardCameraIcon {
+    left: 64%;
+    top: 29.5%;
+    cursor: pointer;
+  }
+  .RatingIcon{
+    cursor: pointer;
+  }
+}
 // .ContactCustomerCareCard {
 //   width: 20rem;
 //   height: 9rem;

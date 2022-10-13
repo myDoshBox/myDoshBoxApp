@@ -2,7 +2,6 @@
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box;
-  font-family: "roboto", open Sans;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -577,6 +576,29 @@ body::-webkit-scrollbar {
   font-size: 0.75em !important;
   left: 45%;
   bottom: 4%;
+}
+
+.UserProfileCard {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  width: 22rem;
+  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
+  font-size: 14.6px !important;
+}
+.UserProfileCard img {
+  cursor: pointer;
+}
+.UserProfileCard .UserProfileCardCameraIcon {
+  left: 64%;
+  top: 29.5%;
+  cursor: pointer;
+}
+.UserProfileCard .RatingIcon {
+  cursor: pointer;
 }
 
 .LogoutCard p {

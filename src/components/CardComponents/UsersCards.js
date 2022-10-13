@@ -2,7 +2,7 @@
 // UserInflowCard {Postponed as it is a graph}
 // MiniUsersCard
 // AllUsersCard
-// UserProfileCard 
+// UserProfileCard {Done}
 // MiniProfileCard
 // TotalUsersCard {Done}
 // UserTransactionsCard {Done}
@@ -10,7 +10,9 @@
 // LogoutCard {Done}
 
 import { ArrowDownIcon, ArrowUpIcon, CompletedTransactionIcon, TotalUsersIcon } from "../IconComponent/AdminDashboardIcons";
-import { BigLogoutIcon, CustomerCareIcon } from "../IconComponent/UserdashboardIcons";
+import { BigLogoutIcon, CameraIcon, CompletedDealsIcon, CustomerCareIcon, RatingIcon } from "../IconComponent/UserdashboardIcons";
+import Avatar from '../../assets/images/Avatar.jpg'
+import { EditProfileButton } from "../ButtonsComponent/EditButtons";
 
 export const AnalyticsNewUsersCard = () => {
   return (
@@ -86,5 +88,30 @@ export const LogoutCard = () => {
 
     <p className="ms-3 bg-red">Logout</p>
   </div>
+  );
+}
+
+export const UserProfileCard = () => {
+  return (
+    <div className="UserProfileCard px-3 pt-2 pb-4 bg-white rounded-3">
+      <div className="text-center">
+      <img src={Avatar} alt="User Avatar" className=""/>
+      <CameraIcon width="20" height="18" className="position-absolute UserProfileCardCameraIcon pe-auto"/>
+      <p>Olasunkanmi Idris</p>
+      <p>+234 801 234 5678</p>
+      <p>sunkanmiidris@gmail.com</p>
+      </div>
+      <div className="border-top border-bottom px-4 py-3 mt-4">
+        <div><CompletedDealsIcon width="30" height="30"/> 100 deals completed</div>
+        <div className="mt-3">
+          <RatingIcon width="17" height="18"  className="RatingIcon mx-1"/>
+          <RatingIcon width="17" height="18"  className="RatingIcon me-1"/>
+          <RatingIcon width="17" height="18"  className="RatingIcon me-1"/>
+          <RatingIcon width="17" height="18"  className="RatingIcon me-1"/>
+          <RatingIcon width="17" height="18" className="RatingIcon me-2"/>
+          0.0 rating</div>
+      </div>
+      <div className="text-end mt-5"><EditProfileButton/></div>
+    </div>
   );
 }

@@ -1,12 +1,9 @@
-import { ContactCustomerCareCard, LogoutCard } from "./components/CardComponents/UsersCards";
-import { InitiateTransactionsCard } from "./components/CardComponents/TransactionCards";
+import { UserProfileCard } from "./components/CardComponents/UsersCards";
 
 function App() {
   return (
     <div>
-      <ContactCustomerCareCard/>
-      <InitiateTransactionsCard/>
-      <LogoutCard/>
+      <UserProfileCard/>
     </div>
   );
 }
