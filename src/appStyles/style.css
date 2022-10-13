@@ -442,7 +442,7 @@ body::-webkit-scrollbar {
 }
 
 .NotificationCardHeader {
-  border-bottom: 2.85064px solid rgba(75, 68, 83, 0.3);
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
 }
 .NotificationCardHeader button {
   margin: 0 !important;
@@ -459,7 +459,7 @@ body::-webkit-scrollbar {
 }
 
 .NotificationCardDetails {
-  border-bottom: 2.85064px solid rgba(75, 68, 83, 0.3);
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
   padding-inline: 3.5% !important;
 }
 .NotificationCardDetails h3 {
@@ -488,6 +488,61 @@ body::-webkit-scrollbar {
   text-align: justify;
   letter-spacing: 0.08em;
   color: #006747;
+}
+
+@media screen and (max-width: 991px) {
+  .NotificationCardHeader button {
+    font-size: 0.75rem;
+  }
+  .NotificationCardHeader h1 {
+    font-size: 1.31rem !important;
+  }
+  .NotificationCardDetails {
+    width: 100% !important;
+  }
+  .NotificationCardDetails p {
+    font-size: 0.75rem !important;
+    width: unset;
+    line-height: 16px;
+  }
+  .NotificationCardDetails img {
+    width: 1.8rem;
+  }
+  .NotificationCardDetails small {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300 !important;
+    font-size: 8px !important;
+    letter-spacing: 0.04em !important;
+  }
+  .NotificationCardBackBtn {
+    color: #006747 !important;
+  }
+}
+.AnalyticsNewUsersCard {
+  width: 221px;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.AnalyticsNewUsersCard h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.AnalyticsNewUsersCard p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.AnalyticsNewUsersCard .small {
+  font-size: 0.75em !important;
+}
+
+.TotalUsersCard {
+  width: 20rem;
+  height: 9rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
 
 .page-item button {

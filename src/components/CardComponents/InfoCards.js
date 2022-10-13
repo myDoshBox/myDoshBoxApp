@@ -6,104 +6,144 @@ import SampleUserImg from "../../assets/images/Sample User Image.png"
 
 import { FilterButton, LearnMoreCardButton } from "../ButtonsComponent/OtherButtons"
 import { PaginationBar } from "../PaginationComponent"
-
+import { Icon } from "@iconify/react";
 
 export const NotificationCard = () => {
   return (
-    <div className="NotificationCardWrapper">
-      <table className="w-100">
-        <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-5 pt-4 pb-2">
+    <table className="w-100 NotificationCardWrapper">
+      <button aria-label="Leave Page" className="border-0 bg-transparent pt-2">
+        <span className="NotificationCardBackBtn">
+        <Icon
+          className=" mx-2"
+          icon="ic:outline-arrow-back-ios"
+          color="#006747"
+          width="15"
+        />
+        Back
+        </span>
+      </button>
+        <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-lg-5 px-2 pt-2 pb-2">
             <h1 className="">Notifications</h1>
             <FilterButton/>
         </thead>
         <tbody>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
+        </tr>
+        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
+                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
+                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
+        </tr>
+        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
+                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
+                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
+        </tr>
+        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
+                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
+                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
+        </tr>
+        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
+                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
+                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
-          </tr> 
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
-                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
-                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
           <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
+                <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
+              </div>
+              <div className="d-inline">
                 <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
-          </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
-              <span className="d-flex justify-content-between align-items-center">
-                <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
-                <h3>Opeyemi Andrewson</h3>
-              </span>
-              <span>
-                <p>Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop</p>
-              </span>
-              <button className="border border-0 bg-transparent">View More...</button>
+                <small className="d-block d-lg-none">20s ago</small>
+              </div>
+              <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
         </tbody>
         {/* Pagination Component Stays here */}
-        <div className="py-3">
+        <div className="d-none d-lg-block py-3">
         <PaginationBar/>
         </div>
       </table>
-    </div>
+    
   )
 }
 export const LearnMoreCard = () => {

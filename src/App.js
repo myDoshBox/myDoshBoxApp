@@ -1,9 +1,9 @@
-import { NotificationCard } from "./components/CardComponents/InfoCards";
+import { TotalUsersCard } from "./components/CardComponents/UsersCards";
 
 function App() {
   return (
     <div>
-      <NotificationCard/>
+      <TotalUsersCard/>
     </div>
   );
 }

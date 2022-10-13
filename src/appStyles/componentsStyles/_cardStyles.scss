@@ -88,3 +88,61 @@
     color: $pryColor;
   }
 }
+
+
+@media screen and (max-width: 991px) {
+  .NotificationCardHeader {
+    
+    button {
+      font-size: 0.75rem;
+    }
+  
+    h1 {
+      font-size: 1.31rem !important;
+    }
+  }
+  .NotificationCardDetails  {
+    width: 100% !important;
+    p {
+      font-size: .75rem !important;
+      width: unset;
+      line-height: 16px;
+    }
+    img {
+      width: 1.8rem;
+    }
+
+    small {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300 !important;
+      font-size: 8px !important;
+      letter-spacing: 0.04em !important;
+    }
+  }
+  .NotificationCardBackBtn {
+    color: $pryColor !important;
+  }
+}
+
+
+//UsersCards
+.AnalyticsNewUsersCard {
+  width: 221px;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  h3 {
+    @include H6Font;
+  }
+  p {
+    @include pFont;
+  }
+  .small {
+    font-size: .75em !important;
+  }
+}
+
+.TotalUsersCard {
+  width: 20rem;
+  height: 9rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
