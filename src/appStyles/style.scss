@@ -2,12 +2,10 @@
 
 @use "./componentsStyles/buttonStyles";
 @use "./componentsStyles/cardStyles";
-@use "./componentsStyles/chatStyles" as *;
+@use "./componentsStyles/chatStyles";
 @use "./componentsStyles/formStyles";
-@use "./color" as *;
 @use "./componentsStyles/modalStyles";
 @use "./componentsStyles/navbarStyles";
-
-// @use "./componentsStyles/notificationStyles";
+@use "./componentsStyles/notificationStyles";
 @use "./componentsStyles/footerStyles";
 @use "./componentsStyles/tableStyles";

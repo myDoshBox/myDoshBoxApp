@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use "../color" as *;
 @use "../fonts" as *;
 
@@ -11,7 +10,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .completed,
 .resolved {
   @include notificationStyle;
@@ -61,7 +59,38 @@
   color: $pendingPaymentTextColor;
   background-color: $pendingPaymentBgColor;
 }
-=======
+
 // @use "../color" as *;
 // @use "../fonts" as *;
->>>>>>> origin/chris
+
+// @media screen and (max-width: 290px) {
+//   .completed,
+//   .awaiting,
+//   .canceled,
+//   .dispute,
+//   .pending-confirmation,
+//   .pending-payment,
+//   .refunded,
+//   .resolved,
+//   .unresolved {
+//     width: 80px !important;
+//     height: 20px !important;
+//     font-size: 12px !important;
+//   }
+// }
+
+@media screen and (max-width: 687px) {
+  .completed,
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 7px !important;
+  }
+}
