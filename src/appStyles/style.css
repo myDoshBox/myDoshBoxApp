@@ -127,6 +127,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 500 !important;
 }
 
@@ -161,6 +162,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 500 !important;
   letter-spacing: 0.08em;
 }
@@ -480,6 +482,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #4b4453;
@@ -498,6 +501,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 700;
   text-align: justify;
   letter-spacing: 0.08em;
@@ -540,6 +544,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
 }
 .AnalyticsNewUsersCard p {
   font-family: "Open Sans" !important;
@@ -578,7 +583,7 @@ body::-webkit-scrollbar {
   bottom: 4%;
 }
 
-.UserProfileCard {
+.MiniProfileCard {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -589,16 +594,56 @@ body::-webkit-scrollbar {
   filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
   font-size: 14.6px !important;
 }
-.UserProfileCard img {
+.MiniProfileCard img {
   cursor: pointer;
 }
-.UserProfileCard .UserProfileCardCameraIcon {
+.MiniProfileCard .MiniProfileCardCameraIcon {
   left: 64%;
   top: 29.5%;
   cursor: pointer;
 }
-.UserProfileCard .RatingIcon {
+.MiniProfileCard .RatingIcon {
   cursor: pointer;
+}
+
+.MiniUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+  color: #4b4453;
+}
+.MiniUsersCard tr {
+  border-style: hidden;
+  font-size: 0.75rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+}
+.MiniUsersCard th {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.875rem !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+.MiniUsersCard button {
+  margin: 0 !important;
+}
+
+.PaginationBar li {
+  margin-inline: 1% !important;
+}
+.PaginationBar li :first-child {
+  margin-right: 1.5% !important;
+}
+.PaginationBar li :last-child {
+  margin-left: 1.5% !important;
 }
 
 .LogoutCard p {
@@ -626,6 +671,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   box-shadow: none !important;
   font-size: 18px !important;
   font-weight: 500;
@@ -641,6 +687,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   color: #006747 !important;
 }
 
@@ -735,6 +782,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 500;
 }
 .transaction-summary-card .transaction-summary-info-text {
@@ -774,6 +822,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 500;
   color: rgba(75, 68, 83, 0.5) !important;
 }
@@ -831,6 +880,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 500 !important;
   text-transform: uppercase;
 }
@@ -920,6 +970,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-weight: 700;
   letter-spacing: 0.06em;
 }
@@ -957,11 +1008,13 @@ body::-webkit-scrollbar {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.08em;
   }
   .accordion-button {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.08em;
     box-shadow: none !important;
     font-size: 14px !important;
     padding: 16px 20px !important;
@@ -1006,6 +1059,7 @@ body::-webkit-scrollbar {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.08em;
   }
   .buying-selling-card {
     width: 80%;
@@ -1022,6 +1076,7 @@ body::-webkit-scrollbar {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.08em;
   }
   .transaction-summary-card .header-text {
     font-size: 12px;
@@ -1066,6 +1121,7 @@ body::-webkit-scrollbar {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.08em;
   }
   .individual-transaction-image {
     width: 100%;
@@ -1115,6 +1171,7 @@ body::-webkit-scrollbar {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
   font-size: 1.3rem !important;
   color: #4b4453;
 }

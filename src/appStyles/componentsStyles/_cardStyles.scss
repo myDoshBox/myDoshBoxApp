@@ -159,7 +159,7 @@
   }
 
 }
-.UserProfileCard {
+.MiniProfileCard {
   @include pFont;
   width: 22rem ;
   filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
@@ -168,7 +168,7 @@
   img {
     cursor: pointer;
   }
-  .UserProfileCardCameraIcon {
+  .MiniProfileCardCameraIcon {
     left: 64%;
     top: 29.5%;
     cursor: pointer;
@@ -176,6 +176,43 @@
   .RatingIcon{
     cursor: pointer;
   }
+}
+.MiniUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  p {
+    @include H6Font;
+    color: $bodyTextColor;
+  }
+
+  tr{
+    border-style: hidden;
+    font-size: .75rem !important;
+    color: $bodyTextColor;
+    line-height: 1.5rem;
+  }
+
+  th {
+    @include pFont;
+    font-size: .875rem !important;
+    color: $placeholderTextColor;
+  }
+  button {
+    margin: 0 !important;
+  }
+}
+.PaginationBar {
+  
+  li {
+    margin-inline: 1% !important;
+    :first-child {
+      margin-right: 1.5% !important;
+    }
+    :last-child {
+      margin-left: 1.5% !important;
+    }
+  }
+  
 }
 // .ContactCustomerCareCard {
 //   width: 20rem;
