@@ -1,17 +1,36 @@
 @use "../fonts" as *;
 @use "../color" as *;
 
-.page-item button {
-  margin: 0 !important;
+.PaginationBar {
+  button {
+    margin: 0 !important;
+  }
+  a {
+    @include pFont;
+    color: $placeholderTextColor;
+  }
+  a:hover, a:focus {
+    @include H6Font;
+    font-size: 1.3rem !important;
+    color: $bodyTextColor;
+  }
+  
+  li {
+    margin-inline: 2% !important;
+  }
+  :first-child {
+    margin-inline: unset !important;
+    margin-right: 3% !important;
+  }
+  :last-child {
+    margin-inline: unset !important;
+    margin-left: 3% !important;
+  }
+  
 }
 
-.page-item a:hover, a:focus {
-  @include H6Font;
-  font-size: 1.3rem !important;
-  color: $bodyTextColor;
-}
-
-.page-item a {
-  @include pFont;
-  color: $placeholderTextColor;
+@media screen and (max-width: 764px) {
+  .PaginationBar button {
+    font-size: .75rem !important;
+  }
 }

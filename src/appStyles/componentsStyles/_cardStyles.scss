@@ -201,19 +201,7 @@
     margin: 0 !important;
   }
 }
-.PaginationBar {
-  
-  li {
-    margin-inline: 1% !important;
-    :first-child {
-      margin-right: 1.5% !important;
-    }
-    :last-child {
-      margin-left: 1.5% !important;
-    }
-  }
-  
-}
+
 // .ContactCustomerCareCard {
 //   width: 20rem;
 //   height: 9rem;
@@ -225,6 +213,77 @@
 // }
 .LogoutCard p {
   color: $LogoutBtnColor !important;
+}
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+.AllUsersCard{
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  img {
+    filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
+    border-radius: 57.7397px;
+    width: 1.99rem;
+    height: 2.44rem;
+  }
+  tr:nth-child(1) {
+      color: $placeholderTextColor;
+    }
+  td {
+    max-width:10rem;
+    @include pFont;
+    font-size: small !important;
+  }
+  .lg-view {
+    display: none;
+  }
+  .view {
+    color: $pryColor !important;
+  }
+  .view:hover,:focus {
+    background-color: $pryColor !important;
+    color: $secColor !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .AllUsersCard {
+    td {
+      font-size: xx-small !important;
+    }
+    th {
+      font-size: x-small !important;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-view {
+    display: revert !important;
+  }
+  .UserProfileCard {
+    // width: 67rem;
+    img {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}
+.UserProfileCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  p {
+    @include H6Font;
+    font-size: small !important;
+    font-weight: 700 !important;
+  }
+  td {
+    @include pFont;
+    color: $bodyTextColor;
+    font-size: smaller !important;
+  }
+  .UserProfileDetail {
+    color: $placeholderTextColor;
+    letter-spacing: 0.08em;
+  }
+  
 }
 .faq-head {
   border: 1px solid $pryColor !important;

@@ -11,7 +11,7 @@ import { Icon } from "@iconify/react";
 export const NotificationCard = () => {
   return (
     <table className="w-100 NotificationCardWrapper">
-      <button aria-label="Leave Page" className="border-0 bg-transparent pt-2">
+      <button aria-label="Leave Page" className="border-0 bg-transparent pt-2 d-lg-none">
         <span className="NotificationCardBackBtn">
         <Icon
           className=" mx-2"
@@ -27,7 +27,7 @@ export const NotificationCard = () => {
             <FilterButton/>
         </thead>
         <tbody>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -38,7 +38,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -49,7 +49,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
         </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -60,7 +60,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
         </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -71,7 +71,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
         </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -82,7 +82,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
         </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -93,7 +93,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -104,7 +104,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -115,7 +115,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -126,7 +126,7 @@ export const NotificationCard = () => {
               </div>
               <button className="border border-0 bg-transparent d-none d-lg-inline">View More...</button>
           </tr>
-          <tr className="NotificationCardDetails d-flex justify-content-between align-items-center py-3">
+          <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly  align-items-center py-3">
               <div className="d-flex justify-content-lg-between align-items-center d-inline">
                 <img src={SampleUserImg} alt="SampleUserImg" className="me-3"/>
                 <h3 className="d-none d-lg-block">Opeyemi Andrewson</h3>
@@ -139,7 +139,7 @@ export const NotificationCard = () => {
           </tr>
         </tbody>
         {/* Pagination Component Stays here */}
-        <div className="d-none d-lg-block py-3">
+        <div className="py-3">
         <PaginationBar/>
         </div>
       </table>

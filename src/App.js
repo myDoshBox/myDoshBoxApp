@@ -1,12 +1,10 @@
-import { Pagination } from "react-bootstrap";
-import { MiniProfileCard, MiniUsersCard } from "./components/CardComponents/UsersCards";
-import { PaginationBar } from "./components/PaginationComponent";
+import { UserProfileCard } from "./components/CardComponents/UsersCards";
 
 function App() {
   return (
     <div>
-      <PaginationBar />
-      {/* <MiniProfileCard/> */}
+      <UserProfileCard />
+      
     </div>
   );
 }

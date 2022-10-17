@@ -636,18 +636,89 @@ body::-webkit-scrollbar {
   margin: 0 !important;
 }
 
-.PaginationBar li {
-  margin-inline: 1% !important;
-}
-.PaginationBar li :first-child {
-  margin-right: 1.5% !important;
-}
-.PaginationBar li :last-child {
-  margin-left: 1.5% !important;
-}
-
 .LogoutCard p {
   color: rgba(255, 0, 0, 0.7) !important;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.AllUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.AllUsersCard img {
+  filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
+  border-radius: 57.7397px;
+  width: 1.99rem;
+  height: 2.44rem;
+}
+.AllUsersCard tr:nth-child(1) {
+  color: rgba(75, 68, 83, 0.5);
+}
+.AllUsersCard td {
+  max-width: 10rem;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: small !important;
+}
+.AllUsersCard .lg-view {
+  display: none;
+}
+.AllUsersCard .view {
+  color: #006747 !important;
+}
+.AllUsersCard .view:hover, .AllUsersCard :focus {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .AllUsersCard td {
+    font-size: xx-small !important;
+  }
+  .AllUsersCard th {
+    font-size: x-small !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-view {
+    display: revert !important;
+  }
+  .UserProfileCard img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+.UserProfileCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.UserProfileCard p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+  font-size: small !important;
+  font-weight: 700 !important;
+}
+.UserProfileCard td {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453;
+  font-size: smaller !important;
+}
+.UserProfileCard .UserProfileDetail {
+  color: rgba(75, 68, 83, 0.5);
+  letter-spacing: 0.08em;
 }
 
 .faq-head {
@@ -1163,20 +1234,10 @@ body::-webkit-scrollbar {
     transform: translateX(90px);
   }
 }
-.page-item button {
+.PaginationBar button {
   margin: 0 !important;
 }
-
-.page-item a:hover, a:focus {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.08em;
-  font-size: 1.3rem !important;
-  color: #4b4453;
-}
-
-.page-item a {
+.PaginationBar a {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -1184,5 +1245,30 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   color: rgba(75, 68, 83, 0.5);
+}
+.PaginationBar a:hover, .PaginationBar a:focus {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+  font-size: 1.3rem !important;
+  color: #4b4453;
+}
+.PaginationBar li {
+  margin-inline: 2% !important;
+}
+.PaginationBar :first-child {
+  margin-inline: unset !important;
+  margin-right: 3% !important;
+}
+.PaginationBar :last-child {
+  margin-inline: unset !important;
+  margin-left: 3% !important;
+}
+
+@media screen and (max-width: 764px) {
+  .PaginationBar button {
+    font-size: 0.75rem !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
