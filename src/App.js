@@ -1,16 +1,11 @@
-import {
-  SignInForm,
-  SignUpOrganizationForm,
-  SignUpIndividualForm,
-} from "./components/FormComponents.js/AuthenticationForms";
-import { ContactUsForm } from "./components/FormComponents.js/ContactForms";
-import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
+
+import { UpdatePassword, UpdateProfile } from "./components/FormComponents.js/UpdateForms";
 
 function App() {
   return (
     <div>
-      <ContactUsForm />
-      <ContactUsCard />
+      {/* <UpdatePassword /> */}
+      <UpdateProfile />
     </div>
   );
 }

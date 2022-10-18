@@ -56,11 +56,51 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 .Phone,
 .Pass {
   input::placeholder {
-    font-weight: 300 !important;
+    font-weight: 200 !important;
     font-size: 1rem !important;
     letter-spacing: 0.04em !important;
     color: $placeholderTextColor;
   }
+  
+}
+.UpdateProfileForm {
+  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
+  button{
+    @include pFont;
+    background-color:$buttonColor !important;
+    font-size: .875rem !important;
+    color: $secColor !important;
+  }
+  button:hover,button:focus {
+    background-color: $pryColor !important;
+  }
+  p {
+    @include H6Font;
+    color: $bodyTextColor;
+    font-weight: 700;
+  }
+}
+input[type="text"]::placeholder {
+  opacity: 0.1 !important;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: $placeholderTextColor;
+  outline: 0 none;
 }
 
 .escrow-form,

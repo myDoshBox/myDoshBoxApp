@@ -3,27 +3,96 @@
 // UpdatePassword
 // UpdateBankDetails
 // UserUpdateProfile
-
+import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
 export const UpdateProfile = () => {
-  return (
-    <Form>
-      <Form.Group className="Email mb-3" controlId="Email">
-        <Form.Label>E-MAIL ADDRESS</Form.Label>
-        <Form.Control type="email" placeholder="Someone@gmail.com" />
-      </Form.Group>
+  const [UpdateProfile, setUpdateProfile] = useState({
+    email: "",
+    phone: "",
+  });
+  const [NewProfile, setNewProfile] = useState([]);
+  const [ValidationError, setValidationError] = useState({});
+  const [FormSubmission, setFormSubmission] = useState(false)
 
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUpdateProfile({ ...UpdateProfile, [name]: value });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (UpdateProfile.email && UpdateProfile.phone) {
+      setNewProfile({ ...NewProfile, UpdateProfile })
+      setUpdateProfile({
+        email:"",
+        phone:"",
+      })
+    }
+    setValidationError(validate(UpdateProfile));
+    setFormSubmission(true);
+  }
+  
+  useEffect(() => {
+    // console.log(ValidationError);
+    if (Object.keys(ValidationError).length === 0 && FormSubmission) {
+      // console.log(UpdateProfile);
+    }
+  }, [ValidationError]);
+
+
+  const validate = (formValues) => {
+    const errorValues = {};
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const phoneRegex = /^[\s()+-]*([0-9][\s()+-]*){6,20}$/
+    ;
+    if (!formValues.email) {
+      errorValues.email = "Email Address is Required";
+    } else if (!emailRegex.test(formValues.email)) {
+      errorValues.email = "Please Enter a Valid Email Address";
+    }
+    if (!formValues.phone) {
+      errorValues.phone = "Phone Number is Required"
+    } else if (!phoneRegex.test(formValues.phone)) {
+      errorValues.phone = "Please Enter a Valid Nigerian Phone Number";
+    }
+    return errorValues;
+  }
+
+
+
+  return (
+    <div className="bg-white rounded-3 UpdateProfileForm p-4" >
+      <p className="text-uppercase">Update Profile</p>
+    <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
+      <Form.Group className="Email mb-3" controlId="Email">
+        <Form.Label>Email Address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Example@email.com"
+            name="email"
+            value={UpdateProfile.email}
+            onChange={handleChange}
+          />
+          <small className="text-danger fw-lighter">{ ValidationError.email}</small>
+      </Form.Group>
       <Form.Group className="Password mb-3" controlId="Password">
-        <Form.Label>PHONE NUMBER</Form.Label>
+        <Form.Label>Phone Number</Form.Label>
         <Form.Control
           type="tel"
           placeholder="Enter your phone number"
-          // pattern='[0-9]{4}-[0-9]{3}-[0-9]{4}'
-          // required
-        />
+          name="phone"
+            value={UpdateProfile.phone}
+            onChange={handleChange}
+          />
+          <small className="text-danger fw-lighter">{ ValidationError.phone}</small>
       </Form.Group>
-    </Form>
+      <div className="text-end"><Button type="submit" className="border-0" onClick={handleSubmit} >Save Changes</Button></div>
+      </Form>
+    </div>
   );
 };
 
