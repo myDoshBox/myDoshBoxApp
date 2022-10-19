@@ -1,77 +1,50 @@
 @use "../fonts" as *;
 @use "../color" as *;
-$inputFieldColor: rgba(75, 68, 83, 0.8);
 
 .Email,
+.Password,
+.AccountNum,
+.AccountName,
+.BankName,
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  label {
+    @include H6Font;
+    color: $bodyTextColor;
+    letter-spacing: 0.08em;
+    line-height: 1rem;
+  }
+  input {
+    @include pFont;
+    font-size: small !important;
+  }
+}
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass,
+.AccountNum,
+.AccountName,
+.BankName,
+.Email,
 .Password {
-  @include H5Font;
-  color: $inputFieldColor;
-  font-size: 1rem !important;
-  font-weight: 700;
-}
-.Email input::placeholder,
-.Password input::placeholder {
-  color: $placeholderTextColor !important;
-}
-.AccountNum,
-.AccountName,
-.BankName {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
-}
-.AccountNum,
-.AccountName,
-.BankName {
   input::placeholder {
-    font-weight: 300 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
+    font-size: small !important;
     color: $placeholderTextColor;
   }
-}
-
-.Name,
-.UpdateEmail,
-.Phone,
-.Pass {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
-}
-.Name,
-.UpdateEmail,
-.Phone,
-.Pass {
-  input::placeholder {
-    font-weight: 200 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
-    color: $placeholderTextColor;
-  }
-  
 }
 .UpdateProfileForm {
   filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
-  button{
+  button {
     @include pFont;
-    background-color:$buttonColor !important;
-    font-size: .875rem !important;
+    background-color: $buttonColor !important;
+    font-size: 0.875rem !important;
     color: $secColor !important;
   }
-  button:hover,button:focus {
+  button:hover,
+  button:focus {
     background-color: $pryColor !important;
   }
   p {
@@ -80,9 +53,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
     font-weight: 700;
   }
 }
-input[type="text"]::placeholder {
-  opacity: 0.1 !important;
-}
+
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -98,7 +69,7 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus {
   border-color: $placeholderTextColor;
   outline: 0 none;
 }
