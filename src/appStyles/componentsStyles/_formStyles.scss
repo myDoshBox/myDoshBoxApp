@@ -19,7 +19,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   label {
     @include H6Font;
     color: $bodyTextColor;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     font-weight: 700;
   }
   input {
@@ -32,7 +32,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   input::placeholder {
     font-weight: 300 !important;
     font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.04rem !important;
     color: $placeholderTextColor;
   }
 }
@@ -44,7 +44,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   label {
     @include H6Font;
     color: $bodyTextColor;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     font-weight: 700;
   }
   input {
@@ -58,7 +58,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   input::placeholder {
     font-weight: 300 !important;
     font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.04rem !important;
     color: $placeholderTextColor;
   }
 }

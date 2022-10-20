@@ -5,7 +5,7 @@
   background-color: $pryColor7;
   color: $secColor;
   filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
-  border-radius: 9.72321px;
+  border-radius: 0.608rem;
   .KnowMore{
     width: 50%;
 
@@ -17,7 +17,7 @@
     p {
       @include pFont;
       color: $secColor;
-      font-size: 15.5571px;
+      font-size: 0.972rem;
       line-height: 23px;
       text-align: justify;
     }
@@ -42,7 +42,7 @@
 
 .NotificationCardWrapper {
   background-color: $secColor;
-  border-radius: 9.50212px;
+  border-radius: 0.594rem;
   filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
 }
 .NotificationCardHeader {
@@ -57,9 +57,9 @@
   h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 26.6059px;
+    font-size: 1.663rem;
     line-height: 30px !important;
-    height: 31px !important;
+    height: 1.938rem !important;
   }
 }
 
@@ -70,7 +70,7 @@
   h3 {
     @include H6Font;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     color: $bodyTextColor;
   }
 
@@ -84,7 +84,7 @@
     @include H6Font;
     font-weight: 700;
     text-align: justify;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     color: $pryColor;
   }
 }
@@ -115,8 +115,8 @@
     small {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300 !important;
-      font-size: 8px !important;
-      letter-spacing: 0.04em !important;
+      font-size: 0.5rem !important;
+      letter-spacing: 0.04rem !important;
     }
   }
   .NotificationCardBackBtn {
@@ -127,7 +127,7 @@
 
 //UsersCards
 .AnalyticsNewUsersCard {
-  width: 221px;
+  width: 13.7rem;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 
   h3 {
@@ -163,7 +163,7 @@
   @include pFont;
   width: 22rem ;
   filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
-  font-size: 14.6px !important;
+  font-size: 0.913rem !important;
 
   img {
     cursor: pointer;
@@ -202,27 +202,18 @@
   }
 }
 
-// .ContactCustomerCareCard {
-//   width: 20rem;
-//   height: 9rem;
-//   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-//   p {
-//     @include H4Font;
-//   }
-//   font-weight: ;
-// }
 .LogoutCard p {
   color: $LogoutBtnColor !important;
 }
 td, th {
   border: 1px solid #dddddd;
-  padding: 8px;
+  padding: 0.5rem;
 }
 .AllUsersCard{
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
   img {
     filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
-    border-radius: 57.7397px;
+    border-radius: 3.6rem;
     width: 1.99rem;
     height: 2.44rem;
   }
@@ -260,7 +251,6 @@ td, th {
     display: revert !important;
   }
   .UserProfileCard {
-    // width: 67rem;
     img {
       width: 20rem;
       height: 20rem;
@@ -281,7 +271,7 @@ td, th {
   }
   .UserProfileDetail {
     color: $placeholderTextColor;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
   }
   
 }
