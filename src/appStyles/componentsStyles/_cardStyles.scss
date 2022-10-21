@@ -118,7 +118,7 @@
   border: 1px solid none;
   border-radius: 10px;
   box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
-  width: 311.14px;
+  width: 50%;
   height: 145.85px;
   display: inline !important;
   p {
@@ -388,7 +388,7 @@
     height: 150px !important;
   }
   .initiate-transaction-card {
-    width: 186px;
+    width: 50%;
     height: 75px;
     p {
       @include pFont;

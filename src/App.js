@@ -1,9 +1,13 @@
 import React from "react";
-import { PaymentMadeCard } from "./components/CardComponents/TransactionCards";
+import {
+  InitiateTransactionsCard,
+  SettledTransactionsCard,
+} from "./components/CardComponents/TransactionCards";
 function App() {
   return (
     <div>
-      <PaymentMadeCard />
+      <InitiateTransactionsCard />
+      <SettledTransactionsCard />
     </div>
   );
 }
