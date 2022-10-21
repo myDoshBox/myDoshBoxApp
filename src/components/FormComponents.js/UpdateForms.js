@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550
 // This file contains these components
 // UpdateProfile
 // UpdatePassword
@@ -494,4 +499,9 @@ export const UserUpdateProfile = () => {
         </div>
     </Form>
   );
+<<<<<<< HEAD
+}
+>>>>>>> origin/FormComponents
+=======
 };
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550

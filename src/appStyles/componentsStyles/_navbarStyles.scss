@@ -116,7 +116,7 @@
 }
 .hoverBlock {
   border: 3px solid $secColor;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   position: absolute !important;
   height: 2rem !important;
   transform: translate(200px, 0px);
@@ -139,14 +139,7 @@
   width: unset !important;
   outline: unset !important;
 }
-// .SideNavItemNeutrals:hover, :focus {
-//   svg:focus, :hover {
-//     width: 30% !important;
-//   }
-//   span {
-//     width: 40% !important;
-//   }
-// }
+
 .SideNavDropdown .show {
   transform: translate3d(180px, 1px, 0px) !important;
 }

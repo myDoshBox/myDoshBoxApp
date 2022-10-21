@@ -15,6 +15,7 @@
     color: $bodyTextColor;
     letter-spacing: 0.08em;
     line-height: 1rem;
+    font-weight: 700;
   }
   input {
     @include pFont;
@@ -32,6 +33,9 @@
 .Password {
   input::placeholder {
     font-size: small !important;
+    font-weight: 300 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.04rem !important;
     color: $placeholderTextColor;
   }
 }
@@ -72,6 +76,30 @@ input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: $placeholderTextColor;
   outline: 0 none;
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  label {
+    @include H6Font;
+    color: $bodyTextColor;
+    letter-spacing: 0.08rem;
+    font-weight: 700;
+  }
+  input {
+    border: 1.5px solid rgba(0, 103, 71, 0.3);
+  }
+}
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  input::placeholder {
+    font-weight: 300 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.04rem !important;
+    color: $placeholderTextColor;
+  }
 }
 
 .escrow-form,

@@ -22,6 +22,7 @@
     "react-icons": "^4.4.0",
     "react-router": "^6.4.0",
     "react-router-dom": "^6.4.0",
+    "react-script": "^2.0.5",
     "react-scripts": "5.0.1",
     "react-use-effect": "^0.0.1",
     "usestate": "^1.1.3",
