@@ -76,7 +76,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 .bank-transfer-form-label {
   margin-left: 15px;
   @include H5Font;
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
 }
 
 .escrow-input-field,
@@ -125,7 +125,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 .escrow-price-field::placeholder,
 .bank-transfer-input-field::placeholder {
   @include pFont;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
   color: $placeholderTextColor !important;
 }
 
@@ -161,7 +161,13 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   transform: translateX(200px);
   padding: 20px;
   @include pFont;
-  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+
+.escrow-form-error {
+  color: rgba(180, 19, 10, 0.8) !important;
+  @include pFont;
+  font-size: 12px !important;
 }
 
 @media screen and (max-width: 687px) {
@@ -186,7 +192,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   .escrow-form-label,
   .bank-transfer-form-label {
     @include H6Font;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
   }
   .confirm-delivery-head {
     @include H5Font;
@@ -198,7 +204,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   .account-details {
     transform: translateX(0) !important;
     @include pFont;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -211,7 +217,7 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
 
   .account-details {
     @include pFont;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 

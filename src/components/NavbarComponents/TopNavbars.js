@@ -1,7 +1,7 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../assets/images/doshlogo.jpg";
 import logo2 from "../../assets/images/doshlogolight.jpg";
-import image from "../../assets/images/image.jpg";
+import image from "../../assets/images/Image.jpg";
 import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {

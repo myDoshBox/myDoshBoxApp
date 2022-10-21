@@ -1,16 +1,9 @@
-import {
-  SignInForm,
-  SignUpOrganizationForm,
-  SignUpIndividualForm,
-} from "./components/FormComponents.js/AuthenticationForms";
-import { ContactUsForm } from "./components/FormComponents.js/ContactForms";
-import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
-
+import React from "react";
+import { PaymentMadeCard } from "./components/CardComponents/TransactionCards";
 function App() {
   return (
     <div>
-      <ContactUsForm />
-      <ContactUsCard />
+      <PaymentMadeCard />
     </div>
   );
 }
