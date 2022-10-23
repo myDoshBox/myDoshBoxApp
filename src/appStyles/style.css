@@ -25,8 +25,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 700 !important;
-  width: 400px;
-  height: 44px;
+  width: 25rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -43,13 +43,13 @@ body::-webkit-scrollbar {
   letter-spacing: 0rem;
   font-weight: 700 !important;
   background-color: #4d957e !important;
-  width: 230px;
-  height: 42px;
+  width: 14.375;
+  height: 2.625rem;
 }
 
 .SignInBtn2 {
-  width: 137px;
-  height: 40px;
+  width: 8.5625rem;
+  height: 2.5rem;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -70,8 +70,8 @@ body::-webkit-scrollbar {
   color: #4b4453 !important;
   background-color: inherit !important;
   border: 1px solid #4d957e !important;
-  width: 400px;
-  height: 44px;
+  width: 25rem;
+  height: 2.75rem;
 }
 
 .GoogleSignUpBtn {
@@ -84,8 +84,8 @@ body::-webkit-scrollbar {
   color: #4b4453 !important;
   background-color: inherit !important;
   border: 1px solid #4d957e !important;
-  width: 230px;
-  height: 42px;
+  width: 14.375rem;
+  height: 2.625rem;
 }
 
 .SignUpGroup {
@@ -95,9 +95,9 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 14px !important;
-  width: 186px;
-  height: 46px;
+  font-size: 0.875rem !important;
+  width: 11.625rem;
+  height: 2.875rem;
   background-color: inherit !important;
   color: #006747 !important;
   border: 1px solid #4d957e !important;
@@ -110,8 +110,8 @@ body::-webkit-scrollbar {
 }
 
 .getStarted {
-  width: 228px;
-  height: 60px;
+  width: 14.25rem;
+  height: 3.75rem;
   background-color: #006747 !important;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
@@ -120,8 +120,8 @@ body::-webkit-scrollbar {
 }
 
 .edit-profile-btn {
-  width: 106px;
-  height: 31px;
+  width: 6.625rem;
+  height: 1.9375rem;
   background-color: #4d957e !important;
   border-radius: 5px !important;
   font-family: "Roboto", sans-serif;
@@ -131,8 +131,8 @@ body::-webkit-scrollbar {
 }
 
 .edit-ticket-btn {
-  width: 250px;
-  height: 50px;
+  width: 15.625rem;
+  height: 3.125rem;
   background-color: #4d957e !important;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
@@ -142,8 +142,8 @@ body::-webkit-scrollbar {
 }
 
 .start-transaction-btn {
-  width: 323px;
-  height: 60px;
+  width: 20.1875rem;
+  height: 3.75rem;
   background-color: #4d957e !important;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
@@ -153,8 +153,8 @@ body::-webkit-scrollbar {
 }
 
 .new-transaction-btn {
-  width: 215px;
-  height: 50px;
+  width: 13.4375rem;
+  height: 3.125rem;
   background-color: #4d957e !important;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -164,8 +164,8 @@ body::-webkit-scrollbar {
 }
 
 .confirm-delivery-btn {
-  width: 180px;
-  height: 50px;
+  width: 11.25rem;
+  height: 3.125rem;
   background-color: #006747 !important;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -176,8 +176,8 @@ body::-webkit-scrollbar {
 }
 
 .i-agree-btn {
-  width: 170px;
-  height: 50px;
+  width: 10.625rem;
+  height: 3.125rem;
   background-color: #4d957e !important;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
@@ -200,8 +200,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
+  width: 9.375rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -213,8 +213,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
+  width: 10.625rem;
+  height: 2.75rem;
   background-color: #006747 !important;
 }
 
@@ -226,8 +226,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
+  width: 10.625rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -239,8 +239,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 160px;
-  height: 47px;
+  width: 10rem;
+  height: 2.9375rem;
   background-color: #4d957e !important;
 }
 
@@ -252,8 +252,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 300 !important;
-  width: 150px;
-  height: 50px;
+  width: 9.375rem;
+  height: 3.125rem;
   background-color: #006747 !important;
 }
 
@@ -265,8 +265,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 300 !important;
-  width: 150px;
-  height: 44px;
+  width: 9.375rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -278,8 +278,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
+  width: 9.375rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -296,8 +296,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 300 !important;
-  width: 100px;
-  height: 44px;
+  width: 6.25rem;
+  height: 2.75rem;
   background-color: #4d957e !important;
 }
 
@@ -321,7 +321,7 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 300 !important;
-  width: 120px;
+  width: 7.5rem;
   height: 40px;
   background-color: #4d957e !important;
 }
@@ -334,8 +334,8 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 140px;
-  height: 49px;
+  width: 8.75rem;
+  height: 3.0625rem;
   background-color: #4d957e !important;
 }
 
@@ -347,15 +347,15 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 600 !important;
-  width: 160px;
-  height: 40px;
+  width: 10rem;
+  height: 2.5rem;
   background-color: #4d957e !important;
 }
 
 .CalendarBtnStyle {
   font-weight: 200 !important;
-  width: 210px;
-  height: 40px;
+  width: 13.125rem;
+  height: 2.5rem;
   color: #4b4453 !important;
   background-color: #e5f0ed !important;
 }
@@ -368,15 +368,15 @@ body::-webkit-scrollbar {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 200 !important;
-  width: 120px;
-  height: 50px;
+  width: 7.5rem;
+  height: 3.125rem;
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
 .FilteBtnStyle {
   font-weight: 200 !important;
-  width: 220px;
-  height: 43px;
+  width: 13.75rem;
+  height: 2.6875rem;
   color: #4b4453 !important;
   background-color: #e5f0ed !important;
 }
