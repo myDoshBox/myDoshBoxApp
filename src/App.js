@@ -1,4 +1,3 @@
-// import { BankTransferForm } from "./components/FormComponents.js/TransactionForms";
 import {
   CoreValueCard,
   TeamsCard,
