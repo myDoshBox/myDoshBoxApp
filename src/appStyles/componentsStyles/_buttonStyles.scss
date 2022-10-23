@@ -26,6 +26,7 @@
   width: 100%;
   height: 40px;
   @include pFont;
+  padding: 0 10px !important;
   font-weight: 700 !important;
   background-color: $buttonColor !important;
 }
@@ -146,7 +147,7 @@
     width: 70%;
   }
   .SignInBtn2 {
-    width: 30%;
+    width: 30% !important;
   }
   .getStarted {
     width: 35%;
@@ -176,6 +177,9 @@
   .start-transaction-btn {
     width: 40%;
     @include H6Font;
+  }
+  .SignInBtn2 {
+    width: 20%;
   }
 }
 
@@ -311,13 +315,12 @@
   background-color: #e5f0ed !important;
 }
 
-
 // LearnMoreCardButton
 .LearnMoreCardButton {
   width: 140.99px;
-height: 43.75px !important;
-background: rgba(0, 103, 71, 0.9);
-border: 1.94464px solid #FFFFFF;
-border-radius: 7.4966px;
-color: white !important;
+  height: 43.75px !important;
+  background: rgba(0, 103, 71, 0.9);
+  border: 1.94464px solid #ffffff;
+  border-radius: 7.4966px;
+  color: white !important;
 }

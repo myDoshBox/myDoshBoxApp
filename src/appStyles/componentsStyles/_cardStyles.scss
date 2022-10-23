@@ -421,10 +421,10 @@ th {
   // object-fit: cover;
 }
 
-.small-inidividual-transaction-image {
-  width: 92.65px;
-  height: 55.04px;
-}
+// .small-inidividual-transaction-image {
+//   width: 92.65px;
+//   height: 55.04px;
+// }
 
 .update-cards {
   border: 1px solid none;
@@ -476,7 +476,7 @@ th {
 
   .mini-disputes-mail {
     color: $placeholderTextColor;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .mini-disputes-name {
@@ -512,7 +512,7 @@ th {
   .dropdown-menu.show {
     background: #e5f0ec !important;
     @include pFont;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 
   .dropdown-menu {

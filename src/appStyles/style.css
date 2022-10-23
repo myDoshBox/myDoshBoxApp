@@ -56,6 +56,7 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  padding: 0 10px !important;
   font-weight: 700 !important;
   background-color: #4d957e !important;
 }
@@ -211,7 +212,7 @@ body::-webkit-scrollbar {
     width: 70%;
   }
   .SignInBtn2 {
-    width: 30%;
+    width: 30% !important;
   }
   .getStarted {
     width: 35%;
@@ -244,6 +245,9 @@ body::-webkit-scrollbar {
     font-size: 1rem;
     line-height: 1.5rem;
     letter-spacing: 0.08em;
+  }
+  .SignInBtn2 {
+    width: 20%;
   }
 }
 .ResolveBtn {
@@ -439,7 +443,7 @@ body::-webkit-scrollbar {
   width: 140.99px;
   height: 43.75px !important;
   background: rgba(0, 103, 71, 0.9);
-  border: 1.94464px solid #FFFFFF;
+  border: 1.94464px solid #ffffff;
   border-radius: 7.4966px;
   color: white !important;
 }
@@ -947,11 +951,6 @@ th {
   height: 379.79px;
 }
 
-.small-inidividual-transaction-image {
-  width: 92.65px;
-  height: 55.04px;
-}
-
 .update-cards {
   border: 1px solid none;
   border-radius: 10px;
@@ -1009,7 +1008,7 @@ th {
 }
 .mini-disputes-card .mini-disputes-mail {
   color: rgba(75, 68, 83, 0.5);
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .mini-disputes-card .mini-disputes-name {
   font-size: 14px;
@@ -1050,7 +1049,7 @@ th {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
 }
 .mini-disputes-card .dropdown-menu {
   border: none;
@@ -1265,6 +1264,170 @@ th {
     transform: translateX(90px);
   }
 }
+.nav-links {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  margin: 10px 15px !important;
+  color: black !important;
+}
+
+.hamburgerIcon,
+.closeIcon {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.guest-nav {
+  margin: 10px 20px !important;
+}
+
+.bigLogo {
+  transform: translateY(-50px);
+}
+
+.smallLogo {
+  display: none;
+}
+
+.userDashboardNav {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.75rem !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.search {
+  border: none !important;
+  border-radius: 15px !important;
+  background: #fdfafa !important;
+}
+
+.nav-btn {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 280px) {
+  .search {
+    height: 30px;
+    width: 120px !important;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 540px) {
+  .search {
+    height: 30px;
+    width: 150px !important;
+  }
+  .searchField {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-text {
+    background-color: #006747;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50px);
+  }
+  .nav-links {
+    color: white !important;
+    padding-left: 50px !important;
+    margin-top: 5px;
+  }
+  .guest-nav {
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+  }
+  .closeIcon {
+    display: block;
+    box-shadow: none !important;
+  }
+  .bigLogo {
+    transform: translateY(0);
+  }
+  .smallLogo {
+    display: block;
+  }
+  .nav-btn {
+    transform: translateY(0px);
+  }
+}
+/**SideNav Styling**/
+.SideNav {
+  background-color: #006747;
+  color: hsl(0deg, 0%, 100%);
+  width: 15rem;
+  height: 100vh !important;
+}
+
+.SideNavLogo {
+  width: 6rem;
+  cursor: pointer !important;
+}
+
+.SideNavItem {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.08em;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer !important;
+  font-weight: 400;
+}
+
+.hoverBlock {
+  border: 3px solid hsl(0deg, 0%, 100%);
+  border-radius: 0.3rem;
+  position: absolute !important;
+  height: 2rem !important;
+  transform: translate(200px, 0px);
+  display: none;
+}
+
+.SideNavItem:hover,
+:focus {
+  font-weight: 700 !important;
+}
+.SideNavItem:hover .hoverBlock,
+:focus .hoverBlock {
+  display: block;
+}
+
+.SideNavDropdown button {
+  background-color: unset !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.SideNavDropdown button::after {
+  display: none !important;
+  width: unset !important;
+  outline: unset !important;
+}
+
+.SideNavDropdown .show {
+  transform: translate3d(180px, 1px, 0px) !important;
+}
+
+.SideNavDropdown .show a:hover,
+:focus {
+  font-weight: 700 !important;
+}
+
 .PaginationBar button {
   margin: 0 !important;
 }

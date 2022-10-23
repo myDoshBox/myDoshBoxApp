@@ -2,9 +2,9 @@
 @use "../fonts" as *;
 
 // GuestNavbar styles
-.nav-link {
+.nav-links {
   @include pFont;
-  margin: 10px 15px;
+  margin: 10px 15px !important;
   color: black !important;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .guest-nav {
-  margin: 0 20px;
+  margin: 10px 20px !important;
 }
 .bigLogo {
   transform: translateY(-50px);
@@ -75,7 +75,7 @@
     width: 100%;
     transform: translateY(-50px);
   }
-  .nav-link {
+  .nav-links {
     color: white !important;
     padding-left: 50px !important;
     margin-top: 5px;
@@ -94,6 +94,9 @@
   }
   .smallLogo {
     display: block;
+  }
+  .nav-btn {
+    transform: translateY(0px);
   }
 }
 

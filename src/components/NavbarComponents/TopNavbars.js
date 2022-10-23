@@ -1,7 +1,7 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../assets/images/doshlogo.jpg";
 import logo2 from "../../assets/images/doshlogolight.jpg";
-import image from "../../assets/images/Image.jpg";
+import image from "../../assets/images/image.jpg";
 import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {
@@ -49,22 +49,22 @@ export const GuestNavbar = () => {
               <img src={logo2} alt="logo" />
             </Navbar.Brand>
           </div>
-          <Nav.Link href="#home" className="nav-link">
+          <Nav.Link href="#home" className="nav-links">
             Home
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-link">
+          <Nav.Link href="#link" className="nav-links">
             About Us
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-link">
+          <Nav.Link href="#link" className="nav-links">
             Pricing
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-link">
+          <Nav.Link href="#link" className="nav-links">
             FAQs
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-link">
+          <Nav.Link href="#link" className="nav-links">
             Contact
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-btn pb-5">
+          <Nav.Link href="#link" className="nav-links nav-btn pb-5">
             <GuestNavSignInButton />
           </Nav.Link>
         </Nav>
