@@ -1,7 +1,11 @@
-import React from "react";
+import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <GuestNavbar />
+    </div>
+  );
 }
 
 export default App;
