@@ -1,46 +1,33 @@
+// import { BankTransferForm } from "./components/FormComponents.js/TransactionForms";
 import {
-  RecentTransactionCard,
-  AdminRecentTransactionsCard,
-  EscrowInitiationsTermsAndConditionCard,
-  PaymentGatewayCard,
-  BuyerTransactCard,
-  SellerTransactCard,
-  TransactionSummaryCard,
-  TransactionAgreedCard,
-  TransactionCompletionCard,
-  PaymentMadeCard,
-} from "./components/CardComponents/TransactionCards";
+  CoreValueCard,
+  TeamsCard,
+  TeamsCardTwo,
+} from "./components/CardComponents/AboutUsCards";
+
 import {
-  CompletedNotification,
-  Refunded,
-  Resolved,
-  AwaitingDelivery,
-  Unresolved,
-  PendingConfirmation,
-  PendingPayment,
-  InDispute,
-} from "./components/NotificationComponent/NotificationComponents";
+  TicketCard,
+  SellerTicketSummaryCard,
+  ContestTicketCard,
+  AdminTicketHistoryCard,
+  CustomerCareTicketHistory,
+  AdminDashbordTicketHistoryCard,
+  MiniDisputeCard,
+} from "./components/CardComponents/TicketsCards";
+
 function App() {
   return (
     <div>
-      <RecentTransactionCard />
-      <AdminRecentTransactionsCard />
-      <EscrowInitiationsTermsAndConditionCard />
-      <PaymentGatewayCard />
-      <BuyerTransactCard />
-      <SellerTransactCard />
-      <TransactionSummaryCard />
-      <TransactionAgreedCard />
-      <TransactionCompletionCard />
-      <PaymentMadeCard />
-      <CompletedNotification />
-      <AwaitingDelivery />
-      <InDispute />
-      <PendingConfirmation />
-      <PendingPayment />
-      <Unresolved />
-      <Refunded />
-      <Resolved />
+      <CoreValueCard />
+      <TeamsCard />
+      <TeamsCardTwo />
+      <TicketCard />
+      <SellerTicketSummaryCard />
+      <ContestTicketCard />
+      <AdminTicketHistoryCard />
+      <CustomerCareTicketHistory />
+      <AdminDashbordTicketHistoryCard />
+      <MiniDisputeCard />
     </div>
   );
 }
