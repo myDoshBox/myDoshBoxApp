@@ -1,23 +1,276 @@
 @use "../color" as *;
 @use "../fonts" as *;
 
-.contact-card {
-  border: 2.5px solid $pryColor !important;
-  border-radius: 10px;
-  padding: 50px 15px;
+.LearnMoreCardWrapper {
+  background-color: $pryColor7;
+  color: $secColor;
+  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  border-radius: 0.608rem;
+  .KnowMore {
+    width: 50%;
 
-  hr {
-    color: $pryColor;
+    h5 {
+      @include H5Font;
+      font-weight: 700;
+    }
+
+    p {
+      @include pFont;
+      color: $secColor;
+      font-size: 0.972rem;
+      line-height: 23px;
+      text-align: justify;
+    }
   }
-  a:link {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    color: black;
+  .KnowMoreImg {
+    width: 35%;
   }
 }
 
+@media screen and (min-width: 1023px) {
+  .KnowMore {
+    width: 40%;
+  }
+
+  .LearnMoreCardWrapper {
+    height: 11rem;
+    width: 41rem;
+  }
+}
+
+// NotificationCard
+
+.NotificationCardWrapper {
+  background-color: $secColor;
+  border-radius: 0.594rem;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+.NotificationCardHeader {
+  border-bottom: $NotificationsBorderStyle;
+  button {
+    margin: 0 !important;
+    width: unset !important;
+    height: unset !important;
+    background-color: transparent !important;
+  }
+
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.663rem;
+    line-height: 30px !important;
+    height: 1.938rem !important;
+  }
+}
+
+.NotificationCardDetails {
+  border-bottom: $NotificationsBorderStyle;
+  padding-inline: 3.5% !important;
+
+  h3 {
+    @include H6Font;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    color: $bodyTextColor;
+  }
+
+  p {
+    @include pFont;
+    text-align: justify;
+    width: 95%;
+  }
+
+  button {
+    @include H6Font;
+    font-weight: 700;
+    text-align: justify;
+    letter-spacing: 0.08rem;
+    color: $pryColor;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .NotificationCardHeader {
+    button {
+      font-size: 0.75rem;
+    }
+
+    h1 {
+      font-size: 1.31rem !important;
+    }
+  }
+  .NotificationCardDetails {
+    width: 100% !important;
+    p {
+      font-size: 0.75rem !important;
+      width: unset;
+      line-height: 16px;
+    }
+    img {
+      width: 1.8rem;
+    }
+
+    small {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300 !important;
+      font-size: 0.5rem !important;
+      letter-spacing: 0.04rem !important;
+    }
+  }
+  .NotificationCardBackBtn {
+    color: $pryColor !important;
+  }
+}
+
+//UsersCards
+.AnalyticsNewUsersCard {
+  width: 13.7rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  h3 {
+    @include H6Font;
+  }
+  p {
+    @include pFont;
+  }
+  .small {
+    font-size: 0.75em !important;
+  }
+}
+
+.TotalUsersCard {
+  width: 20rem;
+  height: 9rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  .TotalUsersCardText {
+    @include pFont;
+  }
+
+  .small {
+    @include pFont;
+    font-size: 0.75em !important;
+    left: 45%;
+    bottom: 4%;
+  }
+}
+.MiniProfileCard {
+  @include pFont;
+  width: 22rem;
+  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
+  font-size: 0.913rem !important;
+
+  img {
+    cursor: pointer;
+  }
+  .MiniProfileCardCameraIcon {
+    left: 64%;
+    top: 29.5%;
+    cursor: pointer;
+  }
+  .RatingIcon {
+    cursor: pointer;
+  }
+}
+.MiniUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+
+  p {
+    @include H6Font;
+    color: $bodyTextColor;
+  }
+
+  tr {
+    border-style: hidden;
+    font-size: 0.75rem !important;
+    color: $bodyTextColor;
+    line-height: 1.5rem;
+  }
+
+  th {
+    @include pFont;
+    font-size: 0.875rem !important;
+    color: $placeholderTextColor;
+  }
+  button {
+    margin: 0 !important;
+  }
+}
+
+.LogoutCard p {
+  color: $LogoutBtnColor !important;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  padding: 0.5rem;
+}
+.AllUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  img {
+    filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
+    border-radius: 3.6rem;
+    width: 1.99rem;
+    height: 2.44rem;
+  }
+  tr:nth-child(1) {
+    color: $placeholderTextColor;
+  }
+  td {
+    max-width: 10rem;
+    @include pFont;
+    font-size: small !important;
+  }
+  .lg-view {
+    display: none;
+  }
+  .view {
+    color: $pryColor !important;
+  }
+  .view:hover,
+  :focus {
+    background-color: $pryColor !important;
+    color: $secColor !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .AllUsersCard {
+    td {
+      font-size: xx-small !important;
+    }
+    th {
+      font-size: x-small !important;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-view {
+    display: revert !important;
+  }
+  .UserProfileCard {
+    img {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+}
+.UserProfileCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+  p {
+    @include H6Font;
+    font-size: small !important;
+    font-weight: 700 !important;
+  }
+  td {
+    @include pFont;
+    color: $bodyTextColor;
+    font-size: smaller !important;
+  }
+  .UserProfileDetail {
+    color: $placeholderTextColor;
+    letter-spacing: 0.08rem;
+  }
+}
 .faq-head {
   border: 1px solid $pryColor !important;
   //   border-radius: 3px 3px 0 0;
@@ -36,7 +289,7 @@
 .accordion-button {
   @include H6Font;
   box-shadow: none !important;
-  font-size: 18px !important;
+  font-size: 1rem !important;
   font-weight: 500;
 
   padding: 18px 22px !important;
@@ -53,11 +306,14 @@
 
 .why-choose-us-card-text {
   @include pFont;
-  font-size: 13.5px !important;
+  font-size: 0.84375rem !important;
 }
 
-.transaction-card {
+.transaction-card,
+.all-conflicts-card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid none !important;
+  border-radius: 10px;
 }
 
 .escrow-terms-condition {
@@ -70,8 +326,8 @@
 }
 
 .payment-gateway-image {
-  width: 165px;
-  height: 165px;
+  width: 12vw;
+  // height: 165px;
 }
 
 .payment-gateway-card {
@@ -79,7 +335,7 @@
   p {
     color: $placeholderTextColor !important;
     @include pFont;
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
   h2 {
     @include H3Font;
@@ -100,7 +356,7 @@
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   p {
     @include H4Font;
-    font-size: 25px !important;
+    font-size: 1.5625rem !important;
   }
 }
 
@@ -128,6 +384,166 @@
   height: 300px;
 }
 
+.initiate-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 50%;
+  height: 145.85px;
+  display: inline !important;
+  p {
+    @include H4Font;
+  }
+}
+
+.individual-transaction-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+    color: $placeholderTextColor !important;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+    font-size: 0.75rem !important;
+  }
+}
+
+.individual-transaction-image {
+  // width: 320px;
+  // height: 200px;
+  width: 100%;
+  height: 379.79px;
+  // width: 25vw;
+  // height: 60vh;
+  // object-fit: cover;
+}
+
+.small-inidividual-transaction-image {
+  width: 92.65px;
+  height: 55.04px;
+}
+
+.update-cards {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 292px;
+  height: 136.88px;
+  p {
+    @include H5Font;
+  }
+}
+
+.conflicts-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 333px;
+  height: 150px;
+}
+
+.conflicts-count {
+  @include H5Font;
+  font-weight: 400 !important;
+}
+
+.conflicts-type {
+  @include H6Font;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.mini-disputes-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 389px;
+  height: 326px;
+
+  .nav-pills .nav-link.active {
+    color: $bodyTextColor;
+    border-bottom: 2.91696px solid #4b4453;
+    background-color: inherit !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-link {
+    color: $bodyTextColor !important;
+  }
+
+  .mini-disputes-mail {
+    color: $placeholderTextColor;
+    font-size: 10px;
+  }
+
+  .mini-disputes-name {
+    font-size: 14px;
+    color: $bodyTextColor;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .disputes-view-btn {
+    background: rgba(0, 103, 71, 0.1);
+    border-radius: 4.86161px;
+    width: 76.81px;
+    height: 27.22px;
+    font-size: 12px !important;
+  }
+
+  .disputes-view-btn:hover,
+  .disputes-view-btn:focus {
+    background: rgba(0, 103, 71, 0.1) !important;
+    border: none !important;
+    font-weight: 400 !important;
+  }
+
+  .disputes-sort-btn {
+    background: rgba(0, 103, 71, 0.1) !important;
+    width: 70px;
+    height: 36.95px;
+    @include pFont;
+    border: none;
+  }
+
+  .dropdown-menu.show {
+    background: #e5f0ec !important;
+    @include pFont;
+    font-size: 12px !important;
+  }
+
+  .dropdown-menu {
+    border: none;
+    min-width: 7rem;
+    padding: 0 0 !important;
+  }
+
+  .dropdown-item:hover {
+    background: #e5f0ec !important;
+    border-radius: inherit;
+  }
+
+  .disputes-sort-btn:hover {
+    color: $bodyTextColor !important;
+  }
+}
+
+.issues-card {
+  border: 1px solid none;
+  border-radius: 10px;
+  box-shadow: (3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  width: 400px;
+  height: 277px !important;
+  h6 {
+    @include H6Font;
+    font-weight: 700;
+    letter-spacing: 00.06em;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .payment-gateway-image {
     width: 70px !important;
@@ -135,14 +551,14 @@
   }
   .payment-gateway-card {
     p {
-      font-size: 8px !important;
-      line-height: 12px !important;
+      font-size: 0.5rem !important;
+      line-height: 0.75rem !important;
     }
     h2 {
-      font-size: 16px !important;
+      font-size: 1rem !important;
     }
     h4 {
-      font-size: 12px !important;
+      font-size: 0.75rem !important;
       font-weight: 700;
       letter-spacing: 0.08em;
     }
@@ -151,11 +567,11 @@
     height: 100px !important;
   }
   .transaction-summary-info-title {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     font-weight: 400;
   }
   .transaction-summary-info-text {
-    font-size: 8px !important;
+    font-size: 0.5rem !important;
   }
 }
 
@@ -167,7 +583,7 @@
   .accordion-button {
     @include H6Font;
     box-shadow: none !important;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
     padding: 16px 20px !important;
   }
 
@@ -175,32 +591,32 @@
     padding: 30px 15px;
   }
   .why-choose-us-card-head {
-    font-size: 11px !important;
+    font-size: 0.6875rem !important;
     line-height: 15px !important;
   }
 
   .why-choose-us-card-text {
-    font-size: 8px !important;
+    font-size: 0.5rem !important;
     line-height: 12px;
   }
   .transaction-table {
     font-size: 10px !important;
   }
   .escrow-terms-condition {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     h2 {
-      font-size: 16px !important;
+      font-size: 1rem !important;
       line-height: 24px !important;
       text-align: center;
     }
   }
   .payment-gateway-image {
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    // height: 100px;
   }
   .payment-gateway-card {
     p {
-      font-size: 12px !important;
+      font-size: 0.75rem !important;
       line-height: 20px !important;
     }
     h2 {
@@ -214,7 +630,7 @@
     width: 80%;
     height: 160px;
     p {
-      font-size: 16px !important;
+      font-size: 1rem !important;
     }
     svg {
       width: 45.5px !important;
@@ -223,14 +639,14 @@
   }
   .transaction-summary-card {
     h2 {
-      @include H6Font;
+      font-size: 1.25rem !important;
     }
     .header-text {
-      font-size: 12px;
+      font-size: 0.75rem;
       font-family: "Open Sans";
     }
     .transaction-summary-info-title {
-      font-size: 12px !important;
+      font-size: 0.75rem !important;
       font-weight: 400;
     }
     .transaction-summary-info-text {
@@ -240,6 +656,41 @@
   .transaction-images {
     width: 90%;
     height: 150px !important;
+  }
+  .initiate-transaction-card {
+    width: 50%;
+    height: 75px;
+    p {
+      @include pFont;
+    }
+  }
+  .update-cards {
+    width: 90%;
+    height: 60px;
+    padding: 10px 0 !important;
+    border: 2px solid rgba(0, 103, 71, 0.3);
+    border-radius: 5px;
+    box-shadow: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    p {
+      @include H6Font;
+    }
+  }
+
+  .individual-transaction-image {
+    width: 100%;
+    height: 187px;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 10px !important;
   }
 }
 
@@ -272,7 +723,7 @@
   }
 }
 
-// TICKET  & ABOUT US STYLING
+TICKET  & ABOUT US STYLING
 // .ticketHistoryStyle {
 //   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 //   width: 35%;

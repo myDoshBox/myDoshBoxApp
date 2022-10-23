@@ -6,7 +6,8 @@
   font-weight: 400 !important;
 }
 
-.transaction-table {
+.transaction-table,
+.all-conflicts-table {
   thead {
     tr {
       th {
@@ -28,19 +29,28 @@
   }
 }
 
+.all-conflicts-table {
+  tbody {
+    tr {
+      border-bottom: none !important;
+    }
+  }
+}
+
 @media screen and (max-width: 290px) {
-  .transaction-table {
+  .transaction-table,
+  .all-conflicts-table {
     thead {
       tr {
         th {
-          font-size: 6px !important;
+          font-size: 0.375px !important;
         }
       }
     }
     tbody {
       tr {
         td {
-          font-size: 6px !important;
+          font-size: 0.375px !important;
         }
       }
     }
@@ -49,7 +59,7 @@
 
 @media screen and (max-width: 700px) {
   .transaction-table {
-    font-size: 10px !important;
+    font-size: 0.625rem !important;
   }
   .small-hide {
     display: none;
@@ -57,27 +67,28 @@
 }
 
 @media screen and (min-width: 688px) and (max-width: 992px) {
-  .transaction-table {
+  .transaction-table,
+  .all-conflicts-table {
     thead {
       tr {
         th {
-          font-size: 12px !important;
+          font-size: 0.75rem !important;
         }
       }
     }
     tbody {
       tr {
         td {
-          font-size: 12px !important;
+          font-size: 0.75rem !important;
         }
       }
     }
   }
 }
 
-// .BgColor {
-//   background-color: $pryColor;
-// }
-// .TableRowColor {
-//   background-color: $pryColorVariant;
-// }
+.BgColor {
+  background-color: $pryColor;
+}
+.TableRowColor {
+  background-color: $pryColorVariant;
+}

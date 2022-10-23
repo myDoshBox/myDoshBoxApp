@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 // CalendarButton
 export const CalendarButton = () => {
   return (
-    <Button className="CalendarBtnStyle border-0 mt-5 ms-3">
+    <Button className="CalendarBtnStyle border-0 ms-3">
       <span className="">
         <Icon
           className="mx-2"
@@ -54,4 +54,10 @@ export const FilterButton = () => {
 // CancelButton
 export const CancelButton = () => {
   return <Button className="CancelBtn border-0 mt-5 ms-3">Cancel</Button>;
+};
+
+
+// LearnMoreCardButton
+export const LearnMoreCardButton = () => {
+  return <button className="d-none d-sm-block LearnMoreCardButton">Get Started</button>;
 };

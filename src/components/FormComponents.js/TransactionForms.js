@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Form, Container } from "react-bootstrap";
 import {
   ProceedButton,
@@ -7,7 +7,7 @@ import {
 
 //BuyerEscrowInitiationForm
 export const BuyerEscrowInitiationForm = () => {
-  const [transaction, setTransaction] = useState({
+  const initialValues = {
     email: "",
     description: "",
     quantity: "",
@@ -15,9 +15,12 @@ export const BuyerEscrowInitiationForm = () => {
     completionDate: Date,
     total: 0,
     image: File,
-  });
+  };
+  const [transaction, setTransaction] = useState(initialValues);
 
   const [transactionDetails, setTransactionDetails] = useState([]);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -36,16 +39,40 @@ export const BuyerEscrowInitiationForm = () => {
       transaction.image
     ) {
       setTransactionDetails([...transactionDetails, transaction]);
-      setTransaction({
-        email: "",
-        description: "",
-        quantity: "",
-        price: "",
-        completionDate: Date,
-        total: 0,
-        image: File,
-      });
+      setTransaction(initialValues);
     }
+    setFormErrors(validate(transaction));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(transaction);
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.email) {
+      errors.email = "*Email is required";
+    }
+    if (!values.description) {
+      errors.description = "*Item description is required";
+    }
+    if (!values.quantity) {
+      errors.quantity = "*Item quantity is required";
+    }
+    if (!values.price) {
+      errors.price = "*Item price is required";
+    }
+    if (!values.completionDate) {
+      errors.completionDate = "*Completion date is required";
+    }
+
+    return errors;
   };
 
   const totalCalc = () => {
@@ -77,10 +104,16 @@ export const BuyerEscrowInitiationForm = () => {
               />
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">{formErrors.email}</span>
+            </div>
+          </div>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
-            <div className="col-md-4 col-sm-12 text-md-end">
+            <div className="col-sm-12 col-md-4  text-md-end ">
               <Form.Label className="escrow-form-label">
                 Item Description
               </Form.Label>
@@ -95,6 +128,14 @@ export const BuyerEscrowInitiationForm = () => {
                 onChange={handleChange}
                 className="escrow-input-field"
               />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">
+                {formErrors.description}
+              </span>
             </div>
           </div>
         </Form.Group>
@@ -118,11 +159,19 @@ export const BuyerEscrowInitiationForm = () => {
               />
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">
+                {formErrors.quantity}
+              </span>
+            </div>
+          </div>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
             <div className="col-md-4 col-sm-12 text-md-end">
-              <Form.Label className="escrow-form-label">
+              <Form.Label className="escrow-form-label ms-3">
                 Price of Items
               </Form.Label>
             </div>
@@ -137,6 +186,12 @@ export const BuyerEscrowInitiationForm = () => {
                 className="escrow-price-field"
               />
               <span className="ngn2">NGN</span>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">{formErrors.price}</span>
             </div>
           </div>
         </Form.Group>
@@ -159,6 +214,7 @@ export const BuyerEscrowInitiationForm = () => {
               />
             </div>
           </div>
+          <p>{formErrors.completionDate}</p>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
@@ -212,7 +268,7 @@ export const BuyerEscrowInitiationForm = () => {
 };
 // SellersEscrowInitiationForm
 export const SellersEscrowInitiationForm = () => {
-  const [transaction, setTransaction] = useState({
+  const initialValues = {
     email: "",
     description: "",
     quantity: "",
@@ -220,9 +276,12 @@ export const SellersEscrowInitiationForm = () => {
     completionDate: Date,
     total: 0,
     image: File,
-  });
+  };
+  const [transaction, setTransaction] = useState(initialValues);
 
   const [transactionDetails, setTransactionDetails] = useState([]);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -241,16 +300,40 @@ export const SellersEscrowInitiationForm = () => {
       transaction.image
     ) {
       setTransactionDetails([...transactionDetails, transaction]);
-      setTransaction({
-        email: "",
-        description: "",
-        quantity: "",
-        price: "",
-        completionDate: Date,
-        total: 0,
-        image: File,
-      });
+      setTransaction(initialValues);
     }
+    setFormErrors(validate(transaction));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(transaction);
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.email) {
+      errors.email = "*Email is required";
+    }
+    if (!values.description) {
+      errors.description = "*Item description is required";
+    }
+    if (!values.quantity) {
+      errors.quantity = "*Item quantity is required";
+    }
+    if (!values.price) {
+      errors.price = "*Item price is required";
+    }
+    if (!values.completionDate) {
+      errors.completionDate = "*Completion date is required";
+    }
+
+    return errors;
   };
 
   const totalCalc = () => {
@@ -282,6 +365,12 @@ export const SellersEscrowInitiationForm = () => {
               />
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">{formErrors.email}</span>
+            </div>
+          </div>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
@@ -300,6 +389,14 @@ export const SellersEscrowInitiationForm = () => {
                 onChange={handleChange}
                 className="escrow-input-field"
               />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">
+                {formErrors.description}
+              </span>
             </div>
           </div>
         </Form.Group>
@@ -323,6 +420,14 @@ export const SellersEscrowInitiationForm = () => {
               />
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">
+                {formErrors.quantity}
+              </span>
+            </div>
+          </div>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
@@ -344,6 +449,12 @@ export const SellersEscrowInitiationForm = () => {
               <span className="ngn2">NGN</span>
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">{formErrors.price}</span>
+            </div>
+          </div>
         </Form.Group>
         <Form.Group className="mb-5 escrow-form-field">
           <div className="row align-items-center">
@@ -362,6 +473,14 @@ export const SellersEscrowInitiationForm = () => {
                 onChange={handleChange}
                 className="escrow-input-field"
               />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 col-sm-12 text-md-end"></div>
+            <div className="col-lg-6 col-md-8  col-sm-12">
+              <span className="escrow-form-error ms-3">
+                {formErrors.completionDate}
+              </span>
             </div>
           </div>
         </Form.Group>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550
 @use "../color" as *;
 @use "../fonts" as *;
 
@@ -59,6 +63,12 @@
   color: $pendingPaymentTextColor;
   background-color: $pendingPaymentBgColor;
 }
+<<<<<<< HEAD
+=======
+// @use "../color" as *;
+// @use "../fonts" as *;
+>>>>>>> origin/chris
+=======
 
 // @media screen and (max-width: 290px) {
 //   .completed,
@@ -88,6 +98,7 @@
   .unresolved {
     width: 80px !important;
     height: 20px !important;
-    font-size: 7px !important;
+    font-size: 0.4375rem !important;
   }
 }
+>>>>>>> 0251f6c8df41aca3a7970e088b28e1ee5f409550

@@ -1,5 +1,106 @@
-@use "../color" as *;
 @use "../fonts" as *;
+@use "../color" as *;
+
+.Email,
+.Password,
+.AccountNum,
+.AccountName,
+.BankName,
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  label {
+    @include H6Font;
+    color: $bodyTextColor;
+    letter-spacing: 0.08em;
+    line-height: 1rem;
+    font-weight: 700;
+  }
+  input {
+    @include pFont;
+    font-size: small !important;
+  }
+}
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass,
+.AccountNum,
+.AccountName,
+.BankName,
+.Email,
+.Password {
+  input::placeholder {
+    font-size: small !important;
+    font-weight: 300 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.04rem !important;
+    color: $placeholderTextColor;
+  }
+}
+.UpdateProfileForm {
+  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
+  button {
+    @include pFont;
+    background-color: $buttonColor !important;
+    font-size: 0.875rem !important;
+    color: $secColor !important;
+  }
+  button:hover,
+  button:focus {
+    background-color: $pryColor !important;
+  }
+  p {
+    @include H6Font;
+    color: $bodyTextColor;
+    font-weight: 700;
+  }
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: $placeholderTextColor;
+  outline: 0 none;
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  label {
+    @include H6Font;
+    color: $bodyTextColor;
+    letter-spacing: 0.08rem;
+    font-weight: 700;
+  }
+  input {
+    border: 1.5px solid rgba(0, 103, 71, 0.3);
+  }
+}
+.Name,
+.UpdateEmail,
+.Phone,
+.Pass {
+  input::placeholder {
+    font-weight: 300 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.04rem !important;
+    color: $placeholderTextColor;
+  }
+}
 
 .escrow-form,
 .bank-transfer-form {
@@ -14,7 +115,7 @@
 .bank-transfer-form-label {
   margin-left: 15px;
   @include H5Font;
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
 }
 
 .escrow-input-field,
@@ -63,7 +164,7 @@
 .escrow-price-field::placeholder,
 .bank-transfer-input-field::placeholder {
   @include pFont;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
   color: $placeholderTextColor !important;
 }
 
@@ -99,7 +200,13 @@
   transform: translateX(200px);
   padding: 20px;
   @include pFont;
-  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+
+.escrow-form-error {
+  color: rgba(180, 19, 10, 0.8) !important;
+  @include pFont;
+  font-size: 12px !important;
 }
 
 @media screen and (max-width: 687px) {
@@ -124,7 +231,7 @@
   .escrow-form-label,
   .bank-transfer-form-label {
     @include H6Font;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
   }
   .confirm-delivery-head {
     @include H5Font;
@@ -136,7 +243,7 @@
   .account-details {
     transform: translateX(0) !important;
     @include pFont;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -149,7 +256,7 @@
 
   .account-details {
     @include pFont;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -183,4 +290,189 @@
     width: 1041px !important;
     // transform: translateX(100px);
   }
+}
+
+// Authentication Form Style
+// SignIn Form Styling
+
+.inputFormStyle {
+  width: 500px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.inputStyle {
+  input {
+    text-indent: 10px !important;
+    border-color: #ced4da !important;
+  }
+}
+
+.toggleBtnStyle {
+  margin-left: -3rem;
+}
+
+.checkboxStyle label {
+  color: $pryColorVariant !important;
+}
+
+.signUpStyle {
+  width: 240px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.sign-up-section {
+  transform: translateX(130px);
+}
+
+// CONTACT US STYLING
+.contactInputFormStyle {
+  width: 500px !important;
+  height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.textAreaStyle {
+  width: 500px !important;
+  // height: 55px !important;
+  border-radius: 13px !important;
+  border: 1px solid;
+}
+
+.labelStyle {
+  color: #8cbbac !important;
+}
+
+.labelStyle::placeholder {
+  color: #8cbbac !important;
+}
+
+.titleStyle {
+  @include H1Font;
+  color: $pryColor !important;
+}
+
+.contactStyle {
+  border: 2px solid $pryColor;
+  border-radius: 15px;
+  padding: 50px 15px;
+
+  hr {
+    color: $pryColor;
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+}
+.colorStyle h5 {
+  color: red !important;
+}
+
+@media screen and (max-width: 600px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .colorStyle h5 {
+    color: rgb(17, 0, 255) !important;
+  }
+
+  // .contactStyle {
+  //   display: flex;
+  //   flex-direction: column-reverse;
+  //   overflow: hidden;
+  // }
+}
+
+@media screen and (max-width: 687px) {
+  .inputFormStyle {
+    width: 100% !important;
+  }
+
+  .contactInputFormStyle {
+    width: 100% !important;
+  }
+
+  .textAreaStyle {
+    width: 100% !important;
+  }
+
+  .signUpNavStyle {
+    width: 100% !important;
+  }
+
+  .signUpStyle {
+    width: 80% !important;
+  }
+
+  .sign-up-section {
+    transform: translate(50px, -30px);
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .contactStyle {
+    width: 70% !important;
+    border-radius: 5px 0 0 5px !important;
+  }
+
+  .textStyle {
+    @include pFont;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inputFormStyle {
+    width: 100% !important;
+  }
+  .contactInputFormStyle {
+    width: 100% !important;
+  }
+
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .signUpStyle {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .signUpStyle {
+    width: 100% !important;
+    max-width: 500px !important;
+  }
+  .inputFormStyle {
+    width: 100% !important;
+  }
+  .contactStyle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  // .inputFormStyle {
+  //   width: 80% !important;
+  // }
+
+  // .contactInputFormStyle {
+  //   width: 100% !important;
+  // }
+
+  // .textAreaStyle {
+  //   width: 100% !important;
+  // }
 }

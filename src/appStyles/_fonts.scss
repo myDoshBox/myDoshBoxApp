@@ -28,12 +28,14 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
+  letter-spacing: 0.08em;
 }
 
 @mixin H6Font {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.08em;
 }
 
 @mixin pFont {
