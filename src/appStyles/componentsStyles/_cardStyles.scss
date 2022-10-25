@@ -728,3 +728,79 @@ th {
     transform: translateX(90px);
   }
 }
+
+// TICKET  & ABOUT US STYLING
+// .ticketHistoryStyle {
+//   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+//   width: 35%;
+// }
+
+// .disputeCardStyle {
+//   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+//   width: 75%;
+// }
+
+.colorTextStyle {
+  color: rgb(165, 165, 165);
+}
+
+.textStyle {
+  color: rgb(19, 19, 19);
+}
+
+.coreValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  background-color: $pryColor !important;
+  color: white;
+  border-radius: 10px;
+}
+
+.coreValueStyle h3 {
+  @include H6Font;
+  font-size: 1.5625rem;
+}
+
+.coreValueStyle p {
+  @include pFont;
+  color: white !important;
+}
+
+.teamValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: #e5f0ed !important;
+  color: rgb(73, 73, 73);
+  border: 2px solid $pryColor;
+}
+
+.teamValueStyle2 {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: $pryColor !important;
+  color: rgb(255, 255, 255);
+  border: 2px solid $pryColor;
+}
+.warningStyle {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 46.875rem;
+  // transform: translateX(200px);
+  padding: 1.25rem;
+  font-size: 0.875rem !important;
+}
+
+.aboutImagePix {
+  width: 16.5625rem;
+  height: 16.5625rem;
+}
+
+// MEDIA SCREEN
+@media screen and (max-width: 687px) {
+  .smallScreen {
+    @include pFont;
+    display: none;
+  }
+}

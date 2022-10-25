@@ -78,6 +78,13 @@ export const ViewMoreButton = () => {
 };
 
 // ViewDetailsButton
+export const ViewDetailsButton = () => {
+  return (
+    <Button className="ViewComplaintBtnStyle border-0 mt-5 ms-3">
+      View Details
+    </Button>
+  );
+};
 
 // ViewComplaint
 export const ViewComplaintButton = () => {
