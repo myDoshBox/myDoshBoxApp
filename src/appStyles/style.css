@@ -763,7 +763,7 @@ th {
 
 .faq-head {
   border: 1px solid #006747 !important;
-  padding: 16px 20px;
+  padding: 16px 20px !important;
   font-family: "Roboto", sans-serif;
   font-size: 1.3125rem;
   line-height: 1.96rem;
@@ -774,11 +774,14 @@ th {
   background: #006747 !important;
 }
 
-.accordion-item {
-  border-top: 1px solid !important;
+.faq-content {
+  padding: 5px 20px !important;
 }
 
-.accordion-button {
+.faq-card .accordion-item {
+  border-top: 1px solid !important;
+}
+.faq-card .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -788,8 +791,7 @@ th {
   font-weight: 500;
   padding: 18px 22px !important;
 }
-
-.accordion-button:not(.collapsed) {
+.faq-card .accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
   color: #4b4453 !important;
 }

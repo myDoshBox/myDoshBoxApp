@@ -274,7 +274,7 @@ th {
 .faq-head {
   border: 1px solid $pryColor !important;
   //   border-radius: 3px 3px 0 0;
-  padding: 16px 20px;
+  padding: 16px 20px !important;
   @include H5Font;
   color: $secColor;
   font-weight: 500;
@@ -282,21 +282,27 @@ th {
   background: $pryColor !important;
 }
 
-.accordion-item {
-  border-top: 1px solid !important;
+.faq-content {
+  padding: 5px 20px !important;
 }
 
-.accordion-button {
-  @include H6Font;
-  box-shadow: none !important;
-  font-size: 1rem !important;
-  font-weight: 500;
+.faq-card {
+  .accordion-item {
+    border-top: 1px solid !important;
+  }
 
-  padding: 18px 22px !important;
-}
-.accordion-button:not(.collapsed) {
-  background-color: $secColor !important;
-  color: $bodyTextColor !important;
+  .accordion-button {
+    @include H6Font;
+    box-shadow: none !important;
+    font-size: 1rem !important;
+    font-weight: 500;
+
+    padding: 18px 22px !important;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: $secColor !important;
+    color: $bodyTextColor !important;
+  }
 }
 
 .why-choose-us-card-head {
