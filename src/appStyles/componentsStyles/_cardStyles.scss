@@ -1,0 +1,256 @@
+@use "../color" as *;
+@use "../fonts" as *;
+
+.faq-head {
+  border: 1px solid $pryColor !important;
+  //   border-radius: 3px 3px 0 0;
+  padding: 16px 20px;
+  @include H5Font;
+  color: $secColor;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  background: $pryColor !important;
+}
+
+.accordion-item {
+  border-top: 1px solid !important;
+}
+
+.accordion-button {
+  @include H6Font;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+
+  padding: 18px 22px !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $secColor !important;
+  color: $bodyTextColor !important;
+}
+
+.why-choose-us-card-head {
+  @include H6Font;
+  color: $pryColor !important;
+}
+
+.why-choose-us-card-text {
+  @include pFont;
+  font-size: 0.84375rem !important;
+}
+
+.transaction-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.escrow-terms-condition {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 00.08em;
+  }
+}
+
+.payment-gateway-image {
+  width: 12vw;
+  // height: 165px;
+}
+
+.payment-gateway-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    color: $placeholderTextColor !important;
+    @include pFont;
+    font-size: 1rem !important;
+  }
+  h2 {
+    @include H3Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  h4 {
+    @include H5Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+}
+
+.buying-selling-card {
+  width: 468px;
+  height: 227px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  p {
+    @include H4Font;
+    font-size: 1.5625rem !important;
+  }
+}
+
+.transaction-summary-card {
+  h2 {
+    @include H4Font;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .header-text,
+  .transaction-summary-info-title {
+    color: $placeholderTextColor !important;
+    font-family: "Open Sans" !important;
+  }
+  .transaction-summary-info-title {
+    @include H6Font;
+    font-weight: 500;
+  }
+  .transaction-summary-info-text {
+    @include pFont;
+  }
+}
+.transaction-images {
+  width: 80%;
+  height: 300px;
+}
+
+@media screen and (max-width: 300px) {
+  .payment-gateway-image {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 0.5rem !important;
+      line-height: 0.75rem !important;
+    }
+    h2 {
+      font-size: 1rem !important;
+    }
+    h4 {
+      font-size: 0.75rem !important;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+  }
+  .transaction-images {
+    height: 100px !important;
+  }
+  .transaction-summary-info-title {
+    font-size: 0.75rem !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .faq-head {
+    @include H6Font;
+  }
+
+  .accordion-button {
+    @include H6Font;
+    box-shadow: none !important;
+    font-size: 0.875rem !important;
+    padding: 16px 20px !important;
+  }
+
+  .contact-card {
+    padding: 30px 15px;
+  }
+  .why-choose-us-card-head {
+    font-size: 0.6875rem !important;
+    line-height: 15px !important;
+  }
+
+  .why-choose-us-card-text {
+    font-size: 0.5rem !important;
+    line-height: 12px;
+  }
+  .transaction-table {
+    font-size: 10px !important;
+  }
+  .escrow-terms-condition {
+    font-size: 0.75rem !important;
+    h2 {
+      font-size: 1rem !important;
+      line-height: 24px !important;
+      text-align: center;
+    }
+  }
+  .payment-gateway-image {
+    width: 20vw;
+    // height: 100px;
+  }
+  .payment-gateway-card {
+    p {
+      font-size: 0.75rem !important;
+      line-height: 20px !important;
+    }
+    h2 {
+      @include H5Font;
+    }
+    h4 {
+      @include H6Font;
+    }
+  }
+  .buying-selling-card {
+    width: 80%;
+    height: 160px;
+    p {
+      font-size: 1rem !important;
+    }
+    svg {
+      width: 45.5px !important;
+      height: 45.5px !important;
+    }
+  }
+  .transaction-summary-card {
+    h2 {
+      font-size: 1.25rem !important;
+    }
+    .header-text {
+      font-size: 0.75rem;
+      font-family: "Open Sans";
+    }
+    .transaction-summary-info-title {
+      font-size: 0.75rem !important;
+      font-weight: 400;
+    }
+    .transaction-summary-info-text {
+      font-size: 10px !important;
+    }
+  }
+  .transaction-images {
+    width: 90%;
+    height: 150px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .transaction-images {
+    width: 90%;
+    height: 200px;
+  }
+  .transaction-summary-card {
+    h2 {
+      @include H5Font;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .transaction-summary-info-text {
+    transform: translateX(-70px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(70px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .transaction-summary-info-text {
+    transform: translateX(-90px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(90px);
+  }
+}

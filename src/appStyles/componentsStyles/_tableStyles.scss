@@ -1,0 +1,83 @@
+@use "../color" as *;
+@use "../fonts" as *;
+
+@mixin tableFontStyle {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+}
+
+.transaction-table {
+  thead {
+    tr {
+      th {
+        @include tableFontStyle;
+        color: #bdbdbd !important;
+        font-weight: 400 !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        @include tableFontStyle;
+        border-bottom: none;
+        color: $bodyTextColor;
+      }
+      border-bottom: 1px solid gray;
+    }
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .transaction-table {
+    thead {
+      tr {
+        th {
+          font-size: 0.375px !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 0.375px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .transaction-table {
+    font-size: 0.625rem !important;
+  }
+  .small-hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 688px) and (max-width: 992px) {
+  .transaction-table {
+    thead {
+      tr {
+        th {
+          font-size: 0.75rem !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 0.75rem !important;
+        }
+      }
+    }
+  }
+}
+
+// .BgColor {
+//   background-color: $pryColor;
+// }
+// .TableRowColor {
+//   background-color: $pryColorVariant;
+// }

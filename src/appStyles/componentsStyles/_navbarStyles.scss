@@ -33,7 +33,7 @@
 .userDashboardNav {
   //   padding-right: 30px;
   @include userNavFont;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
 }
 
 .form-control {
@@ -104,17 +104,17 @@
   width: 15rem;
   height: 100vh !important;
 }
-.SideNavLogo{
+.SideNavLogo {
   width: 6rem;
-  cursor: pointer  !important;
+  cursor: pointer !important;
 }
-.SideNavItem{
+.SideNavItem {
   @include H6Font;
   color: $secColor;
   cursor: pointer !important;
   font-weight: 400;
 }
-.hoverBlock{
+.hoverBlock {
   border: 3px solid $secColor;
   border-radius: 5px;
   position: absolute !important;
@@ -122,19 +122,19 @@
   transform: translate(200px, 0px);
   display: none;
 }
-.SideNavItem:hover, :focus {
+.SideNavItem:hover,
+:focus {
   font-weight: 700 !important;
-  .hoverBlock{
+  .hoverBlock {
     display: block;
-    
   }
 }
-.SideNavDropdown button{
+.SideNavDropdown button {
   background-color: unset !important;
   border: none !important;
   padding: 0 !important;
 }
-.SideNavDropdown button::after{
+.SideNavDropdown button::after {
   display: none !important;
   width: unset !important;
   outline: unset !important;
@@ -150,6 +150,7 @@
 .SideNavDropdown .show {
   transform: translate3d(180px, 1px, 0px) !important;
 }
-.SideNavDropdown .show a:hover, :focus {
+.SideNavDropdown .show a:hover,
+:focus {
   font-weight: 700 !important;
 }
