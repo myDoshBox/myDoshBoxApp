@@ -5,6 +5,7 @@ const About = () => {
 	return (
 		<div>
 			<HeroSection />
+			<MissionSection/>
 		</div>
 	);
 };
@@ -27,5 +28,15 @@ const HeroSection = () => {
 		</section>
 	);
 };
+
+
+const MissionSection = () => {
+  return (
+	  <div>
+		  
+	</div>
+  )
+}
+
 
 export default About;
