@@ -1,13 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainChatInterface from "./components/ChatComponents/MainChatInterface";
 
 function App() {
-  return (
-    <>
-      <MainChatInterface />
-    </>
-  );
+  return;
+  <div></div>;
 }
 
 export default App;
