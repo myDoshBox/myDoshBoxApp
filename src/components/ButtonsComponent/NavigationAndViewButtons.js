@@ -74,6 +74,13 @@ export const ViewMoreButton = () => {
 };
 
 // ViewDetailsButton
+export const ViewDetailsButton = () => {
+  return (
+    <Button className="ViewComplaintBtnStyle border-0 mt-5 ms-3">
+      View Details
+    </Button>
+  );
+};
 
 export const ViewComplaintButton = () => {
 	return <Button className="GeneralBtnStyle1 border-0">View Complaint</Button>;

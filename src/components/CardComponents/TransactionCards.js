@@ -13,14 +13,15 @@ import {
   PendingPayment,
   InDispute,
 } from "../NotificationComponent/NotificationComponents";
-import { BuyingIcon, SellingIcon } from "../IconComponent/UserdashboardIcons";
-import bank from "../../assets/images/bank.jpg";
-import atm from "../../assets/images/atm.jpg";
-import product from "../../assets/images/productimage.jpg";
 import {
+  BuyingIcon,
+  SellingIcon,
   InitiateTransactionIcon,
   SettledTransactionIcon,
 } from "../IconComponent/UserdashboardIcons";
+import bank from "../../assets/images/bank.jpg";
+import atm from "../../assets/images/atm.jpg";
+import product from "../../assets/images/productimage.jpg";
 
 // RecentTransactionCard
 export const RecentTransactionCard = () => {
@@ -111,7 +112,7 @@ export const IndividualTransactionsCard = () => {
             />
           </div>
           <div className="col-12 col-lg-8 mt-5 mt-lg-0">
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Seller Email
               </p>
@@ -119,13 +120,13 @@ export const IndividualTransactionsCard = () => {
                 ClidsawFurniture@gmail.com
               </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Transaction Id
               </p>
               <p className="transaction-summary-info-text px-md-3">AXSQWEDSC</p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Product
               </p>
@@ -133,7 +134,7 @@ export const IndividualTransactionsCard = () => {
                 Three Seat Sofa
               </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Description
               </p>
@@ -141,19 +142,19 @@ export const IndividualTransactionsCard = () => {
                 Brown lightweight italian <br /> leather three seater sofa
               </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Quantity
               </p>
               <p className="transaction-summary-info-text px-md-3">30 </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Price
               </p>
               <p className="transaction-summary-info-text px-md-3">N 150,000</p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Delivery / Completion Date
               </p>
@@ -161,7 +162,7 @@ export const IndividualTransactionsCard = () => {
                 14 Aug 2022
               </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Status
               </p>
@@ -169,7 +170,7 @@ export const IndividualTransactionsCard = () => {
                 <CompletedNotification />
               </p>
             </div>
-            <div className="d-flex justify-content-between px-3 p-lg-0">
+            <div className="d-flex justify-content-between px-3 p-lg-0 mt-lg-3">
               <p className="transaction-summary-info-title text-start px-md-3">
                 Total
               </p>
@@ -533,7 +534,6 @@ export const TransactionCompletionCard = () => {
     </Container>
   );
 };
-// InitiateTransactionsCard
 export const InitiateTransactionsCard = () => {
   return (
     <div className="initiate-transaction-card d-flex align-items-center p-3 ">

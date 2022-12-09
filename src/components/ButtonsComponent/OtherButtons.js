@@ -51,3 +51,9 @@ export const FilterButton = () => {
 export const CancelButton = () => {
 	return <Button className="CancelBtn border-0">Cancel</Button>;
 };
+
+
+// LearnMoreCardButton
+export const LearnMoreCardButton = () => {
+  return <button className="d-none d-sm-block LearnMoreCardButton">Get Started</button>;
+};

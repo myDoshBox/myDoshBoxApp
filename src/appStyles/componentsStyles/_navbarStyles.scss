@@ -2,9 +2,9 @@
 @use "../generalStyles/fonts" as *;
 
 // GuestNavbar styles
-.nav-link {
+.nav-links {
 	@include pFont;
-	margin: 10px 15px;
+	margin: 10px 20px !important;
 	color: black !important;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .guest-nav {
-	margin: 0 20px;
+	margin: 10px 20px !important;
 }
 .bigLogo {
 	transform: translateY(-50px);
@@ -33,7 +33,7 @@
 .userDashboardNav {
 	//   padding-right: 30px;
 	@include userNavFont;
-	font-size: 12px !important;
+	font-size: 0.75rem !important;
 }
 
 .form-control {
@@ -75,7 +75,7 @@
 		width: 100%;
 		transform: translateY(-50px);
 	}
-	.nav-link {
+	.nav-links {
 		color: white !important;
 		padding-left: 50px !important;
 		margin-top: 5px;
@@ -94,6 +94,9 @@
 	}
 	.smallLogo {
 		display: block;
+	}
+	.nav-btn {
+		transform: translateY(0px);
 	}
 }
 
@@ -116,7 +119,7 @@
 }
 .hoverBlock {
 	border: 3px solid $secColor;
-	border-radius: 5px;
+	border-radius: 0.3rem;
 	position: absolute !important;
 	height: 2rem !important;
 	transform: translate(200px, 0px);
@@ -139,14 +142,7 @@
 	width: unset !important;
 	outline: unset !important;
 }
-// .SideNavItemNeutrals:hover, :focus {
-//   svg:focus, :hover {
-//     width: 30% !important;
-//   }
-//   span {
-//     width: 40% !important;
-//   }
-// }
+
 .SideNavDropdown .show {
 	transform: translate3d(180px, 1px, 0px) !important;
 }

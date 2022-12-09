@@ -210,9 +210,326 @@ p {
   background-color: #e5f0ed !important;
 }
 
+.LearnMoreCardButton {
+  width: 140.99px;
+  height: 43.75px !important;
+  background: rgba(0, 103, 71, 0.9);
+  border: 1.94464px solid #ffffff;
+  border-radius: 7.4966px;
+  color: white !important;
+}
+
+.LearnMoreCardWrapper {
+  background-color: rgba(0, 103, 71, 0.7);
+  color: hsl(0deg, 0%, 100%);
+  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  border-radius: 0.608rem;
+}
+.LearnMoreCardWrapper .KnowMore {
+  width: 50%;
+}
+.LearnMoreCardWrapper .KnowMore h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.LearnMoreCardWrapper .KnowMore p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.972rem;
+  line-height: 23px;
+  text-align: justify;
+}
+.LearnMoreCardWrapper .KnowMoreImg {
+  width: 35%;
+}
+
+@media screen and (min-width: 1023px) {
+  .KnowMore {
+    width: 40%;
+  }
+  .LearnMoreCardWrapper {
+    height: 11rem;
+    width: 41rem;
+  }
+}
+.NotificationCardWrapper {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.594rem;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+
+.NotificationCardHeader {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+}
+.NotificationCardHeader button {
+  margin: 0 !important;
+  width: unset !important;
+  height: unset !important;
+  background-color: transparent !important;
+}
+.NotificationCardHeader h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.663rem;
+  line-height: 30px !important;
+  height: 1.938rem !important;
+}
+
+.NotificationCardDetails {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+  padding-inline: 3.5% !important;
+}
+.NotificationCardDetails h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  color: #4b4453;
+}
+.NotificationCardDetails p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  width: 95%;
+}
+.NotificationCardDetails button {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-align: justify;
+  letter-spacing: 0.08rem;
+  color: #006747;
+}
+
+@media screen and (max-width: 991px) {
+  .NotificationCardHeader button {
+    font-size: 0.75rem;
+  }
+  .NotificationCardHeader h1 {
+    font-size: 1.31rem !important;
+  }
+  .NotificationCardDetails {
+    width: 100% !important;
+  }
+  .NotificationCardDetails p {
+    font-size: 0.75rem !important;
+    width: unset;
+    line-height: 16px;
+  }
+  .NotificationCardDetails img {
+    width: 1.8rem;
+  }
+  .NotificationCardDetails small {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300 !important;
+    font-size: 0.5rem !important;
+    letter-spacing: 0.04rem !important;
+  }
+  .NotificationCardBackBtn {
+    color: #006747 !important;
+  }
+}
+.AnalyticsNewUsersCard {
+  width: 13.7rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.AnalyticsNewUsersCard h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+}
+.AnalyticsNewUsersCard p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.AnalyticsNewUsersCard .small {
+  font-size: 0.75em !important;
+}
+
+.TotalUsersCard {
+  width: 20rem;
+  height: 9rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.TotalUsersCard .TotalUsersCardText {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.TotalUsersCard .small {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.75em !important;
+  left: 45%;
+  bottom: 4%;
+}
+
+.MiniProfileCard {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  width: 22rem;
+  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
+  font-size: 0.913rem !important;
+}
+.MiniProfileCard img {
+  cursor: pointer;
+}
+.MiniProfileCard .MiniProfileCardCameraIcon {
+  left: 64%;
+  top: 29.5%;
+  cursor: pointer;
+}
+.MiniProfileCard .RatingIcon {
+  cursor: pointer;
+}
+
+.MiniUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  color: #4b4453;
+}
+.MiniUsersCard tr {
+  border-style: hidden;
+  font-size: 0.75rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+}
+.MiniUsersCard th {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.875rem !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+.MiniUsersCard button {
+  margin: 0 !important;
+}
+
+.LogoutCard p {
+  color: rgba(255, 0, 0, 0.7) !important;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  padding: 0.5rem;
+}
+
+.AllUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.AllUsersCard img {
+  filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
+  border-radius: 3.6rem;
+  width: 1.99rem;
+  height: 2.44rem;
+}
+.AllUsersCard tr:nth-child(1) {
+  color: rgba(75, 68, 83, 0.5);
+}
+.AllUsersCard td {
+  max-width: 10rem;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: small !important;
+}
+.AllUsersCard .lg-view {
+  display: none;
+}
+.AllUsersCard .view {
+  color: #006747 !important;
+}
+.AllUsersCard .view:hover,
+.AllUsersCard :focus {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .AllUsersCard td {
+    font-size: xx-small !important;
+  }
+  .AllUsersCard th {
+    font-size: x-small !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-view {
+    display: revert !important;
+  }
+  .UserProfileCard img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+.UserProfileCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.UserProfileCard p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-size: small !important;
+  font-weight: 700 !important;
+}
+.UserProfileCard td {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #4b4453;
+  font-size: smaller !important;
+}
+.UserProfileCard .UserProfileDetail {
+  color: rgba(75, 68, 83, 0.5);
+  letter-spacing: 0.08rem;
+}
+
 .faq-head {
   border: 1px solid #006747 !important;
-  padding: 16px 20px;
+  padding: 16px 20px !important;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.96rem;
@@ -223,21 +540,23 @@ p {
   background: #006747 !important;
 }
 
-.accordion-item {
-  border-top: 1px solid !important;
+.faq-content {
+  padding: 5px 20px !important;
 }
 
-.accordion-button {
+.faq-card .accordion-item {
+  border-top: 1px solid !important;
+}
+.faq-card .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
   line-height: 1.5rem;
   box-shadow: none !important;
-  font-size: 18px !important;
+  font-size: 1rem !important;
   font-weight: 500;
   padding: 18px 22px !important;
 }
-
-.accordion-button:not(.collapsed) {
+.faq-card .accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
   color: #4b4453 !important;
 }
@@ -256,6 +575,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  font-size: 0.84375rem !important;
 }
 
 .transaction-card,
@@ -277,8 +597,7 @@ p {
 }
 
 .payment-gateway-image {
-  width: 165px;
-  height: 165px;
+  width: 12vw;
 }
 
 .payment-gateway-card {
@@ -292,7 +611,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 16px !important;
+  font-size: 1rem !important;
 }
 .payment-gateway-card h2 {
   font-family: "Roboto", sans-serif;
@@ -320,7 +639,7 @@ p {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
   line-height: 2.625rem;
-  font-size: 25px !important;
+  font-size: 1.5625rem !important;
 }
 
 .transaction-summary-card h2 {
@@ -360,7 +679,7 @@ p {
   border-radius: 10px;
   box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
   width: 311.14px;
-  height: 145.85px;
+  height: 145.85px !important;
   display: inline !important;
 }
 .initiate-transaction-card p {
@@ -388,17 +707,12 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
 }
 
 .individual-transaction-image {
   width: 100%;
   height: 379.79px;
-}
-
-.small-inidividual-transaction-image {
-  width: 92.65px;
-  height: 55.04px;
 }
 
 .update-cards {
@@ -455,7 +769,7 @@ p {
 }
 .mini-disputes-card .mini-disputes-mail {
   color: rgba(75, 68, 83, 0.5);
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .mini-disputes-card .mini-disputes-name {
   font-size: 14px;
@@ -496,7 +810,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
 }
 .mini-disputes-card .dropdown-menu {
   border: none;
@@ -532,14 +846,14 @@ p {
     height: 70px !important;
   }
   .payment-gateway-card p {
-    font-size: 8px !important;
-    line-height: 12px !important;
+    font-size: 0.5rem !important;
+    line-height: 0.75rem !important;
   }
   .payment-gateway-card h2 {
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
   .payment-gateway-card h4 {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     font-weight: 700;
     letter-spacing: 0.08em;
   }
@@ -547,11 +861,11 @@ p {
     height: 100px !important;
   }
   .transaction-summary-info-title {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     font-weight: 400;
   }
   .transaction-summary-info-text {
-    font-size: 8px !important;
+    font-size: 0.5rem !important;
   }
 }
 @media screen and (max-width: 687px) {
@@ -560,42 +874,41 @@ p {
     font-size: 0.5rem;
     line-height: 1.5rem;
   }
-  .accordion-button {
+  .faq-card .accordion-button {
     font-family: "Roboto", sans-serif;
     font-size: 0.5rem;
     line-height: 1.5rem;
     box-shadow: none !important;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
     padding: 16px 20px !important;
   }
   .contact-card {
     padding: 30px 15px;
   }
   .why-choose-us-card-head {
-    font-size: 11px !important;
+    font-size: 0.6875rem !important;
     line-height: 15px !important;
   }
   .why-choose-us-card-text {
-    font-size: 8px !important;
+    font-size: 0.5rem !important;
     line-height: 12px;
   }
   .transaction-table {
     font-size: 10px !important;
   }
   .escrow-terms-condition {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
   .escrow-terms-condition h2 {
-    font-size: 16px !important;
+    font-size: 1rem !important;
     line-height: 24px !important;
     text-align: center;
   }
   .payment-gateway-image {
-    width: 100px;
-    height: 100px;
+    width: 20vw;
   }
   .payment-gateway-card p {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     line-height: 20px !important;
   }
   .payment-gateway-card h2 {
@@ -614,23 +927,21 @@ p {
     height: 160px;
   }
   .buying-selling-card p {
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
   .buying-selling-card svg {
     width: 45.5px !important;
     height: 45.5px !important;
   }
   .transaction-summary-card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem !important;
   }
   .transaction-summary-card .header-text {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-family: "Open Sans";
   }
   .transaction-summary-card .transaction-summary-info-title {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     font-weight: 400;
   }
   .transaction-summary-card .transaction-summary-info-text {
@@ -641,7 +952,7 @@ p {
     height: 150px !important;
   }
   .initiate-transaction-card {
-    width: 186px;
+    width: 50%;
     height: 75px;
   }
   .initiate-transaction-card p {
@@ -714,6 +1025,81 @@ p {
   color: #fff;
 }
 
+.colorTextStyle {
+  color: rgb(165, 165, 165);
+}
+
+.textStyle {
+  color: rgb(19, 19, 19);
+}
+
+.coreValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  background-color: #006747 !important;
+  color: white;
+  border-radius: 10px;
+}
+
+.coreValueStyle h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-size: 1.5625rem;
+}
+
+.coreValueStyle p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: white !important;
+}
+
+.teamValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: #e5f0ed !important;
+  color: rgb(73, 73, 73);
+  border: 2px solid #006747;
+}
+
+.teamValueStyle2 {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: #006747 !important;
+  color: rgb(255, 255, 255);
+  border: 2px solid #006747;
+}
+
+.warningStyle {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 46.875rem;
+  padding: 1.25rem;
+  font-size: 0.875rem !important;
+}
+
+.aboutImagePix {
+  width: 16.5625rem;
+  height: 16.5625rem;
+}
+
+@media screen and (max-width: 687px) {
+  .smallScreen {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    display: none;
+  }
+}
 .BgColor {
   background-color: #459079;
 }
@@ -749,10 +1135,6 @@ p {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
-.Email input:-ms-input-placeholder, .Password input:-ms-input-placeholder {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
 .Email input::placeholder,
 .Password input::placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
@@ -781,13 +1163,6 @@ p {
   color: rgba(75, 68, 83, 0.5);
 }
 
-.AccountNum input:-ms-input-placeholder, .AccountName input:-ms-input-placeholder, .BankName input:-ms-input-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
 .AccountNum input::placeholder,
 .AccountName input::placeholder,
 .BankName input::placeholder {
@@ -795,6 +1170,52 @@ p {
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
   color: rgba(75, 68, 83, 0.5);
+}
+
+.UpdateProfileForm {
+  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
+}
+.UpdateProfileForm button {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  background-color: #4d957e !important;
+  font-size: 0.875rem !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+.UpdateProfileForm button:hover,
+.UpdateProfileForm button:focus {
+  background-color: #006747 !important;
+}
+.UpdateProfileForm p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  color: #4b4453;
+  font-weight: 700;
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+.uneditable-input:focus {
+  border-color: rgba(75, 68, 83, 0.5);
+  outline: 0 none;
 }
 
 .Name label,
@@ -805,7 +1226,7 @@ p {
   font-size: 0.5rem;
   line-height: 1.5rem;
   color: #4b4453;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.08rem;
   font-weight: 700;
 }
 .Name input,
@@ -818,14 +1239,7 @@ p {
 .Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.Name input:-ms-input-placeholder, .UpdateEmail input:-ms-input-placeholder, .Phone input:-ms-input-placeholder, .Pass input:-ms-input-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.04rem !important;
   color: rgba(75, 68, 83, 0.5);
 }
 
@@ -835,7 +1249,7 @@ p {
 .Pass input::placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.04rem !important;
   color: rgba(75, 68, 83, 0.5);
 }
 
@@ -855,7 +1269,7 @@ p {
   font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
 }
 
 .escrow-input-field,
@@ -906,18 +1320,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.escrow-input-field:-ms-input-placeholder, .escrow-price-field:-ms-input-placeholder, .bank-transfer-input-field:-ms-input-placeholder {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -930,7 +1333,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -976,7 +1379,18 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+
+.escrow-form-error {
+  color: rgba(180, 19, 10, 0.8) !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
 }
 
 @media screen and (max-width: 687px) {
@@ -1000,7 +1414,7 @@ p {
     font-family: "Roboto", sans-serif;
     font-size: 0.5rem;
     line-height: 1.5rem;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
   }
   .confirm-delivery-head {
     font-family: "Roboto", sans-serif;
@@ -1020,7 +1434,7 @@ p {
     color: #4b4453;
     line-height: 1.5rem;
     letter-spacing: 0rem;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 @media screen and (max-width: 280px) {
@@ -1035,7 +1449,7 @@ p {
     color: #4b4453;
     line-height: 1.5rem;
     letter-spacing: 0rem;
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1114,10 +1528,6 @@ p {
 }
 
 .labelStyle::-moz-placeholder {
-  color: #8cbbac !important;
-}
-
-.labelStyle:-ms-input-placeholder {
   color: #8cbbac !important;
 }
 
@@ -1244,7 +1654,7 @@ p {
   letter-spacing: 0rem;
   background-color: #4d957e !important;
   color: hsl(0deg, 0%, 100%);
-  border-radius: 4.5px !important;
+  border-radius: 0.2rem !important;
 }
 .Modal-Btn .Modal-Btn:hover,
 .Modal-Btn .Modal-Btn:focus {
@@ -1259,7 +1669,7 @@ p {
   letter-spacing: 0rem;
   background-color: #4d957e !important;
   color: hsl(0deg, 0%, 100%);
-  border-radius: 4.5px !important;
+  border-radius: 0.2rem !important;
 }
 .Modal-Btn .Modal-Btn:hover,
 .Modal-Btn .Modal-Btn:focus {
@@ -1281,14 +1691,14 @@ p {
   line-height: 2.625rem;
 }
 
-.nav-link {
+.nav-links {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  margin: 10px 15px;
+  margin: 10px 20px !important;
   color: black !important;
 }
 
@@ -1303,7 +1713,7 @@ p {
 }
 
 .guest-nav {
-  margin: 0 20px;
+  margin: 10px 20px !important;
 }
 
 .bigLogo {
@@ -1320,7 +1730,7 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
 }
 
 .form-control {
@@ -1359,7 +1769,7 @@ p {
     width: 100%;
     transform: translateY(-50px);
   }
-  .nav-link {
+  .nav-links {
     color: white !important;
     padding-left: 50px !important;
     margin-top: 5px;
@@ -1378,6 +1788,9 @@ p {
   }
   .smallLogo {
     display: block;
+  }
+  .nav-btn {
+    transform: translateY(0px);
   }
 }
 /**SideNav Styling**/
@@ -1404,7 +1817,7 @@ p {
 
 .hoverBlock {
   border: 3px solid hsl(0deg, 0%, 100%);
-  border-radius: 5px;
+  border-radius: 0.3rem;
   position: absolute !important;
   height: 2rem !important;
   transform: translate(200px, 0px);
@@ -1574,7 +1987,7 @@ p {
 .unresolved {
     width: 80px !important;
     height: 20px !important;
-    font-size: 7px !important;
+    font-size: 0.4375rem !important;
   }
 }
 .BgColor {
@@ -1607,17 +2020,16 @@ p {
 @media screen and (max-width: 290px) {
   .transaction-table thead tr th,
 .all-conflicts-table thead tr th {
-    font-size: 6px !important;
+    font-size: 0.375px !important;
   }
   .transaction-table tbody tr td,
 .all-conflicts-table tbody tr td {
-    font-size: 6px !important;
+    font-size: 0.375px !important;
   }
 }
 @media screen and (max-width: 700px) {
-  .transaction-table,
-.all-conflicts-table {
-    font-size: 10px !important;
+  .transaction-table {
+    font-size: 0.625rem !important;
   }
   .small-hide {
     display: none;
@@ -1626,11 +2038,11 @@ p {
 @media screen and (min-width: 688px) and (max-width: 992px) {
   .transaction-table thead tr th,
 .all-conflicts-table thead tr th {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
   .transaction-table tbody tr td,
 .all-conflicts-table tbody tr td {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
   }
 }
 .BgColor {
@@ -1643,4 +2055,43 @@ p {
 
 .TableRowColor {
   background-color: #66a491;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.PaginationBar button {
+  margin: 0 !important;
+}
+.PaginationBar a {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgba(75, 68, 83, 0.5);
+}
+.PaginationBar a:hover,
+.PaginationBar a:focus {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-size: 1.3rem !important;
+  color: #4b4453;
+}
+.PaginationBar li {
+  margin-inline: 2% !important;
+}
+.PaginationBar :first-child {
+  margin-inline: unset !important;
+  margin-right: 3% !important;
+}
+.PaginationBar :last-child {
+  margin-inline: unset !important;
+  margin-left: 3% !important;
+}
+
+@media screen and (max-width: 764px) {
+  .PaginationBar button {
+    font-size: 0.75rem !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
