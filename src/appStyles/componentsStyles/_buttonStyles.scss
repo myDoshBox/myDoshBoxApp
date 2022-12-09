@@ -1,279 +1,62 @@
-@use "../color" as *;
-@use "../fonts" as *;
+@use "../generalStyles/color" as *;
+@use "../generalStyles/fonts" as *;
 
-.SignInBtn {
-  @include pFont;
-  font-weight: 700 !important;
-  width: 400px;
-  height: 44px;
-  background-color: $buttonColor !important;
-}
-
+// General Button Style
 .all-btn:hover {
-  background-color: $pryColor !important;
+	background-color: $pryColor !important;
 }
 
-.SignUpBtn {
-  @include pFont;
-  font-weight: 700 !important;
-  background-color: $buttonColor !important;
-  width: 230px;
-  height: 42px;
+.GeneralBtnStyle1 {
+	@include H5Font;
+	background-color: $buttonColor !important;
 }
 
-.SignInBtn2 {
-  width: 137px;
-  height: 40px;
-  @include pFont;
-  font-weight: 700 !important;
-  background-color: $buttonColor !important;
+.GeneralBtnStyle2 {
+	background-color: $pryColor !important;
+	@include pFont;
 }
 
-.GoogleSignInBtn {
-  @include pFont;
-  color: $bodyTextColor !important;
-  background-color: inherit !important;
-  border: 1px solid $buttonColor !important;
-  width: 400px;
-  height: 44px;
-}
-
-.GoogleSignUpBtn {
-  @include pFont;
-  color: $bodyTextColor !important;
-  background-color: inherit !important;
-  border: 1px solid $buttonColor !important;
-  width: 230px;
-  height: 42px;
+// Authentication Button Styles
+.GoogleAuthBtn {
+	@include pFont;
+	color: $bodyTextColor !important;
+	background-color: inherit !important;
+	border: 1px solid $buttonColor !important;
 }
 
 .SignUpGroup {
-  @include pFont;
-  font-size: 14px !important;
-  width: 186px;
-  height: 46px;
-  background-color: inherit !important;
-  color: $pryColor !important;
-  border: 1px solid $buttonColor !important;
+	@include pFont;
+	background-color: inherit !important;
+	color: $pryColor !important;
+	border: 1px solid $buttonColor !important;
 }
 
 .SignUpGroup:hover,
 .SignUpGroup:focus {
-  background-color: $pryColor !important;
-  color: white !important;
-}
-
-.getStarted {
-  width: 228px;
-  height: 60px;
-  background-color: $pryColor !important;
-  @include H5Font;
-  font-size: 25px !important;
-}
-
-.edit-profile-btn {
-  width: 106px;
-  height: 31px;
-  background-color: $buttonColor !important;
-  border-radius: 5px !important;
-  @include H6Font;
-  font-weight: 500 !important;
-}
-
-.edit-ticket-btn {
-  width: 250px;
-  height: 50px;
-  background-color: $buttonColor !important;
-  @include H5Font;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em;
-}
-
-.start-transaction-btn {
-  width: 323px;
-  height: 60px;
-  background-color: $buttonColor !important;
-  @include H5Font;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-.new-transaction-btn {
-  width: 215px;
-  height: 50px;
-  background-color: $buttonColor !important;
-  @include H6Font;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-.confirm-delivery-btn {
-  width: 180px;
-  height: 50px;
-  background-color: $pryColor !important;
-  @include pFont;
-}
-
-.i-agree-btn {
-  width: 170px;
-  height: 50px;
-  background-color: $buttonColor !important;
-  @include H5Font;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-@media screen and (max-width: 540px) {
-  .SignInBtn,
-  .GoogleSignInBtn {
-    width: 80%;
-  }
-  .new-transaction-btn {
-    width: 136px;
-    height: 36px;
-    font-size: 12px !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .SignUpGroup {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .SignUpGroup {
-    width: 65%;
-  }
-}
-
-// CONFLICT BUTTON STYLE
-.ResolveBtn {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
-  background-color: $buttonColor !important;
-}
-
-.BuyersStatementBtn {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
-  background-color: $pryColor !important;
-}
-
-.SellersStatementBtn {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
-  background-color: $buttonColor !important;
-}
-
-.BuyersFaultBtn {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 160px;
-  height: 47px;
-  background-color: $buttonColor !important;
-}
-
-.InitiateDisputeBtn {
-  @include pFont;
-  font-weight: 300 !important;
-  width: 150px;
-  height: 50px;
-  background-color: $pryColor !important;
-}
-
-.DropConflictBtn {
-  @include pFont;
-  font-weight: 300 !important;
-  width: 150px;
-  height: 44px;
-  background-color: $buttonColor !important;
-}
-
-.SubmitBtn {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
-  background-color: $buttonColor !important;
+	background-color: $pryColor !important;
+	color: white !important;
 }
 
 // NAVIGATION AND VIEW STYLING
 .ScrollUpBtnStyle {
-  border: 2px solid black !important;
-  border-radius: 20px;
-}
-
-.PrevioustBtnStyle {
-  @include pFont;
-  font-weight: 300 !important;
-  width: 100px;
-  height: 44px;
-  background-color: $buttonColor !important;
-}
-
-.BtnNextTextStyle {
-  margin-left: 11px;
-}
-
-.BtnPrevTexttStyle {
-  margin-right: 12px;
-}
-
-.BackBtnStyle {
-  margin-left: 1px;
-}
-
-.ViewMoreBtnStyle {
-  @include pFont;
-  font-weight: 300 !important;
-  width: 120px;
-  height: 40px;
-  background-color: $buttonColor !important;
-}
-
-.LearnMoreBtnStyle {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 140px;
-  height: 49px;
-  background-color: $buttonColor !important;
-}
-
-.ViewComplaintBtnStyle {
-  @include pFont;
-  font-weight: 600 !important;
-  width: 160px;
-  height: 40px;
-  background-color: $buttonColor !important;
+	border: 2px solid black !important;
+	border-radius: 20px;
 }
 
 // OTHER BUTTON STYLING
 .CalendarBtnStyle {
-  font-weight: 200 !important;
-  width: 210px;
-  height: 40px;
-  color: #4b4453 !important;
-  background-color: #e5f0ed !important;
+	font-weight: 200 !important;
+	color: #4b4453 !important;
+	background-color: #e5f0ed !important;
 }
 
 .CancelBtn {
-  @include pFont;
-  font-weight: 200 !important;
-  width: 120px;
-  height: 50px;
-  background-color: $cancelBtnColor !important;
+	@include pFont;
+	background-color: $cancelBtnColor !important;
 }
 
 .FilteBtnStyle {
-  font-weight: 200 !important;
-  width: 220px;
-  height: 43px;
-  color: #4b4453 !important;
-  background-color: #e5f0ed !important;
+	font-weight: 200 !important;
+	color: #4b4453 !important;
+	background-color: #e5f0ed !important;
 }

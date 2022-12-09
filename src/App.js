@@ -1,13 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainChatInterface from "./components/ChatComponents/MainChatInterface";
+import {
+	ConflictIssuesCards,
+	OngoingConflictCard,
+	OpenConflictsCard,
+} from "./components/CardComponents/ConflictIssuesCards";
+import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
+import About from "./pages/About";
 
 function App() {
-  return (
-    <>
-      <MainChatInterface />
-    </>
-  );
+	return (
+		<>
+			<About />
+		</>
+	);
 }
 
 export default App;

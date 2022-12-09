@@ -1,433 +1,442 @@
-@use "../fonts" as *;
-@use "../color" as *;
+@use "../generalStyles/color" as *;
+@use "../generalStyles/fonts" as *;
+
 $inputFieldColor: rgba(75, 68, 83, 0.8);
 
 .Email,
 .Password {
-  @include H5Font;
-  color: $inputFieldColor;
-  font-size: 1rem !important;
-  font-weight: 700;
+	@include H5Font;
+	color: $inputFieldColor;
+	font-size: 1rem !important;
+	font-weight: 700;
 }
+
 .Email input::placeholder,
 .Password input::placeholder {
-  color: $placeholderTextColor !important;
+	color: $placeholderTextColor !important;
 }
+
 .AccountNum,
 .AccountName,
 .BankName {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
+	label {
+		@include H6Font;
+		color: $bodyTextColor;
+		letter-spacing: 0.08em;
+		font-weight: 700;
+	}
+	input {
+		border: 1.5px solid rgba(0, 103, 71, 0.3);
+	}
 }
+
 .AccountNum,
 .AccountName,
 .BankName {
-  input::placeholder {
-    font-weight: 300 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
-    color: $placeholderTextColor;
-  }
+	input::placeholder {
+		font-weight: 300 !important;
+		font-size: 1rem !important;
+		letter-spacing: 0.04em !important;
+		color: $placeholderTextColor;
+	}
 }
 
 .Name,
 .UpdateEmail,
 .Phone,
 .Pass {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
+	label {
+		@include H6Font;
+		color: $bodyTextColor;
+		letter-spacing: 0.08em;
+		font-weight: 700;
+	}
+	input {
+		border: 1.5px solid rgba(0, 103, 71, 0.3);
+	}
 }
+
 .Name,
 .UpdateEmail,
 .Phone,
 .Pass {
-  input::placeholder {
-    font-weight: 300 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
-    color: $placeholderTextColor;
-  }
+	input::placeholder {
+		font-weight: 300 !important;
+		font-size: 1rem !important;
+		letter-spacing: 0.04em !important;
+		color: $placeholderTextColor;
+	}
 }
 
 .escrow-form,
 .bank-transfer-form {
-  overflow-x: hidden;
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  color: $bodyTextColor;
+	overflow-x: hidden;
+	border-radius: 10px;
+	border: 1px solid white;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+	color: $bodyTextColor;
 }
 
 .escrow-form-label,
 .bank-transfer-form-label {
-  margin-left: 15px;
-  @include H5Font;
-  font-size: 18px !important;
+	margin-left: 15px;
+	@include H5Font;
+	font-size: 18px !important;
 }
 
 .escrow-input-field,
 .bank-transfer-input-field {
-  width: 90% !important;
-  margin: 0 15px;
+	width: 90% !important;
+	margin: 0 15px;
 }
+
 .escrow-price-field {
-  width: 78% !important;
-  //   margin: 0 15px
-  border-radius: 5px 0 0 5px !important;
+	width: 78% !important;
+	//   margin: 0 15px
+	border-radius: 5px 0 0 5px !important;
 }
 
 .price-field {
-  transform: translateX(12px);
+	transform: translateX(12px);
 }
 .total-input {
-  width: 38% !important;
-  background-color: $pryColor !important;
-  color: $secColor !important;
-  border-radius: 0 5px 5px 0 !important;
+	width: 38% !important;
+	background-color: $pryColor !important;
+	color: $secColor !important;
+	border-radius: 0 5px 5px 0 !important;
 }
+
 // .escrow-label {
 //   text-align: end;
 // }
 
 .ngn {
-  background-color: $pryColor !important;
-  padding: 0.375rem 0.75rem;
-  border-radius: 5px 0 0 5px;
-  color: $secColor !important;
+	background-color: $pryColor !important;
+	padding: 0.375rem 0.75rem;
+	border-radius: 5px 0 0 5px;
+	color: $secColor !important;
 }
+
 .ngn2 {
-  border: 1px solid none;
-  background-color: $pryColor !important;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0 5px 5px 0;
-  color: $secColor !important;
+	border: 1px solid none;
+	background-color: $pryColor !important;
+	padding: 0.375rem 0.75rem;
+	border-radius: 0 5px 5px 0;
+	color: $secColor !important;
 }
 
 .escrow-images {
-  border: 1px dashed rgba(75, 68, 83, 0.3) !important;
+	border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
 .escrow-input-field::placeholder,
 .escrow-price-field::placeholder,
 .bank-transfer-input-field::placeholder {
-  @include pFont;
-  font-size: 12px !important;
-  color: $placeholderTextColor !important;
+	@include pFont;
+	font-size: 12px !important;
+	color: $placeholderTextColor !important;
 }
 
 .form-check-label {
-  color: $placeholderTextColor !important;
+	color: $placeholderTextColor !important;
 }
 
 .confirm-delivery-head {
-  @include H4Font;
-  font-weight: 500 !important;
+	@include H4Font;
+	font-weight: 500 !important;
 }
 
 .confirm-delivery-pText {
-  @include H6Font;
-  color: $placeholderTextColor !important;
+	@include H6Font;
+	color: $placeholderTextColor !important;
 }
 
 .deliver-goods-form {
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  //   position: absolute;
-  padding: 30px;
-  width: fit-content;
+	border-radius: 10px;
+	border: 1px solid white;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+	//   position: absolute;
+	padding: 30px;
+	width: fit-content;
 }
 
 .account-details {
-  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
-  color: rgba(255, 0, 0, 0.7) !important;
-  background-color: rgba(255, 0, 0, 0.1);
-  width: 100%;
-  max-width: 650px;
-  transform: translateX(200px);
-  padding: 20px;
-  @include pFont;
-  font-size: 14px !important;
+	border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+	color: rgba(255, 0, 0, 0.7) !important;
+	background-color: rgba(255, 0, 0, 0.1);
+	width: 100%;
+	max-width: 650px;
+	transform: translateX(200px);
+	padding: 20px;
+	@include pFont;
+	font-size: 14px !important;
 }
 
 @media screen and (max-width: 687px) {
-  //   .escrow-form-field {
-  //     flex-direction: column;
-  //   }
-  .total-input {
-    width: 100% !important;
-    // transform: translateX(16px);
-  }
-  .escrow-input-field {
-    width: 90% !important;
-    margin: 0 15px;
-  }
-  .escrow-card {
-    width: max-content !important;
-  }
+	//   .escrow-form-field {
+	//     flex-direction: column;
+	//   }
+	.total-input {
+		width: 100% !important;
+		// transform: translateX(16px);
+	}
+	.escrow-input-field {
+		width: 90% !important;
+		margin: 0 15px;
+	}
+	.escrow-card {
+		width: max-content !important;
+	}
 
-  .escrow-price-field {
-    width: 75.5% !important;
-  }
-  .escrow-form-label,
-  .bank-transfer-form-label {
-    @include H6Font;
-    font-size: 14px !important;
-  }
-  .confirm-delivery-head {
-    @include H5Font;
-  }
-  .deliver-goods-form {
-    margin: 30px 10px !important;
-    padding: 10px !important;
-  }
-  .account-details {
-    transform: translateX(0) !important;
-    @include pFont;
-    font-size: 12px !important;
-  }
+	.escrow-price-field {
+		width: 75.5% !important;
+	}
+	.escrow-form-label,
+	.bank-transfer-form-label {
+		@include H6Font;
+		font-size: 14px !important;
+	}
+	.confirm-delivery-head {
+		@include H5Font;
+	}
+	.deliver-goods-form {
+		margin: 30px 10px !important;
+		padding: 10px !important;
+	}
+	.account-details {
+		transform: translateX(0) !important;
+		@include pFont;
+		font-size: 12px !important;
+	}
 }
 
 @media screen and (max-width: 280px) {
-  .escrow-price-field {
-    width: 68% !important;
-    //   margin: 0 15px
-    border-radius: 5px 0 0 5px !important;
-  }
+	.escrow-price-field {
+		width: 68% !important;
+		//   margin: 0 15px
+		border-radius: 5px 0 0 5px !important;
+	}
 
-  .account-details {
-    @include pFont;
-    font-size: 12px !important;
-  }
+	.account-details {
+		@include pFont;
+		font-size: 12px !important;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .total-input {
-    width: 0 !important;
-    transform: translateX(-5px);
-  }
-  .account-details {
-    transform: translateX(30px);
-  }
+	.total-input {
+		width: 0 !important;
+		transform: translateX(-5px);
+	}
+	.account-details {
+		transform: translateX(30px);
+	}
 }
 
 @media screen and (max-width: 1023px) {
-  .total-input {
-    width: 70% !important;
-  }
-  .account-details {
-    transform: translateX(10px);
-  }
+	.total-input {
+		width: 70% !important;
+	}
+	.account-details {
+		transform: translateX(10px);
+	}
 }
 
 @media screen and (min-width: 1025px) {
-  .escrow-price-field {
-    width: 80% !important;
-    //   margin: 0 15px
-    border-radius: 5px 0 0 5px !important;
-  }
-  .escrow-form,
-  .bank-transfer-form {
-    width: 1041px !important;
-    // transform: translateX(100px);
-  }
+	.escrow-price-field {
+		width: 80% !important;
+		//   margin: 0 15px
+		border-radius: 5px 0 0 5px !important;
+	}
+	.escrow-form,
+	.bank-transfer-form {
+		width: 1041px !important;
+		// transform: translateX(100px);
+	}
 }
 
 // Authentication Form Style
 // SignIn Form Styling
 
 .inputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
+	width: 500px !important;
+	height: 55px !important;
+	border-radius: 13px !important;
+	border: 1px solid;
 }
 
 .inputStyle {
-  input {
-    text-indent: 10px !important;
-    border-color: #ced4da !important;
-  }
+	input {
+		text-indent: 10px !important;
+		border-color: #ced4da !important;
+	}
 }
 
 .toggleBtnStyle {
-  margin-left: -3rem;
+	margin-left: -3rem;
 }
 
 .checkboxStyle label {
-  color: $pryColorVariant !important;
+	color: $pryColorVariant !important;
 }
 
 .signUpStyle {
-  width: 240px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
+	width: 240px !important;
+	height: 55px !important;
+	border-radius: 13px !important;
+	border: 1px solid;
 }
 
 .sign-up-section {
-  transform: translateX(130px);
+	transform: translateX(130px);
 }
 
 // CONTACT US STYLING
 .contactInputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
+	width: 500px !important;
+	height: 55px !important;
+	border-radius: 13px !important;
+	border: 1px solid;
 }
 
 .textAreaStyle {
-  width: 500px !important;
-  // height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
+	width: 500px !important;
+	// height: 55px !important;
+	border-radius: 13px !important;
+	border: 1px solid;
 }
 
 .labelStyle {
-  color: #8cbbac !important;
+	color: #8cbbac !important;
 }
 
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+	color: #8cbbac !important;
 }
 
 .titleStyle {
-  @include H1Font;
-  color: $pryColor !important;
+	@include H1Font;
+	color: $pryColor !important;
 }
 
 .contactStyle {
-  border: 2px solid $pryColor;
-  border-radius: 15px;
-  padding: 50px 15px;
+	border: 2px solid $pryColor;
+	border-radius: 15px;
+	padding: 50px 15px;
 
-  hr {
-    color: $pryColor;
-  }
-  a:link {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    color: black;
-  }
+	hr {
+		color: $pryColor;
+	}
+	a:link {
+		text-decoration: none;
+		color: black;
+	}
+	a:visited {
+		color: black;
+	}
 }
+
 .colorStyle h5 {
-  color: red !important;
+	color: red !important;
 }
 
 @media screen and (max-width: 600px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
+	.colorStyle h5 {
+		color: rgb(17, 0, 255) !important;
+	}
 }
 
 @media screen and (max-width: 900px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
+	.colorStyle h5 {
+		color: rgb(17, 0, 255) !important;
+	}
 
-  // .contactStyle {
-  //   display: flex;
-  //   flex-direction: column-reverse;
-  //   overflow: hidden;
-  // }
+	// .contactStyle {
+	//   display: flex;
+	//   flex-direction: column-reverse;
+	//   overflow: hidden;
+	// }
 }
 
 @media screen and (max-width: 687px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
+	.inputFormStyle {
+		width: 100% !important;
+	}
 
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
+	.contactInputFormStyle {
+		width: 100% !important;
+	}
 
-  .textAreaStyle {
-    width: 100% !important;
-  }
+	.textAreaStyle {
+		width: 100% !important;
+	}
 
-  .signUpNavStyle {
-    width: 100% !important;
-  }
+	.signUpNavStyle {
+		width: 100% !important;
+	}
 
-  .signUpStyle {
-    width: 80% !important;
-  }
+	.signUpStyle {
+		width: 80% !important;
+	}
 
-  .sign-up-section {
-    transform: translate(50px, -30px);
-  }
+	.sign-up-section {
+		transform: translate(50px, -30px);
+	}
 }
 
 @media screen and (max-width: 280px) {
-  .contactStyle {
-    width: 70% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
+	.contactStyle {
+		width: 70% !important;
+		border-radius: 5px 0 0 5px !important;
+	}
 
-  .textStyle {
-    @include pFont;
-    font-size: 12px !important;
-  }
+	.textStyle {
+		@include pFont;
+		font-size: 12px !important;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
+	.inputFormStyle {
+		width: 100% !important;
+	}
+	.contactInputFormStyle {
+		width: 100% !important;
+	}
 
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .signUpStyle {
-    width: 100% !important;
-  }
+	.contactStyle {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.signUpStyle {
+		width: 100% !important;
+	}
 }
 
 @media screen and (max-width: 992px) {
-  .signUpStyle {
-    width: 100% !important;
-    max-width: 500px !important;
-  }
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+	.signUpStyle {
+		width: 100% !important;
+		max-width: 500px !important;
+	}
+	.inputFormStyle {
+		width: 100% !important;
+	}
+	.contactStyle {
+		display: flex;
+		flex-direction: column-reverse;
+	}
 }
 
 @media screen and (max-width: 1023px) {
-  // .inputFormStyle {
-  //   width: 80% !important;
-  // }
+	// .inputFormStyle {
+	//   width: 80% !important;
+	// }
 
-  // .contactInputFormStyle {
-  //   width: 100% !important;
-  // }
+	// .contactInputFormStyle {
+	//   width: 100% !important;
+	// }
 
-  // .textAreaStyle {
-  //   width: 100% !important;
-  // }
+	// .textAreaStyle {
+	//   width: 100% !important;
+	// }
 }

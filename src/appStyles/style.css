@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font: inherit;
   box-sizing: border-box;
   font-family: "roboto", open Sans;
 }
@@ -17,50 +18,142 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.SignInBtn {
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem !important;
+  line-height: 1.6;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem !important;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem !important;
+  line-height: 3.56rem;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.5rem !important;
+  line-height: 2.625rem;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+}
+
+p {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-weight: 700 !important;
-  width: 400px;
-  height: 44px;
-  background-color: #4d957e !important;
+}
+
+.mutedFont {
+  font-family: "Open Sans";
+  font-size: 0.5rem;
+}
+
+.notificationFont {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.userNavFont {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
 }
 
 .all-btn:hover {
   background-color: #006747 !important;
 }
 
-.SignUpBtn {
+.GeneralBtnStyle1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.96rem;
+  letter-spacing: 0.08em;
+  background-color: #4d957e !important;
+}
+
+.GeneralBtnStyle2 {
+  background-color: #006747 !important;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-weight: 700 !important;
-  background-color: #4d957e !important;
-  width: 230px;
-  height: 42px;
 }
 
-.SignInBtn2 {
-  width: 137px;
-  height: 40px;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 700 !important;
-  background-color: #4d957e !important;
-}
-
-.GoogleSignInBtn {
+.GoogleAuthBtn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -70,22 +163,6 @@ body::-webkit-scrollbar {
   color: #4b4453 !important;
   background-color: inherit !important;
   border: 1px solid #4d957e !important;
-  width: 400px;
-  height: 44px;
-}
-
-.GoogleSignUpBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #4b4453 !important;
-  background-color: inherit !important;
-  border: 1px solid #4d957e !important;
-  width: 230px;
-  height: 42px;
 }
 
 .SignUpGroup {
@@ -95,9 +172,6 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 14px !important;
-  width: 186px;
-  height: 46px;
   background-color: inherit !important;
   color: #006747 !important;
   border: 1px solid #4d957e !important;
@@ -109,272 +183,13 @@ body::-webkit-scrollbar {
   color: white !important;
 }
 
-.getStarted {
-  width: 228px;
-  height: 60px;
-  background-color: #006747 !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-  font-size: 25px !important;
-}
-
-.edit-profile-btn {
-  width: 106px;
-  height: 31px;
-  background-color: #4d957e !important;
-  border-radius: 5px !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500 !important;
-}
-
-.edit-ticket-btn {
-  width: 250px;
-  height: 50px;
-  background-color: #4d957e !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em;
-}
-
-.start-transaction-btn {
-  width: 323px;
-  height: 60px;
-  background-color: #4d957e !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-.new-transaction-btn {
-  width: 215px;
-  height: 50px;
-  background-color: #4d957e !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-.confirm-delivery-btn {
-  width: 180px;
-  height: 50px;
-  background-color: #006747 !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-
-.i-agree-btn {
-  width: 170px;
-  height: 50px;
-  background-color: #4d957e !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-  font-weight: 500 !important;
-  letter-spacing: 0.08em;
-}
-
-@media screen and (max-width: 540px) {
-  .SignInBtn,
-.GoogleSignInBtn {
-    width: 80%;
-  }
-  .new-transaction-btn {
-    width: 136px;
-    height: 36px;
-    font-size: 12px !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .SignUpGroup {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .SignUpGroup {
-    width: 65%;
-  }
-}
-.ResolveBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
-.BuyersStatementBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
-  background-color: #006747 !important;
-}
-
-.SellersStatementBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 170px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
-.BuyersFaultBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 160px;
-  height: 47px;
-  background-color: #4d957e !important;
-}
-
-.InitiateDisputeBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 300 !important;
-  width: 150px;
-  height: 50px;
-  background-color: #006747 !important;
-}
-
-.DropConflictBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 300 !important;
-  width: 150px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
-.SubmitBtn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 150px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
 .ScrollUpBtnStyle {
   border: 2px solid black !important;
   border-radius: 20px;
 }
 
-.PrevioustBtnStyle {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 300 !important;
-  width: 100px;
-  height: 44px;
-  background-color: #4d957e !important;
-}
-
-.BtnNextTextStyle {
-  margin-left: 11px;
-}
-
-.BtnPrevTexttStyle {
-  margin-right: 12px;
-}
-
-.BackBtnStyle {
-  margin-left: 1px;
-}
-
-.ViewMoreBtnStyle {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 300 !important;
-  width: 120px;
-  height: 40px;
-  background-color: #4d957e !important;
-}
-
-.LearnMoreBtnStyle {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 140px;
-  height: 49px;
-  background-color: #4d957e !important;
-}
-
-.ViewComplaintBtnStyle {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-weight: 600 !important;
-  width: 160px;
-  height: 40px;
-  background-color: #4d957e !important;
-}
-
 .CalendarBtnStyle {
   font-weight: 200 !important;
-  width: 210px;
-  height: 40px;
   color: #4b4453 !important;
   background-color: #e5f0ed !important;
 }
@@ -386,16 +201,11 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-weight: 200 !important;
-  width: 120px;
-  height: 50px;
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
 .FilteBtnStyle {
   font-weight: 200 !important;
-  width: 220px;
-  height: 43px;
   color: #4b4453 !important;
   background-color: #e5f0ed !important;
 }
@@ -404,7 +214,7 @@ body::-webkit-scrollbar {
   border: 1px solid #006747 !important;
   padding: 16px 20px;
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
   color: hsl(0deg, 0%, 100%);
@@ -419,7 +229,7 @@ body::-webkit-scrollbar {
 
 .accordion-button {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   box-shadow: none !important;
   font-size: 18px !important;
@@ -434,7 +244,7 @@ body::-webkit-scrollbar {
 
 .why-choose-us-card-head {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   color: #006747 !important;
 }
@@ -446,7 +256,6 @@ body::-webkit-scrollbar {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  font-size: 13.5px !important;
 }
 
 .transaction-card,
@@ -461,7 +270,7 @@ body::-webkit-scrollbar {
 }
 .escrow-terms-condition h2 {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -487,14 +296,14 @@ body::-webkit-scrollbar {
 }
 .payment-gateway-card h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 2.375rem;
+  font-size: 2rem !important;
   line-height: 3.56rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 .payment-gateway-card h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -509,14 +318,14 @@ body::-webkit-scrollbar {
 }
 .buying-selling-card p {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
   font-size: 25px !important;
 }
 
 .transaction-summary-card h2 {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -528,7 +337,7 @@ body::-webkit-scrollbar {
 }
 .transaction-summary-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   font-weight: 500;
 }
@@ -556,7 +365,7 @@ body::-webkit-scrollbar {
 }
 .initiate-transaction-card p {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
 }
 
@@ -567,7 +376,7 @@ body::-webkit-scrollbar {
 }
 .individual-transaction-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   font-weight: 500;
   color: rgba(75, 68, 83, 0.5) !important;
@@ -601,7 +410,7 @@ body::-webkit-scrollbar {
 }
 .update-cards p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
 }
@@ -610,13 +419,11 @@ body::-webkit-scrollbar {
   border: 1px solid none;
   border-radius: 10px;
   box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 333px;
-  height: 150px;
 }
 
 .conflicts-count {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
   font-weight: 400 !important;
@@ -624,7 +431,7 @@ body::-webkit-scrollbar {
 
 .conflicts-type {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   font-weight: 500 !important;
   text-transform: uppercase;
@@ -713,7 +520,7 @@ body::-webkit-scrollbar {
 }
 .issues-card h6 {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -750,12 +557,12 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 687px) {
   .faq-head {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
   }
   .accordion-button {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
     box-shadow: none !important;
     font-size: 14px !important;
@@ -793,13 +600,13 @@ body::-webkit-scrollbar {
   }
   .payment-gateway-card h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.3125rem;
+    font-size: 1rem;
     line-height: 1.96rem;
     letter-spacing: 0.08em;
   }
   .payment-gateway-card h4 {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
   }
   .buying-selling-card {
@@ -815,7 +622,7 @@ body::-webkit-scrollbar {
   }
   .transaction-summary-card h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
   }
   .transaction-summary-card .header-text {
@@ -859,7 +666,7 @@ body::-webkit-scrollbar {
   }
   .update-cards p {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
   }
   .individual-transaction-image {
@@ -881,7 +688,7 @@ body::-webkit-scrollbar {
   }
   .transaction-summary-card h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.3125rem;
+    font-size: 1rem;
     line-height: 1.96rem;
     letter-spacing: 0.08em;
   }
@@ -902,6 +709,11 @@ body::-webkit-scrollbar {
     transform: translateX(90px);
   }
 }
+.ConflictIssuesCard-body {
+  background-color: #006747 !important;
+  color: #fff;
+}
+
 .BgColor {
   background-color: #459079;
 }
@@ -925,7 +737,7 @@ body::-webkit-scrollbar {
 .Email,
 .Password {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
   color: rgba(75, 68, 83, 0.8);
@@ -934,6 +746,10 @@ body::-webkit-scrollbar {
 }
 
 .Email input::-moz-placeholder, .Password input::-moz-placeholder {
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
+.Email input:-ms-input-placeholder, .Password input:-ms-input-placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -946,7 +762,7 @@ body::-webkit-scrollbar {
 .AccountName label,
 .BankName label {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08em;
@@ -959,6 +775,13 @@ body::-webkit-scrollbar {
 }
 
 .AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.AccountNum input:-ms-input-placeholder, .AccountName input:-ms-input-placeholder, .BankName input:-ms-input-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
@@ -979,7 +802,7 @@ body::-webkit-scrollbar {
 .Phone label,
 .Pass label {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08em;
@@ -993,6 +816,13 @@ body::-webkit-scrollbar {
 }
 
 .Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+
+.Name input:-ms-input-placeholder, .UpdateEmail input:-ms-input-placeholder, .Phone input:-ms-input-placeholder, .Pass input:-ms-input-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
@@ -1022,7 +852,7 @@ body::-webkit-scrollbar {
 .bank-transfer-form-label {
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   line-height: 1.96rem;
   letter-spacing: 0.08em;
   font-size: 18px !important;
@@ -1080,6 +910,17 @@ body::-webkit-scrollbar {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
+.escrow-input-field:-ms-input-placeholder, .escrow-price-field:-ms-input-placeholder, .bank-transfer-input-field:-ms-input-placeholder {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 12px !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+}
+
 .escrow-input-field::placeholder,
 .escrow-price-field::placeholder,
 .bank-transfer-input-field::placeholder {
@@ -1099,14 +940,14 @@ body::-webkit-scrollbar {
 
 .confirm-delivery-head {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
   font-weight: 500 !important;
 }
 
 .confirm-delivery-pText {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   color: rgba(75, 68, 83, 0.5) !important;
 }
@@ -1157,13 +998,13 @@ body::-webkit-scrollbar {
   .escrow-form-label,
 .bank-transfer-form-label {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     line-height: 1.5rem;
     font-size: 14px !important;
   }
   .confirm-delivery-head {
     font-family: "Roboto", sans-serif;
-    font-size: 1.3125rem;
+    font-size: 1rem;
     line-height: 1.96rem;
     letter-spacing: 0.08em;
   }
@@ -1276,14 +1117,18 @@ body::-webkit-scrollbar {
   color: #8cbbac !important;
 }
 
+.labelStyle:-ms-input-placeholder {
+  color: #8cbbac !important;
+}
+
 .labelStyle::placeholder {
   color: #8cbbac !important;
 }
 
 .titleStyle {
   font-family: "Roboto", sans-serif;
-  font-size: 4.1875rem;
-  line-height: 6.28rem;
+  font-size: 3rem !important;
+  line-height: 1.6;
   color: #006747 !important;
 }
 
@@ -1432,7 +1277,7 @@ body::-webkit-scrollbar {
 }
 .Modal-Btn .ModalTitle {
   font-family: "Roboto", sans-serif !important;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
   line-height: 2.625rem;
 }
 
@@ -1550,7 +1395,7 @@ body::-webkit-scrollbar {
 
 .SideNavItem {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer !important;
@@ -1798,5 +1643,4 @@ body::-webkit-scrollbar {
 
 .TableRowColor {
   background-color: #66a491;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

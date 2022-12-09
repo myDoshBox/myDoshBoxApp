@@ -1,4 +1,5 @@
-@use "./reset" as *;
+@use "./generalStyles/reset" as *;
+@use "./generalStyles/fonts" as *;
 
 @use "./componentsStyles/buttonStyles";
 @use "./componentsStyles/cardStyles";
