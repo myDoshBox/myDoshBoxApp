@@ -18,7 +18,7 @@ const HeroSection = () => {
 					<h1>We are a team of creators and innovators</h1>
 					<p>
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-						modi ratione obcaecati ullam harum ut repellat sit ex iste ipsam.
+						modi ratione obcaecati ullam harum ut repellat sit ex iste ipsamhh.
 					</p>
 				</div>
 				<div className="col-md-6 col-sm-12">
