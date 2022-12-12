@@ -540,27 +540,6 @@ th {
   background: #006747 !important;
 }
 
-.faq-content {
-  padding: 5px 20px !important;
-}
-
-.faq-card .accordion-item {
-  border-top: 1px solid !important;
-}
-.faq-card .accordion-button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  box-shadow: none !important;
-  font-size: 1rem !important;
-  font-weight: 500;
-  padding: 18px 22px !important;
-}
-.faq-card .accordion-button:not(.collapsed) {
-  background-color: hsl(0deg, 0%, 100%) !important;
-  color: #4b4453 !important;
-}
-
 .why-choose-us-card-head {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
@@ -1034,33 +1013,12 @@ th {
 }
 
 .coreValueStyle {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 30%;
   background-color: #006747 !important;
-  color: white;
-  border-radius: 10px;
-}
-
-.coreValueStyle h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  font-size: 1.5625rem;
-}
-
-.coreValueStyle p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: white !important;
+  width: 24rem;
 }
 
 .teamValueStyle {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
   background-color: #e5f0ed !important;
   color: rgb(73, 73, 73);
   border: 2px solid #006747;
@@ -1068,9 +1026,7 @@ th {
 
 .teamValueStyle2 {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
   background-color: #006747 !important;
-  color: rgb(255, 255, 255);
   border: 2px solid #006747;
 }
 
@@ -1089,17 +1045,6 @@ th {
   height: 16.5625rem;
 }
 
-@media screen and (max-width: 687px) {
-  .smallScreen {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    display: none;
-  }
-}
 .BgColor {
   background-color: #459079;
 }
