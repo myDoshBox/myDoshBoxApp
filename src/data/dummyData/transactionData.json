@@ -1,0 +1,43 @@
+{
+	"recent_transactions": [
+		{
+			"trans_id": 1,
+			"buyer_name": "Jason",
+			"seller_name": "Ada",
+			"products": "cream",
+			"date": "2/04/23",
+			"status": "in progress",
+			"view": "......."
+		},
+
+		{
+			"trans_id": 2,
+			"buyer_name": "Junior",
+			"seller_name": "Sade",
+			"products": "Chair",
+			"date": "2/01/23",
+			"status": "completed",
+			"view": "......."
+		},
+
+		{
+			"trans_id": 3,
+			"buyer_name": "Seyi",
+			"seller_name": "Chris",
+			"products": "Table",
+			"date": "2/03/23",
+			"status": "in progress",
+			"view": "......."
+		},
+
+		{
+			"trans_id": 4,
+			"buyer_name": "Edwards",
+			"seller_name": "Bertha",
+			"products": "furniture",
+			"date": "2/04/24",
+			"status": "completed",
+			"view": "......."
+		}
+	]
+}

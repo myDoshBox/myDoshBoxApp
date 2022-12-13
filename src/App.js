@@ -6,12 +6,14 @@ import {
 	OpenConflictsCard,
 } from "./components/CardComponents/ConflictIssuesCards";
 import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
+import TransactionHistory from "./components/TableComponents/TransactionHistory";
 import About from "./pages/About";
+import Neutral_dashboard from "./pages/neutral_dashboard";
 
 function App() {
 	return (
 		<>
-			<About />
+			<Neutral_dashboard />
 		</>
 	);
 }
