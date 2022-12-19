@@ -68,7 +68,6 @@ picture {
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
-  line-height: 1.6;
 }
 
 h2 {
@@ -79,26 +78,21 @@ h2 {
 h3 {
   font-family: "Roboto", sans-serif;
   font-size: 2rem !important;
-  line-height: 3.56rem;
 }
 
 h4 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
 }
 
 h5 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
 }
 
 h6 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
 }
 
 p {
@@ -138,8 +132,6 @@ p {
 .GeneralBtnStyle1 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   background-color: #4d957e !important;
 }
 
@@ -231,8 +223,6 @@ p {
 .LearnMoreCardWrapper .KnowMore h5 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-weight: 700;
 }
 .LearnMoreCardWrapper .KnowMore p {
@@ -251,15 +241,6 @@ p {
   width: 35%;
 }
 
-@media screen and (min-width: 1023px) {
-  .KnowMore {
-    width: 40%;
-  }
-  .LearnMoreCardWrapper {
-    height: 11rem;
-    width: 41rem;
-  }
-}
 .NotificationCardWrapper {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.594rem;
@@ -290,7 +271,6 @@ p {
 .NotificationCardDetails h3 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
   color: #4b4453;
@@ -308,41 +288,34 @@ p {
 .NotificationCardDetails button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 700;
   text-align: justify;
   letter-spacing: 0.08rem;
   color: #006747;
 }
 
-@media screen and (max-width: 991px) {
-  .NotificationCardHeader button {
-    font-size: 0.75rem;
-  }
-  .NotificationCardHeader h1 {
-    font-size: 1.31rem !important;
-  }
-  .NotificationCardDetails {
-    width: 100% !important;
-  }
-  .NotificationCardDetails p {
-    font-size: 0.75rem !important;
-    width: unset;
-    line-height: 16px;
-  }
-  .NotificationCardDetails img {
-    width: 1.8rem;
-  }
-  .NotificationCardDetails small {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300 !important;
-    font-size: 0.5rem !important;
-    letter-spacing: 0.04rem !important;
-  }
-  .NotificationCardBackBtn {
-    color: #006747 !important;
-  }
+.NotificationCardDetails {
+  width: 100% !important;
 }
+.NotificationCardDetails p {
+  font-size: 0.75rem !important;
+  width: unset;
+  line-height: 16px;
+}
+.NotificationCardDetails img {
+  width: 1.8rem;
+}
+.NotificationCardDetails small {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300 !important;
+  font-size: 0.5rem !important;
+  letter-spacing: 0.04rem !important;
+}
+
+.NotificationCardBackBtn {
+  color: #006747 !important;
+}
+
 .AnalyticsNewUsersCard {
   width: 13.7rem;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
@@ -350,7 +323,6 @@ p {
 .AnalyticsNewUsersCard h3 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
 }
 .AnalyticsNewUsersCard p {
   font-family: "Open Sans" !important;
@@ -418,7 +390,6 @@ p {
 .MiniUsersCard p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
 }
 .MiniUsersCard tr {
@@ -485,30 +456,16 @@ th {
   color: hsl(0deg, 0%, 100%) !important;
 }
 
-@media screen and (max-width: 767px) {
-  .AllUsersCard td {
-    font-size: xx-small !important;
-  }
-  .AllUsersCard th {
-    font-size: x-small !important;
-  }
+.ConflictIssuesCard-body {
+  background-color: #006747 !important;
 }
-@media screen and (min-width: 992px) {
-  .lg-view {
-    display: revert !important;
-  }
-  .UserProfileCard img {
-    width: 20rem;
-    height: 20rem;
-  }
-}
+
 .UserProfileCard {
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
 .UserProfileCard p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-size: small !important;
   font-weight: 700 !important;
 }
@@ -532,8 +489,6 @@ th {
   padding: 16px 20px !important;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   color: hsl(0deg, 0%, 100%);
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -550,7 +505,6 @@ th {
 .faq-card .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   box-shadow: none !important;
   font-size: 1rem !important;
   font-weight: 500;
@@ -564,7 +518,6 @@ th {
 .why-choose-us-card-head {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #006747 !important;
 }
 
@@ -578,20 +531,12 @@ th {
   font-size: 0.84375rem !important;
 }
 
-.transaction-card,
-.all-conflicts-card {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border: 1px solid none !important;
-  border-radius: 10px;
-}
-
 .escrow-terms-condition {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .escrow-terms-condition h2 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -616,15 +561,12 @@ th {
 .payment-gateway-card h2 {
   font-family: "Roboto", sans-serif;
   font-size: 2rem !important;
-  line-height: 3.56rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 .payment-gateway-card h4 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -638,14 +580,12 @@ th {
 .buying-selling-card p {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-size: 1.5625rem !important;
 }
 
 .transaction-summary-card h2 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -657,7 +597,6 @@ th {
 .transaction-summary-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500;
 }
 .transaction-summary-card .transaction-summary-info-text {
@@ -674,20 +613,6 @@ th {
   height: 300px;
 }
 
-.initiate-transaction-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 311.14px;
-  height: 145.85px !important;
-  display: inline !important;
-}
-.initiate-transaction-card p {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  line-height: 2.625rem;
-}
-
 .individual-transaction-card {
   border: 1px solid none;
   border-radius: 10px;
@@ -696,7 +621,6 @@ th {
 .individual-transaction-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500;
   color: rgba(75, 68, 83, 0.5) !important;
 }
@@ -715,49 +639,18 @@ th {
   height: 379.79px;
 }
 
-.update-cards {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 292px;
-  height: 136.88px;
-}
-.update-cards p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-}
-
-.conflicts-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-}
-
 .conflicts-count {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-weight: 400 !important;
 }
 
 .conflicts-type {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500 !important;
-  text-transform: uppercase;
 }
 
-.mini-disputes-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 389px;
-  height: 326px;
-}
 .mini-disputes-card .nav-pills .nav-link.active {
   color: #4b4453;
   border-bottom: 2.91696px solid #4b4453;
@@ -779,9 +672,6 @@ th {
 }
 .mini-disputes-card .disputes-view-btn {
   background: rgba(0, 103, 71, 0.1);
-  border-radius: 4.86161px;
-  width: 76.81px;
-  height: 27.22px;
   font-size: 12px !important;
 }
 .mini-disputes-card .disputes-view-btn:hover,
@@ -792,15 +682,12 @@ th {
 }
 .mini-disputes-card .disputes-sort-btn {
   background: rgba(0, 103, 71, 0.1) !important;
-  width: 70px;
-  height: 36.95px;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  border: none;
 }
 .mini-disputes-card .dropdown-menu.show {
   background: #e5f0ec !important;
@@ -835,271 +722,10 @@ th {
 .issues-card h6 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.06em;
 }
 
-@media screen and (max-width: 300px) {
-  .payment-gateway-image {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  .payment-gateway-card p {
-    font-size: 0.5rem !important;
-    line-height: 0.75rem !important;
-  }
-  .payment-gateway-card h2 {
-    font-size: 1rem !important;
-  }
-  .payment-gateway-card h4 {
-    font-size: 0.75rem !important;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-  }
-  .transaction-images {
-    height: 100px !important;
-  }
-  .transaction-summary-info-title {
-    font-size: 0.75rem !important;
-    font-weight: 400;
-  }
-  .transaction-summary-info-text {
-    font-size: 0.5rem !important;
-  }
-}
-@media screen and (max-width: 687px) {
-  .faq-head {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .faq-card .accordion-button {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-    box-shadow: none !important;
-    font-size: 0.875rem !important;
-    padding: 16px 20px !important;
-  }
-  .contact-card {
-    padding: 30px 15px;
-  }
-  .why-choose-us-card-head {
-    font-size: 0.6875rem !important;
-    line-height: 15px !important;
-  }
-  .why-choose-us-card-text {
-    font-size: 0.5rem !important;
-    line-height: 12px;
-  }
-  .transaction-table {
-    font-size: 10px !important;
-  }
-  .escrow-terms-condition {
-    font-size: 0.75rem !important;
-  }
-  .escrow-terms-condition h2 {
-    font-size: 1rem !important;
-    line-height: 24px !important;
-    text-align: center;
-  }
-  .payment-gateway-image {
-    width: 20vw;
-  }
-  .payment-gateway-card p {
-    font-size: 0.75rem !important;
-    line-height: 20px !important;
-  }
-  .payment-gateway-card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
-  .payment-gateway-card h4 {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .buying-selling-card {
-    width: 80%;
-    height: 160px;
-  }
-  .buying-selling-card p {
-    font-size: 1rem !important;
-  }
-  .buying-selling-card svg {
-    width: 45.5px !important;
-    height: 45.5px !important;
-  }
-  .transaction-summary-card h2 {
-    font-size: 1.25rem !important;
-  }
-  .transaction-summary-card .header-text {
-    font-size: 0.75rem;
-    font-family: "Open Sans";
-  }
-  .transaction-summary-card .transaction-summary-info-title {
-    font-size: 0.75rem !important;
-    font-weight: 400;
-  }
-  .transaction-summary-card .transaction-summary-info-text {
-    font-size: 10px !important;
-  }
-  .transaction-images {
-    width: 90%;
-    height: 150px !important;
-  }
-  .initiate-transaction-card {
-    width: 50%;
-    height: 75px;
-  }
-  .initiate-transaction-card p {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-  }
-  .update-cards {
-    width: 90%;
-    height: 60px;
-    padding: 10px 0 !important;
-    border: 2px solid rgba(0, 103, 71, 0.3);
-    border-radius: 5px;
-    box-shadow: none;
-  }
-  .update-cards svg {
-    width: 24px;
-    height: 24px;
-  }
-  .update-cards p {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .individual-transaction-image {
-    width: 100%;
-    height: 187px;
-  }
-  .transaction-summary-info-title {
-    font-size: 12px !important;
-    font-weight: 400;
-  }
-  .transaction-summary-info-text {
-    font-size: 10px !important;
-  }
-}
-@media screen and (max-width: 991px) {
-  .transaction-images {
-    width: 90%;
-    height: 200px;
-  }
-  .transaction-summary-card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
-}
-@media screen and (min-width: 992px) {
-  .transaction-summary-info-text {
-    transform: translateX(-70px);
-  }
-  .transaction-summary-info-title {
-    transform: translateX(70px);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .transaction-summary-info-text {
-    transform: translateX(-90px);
-  }
-  .transaction-summary-info-title {
-    transform: translateX(90px);
-  }
-}
-.ConflictIssuesCard-body {
-  background-color: #006747 !important;
-  color: #fff;
-}
-
-.colorTextStyle {
-  color: rgb(165, 165, 165);
-}
-
-.textStyle {
-  color: rgb(19, 19, 19);
-}
-
-.coreValueStyle {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 30%;
-  background-color: #006747 !important;
-  color: white;
-  border-radius: 10px;
-}
-
-.coreValueStyle h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  font-size: 1.5625rem;
-}
-
-.coreValueStyle p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: white !important;
-}
-
-.teamValueStyle {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
-  background-color: #e5f0ed !important;
-  color: rgb(73, 73, 73);
-  border: 2px solid #006747;
-}
-
-.teamValueStyle2 {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
-  background-color: #006747 !important;
-  color: rgb(255, 255, 255);
-  border: 2px solid #006747;
-}
-
-.warningStyle {
-  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
-  color: rgba(255, 0, 0, 0.7) !important;
-  background-color: rgba(255, 0, 0, 0.1);
-  width: 100%;
-  max-width: 46.875rem;
-  padding: 1.25rem;
-  font-size: 0.875rem !important;
-}
-
-.aboutImagePix {
-  width: 16.5625rem;
-  height: 16.5625rem;
-}
-
-@media screen and (max-width: 687px) {
-  .smallScreen {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    display: none;
-  }
-}
 .BgColor {
   background-color: #459079;
 }
@@ -1124,8 +750,6 @@ th {
 .Password {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   color: rgba(75, 68, 83, 0.8);
   font-size: 1rem !important;
   font-weight: 700;
@@ -1145,7 +769,6 @@ th {
 .BankName label {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1172,9 +795,6 @@ th {
   color: rgba(75, 68, 83, 0.5);
 }
 
-.UpdateProfileForm {
-  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
-}
 .UpdateProfileForm button {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -1193,7 +813,6 @@ th {
 .UpdateProfileForm p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   font-weight: 700;
 }
@@ -1224,7 +843,6 @@ input[type=color]:focus,
 .Pass label {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08rem;
   font-weight: 700;
@@ -1267,8 +885,6 @@ input[type=color]:focus,
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-size: 1.125rem !important;
 }
 
@@ -1344,14 +960,12 @@ input[type=color]:focus,
 .confirm-delivery-head {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 500 !important;
 }
 
 .confirm-delivery-pText {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -1365,7 +979,7 @@ input[type=color]:focus,
   width: fit-content;
 }
 
-.account-details {
+.account-details .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
@@ -1393,102 +1007,8 @@ input[type=color]:focus,
   font-size: 12px !important;
 }
 
-@media screen and (max-width: 687px) {
-  .total-input {
-    width: 100% !important;
-  }
-  .escrow-input-field {
-    width: 90% !important;
-    margin: 0 15px;
-  }
-  .escrow-card {
-    width: -webkit-max-content !important;
-    width: -moz-max-content !important;
-    width: max-content !important;
-  }
-  .escrow-price-field {
-    width: 75.5% !important;
-  }
-  .escrow-form-label,
-.bank-transfer-form-label {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-    font-size: 0.875rem !important;
-  }
-  .confirm-delivery-head {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
-  .deliver-goods-form {
-    margin: 30px 10px !important;
-    padding: 10px !important;
-  }
-  .account-details {
-    transform: translateX(0) !important;
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 0.75rem !important;
-  }
-}
-@media screen and (max-width: 280px) {
-  .escrow-price-field {
-    width: 68% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .account-details {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 0.75rem !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .total-input {
-    width: 0 !important;
-    transform: translateX(-5px);
-  }
-  .account-details {
-    transform: translateX(30px);
-  }
-}
-@media screen and (max-width: 1023px) {
-  .total-input {
-    width: 70% !important;
-  }
-  .account-details {
-    transform: translateX(10px);
-  }
-}
-@media screen and (min-width: 1025px) {
-  .escrow-price-field {
-    width: 80% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .escrow-form,
-.bank-transfer-form {
-    width: 1041px !important;
-  }
-}
-.inputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
-
 .inputStyle input {
   text-indent: 10px !important;
-  border-color: #ced4da !important;
 }
 
 .toggleBtnStyle {
@@ -1499,13 +1019,6 @@ input[type=color]:focus,
   color: #66a491 !important;
 }
 
-.signUpStyle {
-  width: 240px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
-
 .sign-up-section {
   transform: translateX(130px);
 }
@@ -1514,7 +1027,6 @@ input[type=color]:focus,
   width: 500px !important;
   height: 55px !important;
   border-radius: 13px !important;
-  border: 1px solid;
 }
 
 .textAreaStyle {
@@ -1538,7 +1050,6 @@ input[type=color]:focus,
 .titleStyle {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
-  line-height: 1.6;
   color: #006747 !important;
 }
 
@@ -1562,79 +1073,6 @@ input[type=color]:focus,
   color: red !important;
 }
 
-@media screen and (max-width: 600px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-@media screen and (max-width: 900px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-@media screen and (max-width: 687px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
-  .textAreaStyle {
-    width: 100% !important;
-  }
-  .signUpNavStyle {
-    width: 100% !important;
-  }
-  .signUpStyle {
-    width: 80% !important;
-  }
-  .sign-up-section {
-    transform: translate(50px, -30px);
-  }
-}
-@media screen and (max-width: 280px) {
-  .contactStyle {
-    width: 70% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .textStyle {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 12px !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .signUpStyle {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .signUpStyle {
-    width: 100% !important;
-    max-width: 500px !important;
-  }
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -1688,7 +1126,6 @@ input[type=color]:focus,
 .Modal-Btn .ModalTitle {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
 }
 
 .nav-links {
@@ -1809,7 +1246,6 @@ input[type=color]:focus,
 .SideNavItem {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer !important;
   font-weight: 400;
@@ -2073,7 +1509,6 @@ input[type=color]:focus,
 .PaginationBar a:focus {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-size: 1.3rem !important;
   color: #4b4453;
 }

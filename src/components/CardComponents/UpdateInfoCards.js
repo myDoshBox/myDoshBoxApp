@@ -6,7 +6,7 @@ import {
 // UpdateProfileCard
 export const UpdateProfileCard = () => {
   return (
-    <div className="update-cards d-flex align-items-center p-3  mx-auto mx-md-0">
+    <div className="d-flex align-items-center p-3 ">
       <UpdateProfileIcon width={"60"} height={"60"} className={"ms-3"} />
       <p className="ms-3 mt-2">Update Profile</p>
     </div>
@@ -15,8 +15,8 @@ export const UpdateProfileCard = () => {
 // UpdateBankDetailsCard
 export const UpdateBankDetailsCard = () => {
   return (
-    <div className="update-cards d-flex align-items-center p-3 mx-auto mx-md-0">
-      <ChangeBankIcon width={"60"} height={"60"} className={"ms-3"} />
+    <div className="d-flex  p-3">
+      <ChangeBankIcon width={"60"} height={"60"} />
       <p className="ms-3 mt-2">Change Bank Details</p>
     </div>
   );
