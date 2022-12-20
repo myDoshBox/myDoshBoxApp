@@ -979,7 +979,7 @@ input[type=color]:focus,
   width: fit-content;
 }
 
-.account-details .warningStyle {
+.account-details {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
@@ -1234,12 +1234,9 @@ input[type=color]:focus,
 .SideNav {
   background-color: #006747;
   color: hsl(0deg, 0%, 100%);
-  width: 15rem;
-  height: 100vh !important;
 }
 
 .SideNavLogo {
-  width: 6rem;
   cursor: pointer !important;
 }
 

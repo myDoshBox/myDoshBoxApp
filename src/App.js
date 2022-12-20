@@ -40,6 +40,12 @@ import {
   UpdateBankDetails,
   UserUpdateProfile,
 } from "./components/FormComponents.js/UpdateForms";
+import {
+  UserSidenav,
+  NeutralsSidenav,
+  CustomerCareSidenav,
+  AdminSidenav,
+} from "./components/NavbarComponents/SideNavbar";
 // import { ContactUsCard } from "./components/CardComponents/ContactAndInfoCards";
 // import About from "./pages/About";
 
@@ -129,7 +135,7 @@ function App() {
         <ComplaintForm />
       </div> */}
       // UpdateForm
-      <div className="mt-5">
+      {/* <div className="mt-5">
         <UpdateProfile />
       </div>
       <div className="mt-5">
@@ -140,6 +146,19 @@ function App() {
       </div>
       <div className="mt-5">
         <UserUpdateProfile />
+      </div> */}
+      // NavBarComponents
+      <div className="mt-5">
+        <UserSidenav />
+      </div>
+      <div className="mt-5">
+        <NeutralsSidenav />
+      </div>
+      <div className="mt-5">
+        <CustomerCareSidenav />
+      </div>
+      <div className="mt-5">
+        <AdminSidenav />
       </div>
     </>
   );
