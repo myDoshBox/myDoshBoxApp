@@ -19,8 +19,8 @@ body::-webkit-scrollbar {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,7 +39,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -55,12 +55,12 @@ picture {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -505,6 +505,7 @@ th {
 .faq-card .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
+  line-height: 1.5rem;
   box-shadow: none !important;
   font-size: 1rem !important;
   font-weight: 500;
@@ -726,6 +727,266 @@ th {
   letter-spacing: 0.06em;
 }
 
+@media screen and (max-width: 300px) {
+  .payment-gateway-image {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .payment-gateway-card p {
+    font-size: 0.5rem !important;
+    line-height: 0.75rem !important;
+  }
+  .payment-gateway-card h2 {
+    font-size: 1rem !important;
+  }
+  .payment-gateway-card h4 {
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .transaction-images {
+    height: 100px !important;
+  }
+  .transaction-summary-info-title {
+    font-size: 0.75rem !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 0.5rem !important;
+  }
+}
+@media screen and (max-width: 687px) {
+  .faq-head {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .faq-card .accordion-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+    box-shadow: none !important;
+    font-size: 0.875rem !important;
+    padding: 16px 20px !important;
+  }
+  .contact-card {
+    padding: 30px 15px;
+  }
+  .why-choose-us-card-head {
+    font-size: 0.6875rem !important;
+    line-height: 15px !important;
+  }
+  .why-choose-us-card-text {
+    font-size: 0.5rem !important;
+    line-height: 12px;
+  }
+  .transaction-table {
+    font-size: 10px !important;
+  }
+  .escrow-terms-condition {
+    font-size: 0.75rem !important;
+  }
+  .escrow-terms-condition h2 {
+    font-size: 1rem !important;
+    line-height: 24px !important;
+    text-align: center;
+  }
+  .payment-gateway-image {
+    width: 20vw;
+  }
+  .payment-gateway-card p {
+    font-size: 0.75rem !important;
+    line-height: 20px !important;
+  }
+  .payment-gateway-card h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.96rem;
+    letter-spacing: 0.08em;
+  }
+  .payment-gateway-card h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .buying-selling-card {
+    width: 80%;
+    height: 160px;
+  }
+  .buying-selling-card p {
+    font-size: 1rem !important;
+  }
+  .buying-selling-card svg {
+    width: 45.5px !important;
+    height: 45.5px !important;
+  }
+  .transaction-summary-card h2 {
+    font-size: 1.25rem !important;
+  }
+  .transaction-summary-card .header-text {
+    font-size: 0.75rem;
+    font-family: "Open Sans";
+  }
+  .transaction-summary-card .transaction-summary-info-title {
+    font-size: 0.75rem !important;
+    font-weight: 400;
+  }
+  .transaction-summary-card .transaction-summary-info-text {
+    font-size: 10px !important;
+  }
+  .transaction-images {
+    width: 90%;
+    height: 150px !important;
+  }
+  .initiate-transaction-card {
+    width: 50%;
+    height: 75px;
+  }
+  .initiate-transaction-card p {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+  }
+  .update-cards {
+    width: 90%;
+    height: 60px;
+    padding: 10px 0 !important;
+    border: 2px solid rgba(0, 103, 71, 0.3);
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  .update-cards svg {
+    width: 24px;
+    height: 24px;
+  }
+  .update-cards p {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .individual-transaction-image {
+    width: 100%;
+    height: 187px;
+  }
+  .transaction-summary-info-title {
+    font-size: 12px !important;
+    font-weight: 400;
+  }
+  .transaction-summary-info-text {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .transaction-images {
+    width: 90%;
+    height: 200px;
+  }
+  .transaction-summary-card h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.96rem;
+    letter-spacing: 0.08em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .transaction-summary-info-text {
+    transform: translateX(-70px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(70px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .transaction-summary-info-text {
+    transform: translateX(-90px);
+  }
+  .transaction-summary-info-title {
+    transform: translateX(90px);
+  }
+}
+.ConflictIssuesCard-body {
+  background-color: #006747 !important;
+  color: #fff;
+}
+
+.colorTextStyle {
+  color: rgb(165, 165, 165);
+}
+
+.textStyle {
+  color: rgb(19, 19, 19);
+}
+
+.coreValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  background-color: #006747 !important;
+  color: white;
+  border-radius: 10px;
+}
+
+.coreValueStyle h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.5rem;
+  font-size: 1.5625rem;
+}
+
+.coreValueStyle p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: white !important;
+}
+
+.teamValueStyle {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: #e5f0ed !important;
+  color: rgb(73, 73, 73);
+  border: 2px solid #006747;
+}
+
+.teamValueStyle2 {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  background-color: #006747 !important;
+  color: rgb(255, 255, 255);
+  border: 2px solid #006747;
+}
+
+.warningStyle {
+  border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+  background-color: rgba(255, 0, 0, 0.1);
+  width: 100%;
+  max-width: 46.875rem;
+  padding: 1.25rem;
+  font-size: 0.875rem !important;
+}
+
+.aboutImagePix {
+  width: 16.5625rem;
+  height: 16.5625rem;
+}
+
+@media screen and (max-width: 687px) {
+  .smallScreen {
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: #4b4453;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    display: none;
+  }
+}
 .BgColor {
   background-color: #459079;
 }
@@ -755,7 +1016,8 @@ th {
   font-weight: 700;
 }
 
-.Email input::-moz-placeholder, .Password input::-moz-placeholder {
+.Email input::-moz-placeholder,
+.Password input::-moz-placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -779,7 +1041,9 @@ th {
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
+.AccountNum input::-moz-placeholder,
+.AccountName input::-moz-placeholder,
+.BankName input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
@@ -818,20 +1082,20 @@ th {
 }
 
 textarea:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=time]:focus,
-input[type=week]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=color]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: rgba(75, 68, 83, 0.5);
   outline: 0 none;
@@ -854,7 +1118,10 @@ input[type=color]:focus,
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
+.Name input::-moz-placeholder,
+.UpdateEmail input::-moz-placeholder,
+.Phone input::-moz-placeholder,
+.Pass input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04rem !important;
@@ -929,7 +1196,9 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+.escrow-input-field::-moz-placeholder,
+.escrow-price-field::-moz-placeholder,
+.bank-transfer-input-field::-moz-placeholder {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -1410,14 +1679,14 @@ input[type=color]:focus,
 
 @media screen and (max-width: 687px) {
   .completed,
-.awaiting,
-.canceled,
-.dispute,
-.pending-confirmation,
-.pending-payment,
-.refunded,
-.resolved,
-.unresolved {
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
     width: 80px !important;
     height: 20px !important;
     font-size: 0.4375rem !important;
@@ -1452,11 +1721,11 @@ input[type=color]:focus,
 
 @media screen and (max-width: 290px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.375px !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.375px !important;
   }
 }
@@ -1470,11 +1739,11 @@ input[type=color]:focus,
 }
 @media screen and (min-width: 688px) and (max-width: 992px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.75rem !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.75rem !important;
   }
 }
