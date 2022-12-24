@@ -1,110 +1,110 @@
 @use "./color" as *;
 
 @mixin H1Font {
-	font-family: "Roboto", sans-serif;
-	font-size: 3rem !important;
-	// line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem !important;
+  // line-height: 1.6;
 }
 
 @mixin H2Font {
-	font-family: "Roboto", sans-serif;
-	font-size: 2.5rem !important;
-	// line-height: 4.78;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem !important;
+  // line-height: 4.78;
 }
 
 @mixin H3Font {
-	font-family: "Roboto", sans-serif;
-	font-size: 2rem !important;
-	line-height: 3.56rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem !important;
+  // line-height: 3.56rem;
 }
 
 @mixin H4Font {
-	font-family: "Roboto", sans-serif !important;
-	font-size: 1.5rem !important;
-	line-height: 2.625rem;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.5rem !important;
+  // line-height: 2.625rem;
 }
 
 @mixin H5Font {
-	font-family: "Roboto", sans-serif;
-	font-size: 1rem;
-	line-height: 1.96rem;
-	letter-spacing: 0.08em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  // line-height: 1.96rem;
+  // letter-spacing: 0.08em;
 }
 
 @mixin H6Font {
-	font-family: "Roboto", sans-serif;
-	font-size: 0.5rem;
-	line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  // line-height: 1.5rem;
 }
 
 @mixin pFont {
-	font-family: "Open Sans" !important;
-	font-weight: 400 !important;
-	font-size: 1rem !important;
-	color: $bodyTextColor;
-	line-height: 1.5rem;
-	letter-spacing: 0rem;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
 }
 
 @mixin mutedFont {
-	font-family: "Open Sans";
-	font-size: 0.5rem;
-	// line-height: 0.5rem;
-	// letter-spacing: 4px;
+  font-family: "Open Sans";
+  font-size: 0.5rem;
+  // line-height: 0.5rem;
+  // letter-spacing: 4px;
 }
 
 @mixin notificationFont {
-	font-family: "Open Sans";
-	font-size: 0.875rem;
-	color: $bodyTextColor;
-	line-height: 1.5rem;
-	letter-spacing: 0rem;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
 }
 
 @mixin userNavFont {
-	font-family: "Open Sans";
-	font-size: 0.875rem;
-	color: $bodyTextColor;
-	line-height: 1.5rem;
-	letter-spacing: 0rem;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  color: $bodyTextColor;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
 }
 
 h1 {
-	@include H1Font;
+  @include H1Font;
 }
 
 h2 {
-	@include H2Font;
+  @include H2Font;
 }
 
 h3 {
-	@include H3Font;
+  @include H3Font;
 }
 
 h4 {
-	@include H4Font;
+  @include H4Font;
 }
 
 h5 {
-	@include H5Font;
+  @include H5Font;
 }
 
 h6 {
-	@include H6Font;
+  @include H6Font;
 }
 
 p {
-	@include pFont;
+  @include pFont;
 }
 
 .mutedFont {
-	@include mutedFont;
+  @include mutedFont;
 }
 
 .notificationFont {
-	@include notificationFont;
+  @include notificationFont;
 }
 
 .userNavFont {
-	@include userNavFont;
+  @include userNavFont;
 }

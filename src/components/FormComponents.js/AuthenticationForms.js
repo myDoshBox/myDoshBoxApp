@@ -35,8 +35,8 @@ export const SignInForm = () => {
       </div>
       <Form>
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="align-items-center">
               <Form.Control
                 type="email"
                 placeholder="Email"
@@ -44,17 +44,19 @@ export const SignInForm = () => {
                 name="email"
                 value={email}
                 onChange={handleChangeEmail}
-                className=" inputFormStyle mb-1"
+                className="rounded-3  border mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group>
-          <div className="row inputStyle">
-            <div className="col-sm-12 col-md-8 col-lg-6">
+          <div className="inputStyle">
+            <div className="">
               <input
-                className=" inputFormStyle"
+                className="rounded-3 border "
+                style={{ width: "31.25rem", height: "3.4rem" }}
                 id="password"
                 type={passwordToggle ? "text" : "password"}
                 placeholder="Password"
@@ -90,10 +92,10 @@ export const SignInForm = () => {
           />
         </Form.Group>
 
-        <div className="pb-3 mt- ">
+        <div className="pb-3">
           <SignInButton />
         </div>
-        <div className="pb-2 ">
+        <div className="pb-2">
           <GoogleSignInButton />
         </div>
         <p className="mb-5 ms-5">Don’t have an account? Sign up</p>
@@ -146,20 +148,20 @@ export const SignUpIndividualForm = () => {
         <p>Lorem ipsum dolor sit amet </p>
       </div>
 
-      <div className="d-flex  pb-5 flex-column flex-lg-row mx-0 mx-lg-5">
+      <div className="d-flex pb-3 flex-row ">
         <div className="signUpNavStyle">
           <SignUpIndividual />
         </div>
 
-        <div className=" ms-sm-0 ms-lg-3 signUpNavStyle">
+        <div className="ms-3 signUpNavStyle">
           <SignUpOrganization />
         </div>
       </div>
 
       <Form className>
         <Form.Group className="d-flex justify-content-inbetween flex-column flex-lg-row">
-          <div className="row ">
-            <div className="col-12 col-md-8 col-lg-6 align-items-center ">
+          <div className="">
+            <div className=" ">
               <Form.Control
                 type="text"
                 placeholder="First Name"
@@ -167,13 +169,14 @@ export const SignUpIndividualForm = () => {
                 name="firstname"
                 value={signUp.firstname}
                 onChange={handleChange}
-                className="signUpStyle mb-1"
+                className="signUpStyle rounded-3 mb-1"
+                style={{ width: "15rem", height: "3.4rem" }}
               />
             </div>
           </div>
           <Form.Group>
-            <div className="row ms-sm-0 ms-lg-2 mt-3 mt-lg-0">
-              <div className="col-12 col-md-8 col-lg-6 align-items-center">
+            <div className="ms-3">
+              <div className="">
                 <Form.Control
                   type="text"
                   placeholder="Last Name"
@@ -181,15 +184,16 @@ export const SignUpIndividualForm = () => {
                   name="lastname"
                   value={signUp.lastname}
                   onChange={handleChange}
-                  className="signUpStyle"
+                  className="rounded-3 border"
+                  style={{ width: "15rem", height: "3.4rem" }}
                 />
               </div>
             </div>
           </Form.Group>
         </Form.Group>
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
                 type="email"
                 placeholder="Email"
@@ -197,33 +201,36 @@ export const SignUpIndividualForm = () => {
                 name="email"
                 value={signUp.email}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3 mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
-                type="number"
+                type="input"
                 placeholder="Phone Number"
                 id="number"
                 name="number"
                 value={signUp.number}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3 mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group>
-          <div className="row inputStyle pb-3">
-            <div className="col-sm-12 col-md-8 col-lg-6">
+          <div className="inputStyle pb-3">
+            <div className="">
               <input
-                className=" inputFormStyle"
+                className="rounded-3 border"
+                style={{ width: "31.25rem", height: "3.4rem" }}
                 id="password"
                 type={passwordToggle ? "text" : "password"}
                 placeholder="Password"
@@ -253,9 +260,10 @@ export const SignUpIndividualForm = () => {
 
         <Form.Group>
           <div className="row inputStyle">
-            <div className="col-sm-12 col-md-8 col-lg-6">
+            <div className="">
               <input
-                className=" inputFormStyle"
+                className="rounded-3 border"
+                style={{ width: "31.25rem", height: "3.4rem" }}
                 id="password"
                 type={confirmPasswordToggle ? "text" : "password"}
                 placeholder="Confirm Password"
@@ -285,7 +293,7 @@ export const SignUpIndividualForm = () => {
 
         <Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
           <Form.Check
-            className="w-75"
+            className="w-50"
             type="checkbox"
             label="By ticking this box you are indicating you have read and accept our terms and privacy policy."
           />
@@ -347,20 +355,20 @@ export const SignUpOrganizationForm = () => {
         <h2>Set up your Dosh account</h2>
         <p>Lorem ipsum dolor sit amet </p>
       </div>
-      <div className="d-flex  pb-5 flex-column flex-lg-row mx-0 mx-lg-5">
+      <div className="d-flex  pb-3 flex-row ">
         <div className="signUpNavStyle">
           <SignUpIndividual />
         </div>
 
-        <div className=" ms-sm-0 ms-lg-3 signUpNavStyle">
+        <div className="ms-3 signUpNavStyle">
           <SignUpOrganization />
         </div>
       </div>
 
       <Form>
         <Form.Group className="">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
                 type="text"
                 placeholder="Organization Name"
@@ -368,15 +376,16 @@ export const SignUpOrganizationForm = () => {
                 name="organizationName"
                 value={signUp.email}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3  mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
                 type="email"
                 placeholder="Organization Email"
@@ -384,15 +393,16 @@ export const SignUpOrganizationForm = () => {
                 name="organizationEmail"
                 value={signUp.email}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3 mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
                 type="text"
                 placeholder="Contact person name"
@@ -400,15 +410,16 @@ export const SignUpOrganizationForm = () => {
                 name="contactPersonName"
                 value={signUp.email}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3 mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
         <Form.Group className="my-3">
-          <div className="row ">
-            <div className="col-sm-12 col-md-8 col-lg-6 align-items-center">
+          <div className="">
+            <div className="">
               <Form.Control
                 type="email"
                 placeholder="Contact person email"
@@ -416,7 +427,8 @@ export const SignUpOrganizationForm = () => {
                 name="contactPersonEmail"
                 value={signUp.email}
                 onChange={handleChange}
-                className="inputFormStyle mb-1"
+                className="rounded-3 mb-1"
+                style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
@@ -424,9 +436,10 @@ export const SignUpOrganizationForm = () => {
 
         <Form.Group>
           <div className="row inputStyle">
-            <div className="col-sm-12 col-md-8 col-lg-6">
+            <div className="">
               <input
-                className=" inputFormStyle"
+                className="rounded-3 border"
+                style={{ width: "31.25rem", height: "3.4rem" }}
                 id="password"
                 type={passwordToggle ? "text" : "password"}
                 placeholder="Password"
@@ -456,9 +469,10 @@ export const SignUpOrganizationForm = () => {
 
         <Form.Group>
           <div className="row inputStyle pt-3">
-            <div className="col-sm-12 col-md-8 col-lg-6">
+            <div className="">
               <input
-                className=" inputFormStyle"
+                className="rounded-3 border"
+                style={{ width: "31.25rem", height: "3.4rem" }}
                 id="confirmPassword"
                 type={confirmPasswordToggle ? "text" : "Password"}
                 placeholder="Confirm password"
@@ -488,7 +502,7 @@ export const SignUpOrganizationForm = () => {
 
         <Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
           <Form.Check
-            className=" w-75"
+            className=" w-50"
             type="checkbox"
             label="By ticking this box you are indicating you have read and accept our terms and privacy policy."
           />

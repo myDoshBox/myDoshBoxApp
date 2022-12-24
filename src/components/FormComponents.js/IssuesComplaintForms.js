@@ -26,7 +26,7 @@ export const Reportissuesform = () => {
 
   return (
     <Container>
-      <form action="" className="col-8 form bg-white ">
+      <form action="" className="form bg-white" style={{ width: "30rem" }}>
         <div className="mb-3 mt-5">
           <label
             htmlFor="exampleFormControlInput1"
@@ -38,7 +38,7 @@ export const Reportissuesform = () => {
             onChange={handleDefectNameInputChange}
             value={values.DefectName}
             type="name"
-            className="form-control BorderLineColor
+            className="form-control 
           border-success"
             id="exampleFormControlInput1"
             placeholder="Defect Name"
@@ -55,7 +55,7 @@ export const Reportissuesform = () => {
           <textarea
             onChange={handleDefectDescriptionInputChange}
             value={values.DefectDescription}
-            className="form-control BorderLineColor border-success"
+            className="form-control border-success"
             id="exampleFormControlTextarea1"
             rows="3"
             placeholder="Describe exactly the problem"
@@ -195,7 +195,7 @@ export const ContestForm = () => {
             ></textarea>
           </div>
 
-          <div className="d-grid gap-2 col-6 mx-auto mt-4 ">
+          <div className="d-grid col-6 mx-auto mt-4 ">
             <button
               className="btn btn-success"
               type="submit"

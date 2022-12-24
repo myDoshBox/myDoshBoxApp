@@ -3,7 +3,7 @@
 //CustomerCareSidenav
 //UserSidenav
 
-import logo from "../../assets/images/doshlogo.jpg";
+import logo from "../../images/doshlogo.jpg";
 import {
   ChatIcon,
   DashboardIcon,
@@ -20,15 +20,19 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 
 export const UserSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column">
+    <aside
+      className="SideNav d-flex flex-column"
+      style={{ width: "15rem", height: "100vh" }}
+    >
       <div>
         <img
           className="SideNavLogo ms-3 mt-3"
+          style={{ width: "6rem" }}
           src={logo}
           alt="MyDoshBox Logo"
         />
       </div>
-      <div className="SideNavItems d-flex justify-content-between align-center flex-column mt-5 h-100">
+      <div className="d-flex justify-content-between align-center flex-column mt-5 h-100">
         <ul className="ps-3">
           <li className="d-flex align-center SideNavItem mt-3">
             <DashboardIcon width="30" height="30" className="me-3" />
@@ -80,7 +84,10 @@ export const UserSidenav = () => {
 
 export const NeutralsSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column">
+    <aside
+      className="SideNav d-flex align-center flex-column"
+      style={{ width: "15rem", height: "100vh" }}
+    >
       <div>
         <img
           className="SideNavLogo ms-3 mt-3"
@@ -140,7 +147,10 @@ export const NeutralsSidenav = () => {
 
 export const CustomerCareSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column">
+    <aside
+      className="SideNav d-flex align-center flex-column"
+      style={{ width: "15rem", height: "100vh" }}
+    >
       <div>
         <img
           className="SideNavLogo ms-3 mt-3"
@@ -200,7 +210,10 @@ export const CustomerCareSidenav = () => {
 
 export const AdminSidenav = () => {
   return (
-    <aside className="SideNav d-flex align-center flex-column">
+    <aside
+      className="SideNav d-flex align-center flex-column"
+      style={{ width: "15rem", height: "100vh" }}
+    >
       <div>
         <img
           className="SideNavLogo ms-3 mt-3"

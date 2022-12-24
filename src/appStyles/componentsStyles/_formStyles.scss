@@ -3,14 +3,17 @@
 
 $inputFieldColor: rgba(75, 68, 83, 0.8);
 
-// Contact Us Form Styles starts//
-.checkboxStyle label {
-  color: $pryColorVariant !important;
+.Email,
+.Password {
+  @include H5Font;
+  color: $inputFieldColor;
+  font-size: 1rem !important;
+  font-weight: 700;
 }
 
-.contactInputFormStyle {
-  border-radius: 13px !important;
-  border: 1px solid;
+.Email input::placeholder,
+.Password input::placeholder {
+  color: $placeholderTextColor !important;
 }
 
 // Contact Us Form Styles Ends//
@@ -186,6 +189,11 @@ input[type="color"]:focus,
   color: $placeholderTextColor !important;
 }
 
+.confirm-delivery-head {
+  @include H4Font;
+  font-weight: 500 !important;
+}
+
 .confirm-delivery-pText {
   @include H6Font;
   color: $placeholderTextColor !important;
@@ -195,7 +203,6 @@ input[type="color"]:focus,
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
-
   @include pFont;
   font-size: 0.875rem !important;
 }
@@ -206,74 +213,12 @@ input[type="color"]:focus,
   font-size: 12px !important;
 }
 
-@media screen and (max-width: 687px) {
-  .total-input {
-    width: 100% !important;
-  }
-  .escrow-input-field {
-    width: 90% !important;
-    margin: 0 15px;
-  }
-  .escrow-card {
-    width: max-content !important;
-  }
-
-  .escrow-price-field {
-    width: 75.5% !important;
-  }
-  .escrow-form-label,
-  .bank-transfer-form-label {
-    @include H6Font;
-    font-size: 0.875rem !important;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  .escrow-price-field {
-    width: 68% !important;
-    //   margin: 0 15px
-    border-radius: 5px 0 0 5px !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .total-input {
-    width: 0 !important;
-    transform: translateX(-5px);
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .total-input {
-    width: 70% !important;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .escrow-price-field {
-    width: 80% !important;
-    //   margin: 0 15px
-    border-radius: 5px 0 0 5px !important;
-  }
-  .escrow-form {
-    width: 65.1rem !important;
-  }
-}
-
 // Authentication Form Style
 // SignIn Form Styling
-
-.inputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
 
 .inputStyle {
   input {
     text-indent: 10px !important;
-    border-color: #ced4da !important;
   }
 }
 
@@ -281,11 +226,8 @@ input[type="color"]:focus,
   margin-left: -3rem;
 }
 
-.signUpStyle {
-  width: 240px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
+.checkboxStyle label {
+  color: $pryColorVariant !important;
 }
 
 .sign-up-section {
@@ -324,65 +266,4 @@ input[type="color"]:focus,
 
 .colorStyle h5 {
   color: red !important;
-}
-
-@media screen and (max-width: 600px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-
-@media screen and (max-width: 687px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-
-  .textAreaStyle {
-    width: 100% !important;
-  }
-
-  .signUpNavStyle {
-    width: 100% !important;
-  }
-
-  .signUpStyle {
-    width: 80% !important;
-  }
-
-  .sign-up-section {
-    transform: translate(50px, -30px);
-  }
-}
-
-@media screen and (max-width: 280px) {
-  .textStyle {
-    @include pFont;
-    font-size: 12px !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-
-  .signUpStyle {
-    width: 100% !important;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .signUpStyle {
-    width: 100% !important;
-    max-width: 500px !important;
-  }
-  .inputFormStyle {
-    width: 100% !important;
-  }
 }

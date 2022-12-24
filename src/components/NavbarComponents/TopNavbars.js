@@ -1,7 +1,7 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
-import logo from "../../assets/images/doshlogo.jpg";
-import logo2 from "../../assets/images/doshlogolight.jpg";
-import image from "../../assets/images/image.jpg";
+import logo from "../../images/doshlogo.jpg";
+import logo2 from "../../images/doshlogolight.jpg";
+import image from "../../images/Image.jpg";
 import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {
@@ -79,7 +79,11 @@ export const UserDashboardNavbar = () => {
       <Nav className="justify-content-end userDashboardNav" activeKey="/home">
         <Nav.Item className=" mx-md-5 mt-2">
           <Form className="searchField">
-            <Form.Control type="text" placeholder="search" className="search" />
+            <Form.Control
+              type="text"
+              placeholder="search"
+              className="search border-1 rounded-4 "
+            />
           </Form>
         </Nav.Item>
         <Nav.Item className="d-flex ms-md-5">
