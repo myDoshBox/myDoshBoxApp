@@ -26,15 +26,14 @@
 
 .SignUpGroup {
 	@include pFont;
-	background-color: inherit !important;
-	color: $pryColor !important;
-	border: 1px solid $buttonColor !important;
+	background-color: $pryColor !important;
+	color: #ffffff !important;
 }
 
 .SignUpGroup:hover,
 .SignUpGroup:focus {
-	background-color: $pryColor !important;
-	color: white !important;
+	background-color: $buttonColor !important;
+	// color: white !important;
 }
 
 // NAVIGATION AND VIEW STYLING

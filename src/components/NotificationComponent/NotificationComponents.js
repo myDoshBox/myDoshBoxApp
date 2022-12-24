@@ -1,32 +1,12 @@
-export const CompletedNotification = () => {
-  return <div className="completed ">Completed</div>;
-};
-export const CanceledNotification = () => {
-  return <div className="canceled ">Canceled</div>;
-};
-export const Refunded = () => {
-  return <div className="refunded  ">Refunded</div>;
+// the text and design(design|text) used for this component includes:
+// completed|Completed, canceled|Canceled, refunded|Refunded, dispute|In Dispute, pending-confirmation|Pending Confirmation, awaiting|Awaiting Delivery, pending-payment|Pending Payment, resolved|Resolved, unresolved|Unresolved
+
+export const Notifications = ({ text, styles }) => {
+	return <div className={styles}>{text}</div>;
 };
 
-export const InDispute = () => {
-  return <div className="dispute  ">In Dispute</div>;
-};
-export const PendingConfirmation = () => {
-  return <div className="pending-confirmation  ">Pending Confirmation</div>;
-};
-
-export const AwaitingDelivery = () => {
-  return <div className="awaiting  ">Awaiting Delivery</div>;
-};
-
-export const PendingPayment = () => {
-  return <div className="pending-payment  ">Pending Payment</div>;
-};
-
-export const Resolved = () => {
-  return <div className="resolved ">Resolved</div>;
-};
-
-export const Unresolved = () => {
-  return <div className="unresolved ">Unresolved</div>;
-};
+// the code below shows how to use the component above
+// <Notifications
+// 	text="Pending Confirmation"
+// 	styles="pending-confirmation"
+// />;

@@ -68,7 +68,6 @@ picture {
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
-  line-height: 1.6;
 }
 
 h2 {
@@ -79,26 +78,21 @@ h2 {
 h3 {
   font-family: "Roboto", sans-serif;
   font-size: 2rem !important;
-  line-height: 3.56rem;
 }
 
 h4 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
 }
 
 h5 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
 }
 
 h6 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
 }
 
 p {
@@ -138,8 +132,6 @@ p {
 .GeneralBtnStyle1 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   background-color: #4d957e !important;
 }
 
@@ -172,15 +164,13 @@ p {
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  background-color: inherit !important;
-  color: #006747 !important;
-  border: 1px solid #4d957e !important;
+  background-color: #006747 !important;
+  color: #ffffff !important;
 }
 
 .SignUpGroup:hover,
 .SignUpGroup:focus {
-  background-color: #006747 !important;
-  color: white !important;
+  background-color: #4d957e !important;
 }
 
 .ScrollUpBtnStyle {
@@ -219,197 +209,8 @@ p {
   color: white !important;
 }
 
-.LearnMoreCardWrapper {
+.LearnMoreCard {
   background-color: rgba(0, 103, 71, 0.7);
-  color: hsl(0deg, 0%, 100%);
-  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
-  border-radius: 0.608rem;
-}
-.LearnMoreCardWrapper .KnowMore {
-  width: 50%;
-}
-.LearnMoreCardWrapper .KnowMore h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-.LearnMoreCardWrapper .KnowMore p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: hsl(0deg, 0%, 100%);
-  font-size: 0.972rem;
-  line-height: 23px;
-  text-align: justify;
-}
-.LearnMoreCardWrapper .KnowMoreImg {
-  width: 35%;
-}
-
-@media screen and (min-width: 1023px) {
-  .KnowMore {
-    width: 40%;
-  }
-  .LearnMoreCardWrapper {
-    height: 11rem;
-    width: 41rem;
-  }
-}
-.NotificationCardWrapper {
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 0.594rem;
-  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-}
-
-.NotificationCardHeader {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-}
-.NotificationCardHeader button {
-  margin: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  background-color: transparent !important;
-}
-.NotificationCardHeader h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.663rem;
-  line-height: 30px !important;
-  height: 1.938rem !important;
-}
-
-.NotificationCardDetails {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-  padding-inline: 3.5% !important;
-}
-.NotificationCardDetails h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  color: #4b4453;
-}
-.NotificationCardDetails p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  width: 95%;
-}
-.NotificationCardDetails button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-  text-align: justify;
-  letter-spacing: 0.08rem;
-  color: #006747;
-}
-
-@media screen and (max-width: 991px) {
-  .NotificationCardHeader button {
-    font-size: 0.75rem;
-  }
-  .NotificationCardHeader h1 {
-    font-size: 1.31rem !important;
-  }
-  .NotificationCardDetails {
-    width: 100% !important;
-  }
-  .NotificationCardDetails p {
-    font-size: 0.75rem !important;
-    width: unset;
-    line-height: 16px;
-  }
-  .NotificationCardDetails img {
-    width: 1.8rem;
-  }
-  .NotificationCardDetails small {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300 !important;
-    font-size: 0.5rem !important;
-    letter-spacing: 0.04rem !important;
-  }
-  .NotificationCardBackBtn {
-    color: #006747 !important;
-  }
-}
-.AnalyticsNewUsersCard {
-  width: 13.7rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.AnalyticsNewUsersCard h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-}
-.AnalyticsNewUsersCard p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.AnalyticsNewUsersCard .small {
-  font-size: 0.75em !important;
-}
-
-.TotalUsersCard {
-  width: 20rem;
-  height: 9rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.TotalUsersCard .TotalUsersCardText {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.TotalUsersCard .small {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75em !important;
-  left: 45%;
-  bottom: 4%;
-}
-
-.MiniProfileCard {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 22rem;
-  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
-  font-size: 0.913rem !important;
-}
-.MiniProfileCard img {
-  cursor: pointer;
-}
-.MiniProfileCard .MiniProfileCardCameraIcon {
-  left: 64%;
-  top: 29.5%;
-  cursor: pointer;
-}
-.MiniProfileCard .RatingIcon {
-  cursor: pointer;
 }
 
 .MiniUsersCard {
@@ -418,7 +219,6 @@ p {
 .MiniUsersCard p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
 }
 .MiniUsersCard tr {
@@ -440,30 +240,218 @@ p {
 .MiniUsersCard button {
   margin: 0 !important;
 }
-
-.LogoutCard p {
+.MiniUsersCard .LearnMoreCardWrapper {
+  background-color: rgba(0, 103, 71, 0.7);
+  color: hsl(0deg, 0%, 100%);
+  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
+  border-radius: 0.608rem;
+}
+.MiniUsersCard .LearnMoreCardWrapper .KnowMore {
+  width: 50%;
+}
+.MiniUsersCard .LearnMoreCardWrapper .KnowMore h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.MiniUsersCard .LearnMoreCardWrapper .KnowMore p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.972rem;
+  line-height: 23px;
+  text-align: justify;
+}
+.MiniUsersCard .LearnMoreCardWrapper .KnowMoreImg {
+  width: 35%;
+}
+.MiniUsersCard .NotificationCardWrapper {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.594rem;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard .NotificationCardHeader {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+}
+.MiniUsersCard .NotificationCardHeader button {
+  margin: 0 !important;
+  width: unset !important;
+  height: unset !important;
+  background-color: transparent !important;
+}
+.MiniUsersCard .NotificationCardHeader h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.663rem;
+  line-height: 30px !important;
+  height: 1.938rem !important;
+}
+.MiniUsersCard .NotificationCardDetails {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+  padding-inline: 3.5% !important;
+}
+.MiniUsersCard .NotificationCardDetails h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  color: #4b4453;
+}
+.MiniUsersCard .NotificationCardDetails p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  width: 95%;
+}
+.MiniUsersCard .NotificationCardDetails button {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-align: justify;
+  letter-spacing: 0.08rem;
+  color: #006747;
+}
+.MiniUsersCard .NotificationCardDetails {
+  width: 100% !important;
+}
+.MiniUsersCard .NotificationCardDetails p {
+  font-size: 0.75rem !important;
+  width: unset;
+  line-height: 16px;
+}
+.MiniUsersCard .NotificationCardDetails img {
+  width: 1.8rem;
+}
+.MiniUsersCard .NotificationCardDetails small {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300 !important;
+  font-size: 0.5rem !important;
+  letter-spacing: 0.04rem !important;
+}
+.MiniUsersCard .NotificationCardBackBtn {
+  color: #006747 !important;
+}
+.MiniUsersCard .AnalyticsNewUsersCard {
+  width: 13.7rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard .AnalyticsNewUsersCard h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+}
+.MiniUsersCard .AnalyticsNewUsersCard p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.MiniUsersCard .AnalyticsNewUsersCard .small {
+  font-size: 0.75em !important;
+}
+.MiniUsersCard .TotalUsersCard {
+  width: 20rem;
+  height: 9rem;
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard .TotalUsersCard .TotalUsersCardText {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+.MiniUsersCard .TotalUsersCard .small {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.75em !important;
+  left: 45%;
+  bottom: 4%;
+}
+.MiniUsersCard .MiniProfileCard {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  width: 22rem;
+  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
+  font-size: 0.913rem !important;
+}
+.MiniUsersCard .MiniProfileCard img {
+  cursor: pointer;
+}
+.MiniUsersCard .MiniProfileCard .MiniProfileCardCameraIcon {
+  left: 64%;
+  top: 29.5%;
+  cursor: pointer;
+}
+.MiniUsersCard .MiniProfileCard .RatingIcon {
+  cursor: pointer;
+}
+.MiniUsersCard .MiniUsersCard {
+  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+}
+.MiniUsersCard .MiniUsersCard p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  color: #4b4453;
+}
+.MiniUsersCard .MiniUsersCard tr {
+  border-style: hidden;
+  font-size: 0.75rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+}
+.MiniUsersCard .MiniUsersCard th {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.875rem !important;
+  color: rgba(75, 68, 83, 0.5);
+}
+.MiniUsersCard .MiniUsersCard button {
+  margin: 0 !important;
+}
+.MiniUsersCard .LogoutCard p {
   color: rgba(255, 0, 0, 0.7) !important;
 }
-
-td,
-th {
+.MiniUsersCard td,
+.MiniUsersCard th {
   border: 1px solid #dddddd;
   padding: 0.5rem;
 }
-
-.AllUsersCard {
+.MiniUsersCard .AllUsersCard {
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
-.AllUsersCard img {
+.MiniUsersCard .AllUsersCard img {
   filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
   border-radius: 3.6rem;
   width: 1.99rem;
   height: 2.44rem;
 }
-.AllUsersCard tr:nth-child(1) {
+.MiniUsersCard .AllUsersCard tr:nth-child(1) {
   color: rgba(75, 68, 83, 0.5);
 }
-.AllUsersCard td {
+.MiniUsersCard .AllUsersCard td {
   max-width: 10rem;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -473,46 +461,30 @@ th {
   letter-spacing: 0rem;
   font-size: small !important;
 }
-.AllUsersCard .lg-view {
+.MiniUsersCard .AllUsersCard .lg-view {
   display: none;
 }
-.AllUsersCard .view {
+.MiniUsersCard .AllUsersCard .view {
   color: #006747 !important;
 }
-.AllUsersCard .view:hover,
-.AllUsersCard :focus {
+.MiniUsersCard .AllUsersCard .view:hover,
+.MiniUsersCard .AllUsersCard :focus {
   background-color: #006747 !important;
   color: hsl(0deg, 0%, 100%) !important;
 }
-
-@media screen and (max-width: 767px) {
-  .AllUsersCard td {
-    font-size: xx-small !important;
-  }
-  .AllUsersCard th {
-    font-size: x-small !important;
-  }
+.MiniUsersCard .GreenBackgroundColor {
+  background-color: #006747 !important;
 }
-@media screen and (min-width: 992px) {
-  .lg-view {
-    display: revert !important;
-  }
-  .UserProfileCard img {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-.UserProfileCard {
+.MiniUsersCard .UserProfileCard {
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 }
-.UserProfileCard p {
+.MiniUsersCard .UserProfileCard p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-size: small !important;
   font-weight: 700 !important;
 }
-.UserProfileCard td {
+.MiniUsersCard .UserProfileCard td {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -522,53 +494,44 @@ th {
   color: #4b4453;
   font-size: smaller !important;
 }
-.UserProfileCard .UserProfileDetail {
+.MiniUsersCard .UserProfileCard .UserProfileDetail {
   color: rgba(75, 68, 83, 0.5);
   letter-spacing: 0.08rem;
 }
-
-.faq-head {
+.MiniUsersCard .faq-head {
   border: 1px solid #006747 !important;
   padding: 16px 20px !important;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   color: hsl(0deg, 0%, 100%);
   font-weight: 500;
   letter-spacing: 0.08em;
   background: #006747 !important;
 }
-
-.faq-content {
+.MiniUsersCard .faq-content {
   padding: 5px 20px !important;
 }
-
-.faq-card .accordion-item {
+.MiniUsersCard .faq-card .accordion-item {
   border-top: 1px solid !important;
 }
-.faq-card .accordion-button {
+.MiniUsersCard .faq-card .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   box-shadow: none !important;
   font-size: 1rem !important;
   font-weight: 500;
   padding: 18px 22px !important;
 }
-.faq-card .accordion-button:not(.collapsed) {
+.MiniUsersCard .faq-card .accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
   color: #4b4453 !important;
 }
-
-.why-choose-us-card-head {
+.MiniUsersCard .why-choose-us-card-head {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #006747 !important;
 }
-
-.why-choose-us-card-text {
+.MiniUsersCard .why-choose-us-card-text {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -577,33 +540,22 @@ th {
   letter-spacing: 0rem;
   font-size: 0.84375rem !important;
 }
-
-.transaction-card,
-.all-conflicts-card {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  border: 1px solid none !important;
-  border-radius: 10px;
-}
-
-.escrow-terms-condition {
+.MiniUsersCard .escrow-terms-condition {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.escrow-terms-condition h2 {
+.MiniUsersCard .escrow-terms-condition h2 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-
-.payment-gateway-image {
+.MiniUsersCard .payment-gateway-image {
   width: 12vw;
 }
-
-.payment-gateway-card {
+.MiniUsersCard .payment-gateway-card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.payment-gateway-card p {
+.MiniUsersCard .payment-gateway-card p {
   color: rgba(75, 68, 83, 0.5) !important;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -613,54 +565,46 @@ th {
   letter-spacing: 0rem;
   font-size: 1rem !important;
 }
-.payment-gateway-card h2 {
+.MiniUsersCard .payment-gateway-card h2 {
   font-family: "Roboto", sans-serif;
   font-size: 2rem !important;
-  line-height: 3.56rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.payment-gateway-card h4 {
+.MiniUsersCard .payment-gateway-card h4 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-
-.buying-selling-card {
+.MiniUsersCard .buying-selling-card {
   width: 468px;
   height: 227px;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.buying-selling-card p {
+.MiniUsersCard .buying-selling-card p {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-size: 1.5625rem !important;
 }
-
-.transaction-summary-card h2 {
+.MiniUsersCard .transaction-summary-card h2 {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.transaction-summary-card .header-text,
-.transaction-summary-card .transaction-summary-info-title {
+.MiniUsersCard .transaction-summary-card .header-text,
+.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
   color: rgba(75, 68, 83, 0.5) !important;
   font-family: "Open Sans" !important;
 }
-.transaction-summary-card .transaction-summary-info-title {
+.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500;
 }
-.transaction-summary-card .transaction-summary-info-text {
+.MiniUsersCard .transaction-summary-card .transaction-summary-info-text {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -668,39 +612,22 @@ th {
   line-height: 1.5rem;
   letter-spacing: 0rem;
 }
-
-.transaction-images {
+.MiniUsersCard .transaction-images {
   width: 80%;
   height: 300px;
 }
-
-.initiate-transaction-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 311.14px;
-  height: 145.85px !important;
-  display: inline !important;
-}
-.initiate-transaction-card p {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  line-height: 2.625rem;
-}
-
-.individual-transaction-card {
+.MiniUsersCard .individual-transaction-card {
   border: 1px solid none;
   border-radius: 10px;
   box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
 }
-.individual-transaction-card .transaction-summary-info-title {
+.MiniUsersCard .individual-transaction-card .transaction-summary-info-title {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500;
   color: rgba(75, 68, 83, 0.5) !important;
 }
-.individual-transaction-card .transaction-summary-info-text {
+.MiniUsersCard .individual-transaction-card .transaction-summary-info-text {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -709,100 +636,59 @@ th {
   letter-spacing: 0rem;
   font-size: 0.75rem !important;
 }
-
-.individual-transaction-image {
+.MiniUsersCard .individual-transaction-image {
   width: 100%;
   height: 379.79px;
 }
-
-.update-cards {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 292px;
-  height: 136.88px;
-}
-.update-cards p {
+.MiniUsersCard .conflicts-count {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
-}
-
-.conflicts-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-}
-
-.conflicts-count {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-weight: 400 !important;
 }
-
-.conflicts-type {
+.MiniUsersCard .conflicts-type {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 500 !important;
-  text-transform: uppercase;
 }
-
-.mini-disputes-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 389px;
-  height: 326px;
-}
-.mini-disputes-card .nav-pills .nav-link.active {
+.MiniUsersCard .mini-disputes-card .nav-pills .nav-link.active {
   color: #4b4453;
   border-bottom: 2.91696px solid #4b4453;
   background-color: inherit !important;
   border-radius: 0 !important;
 }
-.mini-disputes-card .nav-link {
+.MiniUsersCard .mini-disputes-card .nav-link {
   color: #4b4453 !important;
 }
-.mini-disputes-card .mini-disputes-mail {
+.MiniUsersCard .mini-disputes-card .mini-disputes-mail {
   color: rgba(75, 68, 83, 0.5);
   font-size: 0.625rem;
 }
-.mini-disputes-card .mini-disputes-name {
+.MiniUsersCard .mini-disputes-card .mini-disputes-name {
   font-size: 14px;
   color: #4b4453;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
-.mini-disputes-card .disputes-view-btn {
+.MiniUsersCard .mini-disputes-card .disputes-view-btn {
   background: rgba(0, 103, 71, 0.1);
-  border-radius: 4.86161px;
-  width: 76.81px;
-  height: 27.22px;
   font-size: 12px !important;
 }
-.mini-disputes-card .disputes-view-btn:hover,
-.mini-disputes-card .disputes-view-btn:focus {
+.MiniUsersCard .mini-disputes-card .disputes-view-btn:hover,
+.MiniUsersCard .mini-disputes-card .disputes-view-btn:focus {
   background: rgba(0, 103, 71, 0.1) !important;
   border: none !important;
   font-weight: 400 !important;
 }
-.mini-disputes-card .disputes-sort-btn {
+.MiniUsersCard .mini-disputes-card .disputes-sort-btn {
   background: rgba(0, 103, 71, 0.1) !important;
-  width: 70px;
-  height: 36.95px;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  border: none;
 }
-.mini-disputes-card .dropdown-menu.show {
+.MiniUsersCard .mini-disputes-card .dropdown-menu.show {
   background: #e5f0ec !important;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -812,269 +698,107 @@ th {
   letter-spacing: 0rem;
   font-size: 0.75rem !important;
 }
-.mini-disputes-card .dropdown-menu {
+.MiniUsersCard .mini-disputes-card .dropdown-menu {
   border: none;
   min-width: 7rem;
   padding: 0 0 !important;
 }
-.mini-disputes-card .dropdown-item:hover {
+.MiniUsersCard .mini-disputes-card .dropdown-item:hover {
   background: #e5f0ec !important;
   border-radius: inherit;
 }
-.mini-disputes-card .disputes-sort-btn:hover {
+.MiniUsersCard .mini-disputes-card .disputes-sort-btn:hover {
   color: #4b4453 !important;
 }
-
-.issues-card {
+.MiniUsersCard .issues-card {
   border: 1px solid none;
   border-radius: 10px;
   box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
   width: 400px;
   height: 277px !important;
 }
-.issues-card h6 {
+.MiniUsersCard .issues-card h6 {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.06em;
 }
-
-@media screen and (max-width: 300px) {
-  .payment-gateway-image {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  .payment-gateway-card p {
-    font-size: 0.5rem !important;
-    line-height: 0.75rem !important;
-  }
-  .payment-gateway-card h2 {
-    font-size: 1rem !important;
-  }
-  .payment-gateway-card h4 {
-    font-size: 0.75rem !important;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-  }
-  .transaction-images {
-    height: 100px !important;
-  }
-  .transaction-summary-info-title {
-    font-size: 0.75rem !important;
-    font-weight: 400;
-  }
-  .transaction-summary-info-text {
-    font-size: 0.5rem !important;
-  }
+.MiniUsersCard .contact-card {
+  padding: 30px 15px;
 }
-@media screen and (max-width: 687px) {
-  .faq-head {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .faq-card .accordion-button {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-    box-shadow: none !important;
-    font-size: 0.875rem !important;
-    padding: 16px 20px !important;
-  }
-  .contact-card {
-    padding: 30px 15px;
-  }
-  .why-choose-us-card-head {
-    font-size: 0.6875rem !important;
-    line-height: 15px !important;
-  }
-  .why-choose-us-card-text {
-    font-size: 0.5rem !important;
-    line-height: 12px;
-  }
-  .transaction-table {
-    font-size: 10px !important;
-  }
-  .escrow-terms-condition {
-    font-size: 0.75rem !important;
-  }
-  .escrow-terms-condition h2 {
-    font-size: 1rem !important;
-    line-height: 24px !important;
-    text-align: center;
-  }
-  .payment-gateway-image {
-    width: 20vw;
-  }
-  .payment-gateway-card p {
-    font-size: 0.75rem !important;
-    line-height: 20px !important;
-  }
-  .payment-gateway-card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
-  .payment-gateway-card h4 {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .buying-selling-card {
-    width: 80%;
-    height: 160px;
-  }
-  .buying-selling-card p {
-    font-size: 1rem !important;
-  }
-  .buying-selling-card svg {
-    width: 45.5px !important;
-    height: 45.5px !important;
-  }
-  .transaction-summary-card h2 {
-    font-size: 1.25rem !important;
-  }
-  .transaction-summary-card .header-text {
-    font-size: 0.75rem;
-    font-family: "Open Sans";
-  }
-  .transaction-summary-card .transaction-summary-info-title {
-    font-size: 0.75rem !important;
-    font-weight: 400;
-  }
-  .transaction-summary-card .transaction-summary-info-text {
-    font-size: 10px !important;
-  }
-  .transaction-images {
-    width: 90%;
-    height: 150px !important;
-  }
-  .initiate-transaction-card {
-    width: 50%;
-    height: 75px;
-  }
-  .initiate-transaction-card p {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-  }
-  .update-cards {
-    width: 90%;
-    height: 60px;
-    padding: 10px 0 !important;
-    border: 2px solid rgba(0, 103, 71, 0.3);
-    border-radius: 5px;
-    box-shadow: none;
-  }
-  .update-cards svg {
-    width: 24px;
-    height: 24px;
-  }
-  .update-cards p {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-  }
-  .individual-transaction-image {
-    width: 100%;
-    height: 187px;
-  }
-  .transaction-summary-info-title {
-    font-size: 12px !important;
-    font-weight: 400;
-  }
-  .transaction-summary-info-text {
-    font-size: 10px !important;
-  }
+.MiniUsersCard .why-choose-us-card-head {
+  font-size: 0.6875rem !important;
+  line-height: 15px !important;
 }
-@media screen and (max-width: 991px) {
-  .transaction-images {
-    width: 90%;
-    height: 200px;
-  }
-  .transaction-summary-card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
+.MiniUsersCard .why-choose-us-card-text {
+  font-size: 0.5rem !important;
+  line-height: 12px;
 }
-@media screen and (min-width: 992px) {
-  .transaction-summary-info-text {
-    transform: translateX(-70px);
-  }
-  .transaction-summary-info-title {
-    transform: translateX(70px);
-  }
+.MiniUsersCard .escrow-terms-condition {
+  font-size: 0.75rem !important;
 }
-@media screen and (min-width: 1200px) {
-  .transaction-summary-info-text {
-    transform: translateX(-90px);
-  }
-  .transaction-summary-info-title {
-    transform: translateX(90px);
-  }
+.MiniUsersCard .escrow-terms-condition h2 {
+  font-size: 1rem !important;
+  line-height: 24px !important;
+  text-align: center;
 }
-.ConflictIssuesCard-body {
+.MiniUsersCard .payment-gateway-image {
+  width: 20vw;
+}
+.MiniUsersCard .buying-selling-card {
+  width: 80%;
+  height: 160px;
+}
+.MiniUsersCard .buying-selling-card p {
+  font-size: 1rem !important;
+}
+.MiniUsersCard .buying-selling-card svg {
+  width: 45.5px !important;
+  height: 45.5px !important;
+}
+.MiniUsersCard .update-cards {
+  width: 90%;
+  height: 60px;
+  padding: 10px 0 !important;
+  border: 2px solid rgba(0, 103, 71, 0.3);
+  border-radius: 5px;
+  box-shadow: none;
+}
+.MiniUsersCard .update-cards svg {
+  width: 24px;
+  height: 24px;
+}
+.MiniUsersCard .update-cards p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+}
+.MiniUsersCard .individual-transaction-image {
+  width: 100%;
+  height: 187px;
+}
+.MiniUsersCard .transaction-summary-info-text {
+  font-size: 10px !important;
+}
+.MiniUsersCard .ConflictIssuesCard-body {
   background-color: #006747 !important;
   color: #fff;
 }
-
-.colorTextStyle {
+.MiniUsersCard .colorTextStyle {
   color: rgb(165, 165, 165);
 }
-
-.textStyle {
+.MiniUsersCard .textStyle {
   color: rgb(19, 19, 19);
 }
-
-.coreValueStyle {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 30%;
+.MiniUsersCard .coreValueStyle {
   background-color: #006747 !important;
-  color: white;
-  border-radius: 10px;
 }
-
-.coreValueStyle h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  line-height: 1.5rem;
-  font-size: 1.5625rem;
-}
-
-.coreValueStyle p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: white !important;
-}
-
-.teamValueStyle {
+.MiniUsersCard .teamValueStyle {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
   background-color: #e5f0ed !important;
   color: rgb(73, 73, 73);
-  border: 2px solid #006747;
+  border: 1px solid #006747;
 }
-
-.teamValueStyle2 {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
-  background-color: #006747 !important;
-  color: rgb(255, 255, 255);
-  border: 2px solid #006747;
-}
-
-.warningStyle {
+.MiniUsersCard .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
@@ -1084,22 +808,6 @@ th {
   font-size: 0.875rem !important;
 }
 
-.aboutImagePix {
-  width: 16.5625rem;
-  height: 16.5625rem;
-}
-
-@media screen and (max-width: 687px) {
-  .smallScreen {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    display: none;
-  }
-}
 .BgColor {
   background-color: #459079;
 }
@@ -1124,8 +832,6 @@ th {
 .Password {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   color: rgba(75, 68, 83, 0.8);
   font-size: 1rem !important;
   font-weight: 700;
@@ -1145,7 +851,6 @@ th {
 .BankName label {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1193,7 +898,6 @@ th {
 .UpdateProfileForm p {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   font-weight: 700;
 }
@@ -1224,7 +928,6 @@ input[type=color]:focus,
 .Pass label {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: #4b4453;
   letter-spacing: 0.08rem;
   font-weight: 700;
@@ -1267,8 +970,6 @@ input[type=color]:focus,
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.96rem;
-  letter-spacing: 0.08em;
   font-size: 1.125rem !important;
 }
 
@@ -1344,35 +1045,19 @@ input[type=color]:focus,
 .confirm-delivery-head {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
   font-weight: 500 !important;
 }
 
 .confirm-delivery-pText {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.deliver-goods-form {
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 30px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .account-details {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
-  width: 100%;
-  max-width: 650px;
-  transform: translateX(200px);
-  padding: 20px;
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -1393,102 +1078,8 @@ input[type=color]:focus,
   font-size: 12px !important;
 }
 
-@media screen and (max-width: 687px) {
-  .total-input {
-    width: 100% !important;
-  }
-  .escrow-input-field {
-    width: 90% !important;
-    margin: 0 15px;
-  }
-  .escrow-card {
-    width: -webkit-max-content !important;
-    width: -moz-max-content !important;
-    width: max-content !important;
-  }
-  .escrow-price-field {
-    width: 75.5% !important;
-  }
-  .escrow-form-label,
-.bank-transfer-form-label {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.5rem;
-    line-height: 1.5rem;
-    font-size: 0.875rem !important;
-  }
-  .confirm-delivery-head {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    line-height: 1.96rem;
-    letter-spacing: 0.08em;
-  }
-  .deliver-goods-form {
-    margin: 30px 10px !important;
-    padding: 10px !important;
-  }
-  .account-details {
-    transform: translateX(0) !important;
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 0.75rem !important;
-  }
-}
-@media screen and (max-width: 280px) {
-  .escrow-price-field {
-    width: 68% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .account-details {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 0.75rem !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .total-input {
-    width: 0 !important;
-    transform: translateX(-5px);
-  }
-  .account-details {
-    transform: translateX(30px);
-  }
-}
-@media screen and (max-width: 1023px) {
-  .total-input {
-    width: 70% !important;
-  }
-  .account-details {
-    transform: translateX(10px);
-  }
-}
-@media screen and (min-width: 1025px) {
-  .escrow-price-field {
-    width: 80% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .escrow-form,
-.bank-transfer-form {
-    width: 1041px !important;
-  }
-}
-.inputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
-
 .inputStyle input {
   text-indent: 10px !important;
-  border-color: #ced4da !important;
 }
 
 .toggleBtnStyle {
@@ -1499,28 +1090,8 @@ input[type=color]:focus,
   color: #66a491 !important;
 }
 
-.signUpStyle {
-  width: 240px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
-
 .sign-up-section {
   transform: translateX(130px);
-}
-
-.contactInputFormStyle {
-  width: 500px !important;
-  height: 55px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
-}
-
-.textAreaStyle {
-  width: 500px !important;
-  border-radius: 13px !important;
-  border: 1px solid;
 }
 
 .labelStyle {
@@ -1538,7 +1109,6 @@ input[type=color]:focus,
 .titleStyle {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
-  line-height: 1.6;
   color: #006747 !important;
 }
 
@@ -1562,79 +1132,6 @@ input[type=color]:focus,
   color: red !important;
 }
 
-@media screen and (max-width: 600px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-@media screen and (max-width: 900px) {
-  .colorStyle h5 {
-    color: rgb(17, 0, 255) !important;
-  }
-}
-@media screen and (max-width: 687px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
-  .textAreaStyle {
-    width: 100% !important;
-  }
-  .signUpNavStyle {
-    width: 100% !important;
-  }
-  .signUpStyle {
-    width: 80% !important;
-  }
-  .sign-up-section {
-    transform: translate(50px, -30px);
-  }
-}
-@media screen and (max-width: 280px) {
-  .contactStyle {
-    width: 70% !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-  .textStyle {
-    font-family: "Open Sans" !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-    color: #4b4453;
-    line-height: 1.5rem;
-    letter-spacing: 0rem;
-    font-size: 12px !important;
-  }
-}
-@media screen and (max-width: 767px) {
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactInputFormStyle {
-    width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .signUpStyle {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .signUpStyle {
-    width: 100% !important;
-    max-width: 500px !important;
-  }
-  .inputFormStyle {
-    width: 100% !important;
-  }
-  .contactStyle {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -1688,7 +1185,6 @@ input[type=color]:focus,
 .Modal-Btn .ModalTitle {
   font-family: "Roboto", sans-serif !important;
   font-size: 1.5rem !important;
-  line-height: 2.625rem;
 }
 
 .nav-links {
@@ -1735,12 +1231,6 @@ input[type=color]:focus,
 
 .form-control {
   box-shadow: none !important;
-}
-
-.search {
-  border: none !important;
-  border-radius: 15px !important;
-  background: #fdfafa !important;
 }
 
 .nav-btn {
@@ -1797,19 +1287,15 @@ input[type=color]:focus,
 .SideNav {
   background-color: #006747;
   color: hsl(0deg, 0%, 100%);
-  width: 15rem;
-  height: 100vh !important;
 }
 
 .SideNavLogo {
-  width: 6rem;
   cursor: pointer !important;
 }
 
 .SideNavItem {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer !important;
   font-weight: 400;
@@ -2057,6 +1543,89 @@ input[type=color]:focus,
   background-color: #66a491;
 }
 
+.NotificationCardWrapper {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.594rem;
+  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
+}
+
+.NotificationCardBackBtn {
+  color: #006747 !important;
+}
+
+.NotificationCardHeader {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+}
+.NotificationCardHeader button {
+  margin: 0 !important;
+  width: unset !important;
+  height: unset !important;
+  background-color: transparent !important;
+}
+.NotificationCardHeader h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.663rem;
+  line-height: 30px !important;
+  height: 1.938rem !important;
+}
+
+.NotificationCardDetails {
+  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
+  padding-inline: 3.5% !important;
+}
+.NotificationCardDetails h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  color: #4b4453;
+}
+.NotificationCardDetails p {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  text-align: justify;
+  width: 95%;
+}
+.NotificationCardDetails button {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-align: justify;
+  letter-spacing: 0.08rem;
+  color: #006747;
+}
+
+.NotificationCardDetails {
+  width: 100% !important;
+}
+.NotificationCardDetails p {
+  font-size: 0.75rem !important;
+  width: unset;
+  line-height: 16px;
+}
+.NotificationCardDetails img {
+  width: 1.8rem;
+}
+.NotificationCardDetails small {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300 !important;
+  font-size: 0.5rem !important;
+  letter-spacing: 0.04rem !important;
+}
+
+@media screen and (max-width: 991px) {
+  .NotificationCardHeader button {
+    font-size: 0.75rem;
+  }
+  .NotificationCardHeader h1 {
+    font-size: 1.31rem !important;
+  }
+}
 .PaginationBar button {
   margin: 0 !important;
 }
@@ -2073,7 +1642,6 @@ input[type=color]:focus,
 .PaginationBar a:focus {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  line-height: 1.5rem;
   font-size: 1.3rem !important;
   color: #4b4453;
 }

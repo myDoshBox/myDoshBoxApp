@@ -2,88 +2,74 @@ import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { Icon } from "@iconify/react";
-import { SubmitButton } from "../ButtonsComponent/ConflictButtons";
+import { GeneralBtnStyle1 } from "../Button";
 
 //ContactUsForm
 export const ContactUsForm = () => {
-	const [contactUs, setcontactUs] = useState({
-		name: "",
-		email: "",
-	});
+  const [contactUs, setcontactUs] = useState({
+    name: "",
+    email: "",
+  });
 
-	const handleChange = (e) => {
-		const name = e.target.name;
-		const value = e.target.value;
-		setcontactUs({ ...contactUs, [name]: value });
-	};
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setcontactUs({ ...contactUs, [name]: value });
+  };
 
-	return (
-		<Container className="">
-			<Form>
-				<h4>Send us a message</h4>
+  return (
+    <>
+      <h4 className="text-success">Send us a message</h4>
+      <Form>
+        <div>
+          <Form.Group className="mb-3">
+            <Form.Control
+              className="labelStyle"
+              type="text"
+              placeholder="Enter Name"
+              value={contactUs.name}
+              onChange={handleChange}
+              id="name"
+              name="name"
+            />
+          </Form.Group>
 
-				<Form.Group className="my-3">
-					<div className="row ">
-						<div className="col-12 col-md-8 col-lg-6 align-items-center">
-							<Form.Control
-								type="text"
-								placeholder="Name"
-								id="name"
-								name="name"
-								value={contactUs.name}
-								onChange={handleChange}
-								className="contactInputFormStyle labelStyle mb-1"
-							/>
-						</div>
-					</div>
-				</Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="text"
+              className="labelStyle"
+              placeholder="Email"
+              value={contactUs.email}
+              onChange={handleChange}
+              id="email"
+              name="email"
+            />
+          </Form.Group>
 
-				<Form.Group className="my-3 ">
-					<div className="row ">
-						<div className="col-12 col-md-8 col-lg-6 align-items-center">
-							<Form.Control
-								type="email"
-								placeholder="Email"
-								id="email"
-								name="email"
-								value={contactUs.email}
-								onChange={handleChange}
-								className="contactInputFormStyle labelStyle mb-1"
-							/>
-						</div>
-					</div>
-				</Form.Group>
+          <Form.Group className="mb-3">
+            <FloatingLabel
+              className="labelStyle"
+              controlId="floatingTextarea2"
+              label="Enter your message"
+            >
+              <Form.Control as="textarea" placeholder="Enter your message" />
+            </FloatingLabel>
+          </Form.Group>
 
-				<Form.Group className="my-3">
-					<div className="row ">
-						<div className="col-12 col-md-8 col-lg-6 align-items-center">
-							<FloatingLabel
-								className="labelStyle"
-								controlId="floatingTextarea2"
-								label="Enter your message">
-								<Form.Control
-									className="textAreaStyle contactInputFormStyle"
-									as="textarea"
-									placeholder="Enter your message"
-									style={{ height: "100px" }}
-								/>
-							</FloatingLabel>
-						</div>
-					</div>
-				</Form.Group>
+          <Form.Group className="mt-2 mb-3 fs-6">
+            <Form.Check
+              className="checkboxStyle"
+              type="checkbox"
+              label="I accept the Terms of Sevice"
+            />
+          </Form.Group>
 
-				<Form.Group className="mt-2 ms-2 " controlId="formBasicCheckbox">
-					<Form.Check
-						className="checkboxStyle"
-						type="checkbox"
-						label="I accept the Terms of Sevice"
-					/>
-				</Form.Group>
-
-				<div className="mt-1">
-					<SubmitButton />
-				</div>
-			</Form>
-		</Container>
-	);
+          <div className="mt-1 d-flex justify-content-center">
+            <GeneralBtnStyle1 text="Submit" />
+          </div>
+        </div>
+        {/* Form Here End */}
+      </Form>
+    </>
+  );
 };

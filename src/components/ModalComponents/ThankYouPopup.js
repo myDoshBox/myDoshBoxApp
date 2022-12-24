@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import ThankYouPopUpImg from "../../assets/images/Happy People.jpg";
+import ThankYouPopUpImg from "../../images/Happy People.jpg";
 
 /** Please Note that the ThankYouPopUp Modal works with the confirm button **/
 export const ThankYouPopUp = () => {

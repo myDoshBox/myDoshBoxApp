@@ -68,6 +68,8 @@ export const UpdateProfile = () => {
             name="email"
             value={UpdateProfile.email}
             onChange={handleChange}
+            className=""
+            style={{ width: "35rem" }}
           />
           <small className="text-danger fw-lighter">
             {ValidationError.email}
@@ -81,12 +83,14 @@ export const UpdateProfile = () => {
             name="phone"
             value={UpdateProfile.phone}
             onChange={handleChange}
+            className=""
+            style={{ width: "35rem" }}
           />
           <small className="text-danger fw-lighter">
             {ValidationError.phone}
           </small>
         </Form.Group>
-        <div className="text-end">
+        <div className="">
           <Button type="submit" className="border-0" onClick={handleSubmit}>
             Save Changes
           </Button>
@@ -161,13 +165,17 @@ export const UpdatePassword = () => {
       <p className="text-uppercase">Update Password</p>
       <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
         <Form.Group className="mb-3 Password" controlId="NewPassword">
-          <Form.Label className="m-0">New Password</Form.Label>
+          <Form.Label className="m-0" style={{ width: "15rem" }}>
+            New Password
+          </Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter a New Password"
             name="NewPassword"
             value={UpdatePassword.NewPassword}
             onChange={handleChange}
+            className=""
+            style={{ width: "35rem" }}
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.NewPassword}
@@ -182,12 +190,14 @@ export const UpdatePassword = () => {
             name="ConfirmPassword"
             value={UpdatePassword.ConfirmPassword}
             onChange={handleChange}
+            className=""
+            style={{ width: "35rem" }}
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.ConfirmPassword}
           </small>
         </Form.Group>
-        <div className="text-end">
+        <div className="">
           <Button type="submit" className="border-0" onClick={handleSubmit}>
             Save Changes
           </Button>
@@ -264,6 +274,8 @@ export const UpdateBankDetails = () => {
           name="AccountNumber"
           value={BankDetails.AccountNumber}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.AccountNumber}
@@ -278,6 +290,8 @@ export const UpdateBankDetails = () => {
           name="BankName"
           value={BankDetails.BankName}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.BankName}
@@ -291,12 +305,14 @@ export const UpdateBankDetails = () => {
           name="AccountName"
           value={BankDetails.AccountName}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.AccountName}
         </small>
       </Form.Group>
-      <div className="text-center mb-4">
+      <div className="mb-4">
         <Button type="submit" className="border-0" onClick={handleSubmit}>
           Update
         </Button>
@@ -406,6 +422,8 @@ export const UserUpdateProfile = () => {
           name="FirstName"
           value={UserDetails.FirstName}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.FirstName}
@@ -419,6 +437,8 @@ export const UserUpdateProfile = () => {
           name="LastName"
           value={UserDetails.LastName}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.LastName}
@@ -433,6 +453,8 @@ export const UserUpdateProfile = () => {
           name="Email"
           value={UserDetails.Email}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.Email}
@@ -446,6 +468,8 @@ export const UserUpdateProfile = () => {
           name="PhoneNumber"
           value={UserDetails.PhoneNumber}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.PhoneNumber}
@@ -460,6 +484,8 @@ export const UserUpdateProfile = () => {
           name="NewPassword"
           value={UserDetails.NewPassword}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.NewPassword}
@@ -473,13 +499,15 @@ export const UserUpdateProfile = () => {
           name="ConfirmPassword"
           value={UserDetails.ConfirmPassword}
           onChange={handleChange}
+          className=""
+          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.ConfirmPassword}
         </small>
       </Form.Group>
 
-      <div className="text-center mb-4">
+      <div className="mb-4">
         <Button type="submit" className="border-0" onClick={handleSubmit}>
           Update Profile
         </Button>
