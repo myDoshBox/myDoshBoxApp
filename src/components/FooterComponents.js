@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import FooterLogo from "../assets/images/FooterLogo.jpg";
+import FooterLogo from "../images/FooterLogo.jpg";
 import { HiArrowNarrowUp } from "react-icons/hi";
 import { BsInstagram } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -9,15 +9,15 @@ import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
 import { SiWhatsapp } from "react-icons/si";
 
-const FooterComponents = () => {
+export const FooterComponents = () => {
   return (
     <>
-      <Container fluid className="BgColor p-3">
+      <div className="BgColor col-12">
         {/* Back to top button Starts */}
         <div className="d-flex justify-content-end">
           <button
             type="button"
-            className=" border border-3 rounded-1 btn btn-lg  p-2 "
+            className=" border border-3 rounded-1 btn btn-lg "
             id="GoTop"
           >
             <HiArrowNarrowUp color="white" size="30px" />
@@ -28,11 +28,11 @@ const FooterComponents = () => {
         {/* Footer Menu Section Starts */}
         <div>
           <Row className="mt-2 ">
-            <div className=" col mb-4  ">
+            <div className="col mb-4">
               <img src={FooterLogo} className="img-fluid p-3 " alt="" />
             </div>
             {/* First Section */}
-            <div className=" col mb-2  ms-3 ">
+            <div className="col mb-2">
               <h5 className="text-white">The Projects</h5>
               <ul className="list-unstyled">
                 <li>
@@ -89,7 +89,7 @@ const FooterComponents = () => {
               </ul>
             </div>
             {/* Third Section */}
-            <div className="col-md-5 mx-2">
+            <div className="col-md-5">
               <Row className=" ">
                 <h5 className="text-white">ADDRESS</h5>
                 <p className="text-white  text-wrap">
@@ -150,7 +150,7 @@ const FooterComponents = () => {
           </Row>
         </div>
         {/* Footer Menu Section Ends */}
-      </Container>
+      </div>
     </>
   );
 };

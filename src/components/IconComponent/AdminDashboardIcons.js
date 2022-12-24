@@ -123,8 +123,17 @@ export const ArrowDownIcon = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path d="M5.36173 1L5.36173 11ZM9.48846 6.625L5.36173 11L1.23499 6.625" fill="#D9D9D9"/>
-      <path d="M5.36173 1L5.36173 11M9.48846 6.625L5.36173 11L1.23499 6.625" stroke="#B90E0A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path
+        d="M5.36173 1L5.36173 11ZM9.48846 6.625L5.36173 11L1.23499 6.625"
+        fill="#D9D9D9"
+      />
+      <path
+        d="M5.36173 1L5.36173 11M9.48846 6.625L5.36173 11L1.23499 6.625"
+        stroke="#B90E0A"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };
@@ -141,10 +150,17 @@ export const ArrowUpIcon = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path d="M5.36173 1L5.36173 11ZM9.48846 6.625L5.36173 11L1.23499 6.625" fill="#D9D9D9"/>
-      <path d="M5.40234 11V1M5.40234 1L1.5 5.375M5.40234 1L9.30469 5.375" stroke="#37FD12"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path
+        d="M5.36173 1L5.36173 11ZM9.48846 6.625L5.36173 11L1.23499 6.625"
+        fill="#D9D9D9"
+      />
+      <path
+        d="M5.40234 11V1M5.40234 1L1.5 5.375M5.40234 1L9.30469 5.375"
+        stroke="#37FD12"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };
-
-

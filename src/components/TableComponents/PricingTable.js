@@ -1,17 +1,17 @@
 import React from "react";
 
-const Tablecomponents = () => {
+export const PricingTable = () => {
   return (
     <>
-      <div className="container mt-4">
+      <div className="col-6">
         <h4>Low Fees</h4>
-        <p>
+        <p className="text-wrap">
           The low cost of our secure auto escrow service is either paid by the
           Buyer, the Seller, or shared between them.
         </p>
       </div>
       {/* table Section starts */}
-      <section className="container ">
+      <section className="col-8 ">
         <table className=" table table-bordered border-white  w-75 ">
           <thead className="">
             <tr className="BgColor ">
@@ -42,5 +42,3 @@ const Tablecomponents = () => {
     </>
   );
 };
-
-export default Tablecomponents;

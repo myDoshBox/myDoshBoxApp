@@ -537,90 +537,96 @@ export const SellersEscrowInitiationForm = () => {
 //SellerDeliverGoodsForm
 export const SellerDeliverGoodsForm = () => {
   return (
-    <Container>
-      <Form className="deliver-goods-form">
-        <h3 className="text-center confirm-delivery-head">
-          Confirm Product At Delivery
-        </h3>
-        <p className="text-center confirm-delivery-pText">
-          Sincerely Acknowledge Product condition at point of delivery
-        </p>
-        <div className=" mb-3 d-flex justify-content-center">
-          <Form.Check
-            type="checkbox"
-            id="check1"
-            label=" I acknowledge that the product have no defects when being sent out for delivery "
-            required
-          />
+    <>
+      <div className="card shadow rounded-2 p-2" style={{ width: "42rem" }}>
+        <div class="card-body">
+          <div>
+            <h4 className="text-center ">Confirm Product At Delivery</h4>
+            <p className="text-center confirm-delivery-pText">
+              Sincerely Acknowledge Product condition at point of delivery
+            </p>
+          </div>
+          <Form>
+            <Form.Check
+              className="mb-4"
+              type="checkbox"
+              id="check1"
+              label=" I acknowledge that the product have no defects when being sent out for delivery "
+              required
+            />
+            <Form.Check
+              className="mb-4"
+              type="checkbox"
+              id="check1"
+              label=" I acknowledge that the product have no defects when being sent out for delivery "
+              required
+            />
+            <Form.Check
+              className="mb-4"
+              type="checkbox"
+              id="check1"
+              label=" I acknowledge that the product have no defects when being sent out for delivery "
+              required
+            />
+
+            <div className="d-flex justify-content-center pb-3 mt-3">
+              <ConfirmButton />
+            </div>
+          </Form>
         </div>
-        <div className=" mb-3 d-flex justify-content-center">
-          <Form.Check
-            type="checkbox"
-            id="check1"
-            label=" I acknowledge that the product have no defects when being sent out for delivery "
-            required
-          />
-        </div>
-        <div className=" mb-3 d-flex justify-content-center">
-          <Form.Check
-            type="checkbox"
-            id="check1"
-            label=" I acknowledge that the product have no defects when being sent out for delivery "
-            required
-          />
-        </div>
-        <div className="d-flex justify-content-center pb-3 mt-3">
-          <ConfirmButton />
-        </div>
-      </Form>
-    </Container>
+      </div>
+    </>
   );
 };
+
 //BuyerConfirmProductDeliveryForm
 export const BuyerConfirmProductDeliveryForm = () => {
   return (
-    <Container>
-      <div className="deliver-goods-form">
-        <h3 className="text-center confirm-delivery-head">
-          Confirm Completion / Delivery
-        </h3>
-        <p className="text-center confirm-delivery-pText">
-          Sincerely Acknowledge that you are satisfied with the goods delivered
-          or service provided{" "}
-        </p>
-        <Form>
-          <div className=" mb-3 d-flex justify-content-center">
-            <Form.Check
-              type="checkbox"
-              id="check1"
-              label=" I acknowledge that i am pleased with the goods received and have no complaints  "
-              required
-            />
+    <>
+      <div className="card shadow rounded-2" style={{ width: "42rem" }}>
+        <div className="card-body">
+          <div>
+            <h4 className="text-center">Confirm Completion / Delivery</h4>
+            <p className="text-center confirm-delivery-pText">
+              Sincerely Acknowledge that you are satisfied with the goods
+              delivered or service provided
+            </p>
+            <Form>
+              <Form.Check
+                className="mb-3"
+                type="checkbox"
+                id="check1"
+                label=" I acknowledge that i am pleased with the goods received and have no complaints  "
+                required
+              />
+
+              <Form.Check
+                className="mb-3"
+                type="checkbox"
+                id="check1"
+                label=" I acknowledge that i am pleased with the goods received and have no complaints  "
+                required
+              />
+
+              <Form.Check
+                className="mb-3"
+                type="checkbox"
+                id="check1"
+                label=" I acknowledge that i am pleased with the goods received and have no complaints  "
+                required
+              />
+
+              <div className="d-flex justify-content-center pb-3">
+                <ConfirmButton />
+              </div>
+            </Form>
           </div>
-          <div className=" mb-3 d-flex justify-content-center">
-            <Form.Check
-              type="checkbox"
-              id="check1"
-              label=" I acknowledge that i am pleased with the goods received and have no complaints  "
-              required
-            />
-          </div>
-          <div className=" mb-3 d-flex justify-content-center">
-            <Form.Check
-              type="checkbox"
-              id="check1"
-              label=" I acknowledge that i am pleased with the goods received and have no complaints  "
-              required
-            />
-          </div>
-          <div className="d-flex justify-content-center pb-3 mt-3">
-            <ConfirmButton />
-          </div>
-        </Form>
+        </div>
       </div>
-    </Container>
+    </>
   );
 };
+
 //BankTransferForm
 export const BankTransferForm = () => {
   const [bankTransfer, setBankTransfer] = useState({
@@ -659,17 +665,19 @@ export const BankTransferForm = () => {
   };
 
   return (
-    <Container>
-      <Form onSubmit={handleSubmit} className="bank-transfer-form pt-5">
-        <h3 className="text-center confirm-delivery-head ">
-          Bank Transfer Form
-        </h3>
+    <>
+      <Form
+        onSubmit={handleSubmit}
+        className=" shadow pb-1"
+        style={{ width: "44rem" }}
+      >
+        <h4 className="text-center mt-1">Bank Transfer Form</h4>
         <p className="text-center confirm-delivery-pText">
           Sincerely Acknowledge that you are satisfied with the goods delivered
           or service provided
         </p>
-        <Container>
-          <div className="account-details d-flex flex-column justify-content-center align-items-start mt-5 p-3">
+        <div className="d-flex flex-column ms-lg-5 account-details w-75 p-1 ">
+          <div className=" ">
             <p>
               Account Number: <b>0456536668</b>
             </p>
@@ -680,15 +688,15 @@ export const BankTransferForm = () => {
               Account Name: <b>Olasunkanmi Mohammed IDRIS </b>
             </p>
           </div>
-        </Container>
-        <Form.Group className="my-5  bank-transfer-form-field">
+        </div>
+        <Form.Group className="my-5">
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-4  text-md-end">
               <Form.Label className="bank-transfer-form-label">
                 Transaction ID
               </Form.Label>
             </div>
-            <div className="col-sm-12 col-md-8 col-lg-6">
+            <div className="col-lg-6">
               <Form.Control
                 type="text"
                 // placeholder="Enter buyers email"
@@ -701,7 +709,7 @@ export const BankTransferForm = () => {
             </div>
           </div>
         </Form.Group>
-        <Form.Group className="mb-5 bank-transfer-form-field">
+        <Form.Group className="mb-5">
           <div className="row align-items-center">
             <div className="col-md-4 col-sm-12 text-md-end">
               <Form.Label className="bank-transfer-form-label">
@@ -722,7 +730,7 @@ export const BankTransferForm = () => {
           </div>
         </Form.Group>
 
-        <Form.Group className="mb-5 bank-transfer-form-field">
+        <Form.Group className="mb-5">
           <div className="row align-items-center">
             <div className="col-md-4 col-sm-12 text-md-end">
               <Form.Label className="bank-transfer-form-label">
@@ -742,7 +750,7 @@ export const BankTransferForm = () => {
             </div>
           </div>
         </Form.Group>
-        <Form.Group className="mb-5 bank-transfer-form-field">
+        <Form.Group className="mb-5">
           <div className="row align-items-center">
             <div className="col-md-4 col-sm-12 text-md-end">
               <Form.Label className="bank-transfer-form-label">
@@ -762,7 +770,7 @@ export const BankTransferForm = () => {
             </div>
           </div>
         </Form.Group>
-        <Form.Group className="mb-5 bank-transfer-form-field">
+        <Form.Group className="mb-5">
           <div className="row align-items-center">
             <div className="col-md-4 col-sm-12 text-md-end">
               <Form.Label className="bank-transfer-form-label">
@@ -783,6 +791,6 @@ export const BankTransferForm = () => {
           </div>
         </Form.Group>
       </Form>
-    </Container>
+    </>
   );
 };
