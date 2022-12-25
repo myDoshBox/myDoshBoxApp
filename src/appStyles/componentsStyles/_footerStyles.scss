@@ -1,5 +1,9 @@
 @use "../generalStyles/color" as *;
 
-.BgColor {
-	background-color: $pryColor;
+.FooterBgColor {
+  background-color: $pryColor;
+  nav ul li a {
+    text-decoration: none;
+    color: rgba(220, 215, 215, 0.821);
+  }
 }
