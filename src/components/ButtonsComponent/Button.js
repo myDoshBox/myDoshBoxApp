@@ -30,7 +30,7 @@ export const GeneralBtnStyle1Icon = ({ text, link, lefticon, righticon }) => {
     <a
       href={link}
       type="submit"
-      className="GeneralBtnStyle1 btn all-btn text-white"
+      className="GeneralBtnStyle1 btn all-btn text-white "
     >
       {lefticon}
       {text}

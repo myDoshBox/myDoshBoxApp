@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap";
 import {
   GeneralBtnStyle1,
-  GeneralBtnStyle2,
   GeneralBtnStyle1Icon,
-} from "../Button";
+} from "../ButtonsComponent/Button";
+import { NextIcon, BackIcon } from "../IconComponent/NavigationAndViewIcon";
 
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import bank from "../../images/bank.jpg";
@@ -60,7 +60,7 @@ export const TransactionDetails = ({
         class="card rounded-0 border-0 shadow rounded-1"
         style={{ width: "50rem" }}
       >
-        <header className="mt-3">
+        <header className="mt-3 p-4">
           <h4 className="text-center">{heading}</h4>
           <p className="text-center text-muted fw-light">{sub_text}</p>
         </header>
@@ -113,8 +113,8 @@ export const TransactionDetails = ({
             </p>
           </div>
           <div className="d-flex justify-content-between container mt-5">
-            <GeneralBtnStyle1Icon text="Back" />
-            <GeneralBtnStyle1Icon text="Proceed" />
+            <GeneralBtnStyle1Icon lefticon={<BackIcon />} text="Back" />
+            <GeneralBtnStyle1Icon text="Proceed" rightIcon={<NextIcon />} />
           </div>
         </div>
       </div>
