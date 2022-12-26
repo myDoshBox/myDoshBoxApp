@@ -1,158 +1,132 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { ScrollUpIcon } from "./IconComponent/NavigationAndViewIcon";
+import { GeneralBtnStyle1Icon } from "./ButtonsComponent/Button";
 import FooterLogo from "../images/FooterLogo.jpg";
-import { HiArrowNarrowUp } from "react-icons/hi";
-import { BsInstagram } from "react-icons/bs";
-import { GrLinkedinOption } from "react-icons/gr";
-import { ImFacebook } from "react-icons/im";
-import { BsTwitter } from "react-icons/bs";
-import { SiWhatsapp } from "react-icons/si";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  FacebookIcon,
+  TwitterIcon,
+  WhatsAppIcon,
+} from "./IconComponent/SocialMediaIcons";
 
 export const FooterComponents = () => {
   return (
-    <>
-      <div className="BgColor col-12">
-        {/* Back to top button Starts */}
-        <div className="d-flex justify-content-end">
-          <button
-            type="button"
-            className=" border border-3 rounded-1 btn btn-lg "
-            id="GoTop"
-          >
-            <HiArrowNarrowUp color="white" size="30px" />
-          </button>
-        </div>
-        {/* Back to top button Ends */}
-
-        {/* Footer Menu Section Starts */}
-        <div>
-          <Row className="mt-2 ">
-            <div className="col mb-4">
-              <img src={FooterLogo} className="img-fluid p-3 " alt="" />
-            </div>
-            {/* First Section */}
-            <div className="col mb-2">
-              <h5 className="text-white">The Projects</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Sevices
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Home
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Second Section */}
-            <div className="col mb-2">
-              <h5 className="text-white">Support</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Terms Of Use
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="text-white text-decoration-none">
-                    Customer Care
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Third Section */}
-            <div className="col-md-5">
-              <Row className=" ">
-                <h5 className="text-white">ADDRESS</h5>
-                <p className="text-white  text-wrap">
-                  The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate
-                  Off CMD Road (beside Secretariat/Magodo gate) Lagos Nigeria
-                </p>
-              </Row>{" "}
-              <Row className="mt-3 col-sm-12  ">
-                {/* input section Start */}
-                <div className="input-group mb-3 ">
-                  <input
-                    type="text"
-                    className="form-control text-wrap text-break "
-                    placeholder="Enter email to receive updates and newsletter"
-                    aria-label="Recipient's Email"
-                    aria-describedby="basic-addon2"
-                  />
-                  <span className="input-group-text " id="basic-addon2">
-                    SUBSCRIBE
-                  </span>
-                  {/* input section End */}
-                </div>
-                <p className="text-white ">Connect With Us</p>
-                <div className="p-3 ">
-                  <a
-                    href=""
-                    className="   border border-white  rounded-circle p-2 mx-1"
-                  >
-                    <BsInstagram color="white" size="20px" />
-                  </a>
-                  <a
-                    href=""
-                    className=" border border-white  rounded-circle p-2 mx-1"
-                  >
-                    <GrLinkedinOption color="white" size="20px" />
-                  </a>
-                  <a
-                    href=""
-                    className=" border border-white  rounded-circle p-2 mx-1"
-                  >
-                    <ImFacebook color="white" size="20px" />
-                  </a>
-                  <a
-                    href=""
-                    className=" border border-white  rounded-circle p-2 mx-1"
-                  >
-                    <BsTwitter color="white" size="20px" />
-                  </a>
-                  <a
-                    href=""
-                    className=" border border-white  rounded-circle p-2 mx-1"
-                  >
-                    <SiWhatsapp color="white" size="20px" />
-                  </a>
-                </div>
-              </Row>
-            </div>
-          </Row>
-        </div>
-        {/* Footer Menu Section Ends */}
+    <footer className="FooterBgColor">
+      {/* Back to Top Icon Section starts  */}
+      <div className="d-flex justify-content-end ">
+        <GeneralBtnStyle1Icon righticon={<ScrollUpIcon />} />
       </div>
-    </>
+      {/* Back to Top Icon Section Ends */}
+      {/* Footer Menu Section Starts  */}
+      <nav className="ms-1 row text-white  mx-auto mt-3">
+        <div className="col-lg-1 col-sm-12 col-md-6 ">
+          <img src={FooterLogo} className=" w-75" alt="" />
+        </div>
+        <div className="col-lg-3 col-sm-12 col-md-6 d-flex mb-4 sm-ms-5">
+          <div className="col-4 col-sm-6">
+            <h6>The Project</h6>
+            <ul className="fs-6 list-inline">
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">About Us</a>
+              </li>
+              <li>
+                <a href="">Services</a>
+              </li>
+              <li>
+                <a href="">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-7 col-sm-6">
+            <h6>Support</h6>
+            <ul className="fs-6 list-inline  text-white">
+              <li>
+                <a href="">Contact</a>
+              </li>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">Terms Of Use</a>
+              </li>
+              <li>
+                <a href="">Private Policy</a>
+              </li>
+              <li>
+                <a href="">Customer Care</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6 col-sm-12 ">
+          <h6 className="text-center">ADDRESS</h6>
+          <p className="text-break text-white opacity-75">
+            The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate Off
+            CMD Road (beside Secretariat/Magodo gate) Lagos Nigeria
+          </p>
+        </div>
+        <div className="col-lg-4 col-sm-12 col-md-6">
+          <div className="row">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                className="form-control placeholder "
+                placeholder="Enter email to receive updates and newsletter"
+                aria-label="Subscribe"
+                aria-describedby="basic-addon2"
+              />
+              <span
+                className="input-group-text btn border text-white "
+                id="basic-addon2"
+              >
+                SUBSCRIBE
+              </span>
+            </div>
+          </div>
+          <div className="row opacity-75">
+            <h6>Connect With US</h6>
+            {/* Social Medial Icon Sectin Starts */}
+            <span className="mt-2 mb-5">
+              <a
+                href=""
+                className="border border-white  rounded-circle p-2 me-2 "
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href=""
+                className="border border-white  rounded-circle p-2 me-2 "
+              >
+                <LinkedinIcon />
+              </a>
+              <a
+                href=""
+                className="border border-white  rounded-circle p-2 me-2"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                href=""
+                className="border border-white  rounded-circle p-2 me-2 "
+              >
+                <TwitterIcon />
+              </a>
+              <a
+                href=""
+                className="border border-white  rounded-circle p-2 me-2 "
+              >
+                <WhatsAppIcon />
+              </a>
+            </span>
+            {/* Social Medial Icon Sectin Ends */}
+          </div>
+        </div>
+      </nav>
+      {/* Footer Menu Section Ends  */}
+    </footer>
   );
 };
-
-export default FooterComponents;

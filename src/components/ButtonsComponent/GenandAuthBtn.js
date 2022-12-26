@@ -14,13 +14,7 @@ import { Icon } from "@iconify/react";
 // LearnMoreCardButton - className(d-none d-sm-block LearnMoreCardButton)
 // styles for GeneralBtnStyle1 - GeneralBtnStyle1 btn all-btn text-white
 // styles for GeneralBtnStyle2 - GeneralBtnStyle2 btn all-btn text-white
-export const GeneralBtnStyle = ({
-	text,
-	link,
-	lefticon,
-	righticon,
-	styles,
-}) => {
+export const GeneralBtn = ({ text, link, lefticon, righticon, styles }) => {
 	return (
 		<a href={link} type="submit" className={styles}>
 			{lefticon}

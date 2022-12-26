@@ -2,6 +2,7 @@ import { Button } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 
 export const CalendarButton = () => {
+	today = new Date();
 	return (
 		<Button className="CalendarBtnStyle border-0">
 			<span className="">
@@ -11,7 +12,8 @@ export const CalendarButton = () => {
 					color="#A2A5AA"
 					width="20"
 				/>
-				8 Aug 20 - 14 Aug 22
+				{/* {8 Aug 20 - 14 Aug 22} */}
+				{today.getTime()}
 			</span>
 		</Button>
 	);

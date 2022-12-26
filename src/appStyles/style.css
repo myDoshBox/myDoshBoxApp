@@ -1476,8 +1476,12 @@ input[type=color]:focus,
     font-size: 0.4375rem !important;
   }
 }
-.BgColor {
+.FooterBgColor {
   background-color: #006747;
+}
+.FooterBgColor nav ul li a {
+  text-decoration: none;
+  color: rgba(220, 215, 215, 0.821);
 }
 
 .transaction-table thead tr th,

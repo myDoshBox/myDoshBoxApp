@@ -3,7 +3,7 @@ import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import bank from "../../images/bank.jpg";
 import atm from "../../images/atm.jpg";
 import product from "../../images/productimage.jpg";
-import { GeneralBtnStyle } from "../ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { BackIcon, NextIcon } from "../IconComponent/NavigationAndViewIcon";
 
 // DashboardConflictCards (Buying,Selling,InitiateTransactionCards,SettledTransactionsCard, ConflictCards)
@@ -108,12 +108,12 @@ export const TransactionDetails = ({
 						</p>
 					</div>
 					<div className="d-flex justify-content-between container mt-5">
-						<GeneralBtnStyle
+						<GeneralBtn
 							text="Back"
 							styles="GeneralBtnStyle1 btn all-btn text-white"
 							icon={<BackIcon />}
 						/>
-						<GeneralBtnStyle
+						<GeneralBtn
 							text="Proceed"
 							styles="GeneralBtnStyle1 btn all-btn text-white"
 							icon={<NextIcon />}
