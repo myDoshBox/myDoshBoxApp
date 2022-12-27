@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Form, Container } from "react-bootstrap";
-import {
-  ProceedButton,
-  ConfirmButton,
-} from "../ButtonsComponent/TransactionButtons";
+// import {
+//   ProceedButton,
+//   ConfirmButton,
+// } from "../ButtonsComponent/TransactionButtons";
 
 //BuyerEscrowInitiationForm
 export const BuyerEscrowInitiationForm = () => {
@@ -260,7 +260,7 @@ export const BuyerEscrowInitiationForm = () => {
           </div>
         </Form.Group>
         <div className="d-flex justify-content-center pb-5 mt-5">
-          <ProceedButton />
+          {/* <ProceedButton /> */}
         </div>
       </Form>
     </Container>
@@ -528,7 +528,7 @@ export const SellersEscrowInitiationForm = () => {
           </div>
         </Form.Group>
         <div className="d-flex justify-content-center pb-5 mt-5">
-          <ProceedButton />
+          {/* <ProceedButton /> */}
         </div>
       </Form>
     </Container>
@@ -570,7 +570,7 @@ export const SellerDeliverGoodsForm = () => {
             />
 
             <div className="d-flex justify-content-center pb-3 mt-3">
-              <ConfirmButton />
+              {/* <ConfirmButton /> */}
             </div>
           </Form>
         </div>
@@ -617,7 +617,7 @@ export const BuyerConfirmProductDeliveryForm = () => {
               />
 
               <div className="d-flex justify-content-center pb-3">
-                <ConfirmButton />
+                {/* <ConfirmButton /> */}
               </div>
             </Form>
           </div>

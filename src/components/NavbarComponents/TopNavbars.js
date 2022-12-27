@@ -2,7 +2,9 @@ import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../images/doshlogo.jpg";
 import logo2 from "../../images/doshlogolight.jpg";
 import image from "../../images/Image.jpg";
-import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
+// import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { Link } from "react-router-dom";
 
 export const GuestNavbar = () => {
   return (
@@ -22,8 +24,10 @@ export const GuestNavbar = () => {
         </svg>
       </Navbar.Toggle>
 
-      <Navbar.Brand href="#home" className="bigLogo">
-        <img src={logo} alt="logo" className="my-auto" />
+      <Navbar.Brand className="bigLogo">
+        <Link to="/">
+          <img src={logo} alt="logo" className="my-auto" />
+        </Link>
       </Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto nav-text">
@@ -49,23 +53,37 @@ export const GuestNavbar = () => {
               <img src={logo2} alt="logo" />
             </Navbar.Brand>
           </div>
-          <Nav.Link href="#home" className="nav-links">
-            Home
+          <Nav.Link>
+            <Link to="/" className="nav-links">
+              Home
+            </Link>
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-links">
-            About Us
+          <Nav.Link>
+            <Link to="/aboutus" className="nav-links">
+              About Us
+            </Link>
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-links">
-            Pricing
+          <Nav.Link>
+            <Link to="/pricingpage" className="nav-links">
+              Pricing
+            </Link>
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-links">
-            FAQs
+          <Nav.Link>
+            <Link to="/faqs" className="nav-links">
+              FAQs
+            </Link>
           </Nav.Link>
-          <Nav.Link href="#link" className="nav-links">
-            Contact
+          <Nav.Link>
+            <Link to="/contactus" className="nav-links">
+              Contact
+            </Link>
           </Nav.Link>
           <Nav.Link href="#link" className="nav-links nav-btn pb-5">
-            <GuestNavSignInButton />
+            {/* <GuestNavSignInButton /> */}
+            <GeneralBtn
+              text={"Sign Up"}
+              styles={"GeneralBtnStyle1 btn all-btn text-white"}
+            />
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

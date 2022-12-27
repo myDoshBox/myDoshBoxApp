@@ -214,9 +214,9 @@ export const ContestForm = () => {
 // ComplaintForm starts
 
 export const ComplaintForm = () => {
-  const [FirstName, setFirstName] = useState("");
+  // const [FirstName, setFirstName] = useState("");
 
-  const [Email, setEmail] = useState("");
+  // const [Email, setEmail] = useState("");
 
   const [PhoneNumber, setPhoneNumber] = useState("");
 
@@ -233,7 +233,7 @@ export const ComplaintForm = () => {
   };
   return (
     <>
-      <Container className="col-8">
+      <Container className="col-md-8 ">
         <div className="mt-5 text-center ">
           <h4 className="fw-bold">COMPLAINT FORM</h4>
         </div>
@@ -241,7 +241,7 @@ export const ComplaintForm = () => {
         {/* Form Section Starts */}
 
         <form className="form mt-5">
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <input
               onChange={(e) => setFirstName(e.target.value)}
               value={FirstName}
@@ -275,7 +275,7 @@ export const ComplaintForm = () => {
             >
               *This field is required
             </span>
-          </div>
+          </div> */}
           <div className="mb-4">
             <input
               onChange={(e) => setPhoneNumber(e.target.value)}
@@ -320,7 +320,8 @@ export const ComplaintForm = () => {
               <option selected>Failed Transactions</option>
               <option value="1">Wrong Items</option>
               <option value="2">Incomplete Items</option>
-              <option value="3">Other</option>
+              <option value="3">Incomplete Payment</option>
+              <option value="4">Other</option>
             </select>
 
             <span
