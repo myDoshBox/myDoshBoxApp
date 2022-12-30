@@ -6,6 +6,7 @@
   @include pFont;
   margin: 10px 20px !important;
   color: black !important;
+  text-decoration: none;
 }
 
 .hamburgerIcon,
@@ -22,7 +23,7 @@
   margin: 10px 20px !important;
 }
 .bigLogo {
-  transform: translateY(-50px);
+  transform: translateY(-20px);
 }
 
 .smallLogo {
