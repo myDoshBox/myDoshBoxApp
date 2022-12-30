@@ -8,19 +8,16 @@ import FAQs from "./pages/GENERAL_PAGES/FAQs";
 
 function App() {
   return (
-    <AboutUs />
-
-    //     <Router>
-    //
-    //       <Routes>
-    //         {/* GENERAL PAGES */}
-    //         <Route path="/" element={<Homepage />} />
-    //         <Route path="aboutus" element={<AboutUs />} />
-    //         <Route path="contactus" element={<ContactUs />} />
-    //         <Route path="pricingpage" element={<PricingPage />} />
-    //         <Route path="faqs" element={<FAQs />} />
-    //       </Routes>
-    //     </Router>
+    <Router>
+      <Routes>
+        {/* GENERAL PAGES */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="contactus" element={<ContactUs />} />
+        <Route path="pricingpage" element={<PricingPage />} />
+        <Route path="faqs" element={<FAQs />} />
+      </Routes>
+    </Router>
   );
 }
 
