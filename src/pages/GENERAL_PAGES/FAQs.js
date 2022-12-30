@@ -1,11 +1,11 @@
 import faqData from "../../data/dummyData/faqData.json"
-// import {GuestNavbar} from "../../components/NavbarComponents/TopNavbars"
+import {GuestNavbar} from "../../components/NavbarComponents/TopNavbars"
 
 const FAQs = () => {
   return (
     <>
-      {/* <GuestNavbar /> */}
-      <div className="FAQs row justify-content-center gy-5 mx-3 mt-5">
+      <GuestNavbar />
+      <div className="FAQs row justify-content-center gy-5 mx-3 mt-3">
       {faqData.faqs.map(faq => (
         <div key={faq.id} className="col-md-6 px-3">
           <h6 className="fs-6 text-white text-center py-3 mb-0 faqs-header">{faq.header}</h6>
@@ -30,7 +30,7 @@ const FAQs = () => {
                 id={`collapse-${accordion.id}`}
                 className="accordion-collapse collapse"
                 aria-labelledby="flush-headingOne"
-                data-bs-parent={`#accordion-${accordion.id}`}              >
+                data-bs-parent={`#accordion-${accordion.id}`}>
                 <div className="accordion-body">
                   {accordion.details}
                 </div>
