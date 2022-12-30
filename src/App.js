@@ -9,6 +9,7 @@ import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
       <Routes>
         {/* GENERAL PAGES */}
@@ -19,6 +20,21 @@ function App() {
         <Route path="faqs" element={<FAQs />} />
       </Routes>
     </Router>
+=======
+    <AboutUs />
+
+    //     <Router>
+    //
+    //       <Routes>
+    //         {/* GENERAL PAGES */}
+    //         <Route path="/" element={<Homepage />} />
+    //         <Route path="aboutus" element={<AboutUs />} />
+    //         <Route path="contactus" element={<ContactUs />} />
+    //         <Route path="pricingpage" element={<PricingPage />} />
+    //         <Route path="faqs" element={<FAQs />} />
+    //       </Routes>
+    //     </Router>
+>>>>>>> b0287d836a12853376bca533df566cb5c07ab2b3
   );
 }
 

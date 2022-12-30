@@ -1,76 +1,76 @@
 {
-	"corevalues": [
-		{
-			"id": 1,
-			"title": "Daily Hardwork",
-			"subtitle": "lorem ipsum description",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
-		},
-		{
-			"id": 2,
-			"title": "Passion before money",
-			"subtitle": "lorem ipsum description",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
-		},
-		{
-			"id": 3,
-			"title": "Teamwork drives result",
-			"subtitle": "lorem ipsum description",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
-		}
-	],
+  "corevalues": [
+    {
+      "id": 1,
+      "title": "Daily Hardwork",
+      "subtitle": "lorem ipsum description",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
+    },
+    {
+      "id": 2,
+      "title": "Passion before money",
+      "subtitle": "lorem ipsum description",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
+    },
+    {
+      "id": 3,
+      "title": "Teamwork drives result",
+      "subtitle": "lorem ipsum description",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis."
+    }
+  ],
 
-	"businessteam": [
-		{
-			"id": 1,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "Edward Tope",
-			"job_description": "design"
-		},
+  "businessteam": [
+    {
+      "id": 1,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "Edward Tope",
+      "job_description": "design"
+    },
 
-		{
-			"id": 2,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "Seyi Bioku",
-			"job_description": "CEO"
-		}
-	],
+    {
+      "id": 2,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "Seyi Bioku",
+      "job_description": "CEO"
+    }
+  ],
 
-	"marketing_dev_team": [
-		{
-			"id": 1,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "Ope",
-			"job_description": "designer"
-		},
+  "marketing_dev_team": [
+    {
+      "id": 1,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "Ope",
+      "job_description": "designer"
+    },
 
-		{
-			"id": 2,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "titi",
-			"job_description": "business developer"
-		}
-	],
+    {
+      "id": 2,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "titi",
+      "job_description": "business developer"
+    }
+  ],
 
-	"founder_team": [
-		{
-			"id": 1,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "joy",
-			"job_description": "developer"
-		},
+  "founder_team": [
+    {
+      "id": 1,
+      "images": "../../images/contactImgs/aboutusPix.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "joy",
+      "job_description": "developer"
+    },
 
-		{
-			"id": 2,
-			"images": "../../images/aboutusPix2.png",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
-			"name": "jack",
-			"job_description": "game dev"
-		}
-	]
+    {
+      "id": 2,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "jack",
+      "job_description": "game dev"
+    }
+  ]
 }
