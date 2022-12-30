@@ -1,0 +1,75 @@
+{
+  "ProcessFlow": [
+    {
+      "id": 1,
+      "image": "../../images/contactImgs/buyer.png",
+      "title": "Buyer and Seller agree to terms"
+    },
+    {
+      "id": 2,
+      "image": "../../images/contactImgs/Order.png",
+      "title": "Buyer and Seller agree to terms"
+    },
+    {
+      "id": 3,
+      "image": "../../images/contactImgs/buyer.png",
+      "title": "Buyer and Seller agree to terms"
+    },
+    {
+      "id": 4,
+      "image": "../../images/contactImgs/Order.png",
+      "title": "Buyer and Seller agree to terms"
+    }
+  ],
+
+  "WhyChooseUs": [
+    {
+      "id": 1,
+      "image": "../../images/contactImgs/email.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 2,
+      "image": "../../images/contactImgs/calculator.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 3,
+      "image": "../../images/contactImgs/calendar.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 4,
+      "image": "../../images/contactImgs/calculator.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 5,
+      "image": "../../images/contactImgs/email.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 6,
+      "image": "../../images/contactImgs/calculator.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 7,
+      "image": "../../images/contactImgs/calendar.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    },
+    {
+      "id": 8,
+      "image": "../../images/contactImgs/calculator.png",
+      "title": "UNLIMITED EMAIL ADDRESSES",
+      "description": "Lorem ipsum consectetur dolor elit Ut et massa consectetur"
+    }
+  ]
+}

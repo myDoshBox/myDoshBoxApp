@@ -2,64 +2,67 @@
 @use "../generalStyles/fonts" as *;
 
 @mixin notificationStyle {
-	width: 180px;
-	height: 30px;
-	border-radius: 20px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .completed,
 .resolved {
-	@include notificationStyle;
-	@include notificationFont;
-	color: $pryColor !important;
-	background-color: $completedBackgroundColor;
+  @include notificationStyle;
+  @include notificationFont;
+  color: $pryColor !important;
+  background-color: $completedBackgroundColor;
 }
 
 .canceled,
 .unresolved {
-	@include notificationStyle;
-	@include notificationFont;
-	color: $canceledTextColor;
-	background-color: $canceledBgColor;
+  @include notificationStyle;
+  @include notificationFont;
+  color: $canceledTextColor;
+  background-color: $canceledBgColor;
 }
 
 .refunded {
-	@include notificationStyle;
-	@include notificationFont;
-	color: $refundedTextColor;
-	background-color: $refundedBgColor;
+  @include notificationStyle;
+  @include notificationFont;
+  color: $refundedTextColor;
+  background-color: $refundedBgColor;
 }
 
 .dispute {
-	@include notificationFont;
-	@include notificationStyle;
-	color: $inDisputeTextColor;
-	background-color: $inDisputeBgColor;
+  @include notificationFont;
+  @include notificationStyle;
+  color: $inDisputeTextColor;
+  background-color: $inDisputeBgColor;
 }
 .pending-confirmation {
-	@include notificationFont;
-	@include notificationStyle;
-	color: $pendingConfirmationTextColor;
-	background-color: $pendingConfirmationBgColor;
+  @include notificationFont;
+  @include notificationStyle;
+  color: $pendingConfirmationTextColor;
+  background-color: $pendingConfirmationBgColor;
 }
 
 .awaiting {
-	@include notificationStyle;
-	@include notificationFont;
-	color: $awaitingDeliveryTextColor;
-	background-color: $awaitingDeliveryBgColor;
+  @include notificationStyle;
+  @include notificationFont;
+  color: $awaitingDeliveryTextColor;
+  background-color: $awaitingDeliveryBgColor;
 }
 
 .pending-payment {
-	@include notificationStyle;
-	@include notificationFont;
-	color: $pendingPaymentTextColor;
-	background-color: $pendingPaymentBgColor;
+  @include notificationStyle;
+  @include notificationFont;
+  color: $pendingPaymentTextColor;
+  background-color: $pendingPaymentBgColor;
 }
 
+.PartnerStyle {
+  background-color: #d9ebe5;
+}
 // @use "../color" as *;
 // @use "../fonts" as *;
 
@@ -80,17 +83,17 @@
 // }
 
 @media screen and (max-width: 687px) {
-	.completed,
-	.awaiting,
-	.canceled,
-	.dispute,
-	.pending-confirmation,
-	.pending-payment,
-	.refunded,
-	.resolved,
-	.unresolved {
-		width: 80px !important;
-		height: 20px !important;
-		font-size: 0.4375rem !important;
-	}
+  .completed,
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 0.4375rem !important;
+  }
 }
