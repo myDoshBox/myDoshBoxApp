@@ -595,13 +595,7 @@
     background-color:  white;
 } 
 
-.accordion-button:focus{
-  outline: 0 !important;
-  box-shadow: none;
-  border-color: rgba(0,0,0,.125);
-}
-
-.accordion-button:not(.collapsed):focus {
+.accordion-button:focus, .accordion-button:not(.collapsed):focus {
   outline: 0 !important;
   box-shadow: none;
   border-color: rgba(0,0,0,.125);
