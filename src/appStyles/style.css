@@ -808,6 +808,28 @@ p {
   font-size: 0.875rem !important;
 }
 
+.FAQs {
+  --bs-gutter-x: 0;
+  color: #66a491;
+}
+.FAQs .faqs-header {
+  background-color: #006747;
+}
+.FAQs .accordion-button:not(.collapsed) {
+  color: unset;
+  background-color: white;
+}
+.FAQs .accordion-button:focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+.FAQs .accordion-button:not(.collapsed):focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+
 .BgColor {
   background-color: #459079;
 }
