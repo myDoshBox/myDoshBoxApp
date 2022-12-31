@@ -1214,7 +1214,7 @@ input[type=color]:focus,
 }
 
 .bigLogo {
-  transform: translateY(-20px);
+  transform: translateY(-30px);
 }
 
 .smallLogo {
@@ -1232,10 +1232,6 @@ input[type=color]:focus,
 
 .form-control {
   box-shadow: none !important;
-}
-
-.nav-btn {
-  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 280px) {
@@ -1256,9 +1252,7 @@ input[type=color]:focus,
 @media screen and (max-width: 992px) {
   .nav-text {
     background-color: #006747;
-    position: absolute;
-    width: 100%;
-    transform: translateY(-50px);
+    width: 100% !important;
   }
   .nav-links {
     color: white !important;
@@ -1268,7 +1262,6 @@ input[type=color]:focus,
   .guest-nav {
     margin: 0px !important;
     padding: 0px !important;
-    position: relative;
   }
   .closeIcon {
     display: block;
