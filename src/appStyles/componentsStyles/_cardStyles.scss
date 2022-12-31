@@ -575,3 +575,23 @@
     font-size: 0.875rem !important;
   }
 }
+
+
+// FAQ Styles
+.FAQs {
+  --bs-gutter-x: 0;
+  color: $pryColorVariant;
+  .faqs-header {
+   background-color: $pryColor;
+  }
+  .accordion-button:not(.collapsed) {
+    color: unset;
+    background-color:  white;
+} 
+
+.accordion-button:focus, .accordion-button:not(.collapsed):focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
+}
+}

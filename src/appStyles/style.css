@@ -807,6 +807,23 @@ p {
   font-size: 0.875rem !important;
 }
 
+.FAQs {
+  --bs-gutter-x: 0;
+  color: #66a491;
+}
+.FAQs .faqs-header {
+  background-color: #006747;
+}
+.FAQs .accordion-button:not(.collapsed) {
+  color: unset;
+  background-color: white;
+}
+.FAQs .accordion-button:focus, .FAQs .accordion-button:not(.collapsed):focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+
 .BgColor {
   background-color: #459079;
 }
@@ -1195,6 +1212,7 @@ input[type=color]:focus,
   letter-spacing: 0rem;
   margin: 10px 20px !important;
   color: black !important;
+  text-decoration: none;
 }
 
 .hamburgerIcon,
@@ -1212,7 +1230,7 @@ input[type=color]:focus,
 }
 
 .bigLogo {
-  transform: translateY(-50px);
+  transform: translateY(-20px);
 }
 
 .smallLogo {
@@ -1458,6 +1476,10 @@ input[type=color]:focus,
   letter-spacing: 0rem;
   color: rgb(165, 42, 42);
   background-color: rgba(165, 42, 42, 0.1);
+}
+
+.PartnerStyle {
+  background-color: #d9ebe5;
 }
 
 @media screen and (max-width: 687px) {
