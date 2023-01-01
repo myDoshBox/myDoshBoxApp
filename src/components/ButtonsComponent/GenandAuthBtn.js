@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 // GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
 
@@ -15,11 +15,11 @@ import { Icon } from "@iconify/react";
 // styles for GeneralBtnStyle1 - GeneralBtnStyle1 btn all-btn text-white
 // styles for GeneralBtnStyle2 - GeneralBtnStyle2 btn all-btn text-white
 export const GeneralBtn = ({ text, link, lefticon, righticon, styles }) => {
-	return (
-		<a href={link} type="submit" className={styles}>
-			{lefticon}
-			<span className="ms-1 me-2">{text}</span>
-			{righticon}
-		</a>
-	);
+  return (
+    <a href={link} type="submit" className={styles}>
+      {lefticon}
+      <span className="ms-1 me-2">{text}</span>
+      {righticon}
+    </a>
+  );
 };

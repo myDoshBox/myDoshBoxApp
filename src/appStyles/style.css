@@ -1196,6 +1196,7 @@ input[type=color]:focus,
   letter-spacing: 0rem;
   margin: 10px 20px !important;
   color: black !important;
+  text-decoration: none;
 }
 
 .hamburgerIcon,
@@ -1213,7 +1214,7 @@ input[type=color]:focus,
 }
 
 .bigLogo {
-  transform: translateY(-50px);
+  transform: translateY(-20px);
 }
 
 .smallLogo {

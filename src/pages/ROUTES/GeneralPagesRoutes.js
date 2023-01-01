@@ -6,18 +6,20 @@ import AboutUs from "../GENERAL_PAGES/AboutUs";
 import ContactUs from "../GENERAL_PAGES/ContactUs";
 import PricingPage from "../GENERAL_PAGES/PricingPage";
 import FAQs from "../GENERAL_PAGES/FAQs";
+import Error404 from "../GENERAL_PAGES/Error404";
 
 const GeneralPagesRoutes = () => {
 	return (
-		<div>
-			<Routes element={<GuestNavbar />}>
+		<Routes>
+			<Route element={<GuestNavbar />}>
 				<Route path="/" element={<Homepage />} />
 				<Route path="aboutus" element={<AboutUs />} />
 				<Route path="contactus" element={<ContactUs />} />
 				<Route path="pricingpage" element={<PricingPage />} />
 				<Route path="faqs" element={<FAQs />} />
-			</Routes>
-		</div>
+				{/* <Route path="*" element={<Error404 />} /> */}
+			</Route>
+		</Routes>
 	);
 };
 

@@ -1,23 +1,37 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Homepage from "./pages/GENERAL_PAGES/Homepage";
-// import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
-// import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
-// import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
-// import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
+import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
+import {
+	NeutralsSidenav,
+	UserSidenav,
+} from "./components/NavbarComponents/SideNavbar";
 
 function App() {
 	return (
 		<Router>
+			{/* <UserSidenav /> */}
 			<Routes>
-				{/* GENERAL PAGES */}
-				{/* <Route path="/" element={<Homepage />} />
-				<Route path="aboutus" element={<AboutUs />} />
-				<Route path="contactus" element={<ContactUs />} />
-				<Route path="pricingpage" element={<PricingPage />} />
-				<Route path="faqs" element={<FAQs />} /> */}
-				<Route element={<GeneralPagesRoutes />} />
+				{/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
+				<Route path="/*" element={<GeneralPagesRoutes />} />
+				{/* <Route path="dashboard/*" element={<UsersDashboardRoutes />} /> */}
+				{/* <Route path="*" element={<Error404 />} /> */}
+
+				{/* USER DASHBOARD ROUTES */}
+				{/* <Route path="dashboard/*" element={<NeutralsSidenav />}>
+					<Route index element={<SignInForm />} />
+					<Route path="goss" element={<SignUpOrganizationForm />} />
+					<Route path="transactions" />
+					<Route path="transaction_history" />
+					<Route path="chats" />
+					<Route path="notifications" />
+					<Route path="disputes" />
+					<Route path="settings" /> */}
+				{/* <Route path="*" element={<Error404 />} /> */}
+				{/* <Route path="logout" element={<Homepage />} />
+				</Route> */}
+
+				{/* <Route path="*" element={<Error404 />} /> */}
 			</Routes>
 		</Router>
 	);
