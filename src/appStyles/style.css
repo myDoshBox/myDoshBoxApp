@@ -209,6 +209,14 @@ p {
   color: white !important;
 }
 
+.CoreValueCard {
+  background-color: #006747 !important;
+}
+
+.teamValueStyle {
+  background-color: #e5f0ed !important;
+}
+
 .LearnMoreCard {
   background-color: rgba(0, 103, 71, 0.7);
 }
@@ -789,15 +797,6 @@ p {
 .MiniUsersCard .textStyle {
   color: rgb(19, 19, 19);
 }
-.MiniUsersCard .coreValueStyle {
-  background-color: #006747 !important;
-}
-.MiniUsersCard .teamValueStyle {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #e5f0ed !important;
-  color: rgb(73, 73, 73);
-  border: 1px solid #006747;
-}
 .MiniUsersCard .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
@@ -806,6 +805,23 @@ p {
   max-width: 46.875rem;
   padding: 1.25rem;
   font-size: 0.875rem !important;
+}
+
+.FAQs {
+  --bs-gutter-x: 0;
+  color: #66a491;
+}
+.FAQs .faqs-header {
+  background-color: #006747;
+}
+.FAQs .accordion-button:not(.collapsed) {
+  color: unset;
+  background-color: white;
+}
+.FAQs .accordion-button:focus, .FAQs .accordion-button:not(.collapsed):focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
 }
 
 .BgColor {
@@ -1087,7 +1103,7 @@ input[type=color]:focus,
 }
 
 .checkboxStyle label {
-  color: #66a491 !important;
+  color: #e5f0ed !important;
 }
 
 .sign-up-section {
@@ -1462,6 +1478,10 @@ input[type=color]:focus,
   background-color: rgba(165, 42, 42, 0.1);
 }
 
+.PartnerStyle {
+  background-color: #d9ebe5;
+}
+
 @media screen and (max-width: 687px) {
   .completed,
 .awaiting,
@@ -1545,7 +1565,7 @@ input[type=color]:focus,
 }
 
 .TableRowColor {
-  background-color: #66a491;
+  background-color: #e5f0ed;
 }
 
 .NotificationCardWrapper {
