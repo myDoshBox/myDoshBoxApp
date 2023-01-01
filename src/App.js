@@ -1,5 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  GuestNavbar,
+  UserDashboardNavbar,
+} from "./components/NavbarComponents/TopNavbars";
+import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
 import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
 import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
@@ -9,6 +14,9 @@ import FAQs from "./pages/GENERAL_PAGES/FAQs";
 function App() {
   return (
     <Router>
+      <GuestNavbar />
+      {/* <UserDashboardNavbar /> */}
+      <InitiateDisputesForm />
       <Routes>
         {/* GENERAL PAGES */}
         <Route path="/" element={<Homepage />} />

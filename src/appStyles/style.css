@@ -1194,31 +1194,17 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  margin: 10px 20px !important;
+  margin: 5px 10px !important;
   color: black !important;
-  text-decoration: none;
 }
 
-.hamburgerIcon,
-.closeIcon {
+.hamburgerIcon {
   border: none !important;
   box-shadow: none !important;
 }
 
-.closeIcon {
-  display: none;
-}
-
 .guest-nav {
-  margin: 10px 20px !important;
-}
-
-.bigLogo {
-  transform: translateY(-30px);
-}
-
-.smallLogo {
-  display: none;
+  padding: 10px 20px !important;
 }
 
 .userDashboardNav {
@@ -1263,18 +1249,8 @@ input[type=color]:focus,
     margin: 0px !important;
     padding: 0px !important;
   }
-  .closeIcon {
-    display: block;
-    box-shadow: none !important;
-  }
   .bigLogo {
     transform: translateY(0);
-  }
-  .smallLogo {
-    display: block;
-  }
-  .nav-btn {
-    transform: translateY(0px);
   }
 }
 /**SideNav Styling**/

@@ -2,7 +2,7 @@ import React from "react";
 
 const PricingPage = () => {
   return (
-    <div className="mx-auto">
+    <div className="mt-4">
       <PricingTable />
     </div>
   );
@@ -10,8 +10,8 @@ const PricingPage = () => {
 
 const PricingTable = () => {
   return (
-    <div className="mx-auto">
-      <div>
+    <div className="px-md-5 px-2">
+      <div className="text-start">
         <h4>Low Fees</h4>
         <p className="text-wrap">
           The low cost of our secure auto escrow service is either paid by the
@@ -20,7 +20,7 @@ const PricingTable = () => {
       </div>
       {/* table Section starts */}
       <section>
-        <table className=" table table-bordered border-white  w-75 ">
+        <table className=" table table-bordered border-white">
           <thead className="">
             <tr className="BgColor ">
               <th className="text-white p-4 text-center">Transaction Amount</th>

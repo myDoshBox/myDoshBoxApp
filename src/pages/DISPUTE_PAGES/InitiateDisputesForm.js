@@ -1,14 +1,9 @@
-// import { ComplaintForm } from "../../components/FormComponents.js/IssuesComplaintForms";
-import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 
 const InitiateDisputesForm = () => {
   return (
     <div className="row">
-      <div className="col-sm-12 col-lg-3">
-        <UserSidenav />
-      </div>
       <div className="col-sm-12 col-lg-9">
         <ComplaintForm />
       </div>
@@ -17,19 +12,36 @@ const InitiateDisputesForm = () => {
 };
 
 const ComplaintForm = () => {
-  const [PhoneNumber, setPhoneNumber] = useState("");
+  const initialValues = {
+    phoneNumber: "",
+    transactionId: "",
+    complaintType: "",
+    file: "",
+    provideDetails: "",
+  };
 
-  const [TransactionID, setTransactionID] = useState("");
+  const [dispute, setDispute] = useState(initialValues);
+  const [disputeDetails, setDisputeDetails] = useState([]);
 
-  const [ComplaintType, setComplaintType] = useState("");
-
-  const [File, setFile] = useState("");
-
-  const [ProvideDetails, setProvideDetails] = useState("");
-
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setDispute({ ...dispute, [name]: value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      dispute.phoneNumber &&
+      dispute.transactionId &&
+      dispute.complaintType &&
+      dispute.file &&
+      dispute.provideDetails
+    ) {
+      setDisputeDetails([...disputeDetails, dispute]);
+      setDispute(initialValues);
+    }
   };
+
   return (
     <>
       <Container className="col-md-9">
@@ -39,11 +51,11 @@ const ComplaintForm = () => {
 
         {/* Form Section Starts */}
 
-        <form className="form mt-5">
+        <form className="form mt-5" onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              value={PhoneNumber}
+              value={dispute.phoneNumber}
+              onChange={handleChange}
               placeholder="Phone Number"
               type="tel"
               className="form-control"
@@ -59,8 +71,8 @@ const ComplaintForm = () => {
           </div>
           <div className="mb-4">
             <input
-              onChange={(e) => setTransactionID(e.target.value)}
-              value={TransactionID}
+              value={dispute.transactionId}
+              onChange={handleChange}
               placeholder="Transaction ID"
               type="text"
               className="form-control"
@@ -76,8 +88,8 @@ const ComplaintForm = () => {
 
           <div>
             <select
-              onChange={(e) => setComplaintType(e.target.value)}
-              value={ComplaintType}
+              value={dispute.complaintType}
+              onChange={handleChange}
               className="form-select mb-4"
               aria-label="Default select example"
             >
@@ -98,8 +110,8 @@ const ComplaintForm = () => {
 
           <div className="input-group mb-3">
             <input
-              onChange={(e) => setFile(e.target.value)}
-              value={File}
+              value={dispute.file}
+              onChange={handleChange}
               type="file"
               className="form-control"
               id="inputGroupFile02"
@@ -109,8 +121,8 @@ const ComplaintForm = () => {
 
           <div className="mb-3 mt-4">
             <textarea
-              onChange={(e) => setProvideDetails(e.target.value)}
-              value={ProvideDetails}
+              value={dispute.provideDetails}
+              onChange={handleChange}
               placeholder="Reasons for contesting this complaint"
               className="form-control "
               id="exampleFormControlTextarea1"
@@ -119,11 +131,7 @@ const ComplaintForm = () => {
           </div>
 
           <div className="d-grid gap-2 col-2 mx-auto mt-4 ">
-            <button
-              className="btn btn-success"
-              type="submit"
-              onClick={handleSubmit}
-            >
+            <button className="btn btn-success" type="submit">
               Submit
             </button>
           </div>

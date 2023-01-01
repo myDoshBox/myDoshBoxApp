@@ -4,33 +4,17 @@
 // GuestNavbar styles
 .nav-links {
   @include pFont;
-  margin: 10px 20px !important;
+  margin: 5px 10px !important;
   color: black !important;
-  text-decoration: none;
 }
 
-.hamburgerIcon,
-.closeIcon {
+.hamburgerIcon {
   border: none !important;
   box-shadow: none !important;
 }
 
-// .navigate .container-fluid {
-//   padding: 0px;
-// }
-.closeIcon {
-  display: none;
-}
-
 .guest-nav {
-  margin: 10px 20px !important;
-}
-.bigLogo {
-  transform: translateY(-30px);
-}
-
-.smallLogo {
-  display: none;
+  padding: 10px 20px !important;
 }
 
 // User Dashboard Navbar Styles
@@ -42,10 +26,6 @@
 
 .form-control {
   box-shadow: none !important;
-}
-
-.nav-btn {
-  // transform: translateY(10px);
 }
 
 @media screen and (max-width: 280px) {
@@ -69,9 +49,8 @@
 
   .nav-text {
     background-color: $pryColor;
-    // position: absolute;
+
     width: 100% !important;
-    // transform: translateY(-50px);
   }
   .nav-links {
     color: white !important;
@@ -81,21 +60,6 @@
   .guest-nav {
     margin: 0px !important;
     padding: 0px !important;
-
-    // position: relative;
-  }
-  .closeIcon {
-    display: block;
-    box-shadow: none !important;
-  }
-  .bigLogo {
-    transform: translateY(0);
-  }
-  .smallLogo {
-    display: block;
-  }
-  .nav-btn {
-    transform: translateY(0px);
   }
 }
 
