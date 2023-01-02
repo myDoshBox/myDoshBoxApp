@@ -3,10 +3,8 @@ import Container from "react-bootstrap/Container";
 
 const InitiateDisputesForm = () => {
   return (
-    <div className="row">
-      <div className="col-sm-12 col-lg-9">
-        <ComplaintForm />
-      </div>
+    <div>
+      <ComplaintForm />
     </div>
   );
 };
@@ -44,14 +42,14 @@ const ComplaintForm = () => {
 
   return (
     <>
-      <Container className="col-md-9">
+      <div className="col-md-9 col-11 mx-auto">
         <div className="mt-5 text-center">
-          <h4 className="fw-bold">COMPLAINT FORM</h4>
+          <h5 className="fw-bold">COMPLAINT FORM</h5>
         </div>
 
         {/* Form Section Starts */}
 
-        <form className="form mt-5" onSubmit={handleSubmit}>
+        <form className="form mt-5">
           <div className="mb-4">
             <input
               value={dispute.phoneNumber}
@@ -59,7 +57,8 @@ const ComplaintForm = () => {
               placeholder="Phone Number"
               type="tel"
               className="form-control"
-              id="exampleInputPassword1"
+              id="phoneNumber"
+              name="phoneNumber"
             />
 
             <span
@@ -76,6 +75,8 @@ const ComplaintForm = () => {
               placeholder="Transaction ID"
               type="text"
               className="form-control"
+              id="transactionId"
+              name="transactionId"
             />
 
             <span
@@ -92,6 +93,8 @@ const ComplaintForm = () => {
               onChange={handleChange}
               className="form-select mb-4"
               aria-label="Default select example"
+              id="complaintType"
+              name="complaintType"
             >
               <option selected>Failed Transactions</option>
               <option value="1">Wrong Items</option>
@@ -114,7 +117,8 @@ const ComplaintForm = () => {
               onChange={handleChange}
               type="file"
               className="form-control"
-              id="inputGroupFile02"
+              id="file"
+              name="file"
               placeholder="Attach Image(s)"
             />
           </div>
@@ -125,21 +129,25 @@ const ComplaintForm = () => {
               onChange={handleChange}
               placeholder="Reasons for contesting this complaint"
               className="form-control "
-              id="exampleFormControlTextarea1"
+              id="provideDetails"
+              name="provideDetails"
               rows="3"
             ></textarea>
           </div>
 
           <div className="d-grid gap-2 col-2 mx-auto mt-4 ">
-            <button className="btn btn-success" type="submit">
+            <button
+              className="btn btn-success"
+              type="submit"
+              onClick={handleSubmit}
+            >
               Submit
             </button>
           </div>
         </form>
-      </Container>
+      </div>
     </>
   );
 };
-// ComplaintForm Ends
 
 export default InitiateDisputesForm;

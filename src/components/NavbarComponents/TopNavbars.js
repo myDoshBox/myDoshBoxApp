@@ -4,8 +4,14 @@ import logo2 from "../../images/doshlogolight.jpg";
 import image from "../../images/Image.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export const GuestNavbar = () => {
+  const disappearEl = useRef(null);
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary guest-nav sticky-top bg-white">
       <button
@@ -24,23 +30,43 @@ export const GuestNavbar = () => {
         <img src={logo} alt="logo" className="my-auto navbar-brand" />
       </Link>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav ms-auto nav-text" id="navnav">
-          <Link to="/" href="#navnav" className="nav-link nav-links">
+        <div
+          className="navbar-nav ms-auto nav-text"
+          id="navnav"
+          ref={disappearEl}
+        >
+          <Link to="/" className="nav-link nav-links" onClick={handleDisappear}>
             Home
           </Link>
-          <Link to="/aboutus" className="nav-link nav-links">
+          <Link
+            to="/aboutus"
+            className="nav-link nav-links"
+            onClick={handleDisappear}
+          >
             About Us
           </Link>
-          <Link to="/pricingpage" className="nav-link nav-links">
+          <Link
+            to="/pricingpage"
+            className="nav-link nav-links"
+            onClick={handleDisappear}
+          >
             Pricing
           </Link>
-          <Link to="/faqs" className="nav-link nav-links">
+          <Link
+            to="/faqs"
+            className="nav-link nav-links"
+            onClick={handleDisappear}
+          >
             FAQs
           </Link>
-          <Link to="/contactus" className="nav-link nav-links">
+          <Link
+            to="/contactus"
+            className="nav-link nav-links"
+            onClick={handleDisappear}
+          >
             Contact Us
           </Link>
-          <Link to="/" className="nav-links nav-btn">
+          <Link to="/" className="nav-links nav-btn" onClick={handleDisappear}>
             <GeneralBtn
               text={"Sign Up"}
               styles={"GeneralBtnStyle1 btn all-btn text-white"}
