@@ -1249,9 +1249,6 @@ input[type=color]:focus,
     margin: 0px !important;
     padding: 0px !important;
   }
-  .bigLogo {
-    transform: translateY(0);
-  }
 }
 /**SideNav Styling**/
 .SideNav {
@@ -1514,6 +1511,10 @@ input[type=color]:focus,
 }
 
 .TableRowColor {
+  background-color: #66a491;
+}
+
+.pricing-table tr:nth-child(even) {
   background-color: #66a491;
 }
 
