@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { Icon } from "@iconify/react";
-import { GeneralBtnStyle1 } from "../Button";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 //ContactUsForm
 export const ContactUsForm = () => {
@@ -65,7 +64,7 @@ export const ContactUsForm = () => {
           </Form.Group>
 
           <div className="mt-1 d-flex justify-content-center">
-            <GeneralBtnStyle1 text="Submit" />
+            <GeneralBtn text="Submit" />
           </div>
         </div>
         {/* Form Here End */}
