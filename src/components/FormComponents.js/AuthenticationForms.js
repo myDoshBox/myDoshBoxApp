@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
-import { Icon } from "@iconify/react";
-import { SignInButton } from "../ButtonsComponent/AuthenticationButtons";
-import { SignUpButton } from "../ButtonsComponent/AuthenticationButtons";
-import { GoogleSignInButton } from "../ButtonsComponent/AuthenticationButtons";
-import { GoogleSignUpButton } from "../ButtonsComponent/AuthenticationButtons";
-import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
-import { SignUpIndividual } from "../ButtonsComponent/AuthenticationButtons";
-import { SignUpOrganization } from "../ButtonsComponent/AuthenticationButtons";
+import {
+  ShowPasswordIcon,
+  HidePasswordIcon,
+} from "../IconComponent/NavigationAndViewIcon";
+import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+// import { GuestNavSignInButton } from "../ButtonsComponent/AuthenticationButtons";
 
 //SignInForm
 export const SignInForm = () => {
@@ -64,21 +62,9 @@ export const SignInForm = () => {
                 onChange={handleChangePassword}
               />
               {passwordToggle ? (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:show"
-                  color="gray"
-                  width="25"
-                />
+                <ShowPasswordIcon onClick={handleShowHide} />
               ) : (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:hide"
-                  color="gray"
-                  width="25"
-                />
+                <HidePasswordIcon onClick={handleShowHide} />
               )}
             </div>
           </div>
@@ -93,10 +79,10 @@ export const SignInForm = () => {
         </Form.Group>
 
         <div className="pb-3">
-          <SignInButton />
+          <GeneralBtn text="SignIn" />
         </div>
         <div className="pb-2">
-          <GoogleSignInButton />
+          <GeneralBtn text="Sign In with Google" styles="GoogleAuthBtn btn" />
         </div>
         <p className="mb-5 ms-5">Don’t have an account? Sign up</p>
       </Form>
@@ -150,11 +136,14 @@ export const SignUpIndividualForm = () => {
 
       <div className="d-flex pb-3 flex-row ">
         <div className="signUpNavStyle">
-          <SignUpIndividual />
+          <GeneralBtn text="SignUp Individual" styles="SignUpGroup, btn" />
         </div>
 
         <div className="ms-3 signUpNavStyle">
-          <SignUpOrganization />
+          <GeneralBtn
+            text="Sign Up as an Organization"
+            styles="SignUpGroup, btn"
+          />
         </div>
       </div>
 
@@ -238,21 +227,9 @@ export const SignUpIndividualForm = () => {
                 onChange={handleChangePassword}
               />
               {passwordToggle ? (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:show"
-                  color="gray"
-                  width="25"
-                />
+                <ShowPasswordIcon onClick={handleShowHide} />
               ) : (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:hide"
-                  color="gray"
-                  width="25"
-                />
+                <HidePasswordIcon onClick={handleShowHide} />
               )}
             </div>
           </div>
@@ -271,21 +248,9 @@ export const SignUpIndividualForm = () => {
                 onChange={handleChangeConfirmPassword}
               />
               {confirmPasswordToggle ? (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleConfirmPasswordShow}
-                  icon="bxs:show"
-                  color="gray"
-                  width="25"
-                />
+                <ShowPasswordIcon onClick={handleConfirmPasswordShow} />
               ) : (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleConfirmPasswordShow}
-                  icon="bxs:hide"
-                  color="gray"
-                  width="25"
-                />
+                <HidePasswordIcon onClick={handleConfirmPasswordShow} />
               )}
             </div>
           </div>
@@ -300,10 +265,10 @@ export const SignUpIndividualForm = () => {
         </Form.Group>
         <div className="sign-up-section">
           <div className="d-flex mt-4 ">
-            <SignUpButton />
+            <GeneralBtn text="SignUp" />
           </div>
           <div className="d-flex pb-2 mt-3 ">
-            <GoogleSignUpButton />
+            <GeneralBtn text="Sign Up with Google" styles="GoogleAuthBtn btn" />
           </div>
           <p className=""> Already have an account? Sign in</p>
         </div>
@@ -357,11 +322,14 @@ export const SignUpOrganizationForm = () => {
       </div>
       <div className="d-flex  pb-3 flex-row ">
         <div className="signUpNavStyle">
-          <SignUpIndividual />
+          <GeneralBtn text=" SignUp As Individual" styles="SignUpGroup btn" />
         </div>
 
         <div className="ms-3 signUpNavStyle">
-          <SignUpOrganization />
+          <GeneralBtn
+            text=" Sign Up as an Organization"
+            styles="SignUpGroup btn"
+          />
         </div>
       </div>
 
@@ -447,21 +415,9 @@ export const SignUpOrganizationForm = () => {
                 onChange={handleChangePassword}
               />
               {passwordToggle ? (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:show"
-                  color="gray"
-                  width="25"
-                />
+                <ShowPasswordIcon onClick={handleShowHide} />
               ) : (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleShowHide}
-                  icon="bxs:hide"
-                  color="gray"
-                  width="25"
-                />
+                <HidePasswordIcon onClick={handleShowHide} />
               )}
             </div>
           </div>
@@ -480,21 +436,9 @@ export const SignUpOrganizationForm = () => {
                 onChange={handleChangeConfirmPassword}
               />
               {confirmPasswordToggle ? (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleOrganPasswordShow}
-                  icon="bxs:show"
-                  color="gray"
-                  width="25"
-                />
+                <ShowPasswordIcon onClick={handleOrganPasswordShow} />
               ) : (
-                <Icon
-                  className="toggleBtnStyle"
-                  onClick={handleOrganPasswordShow}
-                  icon="bxs:hide"
-                  color="gray"
-                  width="25"
-                />
+                <HidePasswordIcon onClick={handleOrganPasswordShow} />
               )}
             </div>
           </div>
@@ -510,10 +454,10 @@ export const SignUpOrganizationForm = () => {
 
         <div className="sign-up-section">
           <div className="pb-3 mt-4 ">
-            <SignUpButton />
+            <GeneralBtn text="SignIn" />
           </div>
           <div className=" pb-2 ">
-            <GoogleSignUpButton />
+            <GeneralBtn text="Sign Up with Google" styles="GoogleAuthBtn btn" />
           </div>
           <p className="mb-5"> Already have an account? Sign in</p>
         </div>
