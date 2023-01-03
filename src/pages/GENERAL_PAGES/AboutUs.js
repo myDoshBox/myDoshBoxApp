@@ -24,11 +24,11 @@ const HeroSection = () => {
   return (
     <section className="container hero pt-5 mt-5 pb-5">
       <div className="row mb-5">
-        <div className="col-md-6 col-sm-12 col-lg-7 pt-5">
-          <h2 className="text-success fw-bold">
+        <div className="col-md-6 col-sm-12 col-lg-7 align-self-center">
+          <h2 className="text-success fw-bold ">
             We're a team of creators & innovators
           </h2>
-          <p className="fw-light">
+          <p className="fw-light col-10">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
             modi ratione dolor sit, amet consectetur
           </p>
@@ -56,7 +56,7 @@ const VisionMission = () => {
 
       {/*  Mission section Starts */}
       <div className="row mt-5 pt-5 container pb-5">
-        <div className="col-sm-12 col-md-6 col-lg-6 align-self-center text-center">
+        <div className="col-sm-12 col-md-6 col-lg-6 align-self-center text-sm-center text-xs-center text-md-start text-lg-start">
           <h4 className="fw-bold mb-2">Mission</h4>
           <p className=" fs-light">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
@@ -71,10 +71,10 @@ const VisionMission = () => {
       {/* Mission section Ends */}
       {/* Vision section Starts */}
       <div className="row mt-3 mx-auto container">
-        <div className="col-sm-12 col-md-6 col-lg-4 d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+        <div className="col-sm-12 col-md-6 col-lg-4 d-none d-md-block d-lg-block d-xl-block d-xxl-block text-xs-center">
           <img src={Vision} alt="" />
         </div>
-        <div className="col-sm-12 col-md-6 col-lg-6 align-self-center text-center">
+        <div className="col-sm-12 col-md-6 col-lg-6 align-self-center text-sm-center text-md-start text-lg-start text-xs-center">
           <h4 className="fw-bold mb-2">Vision</h4>
           <p className=" fs-lighter">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
