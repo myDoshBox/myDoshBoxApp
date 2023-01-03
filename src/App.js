@@ -6,6 +6,7 @@ import {
 	NeutralsSidenav,
 	UserSidenav,
 } from "./components/NavbarComponents/SideNavbar";
+import InitiateEscrow from "./pages/ESCROW_PAGES/InitiateEscrowForm";
 
 function App() {
 	return (
@@ -21,12 +22,12 @@ function App() {
 				{/* <Route path="dashboard/*" element={<NeutralsSidenav />}>
 					<Route index element={<SignInForm />} />
 					<Route path="goss" element={<SignUpOrganizationForm />} />
-					<Route path="transactions" />
 					<Route path="transaction_history" />
 					<Route path="chats" />
 					<Route path="notifications" />
 					<Route path="disputes" />
-					<Route path="settings" /> */}
+				<Route path="settings" /> */}
+				<Route path="transactions" element={<InitiateEscrow />} />
 				{/* <Route path="*" element={<Error404 />} /> */}
 				{/* <Route path="logout" element={<Homepage />} />
 				</Route> */}
