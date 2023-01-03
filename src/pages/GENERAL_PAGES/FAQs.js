@@ -5,7 +5,7 @@ const FAQs = () => {
 	return (
 		<>
 			{/* <GuestNavbar /> */}
-			<div className="FAQs row justify-content-center gy-5 mx-3 mt-3">
+			<div className="FAQs row justify-content-center gy-5 mx-3">
 				{faqData.faqs.map((faq) => (
 					<div key={faq.id} className="col-md-6 px-3">
 						<h6 className="fs-6 text-white text-center py-3 mb-0 faqs-header">

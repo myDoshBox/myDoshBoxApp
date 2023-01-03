@@ -172,12 +172,6 @@ p {
 	border-radius: 7.4966px;
 	color: #fff !important;
 }
-.CoreValueCard {
-	background-color: #006747 !important;
-}
-.teamValueStyle {
-	background-color: #e5f0ed !important;
-}
 .LearnMoreCard {
 	background-color: rgba(0, 103, 71, 0.7);
 }
@@ -757,6 +751,15 @@ p {
 .MiniUsersCard .textStyle {
 	color: #131313;
 }
+.MiniUsersCard .coreValueStyle {
+	background-color: #006747 !important;
+}
+.MiniUsersCard .teamValueStyle {
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+	background-color: #e5f0ed !important;
+	color: #494949;
+	border: 1px solid #006747;
+}
 .MiniUsersCard .warningStyle {
 	border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
 	color: rgba(255, 0, 0, 0.7) !important;
@@ -1019,7 +1022,7 @@ input[type="color"]:focus,
 	margin-left: -3rem;
 }
 .checkboxStyle label {
-	color: #e5f0ed !important;
+	color: #66a491 !important;
 }
 .sign-up-section {
 	transform: translateX(130px);
@@ -1117,25 +1120,15 @@ input[type="color"]:focus,
 	color: #4b4453;
 	line-height: 1.5rem;
 	letter-spacing: 0rem;
-	margin: 10px 20px !important;
+	margin: 5px 10px !important;
 	color: #000 !important;
 }
-.hamburgerIcon,
-.closeIcon {
+.hamburgerIcon {
 	border: none !important;
 	box-shadow: none !important;
 }
-.closeIcon {
-	display: none;
-}
 .guest-nav {
-	margin: 10px 20px !important;
-}
-.bigLogo {
-	transform: translateY(-50px);
-}
-.smallLogo {
-	display: none;
+	padding: 10px 20px !important;
 }
 .userDashboardNav {
 	font-family: "Open Sans";
@@ -1147,9 +1140,6 @@ input[type="color"]:focus,
 }
 .form-control {
 	box-shadow: none !important;
-}
-.nav-btn {
-	transform: translateY(-10px);
 }
 @media screen and (max-width: 280px) {
 	.search {
@@ -1169,9 +1159,7 @@ input[type="color"]:focus,
 @media screen and (max-width: 992px) {
 	.nav-text {
 		background-color: #006747;
-		position: absolute;
-		width: 100%;
-		transform: translateY(-50px);
+		width: 100% !important;
 	}
 	.nav-links {
 		color: #fff !important;
@@ -1181,20 +1169,6 @@ input[type="color"]:focus,
 	.guest-nav {
 		margin: 0px !important;
 		padding: 0px !important;
-		position: relative;
-	}
-	.closeIcon {
-		display: block;
-		box-shadow: none !important;
-	}
-	.bigLogo {
-		transform: translateY(0);
-	}
-	.smallLogo {
-		display: block;
-	}
-	.nav-btn {
-		transform: translateY(0px);
 	}
 }
 .SideNav {
@@ -1436,7 +1410,10 @@ input[type="color"]:focus,
 	background-color: #006747;
 }
 .TableRowColor {
-	background-color: #e5f0ed;
+	background-color: #66a491;
+}
+.pricing-table tr:nth-child(even) {
+	background-color: #66a491;
 }
 .NotificationCardWrapper {
 	background-color: #fff;
