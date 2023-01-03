@@ -8,9 +8,12 @@ import { Link, Outlet } from "react-router-dom";
 
 export const GuestNavbar = () => {
 	return (
-		<Navbar expand="lg" className="guest-nav">
-			<Navbar.Toggle aria-controls="basic-navbar-nav" className="hamburgerIcon">
-				{/* <svg
+		<>
+			<Navbar expand="lg" className="guest-nav">
+				<Navbar.Toggle
+					aria-controls="basic-navbar-nav"
+					className="hamburgerIcon">
+					{/* <svg
           width="30"
           height="20"
           viewBox="0 0 30 20"
@@ -22,20 +25,20 @@ export const GuestNavbar = () => {
             fill="#006747"
           />
         </svg> */}
-			</Navbar.Toggle>
+				</Navbar.Toggle>
 
-			<Navbar.Brand className="bigLogo">
-				<Link to="/">
-					<img src={logo} alt="logo" className="my-auto" />
-				</Link>
-			</Navbar.Brand>
-			<Navbar.Collapse id="basic-navbar-nav">
-				<Nav className="ms-auto nav-text">
-					<div className="d-flex">
-						<Navbar.Toggle
-							aria-controls="basic-navbar-nav"
-							className="closeIcon me-auto px-4 mt-3">
-							{/* <svg
+				<Navbar.Brand className="bigLogo">
+					<Link to="/">
+						<img src={logo} alt="logo" className="my-auto" />
+					</Link>
+				</Navbar.Brand>
+				<Navbar.Collapse id="basic-navbar-nav">
+					<Nav className="ms-auto nav-text">
+						<div className="d-flex">
+							<Navbar.Toggle
+								aria-controls="basic-navbar-nav"
+								className="closeIcon me-auto px-4 mt-3">
+								{/* <svg
                 width="21"
                 height="21"
                 viewBox="0 0 21 21"
@@ -47,46 +50,48 @@ export const GuestNavbar = () => {
                   fill="white"
                 />
               </svg> */}
-						</Navbar.Toggle>
-						<Navbar.Brand href="#home" className="ms-auto px-3 smallLogo">
-							<img src={logo2} alt="logo" />
-						</Navbar.Brand>
-					</div>
-					<Nav.Link>
-						<Link to="/" className="nav-links">
-							Home
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/aboutus" className="nav-links">
-							About Us
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/pricingpage" className="nav-links">
-							Pricing
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/faqs" className="nav-links">
-							FAQs
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/contactus" className="nav-links">
-							Contact
-						</Link>
-					</Nav.Link>
-					<Nav.Link href="#link" className="nav-links nav-btn pb-5">
-						{/* <GuestNavSignInButton /> */}
-						<GeneralBtn
-							text={"Sign Up"}
-							styles={"GeneralBtnStyle1 btn all-btn text-white"}
-						/>
-					</Nav.Link>
-				</Nav>
-			</Navbar.Collapse>
-		</Navbar>
+							</Navbar.Toggle>
+							<Navbar.Brand href="#home" className="ms-auto px-3 smallLogo">
+								<img src={logo2} alt="logo" />
+							</Navbar.Brand>
+						</div>
+						<Nav.Link>
+							<Link to="/" className="nav-links">
+								Home
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/aboutus" className="nav-links">
+								About Us
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/pricingpage" className="nav-links">
+								Pricing
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/faqs" className="nav-links">
+								FAQs
+							</Link>
+						</Nav.Link>
+						<Nav.Link>
+							<Link to="/contactus" className="nav-links">
+								Contact
+							</Link>
+						</Nav.Link>
+						<Nav.Link href="#link" className="nav-links nav-btn pb-5">
+							{/* <GuestNavSignInButton /> */}
+							<GeneralBtn
+								text={"Sign Up"}
+								styles={"GeneralBtnStyle1 btn all-btn text-white"}
+							/>
+						</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Navbar>
+			<Outlet />
+		</>
 	);
 };
 

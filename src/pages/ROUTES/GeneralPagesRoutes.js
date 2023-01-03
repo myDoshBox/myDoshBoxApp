@@ -17,7 +17,7 @@ const GeneralPagesRoutes = () => {
 				<Route path="contactus" element={<ContactUs />} />
 				<Route path="pricingpage" element={<PricingPage />} />
 				<Route path="faqs" element={<FAQs />} />
-				{/* <Route path="*" element={<Error404 />} /> */}
+				<Route path="*" element={<Error404 />} />
 			</Route>
 		</Routes>
 	);
