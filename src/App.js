@@ -5,14 +5,22 @@ import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
 import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
 import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
+// import NotifictionPage from "./pages/NotifictionPage";
+import TransactionAgreedPage from "./pages/transactionAgreedPage";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
+import { SignInForm } from "./components/FormComponents.js/AuthenticationForms";
 
 function App() {
   return (
     <Router>
+      {/* <GuestNavbar /> */}
+      {/* <NotifictionPage /> */}
+      <TransactionAgreedPage />
+      {/* <SignInForm /> */}
+
       <Routes>
         {/* GENERAL PAGES */}
-        <Route path="/" element={<Homepage />} />
+        {/* <Route path="/" element={<Homepage />} /> */}
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="contactus" element={<ContactUs />} />
         <Route path="pricingpage" element={<PricingPage />} />
