@@ -8,20 +8,9 @@ import { useRef, useState } from "react";
 
 export const GuestNavbar = () => {
   const disappearEl = useRef(null);
-  const [toggleNav, setToggleNav] = useState(false);
 
   const handleDisappear = () => {
     disappearEl.style.display = "none";
-  };
-
-  const handleShowHide = () => {
-    if (toggleNav === false) {
-      setToggleNav(true);
-      disappearEl.style.display = "block";
-    } else {
-      setToggleNav(false);
-      disappearEl.style.display = "none";
-    }
   };
 
   return (
@@ -88,7 +77,7 @@ export const GuestNavbar = () => {
             </Link>
             <Link
               to="/"
-              className="nav-links nav-btn pb-2"
+              className="nav-links nav-btn"
               onClick={handleDisappear}
             >
               <GeneralBtn

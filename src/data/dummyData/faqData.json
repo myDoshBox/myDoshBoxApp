@@ -1,0 +1,108 @@
+{
+  "faqs": [
+    { 
+      "id":1,
+      "header": "How do I sign up for an account?",
+      "accordions": [
+        {
+          "id":1,
+          "title": "Step 1: Go to the sign-up page",
+          "details": "Navigate to the sign-up page on our website and click the 'Sign Up' button."
+        },
+        {
+          "id":2,
+          "title": "Step 2: Enter your information",
+          "details": "Fill out the form with your personal and account information. This includes your name, email address, and a password for your account."
+        },
+        {
+          "id":3,
+          "title": "Step 3: Agree to the terms and conditions",
+          "details": "Read and agree to our terms and conditions before completing the sign-up process."
+        },
+        {
+          "id":4,
+          "title": "Step 4: Confirm your email address",
+          "details": "You will receive an email with a confirmation link. Click the link to verify your email address and complete the sign-up process."
+        }
+      ]
+    },
+    {
+      "id":2,
+      "header": "How do I reset my password?",
+      "accordions": [
+        {
+          "id":5,
+          "title": "Step 1: Go to the reset password page",
+          "details": "Navigate to the reset password page on our website and click the 'Reset Password' button."
+        },
+        {
+          "id":6,
+          "title": "Step 2: Enter your email address",
+          "details": "Enter the email address associated with your account in the form field provided."
+        },
+        {
+          "id":7,
+          "title": "Step 3: Check your email for reset instructions",
+          "details": "You will receive an email with a link to reset your password. Follow the instructions provided in the email to reset your password."
+        },
+        {
+          "id":8,
+          "title": "Step 4: Choose a new password",
+          "details": "Enter your new password in the form field provided and confirm it by re-entering it. Click the 'Reset Password' button to complete the process."
+        }
+      ]
+    },
+    {
+      "id":3,
+      "header": "How do I cancel my account?",
+      "accordions": [
+        {
+          "id":9,
+          "title": "Step 1: Log in to your account",
+          "details": "You must be logged in to your account in order to cancel it."
+        },
+        {
+          "id":10,
+          "title": "Step 2: Go to the account settings page",
+          "details": "Navigate to the account settings page by clicking on the 'Settings' link in the top menu."
+        },
+        {
+          "id":11,
+          "title": "Step 3: Scroll down to the bottom of the page",
+          "details": "At the bottom of the account settings page, you will see a 'Cancel Account' button. Click this button to begin the cancelation process."
+        },
+        {
+          "id":12,
+          "title": "Step 4: Confirm your cancelation",
+          "details": "You will be prompted to confirm your decision to cancel your account. Click 'Confirm' to finalize the cancelation process."
+        }
+      ]
+    },
+    {
+      "id":4,
+      "header": "How do I cancel my account?",
+      "accordions": [
+        {
+          "id":13,
+          "title": "Step 1: Log in to your account",
+          "details": "You must be logged in to your account in order to cancel it."
+        },
+        {
+          "id":14,
+          "title": "Step 2: Go to the account settings page",
+          "details": "Navigate to the account settings page by clicking on the 'Settings' link in the top menu."
+        },
+        {
+          "id":15,
+          "title": "Step 3: Scroll down to the bottom of the page",
+          "details": "At the bottom of the account settings page, you will see a 'Cancel Account' button. Click this button to begin the cancelation process."
+        },
+        {
+          "id":16,
+          "title": "Step 4: Confirm your cancelation",
+          "details": "You will be prompted to confirm your decision to cancel your account. Click 'Confirm' to finalize the cancelation process."
+        }
+      ]
+    }
+  ]
+}
