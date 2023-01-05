@@ -2,3 +2,17 @@ $desktop: 1200px;
 $laptop: 1024px;
 $tablet: 768px;
 $phone: 480px;
+
+
+// Initiate Escrow
+@media screen and (min-width: 992px) {
+  .InitiateEscrow{
+    width:75% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .EscrowChoice{
+    width:50% !important;
+  }
+}

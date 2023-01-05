@@ -2,16 +2,8 @@ import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { useState, useEffect } from "react";
 import {
   Form,
-  FormCheck,
-  FormGroup,
-  FormLabel,
-  Row,
-  Col,
-  Button,
-  FormText,
 } from "react-bootstrap";
-// import { Input } from 'react-bootstrap/Form';
-
+import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
 
 const InitiateEscrow = () => {
   const initialValues = {
@@ -99,265 +91,306 @@ const InitiateEscrow = () => {
     setShowProductForm(false);
     setShowServiceForm(true);
   };
+  
+
 
   return (
-    <div className="d-flex">
+    <div className="d-flex w-100">
+      <div className="d-none d-lg-block">
       <UserSidenav />
-      <div>
-        <Form onSubmit={handleSubmit} className="escrow-form">
-          <Form.Group className="my-5  escrow-form-field">
-            <div className="row align-items-center">
-              <div className="col-sm-12 col-md-4  text-md-end">
-                <Form.Label className="escrow-form-label">
-                  Phone Number
-                </Form.Label>
-              </div>
-              <div className="col-sm-12 col-md-8 col-lg-6">
-                <Form.Control
-                  type="text"
-                  placeholder="Enter phone number"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  value={transaction.phoneNumber}
-                  onChange={handleChange}
-                  className="escrow-input-field"
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4 col-sm-12 text-md-end"></div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <span className="escrow-form-error ms-3">
-                  {formErrors.phoneNumber}
-                </span>
-              </div>
-            </div>
-          </Form.Group>
+      </div>
 
-          <div className="mb-3 border border-secondary border-0.5">
-            <div className="align-items-center">
-              <FormLabel className="mr-3">
-                What type of transaction are you making?
-              </FormLabel>
-              <FormGroup className="w-50 mr-10">
-                <FormCheck
-                  type="radio"
-                  id="buying"
-                  name="choice"
-                  label="Buying"
-                />
-              </FormGroup>
-              <FormGroup className="w-50 ml-10">
-                <FormCheck
-                  type="radio"
-                  id="selling"
-                  name="choice"
-                  label="Selling"
-                />
-              </FormGroup>
-            </div>
-          </div>
-          <Row>
-            <Col>
-              <p className="text-muted font-weight-bold">
-                What are you transacting?
-              </p>
-            </Col>
-            <Col>
-              <Button variant="outline-primary" className="w-50">
-                Product
-              </Button>
-              <Button variant="outline-secondary" className="w-50">
-                Service
-              </Button>
-            </Col>
-          </Row>
+      <Form onSubmit={handleSubmit} className="ms-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 ">
+        <Form.Group className="">
+          <Form.Label className="m-0">Phone Number</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter phone number"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={transaction.phoneNumber}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+          <span className="escrow-form-error ms-3">
+            {formErrors.phoneNumber}
+          </span>
+        </Form.Group>
 
-          {showProductForm && (
-            <FormGroup>
-              <Form.Label for="name">Name</Form.Label>
-              <Form.Control type="text" name="name" id="name" />
-            </FormGroup>
-          )}
-          {showProductForm && (
-            <FormGroup>
-              <Form.Label for="category">Category</Form.Label>
-              <Form.Control type="select" name="category" id="category">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-                <option>Option 5</option>
-              </Form.Control>
-              <FormText>Example of a dropdown field</FormText>
-            </FormGroup>
-          )}
-          {showProductForm && (
-            <FormGroup>
-              <Form.Label for="quantity">Quantity</Form.Label>
-              <Form.Control type="number" name="quantity" id="quantity" />
-            </FormGroup>
-          )}
-          {showServiceForm && (
-            <FormGroup>
-              <Form.Label for="service">Service</Form.Label>
-              <Form.Control type="text" name="service" id="service" />
-            </FormGroup>
-          )}
-
-          <Form.Group className="mb-5 escrow-form-field">
-            <div className="row align-items-center">
-              <div className="col-md-4 col-sm-12 text-md-end">
-                <Form.Label className="escrow-form-label">
-                  Quantity of Items
-                </Form.Label>
-              </div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <Form.Control
-                  type="number"
-                  placeholder="Enter quantity"
-                  id="quantity"
-                  name="quantity"
-                  value={transaction.quantity}
-                  onChange={handleChange}
-                  className="escrow-input-field"
-                />
-              </div>
+        <Form.Group className="mb-3">
+          <label className="">What type of transaction are you making?</label>
+          <div className="d-flex">
+            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 py-2 me-3 EscrowChoice">
+              <label className="form-check-label me-2 me-lg-3" for="buying">
+                Buying
+              </label>
+              <input
+                type="radio"
+                className="form-check"
+                id="buying"
+                name="choice"
+                value="buying"
+              />
             </div>
-            <div className="row">
-              <div className="col-md-4 col-sm-12 text-md-end"></div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <span className="escrow-form-error ms-3">
-                  {formErrors.quantity}
-                </span>
-              </div>
-            </div>
-          </Form.Group>
-          <Form.Group className="mb-5 escrow-form-field">
-            <div className="row align-items-center">
-              <div className="col-md-4 col-sm-12 text-md-end">
-                <Form.Label className="escrow-form-label ms-3">
-                  Price
-                </Form.Label>
-              </div>
-              <div className="col-lg-6 col-md-8  col-sm-12 d-flex price-field">
-                <Form.Control
-                  type="number"
-                  placeholder="Enter the amount the product cost"
-                  id="price"
-                  name="price"
-                  value={transaction.price}
-                  onChange={handleChange}
-                  className="escrow-price-field"
-                />
-                <span className="ngn2">NGN</span>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4 col-sm-12 text-md-end"></div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <span className="escrow-form-error ms-3">
-                  {formErrors.price}
-                </span>
-              </div>
-            </div>
-          </Form.Group>
-          {/* <Form.Group className="mb-5 escrow-form-field">
-          <div className="row align-items-center">
-            <div className="col-md-4 col-sm-12 text-md-end">
-              <Form.Label className="escrow-form-label">
-                Delivery/Completion Date
-              </Form.Label>
-            </div>
-            <div className="col-lg-6 col-md-8  col-sm-12">
-              <Form.Control
-                type="date"
-                placeholder="Enter email"
-                id="completionDate"
-                name="completionDate"
-                value={transaction.completionDate}
-                onChange={handleChange}
-                className="escrow-input-field"
+            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 py-2 EscrowChoice">
+              <label className="form-check-label me-2 me-lg-3" for="selling">
+                Selling
+              </label>
+              <input
+                type="radio"
+                className="form-check"
+                id="selling"
+                name="choice"
+                value="selling"
               />
             </div>
           </div>
-          <p>{formErrors.completionDate}</p>
-        </Form.Group> */}
+        </Form.Group>
 
-          <Form.Group className="mb-5 escrow-form-field">
-            <div className="row align-items-center">
-              <div className="col-md-4 col-sm-12 text-md-end">
-                <Form.Label className="escrow-form-label">Image</Form.Label>
-              </div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <Form.Control
-                  type="file"
-                  placeholder="Attach Image(s)"
-                  id="image"
-                  name="image"
-                  value={transaction.image}
-                  onChange={handleChange}
-                  className="escrow-input-field escrow-images"
-                  accept="image/*"
-                />
-              </div>
+        <Form.Group className="mb-3">
+          <label className="">What are you transacting?</label>
+          <div class="d-flex">
+            <button
+              type="button"
+              class="w-50 btn btn-outline-primary me-3 EscrowTransactTypeBtn"
+              onClick={handleProductButtonClick}
+            >
+              Product
+            </button>
+            <button
+              type="button"
+              class="w-50 btn btn-outline-secondary EscrowTransactTypeBtn"
+              onClick={handleServiceButtonClick}
+            >
+              Service
+            </button>
+          </div>
+        </Form.Group>
+
+        {showProductForm && (
+          <>
+            <Form.Group className="mb-3">
+              <Form.Label className="m-0">Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                id="name"
+                className="escrow-input-field"
+                placeholder="Enter product name"
+              />
+            </Form.Group>
+            <div className="form-group mb-3">
+              <label for="category">Category</label>
+              <select
+                className="form-select"
+                id="category"
+                placeholder="Pick your product category"
+              >
+                <option value="Jewelry and Ornaments">
+                  Jewelry and Ornaments
+                </option>
+                <option value="Food and Nutrition">Food and Nutrition</option>
+                <option value="Clothing and Textiles">
+                  Clothing and Textiles
+                </option>
+              </select>
             </div>
-          </Form.Group>
-          <Form.Group className="mb-5 escrow-form-field">
-            <div className="row align-items-center">
-              <div className="col-sm-12 col-md-4  text-md-end ">
-                <Form.Label className="escrow-form-label">
-                  Description
-                </Form.Label>
+            <Form.Group className="">
+              <Form.Label className="m-0">Quantity</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter quantity"
+                id="quantity"
+                name="quantity"
+                value={transaction.quantity}
+                onChange={handleChange}
+                className="escrow-input-field"
+              />
+              <span className="escrow-form-error ms-3">
+                {formErrors.quantity}
+              </span>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="m-0">Price</Form.Label>
+              <div className="input-group mb-3">
+  <input className="form-control" aria-label="price in Naira" type="number"
+                  placeholder="Enter the amount the product costs"
+                  id="price"
+                  name="price"
+                  value={transaction.price}
+                  onChange={handleChange}/>
+  <span className="input-group-text ngn2">₦</span>
+</div>
+              <span className="escrow-form-error ms-3">{formErrors.price}</span>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="">Image</Form.Label>
+              <Form.Control
+                type="file"
+                placeholder="Attach Image(s)"
+                id="image"
+                name="image"
+                value={transaction.image}
+                onChange={handleChange}
+                className="escrow-input-field escrow-images"
+                accept="image/*"
+              />
+            </Form.Group>
+            <Form.Group className="">
+              <Form.Label className="">Description</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter the description of the item"
+                id="description"
+                name="description"
+                value={transaction.description}
+                onChange={handleChange}
+                className="escrow-input-field"
+              />
+              <span className="escrow-form-error">
+                {formErrors.description}
+              </span>
+            </Form.Group>
+            <Form.Group className="my-3 d-flex align-items-center justify-content-end text-end">
+              <label for="total" className="">
+                Total
+              </label>
+              <span>
+              <span
+                id="total"
+                name="total"
+                value={transaction.total}
+                onChange={handleChange}
+                className="ngn btn rounded-1"
+              >
+                ₦ {transaction.total}
+              </span>
+              <small className="d-block">*Service charge included</small>
+              </span>
+            </Form.Group>
+          </>
+        )}
+
+        {showServiceForm && (
+          <>
+            <Form.Group className="mb-3">
+              <Form.Label className="m-0">Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                id="name"
+                className="escrow-input-field"
+                placeholder="Enter service name" />
+            </Form.Group>
+            <Form.Group className="form-group mb-3">
+              <label for="category">Category</label>
+              <select
+                className="form-select"
+                id="category"
+                placeholder="Pick your service category"
+              >
+                <option value="web design">web design</option>
+                <option value="hair styling">hair styling</option>
+                <option value="Catering and event planning">
+                  Catering and event planning
+                </option>
+              </select>
+            </Form.Group>
+            <Form.Group className="">
+              <Form.Label className="m-0">Price</Form.Label>
+              <div class="input-group">
+                <input
+                  className="form-control escrow-price-field"
+                  aria-label="Price"
+                  type="number"
+                  placeholder="Enter the amount the product costs"
+                  id="price"
+                  name="price"
+                  value={transaction.price}
+                  onChange={handleChange} />
+                <span className="input-group-text ngn2">NGN</span>
               </div>
-              <div className="col-lg-6 col-md-8 col-sm-12">
-                <Form.Control
-                  type="text"
-                  placeholder="Enter the description of the item"
-                  id="description"
-                  name="description"
-                  value={transaction.description}
-                  onChange={handleChange}
-                  className="escrow-input-field"
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4 col-sm-12 text-md-end"></div>
-              <div className="col-lg-6 col-md-8  col-sm-12">
-                <span className="escrow-form-error ms-3">
-                  {formErrors.description}
-                </span>
-              </div>
-            </div>
-          </Form.Group>
-          <Form.Group className="mb-5">
-            <div className="row ">
-              <div className="col-sm-2 col-lg-4 text-md-end"></div>
-              <div className="col-sm-10 col-lg-8 ms-sm-auto row align-items-center">
-                <div className="col-4 text-end">
-                  <Form.Label>Total :</Form.Label>
+              <span className="escrow-form-error ms-3">
+                {formErrors.price}
+              </span>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="">Image</Form.Label>
+              <Form.Control
+                type="file"
+                placeholder="Attach Image(s)"
+                id="image"
+                name="image"
+                value={transaction.image}
+                onChange={handleChange}
+                className="escrow-input-field escrow-images"
+                accept="image/*" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="m-0">Description</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter the description of the item"
+                id="description"
+                name="description"
+                value={transaction.description}
+                onChange={handleChange}
+                className="escrow-input-field" />
+              <span className="escrow-form-error">
+                {formErrors.description}
+              </span>
+            </Form.Group>
+            <Form.Group className="form-group mb-3">
+              <label for="from">Service Timeline</label>
+              <div className="row">
+                <div className="col-6 input-group w-50">
+                  <label for="from" className="input-group-text">
+                    From
+                  </label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    id="from"
+                    placeholder="From"
+                  />
                 </div>
-                <div className="col-8 d-flex align-items-center">
-                  <span className="ngn">NGN</span>
-                  <Form.Control
-                    type="number"
-                    id="total"
-                    name="total"
-                    value={transaction.total}
-                    onChange={handleChange}
-                    className="total-input border-0 "
-                    disabled
+                <div className="col-6 input-group w-50">
+                  <label for="to" className="input-group-text">
+                    To
+                  </label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    id="to"
+                    placeholder="To"
                   />
                 </div>
               </div>
-            </div>
-          </Form.Group>
-          <div className="d-flex justify-content-center pb-5 mt-5">
-            {/* <ProceedButton /> */}
-          </div>
-        </Form>{" "}
-      </div>
+            </Form.Group>
+            <Form.Group className="my-3 d-flex align-items-center justify-content-end text-end">
+              <label for="total" className="">
+                Total
+              </label>
+              <span className="">
+              <span
+                id="total"
+                name="total"
+                value={transaction.total}
+                onChange={handleChange}
+                className="ngn btn rounded-1"
+              >
+                ₦ {transaction.total}
+                </span>
+                <small className="d-block">*Service charge included</small>
+              </span>
+            </Form.Group>
+          </>
+        )}
+        <div className="d-flex justify-content-center">
+          <GeneralBtnStyle1 text="Cancel" />
+          <GeneralBtnStyle1 text="Proceed" />
+        </div>
+      </Form>
     </div>
   );
 };

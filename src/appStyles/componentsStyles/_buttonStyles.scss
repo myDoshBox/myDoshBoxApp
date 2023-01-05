@@ -69,3 +69,15 @@
 	border-radius: 7.4966px;
 	color: white !important;
 }
+
+// InitiateEscrow
+.EscrowTransactTypeBtn {
+	color: $pryColor !important;
+	border-color: $pryColor !important;
+	
+}
+.EscrowTransactTypeBtn:hover,.EscrowTransactTypeBtn:focus {
+	background-color: $pryColor !important;
+	border: 0;
+	color: white !important;
+}

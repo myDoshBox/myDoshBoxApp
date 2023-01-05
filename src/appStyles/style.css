@@ -125,6 +125,16 @@ p {
   letter-spacing: 0rem;
 }
 
+@media screen and (min-width: 992px) {
+  .InitiateEscrow {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .EscrowChoice {
+    width: 50% !important;
+  }
+}
 .all-btn:hover {
   background-color: #006747 !important;
 }
@@ -206,6 +216,17 @@ p {
   background: rgba(0, 103, 71, 0.9);
   border: 1.94464px solid #ffffff;
   border-radius: 7.4966px;
+  color: white !important;
+}
+
+.EscrowTransactTypeBtn {
+  color: #006747 !important;
+  border-color: #006747 !important;
+}
+
+.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+  background-color: #006747 !important;
+  border: 0;
   color: white !important;
 }
 
@@ -809,7 +830,7 @@ p {
 
 .FAQs {
   --bs-gutter-x: 0;
-  color: #66a491;
+  color: #e5f0ed;
 }
 .FAQs .faqs-header {
   background-color: #006747;
@@ -989,7 +1010,6 @@ input[type=color]:focus,
   font-size: 1.125rem !important;
 }
 
-.escrow-input-field,
 .bank-transfer-input-field {
   width: 90% !important;
   margin: 0 15px;
@@ -1019,10 +1039,8 @@ input[type=color]:focus,
 }
 
 .ngn2 {
-  border: 1px solid none;
+  border-color: #006747 !important;
   background-color: #006747 !important;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0 5px 5px 0;
   color: hsl(0deg, 0%, 100%) !important;
 }
 
