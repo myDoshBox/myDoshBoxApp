@@ -14,15 +14,13 @@ const PricingPage = () => {
         </div>
         {/* table Section starts */}
         <section>
-          <table className=" table table-bordered border-white pricing-table">
-            <thead className="">
-              <tr className="BgColor ">
-                <th className="text-white p-4 text-center">
+          <table className="table table-bordered border-white pricing-table">
+            <thead>
+              <tr className="BgColor">
+                <th className="text-white p-3 text-center">
                   Transaction Amount
                 </th>
-                <th className="text-white col-7 p-4 text-center">
-                  Doshbox Fess
-                </th>
+                <th className="text-white p-3 text-center">Doshbox Fess</th>
               </tr>
             </thead>
             <tbody>

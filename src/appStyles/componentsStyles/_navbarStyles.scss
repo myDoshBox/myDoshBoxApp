@@ -63,16 +63,30 @@
 }
 
 /**SideNav Styling**/
-.SideNav {
-  background-color: $pryColor;
-  color: $secColor;
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
 }
+.offcanvas-lg,
+.offcanvas {
+  background-color: #006747 !important;
+  color: $secColor !important;
+}
+.SideNav {
+  background-color: #006747 !important;
+  color: $secColor !important;
+}
+
+.bottom {
+  bottom: 10% !important;
+}
+
 .SideNavLogo {
   cursor: pointer !important;
 }
 .SideNavItem {
-  @include H6Font;
-  color: $secColor;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  color: $secColor !important;
   cursor: pointer !important;
   font-weight: 400;
 }

@@ -1251,9 +1251,23 @@ input[type=color]:focus,
   }
 }
 /**SideNav Styling**/
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+
+.offcanvas-lg,
+.offcanvas {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
 .SideNav {
-  background-color: #006747;
-  color: hsl(0deg, 0%, 100%);
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.bottom {
+  bottom: 10% !important;
 }
 
 .SideNavLogo {
@@ -1261,9 +1275,9 @@ input[type=color]:focus,
 }
 
 .SideNavItem {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: hsl(0deg, 0%, 100%);
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  color: hsl(0deg, 0%, 100%) !important;
   cursor: pointer !important;
   font-weight: 400;
 }
@@ -1508,10 +1522,6 @@ input[type=color]:focus,
 
 .BgColor {
   background-color: #006747;
-}
-
-.TableRowColor {
-  background-color: #66a491;
 }
 
 .pricing-table tr:nth-child(even) {
