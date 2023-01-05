@@ -1,7 +1,3 @@
-.text-red {
-  color: red !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -259,6 +255,10 @@ p {
 
 .pale-red:hover, .pale-red:focus {
   background-color: rgb(255, 0, 0) !important;
+}
+
+.link-color-reset {
+  color: inherit !important;
 }
 
 .CoreValueCard {
@@ -607,34 +607,6 @@ p {
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.MiniUsersCard .payment-gateway-image {
-  width: 12vw;
-}
-.MiniUsersCard .payment-gateway-card {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .payment-gateway-card p {
-  color: rgba(75, 68, 83, 0.5) !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 1rem !important;
-}
-.MiniUsersCard .payment-gateway-card h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .payment-gateway-card h4 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
 .MiniUsersCard .buying-selling-card {
   width: 468px;
   height: 227px;
@@ -872,6 +844,10 @@ p {
   outline: 0 !important;
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.125);
+}
+
+.payment-method-card:hover, .payment-method-card:focus {
+  border-color: #006747 !important;
 }
 
 .BgColor {

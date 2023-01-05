@@ -88,3 +88,7 @@
 .pale-red:hover,.pale-red:focus {
   background-color:$canceledTextColor !important ;
 }
+
+.link-color-reset {
+  color: inherit !important;
+}

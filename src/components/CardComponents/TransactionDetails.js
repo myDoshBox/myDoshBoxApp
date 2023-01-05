@@ -1,7 +1,4 @@
-import { Card } from "react-bootstrap";
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
-import bank from "../../images/bank.jpg";
-import atm from "../../images/atm.jpg";
 import product from "../../images/productimage.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
@@ -106,46 +103,6 @@ export const TransactionDetails = ({
           <div>{rightBtn}</div>
         </div>
       </div>
-    </>
-  );
-};
-
-
-export const PaymentGatewayCard = () => {
-  return (
-    <>
-      <Card className=" p-lg-5 p-3 mt-5 col-lg-8 border-0 shadow">
-        <div>
-          <div className="row p-lg-3 p-2">
-            <h2 className="text-center">Payment Gateway</h2>
-            <p className="text-center">
-              Please choose your preferred mode of payment
-            </p>
-            <div className="col-12 col-lg-6 mt-3">
-              <Card className="d-flex flex-row align-items-center p-3 p-md-3">
-                <img src={atm} alt="bank image" className=" w-25" />
-                <div className="ms-2">
-                  <h4>Paystack</h4>
-                  <p className="fw-lighter text-muted">
-                    Proceed to pay using your atm card
-                  </p>
-                </div>
-              </Card>
-            </div>
-            <div className="col-12 col-lg-6 mt-3 mb-3">
-              <Card className="d-flex flex-row align-items-center p-3 p-md-3">
-                <img src={bank} alt="bank image" className="w-25" />
-                <div>
-                  <h4>Bank Transfer</h4>
-                  <p className="fw-lighter text-muted">
-                    Proceed to pay by transferring to our account
-                  </p>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </Card>
     </>
   );
 };

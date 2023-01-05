@@ -12,6 +12,7 @@ import InitiateEscrow from "./pages/ESCROW_PAGES/InitiateEscrowForm";
 import EscrowAgreement from "./pages/ESCROW_PAGES/EscrowAgreement";
 import {BuyerDeliveryForm, SellerDeliveryForm} from "./pages/ESCROW_PAGES/ConfirmDelivery";
 import BankTransferForm from "./pages/ESCROW_PAGES/BankTransferForm";
+import { ChoosePaymentMethod } from "./pages/ESCROW_PAGES/ChoosePaymenMethod";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         		<Route path="seller-delivery-form" element={<SellerDeliveryForm />} />
         <Route path="buyer-delivery-form" element={<BuyerDeliveryForm />} />
         <Route path="bank-transfer-form" element={<BankTransferForm />} />
+        <Route path="choose-payment-method" element={<ChoosePaymentMethod />} />
+
 
 
     {/* //         <Route path="faqs" element={<FAQs />} /> */}
