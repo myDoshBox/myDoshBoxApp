@@ -116,3 +116,9 @@ p {
 .normal-text {
   @include pFont;
 }
+
+label{
+  font-size: 0.85rem !important;
+  font-family: "Open Sans" !important;
+  font-weight: 300 !important;
+}
