@@ -3,71 +3,71 @@
 
 // General Button Style
 .all-btn:hover {
-	background-color: $pryColor !important;
+  background-color: $pryColor !important;
 }
 
 .GeneralBtnStyle1 {
-	@include H5Font;
-	background-color: $buttonColor !important;
+  @include H5Font;
+  background-color: $buttonColor !important;
 }
 
 .GeneralBtnStyle2 {
-	background-color: $pryColor !important;
-	@include pFont;
+  background-color: $pryColor !important;
+  @include pFont;
 }
 
 // Authentication Button Styles
 .GoogleAuthBtn {
-	@include pFont;
-	color: $bodyTextColor !important;
-	background-color: inherit !important;
-	border: 1px solid $buttonColor !important;
+  @include pFont;
+  color: $bodyTextColor !important;
+  background-color: inherit !important;
+  border: 1px solid $buttonColor !important;
 }
 
 .SignUpGroup {
-	@include pFont;
-	background-color: $pryColor !important;
-	color: #ffffff !important;
+  @include pFont;
+  background-color: $pryColor !important;
+  color: #ffffff !important;
 }
 
 .SignUpGroup:hover,
 .SignUpGroup:focus {
-	background-color: $buttonColor !important;
-	// color: white !important;
+  background-color: $buttonColor !important;
+  // color: white !important;
 }
 
 // NAVIGATION AND VIEW STYLING
 .ScrollUpBtnStyle {
-	border: 2px solid black !important;
-	border-radius: 20px;
+  border: 2px solid black !important;
+  border-radius: 20px;
 }
 
 // OTHER BUTTON STYLING
 .CalendarBtnStyle {
-	font-weight: 200 !important;
-	color: #4b4453 !important;
-	background-color: #e5f0ed !important;
+  font-weight: 200 !important;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
 }
 
 .CancelBtn {
-	@include pFont;
-	background-color: $cancelBtnColor !important;
+  @include pFont;
+  background-color: $cancelBtnColor !important;
 }
 
 .FilteBtnStyle {
-	font-weight: 200 !important;
-	color: #4b4453 !important;
-	background-color: #e5f0ed !important;
+  font-weight: 200 !important;
+  color: #4b4453 !important;
+  background-color: #e5f0ed !important;
 }
 
 // LearnMoreCardButton
 .LearnMoreCardButton {
-	width: 140.99px;
-	height: 43.75px !important;
-	background: rgba(0, 103, 71, 0.9);
-	border: 1.94464px solid #ffffff;
-	border-radius: 7.4966px;
-	color: white !important;
+  width: 140.99px;
+  height: 43.75px !important;
+  background: rgba(0, 103, 71, 0.9);
+  border: 1.94464px solid #ffffff;
+  border-radius: 7.4966px;
+  color: white !important;
 }
 
 // InitiateEscrow

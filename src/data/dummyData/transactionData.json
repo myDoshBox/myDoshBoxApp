@@ -1,43 +1,60 @@
 {
-	"recent_transactions": [
-		{
-			"trans_id": 1,
-			"buyer_name": "Jason",
-			"seller_name": "Ada",
-			"products": "cream",
-			"date": "2/04/23",
-			"status": "in progress",
-			"view": "......."
-		},
+  "recent_transactions": [
+    {
+      "trans_id": 1,
+      "buyer_name": "Jason",
+      "seller_name": "Ada",
+      "products": "cream",
+      "date": "2/04/23",
+      "status": "in progress",
+      "view": "......."
+    },
 
-		{
-			"trans_id": 2,
-			"buyer_name": "Junior",
-			"seller_name": "Sade",
-			"products": "Chair",
-			"date": "2/01/23",
-			"status": "completed",
-			"view": "......."
-		},
+    {
+      "trans_id": 2,
+      "buyer_name": "Junior",
+      "seller_name": "Sade",
+      "products": "Chair",
+      "date": "2/01/23",
+      "status": "completed",
+      "view": "......."
+    },
 
-		{
-			"trans_id": 3,
-			"buyer_name": "Seyi",
-			"seller_name": "Chris",
-			"products": "Table",
-			"date": "2/03/23",
-			"status": "in progress",
-			"view": "......."
-		},
+    {
+      "trans_id": 3,
+      "buyer_name": "Seyi",
+      "seller_name": "Chris",
+      "products": "Table",
+      "date": "2/03/23",
+      "status": "in progress",
+      "view": "......."
+    },
 
-		{
-			"trans_id": 4,
-			"buyer_name": "Edwards",
-			"seller_name": "Bertha",
-			"products": "furniture",
-			"date": "2/04/24",
-			"status": "completed",
-			"view": "......."
-		}
-	]
+    {
+      "trans_id": 4,
+      "buyer_name": "Edwards",
+      "seller_name": "Bertha",
+      "products": "furniture",
+      "date": "2/04/24",
+      "status": "completed",
+      "view": "......."
+    }
+  ],
+
+  "transaction_agreed": [
+    {
+      "id": 1,
+      "heading": "Transaction Agreed",
+      "sub_text": "The details of this transaction has been viewed and agreed to buy the seller",
+      "product": "./../images/contactImgs/calculator.png",
+      "email": "Opeyemi Andrewson",
+      "trans_id": "AXSQWEDSC",
+      "description": "AXSQWEDSC",
+      "quality": 30,
+      "price": "N 120,000",
+      "date": "14 Aug 2022",
+      "total": "N3,600,000",
+      "alert": " By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above"
+    }
+  ]
 }
