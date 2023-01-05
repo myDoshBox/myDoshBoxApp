@@ -110,48 +110,6 @@ export const TransactionDetails = ({
   );
 };
 
-// EscrowInitiationsTerms&ConditionCard
-export const EscrowInitiationsTermsAndConditionCard = () => {
-  return (
-    <>
-      <div class="card border-0 shadow w-50">
-        <div class="card-body ">
-          <h4 className="text-center">
-            Escrow Initiation Terms and Conditions
-          </h4>
-          <p className="text-muted">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut omnis,
-            magnam rerum numquam minus commodi temporibus recusandae optio ipsum
-            nam! Nesciunt aspernatur cupiditate aliquam, explicabo blanditiis,
-            laborum corporis dicta laudantium quis eveniet vero ipsa? Aperiam
-            mollitia id qui. Rerum soluta excepturi, aut eum blanditiis eligendi
-            deserunt voluptatum fugit consequuntur adipisci, totam numquam
-            reprehenderit accusantium sapiente nobis nam inventore odit maiores
-            iste nostrum voluptatibus et. Nam, necessitatibus nobis vel, fugit
-            nostrum omnis inventore voluptate ut, corrupti nesciunt ex
-            distinctio repellat incidunt. Dolorum, ratione libero vel quaerat
-            explicabo delectus optio, nihil unde quibusdam ipsam minima
-            blanditiis exercitationem laborum? Esse incidunt qui, cum maxime
-            laborum hic quis ipsam quae. Quasi magnam facere eos quo eligendi
-            iure vel sint repellendus architecto hic. Inventore aliquam corporis
-            ducimus officiis est accusamus consequatur et nulla quae. Ullam quos
-            eaque fuga natus obcaecati consequatur, sint, reiciendis doloribus
-            delectus qui laudantium corporis eveniet repellat aliquid minima
-            exercitationem excepturi itaque iure iusto labore eum unde vitae
-            quis dicta! Facere ipsa ad nulla maxime deleniti vitae optio?
-            Consectetur porro aliquam architecto a consequuntur excepturi, neque
-            rem vero quaerat! Doloremque asperiores eum ab ullam qui nobis
-            consequatur minus veritatis quasi amet unde ratione enim dolore
-            dolores, culpa incidunt error, delectus, ipsum iste?
-          </p>
-          <span className="d-flex justify-content-center mt-3">
-            <GeneralBtn text="I Agree" />
-          </span>
-        </div>
-      </div>
-    </>
-  );
-};
 
 export const PaymentGatewayCard = () => {
   return (

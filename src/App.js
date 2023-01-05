@@ -10,6 +10,8 @@ import TransactionAgreedPage from "./pages/transactionAgreedPage";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import InitiateEscrow from "./pages/ESCROW_PAGES/InitiateEscrowForm";
 import EscrowAgreement from "./pages/ESCROW_PAGES/EscrowAgreement";
+import {BuyerDeliveryForm, SellerDeliveryForm} from "./pages/ESCROW_PAGES/ConfirmDelivery";
+import BankTransferForm from "./pages/ESCROW_PAGES/BankTransferForm";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
     {/* //         <Route path="pricingpage" element={<PricingPage />} /> */}
         <Route path="escrow" element={<InitiateEscrow />} />
         		<Route path="agreement" element={<EscrowAgreement />} />
+        		<Route path="seller-delivery-form" element={<SellerDeliveryForm />} />
+        <Route path="buyer-delivery-form" element={<BuyerDeliveryForm />} />
+        <Route path="bank-transfer-form" element={<BankTransferForm />} />
 
 
     {/* //         <Route path="faqs" element={<FAQs />} /> */}

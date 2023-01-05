@@ -1,3 +1,7 @@
+.text-red {
+  color: red !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -125,6 +129,19 @@ p {
   letter-spacing: 0rem;
 }
 
+.small-text {
+  font-size: 0.7rem !important;
+}
+
+.normal-text {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;
@@ -222,12 +239,26 @@ p {
 .EscrowTransactTypeBtn {
   color: #006747 !important;
   border-color: #006747 !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
 }
 
 .EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
   background-color: #006747 !important;
   border: 0;
   color: white !important;
+}
+
+.pale-red {
+  background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.pale-red:hover, .pale-red:focus {
+  background-color: rgb(255, 0, 0) !important;
 }
 
 .CoreValueCard {

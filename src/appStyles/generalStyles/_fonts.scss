@@ -108,3 +108,11 @@ p {
 .userNavFont {
   @include userNavFont;
 }
+
+.small-text{
+  font-size: 0.7rem !important;
+}
+
+.normal-text {
+  @include pFont;
+}

@@ -74,10 +74,17 @@
 .EscrowTransactTypeBtn {
 	color: $pryColor !important;
 	border-color: $pryColor !important;
+  @include pFont;
 	
 }
 .EscrowTransactTypeBtn:hover,.EscrowTransactTypeBtn:focus {
 	background-color: $pryColor !important;
 	border: 0;
 	color: white !important;
+}
+.pale-red {
+  background-color:$cancelBtnColor !important ;
+}
+.pale-red:hover,.pale-red:focus {
+  background-color:$canceledTextColor !important ;
 }

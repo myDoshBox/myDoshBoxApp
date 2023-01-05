@@ -4,6 +4,8 @@ import {
   Form,
 } from "react-bootstrap";
 import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
+import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { Link } from "react-router-dom";
 
 const InitiateEscrow = () => {
   const initialValues = {
@@ -100,7 +102,7 @@ const InitiateEscrow = () => {
       <UserSidenav />
       </div>
 
-      <Form onSubmit={handleSubmit} className="ms-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 ">
+      <Form onSubmit={handleSubmit} className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 ">
         <Form.Group className="">
           <Form.Label className="m-0">Phone Number</Form.Label>
           <Form.Control
@@ -112,6 +114,7 @@ const InitiateEscrow = () => {
             onChange={handleChange}
             className="escrow-input-field"
           />
+          <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
           <span className="escrow-form-error ms-3">
             {formErrors.phoneNumber}
           </span>
@@ -145,6 +148,7 @@ const InitiateEscrow = () => {
               />
             </div>
           </div>
+          <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -178,6 +182,7 @@ const InitiateEscrow = () => {
                 className="escrow-input-field"
                 placeholder="Enter product name"
               />
+              <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
             </Form.Group>
             <div className="form-group mb-3">
               <label for="category">Category</label>
@@ -212,15 +217,16 @@ const InitiateEscrow = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className="m-0">Price</Form.Label>
-              <div className="input-group mb-3">
+              <div className="input-group">
   <input className="form-control" aria-label="price in Naira" type="number"
                   placeholder="Enter the amount the product costs"
                   id="price"
                   name="price"
                   value={transaction.price}
                   onChange={handleChange}/>
-  <span className="input-group-text ngn2">₦</span>
+                <span className="input-group-text ngn2">₦</span>
 </div>
+                <small className="small-text text-danger fst-italic fw-lighter">*There is a 5% service charge on each transaction</small>
               <span className="escrow-form-error ms-3">{formErrors.price}</span>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -239,8 +245,9 @@ const InitiateEscrow = () => {
             <Form.Group className="">
               <Form.Label className="">Description</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter the description of the item"
+                as="textarea"
+                rows={3} 
+                placeholder="Enter product description"
                 id="description"
                 name="description"
                 value={transaction.description}
@@ -265,7 +272,7 @@ const InitiateEscrow = () => {
               >
                 ₦ {transaction.total}
               </span>
-              <small className="d-block">*Service charge included</small>
+              <small className="d-block small-text text-danger fst-italic fw-lighter">*Service charge included</small>
               </span>
             </Form.Group>
           </>
@@ -281,6 +288,8 @@ const InitiateEscrow = () => {
                 id="name"
                 className="escrow-input-field"
                 placeholder="Enter service name" />
+                            <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
+
             </Form.Group>
             <Form.Group className="form-group mb-3">
               <label for="category">Category</label>
@@ -310,6 +319,7 @@ const InitiateEscrow = () => {
                   onChange={handleChange} />
                 <span className="input-group-text ngn2">NGN</span>
               </div>
+              <small className="small-text text-danger fst-italic fw-lighter">*There is a 5% service charge on each transaction</small>
               <span className="escrow-form-error ms-3">
                 {formErrors.price}
               </span>
@@ -329,8 +339,9 @@ const InitiateEscrow = () => {
             <Form.Group className="mb-3">
               <Form.Label className="m-0">Description</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter the description of the item"
+                as="textarea"
+                rows={3} 
+                placeholder="Enter service description"
                 id="description"
                 name="description"
                 value={transaction.description}
@@ -367,11 +378,11 @@ const InitiateEscrow = () => {
                 </div>
               </div>
             </Form.Group>
-            <Form.Group className="my-3 d-flex align-items-center justify-content-end text-end">
-              <label for="total" className="">
+            <Form.Group className="my-4 d-flex align-items-end text-end flex-column">
+              <div>
+              <label for="total" className="me-3">
                 Total
               </label>
-              <span className="">
               <span
                 id="total"
                 name="total"
@@ -381,14 +392,26 @@ const InitiateEscrow = () => {
               >
                 ₦ {transaction.total}
                 </span>
-                <small className="d-block">*Service charge included</small>
-              </span>
+              </div>
+              <div>
+              <small className="d-block small-text text-danger fst-italic fw-lighter">*Service charge included</small>
+              </div>
             </Form.Group>
           </>
         )}
         <div className="d-flex justify-content-center">
-          <GeneralBtnStyle1 text="Cancel" />
-          <GeneralBtnStyle1 text="Proceed" />
+          <Link to="/">
+          <GeneralBtn
+              text="Cancel"
+              styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
+          />
+          </Link>
+          <Link to="/agreement">
+          <GeneralBtn
+              text="Proceed"
+              styles="GeneralBtnStyle1 btn all-btn text-white"
+            />
+        </Link>
         </div>
       </Form>
     </div>
