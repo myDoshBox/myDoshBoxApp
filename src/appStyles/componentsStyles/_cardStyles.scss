@@ -1,8 +1,12 @@
 @use "../generalStyles/color" as *;
 @use "../generalStyles/fonts" as *;
 
-.ContactBorder {
-  // color: $pryColor;
+.CoreValueCard {
+  background-color: $pryColor !important;
+}
+
+.teamValueStyle {
+  background-color: $pryColorVariant !important;
 }
 
 .LearnMoreCard {
@@ -558,16 +562,6 @@
   .textStyle {
     color: rgb(19, 19, 19);
   }
-  .coreValueStyle {
-    background-color: $pryColor !important;
-  }
-
-  .teamValueStyle {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    background-color: #e5f0ed !important;
-    color: rgb(73, 73, 73);
-    border: 1px solid $pryColor;
-  }
 
   .warningStyle {
     border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
@@ -578,4 +572,24 @@
     padding: 1.25rem;
     font-size: 0.875rem !important;
   }
+}
+
+
+// FAQ Styles
+.FAQs {
+  --bs-gutter-x: 0;
+  color: $pryColorVariant;
+  .faqs-header {
+   background-color: $pryColor;
+  }
+  .accordion-button:not(.collapsed) {
+    color: unset;
+    background-color:  white;
+} 
+
+.accordion-button:focus, .accordion-button:not(.collapsed):focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border-color: rgba(0,0,0,.125);
+}
 }
