@@ -807,7 +807,7 @@ p {
 
 .FAQs {
   --bs-gutter-x: 0;
-  color: #66a491;
+  color: #e5f0ed;
 }
 .FAQs .faqs-header {
   background-color: #006747;
@@ -1528,12 +1528,8 @@ input[type=color]:focus,
   background-color: #006747;
 }
 
-.TableRowColor {
-  background-color: #e5f0ed;
-}
-
 .pricing-table tr:nth-child(even) {
-  background-color: #66a491;
+  background-color: #e5f0ed;
 }
 
 .NotificationCardWrapper {
