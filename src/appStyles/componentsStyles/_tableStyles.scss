@@ -94,7 +94,7 @@
   background-color: $pryColor;
 }
 
-.TableRowColor {
+.pricing-table tr:nth-child(even) {
   background-color: $pryColorVariant;
 }
 
