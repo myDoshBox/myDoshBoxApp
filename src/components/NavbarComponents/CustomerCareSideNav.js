@@ -4,14 +4,12 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import {
   ChatIcon,
   DashboardIcon,
-  DisputeIcon,
   LogoutIcon,
   NavTransactionIcon,
   NotificationIcon,
   SettingsIcon,
   UsersIcon,
   TicketsIcon,
-  AnalyticsIcon,
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.jpg";
 
@@ -40,7 +38,7 @@ const SmallShowExample = ({ name, ...props }) => {
     <>
       <Button
         onClick={toggleShow}
-        className="me-2 bg-white border-0 d-md-none position-fixed start-0 top-0"
+        className="me-2 bg-white border-0 d-lg-none position-fixed start-0 top-0"
       >
         <svg
           width="30"
@@ -60,7 +58,7 @@ const SmallShowExample = ({ name, ...props }) => {
         show={show}
         onHide={handleClose}
         responsive="lg"
-        className="w-75 d-md-none text-white"
+        className="w-75 d-lg-none text-white"
         {...props}
       >
         <Offcanvas.Header closeButton>
@@ -139,7 +137,7 @@ const BigShowExample = ({ name, ...props }) => {
     <>
       <Button
         onClick={toggleShow}
-        className="me-2 bg-white border-0 d-none d-md-block position-fixed start-0 top-0"
+        className="me-2 bg-white border-0 d-none d-lg-block position-fixed start-0 top-0"
       >
         <svg
           width="30"
@@ -158,7 +156,7 @@ const BigShowExample = ({ name, ...props }) => {
         show={show}
         onHide={handleClose}
         {...props}
-        className="d-none d-md-block w-25"
+        className="d-none d-lg-block w-25"
       >
         <Offcanvas.Header>
           <Offcanvas.Title>

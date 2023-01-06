@@ -1148,6 +1148,12 @@ input[type=color]:focus,
   color: red !important;
 }
 
+.contestPage .row {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
