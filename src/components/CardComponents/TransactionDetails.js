@@ -4,7 +4,6 @@ import bank from "../../images/bank.jpg";
 import atm from "../../images/atm.jpg";
 import product from "../../images/productimage.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
-import { BackIcon, NextIcon } from "../IconComponent/NavigationAndViewIcon";
 
 // DashboardConflictCards (Buying,Selling,InitiateTransactionCards,SettledTransactionsCard, ConflictCards)
 export const DashboardConflictCards = ({ icon, text }) => {
@@ -49,13 +48,12 @@ export const TransactionDetails = ({
   date,
   total,
   alert,
+  leftBtn,
+  rightBtn,
 }) => {
   return (
     <>
-      <div
-        class="card rounded-0 border-0 shadow rounded-1"
-        style={{ width: "50rem" }}
-      >
+      <div class="" style={{ width: "50rem" }}>
         <header className="mt-3">
           <h4 className="text-center">{heading}</h4>
           <p className="text-center text-muted fw-light">{sub_text}</p>
@@ -63,43 +61,37 @@ export const TransactionDetails = ({
         <span className="mx-auto img-fluid w-75">
           <img src={product} className="w-100" alt="" />
         </span>
-        <div class="card-body d-flex flex-column ">
-          <div className="mt-4 ">
-            <table className="mx-auto ">
-              <tbody>
-                <tr>
-                  <td>Sellers Email</td>
-                  <td className="text-end text-muted fs-6 text-break">
-                    {email}
-                  </td>
-                </tr>
-                <tr>
-                  <td>Transaction id</td>
-                  <td className="text-end text-muted fs-6">{id}</td>
-                </tr>
-                <tr>
-                  <td>Description</td>
-                  <td className="text-end text-muted fs-6">{description}</td>
-                </tr>
-                <tr>
-                  <td>Quality</td>
-                  <td className="text-end text-muted">{quality}</td>
-                </tr>
 
-                <tr>
-                  <td>Price</td>
-                  <td className="text-end text-muted">{price}</td>
-                </tr>
-                <tr>
-                  <td>Delivery/compilation Date</td>
-                  <td className="text-end text-muted">{date}</td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td className="text-end text-muted">{total}</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="card-body">
+          <div className="p-4">
+            <div className="d-flex justify-content-between">
+              <h5>Sellers Email</h5>
+              <p>{email}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Transaction id</h5>
+              <p>{id}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Description</h5>
+              <p>{description}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Quality</h5>
+              <p>{quality}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Price</h5>
+              <p>{price}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Delivery compilation Date</h5>
+              <p>{date}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <h5>Total</h5>
+              <p>{total}</p>
+            </div>
           </div>
           <div className="d-flex align-items-center border-danger border-start border-5 mx-auto mt-4 alert alert-danger border-0 rounded-0">
             <CautionIcon />
@@ -108,18 +100,10 @@ export const TransactionDetails = ({
               {alert}
             </p>
           </div>
-          <div className="d-flex justify-content-between container mt-5">
-            <GeneralBtn
-              text="Back"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-              icon={<BackIcon />}
-            />
-            <GeneralBtn
-              text="Proceed"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-              icon={<NextIcon />}
-            />
-          </div>
+        </div>
+        <div className="d-flex justify-content-center">
+          <div className="me-5">{leftBtn}</div>
+          <div>{rightBtn}</div>
         </div>
       </div>
     </>

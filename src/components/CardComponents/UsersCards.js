@@ -13,8 +13,8 @@ import {
   CustomerCareIcon,
   BigLogoutIcon,
 } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/OtherButtons";
-import { GeneralBtnStyle1 } from "../Button";
+import { FilterButton } from "../ButtonsComponent/MiscBtns";
+import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
