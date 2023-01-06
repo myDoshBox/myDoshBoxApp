@@ -1,0 +1,29 @@
+{
+  "pricing_data": [
+    {
+      "pricing_id": 1,
+      "transaction_amount": "N1000-N10,000",
+      "charges": "N1000-N10,000"
+    },
+    {
+      "pricing_id": 2,
+      "transaction_amount": "N1000-N10,000",
+      "charges": "N1000-N10,000"
+    },
+    {
+      "pricing_id": 3,
+      "transaction_amount": "N1000-N10,000",
+      "charges": "N1000-N10,000"
+    },
+    {
+      "pricing_id": 4,
+      "transaction_amount": "N1000-N10,000",
+      "charges": "N1000-N10,000"
+    },
+    {
+      "pricing_id": 5,
+      "transaction_amount": "N1000-N10,000",
+      "charges": "N1000-N10,000"
+    }
+  ]
+}

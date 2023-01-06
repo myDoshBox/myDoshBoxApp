@@ -11,24 +11,26 @@ import { SignUpOrganizationForm } from "../../components/FormComponents.js/Authe
 
 const UsersDashboardRoutes = () => {
 	return (
-		<Route element={<NeutralsSidenav />}>
-			{/* // <Routes> */}
-			{/* <Route element={<UserSidenav />}> */}
-			{/* <Route path="transactions"></Route> */}
-			{/* <Route path="transaction_history"></Route>
+		<Routes>
+			<Route index element={<NeutralsSidenav />}>
+				{/* // <Routes> */}
+				{/* <Route element={<UserSidenav />}> */}
+				{/* <Route path="transactions"></Route> */}
+				{/* <Route path="transaction_history"></Route>
 				<Route path="chats"></Route>
 				<Route path="notifications"></Route>
 				<Route path="disputes"></Route>
-				<Route path="settings"></Route> */}
-			{/* <Route path="logout" element={<Homepage />} /> */}
-			{/* </Route> */}
+            <Route path="settings"></Route> */}
+				{/* <Route path="logout" element={<Homepage />} /> */}
+				{/* </Route> */}
 
-			<Route path="dash" element={<SignInForm />} />
-			<Route path="goss" element={<SignUpOrganizationForm />} />
-			{/* <Route path="*" element={<Error404 />} /> */}
-			{/* <Route path="logout" element={<Homepage />} /> */}
-			{/* </Routes> */}
-		</Route>
+				<Route path="dash" element={<SignInForm />} />
+				<Route path="goss" element={<SignUpOrganizationForm />} />
+				{/* <Route path="*" element={<Error404 />} /> */}
+				{/* <Route path="logout" element={<Homepage />} /> */}
+				{/* </Routes> */}
+			</Route>
+		</Routes>
 	);
 };
 

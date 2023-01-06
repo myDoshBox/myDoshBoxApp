@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { Icon } from "@iconify/react";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 
 export const SignInForm = () => {
 	const [email, setEmail] = useState("");

@@ -1254,31 +1254,17 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  margin: 10px 20px !important;
+  margin: 5px 10px !important;
   color: black !important;
-  text-decoration: none;
 }
 
-.hamburgerIcon,
-.closeIcon {
+.hamburgerIcon {
   border: none !important;
   box-shadow: none !important;
 }
 
-.closeIcon {
-  display: none;
-}
-
 .guest-nav {
-  margin: 10px 20px !important;
-}
-
-.bigLogo {
-  transform: translateY(-20px);
-}
-
-.smallLogo {
-  display: none;
+  padding: 10px 20px !important;
 }
 
 .userDashboardNav {
@@ -1292,10 +1278,6 @@ input[type=color]:focus,
 
 .form-control {
   box-shadow: none !important;
-}
-
-.nav-btn {
-  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 280px) {
@@ -1316,9 +1298,7 @@ input[type=color]:focus,
 @media screen and (max-width: 992px) {
   .nav-text {
     background-color: #006747;
-    position: absolute;
-    width: 100%;
-    transform: translateY(-50px);
+    width: 100% !important;
   }
   .nav-links {
     color: white !important;
@@ -1328,20 +1308,6 @@ input[type=color]:focus,
   .guest-nav {
     margin: 0px !important;
     padding: 0px !important;
-    position: relative;
-  }
-  .closeIcon {
-    display: block;
-    box-shadow: none !important;
-  }
-  .bigLogo {
-    transform: translateY(0);
-  }
-  .smallLogo {
-    display: block;
-  }
-  .nav-btn {
-    transform: translateY(0px);
   }
 }
 /**SideNav Styling**/
@@ -1608,7 +1574,7 @@ input[type=color]:focus,
   background-color: #006747;
 }
 
-.TableRowColor {
+.pricing-table tr:nth-child(even) {
   background-color: #e5f0ed;
 }
 
