@@ -141,7 +141,7 @@ input[type="color"]:focus,
   margin: 0 15px;
 }
 .escrow-price-field {
-  width: 78% !important;
+  // width: 78% !important;
   //   margin: 0 15px
   border-radius: 5px 0 0 5px !important;
 }
@@ -262,4 +262,12 @@ input[type="color"]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+
+// Initiate Escrow
+.escrow-dropdown-field, .escrow-dropdown-field:focus, .escrow-dropdown-field:hover {
+  outline: 0 !important;
+  box-shadow: none !important; 
+  border-color: rgba(0,0,0,.125);
+  font-weight: 300!important;
 }

@@ -34,7 +34,7 @@ function App() {
 
 
 
-    {/* //         <Route path="faqs" element={<FAQs />} /> */}
+            <Route path="faqs" element={<FAQs />} />
           </Routes>
     </Router>
   );

@@ -138,7 +138,7 @@ p {
   letter-spacing: 0rem;
 }
 
-label {
+label, select, option, .escrow-images, .date-input-field {
   font-size: 0.85rem !important;
   font-family: "Open Sans" !important;
   font-weight: 300 !important;
@@ -836,8 +836,8 @@ label {
 }
 
 .FAQs {
-  --bs-gutter-x: 0;
   color: #e5f0ed;
+  font-family: "Open Sans" !important;
 }
 .FAQs .faqs-header {
   background-color: #006747;
@@ -846,13 +846,22 @@ label {
   color: unset;
   background-color: white;
 }
-.FAQs .accordion-button:focus, .FAQs .accordion-button:not(.collapsed):focus {
+.FAQs .accordion-title, .FAQs .accordion-body {
+  font-family: "Open Sans";
+  font-weight: 400 !important;
+}
+.FAQs .accordion-head {
+  border-bottom: 0.5px dashed rgba(75, 68, 83, 0.1) !important;
+}
+.FAQs .accordion-button:focus,
+.FAQs .accordion-button:not(.collapsed):focus {
   outline: 0 !important;
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.125);
 }
 
-.payment-method-card:hover, .payment-method-card:focus {
+.payment-method-card:hover,
+.payment-method-card:focus {
   border-color: #006747 !important;
 }
 
@@ -1027,7 +1036,6 @@ input[type=color]:focus,
 }
 
 .escrow-price-field {
-  width: 78% !important;
   border-radius: 5px 0 0 5px !important;
 }
 
@@ -1175,6 +1183,13 @@ input[type=color]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+
+.escrow-dropdown-field, .escrow-dropdown-field:focus, .escrow-dropdown-field:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: 300 !important;
 }
 
 .Modal-Btn {

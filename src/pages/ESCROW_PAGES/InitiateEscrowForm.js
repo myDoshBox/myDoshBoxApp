@@ -123,7 +123,7 @@ const InitiateEscrow = () => {
         <Form.Group className="mb-3">
           <label className="">What type of transaction are you making?</label>
           <div className="d-flex">
-            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 py-2 me-3 EscrowChoice">
+            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 pt-2 pb-1 me-3 EscrowChoice">
               <label className="form-check-label me-2 me-lg-3" for="buying">
                 Buying
               </label>
@@ -135,7 +135,7 @@ const InitiateEscrow = () => {
                 value="buying"
               />
             </div>
-            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 py-2 EscrowChoice">
+            <div className="d-flex justify-content-between border border-1 rounded-1 px-2 pt-2 pb-1 EscrowChoice">
               <label className="form-check-label me-2 me-lg-3" for="selling">
                 Selling
               </label>
@@ -187,15 +187,15 @@ const InitiateEscrow = () => {
             <div className="form-group mb-3">
               <label for="category">Category</label>
               <select
-                className="form-select"
+                className="form-select escrow-dropdown-field border"
                 id="category"
                 placeholder="Pick your product category"
               >
-                <option value="Jewelry and Ornaments">
+                <option className="escrow-dropdown-field"  value="Jewelry and Ornaments">
                   Jewelry and Ornaments
                 </option>
-                <option value="Food and Nutrition">Food and Nutrition</option>
-                <option value="Clothing and Textiles">
+                <option  className="escrow-dropdown-field" value="Food and Nutrition">Food and Nutrition</option>
+                <option  className="escrow-dropdown-field" value="Clothing and Textiles">
                   Clothing and Textiles
                 </option>
               </select>
@@ -218,7 +218,7 @@ const InitiateEscrow = () => {
             <Form.Group className="mb-3">
               <Form.Label className="m-0">Price</Form.Label>
               <div className="input-group">
-  <input className="form-control" aria-label="price in Naira" type="number"
+  <input className="form-control escrow-price-field" aria-label="price in Naira" type="number"
                   placeholder="Enter the amount the product costs"
                   id="price"
                   name="price"
@@ -294,13 +294,13 @@ const InitiateEscrow = () => {
             <Form.Group className="form-group mb-3">
               <label for="category">Category</label>
               <select
-                className="form-select"
+                className="form-select escrow-dropdown-field border"
                 id="category"
                 placeholder="Pick your service category"
               >
-                <option value="web design">web design</option>
-                <option value="hair styling">hair styling</option>
-                <option value="Catering and event planning">
+                <option className="escrow-dropdown-field" value="web design">web design</option>
+                <option className="escrow-dropdown-field" value="hair styling">hair styling</option>
+                <option className="escrow-dropdown-field" value="Catering and event planning">
                   Catering and event planning
                 </option>
               </select>
@@ -317,7 +317,7 @@ const InitiateEscrow = () => {
                   name="price"
                   value={transaction.price}
                   onChange={handleChange} />
-                <span className="input-group-text ngn2">NGN</span>
+                <span className="input-group-text ngn2">₦</span>
               </div>
               <small className="small-text text-danger fst-italic fw-lighter">*There is a 5% service charge on each transaction</small>
               <span className="escrow-form-error ms-3">
@@ -360,7 +360,7 @@ const InitiateEscrow = () => {
                   </label>
                   <input
                     type="date"
-                    className="form-control"
+                    className="form-control escrow-input-field date-input-field"
                     id="from"
                     placeholder="From"
                   />
@@ -371,7 +371,7 @@ const InitiateEscrow = () => {
                   </label>
                   <input
                     type="date"
-                    className="form-control"
+                    className="form-control escrow-input-field date-input-field"
                     id="to"
                     placeholder="To"
                   />

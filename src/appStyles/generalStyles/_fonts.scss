@@ -117,7 +117,7 @@ p {
   @include pFont;
 }
 
-label{
+label, select, option, .escrow-images, .date-input-field{
   font-size: 0.85rem !important;
   font-family: "Open Sans" !important;
   font-weight: 300 !important;
