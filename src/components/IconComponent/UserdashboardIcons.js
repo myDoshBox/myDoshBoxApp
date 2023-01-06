@@ -307,7 +307,7 @@ export const CautionIcon = () => {
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
-        fill="currentColor"
+        fill="#FF0000"
         class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
         viewBox="0 0 16 16"
         role="img"

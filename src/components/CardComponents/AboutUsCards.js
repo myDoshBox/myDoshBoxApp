@@ -1,5 +1,5 @@
 import React from "react";
-import aboutusPix from "../../images/aboutusPix.png";
+import aboutusPix from "../../images/aboutusPix2.png";
 // import { aboutusData } from "../../data/aboutusData.json";
 
 // CoreValueCard

@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import Sample_User from "../../images/Sample User Image.png";
 import { PaginationBar } from "../PaginationComponent";
 import { FilterButton } from "../ButtonsComponent/OtherButtons";
@@ -12,15 +11,7 @@ export const NotificationCard = () => {
         aria-label="Leave Page"
         className="border-0 bg-transparent pt-2 d-lg-none"
       >
-        <span className="NotificationCardBackBtn">
-          <Icon
-            className=" mx-2"
-            icon="ic:outline-arrow-back-ios"
-            color="#006747"
-            width="15"
-          />
-          Back
-        </span>
+        <span className="NotificationCardBackBtn">Back</span>
       </button>
       <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-lg-5 px-2 pt-2 pb-2">
         <h1 className="">Notifications</h1>
