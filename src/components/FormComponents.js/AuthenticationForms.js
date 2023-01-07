@@ -9,17 +9,30 @@ import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 // import { SignUpIndividual } from "../ButtonsComponent/AuthenticationButtons";
 // import { SignUpOrganization } from "../ButtonsComponent/AuthenticationButtons";
 
-//SignInForm
-export const SignInForm = () => {
-  const [email, setEmail] = useState("");
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value);
+//SignUpIndividualForm
+export const SignUpIndividualForm = () => {
+  const [signUp, setSignUp] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phoneNumber: "",
+  });
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setSignUp({ ...signUp, [name]: value });
   };
 
   const [password, setPassword] = useState("");
+  const [confirmPassword, setconfirmPassword] = useState("");
 
   const handleChangePassword = (e) => {
     setPassword(e.target.value);
+  };
+
+  const handleChangeConfirmPassword = (e) => {
+    setconfirmPassword(e.target.value);
   };
 
   const [passwordToggle, setpasswordToggle] = useState(false);
@@ -27,41 +40,97 @@ export const SignInForm = () => {
     setpasswordToggle(!passwordToggle);
   };
 
+  const [confirmPasswordToggle, setConfirmPasswordToggle] = useState(false);
+
+  const handleConfirmPasswordShow = () => {
+    setConfirmPasswordToggle(!confirmPasswordToggle);
+  };
+
   return (
-    <Container>
+    <Container className="">
       <div className="pt-5">
-        <h2>Sign In</h2>
-        <p>Welcome back! Please enter your details</p>
+        <h2>Set up your Dosh account</h2>
+        <p>Lorem ipsum dolor sit amet </p>
       </div>
-      <Form>
+
+      <div className="d-flex pb-3 flex-row ">
+        <div className="signUpNavStyle">
+          <GeneralBtn
+            text={`Sign Up as an Individual`}
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
+        </div>
+
+        <div className="ms-3 signUpNavStyle">
+          <GeneralBtn
+            text={`Sign Up as an Organization`}
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
+        </div>
+      </div>
+
+      <Form className>
+        <Form.Group className="d-flex justify-content-inbetween flex-column flex-lg-row">
+          <div className="">
+            <div className=" ">
+              <Form.Control
+                type="text"
+                placeholder="First Name"
+                id="firstname"
+                name="firstname"
+                value={signUp.firstname}
+                onChange={handleChange}
+                className="signUpStyle rounded-3 mb-1"
+                style={{ width: "15rem", height: "3.4rem" }}
+              />
+            </div>
+          </div>
+          <Form.Group>
+            <div className="ms-3">
+              <div className="">
+                <Form.Control
+                  type="text"
+                  placeholder="Last Name"
+                  id="lastname"
+                  name="lastname"
+                  value={signUp.lastname}
+                  onChange={handleChange}
+                  className="rounded-3 border"
+                  style={{ width: "15rem", height: "3.4rem" }}
+                />
+              </div>
+            </div>
+          </Form.Group>
+        </Form.Group>
         <Form.Group className="my-3">
           <div className="">
-            <div className="align-items-center">
+            <div className="">
               <Form.Control
                 type="email"
                 placeholder="Email"
                 id="email"
                 name="email"
-                value={email}
-                onChange={handleChangeEmail}
-                className="rounded-3  border mb-1"
+                value={signUp.email}
+                onChange={handleChange}
+                className="rounded-3 mb-1"
                 style={{ width: "31.25rem", height: "3.4rem" }}
               />
             </div>
           </div>
         </Form.Group>
 
-        <Form.Group>
-          <div className="inputStyle">
+        <Form.Group className="my-3">
+          <div className="">
             <div className="">
-              <input
-                className="rounded-3 border "
+              <Form.Control
+                type="input"
+                placeholder="Phone Number"
+                id="number"
+                name="number"
+                value={signUp.number}
+                onChange={handleChange}
+                className="rounded-3 mb-1"
                 style={{ width: "31.25rem", height: "3.4rem" }}
-                id="password"
-                type={passwordToggle ? "text" : "password"}
-                placeholder="Password"
-                value={password}
-                onChange={handleChangePassword}
               />
               {passwordToggle ? (
                 <svg

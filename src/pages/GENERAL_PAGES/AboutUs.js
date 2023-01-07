@@ -4,20 +4,20 @@ import mission from "../../images/AboutUs Image/mission.png";
 import Vision from "../../images/AboutUs Image/vision.png";
 import corevalue from "../../images/AboutUs Image/corevalue.png";
 import {
-	CoreValueCard,
-	TeamsCard,
+  CoreValueCard,
+  TeamsCard,
 } from "../../components/CardComponents/AboutUsCards";
 import aboutusData from "../../data/aboutusData.json";
 
 const AboutUs = () => {
-	return (
-		<div>
-			<HeroSection />
-			<VisionMission />
-			<CoreValueSection />
-			<TeamsSection />
-		</div>
-	);
+  return (
+    <div>
+      <HeroSection />
+      <VisionMission />
+      <CoreValueSection />
+      <TeamsSection />
+    </div>
+  );
 };
 
 const HeroSection = () => {
@@ -42,17 +42,17 @@ const HeroSection = () => {
 };
 
 const VisionMission = () => {
-	return (
-		<section className="container pt-5 pb-5">
-			<div className="text-center">
-				<h3 className="fw-bold">Lorem ipsum dolor </h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
-					Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-					mattis ligula consectetur, Aliquam in hendrerit urna. Pellentesque sit
-					amet sapien fringilla, mattis ligula consectetur,
-				</p>
-			</div>
+  return (
+    <section className="container pt-5 pb-5">
+      <div className="text-center">
+        <h3 className="fw-bold">Lorem ipsum dolor </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+          Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
+          mattis ligula consectetur, Aliquam in hendrerit urna. Pellentesque sit
+          amet sapien fringilla, mattis ligula consectetur,
+        </p>
+      </div>
 
       {/*  Mission section Starts */}
       <div className="row mt-5 pt-5 container pb-5">
@@ -94,69 +94,69 @@ const VisionMission = () => {
 };
 
 const CoreValueSection = () => {
-	return (
-		<section className="container pt-5 pb-5">
-			<div>
-				<div>
-					<h3 className="text-center fw-bold pb-3">Core Values</h3>
-				</div>
+  return (
+    <section className="container pt-5 pb-5">
+      <div>
+        <div>
+          <h3 className="text-center fw-bold pb-3">Core Values</h3>
+        </div>
 
-				<div className="container d-flex justify-content-between">
-					<div className="row gy-4">
-						{aboutusData.corevalues.map((corevalue) => {
-							return (
-								<div className="col-md-4 col-sm-12" key={corevalue.id}>
-									<CoreValueCard {...corevalue} />
-								</div>
-							);
-						})}
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+        <div className="container d-flex justify-content-between">
+          <div className="row gy-4">
+            {aboutusData.corevalues.map((corevalue) => {
+              return (
+                <div className="col-md-4 col-sm-12" key={corevalue.id}>
+                  <CoreValueCard {...corevalue} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 const TeamsSection = () => {
-	return (
-		<section className="mt-5 pt-5 container d-flex flex-column align-items-center pb-5">
-			<div className="">
-				<h2 className="text-center fw-bold">TEAMS</h2>
-				<div className="mb-3">
-					<h4 className="mb-3 fw-bold">Founder Team</h4>
-					{aboutusData.businessteam.map((busteam) => {
-						return (
-							<div key={busteam.id}>
-								<TeamsCard {...busteam} />
-							</div>
-						);
-					})}
-				</div>
+  return (
+    <section className="mt-5 pt-5 container d-flex flex-column align-items-center pb-5">
+      <div className="">
+        <h2 className="text-center fw-bold">TEAMS</h2>
+        <div className="mb-3">
+          <h4 className="mb-3 fw-bold">Founder Team</h4>
+          {aboutusData.businessteam.map((busteam) => {
+            return (
+              <div key={busteam.id}>
+                <TeamsCard {...busteam} />
+              </div>
+            );
+          })}
+        </div>
 
-				<div className="pt-5 ">
-					<h4 className="mb-3 fw-bold">Brand and Content Team</h4>
-					{aboutusData.marketing_dev_team.map((busteam) => {
-						return (
-							<div key={busteam.id}>
-								<TeamsCard {...busteam} />
-							</div>
-						);
-					})}
-				</div>
+        <div className="pt-5 ">
+          <h4 className="mb-3 fw-bold">Brand and Content Team</h4>
+          {aboutusData.marketing_dev_team.map((busteam) => {
+            return (
+              <div key={busteam.id}>
+                <TeamsCard {...busteam} />
+              </div>
+            );
+          })}
+        </div>
 
-				<div className="pt-5">
-					<h4 className="mb-3 fw-bold">Developer Team</h4>
-					{aboutusData.founder_team.map((busteam) => {
-						return (
-							<div key={busteam.id}>
-								<TeamsCard {...busteam} />
-							</div>
-						);
-					})}
-				</div>
-			</div>
-		</section>
-	);
+        <div className="pt-5">
+          <h4 className="mb-3 fw-bold">Developer Team</h4>
+          {aboutusData.founder_team.map((busteam) => {
+            return (
+              <div key={busteam.id}>
+                <TeamsCard {...busteam} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutUs;

@@ -114,7 +114,7 @@ export const ContestForm = () => {
 
   return (
     <>
-      <Container className="col-7 mt-5">
+      <div className="w-75 mt-5">
         <div className="mb-5">
           <h4 className="fw-bold text-center">COMPLAINT CONTEST FORM</h4>
         </div>
@@ -205,7 +205,7 @@ export const ContestForm = () => {
             </button>
           </div>
         </form>
-      </Container>
+      </div>
     </>
   );
 };

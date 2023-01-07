@@ -37,7 +37,7 @@ const TransactionAgreedPage = () => {
 const TransactionAgreed = () => {
   return (
     <div className="row">
-      <div className="col-md-12 col-sm-12">
+      <div className="">
         <TransactionDetails
           heading={`Transaction Agreed`}
           sub_text={`The details of this transaction has been viewed and agreed to buy the seller`}
