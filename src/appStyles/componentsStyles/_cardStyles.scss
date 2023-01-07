@@ -65,8 +65,6 @@
   // NotificationCard
 
   .NotificationCardWrapper {
-    background-color: $secColor;
-    border-radius: 0.594rem;
     filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
   }
   .NotificationCardHeader {
@@ -576,22 +574,36 @@
   }
 }
 
-
 // FAQ Styles
 .FAQs {
   --bs-gutter-x: 0;
   color: $pryColorVariant;
   .faqs-header {
-   background-color: $pryColor;
+    background-color: $pryColor;
   }
   .accordion-button:not(.collapsed) {
     color: unset;
-    background-color:  white;
-} 
+    background-color: white;
+  }
 
-.accordion-button:focus, .accordion-button:not(.collapsed):focus {
-  outline: 0 !important;
-  box-shadow: none;
-  border-color: rgba(0,0,0,.125);
+  .accordion-button:focus,
+  .accordion-button:not(.collapsed):focus {
+    outline: 0 !important;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+  }
 }
+
+// Neutral resolve coflicts
+.resolve-card {
+  .nav-pills .nav-link.active {
+    background-color: $pryColor !important;
+    font-weight: 400 !important;
+  }
+
+  .nav-pills .nav-link {
+    background-color: $buttonColor !important;
+    font-weight: 400 !important;
+    color: white;
+  }
 }

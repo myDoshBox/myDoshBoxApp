@@ -1,26 +1,25 @@
-import { Icon } from "@iconify/react";
+<<<<<<< HEAD
 import Sample_User from "../../images/Sample User Image.png";
+=======
+import Table from "react-bootstrap/Table";
+import Sample_User from "../../images/SampleUserImage.png";
+>>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
 import { PaginationBar } from "../PaginationComponent";
-import { FilterButton } from "../ButtonsComponent/OtherButtons";
-import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../Button";
-import { CompletedNotification } from "../NotificationComponent/NotificationComponents";
+import { FilterButton } from "../ButtonsComponent/MiscBtns";
+import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
+import { Notifications } from "../NotificationComponent/NotificationComponents";
+import { Descripe } from "@mui/icons-material";
 
-export const NotificationCard = () => {
+export const NotificationCard = (props) => {
+  const { image, title, description, link } = props;
   return (
+<<<<<<< HEAD
     <table className=" NotificationCardWrapper">
       <button
         aria-label="Leave Page"
         className="border-0 bg-transparent pt-2 d-lg-none"
       >
-        <span className="NotificationCardBackBtn">
-          <Icon
-            className=" mx-2"
-            icon="ic:outline-arrow-back-ios"
-            color="#006747"
-            width="15"
-          />
-          Back
-        </span>
+        <span className="NotificationCardBackBtn">Back</span>
       </button>
       <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-lg-5 px-2 pt-2 pb-2">
         <h1 className="">Notifications</h1>
@@ -191,8 +190,16 @@ export const NotificationCard = () => {
       {/* Pagination Component Stays here */}
       <div className="py-3">
         <PaginationBar />
+=======
+    <div className="d-flex justify-content-around align-items-center">
+      <img src={image} alt="SampleUserImg" className="" />
+      <h6 className="d-none d-lg-block mx-3">{title}</h6>
+      <div className="d-inline">
+        <p className="w-100">{description}</p>
+>>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
       </div>
-    </table>
+      <button className="p-4 btn text-primary">{link}</button>
+    </div>
   );
 };
 
@@ -221,7 +228,7 @@ export const RecentTransactionTable = () => {
               <td className="text-center">N3,275.45</td>
               <td className="text-center">15/11/2022</td>
               <td className="d-flex justify-content-center align-items-center">
-                <CompletedNotification />
+                <Notifications text={`Completed`} styles={`completed`} />
               </td>
             </tr>
             <tr>
@@ -264,7 +271,7 @@ export const AdminRecentTransactionsCard = () => {
               <td className="text-center small-hide">35 cartons of biscuit</td>
               <td className="text-center small-hide">16-08-22</td>
               <td className="d-flex justify-content-center align-items-center">
-                <CompletedNotification />
+                <Notifications text={`Completed`} styles={`completed`} />
               </td>
               <td className="text-center small-hide text-muted">View</td>
             </tr>
