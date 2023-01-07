@@ -8,11 +8,9 @@ export const OpenConflicts = () => {
         <UserSidenav />
       </div>
 
-      {/* <div className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 "> */}
       <AllConflictsTable
       conflictType="open"
       />
-      {/* </div> */}
     </div>
   );
 };
@@ -24,11 +22,9 @@ export const ClosedConflicts = () => {
         <UserSidenav />
       </div>
 
-      {/* <div className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 "> */}
       <AllConflictsTable
       conflictType="closed"
       />
-      {/* </div> */}
     </div>
   );
 };
@@ -40,11 +36,9 @@ export const OngoingConflicts = () => {
         <UserSidenav />
       </div>
 
-      {/* <div className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 "> */}
       <AllConflictsTable
       conflictType="ongoing"
       />
-      {/* </div> */}
     </div>
   );
 };
