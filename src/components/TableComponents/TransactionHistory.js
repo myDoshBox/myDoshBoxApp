@@ -1,4 +1,6 @@
 import React from "react";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { Notifications } from "../NotificationComponent/NotificationComponents";
 
 const TransactionHistory = (props) => {
   const { trans_id, buyer_name, seller_name, products, date, status, view } =
@@ -6,13 +8,17 @@ const TransactionHistory = (props) => {
   return (
     <>
       <tr>
-        <td className="p-4">{trans_id}</td>
-        <td className="p-4">{buyer_name}</td>
-        <td className="p-4">{seller_name}</td>
-        <td className="p-4">{products}</td>
-        <td className="p-4">{date}</td>
-        <td className="p-4">{status}</td>
-        <td className="p-4">{view}</td>
+        <td className=" d-none d-md-table-cell">{trans_id}</td>
+        <td className="d-none d-sm-table-cell">{buyer_name}</td>
+        <td className="d-none d-lg-table-cell">{seller_name}</td>
+        <td className="">{products}</td>
+        <td className="">{date}</td>
+        <td className="">
+          <Notifications text={status} styles={`text-center  rounded-pill ${ status }`} />
+        </td>
+        <td className="">
+          <GeneralBtn text="view" styles="text-success text-decoration-none"/>
+        </td>
       </tr>
     </>
   );

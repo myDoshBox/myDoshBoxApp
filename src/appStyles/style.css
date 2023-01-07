@@ -562,34 +562,6 @@ label, select, option, .escrow-images, .date-input-field {
   color: rgba(75, 68, 83, 0.5);
   letter-spacing: 0.08rem;
 }
-.MiniUsersCard .faq-head {
-  border: 1px solid #006747 !important;
-  padding: 16px 20px !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  background: #006747 !important;
-}
-.MiniUsersCard .faq-content {
-  padding: 5px 20px !important;
-}
-.MiniUsersCard .faq-card .accordion-item {
-  border-top: 1px solid !important;
-}
-.MiniUsersCard .faq-card .accordion-button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  box-shadow: none !important;
-  font-size: 1rem !important;
-  font-weight: 500;
-  padding: 18px 22px !important;
-}
-.MiniUsersCard .faq-card .accordion-button:not(.collapsed) {
-  background-color: hsl(0deg, 0%, 100%) !important;
-  color: #4b4453 !important;
-}
 .MiniUsersCard .why-choose-us-card-head {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
@@ -863,6 +835,10 @@ label, select, option, .escrow-images, .date-input-field {
 .payment-method-card:hover,
 .payment-method-card:focus {
   border-color: #006747 !important;
+}
+
+.DashboardCard {
+  height: 7rem;
 }
 
 .BgColor {
@@ -1369,13 +1345,6 @@ input[type=color]:focus,
 
 .completed,
 .resolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453;
@@ -1387,13 +1356,6 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453;
@@ -1404,13 +1366,6 @@ input[type=color]:focus,
 }
 
 .refunded {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453;
@@ -1426,13 +1381,6 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(103, 0, 99);
   background-color: rgba(103, 0, 99, 0.1);
 }
@@ -1443,25 +1391,11 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(0, 103, 4);
   background-color: rgba(0, 103, 4, 0.1);
 }
 
 .awaiting {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453;
@@ -1472,13 +1406,6 @@ input[type=color]:focus,
 }
 
 .pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans";
   font-size: 0.875rem;
   color: #4b4453;
@@ -1492,21 +1419,6 @@ input[type=color]:focus,
   background-color: #d9ebe5;
 }
 
-@media screen and (max-width: 687px) {
-  .completed,
-.awaiting,
-.canceled,
-.dispute,
-.pending-confirmation,
-.pending-payment,
-.refunded,
-.resolved,
-.unresolved {
-    width: 80px !important;
-    height: 20px !important;
-    font-size: 0.4375rem !important;
-  }
-}
 .FooterBgColor {
   background-color: #006747;
 }
@@ -1661,6 +1573,10 @@ input[type=color]:focus,
     font-size: 1.31rem !important;
   }
 }
+tr, tbody, td, th, thead {
+  font-size: small !important;
+}
+
 .PaginationBar button {
   margin: 0 !important;
 }

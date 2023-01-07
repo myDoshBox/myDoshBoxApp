@@ -6,7 +6,7 @@
       "seller_name": "Ada",
       "products": "cream",
       "date": "2/04/23",
-      "status": "in progress",
+      "status": "awaiting",
       "view": "......."
     },
 
@@ -26,7 +26,7 @@
       "seller_name": "Chris",
       "products": "Table",
       "date": "2/03/23",
-      "status": "in progress",
+      "status": "dispute",
       "view": "......."
     },
 
@@ -36,7 +36,7 @@
       "seller_name": "Bertha",
       "products": "furniture",
       "date": "2/04/24",
-      "status": "completed",
+      "status": "refunded",
       "view": "......."
     }
   ],

@@ -3,12 +3,15 @@ import product from "../../images/productimage.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 // DashboardConflictCards (Buying,Selling,InitiateTransactionCards,SettledTransactionsCard, ConflictCards)
-export const DashboardConflictCards = ({ icon, text }) => {
+export const DashboardConflictCards = ({ icon, text, value }) => {
   return (
-    <div class="card shadow border-0" style={{ width: "18rem" }}>
-      <div class="card-body m-4 d-flex justify-content-center">
+    <div class="col-md-4 mb-4 mb-lg-0">
+      <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow-sm border-0 rounded-2 DashboardCard">
         {icon}
-        <p className="ms-2">{text}</p>
+        <div>
+        <p className="m-0 ms-2 opacity-50">{value}</p>
+        <p className="m-0 ms-2">{text}</p>
+        </div>
       </div>
     </div>
   );

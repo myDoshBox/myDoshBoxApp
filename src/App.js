@@ -13,6 +13,8 @@ import EscrowAgreement from "./pages/ESCROW_PAGES/EscrowAgreement";
 import {BuyerDeliveryForm, SellerDeliveryForm} from "./pages/ESCROW_PAGES/ConfirmDelivery";
 import BankTransferForm from "./pages/ESCROW_PAGES/BankTransferForm";
 import { ChoosePaymentMethod } from "./pages/ESCROW_PAGES/ChoosePaymenMethod";
+import NeutralDashboard from "./pages/neutral_dashboard";
+import { OpenConflicts, ClosedConflicts, OngoingConflicts } from "./pages/Conflicts";
 
 function App() {
   return (
@@ -31,7 +33,10 @@ function App() {
         <Route path="buyer-delivery-form" element={<BuyerDeliveryForm />} />
         <Route path="bank-transfer-form" element={<BankTransferForm />} />
         <Route path="choose-payment-method" element={<ChoosePaymentMethod />} />
-
+        <Route path="neutrals-dash" element={<NeutralDashboard />} />
+        <Route path="open-conflicts" element={<OpenConflicts/>}/>
+        <Route path="closed-conflicts" element={<ClosedConflicts/>}/>
+        <Route path="ongoing-conflicts" element={<OngoingConflicts/>}/>
 
 
             <Route path="faqs" element={<FAQs />} />

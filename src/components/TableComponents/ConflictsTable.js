@@ -1,45 +1,39 @@
-import { Table, Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
+import { Table, Card, Container} from "react-bootstrap";
 
 // AllConflictsCard
-export const AllConflictsTable = () => {
+import conflictsData  from '../../data/dummyData/conflictsData.json';
+
+export const AllConflictsTable = ({ conflictType }) => {
+  const rows = conflictsData.conflicts.map(conflict => {
+    if (conflict.status_category === conflictType) {
+      return (
+        <tr key={conflict.ticket_id} >
+          <td>{conflict.date_issued}</td>
+          <td>{conflict.ticket_id}</td>
+          <td className="">{conflict.user_id}</td>
+          <td>{conflict.complaint_type}</td>
+          <td className={conflict.status_category === 'closed' ? 'text-success' : conflict.status_category === 'ongoing' ? 'text-warning' : 'text-primary'}>{conflict.status}</td>
+        </tr>
+      );
+    }
+  });
+
   return (
-    <Container>
+    <Container className="px-lg-5">
       <Card className="border-0 shadow rounded-3">
-        <div className="ms-5 mt-3">
-          <h4 className="text-uppercase conflicts-type">Open Conflict</h4>
-        </div>
-        <Table className="">
-          <thead className="text-center text-secondary">
+          <h6 className="pb-2 pt-3 ps-2 m-0 text-capitalize">{conflictType} Conflicts</h6>
+        <Table>
+          <thead className="opacity-50">
             <tr>
-              <th>Date Issued</th>
+              <th>Date</th>
               <th>Ticket ID</th>
-              <th className="">User ID</th>
-              <th>Complaint Type</th>
+              <th>User ID</th>
+              <th>Complaint</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="text-center">
-              <td>16-08-22</td>
-              <td>2tsYFXb4rP3</td>
-              <td className="">75638</td>
-              <td>Wrong Item</td>
-              <td className="text-primary">Open</td>
-            </tr>
-            <tr className="text-center">
-              <td>16-08-22</td>
-              <td>2tsYFXb4rP3</td>
-              <td className="">75638</td>
-              <td>Wrong Item</td>
-              <td className="text-success">Closed</td>
-            </tr>
-            <tr className="text-center">
-              <td>16-08-22</td>
-              <td>2tsYFXb4rP3</td>
-              <td className="">75638</td>
-              <td>Wrong Item</td>
-              <td className="text-warning">Ongoing</td>
-            </tr>
+            {rows}
           </tbody>
         </Table>
       </Card>

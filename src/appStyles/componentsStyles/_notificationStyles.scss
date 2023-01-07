@@ -2,13 +2,7 @@
 @use "../generalStyles/fonts" as *;
 
 @mixin notificationStyle {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 .completed,
 .resolved {
@@ -82,18 +76,18 @@
 //   }
 // }
 
-@media screen and (max-width: 687px) {
-  .completed,
-  .awaiting,
-  .canceled,
-  .dispute,
-  .pending-confirmation,
-  .pending-payment,
-  .refunded,
-  .resolved,
-  .unresolved {
-    width: 80px !important;
-    height: 20px !important;
-    font-size: 0.4375rem !important;
-  }
-}
+// @media screen and (max-width: 687px) {
+//   .completed,
+//   .awaiting,
+//   .canceled,
+//   .dispute,
+//   .pending-confirmation,
+//   .pending-payment,
+//   .refunded,
+//   .resolved,
+//   .unresolved {
+//     // width: 80px !important;
+//     // height: 20px !important;
+//     font-size: 0.6rem !important;
+//   }
+// }

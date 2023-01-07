@@ -1,0 +1,148 @@
+{
+  "conflicts": [
+    {
+      "date_issued": "2022-01-01",
+      "ticket_id": "123456",
+      "user_id": "789",
+      "complaint_type": "dispute over goods received",
+      "status": "closed",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-03",
+      "ticket_id": "234567",
+      "user_id": "456",
+      "complaint_type": "payment issue",
+      "status": "closed",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-05",
+      "ticket_id": "345678",
+      "user_id": "012",
+      "complaint_type": "delayed delivery",
+      "status": "closed",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-06",
+      "ticket_id": "456789",
+      "user_id": "234",
+      "complaint_type": "dispute over goods received",
+      "status": "resolved",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-07",
+      "ticket_id": "567890",
+      "user_id": "345",
+      "complaint_type": "payment issue",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-08",
+      "ticket_id": "678901",
+      "user_id": "456",
+      "complaint_type": "unauthorized transaction",
+      "status": "resolved",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-09",
+      "ticket_id": "789012",
+      "user_id": "567",
+      "complaint_type": "delayed delivery",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-10",
+      "ticket_id": "890123",
+      "user_id": "678",
+      "complaint_type": "dispute over goods received",
+      "status": "resolved",
+      "status_category": "closed"
+    },
+    {
+      "date_issued": "2022-01-11",
+      "ticket_id": "901234",
+      "user_id": "789",
+      "complaint_type": "unauthorized transaction",
+      "status": "open",
+      "status_category": "open"
+    },
+    {
+      "date_issued": "2022-01-12",
+      "ticket_id": "012345",
+      "user_id": "456",
+      "complaint_type": "payment issue",
+      "status": "open",
+      "status_category": "open"
+    },
+    {
+      "date_issued": "2022-01-13",
+      "ticket_id": "123456",
+      "user_id": "012",
+      "complaint_type": "dispute over goods received",
+      "status": "open",
+      "status_category": "open"
+    },
+    {
+      "date_issued": "2022-01-14",
+      "ticket_id": "234567",
+      "user_id": "234",
+      "complaint_type": "delayed delivery",
+      "status": "open",
+      "status_category": "open"
+    },
+    {
+      "date_issued": "2022-01-15",
+      "ticket_id": "345678",
+      "user_id": "345",
+      "complaint_type": "quality issue",
+      "status": "open",
+      "status_category": "open"
+    },
+    {
+      "date_issued": "2022-01-16",
+      "ticket_id": "456789",
+      "user_id": "456",
+      "complaint_type": "payment issue",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-17",
+      "ticket_id": "567890",
+      "user_id": "567",
+      "complaint_type": "dispute over goods received",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-18",
+      "ticket_id": "678901",
+      "user_id": "678",
+      "complaint_type": "delayed delivery",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-19",
+      "ticket_id": "789012",
+      "user_id": "789",
+      "complaint_type": "unauthorized transaction",
+      "status": "pending",
+      "status_category": "ongoing"
+    },
+    {
+      "date_issued": "2022-01-20",
+      "ticket_id": "890123",
+      "user_id": "012",
+      "complaint_type": "payment issue",
+      "status": "pending",
+      "status_category": "ongoing"
+    }
+  ]
+}
