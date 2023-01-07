@@ -34,7 +34,7 @@ export const NotificationIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      fill="#127A12"
+      fill="#fff"
       class="bi bi-bell"
       viewBox="0 0 16 16"
     >

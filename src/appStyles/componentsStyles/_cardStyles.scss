@@ -587,11 +587,12 @@
     background-color: white;
   }
 
-  .accordion-title, .accordion-body {
-    font-family: 'Open Sans';
+  .accordion-title,
+  .accordion-body {
+    font-family: "Open Sans";
     font-weight: 400 !important;
   }
-  
+
   .accordion-head {
     border-bottom: 0.5px dashed rgba(75, 68, 83, 0.1) !important;
   }
@@ -608,4 +609,17 @@
 .payment-method-card:hover,
 .payment-method-card:focus {
   border-color: $pryColor !important;
+  // Neutral resolve coflicts
+  .resolve-card {
+    .nav-pills .nav-link.active {
+      background-color: $pryColor !important;
+      font-weight: 400 !important;
+    }
+
+    .nav-pills .nav-link {
+      background-color: $buttonColor !important;
+      font-weight: 400 !important;
+      color: white;
+    }
+  }
 }

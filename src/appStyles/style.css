@@ -19,8 +19,8 @@ body::-webkit-scrollbar {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,7 +39,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -55,12 +55,12 @@ picture {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -138,7 +138,11 @@ p {
   letter-spacing: 0rem;
 }
 
-label, select, option, .escrow-images, .date-input-field {
+label,
+select,
+option,
+.escrow-images,
+.date-input-field {
   font-size: 0.85rem !important;
   font-family: "Open Sans" !important;
   font-weight: 300 !important;
@@ -249,7 +253,8 @@ label, select, option, .escrow-images, .date-input-field {
   letter-spacing: 0rem;
 }
 
-.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+.EscrowTransactTypeBtn:hover,
+.EscrowTransactTypeBtn:focus {
   background-color: #006747 !important;
   border: 0;
   color: white !important;
@@ -259,7 +264,8 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
-.pale-red:hover, .pale-red:focus {
+.pale-red:hover,
+.pale-red:focus {
   background-color: rgb(255, 0, 0) !important;
 }
 
@@ -846,7 +852,8 @@ label, select, option, .escrow-images, .date-input-field {
   color: unset;
   background-color: white;
 }
-.FAQs .accordion-title, .FAQs .accordion-body {
+.FAQs .accordion-title,
+.FAQs .accordion-body {
   font-family: "Open Sans";
   font-weight: 400 !important;
 }
@@ -863,6 +870,16 @@ label, select, option, .escrow-images, .date-input-field {
 .payment-method-card:hover,
 .payment-method-card:focus {
   border-color: #006747 !important;
+}
+.resolve-card .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
+}
+
+.resolve-card .nav-pills .nav-link {
+  background-color: #4d957e !important;
+  font-weight: 400 !important;
+  color: white;
 }
 
 .BgColor {
@@ -894,7 +911,8 @@ label, select, option, .escrow-images, .date-input-field {
   font-weight: 700;
 }
 
-.Email input::-moz-placeholder, .Password input::-moz-placeholder {
+.Email input::-moz-placeholder,
+.Password input::-moz-placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -918,7 +936,9 @@ label, select, option, .escrow-images, .date-input-field {
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
+.AccountNum input::-moz-placeholder,
+.AccountName input::-moz-placeholder,
+.BankName input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
@@ -960,20 +980,20 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 textarea:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=time]:focus,
-input[type=week]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=color]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: rgba(75, 68, 83, 0.5);
   outline: 0 none;
@@ -996,7 +1016,10 @@ input[type=color]:focus,
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
+.Name input::-moz-placeholder,
+.UpdateEmail input::-moz-placeholder,
+.Phone input::-moz-placeholder,
+.Pass input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04rem !important;
@@ -1067,7 +1090,9 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+.escrow-input-field::-moz-placeholder,
+.escrow-price-field::-moz-placeholder,
+.bank-transfer-input-field::-moz-placeholder {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -1185,11 +1210,18 @@ input[type=color]:focus,
   color: red !important;
 }
 
-.escrow-dropdown-field, .escrow-dropdown-field:focus, .escrow-dropdown-field:hover {
+.escrow-dropdown-field,
+.escrow-dropdown-field:focus,
+.escrow-dropdown-field:hover {
   outline: 0 !important;
   box-shadow: none !important;
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: 300 !important;
+}
+.contestPage .row {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .Modal-Btn {
@@ -1311,9 +1343,23 @@ input[type=color]:focus,
   }
 }
 /**SideNav Styling**/
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+
+.offcanvas-lg,
+.offcanvas {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
 .SideNav {
-  background-color: #006747;
-  color: hsl(0deg, 0%, 100%);
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.bottom {
+  bottom: 10% !important;
 }
 
 .SideNavLogo {
@@ -1321,9 +1367,9 @@ input[type=color]:focus,
 }
 
 .SideNavItem {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: hsl(0deg, 0%, 100%);
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  color: hsl(0deg, 0%, 100%) !important;
   cursor: pointer !important;
   font-weight: 400;
 }
@@ -1494,14 +1540,14 @@ input[type=color]:focus,
 
 @media screen and (max-width: 687px) {
   .completed,
-.awaiting,
-.canceled,
-.dispute,
-.pending-confirmation,
-.pending-payment,
-.refunded,
-.resolved,
-.unresolved {
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
     width: 80px !important;
     height: 20px !important;
     font-size: 0.4375rem !important;
@@ -1540,11 +1586,11 @@ input[type=color]:focus,
 
 @media screen and (max-width: 290px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.375px !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.375px !important;
   }
 }
@@ -1558,11 +1604,11 @@ input[type=color]:focus,
 }
 @media screen and (min-width: 688px) and (max-width: 992px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.75rem !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.75rem !important;
   }
 }

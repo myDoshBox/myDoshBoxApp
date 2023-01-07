@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
+import {
+  ShowPasswordIcon,
+  HidePasswordIcon,
+} from "../IconComponent/NavigationAndViewIcon";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 // import { SignUpButton } from "../ButtonsComponent/AuthenticationButtons";

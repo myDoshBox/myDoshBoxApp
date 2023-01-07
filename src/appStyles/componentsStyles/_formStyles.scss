@@ -265,9 +265,19 @@ input[type="color"]:focus,
 }
 
 // Initiate Escrow
-.escrow-dropdown-field, .escrow-dropdown-field:focus, .escrow-dropdown-field:hover {
+.escrow-dropdown-field,
+.escrow-dropdown-field:focus,
+.escrow-dropdown-field:hover {
   outline: 0 !important;
-  box-shadow: none !important; 
-  border-color: rgba(0,0,0,.125);
-  font-weight: 300!important;
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: 300 !important;
+}
+// Contest Page styles
+.contestPage {
+  .row {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }

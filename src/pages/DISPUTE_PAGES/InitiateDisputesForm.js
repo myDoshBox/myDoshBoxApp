@@ -1,4 +1,6 @@
 import { useState } from "react";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
+
 import Container from "react-bootstrap/Container";
 
 const InitiateDisputesForm = () => {
@@ -42,7 +44,7 @@ const ComplaintForm = () => {
 
   return (
     <>
-      <div className="col-md-9 col-11 mx-auto">
+      <div className="w-75 mx-auto">
         <div className="mt-5 text-center">
           <h5 className="fw-bold">COMPLAINT FORM</h5>
         </div>
@@ -135,7 +137,7 @@ const ComplaintForm = () => {
             ></textarea>
           </div>
 
-          <div className="d-grid gap-2 col-2 mx-auto mt-4 ">
+          <div className="d-grid gap-2 w-25 mx-auto mt-4">
             <button
               className="btn btn-success"
               type="submit"
