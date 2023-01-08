@@ -6,21 +6,22 @@ import {
   NextIcon,
 } from "../components/IconComponent/NavigationAndViewIcon";
 
-const TransactionAgreedPage = () => {
+const TransactionSummaryPage = () => {
   return (
     <div>
-      <TransactionAgreed />
+      <TransactionSummary />
     </div>
   );
 };
 
-const TransactionAgreed = () => {
+const TransactionSummary = () => {
   return (
     <div className="row">
       <div className="">
         <TransactionDetails
-          heading={`Transaction Agreed`}
-          sub_text={`The details of this transaction has been viewed and agreed to buy the seller`}
+          heading={`Transaction Summary
+`}
+          sub_text={`Please Confirm the following transaction initiated by user Eland Aaronson`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -49,4 +50,4 @@ const TransactionAgreed = () => {
   );
 };
 
-export default TransactionAgreedPage;
+export default TransactionSummaryPage;
