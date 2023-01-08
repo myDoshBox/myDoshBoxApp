@@ -6,21 +6,21 @@ import {
   NextIcon,
 } from "../components/IconComponent/NavigationAndViewIcon";
 
-const TransactionAgreedPage = () => {
+const PaymentMadePage = () => {
   return (
     <div>
-      <TransactionAgreed />
+      <PaymentMade />
     </div>
   );
 };
 
-const TransactionAgreed = () => {
+const PaymentMade = () => {
   return (
     <div className="row">
       <div className="">
         <TransactionDetails
-          heading={`Transaction Agreed`}
-          sub_text={`The details of this transaction has been viewed and agreed to buy the seller`}
+          heading={`Payment Made`}
+          sub_text={`Buyer Elland Aaronson has made payment into MyDoshBox account for this transaction`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -31,14 +31,14 @@ const TransactionAgreed = () => {
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <GeneralBtn
-              text="Back"
+              text="Cancel Transaction"
               styles="CancelBtn btn all-btn text-white"
               icon={<BackIcon />}
             />
           }
           rightBtn={
             <GeneralBtn
-              text="Proceed"
+              text="Delete  Product"
               styles="GeneralBtnStyle1 btn all-btn text-white"
               icon={<NextIcon />}
             />
@@ -49,4 +49,4 @@ const TransactionAgreed = () => {
   );
 };
 
-export default TransactionAgreedPage;
+export default PaymentMadePage;
