@@ -2,8 +2,8 @@ export const InitiateTransactionIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="50"
+      height="50"
       fill="#006747"
       class="bi bi-shield-lock"
       viewBox="0 0 16 16"
@@ -18,8 +18,8 @@ export const SettledTransactionIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="50"
+      height="50"
       fill="#127A12"
       class="bi bi-hand-thumbs-up"
       viewBox="0 0 16 16"
@@ -33,8 +33,8 @@ export const CustomerCareIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="50"
+      height="50"
       fill="#006747"
       class="bi bi-headset"
       viewBox="0 0 16 16"
@@ -48,8 +48,8 @@ export const InitiateDisputeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="50"
+      height="50"
       fill="#127A12"
       class="bi bi-rocket-takeoff"
       viewBox="0 0 16 16"

@@ -53,13 +53,13 @@ export const AnalyticsNewUsersCard = () => {
 export const TotalUsersCard = () => {
   return (
     <>
-      <div class="card shadow" style={{ width: "18rem" }}>
+      <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
         <div class="card-body">
           <div className="d-flex ">
             <div>
               <TotalUsersIcon width="24" />
             </div>
-            <div className=" ms-2">
+            <div className="ms-2">
               <span className="fs-5 fw-bold">234589</span>
               <p>TOTAL USERS</p>
             </div>
@@ -79,7 +79,7 @@ export const TotalUsersCard = () => {
 // UserTransactionsCard
 export const UserTransactionsCard = () => {
   return (
-    <div class="card shadow" style={{ width: "20rem" }}>
+    <div class="card shadow border-0 rounded-1" style={{ width: "20rem" }}>
       <div class="card-body mx-auto ">
         <div className="d-flex mx-auto">
           <div className="m-2">
@@ -104,9 +104,28 @@ export const UserTransactionsCard = () => {
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCards = ({ icon, text }) => {
   return (
-    <div className="card shadow  border-0 rounded-2" style={{ width: "16rem" }}>
+    <div
+      className="card shadow  border-0 rounded-2 mb-5"
+      style={{ width: "16rem" }}
+    >
       <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="d-flex flex-column me-2">{icon}</div>
+        <div className="">{icon}</div>
+        <span className="mt-3">
+          <p>{text}</p>
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export const UserDashboardCardsTwo = ({ icon, text }) => {
+  return (
+    <div
+      className="card shadow border-0 rounded-2 mx-auto mb-5"
+      style={{ width: "16rem", height: "9rem" }}
+    >
+      <div className="card-body d-flex align-items-center justify-content-center">
+        <div className="">{icon}</div>
         <span className="mt-3">
           <p>{text}</p>
         </span>

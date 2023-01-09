@@ -17,10 +17,12 @@ import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
+import UserDashboardPage from "./pages/UserDashboardPage";
 
 function App() {
   return (
     <Router>
+      <UserDashboardPage />
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
