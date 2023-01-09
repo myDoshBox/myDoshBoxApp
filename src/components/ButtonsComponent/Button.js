@@ -1,5 +1,5 @@
 // GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
-export const GeneralBtnStyle1 = ({ text, link, icon }) => {
+export const GeneralBtnStyle1 = ({ text, link }) => {
   return (
     <a
       href={link}

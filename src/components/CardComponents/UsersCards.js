@@ -122,12 +122,12 @@ export const UserDashboardCardsTwo = ({ icon, text }) => {
   return (
     <div
       className="card shadow border-0 rounded-2 mx-auto mb-5"
-      style={{ width: "16rem", height: "9rem" }}
+      style={{ width: "100%", height: "25%" }}
     >
       <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="">{icon}</div>
+        <div className="col-3">{icon}</div>
         <span className="mt-3">
-          <p>{text}</p>
+          <p className="col-9">{text}</p>
         </span>
       </div>
     </div>
@@ -138,7 +138,7 @@ export const UserDashboardCardsTwo = ({ icon, text }) => {
 export const MiniProfileCard = () => {
   return (
     <>
-      <div class="card shadow" style={{ width: "22rem" }}>
+      <div class="card shadow" style={{ width: "100%" }}>
         <div class="card-body">
           <div className="d-flex flex-column ">
             <div className="d-flex justify-content-center">

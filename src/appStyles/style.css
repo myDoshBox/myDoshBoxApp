@@ -816,10 +816,21 @@ p {
   color: unset;
   background-color: white;
 }
-.FAQs .accordion-button:focus, .FAQs .accordion-button:not(.collapsed):focus {
+.FAQs .accordion-button:focus,
+.FAQs .accordion-button:not(.collapsed):focus {
   outline: 0 !important;
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.125);
+}
+
+.resolve-card .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
+}
+.resolve-card .nav-pills .nav-link {
+  background-color: #4d957e !important;
+  font-weight: 400 !important;
+  color: white;
 }
 
 .BgColor {
@@ -1146,6 +1157,12 @@ input[type=color]:focus,
   color: red !important;
 }
 
+.contestPage .row {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .Modal-Btn {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
@@ -1265,9 +1282,23 @@ input[type=color]:focus,
   }
 }
 /**SideNav Styling**/
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+
+.offcanvas-lg,
+.offcanvas {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
 .SideNav {
-  background-color: #006747;
-  color: hsl(0deg, 0%, 100%);
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.bottom {
+  bottom: 10% !important;
 }
 
 .SideNavLogo {
@@ -1275,9 +1306,9 @@ input[type=color]:focus,
 }
 
 .SideNavItem {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: hsl(0deg, 0%, 100%);
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  color: hsl(0deg, 0%, 100%) !important;
   cursor: pointer !important;
   font-weight: 400;
 }

@@ -267,3 +267,12 @@ input[type="color"]:focus,
 .colorStyle h5 {
   color: red !important;
 }
+
+// Contest Page styles
+.contestPage {
+  .row {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

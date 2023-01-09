@@ -8,14 +8,14 @@ import {
   InitiateDisputeIcon,
 } from "../components/IconComponent/UserdashboardIcons";
 import { LearnMoreCard } from "../components/CardComponents/InfoCards";
-import { UserSidenav } from "../components/NavbarComponents/SideNavbar";
+import UsersSideNav from "../components/NavbarComponents/UsersSideNav";
 
 const UserDashboardPage = () => {
   return (
     <div className="contestPage">
       <div className="row">
         <div className="col-md-4">
-          <UserSidenav />
+          <UsersSideNav />
         </div>
         <div className="col-md-8">
           <UserDashboard />
@@ -27,7 +27,7 @@ const UserDashboardPage = () => {
 
 const UserDashboard = () => {
   return (
-    <div className="row container mx-auto mt-5">
+    <div className="row pt-5">
       <div className="col-md-4">
         <MiniProfileCard />
       </div>
@@ -52,7 +52,7 @@ Transaction`}
 Dispute`}
           icon={<InitiateDisputeIcon />}
         />
-        <LearnMoreCard />
+        {/* <LearnMoreCard /> */}
       </div>
     </div>
   );

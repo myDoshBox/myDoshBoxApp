@@ -1,0 +1,50 @@
+{
+  "Ticket1": [
+    {
+      "id": 1,
+      "tell": "08123456789",
+      "transaction_id": "4rsGDrb4rP3",
+      "compliant_type": "Incomplete Items",
+      "Img": "../../images/TicketImage/pop.PNG",
+      "Img1": "../../images/TicketImage/brokenScreen1.png",
+      "Img2": "../../images/TicketImage/brokenScreen2.png",
+      "Img3": "../../images/TicketImage/brokenScreen3.png",
+      "Futher_info": "Auctor sem ut aliquam velit quis eu. Aliquam tortor eu interdum sodales eget maecenas sem. Ultrices a donec urna semperante Eget aliquet enim elit lorem hac feugiat. Eu convallis at amet pretium vestibulum et ultrices rutrum. Viverra vel congue laoreet cursus gravida morbi. A morbi nulla ut nisi, felis.Ultricies molestie pretium mauris, id amet vitae.",
+      "btn1": "Edit Ticket",
+      "btn2": "PROCEED",
+      "btn3": "CANCEL"
+    }
+  ],
+  "Ticket2": [
+    {
+      "id": 2,
+      "full_name": "OPEYEMI ADNREWSON",
+      "transaction_id": "4rsGDrb4rP3",
+      "compliant_type": "Incomplete Items",
+      "Img": "../../images/TicketImage/pop.PNG",
+      "Img1": "../../images/TicketImage/brokenScreen1.png",
+      "Img2": "../../images/TicketImage/brokenScreen2.png",
+      "Img3": "../../images/TicketImage/brokenScreen3.png",
+      "Futher_info": "Auctor sem ut aliquam velit quis eu. Aliquam tortor eu interdum sodales eget maecenas sem. Ultrices a donec urna semperante Eget aliquet enim elit lorem hac feugiat. Eu convallis at amet pretium vestibulum et ultrices rutrum. Viverra vel congue laoreet cursus gravida morbi. A morbi nulla ut nisi, felis.Ultricies molestie pretium mauris, id amet vitae.",
+      "btn1": "RESOLVE ISSUE",
+      "btn2": "CONTEST COMPLIANT"
+    }
+  ],
+
+  "Ticket3": [
+    {
+      "id": 3,
+      "full_name": "OPEYEMI ADNREWSON",
+      "tr": "<tr><td className='fw-bold'>Full Name :</td><td className='text-muted p-2'>OPEYEMI ADNREWSON</td></tr>",
+      "transaction_id": "4rsGDrb4rP3",
+      "compliant_type": "Incomplete Items",
+      "Img": "../../images/TicketImage/pop.PNG",
+      "Img1": "../../images/TicketImage/brokenScreen1.png",
+      "Img2": "../../images/TicketImage/brokenScreen2.png",
+      "Img3": "../../images/TicketImage/brokenScreen3.png",
+      "Futher_info": "Auctor sem ut aliquam velit quis eu. Aliquam tortor eu interdum sodales eget maecenas sem. Ultrices a donec urna semperante Eget aliquet enim elit lorem hac feugiat. Eu convallis at amet pretium vestibulum et ultrices rutrum. Viverra vel congue laoreet cursus gravida morbi. A morbi nulla ut nisi, felis.Ultricies molestie pretium mauris, id amet vitae.",
+      "btn1": "PROCEED",
+      "btn2": "CANCEL"
+    }
+  ]
+}
