@@ -1292,6 +1292,10 @@ input[type=color]:focus,
   color: hsl(0deg, 0%, 100%) !important;
 }
 
+.offcanvas {
+  width: 250px !important;
+}
+
 .SideNav {
   background-color: #006747 !important;
   color: hsl(0deg, 0%, 100%) !important;
