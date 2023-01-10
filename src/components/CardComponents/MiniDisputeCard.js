@@ -1,7 +1,4 @@
-import {
-  ViewDetailsButton,
-  BackButton,
-} from "../ButtonsComponent/NavigationAndViewButtons";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 // MiniDisputeCard
 export const MiniDisputeCard = () => {
@@ -12,7 +9,10 @@ export const MiniDisputeCard = () => {
         style={{ width: "40rem" }}
       >
         <div className="d-flex justify-content-end p-3 me-5">
-          <BackButton />
+          <GeneralBtn
+            text={`Back`}
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
         </div>
         <div className="warningStyle pb-1 ms-5 ">
           <p className="">
@@ -34,7 +34,10 @@ export const MiniDisputeCard = () => {
           </div>
 
           <div className="d-flex align-items-end flex-column mt-auto mb-5 me-5 mt-5">
-            <ViewDetailsButton />
+            <GeneralBtn
+              text={`View`}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
           </div>
         </div>
       </div>

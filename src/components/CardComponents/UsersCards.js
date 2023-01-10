@@ -105,13 +105,13 @@ export const UserTransactionsCard = () => {
 export const UserDashboardCards = ({ icon, text }) => {
   return (
     <div
-      className="card shadow  border-0 rounded-2 mb-5"
-      style={{ width: "16rem" }}
+      className="card shadow  border-0 rounded-2 mx-auto mb-5"
+      style={{ width: "100%" }}
     >
       <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="">{icon}</div>
-        <span className="mt-3">
-          <p>{text}</p>
+        <div className="col-3">{icon}</div>
+        <span className="mt-4">
+          <p className="col-9">{text}</p>
         </span>
       </div>
     </div>

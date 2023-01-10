@@ -1,10 +1,10 @@
 import React from "react";
-import { TransactionDetails } from "../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../components/ButtonsComponent/GenandAuthBtn";
+import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
+import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
-} from "../components/IconComponent/NavigationAndViewIcon";
+} from "../../components/IconComponent/NavigationAndViewIcon";
 
 const TransactionSummaryPage = () => {
   return (

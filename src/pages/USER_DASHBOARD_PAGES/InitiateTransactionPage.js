@@ -1,9 +1,9 @@
 import React from "react";
-import { UserDashboardCardsTwo } from "../components/CardComponents/UsersCards";
+import { UserDashboardCardsTwo } from "../../components/CardComponents/UsersCards";
 import {
   BuyingIcon,
   SellingIcon,
-} from "../components/IconComponent/UserdashboardIcons";
+} from "../../components/IconComponent/UserdashboardIcons";
 
 const InitiateTransactionPage = () => {
   return (

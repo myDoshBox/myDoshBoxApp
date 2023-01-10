@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import Sample_User from "../../images/Sample User Image.png";
-=======
 import Table from "react-bootstrap/Table";
 import Sample_User from "../../images/SampleUserImage.png";
->>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
 import { PaginationBar } from "../PaginationComponent";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
@@ -13,7 +9,6 @@ import { Descripe } from "@mui/icons-material";
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
   return (
-<<<<<<< HEAD
     <table className=" NotificationCardWrapper">
       <button
         aria-label="Leave Page"
@@ -187,19 +182,20 @@ export const NotificationCard = (props) => {
           </button>
         </tr>
       </tbody>
+    </table>  
       {/* Pagination Component Stays here */}
       <div className="py-3">
         <PaginationBar />
-=======
+      </div>  
     <div className="d-flex justify-content-around align-items-center">
       <img src={image} alt="SampleUserImg" className="" />
       <h6 className="d-none d-lg-block mx-3">{title}</h6>
       <div className="d-inline">
         <p className="w-100">{description}</p>
->>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
       </div>
       <button className="p-4 btn text-primary">{link}</button>
     </div>
+    
   );
 };
 

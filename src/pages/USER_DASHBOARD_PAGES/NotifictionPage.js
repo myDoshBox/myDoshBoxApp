@@ -1,6 +1,6 @@
 import React from "react";
-import { NotificationCard } from "../components/TableComponents/TransactionTable";
-import usersData from "../../src/data/usersData.json";
+import { NotificationCard } from "../../components/TableComponents/TransactionTable";
+import usersData from "../../data/usersData.json";
 
 const NotifictionPage = () => {
   return (

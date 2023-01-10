@@ -5,10 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import {
-  NeutralsSidenav,
-  UserSidenav,
-} from "./components/NavbarComponents/SideNavbar";
+
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
 import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
@@ -18,11 +15,14 @@ import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 import UserDashboardPage from "./pages/UserDashboardPage";
+// import { AllConflictsTable } from "./components/TableComponents/ConflictsTable";
 
 function App() {
   return (
     <Router>
       <UserDashboardPage />
+      {/* <AllConflictsTable /> */}
+
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
@@ -31,11 +31,10 @@ function App() {
           <Route path="contactus" element={<ContactUs />} />
           <Route path="pricingpage" element={<PricingPage />} />
           <Route path="faqs" element={<FAQs />} />
-        </Route>
-
-        <Route path="dashboard" element={<NeutralsSidenav />}>
+        </Route>{" "}
+        {/* <Route path="dashboard" element={<NeutralsSidenav />}>
           <Route path="aboutus" element={<AboutUs />} />
-        </Route>
+        </Route> */}
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         {/* <Route path="*" element={<Error404 />} /> */}
       </Routes>
