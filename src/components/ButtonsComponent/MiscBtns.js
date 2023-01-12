@@ -20,7 +20,7 @@ import { Button } from "react-bootstrap";
 
 export const FilterButton = () => {
   return (
-    <Button className="FilteBtnStyle border-0">
+    <Button className="FilteBtnStyle bg-transparent border-0">
       <span className="">
         <svg
           className="mb-1 me-2"

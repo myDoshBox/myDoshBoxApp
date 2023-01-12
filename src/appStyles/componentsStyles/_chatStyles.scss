@@ -1,20 +1,90 @@
 @use "../generalStyles/color" as *;
+@use "../generalStyles/fonts" as *;
 
 .BgColor {
-	background-color: #459079;
+  background-color: #459079;
 }
 .BgColorScreen {
-	background-color: $pryColor;
+  background-color: $pryColor;
 }
 
 .ScreenBgColor {
-	background-color: #e6f0ed;
+  background-color: #e6f0ed;
 }
 
 .InputBgColor {
-	background-color: #b7bdbc;
+  background-color: #b7bdbc;
 }
 
 .ActiveChat {
-	background-color: #68e443ad !important;
+  background-color: #68e443ad !important;
+}
+
+.mini-disputes-card {
+  .nav-pills .nav-link.active {
+    color: $bodyTextColor !important;
+    border-bottom: 2.91696px solid #4b4453 !important;
+    background-color: inherit !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-link {
+    color: $bodyTextColor !important;
+  }
+
+  .mini-disputes-mail {
+    color: $placeholderTextColor;
+    font-size: 0.625rem;
+  }
+
+  .mini-disputes-name {
+    font-size: 14px;
+    color: $bodyTextColor;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .disputes-view-btn {
+    background: rgba(0, 103, 71, 0.1);
+    border-radius: 4.86161px;
+    width: 76.81px;
+    height: 27.22px;
+    font-size: 12px !important;
+  }
+
+  .disputes-view-btn:hover,
+  .disputes-view-btn:focus {
+    background: rgba(0, 103, 71, 0.1) !important;
+    border: none !important;
+    font-weight: 400 !important;
+  }
+
+  .disputes-sort-btn {
+    background: rgba(0, 103, 71, 0.1) !important;
+    width: 70px;
+    height: 36.95px;
+    @include pFont;
+    border: none;
+  }
+
+  .dropdown-menu.show {
+    background: #e5f0ec !important;
+    @include pFont;
+    font-size: 0.75rem !important;
+  }
+
+  .dropdown-menu {
+    border: none;
+    min-width: 7rem;
+    padding: 0 0 !important;
+  }
+
+  .dropdown-item:hover {
+    background: #e5f0ec !important;
+    border-radius: inherit;
+  }
+
+  .disputes-sort-btn:hover {
+    color: $bodyTextColor !important;
+  }
 }

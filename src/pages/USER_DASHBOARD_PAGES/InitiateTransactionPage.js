@@ -4,18 +4,26 @@ import {
   BuyingIcon,
   SellingIcon,
 } from "../../components/IconComponent/UserdashboardIcons";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 
 const InitiateTransactionPage = () => {
   return (
     <div>
-      <InitiateCard />
+      <div className="row">
+        <div className="col-md-3">
+          <UsersSideNav />
+        </div>
+        <div className="col-md-9">
+          <InitiateCard />
+        </div>
+      </div>
     </div>
   );
 };
 
 const InitiateCard = () => {
   return (
-    <div className="row mt-5">
+    <div className="row mt-5 container">
       <div className="col-md-6 col-sm-12">
         <UserDashboardCardsTwo text={`BUYING`} icon={<BuyingIcon />} />
       </div>

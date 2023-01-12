@@ -26,10 +26,10 @@ export const LearnMoreCard = () => {
           </button>
         </span>
       </div>
-      <div className="w-25 d-none d-md-block">
+      <div className="w-50 d-none d-md-block">
         <img src={Learning_illustration} className=" img-fluid" alt="" />
       </div>
-      <div className="w-75 d-md-none .d-lg-block">
+      <div className="w-100 d-md-none .d-lg-block">
         <img src={Learning_illustration} className=" img-fluid mt-4" alt="" />
       </div>
     </div>

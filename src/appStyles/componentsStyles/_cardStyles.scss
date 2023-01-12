@@ -408,68 +408,68 @@
     font-weight: 500 !important;
   }
 
-  .mini-disputes-card {
-    .nav-pills .nav-link.active {
-      color: $bodyTextColor;
-      border-bottom: 2.91696px solid #4b4453;
-      background-color: inherit !important;
-      border-radius: 0 !important;
-    }
+  //   .mini-disputes-card {
+  //     .nav-pills .nav-link.active {
+  //       color: $bodyTextColor;
+  //       border-bottom: 2.91696px solid #4b4453;
+  //       background-color: inherit !important;
+  //       border-radius: 0 !important;
+  //     }
 
-    .nav-link {
-      color: $bodyTextColor !important;
-    }
+  //     .nav-link {
+  //       color: $bodyTextColor !important;
+  //     }
 
-    .mini-disputes-mail {
-      color: $placeholderTextColor;
-      font-size: 0.625rem;
-    }
+  //     .mini-disputes-mail {
+  //       color: $placeholderTextColor;
+  //       font-size: 0.625rem;
+  //     }
 
-    .mini-disputes-name {
-      font-size: 14px;
-      color: $bodyTextColor;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
+  //     .mini-disputes-name {
+  //       font-size: 14px;
+  //       color: $bodyTextColor;
+  //       font-weight: 600;
+  //       letter-spacing: 0.06em;
+  //     }
 
-    .disputes-view-btn {
-      background: rgba(0, 103, 71, 0.1);
-      font-size: 12px !important;
-    }
+  //     .disputes-view-btn {
+  //       background: rgba(0, 103, 71, 0.1);
+  //       font-size: 12px !important;
+  //     }
 
-    .disputes-view-btn:hover,
-    .disputes-view-btn:focus {
-      background: rgba(0, 103, 71, 0.1) !important;
-      border: none !important;
-      font-weight: 400 !important;
-    }
+  //     .disputes-view-btn:hover,
+  //     .disputes-view-btn:focus {
+  //       background: rgba(0, 103, 71, 0.1) !important;
+  //       border: none !important;
+  //       font-weight: 400 !important;
+  //     }
 
-    .disputes-sort-btn {
-      background: rgba(0, 103, 71, 0.1) !important;
-      @include pFont;
-    }
+  //     .disputes-sort-btn {
+  //       background: rgba(0, 103, 71, 0.1) !important;
+  //       @include pFont;
+  //     }
 
-    .dropdown-menu.show {
-      background: #e5f0ec !important;
-      @include pFont;
-      font-size: 0.75rem !important;
-    }
+  //     .dropdown-menu.show {
+  //       background: #e5f0ec !important;
+  //       @include pFont;
+  //       font-size: 0.75rem !important;
+  //     }
 
-    .dropdown-menu {
-      border: none;
-      min-width: 7rem;
-      padding: 0 0 !important;
-    }
+  //     .dropdown-menu {
+  //       border: none;
+  //       min-width: 7rem;
+  //       padding: 0 0 !important;
+  //     }
 
-    .dropdown-item:hover {
-      background: #e5f0ec !important;
-      border-radius: inherit;
-    }
+  //     .dropdown-item:hover {
+  //       background: #e5f0ec !important;
+  //       border-radius: inherit;
+  //     }
 
-    .disputes-sort-btn:hover {
-      color: $bodyTextColor !important;
-    }
-  }
+  //     .disputes-sort-btn:hover {
+  //       color: $bodyTextColor !important;
+  //     }
+  //   }
 
   .issues-card {
     border: 1px solid none;
@@ -600,10 +600,15 @@
     background-color: $pryColor !important;
     font-weight: 400 !important;
   }
+  // Payment Method
+  .payment-method-card:hover,
+  .payment-method-card:focus {
+    border-color: $pryColor !important;
+  }
 
-  .nav-pills .nav-link {
-    background-color: $buttonColor !important;
+  // Neutral resolve coflicts
+  .nav-pills .nav-link.active {
+    background-color: $pryColor !important;
     font-weight: 400 !important;
-    color: white;
   }
 }

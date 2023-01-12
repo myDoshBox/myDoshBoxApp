@@ -226,7 +226,6 @@ label, select, option, .escrow-images, .date-input-field {
 .FilteBtnStyle {
   font-weight: 200 !important;
   color: #4b4453 !important;
-  background-color: #e5f0ed !important;
 }
 
 .LearnMoreCardButton {
@@ -249,7 +248,8 @@ label, select, option, .escrow-images, .date-input-field {
   letter-spacing: 0rem;
 }
 
-.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+.EscrowTransactTypeBtn:hover,
+.EscrowTransactTypeBtn:focus {
   background-color: #006747 !important;
   border: 0;
   color: white !important;
@@ -259,7 +259,8 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
-.pale-red:hover, .pale-red:focus {
+.pale-red:hover,
+.pale-red:focus {
   background-color: rgb(255, 0, 0) !important;
 }
 
@@ -714,66 +715,6 @@ label, select, option, .escrow-images, .date-input-field {
   font-size: 0.5rem;
   font-weight: 500 !important;
 }
-.MiniUsersCard .mini-disputes-card .nav-pills .nav-link.active {
-  color: #4b4453;
-  border-bottom: 2.91696px solid #4b4453;
-  background-color: inherit !important;
-  border-radius: 0 !important;
-}
-.MiniUsersCard .mini-disputes-card .nav-link {
-  color: #4b4453 !important;
-}
-.MiniUsersCard .mini-disputes-card .mini-disputes-mail {
-  color: rgba(75, 68, 83, 0.5);
-  font-size: 0.625rem;
-}
-.MiniUsersCard .mini-disputes-card .mini-disputes-name {
-  font-size: 14px;
-  color: #4b4453;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-.MiniUsersCard .mini-disputes-card .disputes-view-btn {
-  background: rgba(0, 103, 71, 0.1);
-  font-size: 12px !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:hover,
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:focus {
-  background: rgba(0, 103, 71, 0.1) !important;
-  border: none !important;
-  font-weight: 400 !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn {
-  background: rgba(0, 103, 71, 0.1) !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu.show {
-  background: #e5f0ec !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu {
-  border: none;
-  min-width: 7rem;
-  padding: 0 0 !important;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-item:hover {
-  background: #e5f0ec !important;
-  border-radius: inherit;
-}
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn:hover {
-  color: #4b4453 !important;
-}
 .MiniUsersCard .issues-card {
   border: 1px solid none;
   border-radius: 10px;
@@ -885,10 +826,13 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: #006747 !important;
   font-weight: 400 !important;
 }
-.resolve-card .nav-pills .nav-link {
-  background-color: #4d957e !important;
+.resolve-card .payment-method-card:hover,
+.resolve-card .payment-method-card:focus {
+  border-color: #006747 !important;
+}
+.resolve-card .nav-pills .nav-link.active {
+  background-color: #006747 !important;
   font-weight: 400 !important;
-  color: white;
 }
 
 .BgColor {
@@ -909,6 +853,73 @@ label, select, option, .escrow-images, .date-input-field {
 
 .ActiveChat {
   background-color: rgba(104, 228, 67, 0.6784313725) !important;
+}
+
+.mini-disputes-card .nav-pills .nav-link.active {
+  color: #4b4453 !important;
+  border-bottom: 2.91696px solid #4b4453 !important;
+  background-color: inherit !important;
+  border-radius: 0 !important;
+}
+.mini-disputes-card .nav-link {
+  color: #4b4453 !important;
+}
+.mini-disputes-card .mini-disputes-mail {
+  color: rgba(75, 68, 83, 0.5);
+  font-size: 0.625rem;
+}
+.mini-disputes-card .mini-disputes-name {
+  font-size: 14px;
+  color: #4b4453;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.mini-disputes-card .disputes-view-btn {
+  background: rgba(0, 103, 71, 0.1);
+  border-radius: 4.86161px;
+  width: 76.81px;
+  height: 27.22px;
+  font-size: 12px !important;
+}
+.mini-disputes-card .disputes-view-btn:hover,
+.mini-disputes-card .disputes-view-btn:focus {
+  background: rgba(0, 103, 71, 0.1) !important;
+  border: none !important;
+  font-weight: 400 !important;
+}
+.mini-disputes-card .disputes-sort-btn {
+  background: rgba(0, 103, 71, 0.1) !important;
+  width: 70px;
+  height: 36.95px;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  border: none;
+}
+.mini-disputes-card .dropdown-menu.show {
+  background: #e5f0ec !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-size: 0.75rem !important;
+}
+.mini-disputes-card .dropdown-menu {
+  border: none;
+  min-width: 7rem;
+  padding: 0 0 !important;
+}
+.mini-disputes-card .dropdown-item:hover {
+  background: #e5f0ec !important;
+  border-radius: inherit;
+}
+.mini-disputes-card .disputes-sort-btn:hover {
+  color: #4b4453 !important;
 }
 
 .Email,

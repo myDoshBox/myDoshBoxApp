@@ -122,12 +122,12 @@ export const UserDashboardCardsTwo = ({ icon, text }) => {
   return (
     <div
       className="card shadow border-0 rounded-2 mx-auto mb-5"
-      style={{ width: "100%", height: "25%" }}
+      style={{ width: "100%" }}
     >
       <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="col-3">{icon}</div>
+        <div className="mx-3">{icon}</div>
         <span className="mt-3">
-          <p className="col-9">{text}</p>
+          <p className="">{text}</p>
         </span>
       </div>
     </div>

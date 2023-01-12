@@ -64,7 +64,7 @@ export const TransactionDetails = ({
             <img
               src={product}
               className="mx-auto"
-              style={{ width: "80rem" }}
+              style={{ width: "100%" }}
               alt=""
             />
           </span>

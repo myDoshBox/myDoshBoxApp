@@ -1,11 +1,21 @@
 import React from "react";
 import { NotificationCard } from "../../components/TableComponents/TransactionTable";
 import usersData from "../../data/usersData.json";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
+import { FilterButton } from "../../components/ButtonsComponent/MiscBtns";
+import { PaginationBar } from "../../components/PaginationComponent";
 
 const NotifictionPage = () => {
   return (
-    <div>
-      <Notification />
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-md-3">
+          <UsersSideNav />
+        </div>
+        <div className="col-md-9">
+          <Notification />
+        </div>
+      </div>
     </div>
   );
 };
@@ -15,7 +25,10 @@ const Notification = () => {
     <div className="row">
       <div className="card col-md-10 col-sm-12 mx-auto mt-4 p-4 shadow border-0">
         <div className="card-body">
-          <h3 className="pb-3">Notifications</h3>
+          <h3 className="pb-1">Notifications</h3>
+        </div>
+        <div className="d-flex justify-content-end pb-3">
+          <FilterButton />
         </div>
         <div className="">
           {usersData.notificationData.map((notificationData) => {
@@ -25,6 +38,9 @@ const Notification = () => {
               </div>
             );
           })}
+        </div>
+        <div className="p-5">
+          <PaginationBar />
         </div>
       </div>
     </div>

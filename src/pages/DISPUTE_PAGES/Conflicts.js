@@ -1,5 +1,5 @@
-import { UserSidenav } from "../components/NavbarComponents/SideNavbar";
-import { AllConflictsTable } from "../components/TableComponents/ConflictsTable";
+import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
+import { AllConflictsTable } from "../../components/TableComponents/ConflictsTable";
 
 export const OpenConflicts = () => {
   return (
@@ -8,9 +8,7 @@ export const OpenConflicts = () => {
         <UserSidenav />
       </div>
 
-      <AllConflictsTable
-      conflictType="open"
-      />
+      <AllConflictsTable conflictType="open" />
     </div>
   );
 };
@@ -22,9 +20,7 @@ export const ClosedConflicts = () => {
         <UserSidenav />
       </div>
 
-      <AllConflictsTable
-      conflictType="closed"
-      />
+      <AllConflictsTable conflictType="closed" />
     </div>
   );
 };
@@ -36,9 +32,7 @@ export const OngoingConflicts = () => {
         <UserSidenav />
       </div>
 
-      <AllConflictsTable
-      conflictType="ongoing"
-      />
+      <AllConflictsTable conflictType="ongoing" />
     </div>
   );
 };

@@ -1,26 +1,35 @@
 import React from "react";
-import { TransactionDetails } from "../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../components/ButtonsComponent/GenandAuthBtn";
+import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
+import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
-} from "../components/IconComponent/NavigationAndViewIcon";
+} from "../../components/IconComponent/NavigationAndViewIcon";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 
-const PaymentMadePage = () => {
+const TransactionSummaryPage = () => {
   return (
-    <div>
-      <PaymentMade />
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-md-3">
+          <UsersSideNav />
+        </div>
+        <div className="col-md-9">
+          <TransactionSummary />
+        </div>
+      </div>
     </div>
   );
 };
 
-const PaymentMade = () => {
+const TransactionSummary = () => {
   return (
     <div className="row">
       <div className="">
         <TransactionDetails
-          heading={`Payment Made`}
-          sub_text={`Buyer Elland Aaronson has made payment into MyDoshBox account for this transaction`}
+          heading={`Transaction Summary
+`}
+          sub_text={`Please Confirm the following transaction initiated by user Eland Aaronson`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -31,14 +40,14 @@ const PaymentMade = () => {
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <GeneralBtn
-              text="Cancel Transaction"
+              text="Back"
               styles="CancelBtn btn all-btn text-white"
               icon={<BackIcon />}
             />
           }
           rightBtn={
             <GeneralBtn
-              text="Delete  Product"
+              text="Proceed"
               styles="GeneralBtnStyle1 btn all-btn text-white"
               icon={<NextIcon />}
             />
@@ -49,4 +58,4 @@ const PaymentMade = () => {
   );
 };
 
-export default PaymentMadePage;
+export default TransactionSummaryPage;
