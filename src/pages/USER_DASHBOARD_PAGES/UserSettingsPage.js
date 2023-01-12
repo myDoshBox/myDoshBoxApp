@@ -55,13 +55,13 @@ const SettingsPage = () => {
             </div>
           </div>
           <div className="col-12 row">
-            <div className="col-sm-12 mb-3 mb-md--4 col-lg-6">
+            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
               <DashboardCard
                 icon={<FeedbackIcon />}
                 text={"Report App Defect"}
               />
             </div>
-            <div className="col-sm-12 mb-3 mb-md--4 col-lg-6">
+            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
               <DashboardCard icon={<ContactUsIcon />} text={"Contact Us"} />
             </div>
           </div>
@@ -87,10 +87,8 @@ const DashboardCard = (props) => {
       style={{ width: "100%", height: "80%" }}
     >
       <div className="row justify-content-center align-items-center mx-auto">
-        <div className="col-2 mb-2">{icon}</div>
-        <div className="col-10">
-          <p>{text}</p>
-        </div>
+        <div className="col-2">{icon}</div>
+        <div className="col-10">{text}</div>
       </div>
     </div>
   );
@@ -100,7 +98,7 @@ const MiniProfileCard = () => {
   return (
     <>
       <div
-        className="card shadow border-0 rounded-2 py-3 mx-auto"
+        className="card shadow border-0 rounded-2 p-3 mx-auto"
         style={{ width: "90%" }}
       >
         <div className="d-flex flex-column ">
@@ -121,7 +119,7 @@ const MiniProfileCard = () => {
           <div>{/* <CompletedDealsIcon width="30" /> */}</div>
           <p className="ms-lg-1">100 deals completed</p>
         </div>
-        <div className="d-flex px-3">
+        <div className="d-flex px-3 ">
           <span>
             <RatingIcon />
             <RatingIcon />
@@ -132,7 +130,7 @@ const MiniProfileCard = () => {
           <p className="mx-2"> 0.0 rating </p>
         </div>
         <hr></hr>
-        <div className="text-end pe-2">
+        <div className="text-end pe-2 py-3">
           <GeneralBtn
             text="Edit Profile"
             styles="GeneralBtnStyle1 btn all-btn text-white"

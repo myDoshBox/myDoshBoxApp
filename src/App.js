@@ -16,16 +16,9 @@ import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
 import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
-import { MiniProfileCard } from "./components/CardComponents/UsersCards";
-import { FeedbackIcon } from "./components/IconComponent/UserdashboardIcons";
-import {
-  BigLogoutIcon,
-  ChangeBankIcon,
-  ContactUsIcon,
-  FaqIcon,
-  UpdateProfileIcon,
-} from "./components/IconComponent/UserdashboardIcons";
+import UserDisputeHistory from "./pages/USER_DASHBOARD_PAGES/UserDisputesHistory";
 import UserSettingsPage from "./pages/USER_DASHBOARD_PAGES/UserSettingsPage";
+import UserTransactionHistory from "./pages/USER_DASHBOARD_PAGES/UserTransactionHistory";
 
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 // import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
@@ -33,7 +26,9 @@ import UserSettingsPage from "./pages/USER_DASHBOARD_PAGES/UserSettingsPage";
 function App() {
   return (
     <Router>
+      <UserDisputeHistory />
       <UserSettingsPage />
+      <UserTransactionHistory />
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         {/* <Route element={<GuestNavbar />}>
