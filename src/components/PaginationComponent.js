@@ -8,7 +8,7 @@ export const PaginationBar = () => {
     <nav role="navigation" aria-label="Page Navigation">
       <ul className="list-unstyled d-flex justify-content-center align-items-center PaginationBar">
         <li className="page-item">
-          <GeneralBtnStyle1Icon lefticon={<PreviousIcon />} text="Prev" />
+          <GeneralBtnStyle1Icon text="Prev" />
         </li>
         <li className="page-item " aria-label="Goto Page 1">
           <a className="page-link border border-0" href="/page-1">
@@ -107,7 +107,7 @@ export const PaginationBar = () => {
           </a>
         </li>
         <li className="page-item">
-          <GeneralBtnStyle1Icon lefticon={<NextIcon />} text="Next" />
+          <GeneralBtnStyle1Icon text="Next" />
         </li>
       </ul>
     </nav>

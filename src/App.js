@@ -16,10 +16,11 @@ import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
 import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
+import { Footer } from "./components/FooterComponents";
+import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 import UserDisputeHistory from "./pages/USER_DASHBOARD_PAGES/UserDisputesHistory";
 import UserSettingsPage from "./pages/USER_DASHBOARD_PAGES/UserSettingsPage";
 import UserTransactionHistory from "./pages/USER_DASHBOARD_PAGES/UserTransactionHistory";
-
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 // import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
 
@@ -32,19 +33,20 @@ function App() {
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         {/* <Route element={<GuestNavbar />}>
-          <Route path="/" element={<Homepage />} />
-          <Route path="aboutus" element={<AboutUs />} />
-          <Route path="contactus" element={<ContactUs />} />
-          <Route path="pricingpage" element={<PricingPage />} />
-          <Route path="faqs" element={<FAQs />} />
+          <Route path="/*" element={<Homepage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/pricingpage" element={<PricingPage />} />
+          <Route path="/faqs" element={<FAQs />} />
         </Route> */}
 
-        {/* <Route path="dashboard" element={<NeutralsSidenav />}>
+        {/* <Route path="dashboard" element={<UsersSideNav />}>
           <Route path="aboutus" element={<AboutUs />} />
         </Route> */}
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         {/* <Route path="*" element={<Error404 />} /> */}
       </Routes>
+      {/* <Footer /> */}
     </Router>
   );
 }

@@ -3,7 +3,7 @@
   padding: 0;
   font: inherit;
   box-sizing: border-box;
-  font-family: "Open Sans", "Roboto";
+  font-family: "roboto", open Sans;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -125,6 +125,35 @@ p {
   letter-spacing: 0rem;
 }
 
+.small-text {
+  font-size: 0.7rem !important;
+}
+
+.normal-text {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+label, select, option, .escrow-images, .date-input-field {
+  font-size: 0.85rem !important;
+  font-family: "Open Sans" !important;
+  font-weight: 300 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .InitiateEscrow {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .EscrowChoice {
+    width: 50% !important;
+  }
+}
 .all-btn:hover {
   background-color: #006747 !important;
 }
@@ -207,6 +236,35 @@ p {
   border: 1.94464px solid #ffffff;
   border-radius: 7.4966px;
   color: white !important;
+}
+
+.EscrowTransactTypeBtn {
+  color: #006747 !important;
+  border-color: #006747 !important;
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+  background-color: #006747 !important;
+  border: 0;
+  color: white !important;
+}
+
+.pale-red {
+  background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.pale-red:hover, .pale-red:focus {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+.link-color-reset {
+  color: inherit !important;
 }
 
 .CoreValueCard {
@@ -555,34 +613,6 @@ p {
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.MiniUsersCard .payment-gateway-image {
-  width: 12vw;
-}
-.MiniUsersCard .payment-gateway-card {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .payment-gateway-card p {
-  color: rgba(75, 68, 83, 0.5) !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 1rem !important;
-}
-.MiniUsersCard .payment-gateway-card h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .payment-gateway-card h4 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
 .MiniUsersCard .buying-selling-card {
   width: 468px;
   height: 227px;
@@ -806,8 +836,8 @@ p {
 }
 
 .FAQs {
-  --bs-gutter-x: 0;
   color: #e5f0ed;
+  font-family: "Open Sans" !important;
 }
 .FAQs .faqs-header {
   background-color: #006747;
@@ -816,6 +846,14 @@ p {
   color: unset;
   background-color: white;
 }
+.FAQs .accordion-title,
+.FAQs .accordion-body {
+  font-family: "Open Sans";
+  font-weight: 400 !important;
+}
+.FAQs .accordion-head {
+  border-bottom: 0.5px dashed rgba(75, 68, 83, 0.1) !important;
+}
 .FAQs .accordion-button:focus,
 .FAQs .accordion-button:not(.collapsed):focus {
   outline: 0 !important;
@@ -823,11 +861,17 @@ p {
   border-color: rgba(0, 0, 0, 0.125);
 }
 
-.resolve-card .nav-pills .nav-link.active {
+.payment-method-card:hover,
+.payment-method-card:focus {
+  border-color: #006747 !important;
+}
+.payment-method-card:hover .resolve-card .nav-pills .nav-link.active,
+.payment-method-card:focus .resolve-card .nav-pills .nav-link.active {
   background-color: #006747 !important;
   font-weight: 400 !important;
 }
-.resolve-card .nav-pills .nav-link {
+.payment-method-card:hover .resolve-card .nav-pills .nav-link,
+.payment-method-card:focus .resolve-card .nav-pills .nav-link {
   background-color: #4d957e !important;
   font-weight: 400 !important;
   color: white;
@@ -998,14 +1042,12 @@ input[type=color]:focus,
   font-size: 1.125rem !important;
 }
 
-.escrow-input-field,
 .bank-transfer-input-field {
   width: 90% !important;
   margin: 0 15px;
 }
 
 .escrow-price-field {
-  width: 78% !important;
   border-radius: 5px 0 0 5px !important;
 }
 
@@ -1028,10 +1070,8 @@ input[type=color]:focus,
 }
 
 .ngn2 {
-  border: 1px solid none;
+  border-color: #006747 !important;
   background-color: #006747 !important;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0 5px 5px 0;
   color: hsl(0deg, 0%, 100%) !important;
 }
 
@@ -1155,6 +1195,15 @@ input[type=color]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+
+.escrow-dropdown-field,
+.escrow-dropdown-field:focus,
+.escrow-dropdown-field:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: 300 !important;
 }
 
 .contestPage .row {

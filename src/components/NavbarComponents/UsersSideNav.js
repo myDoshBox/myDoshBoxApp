@@ -12,6 +12,7 @@ import {
   UsersIcon,
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.jpg";
+import { Link } from "react-router-dom";
 
 const UsersSideNav = () => {
   return (

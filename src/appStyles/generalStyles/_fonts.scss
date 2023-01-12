@@ -108,3 +108,17 @@ p {
 .userNavFont {
   @include userNavFont;
 }
+
+.small-text{
+  font-size: 0.7rem !important;
+}
+
+.normal-text {
+  @include pFont;
+}
+
+label, select, option, .escrow-images, .date-input-field{
+  font-size: 0.85rem !important;
+  font-family: "Open Sans" !important;
+  font-weight: 300 !important;
+}

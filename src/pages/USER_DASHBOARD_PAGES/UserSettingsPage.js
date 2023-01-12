@@ -83,7 +83,7 @@ const DashboardCard = (props) => {
   const { text, icon } = props;
   return (
     <div
-      className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5"
+      className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
       style={{ width: "100%", height: "80%" }}
     >
       <div className="row justify-content-center align-items-center mx-auto">
