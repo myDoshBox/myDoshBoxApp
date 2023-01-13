@@ -12,13 +12,14 @@ import {
   UsersIcon,
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.jpg";
-import { Link } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 
 const UsersSideNav = () => {
   return (
     <>
       <SmallShow />
       <BigShow />
+      <Outlet />
     </>
   );
 };
@@ -34,6 +35,8 @@ const SmallShowExample = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  let activeClassName = "active-link";
+  let baseClassName = "text-decoration-none text-white";
 
   return (
     <>
@@ -80,7 +83,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NavTransactionIcon />
                 </div>
-                <span>Transactions</span>
+                <NavLink
+                  to="usertransaction"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Transactions</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -104,13 +114,27 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <DisputeIcon />
                 </div>
-                <span>Disputes</span>
+                <NavLink
+                  to="userdispute"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Disputes</span>
+                </NavLink>
               </li>
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <SettingsIcon />
                 </div>
-                <span>Settings</span>
+                <NavLink
+                  to="usersettings"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Settings</span>
+                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">
@@ -133,6 +157,8 @@ const BigShowExample = ({ name, ...props }) => {
 
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  let activeClassName = "active-link";
+  let baseClassName = "text-decoration-none text-white";
 
   return (
     <>
@@ -177,7 +203,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NavTransactionIcon />
                 </div>
-                <span>Transactions</span>
+                <NavLink
+                  to="usertransaction"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Transactions</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -197,17 +230,33 @@ const BigShowExample = ({ name, ...props }) => {
                 </div>
                 <span>Notifications</span>
               </li>
+
               <li className="d-flex  align-items-center SideNavItem mb-4">
                 <div className="me-3">
                   <DisputeIcon />
                 </div>
-                <span>Disputes</span>
+                <NavLink
+                  to="userdispute"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Disputes</span>
+                </NavLink>
               </li>
+
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <SettingsIcon />
                 </div>
-                <span>Settings</span>
+                <NavLink
+                  to="usersettings"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Settings</span>
+                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">

@@ -2,18 +2,14 @@ import {
   GeneralBtnStyle1,
   GeneralBtnStyle1Icon,
   ViewDetailsButton,
-} from "../../components/ButtonsComponent/Button";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import { Notifications } from "../../components/NotificationComponent/NotificationComponents";
-import DisputesData from "../../data/dummyData/disputeshistorydata.json";
+} from "../../../components/ButtonsComponent/Button";
+import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 
 const UserDisputeHistory = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-lg-3 col-sm-12">
-          <UsersSideNav />
-        </div>
+        <div className="col-lg-3 col-sm-12"></div>
 
         <div className="col-lg-9 col-sm-12 mt-5">
           <DisputeCard />

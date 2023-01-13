@@ -1,16 +1,13 @@
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import { Notifications } from "../../components/NotificationComponent/NotificationComponents";
-import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
-import TransactionData from "../../data/dummyData/transactionData.json";
-import { PaginationBar } from "../../components/PaginationComponent";
+import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
+import { GeneralBtnStyle1 } from "../../../components/ButtonsComponent/Button";
+import TransactionData from "../../../data/dummyData/transactionData.json";
+import { PaginationBar } from "../../../components/PaginationComponent";
 
 const UserTransactionHistory = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-lg-3 col-sm-12">
-          <UsersSideNav />
-        </div>
+        <div className="col-lg-3 col-sm-12"></div>
 
         <div className="col-lg-9 col-sm-12 mt-5">
           <RecentTransactionTable />
@@ -57,10 +54,10 @@ const RecentTransactionTableData = (props) => {
   return (
     <>
       <tr className="text-center border-bottom">
-        <td className="p-3">{product}</td>
-        <td className="p-3">N{price}</td>
-        <td className="p-3">{date}</td>
-        <td className="p-3 d-flex justify-content-center align-items-center">
+        <td className="p-md-3">{product}</td>
+        <td className="p-md-3">N{price}</td>
+        <td className="p-md-3">{date}</td>
+        <td className="p-md-3 d-flex justify-content-center align-items-center">
           <Notifications text={status_name} styles={status_style} />
         </td>
       </tr>

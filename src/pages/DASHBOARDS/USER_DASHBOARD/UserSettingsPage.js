@@ -1,8 +1,8 @@
 // import { MiniProfileCard } from "../../components/CardComponents/UsersCards";
-import { UserDashboardCards } from "../../components/CardComponents/UsersCards";
-import { UpdateBankDetails } from "../../components/FormComponents.js/UpdateForms";
-import { UpdateProfile } from "../../components/FormComponents.js/UpdateForms";
-import { Reportissuesform } from "../../components/FormComponents.js/IssuesComplaintForms";
+import { UserDashboardCards } from "../../../components/CardComponents/UsersCards";
+import { UpdateBankDetails } from "../../../components/FormComponents.js/UpdateForms";
+import { UpdateProfile } from "../../../components/FormComponents.js/UpdateForms";
+import { Reportissuesform } from "../../../components/FormComponents.js/IssuesComplaintForms";
 import {
   BigLogoutIcon,
   ChangeBankIcon,
@@ -11,18 +11,15 @@ import {
   FeedbackIcon,
   UpdateProfileIcon,
   CameraIcon,
-} from "../../components/IconComponent/UserdashboardIcons";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import Avatar from "../../images/Avatar.jpg";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+} from "../../../components/IconComponent/UserdashboardIcons";
+import Avatar from "../../../images/Avatar.jpg";
+import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
 
 const UserSettingsPage = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-lg-3 col-sm-12">
-          <UsersSideNav />
-        </div>
+        <div className="col-lg-3 col-sm-12"></div>
 
         <div className="col-lg-9 col-sm-12 mt-5">
           <SettingsPage />
