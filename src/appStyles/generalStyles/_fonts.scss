@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Open+Sans&family=Roboto:wght@500&display=swap");
 @use "./color" as *;
 
 @mixin H1Font {
@@ -38,7 +40,7 @@
 }
 
 @mixin pFont {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: $bodyTextColor;
@@ -47,14 +49,14 @@
 }
 
 @mixin mutedFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.5rem;
   // line-height: 0.5rem;
   // letter-spacing: 4px;
 }
 
 @mixin notificationFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: $bodyTextColor;
   line-height: 1.5rem;
@@ -62,7 +64,7 @@
 }
 
 @mixin userNavFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: $bodyTextColor;
   line-height: 1.5rem;
@@ -109,7 +111,7 @@ p {
   @include userNavFont;
 }
 
-.small-text{
+.small-text {
   font-size: 0.7rem !important;
 }
 
@@ -117,8 +119,12 @@ p {
   @include pFont;
 }
 
-label, select, option, .escrow-images, .date-input-field{
+label,
+select,
+option,
+.escrow-images,
+.date-input-field {
   font-size: 0.85rem !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
 }

@@ -142,6 +142,11 @@ const OurPartners = () => {
               We work With the <br />
               Best Partners
             </h3>
+            <p className="w-75 d-none d-md-block mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate. consectetur adipiscing elit ipsum dolor sit amet,
+              consec
+            </p>
             <p className="w-75 d-md-none .d-lg-block text-center ms-5 mt-2 pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate. consectetur adipiscing elit ipsum dolor sit amet,
