@@ -39,7 +39,6 @@ function App() {
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route path="aboutus" element={<AboutUs />} />
           <Route path="usersettings" element={<UserSettingsPage />} />
           <Route path="usertransaction" element={<UserTransactionHistory />} />
           <Route path="userdispute" element={<UserDisputeHistory />} />
@@ -49,9 +48,9 @@ function App() {
           <Route path="aboutus" element={<AboutUs />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-        <Route path="*" element={<Error404 />} />
+        {/* <Route path="*" element={<Error404 />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

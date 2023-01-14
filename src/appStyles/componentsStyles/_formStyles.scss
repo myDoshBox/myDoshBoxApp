@@ -218,29 +218,18 @@ input[type="color"]:focus,
   }
 }
 
-.toggleBtnStyle {
-  margin-right: 30rem;
-}
-
-.checkboxStyle label {
-  color: $pryColorVariant !important;
-}
-
-.sign-up-section {
-  transform: translateX(130px);
-}
-
 .labelStyle {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83) !important;
 }
 
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .titleStyle {
-  @include H1Font;
-  color: $pryColor !important;
+  @include H4Font;
+  color: rgba(75, 68, 83) !important;
 }
 
 .contactStyle {
@@ -262,6 +251,18 @@ input[type="color"]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+.sign-up-form {
+  .nav-pills .nav-link.active {
+    background-color: $pryColor !important;
+    font-weight: 400 !important;
+  }
+
+  .nav-pills .nav-link {
+    font-weight: 400 !important;
+    color: $pryColor;
+    border: 2px solid $pryColor;
+  }
 }
 
 // Initiate Escrow

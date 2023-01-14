@@ -3,7 +3,7 @@
   padding: 0;
   font: inherit;
   box-sizing: border-box;
-  font-family: "roboto", open Sans;
+  font-family: "Open Sans";
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -865,13 +865,12 @@ label, select, option, .escrow-images, .date-input-field {
 .payment-method-card:focus {
   border-color: #006747 !important;
 }
-.payment-method-card:hover .resolve-card .nav-pills .nav-link.active,
-.payment-method-card:focus .resolve-card .nav-pills .nav-link.active {
+
+.resolve-card .nav-pills .nav-link.active {
   background-color: #006747 !important;
   font-weight: 400 !important;
 }
-.payment-method-card:hover .resolve-card .nav-pills .nav-link,
-.payment-method-card:focus .resolve-card .nav-pills .nav-link {
+.resolve-card .nav-pills .nav-link {
   background-color: #4d957e !important;
   font-weight: 400 !important;
   color: white;
@@ -1147,34 +1146,24 @@ input[type=color]:focus,
   text-indent: 10px !important;
 }
 
-.toggleBtnStyle {
-  margin-right: 30rem;
-}
-
-.checkboxStyle label {
-  color: #e5f0ed !important;
-}
-
-.sign-up-section {
-  transform: translateX(130px);
-}
-
 .labelStyle {
-  color: #8cbbac !important;
+  color: rgb(75, 68, 83) !important;
 }
 
 .labelStyle::-moz-placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .titleStyle {
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem !important;
-  color: #006747 !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.5rem !important;
+  color: rgb(75, 68, 83) !important;
 }
 
 .contactStyle {
@@ -1195,6 +1184,16 @@ input[type=color]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+
+.sign-up-form .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
+}
+.sign-up-form .nav-pills .nav-link {
+  font-weight: 400 !important;
+  color: #006747;
+  border: 2px solid #006747;
 }
 
 .escrow-dropdown-field,
