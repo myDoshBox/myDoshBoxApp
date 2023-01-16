@@ -37,9 +37,9 @@ export const NextIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="#006747"
+      width="16"
+      height="16"
+      fill="#FFFFFF"
       class="bi bi-chevron-right"
       viewBox="0 0 16 16"
     >
@@ -57,7 +57,7 @@ export const BackIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      fill="#006747"
+      fill="#FFFFFF"
       class="bi bi-arrow-left-short"
       viewBox="0 0 16 16"
     >

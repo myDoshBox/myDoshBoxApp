@@ -2,7 +2,7 @@ import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { OtherTicket } from "../../components/CardComponents/TicketCard";
 import TicketData from "../../data/TicketData.json";
 
-export const SellerResolveCoflictNotification = () => {
+export const SellerResolveConflictNotification = () => {
   return (
     <section className="d-flex">
       {/* side Bar Section Starts */}
