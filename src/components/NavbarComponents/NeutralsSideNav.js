@@ -8,7 +8,7 @@ import {
   NotificationIcon,
   SettingsIcon,
 } from "../IconComponent/SideNavIcons";
-import doshlogo from "../../images/doshlogolight.jpg";
+import doshlogo from "../../images/doshlogolight.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Link, Outlet } from "react-router-dom";

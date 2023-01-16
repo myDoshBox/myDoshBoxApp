@@ -11,7 +11,7 @@ import {
   SettingsIcon,
   UsersIcon,
 } from "../IconComponent/SideNavIcons";
-import doshlogo from "../../images/doshlogolight.jpg";
+import doshlogo from "../../images/doshlogolight.png";
 import { Link, Outlet, NavLink } from "react-router-dom";
 
 const UsersSideNav = () => {

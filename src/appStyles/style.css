@@ -876,6 +876,17 @@ label, select, option, .escrow-images, .date-input-field {
   color: white;
 }
 
+.signUp-bg {
+  background-color: #006747;
+  background-size: auto;
+  border-radius: 5px;
+  overflow-y: hidden;
+}
+.signUp-bg h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem !important;
+}
+
 .BgColor {
   background-color: #459079;
 }

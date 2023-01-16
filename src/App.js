@@ -22,15 +22,19 @@ import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransa
 import { Footer } from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
+import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
+import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 // import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
 
 function App() {
   return (
     <Router>
+      {/* <SignUpPage /> */}
+      <SignInPage />
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
-        <Route element={<GuestNavbar />}>
+        {/* <Route element={<GuestNavbar />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />
@@ -46,7 +50,7 @@ function App() {
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
           <Route path="aboutus" element={<AboutUs />} />
-        </Route>
+        </Route> */}
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         {/* <Route path="*" element={<Error404 />} /> */}
       </Routes>

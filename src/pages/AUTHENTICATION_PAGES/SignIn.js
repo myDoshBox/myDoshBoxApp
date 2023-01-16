@@ -8,26 +8,28 @@ import { Link } from "react-router-dom";
 const SignInPage = () => {
   return (
     <>
-      <div className="row mx-auto flex-column-reverse flex-md-row">
-        <div className="col-sm-12 col-lg-1"></div>
-        <div className="col-sm-12 col-lg-6 px-lg-5 my-5">
-          <Link to={"/"}>
+      <div className="contestPage">
+        <div className="row mx-auto flex-column-reverse flex-md-row">
+          <div className="col-sm-12 col-lg-1"></div>
+          <div className="col-sm-12 col-lg-6 px-lg-5 my-5">
+            <Link to={"/"}>
+              <img
+                src={logo}
+                alt="doshboxlogo"
+                className="position-fixed start-0 top-0 px-4 py-3"
+              />
+            </Link>
+            <SignInForm />
+          </div>
+          {/* <div className="col-sm-12 col-lg-1"></div> */}
+          <div className="col-sm-12 col-lg-5">
             <img
-              src={logo}
-              alt="doshboxlogo"
-              className="position-fixed start-0 top-0 px-4 py-3"
+              src={image}
+              alt="signIn image"
+              style={{ height: "100vh", width: "100%" }}
+              className="img-fluid d-none d-lg-block"
             />
-          </Link>
-          <SignInForm />
-        </div>
-        {/* <div className="col-sm-12 col-lg-1"></div> */}
-        <div className="col-sm-12 col-lg-5">
-          <img
-            src={image}
-            alt="signIn image"
-            style={{ height: "100vh", width: "100%" }}
-            className="img-fluid d-none d-lg-block"
-          />
+          </div>
         </div>
       </div>
     </>
@@ -45,10 +47,10 @@ export const SignInForm = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const handleShowHide = () => {
+  const handleShowHide = (e) => {
+    e.preventDefault();
     setpasswordToggle(!passwordToggle);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user.email && user.password) {
@@ -57,14 +59,18 @@ export const SignInForm = () => {
     }
   };
 
+  //   const dontSubmit = (e) => {
+  //     e.preventDefault();
+  //   };
+
   return (
     <>
-      <div className="container mt-5">
+      <div className="mt-5">
         <h3 className="titleStyle text-center">Sign In</h3>
         <p className="text-center mb-4">
           Welcome back to MyDoshBox! Please enter your details
         </p>
-        <form className="container form" onClick={handleSubmit}>
+        <form className="container form" onSubmit={handleSubmit}>
           <div className="form-outline mb-2">
             <input
               type="email"
@@ -100,6 +106,7 @@ export const SignInForm = () => {
                 type="checkbox"
                 value=""
                 id="flexCheckDefault"
+                // onClick={dontSubmit}
               />
               <label className="text-success" for="flexCheckDefault">
                 Remember Information
