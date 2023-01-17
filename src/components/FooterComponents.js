@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ScrollUpIcon } from "./IconComponent/NavigationAndViewIcon";
-import { GeneralBtnStyle1Icon } from "./ButtonsComponent/Button";
 import FooterLogo from "../images/FooterLogo.jpg";
 import {
   InstagramIcon,
@@ -10,21 +10,23 @@ import {
   WhatsAppIcon,
 } from "./IconComponent/SocialMediaIcons";
 
-export const FooterComponents = () => {
+export const Footer = () => {
   return (
-    <footer className="FooterBgColor">
+    <footer className="FooterBgColor mt-5 pb-5">
       {/* Back to Top Icon Section starts  */}
-      <div className="d-flex justify-content-end ">
-        <GeneralBtnStyle1Icon righticon={<ScrollUpIcon />} />
+      <div className="d-flex justify-content-end pt-3 me-3">
+        <a href="#BackTop">
+          <ScrollUpIcon />
+        </a>
       </div>
       {/* Back to Top Icon Section Ends */}
       {/* Footer Menu Section Starts  */}
-      <nav className="ms-1 row text-white  mx-auto mt-3">
-        <div className="col-lg-1 col-sm-12 col-md-6 ">
+      <nav className="ms-1 row text-white mx-auto mt-3">
+        <div className="col-lg-2 col-sm-12 col-md-6 ">
           <img src={FooterLogo} className=" w-75" alt="" />
         </div>
-        <div className="col-lg-3 col-sm-12 col-md-6 d-flex mb-4 sm-ms-5">
-          <div className="col-4 col-sm-6">
+        <div className="col-lg-4 col-sm-12 col-md-6 d-flex container pb-4">
+          <div className="col-5 ms-5">
             <h6>The Project</h6>
             <ul className="fs-6 list-inline">
               <li>
@@ -41,9 +43,9 @@ export const FooterComponents = () => {
               </li>
             </ul>
           </div>
-          <div className="col-7 col-sm-6">
+          <div className="col-5">
             <h6>Support</h6>
-            <ul className="fs-6 list-inline  text-white">
+            <ul className="fs-6 list-inline text-white">
               <li>
                 <a href="">Contact</a>
               </li>
@@ -62,16 +64,17 @@ export const FooterComponents = () => {
             </ul>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12 ">
-          <h6 className="text-center">ADDRESS</h6>
-          <p className="text-break text-white opacity-75">
-            The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate Off
-            CMD Road (beside Secretariat/Magodo gate) Lagos Nigeria
-          </p>
-        </div>
-        <div className="col-lg-4 col-sm-12 col-md-6">
+        <div className="col-lg-5 col-md-12 col-sm-12 ">
+          <div>
+            <h6 className="text-center">ADDRESS</h6>
+            <span className="text-break text-white fw-lighter fs-6 opacity-75">
+              The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate Off
+              CMD Road (beside Secretariat/Magodo gate) Lagos Nigeria
+            </span>
+          </div>
+          {/* Subscribe Section starts */}
           <div className="row">
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 mt-3">
               <input
                 type="text"
                 className="form-control placeholder "
@@ -87,7 +90,8 @@ export const FooterComponents = () => {
               </span>
             </div>
           </div>
-          <div className="row opacity-75">
+          {/* Subscribe Section ends */}
+          <div className="row">
             <h6>Connect With US</h6>
             {/* Social Medial Icon Sectin Starts */}
             <span className="mt-2 mb-5">

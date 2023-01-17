@@ -319,29 +319,29 @@
     }
   }
 
-  .payment-gateway-image {
-    width: 12vw;
-    // height: 165px;
-  }
+  // .payment-gateway-image {
+  //   width: 12vw;
+  //   // height: 165px;
+  // }
 
-  .payment-gateway-card {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    p {
-      color: $placeholderTextColor !important;
-      @include pFont;
-      font-size: 1rem !important;
-    }
-    h2 {
-      @include H3Font;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-    h4 {
-      @include H5Font;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-  }
+  // .payment-gateway-card {
+  //   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  //   p {
+  //     color: $placeholderTextColor !important;
+  //     @include pFont;
+  //     font-size: 1rem !important;
+  //   }
+  //   h2 {
+  //     @include H3Font;
+  //     font-weight: 700;
+  //     letter-spacing: 0.08em;
+  //   }
+  //   h4 {
+  //     @include H5Font;
+  //     font-weight: 700;
+  //     letter-spacing: 0.08em;
+  //   }
+  // }
 
   .buying-selling-card {
     width: 468px;
@@ -574,22 +574,52 @@
   }
 }
 
-
 // FAQ Styles
 .FAQs {
-  --bs-gutter-x: 0;
   color: $pryColorVariant;
+  font-family: "Open Sans" !important;
   .faqs-header {
-   background-color: $pryColor;
+    background-color: $pryColor;
   }
+
   .accordion-button:not(.collapsed) {
     color: unset;
-    background-color:  white;
-} 
+    background-color: white;
+  }
 
-.accordion-button:focus, .accordion-button:not(.collapsed):focus {
-  outline: 0 !important;
-  box-shadow: none;
-  border-color: rgba(0,0,0,.125);
+  .accordion-title,
+  .accordion-body {
+    font-family: "Open Sans";
+    font-weight: 400 !important;
+  }
+
+  .accordion-head {
+    border-bottom: 0.5px dashed rgba(75, 68, 83, 0.1) !important;
+  }
+
+  .accordion-button:focus,
+  .accordion-button:not(.collapsed):focus {
+    outline: 0 !important;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+  }
 }
+
+// Payment Method
+.payment-method-card:hover,
+.payment-method-card:focus {
+  border-color: $pryColor !important;
+  // Neutral resolve coflicts
+  .resolve-card {
+    .nav-pills .nav-link.active {
+      background-color: $pryColor !important;
+      font-weight: 400 !important;
+    }
+
+    .nav-pills .nav-link {
+      background-color: $buttonColor !important;
+      font-weight: 400 !important;
+      color: white;
+    }
+  }
 }

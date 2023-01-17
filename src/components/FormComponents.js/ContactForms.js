@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 //ContactUsForm
 export const ContactUsForm = () => {
@@ -55,7 +55,7 @@ export const ContactUsForm = () => {
             </FloatingLabel>
           </Form.Group>
 
-          <Form.Group className="mt-2 mb-3 fs-6">
+          <Form.Group className="mt-2 mb-3 fs-6 ">
             <Form.Check
               className="checkboxStyle"
               type="checkbox"
@@ -64,7 +64,10 @@ export const ContactUsForm = () => {
           </Form.Group>
 
           <div className="mt-1 d-flex justify-content-center">
-            <GeneralBtn text="Submit" />
+            <GeneralBtn
+              text="Submit"
+              styles="GeneralBtnStyle1 btn all-btn text-white"
+            />
           </div>
         </div>
         {/* Form Here End */}

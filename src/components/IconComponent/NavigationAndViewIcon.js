@@ -2,9 +2,9 @@ export const ScrollUpIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="#006747"
+      width="35"
+      height="35"
+      fill="#FFFFFF"
       class="bi bi-arrow-up-square"
       viewBox="0 0 16 16"
     >

@@ -1,5 +1,4 @@
 import React from "react";
-import { Accordion, Container } from "react-bootstrap";
 import { ContactUsForm } from "../FormComponents.js/ContactForms";
 
 // ContactUsCard
@@ -30,44 +29,10 @@ export const ContactUsCard = () => {
             </span>
           </div>
         </div>
-        <div className="col-md-6 col-sm-12 mt-sm-3">
+        <div className="col-md-6 col-sm-12 mt-sm-3 mt-xs-4">
           <ContactUsForm />
         </div>
       </div>
     </div>
-  );
-};
-
-// FAQsCard
-export const FAQsCard = () => {
-  return (
-    <>
-      <Accordion className="col-lg-3">
-        <div className="text-center p-3 fw-bold text-dark bg-success text-white">
-          Managed Services
-        </div>
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>Accordion Item #1</Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Accordion Item #2</Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="2">
-          <Accordion.Header>Accordion Item #3</Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-    </>
   );
 };

@@ -136,14 +136,12 @@ input[type="color"]:focus,
   font-size: 1.125rem !important;
 }
 
-.escrow-input-field,
 .bank-transfer-input-field {
   width: 90% !important;
   margin: 0 15px;
 }
-
 .escrow-price-field {
-  width: 78% !important;
+  // width: 78% !important;
   //   margin: 0 15px
   border-radius: 5px 0 0 5px !important;
 }
@@ -166,10 +164,8 @@ input[type="color"]:focus,
 }
 
 .ngn2 {
-  border: 1px solid none;
+  border-color: $pryColor !important;
   background-color: $pryColor !important;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0 5px 5px 0;
   color: $secColor !important;
 }
 
@@ -266,4 +262,22 @@ input[type="color"]:focus,
 
 .colorStyle h5 {
   color: red !important;
+}
+
+// Initiate Escrow
+.escrow-dropdown-field,
+.escrow-dropdown-field:focus,
+.escrow-dropdown-field:hover {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: 300 !important;
+}
+// Contest Page styles
+.contestPage {
+  .row {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
