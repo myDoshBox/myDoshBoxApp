@@ -11,7 +11,7 @@ import {
 import doshlogo from "../../images/doshlogolight.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 
 const NeutralsSideNav = () => {
   return (
@@ -34,6 +34,8 @@ const SmallShowExample = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  let activeClassName = "active-link";
+  let baseClassName = "text-decoration-none text-white";
 
   return (
     <>
@@ -111,7 +113,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <SettingsIcon />
                 </div>
-                <span>Settings</span>
+                <NavLink
+                  to="neutralsetting"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Settings</span>
+                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">
@@ -134,6 +143,8 @@ const BigShowExample = ({ name, ...props }) => {
 
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  let activeClassName = "active-link";
+  let baseClassName = "text-decoration-none text-white";
 
   return (
     <>
@@ -188,7 +199,17 @@ const BigShowExample = ({ name, ...props }) => {
                       title={`Conflicts`}
                       className="SideNavDropdown"
                     >
-                      <Dropdown.Item eventKey="1">Open Conflicts</Dropdown.Item>
+                      <Dropdown.Item eventKey="1">
+                        <NavLink
+                          to="closeconflict"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Open Conflicts
+                        </NavLink>
+                      </Dropdown.Item>
                       <Dropdown.Item eventKey="2">
                         Ongoing Conflicts
                       </Dropdown.Item>
@@ -209,7 +230,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <SettingsIcon />
                 </div>
-                <span>Settings</span>
+                <NavLink
+                  to="neutralsetting"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Settings</span>
+                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">

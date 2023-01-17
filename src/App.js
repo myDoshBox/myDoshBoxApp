@@ -25,6 +25,11 @@ import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 // import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
 
+// Neutral Pages
+import { CloseConflict } from "./pages/DASHBOARDS/NEUTRALS_PAGES/CloseConflict";
+import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
+import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
+
 function App() {
   return (
     <Router>
@@ -46,11 +51,17 @@ function App() {
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="closeconflict" element={<CloseConflict />} />
+          <Route path="neutralsetting" element={<NeutralSetting />} />
+          <Route
+            path="neutralviewtransaction"
+            element={<NeutralViewTransaction />}
+          />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
