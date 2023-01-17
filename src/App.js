@@ -23,8 +23,8 @@ import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 
 // Neutral Pages
 import { CloseConflict } from "./pages/NEUTRALS_PAGES/CloseConflict";
-import { NeutralSetting } from "./pages/NEUTRALS_PAGES/CloseConflict";
-import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/CloseConflict";
+import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
+import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/NeutralViewTransaction";
 
 function App() {
   return (
@@ -45,10 +45,10 @@ function App() {
 
         <Route path="neutraldashboard" element={<NeutralsSidenav />}>
           <Route path="aboutus" element={<AboutUs />} />
-          <Route path="closeconflict" element={<CloseConflict />} />
-          <Route path="neutralsetting" element={<NeutralSetting />} />
+          <Route path="CloseConflict" element={<CloseConflict />} />
+          <Route path="NeutralSetting" element={<NeutralSetting />} />
           <Route
-            path="neutralviewtransaction"
+            path="NeutralViewTransaction"
             element={<NeutralViewTransaction />}
           />
         </Route>
