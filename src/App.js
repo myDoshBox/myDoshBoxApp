@@ -1,13 +1,13 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	Navigate,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
 } from "react-router-dom";
 import {
-	NeutralsSidenav,
-	UserSidenav,
+  NeutralsSidenav,
+  UserSidenav,
 } from "./components/NavbarComponents/SideNavbar";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
@@ -21,32 +21,43 @@ import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 // import UsersDashboardRoutes from "./pages/ROUTES/UsersDashboardRoutes";
 
+// Neutral Pages
+import { CloseConflict } from "./pages/NEUTRALS_PAGES/CloseConflict";
+import { NeutralSetting } from "./pages/NEUTRALS_PAGES/CloseConflict";
+import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/CloseConflict";
+
 function App() {
-	return (
-		<Router>
-			<Routes>
-				{/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
-				<Route element={<GuestNavbar />}>
-					<Route path="/" element={<Homepage />} />
-					<Route path="/aboutus" element={<AboutUs />} />
-					<Route path="/contactus" element={<ContactUs />} />
-					<Route path="/pricingpage" element={<PricingPage />} />
-					<Route path="/faqs" element={<FAQs />} />
-				</Route>
+  return (
+    <Router>
+      <Routes>
+        {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
+        <Route element={<GuestNavbar />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/pricingpage" element={<PricingPage />} />
+          <Route path="/faqs" element={<FAQs />} />
+        </Route>
 
-				<Route path="userdashboard" element={<UsersSideNav />}>
-					<Route path="aboutus" element={<AboutUs />} />
-				</Route>
+        <Route path="userdashboard" element={<UsersSideNav />}>
+          <Route path="aboutus" element={<AboutUs />} />
+        </Route>
 
-				<Route path="neutraldashboard" element={<NeutralsSidenav />}>
-					<Route path="aboutus" element={<AboutUs />} />
-				</Route>
-				{/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-				<Route path="*" element={<Error404 />} />
-			</Routes>
-			<Footer />
-		</Router>
-	);
+        <Route path="neutraldashboard" element={<NeutralsSidenav />}>
+          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="closeconflict" element={<CloseConflict />} />
+          <Route path="neutralsetting" element={<NeutralSetting />} />
+          <Route
+            path="neutralviewtransaction"
+            element={<NeutralViewTransaction />}
+          />
+        </Route>
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
