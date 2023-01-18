@@ -1,6 +1,6 @@
 import React from "react";
 import { MiniProfileCard } from "../../components/CardComponents/UsersCards";
-import { UserDashboardCards } from "../../components/CardComponents/UsersCards";
+import { UserDashboardCard2 } from "../../components/CardComponents/UsersCards";
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
@@ -28,44 +28,43 @@ const UserDashboardPage = () => {
 const UserDashboard = () => {
   return (
     <div className="row pt-5">
-      <div className="col-md-4 d-none d-md-block">
+      <div className="col-md-5 d-none d-md-block">
         <MiniProfileCard />
       </div>
-      <div className="col-md-8 col-sm-12">
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
-            <UserDashboardCards
+      <div className="col-lg-7 col-sm-12 row">
+        <div className="col-12 row">
+          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6 mt-4 mt-lg-0">
+            <UserDashboardCard2
+              icon={<InitiateTransactionIcon />}
               text={`Initiate
 Transaction`}
-              icon={<InitiateTransactionIcon />}
             />
           </div>
-          <div className="col-md-6 col-sm-12">
-            <UserDashboardCards
+          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+            <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
             />
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
-            <UserDashboardCards
-              text={`Initiate
-Transaction`}
+        <div className="col-12 row">
+          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+            <UserDashboardCard2
+              text={`Initiate Transaction`}
               icon={<InitiateTransactionIcon />}
             />
           </div>
-          <div className="col-md-6 col-sm-12">
-            <UserDashboardCards
+          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+            <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
             />
           </div>
         </div>
-        {/* <div className="col-12 w-75 mx-auto d-none d-md-block">
+        {/* <div className="col-12 w-100 mx-auto d-md-none">
           <LearnMoreCard />
-        </div> */}
-        {/* <div className="col-12 w-100 d-md-none .d-lg-block">
+        </div>
+        <div className="col-12 w-100 d-none d-md-block">
           <LearnMoreCard />
         </div> */}
       </div>

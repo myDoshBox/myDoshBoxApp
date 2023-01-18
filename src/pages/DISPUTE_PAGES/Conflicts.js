@@ -5,7 +5,7 @@ import { AllConflictsTable } from "../../components/TableComponents/ConflictsTab
 export const OpenConflicts = () => {
   return (
     <div className="d-flex w-100">
-        <NeutralsSideNav />
+      {/* <NeutralsSideNav /> */}
 
       <AllConflictsTable conflictType="open" />
     </div>
@@ -15,7 +15,7 @@ export const OpenConflicts = () => {
 export const ClosedConflicts = () => {
   return (
     <div className="d-flex w-100">
-        <NeutralsSideNav />
+      {/* <NeutralsSideNav /> */}
 
       <AllConflictsTable conflictType="closed" />
     </div>
@@ -25,7 +25,7 @@ export const ClosedConflicts = () => {
 export const OngoingConflicts = () => {
   return (
     <div className="d-flex w-100">
-        <NeutralsSideNav />
+      {/* <NeutralsSideNav /> */}
 
       <AllConflictsTable conflictType="ongoing" />
     </div>

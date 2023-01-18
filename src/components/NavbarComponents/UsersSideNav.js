@@ -12,7 +12,7 @@ import {
   UsersIcon,
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.png";
-import { Link, Outlet, NavLink } from "react-router-dom";
+import { Link, Outlet, NavLink, useNavigate } from "react-router-dom";
 
 const UsersSideNav = () => {
   return (
@@ -37,6 +37,11 @@ const SmallShowExample = ({ name, ...props }) => {
   const toggleShow = () => setShow((s) => !s);
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  const navigate = useNavigate();
+
+  const nav = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -67,7 +72,9 @@ const SmallShowExample = ({ name, ...props }) => {
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <img src={doshlogo} alt="logo" />
+            <Link to={"/"}>
+              <img src={doshlogo} alt="logo" />
+            </Link>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
@@ -151,7 +158,15 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <LogoutIcon />
                 </div>
-                <span>Logout</span>
+                <li
+                  className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
+                  onClick={nav}
+                >
+                  <div className="me-3">
+                    <LogoutIcon />
+                  </div>
+                  <span>Logout</span>
+                </li>
               </li>
             </ul>
           </div>
@@ -161,146 +176,117 @@ const SmallShowExample = ({ name, ...props }) => {
   );
 };
 
-const BigShowExample = ({ name, ...props }) => {
-  const [show, setShow] = useState(true);
-
-  const handleClose = () => setShow(false);
-  const toggleShow = () => setShow((s) => !s);
+const BigShow = ({ name, ...props }) => {
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
 
+  const navigate = useNavigate();
+
+  const nav = () => {
+    navigate("/");
+  };
+
   return (
     <>
-      <Button
-        onClick={toggleShow}
-        className="me-2 bg-white border-0 d-none d-lg-block position-fixed start-0 top-0"
-      >
-        <svg
-          width="30"
-          height="20"
-          viewBox="0 0 30 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 8.33333H22.5V11.6667H0V8.33333ZM0 0H30V3.33333H0V0ZM0 20H13.5656V16.6667H0V20Z"
-            fill="#006747"
-          />
-        </svg>
-      </Button>
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        {...props}
-        className="d-none d-lg-block"
-      >
-        <Offcanvas.Header>
-          <Offcanvas.Title>
-            <img src={doshlogo} alt="logo" />
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <div className="d-flex justify-content-between flex-column">
-            <ul className="ps-2">
-              <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <DashboardIcon />
-                </div>
-                <NavLink
-                  to="userdashboardpage"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <span>Dashboard</span>
-                </NavLink>
-              </li>
-              <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <NavTransactionIcon />
-                </div>
-                <NavLink
-                  to="usertransaction"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <span>Transactions</span>
-                </NavLink>
-              </li>
+      <div className="d-none d-lg-block big-side-nav">
+        <Link to="/">
+          <img src={doshlogo} alt="logo" className="mb-5" />
+        </Link>
 
-              <li className="d-flex align-items-center SideNavItem mb-4">
-                <div className="me-3">
-                  <ChatIcon />
-                </div>
-                <span className="my-1">Chats</span>
-              </li>
-              <li className="d-flex align-items-center SideNavItem mb-4">
-                <div className="me-3">
-                  <NotificationIcon />
-                </div>
-                <NavLink
-                  to="notification"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <span>Notifications</span>
-                </NavLink>
-              </li>
+        <div className="d-flex justify-content-between flex-column">
+          <ul className="ps-2">
+            <li className="d-flex mb-4 align-items-center SideNavItem">
+              <div className="me-3">
+                <DashboardIcon />
+              </div>
+              <NavLink
+                to="userdashboardpage"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Dashboard</span>
+              </NavLink>
+            </li>
+            <li className="d-flex mb-4 align-items-center SideNavItem">
+              <div className="me-3">
+                <NavTransactionIcon />
+              </div>
+              <NavLink
+                to="usertransaction"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Transactions</span>
+              </NavLink>
+            </li>
 
-              <li className="d-flex  align-items-center SideNavItem mb-4">
-                <div className="me-3">
-                  <DisputeIcon />
-                </div>
-                <NavLink
-                  to="userdispute"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <span>Disputes</span>
-                </NavLink>
-              </li>
+            <li className="d-flex align-items-center SideNavItem mb-4">
+              <div className="me-3">
+                <ChatIcon />
+              </div>
+              <span className="my-1">Chats</span>
+            </li>
+            <li className="d-flex align-items-center SideNavItem mb-4">
+              <div className="me-3">
+                <NotificationIcon />
+              </div>
+              <NavLink
+                to="notification"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Notifications</span>
+              </NavLink>
+            </li>
 
-              <li className="d-flex align-items-center SideNavItem mb-5">
-                <div className="me-3">
-                  <SettingsIcon />
-                </div>
-                <NavLink
-                  to="usersettings"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <span>Settings</span>
-                </NavLink>
-              </li>
-            </ul>
-            <ul className="ps-3">
-              <li className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed">
-                <div className="me-3">
-                  <LogoutIcon />
-                </div>
-                <span>Logout</span>
-              </li>
-            </ul>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
+            <li className="d-flex  align-items-center SideNavItem mb-4">
+              <div className="me-3">
+                <DisputeIcon />
+              </div>
+              <NavLink
+                to="userdispute"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Disputes</span>
+              </NavLink>
+            </li>
+
+            <li className="d-flex align-items-center SideNavItem mb-5">
+              <div className="me-3">
+                <SettingsIcon />
+              </div>
+              <NavLink
+                to="usersettings"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Settings</span>
+              </NavLink>
+            </li>
+          </ul>
+          <ul className="ps-3">
+            <li
+              className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
+              onClick={nav}
+            >
+              <div className="me-3">
+                <LogoutIcon />
+              </div>
+              <span>Logout</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 };
 
-const BigShow = () => {
-  return (
-    <>
-      {options.map((props, idx) => (
-        <BigShowExample key={idx} {...props} />
-      ))}
-    </>
-  );
-};
 const SmallShow = () => {
   return (
     <>

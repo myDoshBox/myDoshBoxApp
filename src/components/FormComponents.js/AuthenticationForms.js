@@ -3,11 +3,10 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { useState, useEffect } from "react";
 import { GoogleButton } from "../ButtonsComponent/Button";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
+import { useNavigate } from "react-router-dom";
 
 export const SignUpIndividual = () => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
     email: "",
     phoneNumber: "",
     password: "",
@@ -28,12 +27,16 @@ export const SignUpIndividual = () => {
     setPerson({ ...person, [name]: value });
   };
 
+  const navigate = useNavigate();
+
+  const nav = () => {
+    navigate("/userdashboard/userdashboardpage");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
       person.password !== person.confirmPassword &&
-      !person.firstName &&
-      !person.lastName &&
       !person.email &&
       !person.phoneNumber &&
       !person.password &&
@@ -58,12 +61,7 @@ export const SignUpIndividual = () => {
   }, [errors]);
   const validate = () => {
     const errors = {};
-    if (!person.firstName) {
-      errors.firstName = "First Name is Required";
-    }
-    if (!person.lastName) {
-      errors.lastName = "Last Name is Required";
-    }
+
     if (!person.email) {
       errors.email = "Email is required";
     } else if (
@@ -110,46 +108,6 @@ export const SignUpIndividual = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className="container form">
-        <div className="form-outline mb-2">
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={person.firstName}
-            onChange={handleChange}
-            className="border rounded p-2 w-100 labelStyle mb-1"
-            placeholder="First Name"
-          />
-          {errors.firstName && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
-              {errors.firstName}
-            </div>
-          )}
-        </div>
-
-        <div className="form-outline mb-2">
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={person.lastName}
-            onChange={handleChange}
-            className="border rounded p-2 w-100 labelStyle mb-1"
-            placeholder="Last Name"
-          />
-          {errors.lastName && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
-              {errors.lastName}
-            </div>
-          )}
-        </div>
-
         <div className="form-outline mb-2">
           <input
             type="email"
@@ -268,6 +226,7 @@ export const SignUpIndividual = () => {
               type="submit"
               className="GeneralBtnStyle1 btn all-btn text-white"
               style={{ width: "210px" }}
+              onClick={nav}
             >
               Sign Up
             </button>
@@ -285,8 +244,6 @@ export const SignUpOrganization = () => {
   const initialValues = {
     organizationName: "",
     organizationEmail: "",
-    contactFirstName: "",
-    contactLastName: "",
     contactEmail: "",
     password2: "",
     confirmPassword2: "",
@@ -321,8 +278,6 @@ export const SignUpOrganization = () => {
       organization.password2 !== organization.confirmPassword2 &&
       !organization.organizationName &&
       !organization.organizationEmail &&
-      !organization.contactFirstName &&
-      !organization.contactLastName &&
       !organization.contactEmail &&
       !organization.password2 &&
       !organization.confirmPassword2 &&
@@ -359,12 +314,7 @@ export const SignUpOrganization = () => {
     ) {
       errors.organizationEmail = "Email is not valid";
     }
-    if (!organization.contactFirstName) {
-      errors.contactFirstName = "Contact person last name is required";
-    }
-    if (!organization.contactLastName) {
-      errors.contactLastName = "Contact person last name is required";
-    }
+
     if (!organization.contactEmail) {
       errors.contactEmail = "Contact person email is Required";
     } else if (
@@ -436,45 +386,6 @@ export const SignUpOrganization = () => {
         </div>
 
         <h6>Contact Person Information</h6>
-        <div className="form-outline mb-2">
-          <input
-            type="text"
-            id="contactFirstName"
-            name="contactFirstName"
-            value={organization.contactFirstName}
-            onChange={handleChange}
-            className="border rounded p-2 w-100 labelStyle mb-1"
-            placeholder="First Name"
-          />
-          {errors.contactFirstName && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
-              {errors.contactFirstName}
-            </div>
-          )}
-        </div>
-
-        <div className="form-outline mb-2">
-          <input
-            type="text"
-            id="contactLastName"
-            name="contactLastName"
-            value={organization.contactLastName}
-            onChange={handleChange}
-            className="border rounded p-2 w-100 labelStyle mb-1"
-            placeholder="Last Name"
-          />
-          {errors.contactLastName && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
-              {errors.contactLastName}
-            </div>
-          )}
-        </div>
 
         <div className="form-outline mb-4">
           <input

@@ -15,6 +15,7 @@ import {
 } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -22,6 +23,7 @@ import Avatar from "../../images/Avatar.jpg";
 import Table from "react-bootstrap/Table";
 //All Image Import Ends
 import { PaginationBar } from "../PaginationComponent";
+import { Link } from "react-router-dom";
 
 // AnalyticsNewUsersCard
 export const AnalyticsNewUsersCard = () => {
@@ -102,19 +104,36 @@ export const UserTransactionsCard = () => {
 };
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
-export const UserDashboardCards = ({ icon, text }) => {
+export const UserDashboardCard = (props) => {
+  const { text, icon, link } = props;
   return (
-    <div
-      className="card shadow  border-0 rounded-2 mx-auto mb-5"
-      style={{ width: "100%" }}
-    >
-      <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="col-3">{icon}</div>
-        <span className="mt-4">
-          <p className="col-9">{text}</p>
-        </span>
+    <Link to={link} className="text-decoration-none text-dark">
+      <div
+        className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
+        style={{ width: "100%", height: "80%" }}
+      >
+        <div className="row justify-content-center align-items-center mx-auto">
+          <div className="col-2">{icon}</div>
+          <div className="col-10">{text}</div>
+        </div>
       </div>
-    </div>
+    </Link>
+  );
+};
+export const UserDashboardCard2 = (props) => {
+  const { text, icon, link } = props;
+  return (
+    <Link to={link} className="text-decoration-none text-dark">
+      <div
+        className="card shadow mx-auto border-0 rounded-2 py-4 pt-5 px-2"
+        style={{ width: "100%", height: "9rem" }}
+      >
+        <div className="row justify-content-center align-items-center mx-auto">
+          <div className="col-2">{icon}</div>
+          <div className="col-10">{text}</div>
+        </div>
+      </div>
+    </Link>
   );
 };
 
@@ -138,45 +157,44 @@ export const UserDashboardCardsTwo = ({ icon, text }) => {
 export const MiniProfileCard = () => {
   return (
     <>
-      <div class="card shadow" style={{ width: "100%" }}>
-        <div class="card-body">
-          <div className="d-flex flex-column ">
-            <div className="d-flex justify-content-center">
-              <img src={Avatar} className="img-fluid" alt=" User Image" />
-              <span className="d-flex align-items-end">
-                <CameraIcon />
-              </span>
-            </div>
-            <span className="text-center">
-              <h5 className="mt-2 fw-bold">Olasunkanmi Idris</h5>
-              <p>+234 801 234 5678</p>
-              <p>sunkanmidris@gmail.com</p>
+      <div
+        className="card shadow border-0 rounded-2 p-3 mx-auto"
+        style={{ width: "90%" }}
+      >
+        <div className="d-flex flex-column ">
+          <div className="d-flex justify-content-center">
+            <img src={Avatar} className="img-fluid mx-auto" alt=" User Image" />
+            <span className="d-flex align-items-end">
+              {/* <CameraIcon /> */}
             </span>
           </div>
-          {/* The Line starts */}
-          <hr></hr>
-          {/* The Line Ends */}
-          <div className="d-flex ">
-            <div>{/* <CompletedDealsIcon width="30" /> */}</div>
-            <p className="ms-lg-1">100 deals completed</p>
-          </div>
-          {/* Start Rating Starts */}
-          <div className=" d-flex">
-            <span>
-              <RatingIcon />
-              <RatingIcon />
-              <RatingIcon />
-              <RatingIcon />
-              <RatingIcon />
-            </span>
-            <p> 0.0 rating </p>
-          </div>
-          {/* Start Rating Ends */}
-
-          {/* The Line starts */}
-          <hr></hr>
-          {/* The Line Ends */}
-          <div className="text-end ">{/* <EditProfileButton /> */}</div>
+          <span className="text-center">
+            <h5 className="mt-2 fw-lighter">Olasunkanmi Idris</h5>
+            <p>+234 801 234 5678</p>
+            <p>sunkanmidris@gmail.com</p>
+          </span>
+        </div>
+        <hr></hr>
+        <div className="d-flex px-3">
+          <div>{/* <CompletedDealsIcon width="30" /> */}</div>
+          <p className="ms-lg-1">100 deals completed</p>
+        </div>
+        <div className="d-flex px-3 ">
+          <span>
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+          </span>
+          <p className="mx-2"> 0.0 rating </p>
+        </div>
+        <hr></hr>
+        <div className="text-end pe-2 py-3">
+          <GeneralBtn
+            text="Edit Profile"
+            styles="GeneralBtnStyle1 btn all-btn text-white"
+          />
         </div>
       </div>
     </>
