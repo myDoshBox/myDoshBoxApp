@@ -34,7 +34,7 @@ const NavBar = () => {
 const HeroSection = () => {
   return (
     <div className="container d-flex justify-content-center pb-5">
-      <div className="row">
+      <div className="row" id="BackTop">
         <div className="col-md-12 col-sm-12 text-center">
           <h1>
             Lorem ipsum usumm <br /> hums ipsumsera

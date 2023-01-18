@@ -1,13 +1,13 @@
-import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
+import TicketData from "../../data/TicketData.json";
 // import pop from "../../images/pop.PNG";
 // import brokenScreen1 from "../../images/brokenScreen1.png";
 // import brokenScreen2 from "../../images/brokenScreen2.png";
 // import brokenScreen3 from "../../images/brokenScreen3.png";
 
 // For Generated Ticket Card
-export const TicketCards = (props) => {
+export const GeneratedTicketCard = (props) => {
   const {
     tell,
     transaction_id,
@@ -137,7 +137,6 @@ export const OtherTicket = (props) => {
     Futher_info,
     btn1,
     btn2,
-    btn3,
   } = props;
   return (
     <section>

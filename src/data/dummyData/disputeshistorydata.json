@@ -1,0 +1,28 @@
+{
+  "disputes_data": [
+    {
+      "id": 1,
+      "date": "Aug 30",
+      "transaction_id": "32422524",
+      "status": " Resolved"
+    },
+    {
+      "id": 2,
+      "date": "Aug 30",
+      "transaction_id": "32422524",
+      "status": " Ongoing"
+    },
+    {
+      "id": 3,
+      "date": "Aug 30",
+      "transaction_id": "32422524",
+      "status": " Resolved"
+    },
+    {
+      "id": 4,
+      "date": "Aug 30",
+      "transaction_id": "32422524",
+      "status": " Ongoing"
+    }
+  ]
+}

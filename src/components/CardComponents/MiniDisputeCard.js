@@ -29,7 +29,7 @@ export const MiniDisputeCard = () => {
               TransactionID: <span className="textStyle">2376490</span>
             </p>
             <p className="colorTextStyle">
-              Status: <span>Ongoing</span>{" "}
+              Status: <span>Ongoing</span>
             </p>
           </div>
 

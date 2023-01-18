@@ -76,11 +76,6 @@
   width: 250px !important;
 }
 
-.SideNav {
-  background-color: #006747 !important;
-  color: $secColor !important;
-}
-
 .bottom {
   bottom: 10% !important;
 }
@@ -95,20 +90,14 @@
   cursor: pointer !important;
   font-weight: 400;
 }
-.hoverBlock {
-  border: 3px solid $secColor;
-  border-radius: 0.3rem;
-  position: absolute !important;
-  height: 2rem !important;
-  transform: translate(200px, 0px);
-  display: none;
-}
-.SideNavItem:hover,
-:focus {
-  font-weight: 700 !important;
-  .hoverBlock {
-    display: block;
-  }
+
+.active-link {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px 8px 8px 0;
+  padding: 5px;
+  color: $pryColor !important;
+  background-color: white;
 }
 .SideNavDropdown button {
   background-color: unset !important;

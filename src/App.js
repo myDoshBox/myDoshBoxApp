@@ -20,29 +20,44 @@ import { Footer } from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 import UserDashboardPage from "./pages/DASHBOARDS/UserDashboardPage";
 // import FAQs from "./pages/GENERAL_PAGES/FAQs";
+import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
+import UserSettingsPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
+import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
+
+// Neutral Pages
+import { CloseConflict } from "./pages/DASHBOARDS/NEUTRALS_PAGES/CloseConflict";
+import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
+import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
 
 function App() {
   return (
     <Router>
-      <UserDashboardPage />
-
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
-          {/* <Route path="/" element={<Homepage />} /> */}
-          {/* <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
-          <Route path="/faqs" element={<FAQs />} /> */}
+          <Route path="/faqs" element={<FAQs />} />
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="usersettings" element={<UserSettingsPage />} />
+          <Route path="usertransaction" element={<UserTransactionHistory />} />
+          <Route path="userdispute" element={<UserDisputeHistory />} />
         </Route>
 
-        <Route path="neutraldashboard" element={<NeutralsSidenav />}>
+        <Route path="neutraldashboard" element={<NeutralsSideNav />}>
           <Route path="aboutus" element={<AboutUs />} />
+          <Route path="closeconflict" element={<CloseConflict />} />
+          <Route path="neutralsetting" element={<NeutralSetting />} />
+          <Route
+            path="neutralviewtransaction"
+            element={<NeutralViewTransaction />}
+          />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />

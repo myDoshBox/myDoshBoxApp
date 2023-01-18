@@ -12,16 +12,17 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
+import { useState } from "react";
 
 const NeutralsResolveConflict = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-lg-4 col-sm-12">
+        <div className="col-lg-3 col-sm-12">
           <UsersSideNav />
         </div>
 
-        <div className="col-lg-8 col-sm-12">
+        <div className="col-lg-9 col-sm-12">
           <NeutralsResolveConflictCard />
         </div>
       </div>
@@ -30,9 +31,14 @@ const NeutralsResolveConflict = () => {
 };
 
 const NeutralsResolveConflictCard = () => {
+  const [comment, setComment] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setComment("");
+  };
   return (
     <section className="container mt-5">
-      <div className="card resolve-card px-3 px-md-4 px-lg-5 py-2 py-md-3 py-lg-4">
+      <div className="card resolve-card px-3 px-md-4 px-lg-5 py-2 py-md-3 py-lg-4 shadow border-0">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
             <Col sm={12}>
@@ -59,26 +65,31 @@ const NeutralsResolveConflictCard = () => {
         </Tab.Container>
       </div>
       <Col sm={12}>
-        <textarea
-          class="form-control mx-auto my-4"
-          placeholder="Leave a Message here"
-          id="floatingTextarea2"
-          style={{ height: "10rem", width: "100%" }}
-        ></textarea>
-        <div className="row mt-5">
-          <div className="col-md-6 col-sm-12 mb-2 text-center text-md-end">
-            <GeneralBtn
-              text="Sellers Fault"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
+        <form onSubmit={handleSubmit}>
+          <textarea
+            class="form-control mx-auto my-4"
+            placeholder="Leave a Message here"
+            id="comment"
+            name="comment"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            style={{ height: "10rem", width: "100%" }}
+          ></textarea>
+          <div className="row mt-5">
+            <div className="col-md-6 col-sm-12 mb-2 text-center text-md-end">
+              <GeneralBtn
+                text="Sellers Fault"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+              />
+            </div>
+            <div className="col-md-6 col-sm-12 text-center text-sm-start">
+              <GeneralBtn
+                text="Buyers Fault"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+              />
+            </div>
           </div>
-          <div className="col-md-6 col-sm-12 text-center text-sm-start">
-            <GeneralBtn
-              text="Buyers Fault"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
-          </div>
-        </div>
+        </form>
       </Col>
     </section>
   );

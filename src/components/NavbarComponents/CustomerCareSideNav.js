@@ -11,7 +11,7 @@ import {
   UsersIcon,
   TicketsIcon,
 } from "../IconComponent/SideNavIcons";
-import doshlogo from "../../images/doshlogolight.jpg";
+import doshlogo from "../../images/doshlogolight.png";
 
 const CustomerCareSideNav = () => {
   return (
