@@ -18,7 +18,7 @@ import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
 import { Footer } from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
-import UserDashboardPage from "./pages/DASHBOARDS/UserDashboardPage";
+import UserDashboardPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserDashboardPage";
 // import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
 import UserSettingsPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";

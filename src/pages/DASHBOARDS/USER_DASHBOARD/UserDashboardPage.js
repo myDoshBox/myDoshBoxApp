@@ -1,16 +1,16 @@
 import React from "react";
-import { MiniProfileCard } from "../../components/CardComponents/UsersCards";
-import { UserDashboardCards } from "../../components/CardComponents/UsersCards";
+import { MiniProfileCard } from "../../../components/CardComponents/UsersCards";
+import { UserDashboardCards } from "../../../components/CardComponents/UsersCards";
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
   CustomerCareIcon,
   InitiateDisputeIcon,
-} from "../../components/IconComponent/UserdashboardIcons";
-import { LearnMoreCard } from "../../components/CardComponents/InfoCards";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import { MiniDisputesCard } from "../../components/CardComponents/ConflictIssuesCards";
-import { AllConflictsTable } from "../../components/TableComponents/ConflictsTable";
+} from "../../../components/IconComponent/UserdashboardIcons";
+import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";
+import UsersSideNav from "../../../components/NavbarComponents/UsersSideNav";
+import { MiniDisputesCard } from "../../../components/CardComponents/ConflictIssuesCards";
+import { AllConflictsTable } from "../../../components/TableComponents/ConflictsTable";
 
 const UserDashboardPage = () => {
   return (
