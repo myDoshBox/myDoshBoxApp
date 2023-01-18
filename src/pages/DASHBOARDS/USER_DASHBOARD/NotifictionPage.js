@@ -1,9 +1,9 @@
 import React from "react";
-import { NotificationCard } from "../../components/TableComponents/TransactionTable";
-import usersData from "../../data/usersData.json";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import { FilterButton } from "../../components/ButtonsComponent/MiscBtns";
-import { PaginationBar } from "../../components/PaginationComponent";
+import { NotificationCard } from "../../../components/TableComponents/TransactionTable";
+import usersData from "../../../data/usersData.json";
+import UsersSideNav from "../../../components/NavbarComponents/UsersSideNav";
+import { FilterButton } from "../../../components/ButtonsComponent/MiscBtns";
+import { PaginationBar } from "../../../components/PaginationComponent";
 
 const NotifictionPage = () => {
   return (
