@@ -9,7 +9,7 @@ import {
   WhyChooseUsCard,
 } from "../../components/CardComponents/HomepageCards";
 import homepageData from "../../data/homepageData.json";
-
+import { Link, Outlet } from "react-router-dom";
 const Homepage = () => {
   return (
     <div>
@@ -42,10 +42,12 @@ const HeroSection = () => {
           <p>Lorem ipsum dolor sitamet dolor</p>
         </div>
         <div className="text-center">
-          <GeneralBtn
-            text={`START A TRANSACTION`}
-            styles={`GeneralBtnStyle1 btn all-btn text-white`}
-          />
+          <Link to="/">
+            <GeneralBtn
+              text={`START A TRANSACTION`}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
+          </Link>
         </div>
         <div className="mt-4">
           <img src={HeroImage} alt={`Hero Section Image`} className="mx-auto" />
