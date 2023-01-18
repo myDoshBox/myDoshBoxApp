@@ -1,6 +1,6 @@
+@use "./color" as *;
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Open+Sans&family=Roboto:wght@500&display=swap");
-@use "./color" as *;
 
 @mixin H1Font {
   font-family: "Roboto", sans-serif;

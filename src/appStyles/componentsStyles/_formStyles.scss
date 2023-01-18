@@ -16,21 +16,6 @@ $inputFieldColor: rgba(75, 68, 83, 0.8);
   color: $placeholderTextColor !important;
 }
 
-// Contact Us Form Styles Ends//
-
-// .Email,
-// .Password {
-//   @include H5Font;
-//   color: $inputFieldColor;
-//   font-size: 1rem !important;
-//   font-weight: 700;
-// }
-
-// .Email input::placeholder,
-// .Password input::placeholder {
-//   color: $placeholderTextColor !important;
-// }
-
 .AccountNum,
 .AccountName,
 .BankName {
@@ -136,10 +121,6 @@ input[type="color"]:focus,
   font-size: 1.125rem !important;
 }
 
-.bank-transfer-input-field {
-  width: 90% !important;
-  margin: 0 15px;
-}
 .escrow-price-field {
   // width: 78% !important;
   //   margin: 0 15px
@@ -148,12 +129,6 @@ input[type="color"]:focus,
 
 .price-field {
   transform: translateX(12px);
-}
-.total-input {
-  width: 38% !important;
-  background-color: $pryColor !important;
-  color: $secColor !important;
-  border-radius: 0 5px 5px 0 !important;
 }
 
 .ngn {
@@ -183,11 +158,6 @@ input[type="color"]:focus,
 
 .form-check-label {
   color: $placeholderTextColor !important;
-}
-
-.confirm-delivery-head {
-  @include H4Font;
-  font-weight: 500 !important;
 }
 
 .confirm-delivery-pText {
@@ -236,28 +206,6 @@ input[type="color"]:focus,
 
 .labelStyle::placeholder {
   color: #8cbbac !important;
-}
-
-.titleStyle {
-  @include H1Font;
-  color: $pryColor !important;
-}
-
-.contactStyle {
-  border: 2px solid $pryColor;
-  border-radius: 15px;
-  padding: 50px 15px;
-
-  hr {
-    color: $pryColor;
-  }
-  a:link {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    color: black;
-  }
 }
 
 .colorStyle h5 {

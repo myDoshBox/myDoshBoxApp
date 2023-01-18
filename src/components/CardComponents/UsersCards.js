@@ -244,7 +244,7 @@ export const MiniUsersCard = () => {
 export const AllUsersCard = () => {
   return (
     <div className="col-lg-9 shadow rounded-1">
-      <aside className="NotificationCardHeader d-flex justify-content-end">
+      <aside className="d-flex justify-content-end">
         <FilterButton />
       </aside>
       <table class="table table-hover">

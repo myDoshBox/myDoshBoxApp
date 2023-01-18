@@ -18,19 +18,23 @@ import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
 import { Footer } from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
+import UserDashboardPage from "./pages/DASHBOARDS/UserDashboardPage";
+// import FAQs from "./pages/GENERAL_PAGES/FAQs";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 function App() {
   return (
     <Router>
+      <UserDashboardPage />
+
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
           {/* <Route path="/" element={<Homepage />} /> */}
-          <Route path="/aboutus" element={<AboutUs />} />
+          {/* <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
-          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/faqs" element={<FAQs />} /> */}
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>

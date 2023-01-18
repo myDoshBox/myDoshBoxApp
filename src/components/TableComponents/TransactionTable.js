@@ -6,43 +6,6 @@ import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import { Descripe } from "@mui/icons-material";
 
-// export const NotificationCard = (props) => {
-//   const { image, title, description, link } = props;
-//   return (
-//     <div>
-//       <table className=" NotificationCardWrapper">
-//         <button
-//           aria-label="Leave Page"
-//           className="border-0 bg-transparent pt-2 d-lg-none"
-//         >
-//           <span className="NotificationCardBackBtn">Back</span>
-//         </button>
-//         <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-lg-5 px-2 pt-2 pb-2">
-//           {/* <FilterButton /> */}
-//         </thead>
-//         <tbody>
-//           <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-//             <div className="d-flex justify-content-lg-between align-items-center d-inline">
-//               <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-//               <h6 className="d-none d-lg-block">{title}</h6>
-//             </div>
-//             <div className="d-inline">
-//               <p>{description}</p>
-//               <small className="d-block d-lg-none">20s ago</small>
-//             </div>
-//             <button className="border border-0 bg-transparent d-none d-lg-inline">
-//               {link}
-//             </button>
-//           </tr>
-//         </tbody>
-//       </table>
-//       {/* Pagination Component Stays here */}
-//       <div className="py-3">
-//         <PaginationBar />
-//       </div>
-//     </div>
-//   );
-// };
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
   return (
