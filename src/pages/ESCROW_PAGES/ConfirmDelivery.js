@@ -37,7 +37,7 @@ export const BuyerDeliveryForm = () => {
         <UserSidenav />
       </div>
       <DeliveryForm
-        heading={`Product Condition and Deliver Confirmation`}
+        heading={`Product Condition and Delivery Confirmation`}
         sub_text={`Sincerely acknowledge that you are satisfied with the goods
               delivered or service provided`}
         checkList={[
