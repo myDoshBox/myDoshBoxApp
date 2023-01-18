@@ -19,6 +19,7 @@ import Error404 from "./pages/GENERAL_PAGES/Error404";
 import { Footer } from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 import UserDashboardPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserDashboardPage";
+import NotifictionPage from "./pages/DASHBOARDS/USER_DASHBOARD/NotifictionPage";
 // import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
 import UserSettingsPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
@@ -30,6 +31,12 @@ import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 import { CloseConflict } from "./pages/DASHBOARDS/NEUTRALS_PAGES/CloseConflict";
 import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
 import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
+import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
+import {
+  ClosedConflicts,
+  OngoingConflicts,
+  OpenConflicts,
+} from "./pages/DISPUTE_PAGES/Conflicts";
 
 function App() {
   return (
@@ -48,16 +55,22 @@ function App() {
           <Route path="usersettings" element={<UserSettingsPage />} />
           <Route path="usertransaction" element={<UserTransactionHistory />} />
           <Route path="userdispute" element={<UserDisputeHistory />} />
+          <Route path="userdashboardpage" element={<UserDashboardPage />} />
+          <Route path="notification" element={<NotifictionPage />} />
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route path="aboutus" element={<AboutUs />} />
-          <Route path="closeconflict" element={<CloseConflict />} />
+          <Route path="open-conflicts" element={<OpenConflicts />} />
+          <Route path="closed-conflicts" element={<ClosedConflicts />} />
+          <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
           <Route
             path="neutralviewtransaction"
             element={<NeutralViewTransaction />}
           />
+          <Route path="notification" element={<NotifictionPage />} />
+
+          <Route path="neutraldashboardpage" element={<NeutralDashboard />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />

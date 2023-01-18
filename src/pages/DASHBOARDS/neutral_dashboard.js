@@ -10,13 +10,13 @@ import {
   OpenConflictIcon,
 } from "../../components/IconComponent/NeutralsDashboardIcons";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import NeutralsSideNav from "../../components/NavbarComponents/NeutralsSideNav";
 
 const NeutralDashboard = () => {
   return (
     <div className="d-flex">
-      <div className="d-none d-lg-block">
-        <UserSidenav />
-      </div>
+        <NeutralsSideNav />
+      
 
       <div className="mx-auto w-100 px-3 px-lg-5">
         <div className="row gx-lg-3 justify-content-between align-items-center mt-5 ps-sm-2">

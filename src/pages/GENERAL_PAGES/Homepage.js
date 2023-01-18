@@ -41,6 +41,12 @@ const HeroSection = () => {
           </h1>
           <p>Lorem ipsum dolor sitamet dolor</p>
         </div>
+        <div className="text-center">
+          <GeneralBtn
+            text={`START A TRANSACTION`}
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
+        </div>
         <div className="mt-4">
           <img src={HeroImage} alt={`Hero Section Image`} className="mx-auto" />
         </div>

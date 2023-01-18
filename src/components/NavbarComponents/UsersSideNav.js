@@ -77,7 +77,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
-                <span>Dashboard</span>
+                <NavLink
+                  to="userdashboardpage"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Dashboard</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -92,12 +99,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <span>Transactions</span>
                 </NavLink>
               </li>
-              <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <UsersIcon />
-                </div>
-                <span>History</span>
-              </li>
+
               <li className="d-flex align-items-center SideNavItem mb-4">
                 <div className="me-3">
                   <ChatIcon />
@@ -108,7 +110,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
-                <span>Notifications</span>
+                <NavLink
+                  to="notification"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Notifications</span>
+                </NavLink>
               </li>
               <li className="d-flex  align-items-center SideNavItem mb-4">
                 <div className="me-3">
@@ -197,7 +206,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
-                <span>Dashboard</span>
+                <NavLink
+                  to="userdashboardpage"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Dashboard</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -212,12 +228,7 @@ const BigShowExample = ({ name, ...props }) => {
                   <span>Transactions</span>
                 </NavLink>
               </li>
-              <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <UsersIcon />
-                </div>
-                <span>History</span>
-              </li>
+
               <li className="d-flex align-items-center SideNavItem mb-4">
                 <div className="me-3">
                   <ChatIcon />
@@ -228,7 +239,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
-                <span>Notifications</span>
+                <NavLink
+                  to="notification"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Notifications</span>
+                </NavLink>
               </li>
 
               <li className="d-flex  align-items-center SideNavItem mb-4">
