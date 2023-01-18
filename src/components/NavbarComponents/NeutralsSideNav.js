@@ -76,7 +76,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
-                <span>Dashboard</span>
+                <NavLink
+                  to="neutraldashboardpage"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Dashboard</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -92,12 +99,38 @@ const SmallShowExample = ({ name, ...props }) => {
                       title={`Conflicts`}
                       className="SideNavDropdown"
                     >
-                      <Dropdown.Item eventKey="1">Open Conflicts</Dropdown.Item>
+                      <Dropdown.Item eventKey="1">
+                        <NavLink
+                          to="open-conflicts"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Open Conflicts
+                        </NavLink>
+                      </Dropdown.Item>
                       <Dropdown.Item eventKey="2">
-                        Ongoing Conflicts
+                        <NavLink
+                          to="ongoing-conflicts"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Ongoing Conflicts
+                        </NavLink>
                       </Dropdown.Item>
                       <Dropdown.Item eventKey="3">
-                        Closed Conflicts
+                        <NavLink
+                          to="closed-conflicts"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Closed Conflicts
+                        </NavLink>
                       </Dropdown.Item>
                     </DropdownButton>
                   ))}
@@ -107,7 +140,14 @@ const SmallShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
-                <span>Notifications</span>
+                <NavLink
+                  to="notification"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Notifications</span>
+                </NavLink>
               </li>
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
@@ -183,7 +223,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
-                <span>Dashboard</span>
+                <NavLink
+                  to="neutraldashboardpage"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Dashboard</span>
+                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
                 <div className="me-3">
@@ -201,7 +248,7 @@ const BigShowExample = ({ name, ...props }) => {
                     >
                       <Dropdown.Item eventKey="1">
                         <NavLink
-                          to="closeconflict"
+                          to="open-conflicts"
                           exact
                           className={({ isActive }) =>
                             isActive ? activeClassName : baseClassName
@@ -211,10 +258,26 @@ const BigShowExample = ({ name, ...props }) => {
                         </NavLink>
                       </Dropdown.Item>
                       <Dropdown.Item eventKey="2">
-                        Ongoing Conflicts
+                        <NavLink
+                          to="ongoing-conflicts"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Ongoing Conflicts
+                        </NavLink>
                       </Dropdown.Item>
                       <Dropdown.Item eventKey="3">
-                        Closed Conflicts
+                        <NavLink
+                          to="closed-conflicts"
+                          exact
+                          className={({ isActive }) =>
+                            isActive ? activeClassName : baseClassName
+                          }
+                        >
+                          Closed Conflicts
+                        </NavLink>
                       </Dropdown.Item>
                     </DropdownButton>
                   ))}
@@ -224,7 +287,14 @@ const BigShowExample = ({ name, ...props }) => {
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
-                <span>Notifications</span>
+                <NavLink
+                  to="notification"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <span>Notifications</span>
+                </NavLink>
               </li>
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
