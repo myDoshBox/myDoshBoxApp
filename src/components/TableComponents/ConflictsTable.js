@@ -30,7 +30,7 @@ export const AllConflictsTable = ({ conflictType }) => {
   });
 
   return (
-    <Container className="px-lg-5">
+    <Container className="px-lg-5 mt-5 pb-5">
       <Card className="border-0 shadow rounded-3">
         <h6 className="pb-2 pt-3 ps-2 m-0 text-capitalize">
           {conflictType} Conflicts
