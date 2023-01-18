@@ -286,34 +286,7 @@ option,
   background-color: rgba(0, 103, 71, 0.7);
 }
 
-.MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-}
-.MiniUsersCard tr {
-  border-style: hidden;
-  font-size: 0.75rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-}
-.MiniUsersCard th {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.875rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard button {
-  margin: 0 !important;
-}
-.MiniUsersCard .small {
+.small {
   font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -323,20 +296,6 @@ option,
   font-size: 0.75em !important;
   left: 45%;
   bottom: 4%;
-}
-
-.LogoutCard p {
-  color: rgba(255, 0, 0, 0.7) !important;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  padding: 0.5rem;
-}
-
-.GreenBackgroundColor {
-  background-color: #006747 !important;
 }
 
 .accordion-button {
@@ -350,45 +309,6 @@ th {
 
 .accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
-  color: #4b4453 !important;
-}
-
-.mini-disputes-card .nav-pills .nav-link.active {
-  color: #4b4453 !important;
-  border-bottom: 2.91696px solid #4b4453 !important;
-  background-color: inherit !important;
-  border-radius: 0 !important;
-}
-.mini-disputes-card .nav-link {
-  color: #4b4453 !important;
-}
-.mini-disputes-card .mini-disputes-mail {
-  color: rgba(75, 68, 83, 0.5);
-  font-size: 0.625rem;
-}
-.mini-disputes-card .mini-disputes-name {
-  font-size: 14px;
-  color: #4b4453;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-.mini-disputes-card .disputes-sort-btn {
-  background: rgba(0, 103, 71, 0.1) !important;
-  width: 70px;
-  height: 36.95px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  border: none;
-}
-.mini-disputes-card .dropdown-item:hover {
-  background: #e5f0ec !important;
-  border-radius: inherit;
-}
-.mini-disputes-card .disputes-sort-btn:hover {
   color: #4b4453 !important;
 }
 

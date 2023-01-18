@@ -22,7 +22,7 @@ const RecentTransactionTable = () => {
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        <div className="px-4 mb-3">
+        <div className="p-4 mb-3">
           <GeneralBtnStyle1 text="New Transaction" />
         </div>
 
@@ -43,7 +43,9 @@ const RecentTransactionTable = () => {
             })}
           </tbody>
         </table>
-        <PaginationBar />
+        <div className="p-4">
+          <PaginationBar />
+        </div>
       </div>
     </div>
   );

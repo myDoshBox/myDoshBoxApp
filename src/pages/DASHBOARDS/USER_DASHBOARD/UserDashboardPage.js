@@ -82,9 +82,7 @@ const MiniTransaction = () => {
       <div className="row container">
         <div className="col-md-7 mt-5">{/* <AllConflictsTable /> */}</div>
         <div className="mt-5 pb-5 col-md-5">
-          <div>
-            <MiniDisputesCard />
-          </div>
+          <div>{/* <MiniDisputesCard /> */}</div>
         </div>
       </div>
     </div>

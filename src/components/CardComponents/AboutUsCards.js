@@ -59,7 +59,7 @@ export const TeamsCard = (props) => {
 //             <p class="card-text text-center">{description}</p>
 //             <span className="d-flex flex-column align-items-end p-2">
 //               <h6 class="card-title">{name}</h6>
-//               <small class="text-muted">{job_description}</small>
+//               < class="text-muted">{job_description}</small>
 //             </span>
 //           </div>
 //         </div>

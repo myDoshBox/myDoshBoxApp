@@ -55,7 +55,7 @@ export const TotalUsersCard = () => {
     <>
       <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
         <div class="card-body">
-          <div className="d-flex ">
+          <div className="d-flex">
             <div>
               <TotalUsersIcon width="24" />
             </div>

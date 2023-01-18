@@ -13,53 +13,52 @@
   background-color: $pryColor7;
 }
 
-.MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+// .MiniUsersCard {
+//   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 
-  p {
-    @include H6Font;
-    color: $bodyTextColor;
-  }
+//   p {
+//     @include H6Font;
+//     color: $bodyTextColor;
+//   }
 
-  tr {
-    border-style: hidden;
-    font-size: 0.75rem !important;
-    color: $bodyTextColor;
-    line-height: 1.5rem;
-  }
+//   tr {
+//     border-style: hidden;
+//     font-size: 0.75rem !important;
+//     color: $bodyTextColor;
+//     line-height: 1.5rem;
+//   }
 
-  th {
-    @include pFont;
-    font-size: 0.875rem !important;
-    color: $placeholderTextColor;
-  }
-  button {
-    margin: 0 !important;
-  }
+//   th {
+//     @include pFont;
+//     font-size: 0.875rem !important;
+//     color: $placeholderTextColor;
+//   }
+//   button {
+//     margin: 0 !important;
+//   }
 
-  //UsersCards
+//UsersCards
 
-  .small {
-    @include pFont;
-    font-size: 0.75em !important;
-    left: 45%;
-    bottom: 4%;
-  }
+.small {
+  @include pFont;
+  font-size: 0.75em !important;
+  left: 45%;
+  bottom: 4%;
 }
 
-.LogoutCard p {
-  color: $LogoutBtnColor !important;
-}
+// .LogoutCard p {
+//   color: $LogoutBtnColor !important;
+// }
 
-td,
-th {
-  border: 1px solid #dddddd;
-  padding: 0.5rem;
-}
+// td,
+// th {
+//   border: 1px solid #dddddd;
+//   padding: 0.5rem;
+// }
 
-.GreenBackgroundColor {
-  background-color: $pryColor !important;
-}
+// .GreenBackgroundColor {
+//   background-color: $pryColor !important;
+// }
 
 .accordion-button {
   @include H6Font;
@@ -76,47 +75,47 @@ th {
 
 // .ConflictIssuesCard {
 // }
-.mini-disputes-card {
-  .nav-pills .nav-link.active {
-    color: $bodyTextColor !important;
-    border-bottom: 2.91696px solid #4b4453 !important;
-    background-color: inherit !important;
-    border-radius: 0 !important;
-  }
+// .mini-disputes-card {
+//   .nav-pills .nav-link.active {
+//     color: $bodyTextColor !important;
+//     border-bottom: 2.91696px solid #4b4453 !important;
+//     background-color: inherit !important;
+//     border-radius: 0 !important;
+//   }
 
-  .nav-link {
-    color: $bodyTextColor !important;
-  }
+//   .nav-link {
+//     color: $bodyTextColor !important;
+//   }
 
-  .mini-disputes-mail {
-    color: $placeholderTextColor;
-    font-size: 0.625rem;
-  }
+//   .mini-disputes-mail {
+//     color: $placeholderTextColor;
+//     font-size: 0.625rem;
+//   }
 
-  .mini-disputes-name {
-    font-size: 14px;
-    color: $bodyTextColor;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-  }
+//   .mini-disputes-name {
+//     font-size: 14px;
+//     color: $bodyTextColor;
+//     font-weight: 600;
+//     letter-spacing: 0.06em;
+//   }
 
-  .disputes-sort-btn {
-    background: rgba(0, 103, 71, 0.1) !important;
-    width: 70px;
-    height: 36.95px;
-    @include pFont;
-    border: none;
-  }
+//   .disputes-sort-btn {
+//     background: rgba(0, 103, 71, 0.1) !important;
+//     width: 70px;
+//     height: 36.95px;
+//     @include pFont;
+//     border: none;
+//   }
 
-  .dropdown-item:hover {
-    background: #e5f0ec !important;
-    border-radius: inherit;
-  }
+//   .dropdown-item:hover {
+//     background: #e5f0ec !important;
+//     border-radius: inherit;
+//   }
 
-  .disputes-sort-btn:hover {
-    color: $bodyTextColor !important;
-  }
-}
+//   .disputes-sort-btn:hover {
+//     color: $bodyTextColor !important;
+//   }
+// }
 
 .colorTextStyle {
   color: rgb(165, 165, 165);
