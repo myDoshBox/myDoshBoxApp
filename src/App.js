@@ -1,46 +1,71 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import {
+  NeutralsSidenav,
+  UserSidenav,
+} from "./components/NavbarComponents/SideNavbar";
+import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
 import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
 import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
 import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
-// import NotifictionPage from "./pages/NotifictionPage";
-import TransactionAgreedPage from "./pages/transactionAgreedPage";
-import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
-import InitiateEscrow from "./pages/ESCROW_PAGES/InitiateEscrowForm";
-import EscrowAgreement from "./pages/ESCROW_PAGES/EscrowAgreement";
-import {BuyerDeliveryForm, SellerDeliveryForm} from "./pages/ESCROW_PAGES/ConfirmDelivery";
-import BankTransferForm from "./pages/ESCROW_PAGES/BankTransferForm";
-import { ChoosePaymentMethod } from "./pages/ESCROW_PAGES/ChoosePaymenMethod";
-import NeutralDashboard from "./pages/neutral_dashboard";
-import { OpenConflicts, ClosedConflicts, OngoingConflicts } from "./pages/Conflicts";
+import Error404 from "./pages/GENERAL_PAGES/Error404";
+import { Footer } from "./components/FooterComponents";
+import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
+import UserDashboardPage from "./pages/DASHBOARDS/UserDashboardPage";
+// import FAQs from "./pages/GENERAL_PAGES/FAQs";
+import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
+import UserSettingsPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
+import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
+// import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
+
+// Neutral Pages
+import { CloseConflict } from "./pages/DASHBOARDS/NEUTRALS_PAGES/CloseConflict";
+import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
+import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
+import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
+import { ClosedConflicts, OngoingConflicts, OpenConflicts } from "./pages/DISPUTE_PAGES/Conflicts";
 
 function App() {
   return (
-    
+    <Router>
+      <Routes>
+        {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
+        <Route element={<GuestNavbar />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/pricingpage" element={<PricingPage />} />
+          <Route path="/faqs" element={<FAQs />} />
+        </Route>
 
-        <Router>
-    <Routes>
-           {/* GENERAL PAGES */}
-            <Route path="/" element={<Homepage />} />
-    {/* //         <Route path="aboutus" element={<AboutUs />} /> */}
-    {/* //         <Route path="contactus" element={<ContactUs />} /> */}
-    {/* //         <Route path="pricingpage" element={<PricingPage />} /> */}
-        <Route path="escrow" element={<InitiateEscrow />} />
-        		<Route path="agreement" element={<EscrowAgreement />} />
-        		<Route path="seller-delivery-form" element={<SellerDeliveryForm />} />
-        <Route path="buyer-delivery-form" element={<BuyerDeliveryForm />} />
-        <Route path="bank-transfer-form" element={<BankTransferForm />} />
-        <Route path="choose-payment-method" element={<ChoosePaymentMethod />} />
-        <Route path="neutrals-dash" element={<NeutralDashboard />} />
-        <Route path="open-conflicts" element={<OpenConflicts/>}/>
-        <Route path="closed-conflicts" element={<ClosedConflicts/>}/>
-        <Route path="ongoing-conflicts" element={<OngoingConflicts/>}/>
+        <Route path="userdashboard" element={<UsersSideNav />}>
+          <Route path="usersettings" element={<UserSettingsPage />} />
+          <Route path="usertransaction" element={<UserTransactionHistory />} />
+          <Route path="userdispute" element={<UserDisputeHistory />} />
+        </Route>
 
-
-            <Route path="faqs" element={<FAQs />} />
-          </Routes>
+        <Route path="neutraldashboard" element={<NeutralDashboard />}>
+          <Route path="open-conflicts" element={<OpenConflicts />} />
+          <Route path="closed-conflicts" element={<ClosedConflicts />} />
+          <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
+          <Route path="neutralsetting" element={<NeutralSetting />} />
+          <Route
+            path="neutralviewtransaction"
+            element={<NeutralViewTransaction />}
+          />
+        </Route>
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

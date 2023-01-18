@@ -1,20 +1,32 @@
 @use "../generalStyles/color" as *;
+@use "../generalStyles/fonts" as *;
 
 .BgColor {
-	background-color: #459079;
+  background-color: #459079;
 }
 .BgColorScreen {
-	background-color: $pryColor;
+  background-color: $pryColor;
 }
 
 .ScreenBgColor {
-	background-color: #e6f0ed;
+  background-color: #e6f0ed;
 }
 
 .InputBgColor {
-	background-color: #b7bdbc;
+  background-color: #b7bdbc;
 }
 
 .ActiveChat {
-	background-color: #68e443ad !important;
+  background-color: #68e443ad !important;
+}
+
+.Style404 {
+  h1 {
+    font-size: 10rem !important;
+    color: $pryColor;
+  }
+
+  p {
+    font-size: 0.7rem !important;
+  }
 }

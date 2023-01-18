@@ -9,8 +9,8 @@ export const DashboardConflictCards = ({ icon, text, value }) => {
       <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow-sm border-0 rounded-2 DashboardCard">
         {icon}
         <div>
-        <p className="m-0 ms-2 opacity-50">{value}</p>
-        <p className="m-0 ms-2">{text}</p>
+          <p className="m-0 ms-2 opacity-50">{value}</p>
+          <p className="m-0 ms-2">{text}</p>
         </div>
       </div>
     </div>
@@ -37,6 +37,7 @@ export const DashboardConflictCards = ({ icon, text, value }) => {
 //These are the component you can use below//
 
 //TransactionCompletedCard /TransactionSummaryCard /TransactionCompletionCard /IndividualTransactionsCard /TransactionAgreedCard /PaymentMadeCard
+
 export const TransactionDetails = ({
   heading,
   sub_text,
@@ -53,57 +54,64 @@ export const TransactionDetails = ({
 }) => {
   return (
     <>
-      <div class="" style={{ width: "50rem" }}>
-        <header className="mt-3">
-          <h4 className="text-center">{heading}</h4>
-          <p className="text-center text-muted fw-light">{sub_text}</p>
-        </header>
-        <span className="mx-auto img-fluid w-75">
-          <img src={product} className="w-100" alt="" />
-        </span>
+      <div class="container row mx-auto">
+        <div className="col-md-12 col-sm-12">
+          <header className="mt-3">
+            <h4 className="text-center">{heading}</h4>
+            <p className="text-center text-muted fw-light">{sub_text}</p>
+          </header>
+          <span className="mx-auto img-fluid">
+            <img
+              src={product}
+              className="mx-auto"
+              style={{ width: "100%" }}
+              alt=""
+            />
+          </span>
 
-        <div class="card-body">
-          <div className="p-4">
-            <div className="d-flex justify-content-between">
-              <h5>Sellers Email</h5>
-              <p>{email}</p>
+          <div class="card-body">
+            <div className="p-3 mt-3">
+              <div className="d-flex justify-content-between">
+                <h5>Sellers Email</h5>
+                <p>{email}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Transaction id</h5>
+                <p>{id}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Description</h5>
+                <p>{description}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Quality</h5>
+                <p>{quality}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Price</h5>
+                <p>{price}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Delivery compilation Date</h5>
+                <p>{date}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Total</h5>
+                <p>{total}</p>
+              </div>
             </div>
-            <div className="d-flex justify-content-between">
-              <h5>Transaction id</h5>
-              <p>{id}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h5>Description</h5>
-              <p>{description}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h5>Quality</h5>
-              <p>{quality}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h5>Price</h5>
-              <p>{price}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h5>Delivery compilation Date</h5>
-              <p>{date}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h5>Total</h5>
-              <p>{total}</p>
+            <div className="d-flex align-items-center border-danger border-start border-5 mx-auto mt-4 alert alert-danger border-0 rounded-0">
+              <CautionIcon />
+              <p className="text-danger fs-6 fw-lighter mt-4 ms-3">
+                <span className="text-danger fw-bold">Note:</span>
+                {alert}
+              </p>
             </div>
           </div>
-          <div className="d-flex align-items-center border-danger border-start border-5 mx-auto mt-4 alert alert-danger border-0 rounded-0">
-            <CautionIcon />
-            <p className="text-danger fs-6 fw-lighter mt-4 text-break">
-              <span className="text-danger fw-bold">Note:</span>
-              {alert}
-            </p>
+          <div className="d-flex justify-content-center text-">
+            <div className="me-5">{leftBtn}</div>
+            <div>{rightBtn}</div>
           </div>
-        </div>
-        <div className="d-flex justify-content-center">
-          <div className="me-5">{leftBtn}</div>
-          <div>{rightBtn}</div>
         </div>
       </div>
     </>

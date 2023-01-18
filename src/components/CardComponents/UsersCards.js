@@ -53,13 +53,13 @@ export const AnalyticsNewUsersCard = () => {
 export const TotalUsersCard = () => {
   return (
     <>
-      <div class="card shadow" style={{ width: "18rem" }}>
+      <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
         <div class="card-body">
           <div className="d-flex ">
             <div>
               <TotalUsersIcon width="24" />
             </div>
-            <div className=" ms-2">
+            <div className="ms-2">
               <span className="fs-5 fw-bold">234589</span>
               <p>TOTAL USERS</p>
             </div>
@@ -79,7 +79,7 @@ export const TotalUsersCard = () => {
 // UserTransactionsCard
 export const UserTransactionsCard = () => {
   return (
-    <div class="card shadow" style={{ width: "20rem" }}>
+    <div class="card shadow border-0 rounded-1" style={{ width: "20rem" }}>
       <div class="card-body mx-auto ">
         <div className="d-flex mx-auto">
           <div className="m-2">
@@ -104,11 +104,30 @@ export const UserTransactionsCard = () => {
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCards = ({ icon, text }) => {
   return (
-    <div className="card shadow  border-0 rounded-2" style={{ width: "16rem" }}>
+    <div
+      className="card shadow  border-0 rounded-2 mx-auto mb-5"
+      style={{ width: "100%" }}
+    >
       <div className="card-body d-flex align-items-center justify-content-center">
-        <div className="d-flex flex-column me-2">{icon}</div>
+        <div className="col-3">{icon}</div>
+        <span className="mt-4">
+          <p className="col-9">{text}</p>
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export const UserDashboardCardsTwo = ({ icon, text }) => {
+  return (
+    <div
+      className="card shadow border-0 rounded-2 mx-auto mb-5"
+      style={{ width: "100%" }}
+    >
+      <div className="card-body d-flex align-items-center justify-content-center">
+        <div className="mx-3">{icon}</div>
         <span className="mt-3">
-          <p>{text}</p>
+          <p className="">{text}</p>
         </span>
       </div>
     </div>
@@ -119,7 +138,7 @@ export const UserDashboardCards = ({ icon, text }) => {
 export const MiniProfileCard = () => {
   return (
     <>
-      <div class="card shadow" style={{ width: "22rem" }}>
+      <div class="card shadow" style={{ width: "100%" }}>
         <div class="card-body">
           <div className="d-flex flex-column ">
             <div className="d-flex justify-content-center">
@@ -225,7 +244,7 @@ export const MiniUsersCard = () => {
 export const AllUsersCard = () => {
   return (
     <div className="col-lg-9 shadow rounded-1">
-      <aside className="NotificationCardHeader d-flex justify-content-end">
+      <aside className="d-flex justify-content-end">
         <FilterButton />
       </aside>
       <table class="table table-hover">

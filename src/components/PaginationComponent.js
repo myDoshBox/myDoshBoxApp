@@ -1,5 +1,5 @@
 // import { NextIcon, PreviousIcon } from "./IconComponent/UserdashboardIcons";
-import { GeneralBtnStyle1Icon } from ".//ButtonsComponent/Button";
+import { GeneralBtn } from ".//ButtonsComponent/GenandAuthBtn";
 import { NextIcon, PreviousIcon } from "./IconComponent/NavigationAndViewIcon";
 
 export const PaginationBar = () => {
@@ -8,7 +8,11 @@ export const PaginationBar = () => {
     <nav role="navigation" aria-label="Page Navigation">
       <ul className="list-unstyled d-flex justify-content-center align-items-center PaginationBar">
         <li className="page-item">
-          <GeneralBtnStyle1Icon lefticon={<PreviousIcon />} text="Prev" />
+          <GeneralBtn
+            lefticon={<PreviousIcon />}
+            text="Prev"
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
         </li>
         <li className="page-item " aria-label="Goto Page 1">
           <a className="page-link border border-0" href="/page-1">
@@ -107,7 +111,11 @@ export const PaginationBar = () => {
           </a>
         </li>
         <li className="page-item">
-          <GeneralBtnStyle1Icon lefticon={<NextIcon />} text="Next" />
+          <GeneralBtn
+            lefticon={<NextIcon />}
+            text="Next"
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
         </li>
       </ul>
     </nav>

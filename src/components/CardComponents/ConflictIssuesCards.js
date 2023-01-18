@@ -1,11 +1,7 @@
-import {
-  OpenConflictIcon,
-  ClosedConflictIcon,
-  OngoingConflictIcon,
-} from "../IconComponent/NeutralsDashboardIcons";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
 
-import { CalendarButton } from "../ButtonsComponent/OtherButtons";
+import { CalendarButton } from "../ButtonsComponent/MiscBtns";
 
 // import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 // import { Pie, Doughnut } from "react-chartjs-2";
@@ -15,13 +11,13 @@ import { CalendarButton } from "../ButtonsComponent/OtherButtons";
 export const MiniDisputesCard = () => {
   return (
     <div
-      className="border-0 shadow rounded  mini-disputes-card"
-      style={{ width: "24.4rem", height: "20rem" }}
+      className="border-0 shadow rounded  mini-disputes-card p-2"
+      style={{ width: "100%" }}
     >
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <div className="row">
           <div className="">
-            <Nav variant="pills" className="">
+            <Nav variant="pills" className="disputes-tab">
               <Nav.Item>
                 <Nav.Link eventKey="first">Disputes</Nav.Link>
               </Nav.Item>
@@ -50,9 +46,9 @@ export const MiniDisputesCard = () => {
           <div className="col-12">
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                <div className="d-flex justify-content-between px-4">
+                <div className="d-flex justify-content-between px-4 mt-2">
                   <div className="d-flex">
-                    <div className=" rounded-circle p-3 bg-primary"></div>
+                    <div className="rounded-circle p-3 bg-primary"></div>
                     <div className="d-flex flex-column ms-3">
                       <span className=" mini-disputes-name">
                         Korode Okesanya
@@ -63,12 +59,57 @@ export const MiniDisputesCard = () => {
                     </div>
                   </div>
                   <div>
-                    <button className="btn rounded w-100 border-0 disputes-view-btn d-flex justify-content-center align-items-center">
-                      View
-                    </button>
+                    <GeneralBtn
+                      text={`View`}
+                      styles={`GeneralBtnStyle1 btn all-btn text-white`}
+                    />
                   </div>
                 </div>
               </Tab.Pane>
+
+              <Tab.Pane eventKey="first">
+                <div className="d-flex justify-content-between px-4 mt-3">
+                  <div className="d-flex">
+                    <div className="rounded-circle p-3 bg-primary"></div>
+                    <div className="d-flex flex-column ms-3">
+                      <span className=" mini-disputes-name">
+                        Korode Okesanya
+                      </span>
+                      <span className=" mini-disputes-mail">
+                        emmywears@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <GeneralBtn
+                      text={`View`}
+                      styles={`GeneralBtnStyle1 btn all-btn text-white`}
+                    />
+                  </div>
+                </div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="first">
+                <div className="d-flex justify-content-between px-4 mt-3">
+                  <div className="d-flex">
+                    <div className="rounded-circle p-3 bg-primary"></div>
+                    <div className="d-flex flex-column ms-3">
+                      <span className=" mini-disputes-name">
+                        Korode Okesanya
+                      </span>
+                      <span className=" mini-disputes-mail">
+                        emmywears@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <GeneralBtn
+                      text={`View`}
+                      styles={`GeneralBtnStyle1 btn all-btn text-white`}
+                    />
+                  </div>
+                </div>
+              </Tab.Pane>
+
               <Tab.Pane eventKey="second">
                 <div className="d-flex justify-content-between px-4">
                   <div className="d-flex">
@@ -83,9 +124,10 @@ export const MiniDisputesCard = () => {
                     </div>
                   </div>
                   <div>
-                    <button className="btn disputes-view-btn d-flex justify-content-center align-items-center">
-                      View
-                    </button>
+                    <GeneralBtn
+                      text={`View`}
+                      styles={`GeneralBtnStyle1 btn all-btn text-white`}
+                    />
                   </div>
                 </div>
               </Tab.Pane>
@@ -100,7 +142,7 @@ export const MiniDisputesCard = () => {
 export const ConflictIssuesCards = () => {
   return (
     <div
-      className="card rounded-3 GreenBackgroundColor"
+      className="card rounded-3 border-0 GreenBackgroundColor"
       style={{ width: "18rem" }}
     >
       <div className="p-3">

@@ -1,6 +1,5 @@
 import React from "react";
-import aboutusPix from "../../images/aboutusPix.png";
-// import { aboutusData } from "../../data/aboutusData.json";
+import aboutusPix from "../../images/aboutusPix2.png";
 
 // CoreValueCard
 export const CoreValueCard = (props) => {
@@ -16,7 +15,7 @@ export const CoreValueCard = (props) => {
   );
 };
 
-//TeamsCard;
+// TeamsCard;
 export const TeamsCard = (props) => {
   const { name, job_description, description, images } = props;
   return (
@@ -31,7 +30,6 @@ export const TeamsCard = (props) => {
         </div>
         <div class="col-lg-7 col-md-8 mt-2 col-sm-12">
           <div class="card-body d-flex flex-column align-item-center justify-content-center">
-            {/* <h5 class="card-title">{name}</h5> */}
             <div className="mt-lg-4">
               <p class="card-text text-start">{description}</p>
               <div class="card-text text-end me-lg-5 mt-2 ">
@@ -45,3 +43,27 @@ export const TeamsCard = (props) => {
     </div>
   );
 };
+
+// export const TeamsCard = (props) => {
+//   const { name, job_description, description, images } = props;
+//   return (
+//     <div class="shadow">
+//       <div class="col">
+//         <div class="card h-100">
+//           <img
+//             src={images}
+//             class="card-img-top align-self-center teamValueStyle"
+//             alt="..."
+//           />
+//           <div class="card-body teamValueStyle">
+//             <p class="card-text text-center">{description}</p>
+//             <span className="d-flex flex-column align-items-end p-2">
+//               <h6 class="card-title">{name}</h6>
+//               <small class="text-muted">{job_description}</small>
+//             </span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

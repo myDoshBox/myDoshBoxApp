@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Open+Sans&family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +21,8 @@ body::-webkit-scrollbar {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,7 +41,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -55,12 +57,12 @@ picture {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -96,7 +98,7 @@ h6 {
 }
 
 p {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -105,12 +107,12 @@ p {
 }
 
 .mutedFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.5rem;
 }
 
 .notificationFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -118,7 +120,7 @@ p {
 }
 
 .userNavFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -130,7 +132,7 @@ p {
 }
 
 .normal-text {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -138,9 +140,13 @@ p {
   letter-spacing: 0rem;
 }
 
-label, select, option, .escrow-images, .date-input-field {
+label,
+select,
+option,
+.escrow-images,
+.date-input-field {
   font-size: 0.85rem !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
 }
 
@@ -166,7 +172,7 @@ label, select, option, .escrow-images, .date-input-field {
 
 .GeneralBtnStyle2 {
   background-color: #006747 !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -175,7 +181,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .GoogleAuthBtn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -187,7 +193,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .SignUpGroup {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -214,7 +220,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .CancelBtn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -226,7 +232,6 @@ label, select, option, .escrow-images, .date-input-field {
 .FilteBtnStyle {
   font-weight: 200 !important;
   color: #4b4453 !important;
-  background-color: #e5f0ed !important;
 }
 
 .LearnMoreCardButton {
@@ -241,7 +246,7 @@ label, select, option, .escrow-images, .date-input-field {
 .EscrowTransactTypeBtn {
   color: #006747 !important;
   border-color: #006747 !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -249,7 +254,8 @@ label, select, option, .escrow-images, .date-input-field {
   letter-spacing: 0rem;
 }
 
-.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+.EscrowTransactTypeBtn:hover,
+.EscrowTransactTypeBtn:focus {
   background-color: #006747 !important;
   border: 0;
   color: white !important;
@@ -259,7 +265,8 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
-.pale-red:hover, .pale-red:focus {
+.pale-red:hover,
+.pale-red:focus {
   background-color: rgb(255, 0, 0) !important;
 }
 
@@ -294,7 +301,7 @@ label, select, option, .escrow-images, .date-input-field {
   line-height: 1.5rem;
 }
 .MiniUsersCard th {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -306,137 +313,8 @@ label, select, option, .escrow-images, .date-input-field {
 .MiniUsersCard button {
   margin: 0 !important;
 }
-.MiniUsersCard .LearnMoreCardWrapper {
-  background-color: rgba(0, 103, 71, 0.7);
-  color: hsl(0deg, 0%, 100%);
-  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
-  border-radius: 0.608rem;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore {
-  width: 50%;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: hsl(0deg, 0%, 100%);
-  font-size: 0.972rem;
-  line-height: 23px;
-  text-align: justify;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMoreImg {
-  width: 35%;
-}
-.MiniUsersCard .NotificationCardWrapper {
-  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .NotificationCardHeader {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-}
-.MiniUsersCard .NotificationCardHeader button {
-  margin: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  background-color: transparent !important;
-}
-.MiniUsersCard .NotificationCardHeader h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.663rem;
-  line-height: 30px !important;
-  height: 1.938rem !important;
-}
-.MiniUsersCard .NotificationCardDetails {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-  padding-inline: 3.5% !important;
-}
-.MiniUsersCard .NotificationCardDetails h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  color: #4b4453;
-}
-.MiniUsersCard .NotificationCardDetails p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  width: 95%;
-}
-.MiniUsersCard .NotificationCardDetails button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  text-align: justify;
-  letter-spacing: 0.08rem;
-  color: #006747;
-}
-.MiniUsersCard .NotificationCardDetails {
-  width: 100% !important;
-}
-.MiniUsersCard .NotificationCardDetails p {
-  font-size: 0.75rem !important;
-  width: unset;
-  line-height: 16px;
-}
-.MiniUsersCard .NotificationCardDetails img {
-  width: 1.8rem;
-}
-.MiniUsersCard .NotificationCardDetails small {
+.MiniUsersCard .small {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300 !important;
-  font-size: 0.5rem !important;
-  letter-spacing: 0.04rem !important;
-}
-.MiniUsersCard .NotificationCardBackBtn {
-  color: #006747 !important;
-}
-.MiniUsersCard .AnalyticsNewUsersCard {
-  width: 13.7rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .AnalyticsNewUsersCard h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-}
-.MiniUsersCard .AnalyticsNewUsersCard p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .AnalyticsNewUsersCard .small {
-  font-size: 0.75em !important;
-}
-.MiniUsersCard .TotalUsersCard {
-  width: 20rem;
-  height: 9rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .TotalUsersCard .TotalUsersCardText {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .TotalUsersCard .small {
-  font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -446,358 +324,83 @@ label, select, option, .escrow-images, .date-input-field {
   left: 45%;
   bottom: 4%;
 }
-.MiniUsersCard .MiniProfileCard {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 22rem;
-  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
-  font-size: 0.913rem !important;
-}
-.MiniUsersCard .MiniProfileCard img {
-  cursor: pointer;
-}
-.MiniUsersCard .MiniProfileCard .MiniProfileCardCameraIcon {
-  left: 64%;
-  top: 29.5%;
-  cursor: pointer;
-}
-.MiniUsersCard .MiniProfileCard .RatingIcon {
-  cursor: pointer;
-}
-.MiniUsersCard .MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .MiniUsersCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-}
-.MiniUsersCard .MiniUsersCard tr {
-  border-style: hidden;
-  font-size: 0.75rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-}
-.MiniUsersCard .MiniUsersCard th {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.875rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard .MiniUsersCard button {
-  margin: 0 !important;
-}
-.MiniUsersCard .LogoutCard p {
+
+.LogoutCard p {
   color: rgba(255, 0, 0, 0.7) !important;
 }
-.MiniUsersCard td,
-.MiniUsersCard th {
+
+td,
+th {
   border: 1px solid #dddddd;
   padding: 0.5rem;
 }
-.MiniUsersCard .AllUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .AllUsersCard img {
-  filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
-  border-radius: 3.6rem;
-  width: 1.99rem;
-  height: 2.44rem;
-}
-.MiniUsersCard .AllUsersCard tr:nth-child(1) {
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard .AllUsersCard td {
-  max-width: 10rem;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: small !important;
-}
-.MiniUsersCard .AllUsersCard .lg-view {
-  display: none;
-}
-.MiniUsersCard .AllUsersCard .view {
-  color: #006747 !important;
-}
-.MiniUsersCard .AllUsersCard .view:hover,
-.MiniUsersCard .AllUsersCard :focus {
-  background-color: #006747 !important;
-  color: hsl(0deg, 0%, 100%) !important;
-}
-.MiniUsersCard .GreenBackgroundColor {
+
+.GreenBackgroundColor {
   background-color: #006747 !important;
 }
-.MiniUsersCard .UserProfileCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .UserProfileCard p {
+
+.accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
-  font-size: small !important;
-  font-weight: 700 !important;
-}
-.MiniUsersCard .UserProfileCard td {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
+  box-shadow: none !important;
   font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #4b4453;
-  font-size: smaller !important;
-}
-.MiniUsersCard .UserProfileCard .UserProfileDetail {
-  color: rgba(75, 68, 83, 0.5);
-  letter-spacing: 0.08rem;
-}
-.MiniUsersCard .why-choose-us-card-head {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #006747 !important;
-}
-.MiniUsersCard .why-choose-us-card-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.84375rem !important;
-}
-.MiniUsersCard .escrow-terms-condition {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .escrow-terms-condition h2 {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .buying-selling-card {
-  width: 468px;
-  height: 227px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .buying-selling-card p {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-size: 1.5625rem !important;
-}
-.MiniUsersCard .transaction-summary-card h2 {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .transaction-summary-card .header-text,
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
-  color: rgba(75, 68, 83, 0.5) !important;
-  font-family: "Open Sans" !important;
-}
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
   font-weight: 500;
+  padding: 18px 22px !important;
 }
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
+
+.accordion-button:not(.collapsed) {
+  background-color: hsl(0deg, 0%, 100%) !important;
+  color: #4b4453 !important;
 }
-.MiniUsersCard .transaction-images {
-  width: 80%;
-  height: 300px;
-}
-.MiniUsersCard .individual-transaction-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .individual-transaction-card .transaction-summary-info-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-.MiniUsersCard .individual-transaction-card .transaction-summary-info-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .individual-transaction-image {
-  width: 100%;
-  height: 379.79px;
-}
-.MiniUsersCard .conflicts-count {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 400 !important;
-}
-.MiniUsersCard .conflicts-type {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 500 !important;
-}
-.MiniUsersCard .mini-disputes-card .nav-pills .nav-link.active {
-  color: #4b4453;
-  border-bottom: 2.91696px solid #4b4453;
+
+.mini-disputes-card .nav-pills .nav-link.active {
+  color: #4b4453 !important;
+  border-bottom: 2.91696px solid #4b4453 !important;
   background-color: inherit !important;
   border-radius: 0 !important;
 }
-.MiniUsersCard .mini-disputes-card .nav-link {
+.mini-disputes-card .nav-link {
   color: #4b4453 !important;
 }
-.MiniUsersCard .mini-disputes-card .mini-disputes-mail {
+.mini-disputes-card .mini-disputes-mail {
   color: rgba(75, 68, 83, 0.5);
   font-size: 0.625rem;
 }
-.MiniUsersCard .mini-disputes-card .mini-disputes-name {
+.mini-disputes-card .mini-disputes-name {
   font-size: 14px;
   color: #4b4453;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
-.MiniUsersCard .mini-disputes-card .disputes-view-btn {
-  background: rgba(0, 103, 71, 0.1);
-  font-size: 12px !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:hover,
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:focus {
+.mini-disputes-card .disputes-sort-btn {
   background: rgba(0, 103, 71, 0.1) !important;
-  border: none !important;
-  font-weight: 400 !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn {
-  background: rgba(0, 103, 71, 0.1) !important;
-  font-family: "Open Sans" !important;
+  width: 70px;
+  height: 36.95px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu.show {
-  background: #e5f0ec !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu {
   border: none;
-  min-width: 7rem;
-  padding: 0 0 !important;
 }
-.MiniUsersCard .mini-disputes-card .dropdown-item:hover {
+.mini-disputes-card .dropdown-item:hover {
   background: #e5f0ec !important;
   border-radius: inherit;
 }
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn:hover {
+.mini-disputes-card .disputes-sort-btn:hover {
   color: #4b4453 !important;
 }
-.MiniUsersCard .issues-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 400px;
-  height: 277px !important;
-}
-.MiniUsersCard .issues-card h6 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-.MiniUsersCard .contact-card {
-  padding: 30px 15px;
-}
-.MiniUsersCard .why-choose-us-card-head {
-  font-size: 0.6875rem !important;
-  line-height: 15px !important;
-}
-.MiniUsersCard .why-choose-us-card-text {
-  font-size: 0.5rem !important;
-  line-height: 12px;
-}
-.MiniUsersCard .escrow-terms-condition {
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .escrow-terms-condition h2 {
-  font-size: 1rem !important;
-  line-height: 24px !important;
-  text-align: center;
-}
-.MiniUsersCard .payment-gateway-image {
-  width: 20vw;
-}
-.MiniUsersCard .buying-selling-card {
-  width: 80%;
-  height: 160px;
-}
-.MiniUsersCard .buying-selling-card p {
-  font-size: 1rem !important;
-}
-.MiniUsersCard .buying-selling-card svg {
-  width: 45.5px !important;
-  height: 45.5px !important;
-}
-.MiniUsersCard .update-cards {
-  width: 90%;
-  height: 60px;
-  padding: 10px 0 !important;
-  border: 2px solid rgba(0, 103, 71, 0.3);
-  border-radius: 5px;
-  box-shadow: none;
-}
-.MiniUsersCard .update-cards svg {
-  width: 24px;
-  height: 24px;
-}
-.MiniUsersCard .update-cards p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-}
-.MiniUsersCard .individual-transaction-image {
-  width: 100%;
-  height: 187px;
-}
-.MiniUsersCard .transaction-summary-info-text {
-  font-size: 10px !important;
-}
-.MiniUsersCard .ConflictIssuesCard-body {
-  background-color: #006747 !important;
-  color: #fff;
-}
-.MiniUsersCard .colorTextStyle {
+
+.colorTextStyle {
   color: rgb(165, 165, 165);
 }
-.MiniUsersCard .textStyle {
+
+.textStyle {
   color: rgb(19, 19, 19);
 }
-.MiniUsersCard .warningStyle {
+
+.warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
@@ -807,38 +410,23 @@ label, select, option, .escrow-images, .date-input-field {
   font-size: 0.875rem !important;
 }
 
-.FAQs {
-  color: #e5f0ed;
-  font-family: "Open Sans" !important;
-}
 .FAQs .faqs-header {
   background-color: #006747;
-}
-.FAQs .accordion-button:not(.collapsed) {
-  color: unset;
-  background-color: white;
-}
-.FAQs .accordion-title, .FAQs .accordion-body {
-  font-family: "Open Sans";
-  font-weight: 400 !important;
-}
-.FAQs .accordion-head {
-  border-bottom: 0.5px dashed rgba(75, 68, 83, 0.1) !important;
-}
-.FAQs .accordion-button:focus,
-.FAQs .accordion-button:not(.collapsed):focus {
-  outline: 0 !important;
-  box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.125);
 }
 
 .payment-method-card:hover,
 .payment-method-card:focus {
   border-color: #006747 !important;
 }
+.resolve-card .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
+}
 
-.DashboardCard {
-  height: 7rem;
+.resolve-card .nav-pills .nav-link {
+  background-color: #4d957e !important;
+  font-weight: 400 !important;
+  color: white;
 }
 
 .BgColor {
@@ -861,6 +449,14 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: rgba(104, 228, 67, 0.6784313725) !important;
 }
 
+.Style404 h1 {
+  font-size: 10rem !important;
+  color: #006747;
+}
+.Style404 p {
+  font-size: 0.7rem !important;
+}
+
 .Email,
 .Password {
   font-family: "Roboto", sans-serif;
@@ -870,7 +466,8 @@ label, select, option, .escrow-images, .date-input-field {
   font-weight: 700;
 }
 
-.Email input::-moz-placeholder, .Password input::-moz-placeholder {
+.Email input::-moz-placeholder,
+.Password input::-moz-placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -894,7 +491,9 @@ label, select, option, .escrow-images, .date-input-field {
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
+.AccountNum input::-moz-placeholder,
+.AccountName input::-moz-placeholder,
+.BankName input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04em !important;
@@ -914,7 +513,7 @@ label, select, option, .escrow-images, .date-input-field {
   filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
 }
 .UpdateProfileForm button {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -936,20 +535,20 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 textarea:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=time]:focus,
-input[type=week]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=color]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: rgba(75, 68, 83, 0.5);
   outline: 0 none;
@@ -972,7 +571,10 @@ input[type=color]:focus,
   border: 1.5px solid rgba(0, 103, 71, 0.3);
 }
 
-.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
+.Name input::-moz-placeholder,
+.UpdateEmail input::-moz-placeholder,
+.Phone input::-moz-placeholder,
+.Pass input::-moz-placeholder {
   font-weight: 300 !important;
   font-size: 1rem !important;
   letter-spacing: 0.04rem !important;
@@ -1006,24 +608,12 @@ input[type=color]:focus,
   font-size: 1.125rem !important;
 }
 
-.bank-transfer-input-field {
-  width: 90% !important;
-  margin: 0 15px;
-}
-
 .escrow-price-field {
   border-radius: 5px 0 0 5px !important;
 }
 
 .price-field {
   transform: translateX(12px);
-}
-
-.total-input {
-  width: 38% !important;
-  background-color: #006747 !important;
-  color: hsl(0deg, 0%, 100%) !important;
-  border-radius: 0 5px 5px 0 !important;
 }
 
 .ngn {
@@ -1043,7 +633,9 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+.escrow-input-field::-moz-placeholder,
+.escrow-price-field::-moz-placeholder,
+.bank-transfer-input-field::-moz-placeholder {
   font-family: "Open Sans" !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -1057,7 +649,7 @@ input[type=color]:focus,
 .escrow-input-field::placeholder,
 .escrow-price-field::placeholder,
 .bank-transfer-input-field::placeholder {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1071,12 +663,6 @@ input[type=color]:focus,
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
-.confirm-delivery-head {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 500 !important;
-}
-
 .confirm-delivery-pText {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
@@ -1087,7 +673,7 @@ input[type=color]:focus,
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1098,7 +684,7 @@ input[type=color]:focus,
 
 .escrow-form-error {
   color: rgba(180, 19, 10, 0.8) !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1111,28 +697,18 @@ input[type=color]:focus,
   text-indent: 10px !important;
 }
 
-.toggleBtnStyle {
-  margin-right: 30rem;
-}
-
-.checkboxStyle label {
-  color: #e5f0ed !important;
-}
-
-.sign-up-section {
-  transform: translateX(130px);
-}
-
 .labelStyle {
-  color: #8cbbac !important;
+  color: rgb(75, 68, 83) !important;
 }
 
 .labelStyle::-moz-placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .titleStyle {
@@ -1161,15 +737,22 @@ input[type=color]:focus,
   color: red !important;
 }
 
-.escrow-dropdown-field, .escrow-dropdown-field:focus, .escrow-dropdown-field:hover {
+.escrow-dropdown-field,
+.escrow-dropdown-field:focus,
+.escrow-dropdown-field:hover {
   outline: 0 !important;
   box-shadow: none !important;
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: 300 !important;
 }
+.contestPage .row {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 .Modal-Btn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1179,7 +762,7 @@ input[type=color]:focus,
   color: hsl(0deg, 0%, 100%);
 }
 .Modal-Btn .Modal-Btn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1194,7 +777,7 @@ input[type=color]:focus,
   background-color: #006747 !important;
 }
 .Modal-Btn .ModalMessage {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1209,7 +792,7 @@ input[type=color]:focus,
   background-color: #006747 !important;
 }
 .Modal-Btn .ModalMessage {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1224,7 +807,7 @@ input[type=color]:focus,
 }
 
 .nav-links {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1244,7 +827,7 @@ input[type=color]:focus,
 }
 
 .userDashboardNav {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1287,9 +870,22 @@ input[type=color]:focus,
   }
 }
 /**SideNav Styling**/
-.SideNav {
-  background-color: #006747;
-  color: hsl(0deg, 0%, 100%);
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+
+.offcanvas-lg,
+.offcanvas {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+}
+
+.offcanvas {
+  width: 250px !important;
+}
+
+.bottom {
+  bottom: 10% !important;
 }
 
 .SideNavLogo {
@@ -1297,29 +893,20 @@ input[type=color]:focus,
 }
 
 .SideNavItem {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: hsl(0deg, 0%, 100%);
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  color: hsl(0deg, 0%, 100%) !important;
   cursor: pointer !important;
   font-weight: 400;
 }
 
-.hoverBlock {
-  border: 3px solid hsl(0deg, 0%, 100%);
-  border-radius: 0.3rem;
-  position: absolute !important;
-  height: 2rem !important;
-  transform: translate(200px, 0px);
-  display: none;
-}
-
-.SideNavItem:hover,
-:focus {
-  font-weight: 700 !important;
-}
-.SideNavItem:hover .hoverBlock,
-:focus .hoverBlock {
-  display: block;
+.active-link {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px 8px 8px 0;
+  padding: 5px;
+  color: #006747 !important;
+  background-color: white;
 }
 
 .SideNavDropdown button {
@@ -1345,7 +932,7 @@ input[type=color]:focus,
 
 .completed,
 .resolved {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1356,7 +943,7 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1366,7 +953,7 @@ input[type=color]:focus,
 }
 
 .refunded {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1376,7 +963,7 @@ input[type=color]:focus,
 }
 
 .dispute {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1386,7 +973,7 @@ input[type=color]:focus,
 }
 
 .pending-confirmation {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1396,7 +983,7 @@ input[type=color]:focus,
 }
 
 .awaiting {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1406,7 +993,7 @@ input[type=color]:focus,
 }
 
 .pending-payment {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1419,6 +1006,21 @@ input[type=color]:focus,
   background-color: #d9ebe5;
 }
 
+@media screen and (max-width: 687px) {
+  .completed,
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 0.4375rem !important;
+  }
+}
 .FooterBgColor {
   background-color: #006747;
 }
@@ -1452,11 +1054,11 @@ input[type=color]:focus,
 
 @media screen and (max-width: 290px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.375px !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.375px !important;
   }
 }
@@ -1470,11 +1072,11 @@ input[type=color]:focus,
 }
 @media screen and (min-width: 688px) and (max-width: 992px) {
   .transaction-table thead tr th,
-.all-conflicts-table thead tr th {
+  .all-conflicts-table thead tr th {
     font-size: 0.75rem !important;
   }
   .transaction-table tbody tr td,
-.all-conflicts-table tbody tr td {
+  .all-conflicts-table tbody tr td {
     font-size: 0.75rem !important;
   }
 }
@@ -1490,98 +1092,11 @@ input[type=color]:focus,
   background-color: #e5f0ed;
 }
 
-.NotificationCardWrapper {
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 0.594rem;
-  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-}
-
-.NotificationCardBackBtn {
-  color: #006747 !important;
-}
-
-.NotificationCardHeader {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-}
-.NotificationCardHeader button {
-  margin: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  background-color: transparent !important;
-}
-.NotificationCardHeader h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.663rem;
-  line-height: 30px !important;
-  height: 1.938rem !important;
-}
-
-.NotificationCardDetails {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-  padding-inline: 3.5% !important;
-}
-.NotificationCardDetails h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  color: #4b4453;
-}
-.NotificationCardDetails p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  width: 95%;
-}
-.NotificationCardDetails button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  text-align: justify;
-  letter-spacing: 0.08rem;
-  color: #006747;
-}
-
-.NotificationCardDetails {
-  width: 100% !important;
-}
-.NotificationCardDetails p {
-  font-size: 0.75rem !important;
-  width: unset;
-  line-height: 16px;
-}
-.NotificationCardDetails img {
-  width: 1.8rem;
-}
-.NotificationCardDetails small {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300 !important;
-  font-size: 0.5rem !important;
-  letter-spacing: 0.04rem !important;
-}
-
-@media screen and (max-width: 991px) {
-  .NotificationCardHeader button {
-    font-size: 0.75rem;
-  }
-  .NotificationCardHeader h1 {
-    font-size: 1.31rem !important;
-  }
-}
-tr, tbody, td, th, thead {
-  font-size: small !important;
-}
-
 .PaginationBar button {
   margin: 0 !important;
 }
 .PaginationBar a {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;

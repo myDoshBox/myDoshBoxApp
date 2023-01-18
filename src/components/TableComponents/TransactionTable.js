@@ -1,7 +1,7 @@
 import Table from "react-bootstrap/Table";
 import Sample_User from "../../images/SampleUserImage.png";
-import { PaginationBar } from "../PaginationComponent";
-import { FilterButton } from "../ButtonsComponent/MiscBtns";
+// import { PaginationBar } from "../PaginationComponent";
+// import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import { Descripe } from "@mui/icons-material";
@@ -9,13 +9,15 @@ import { Descripe } from "@mui/icons-material";
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
   return (
-    <div className="d-flex justify-content-around align-items-center">
+    <div className="d-flex justify-content-around align-items-center border-bottom p-2">
       <img src={image} alt="SampleUserImg" className="" />
       <h6 className="d-none d-lg-block mx-3">{title}</h6>
       <div className="d-inline">
-        <p className="w-100">{description}</p>
+        <p className="w-100 ps-3">{description}</p>
       </div>
-      <button className="p-4 btn text-primary">{link}</button>
+      <button className="btn text-primary border-0 d-none d-md-block">
+        {link}
+      </button>
     </div>
   );
 };
