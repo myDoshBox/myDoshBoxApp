@@ -67,28 +67,24 @@
   opacity: 0 !important;
 }
 .offcanvas-lg,
-.offcanvas {
+.big-side-nav {
   background-color: #006747 !important;
   color: $secColor !important;
+  height: 100vh;
+  span {
+    letter-spacing: 1.3px !important;
+  }
 }
 
-.offcanvas {
-  width: 250px !important;
+.big-side-nav {
+  width: 290px !important;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
 }
 
 .bottom {
   bottom: 10% !important;
-}
-
-.SideNavLogo {
-  cursor: pointer !important;
-}
-.SideNavItem {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1rem !important;
-  color: $secColor !important;
-  cursor: pointer !important;
-  font-weight: 400;
 }
 
 .active-link {
@@ -110,9 +106,6 @@
   outline: unset !important;
 }
 
-.SideNavDropdown .show {
-  transform: translate3d(180px, 1px, 0px) !important;
-}
 .SideNavDropdown .show a:hover,
 :focus {
   font-weight: 700 !important;

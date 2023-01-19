@@ -805,29 +805,25 @@ input[type=color]:focus,
 }
 
 .offcanvas-lg,
-.offcanvas {
+.big-side-nav {
   background-color: #006747 !important;
   color: hsl(0deg, 0%, 100%) !important;
+  height: 100vh;
+}
+.offcanvas-lg span,
+.big-side-nav span {
+  letter-spacing: 1.3px !important;
 }
 
-.offcanvas {
-  width: 250px !important;
+.big-side-nav {
+  width: 290px !important;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
 }
 
 .bottom {
   bottom: 10% !important;
-}
-
-.SideNavLogo {
-  cursor: pointer !important;
-}
-
-.SideNavItem {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1rem !important;
-  color: hsl(0deg, 0%, 100%) !important;
-  cursor: pointer !important;
-  font-weight: 400;
 }
 
 .active-link {
@@ -849,10 +845,6 @@ input[type=color]:focus,
   display: none !important;
   width: unset !important;
   outline: unset !important;
-}
-
-.SideNavDropdown .show {
-  transform: translate3d(180px, 1px, 0px) !important;
 }
 
 .SideNavDropdown .show a:hover,

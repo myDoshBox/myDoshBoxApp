@@ -37,10 +37,13 @@ import {
   OngoingConflicts,
   OpenConflicts,
 } from "./pages/DISPUTE_PAGES/Conflicts";
+import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
+import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
 
 function App() {
   return (
     <Router>
+      <UserDashboardPage />
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
@@ -49,13 +52,15 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
+          <Route path="userdashboardpage" element={<UserDashboardPage />} />
           <Route path="usersettings" element={<UserSettingsPage />} />
           <Route path="usertransaction" element={<UserTransactionHistory />} />
           <Route path="userdispute" element={<UserDisputeHistory />} />
-          <Route path="userdashboardpage" element={<UserDashboardPage />} />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
 

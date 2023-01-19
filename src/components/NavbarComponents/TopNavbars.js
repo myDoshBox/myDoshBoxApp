@@ -76,7 +76,7 @@ export const GuestNavbar = () => {
               Contact Us
             </Link>
             <Link
-              to="/"
+              to="/signup"
               className="nav-links nav-btn"
               onClick={handleDisappear}
             >

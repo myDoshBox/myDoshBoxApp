@@ -4,13 +4,11 @@ import { AllConflictsTable } from "../../components/TableComponents/ConflictsTab
 
 export const OpenConflicts = () => {
   return (
-    <div>
-      <div className="row">
-        <div className="col-lg-3 col-sm-12 px-0"></div>
+    <div className="d-flex w-100">
+      {/* <NeutralsSideNav /> */}
 
-        <div className="col-lg-9 col-sm-12 mt-5 px-0">
-          <AllConflictsTable conflictType="open" />
-        </div>
+      <div className="col-lg-9 col-sm-12 mt-5 px-0">
+        <AllConflictsTable conflictType="open" />
       </div>
     </div>
   );
@@ -18,13 +16,11 @@ export const OpenConflicts = () => {
 
 export const ClosedConflicts = () => {
   return (
-    <div>
-      <div className="row">
-        <div className="col-lg-3 col-sm-12 px-0"></div>
+    <div className="d-flex w-100">
+      {/* <NeutralsSideNav /> */}
 
-        <div className="col-lg-9 col-sm-12 mt-5 px-0">
-          <AllConflictsTable conflictType="closed" />
-        </div>
+      <div className="col-lg-9 col-sm-12 mt-5 px-0">
+        <AllConflictsTable conflictType="closed" />
       </div>
     </div>
   );
@@ -32,13 +28,11 @@ export const ClosedConflicts = () => {
 
 export const OngoingConflicts = () => {
   return (
-    <div>
-      <div className="row">
-        <div className="col-lg-3 col-sm-12 px-0"></div>
+    <div className="d-flex w-100">
+      {/* <NeutralsSideNav /> */}
 
-        <div className="col-lg-9 col-sm-12 mt-5 px-0">
-          <AllConflictsTable conflictType="ongoing" />
-        </div>
+      <div className="col-lg-9 col-sm-12 mt-5 px-0">
+        <AllConflictsTable conflictType="ongoing" />
       </div>
     </div>
   );
