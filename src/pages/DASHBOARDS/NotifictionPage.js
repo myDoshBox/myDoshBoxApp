@@ -1,17 +1,20 @@
 import React from "react";
 import { NotificationCard } from "../../components/TableComponents/TransactionTable";
 import usersData from "../../data/usersData.json";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 import { FilterButton } from "../../components/ButtonsComponent/MiscBtns";
 import { PaginationBar } from "../../components/PaginationComponent";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const NotifictionPage = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col-md-9">
-          <Notification />
+        <div className="col-lg-3"></div>
+        <div className="col-lg-9 col-sm-12">
+          <UserDashboardNavbar />
+          <div className="mt-3">
+            <Notification />
+          </div>
         </div>
       </div>
     </div>
@@ -28,7 +31,7 @@ const Notification = () => {
         <div className="d-flex justify-content-end pb-3">
           <FilterButton />
         </div>
-        <div className="">
+        <div>
           {usersData.notificationData.map((notificationData) => {
             return (
               <div className="" key={notificationData.id}>

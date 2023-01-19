@@ -11,14 +11,18 @@ import { LearnMoreCard } from "../../components/CardComponents/InfoCards";
 import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 import { MiniDisputesCard } from "../../components/CardComponents/ConflictIssuesCards";
 import { AllConflictsTable } from "../../components/TableComponents/ConflictsTable";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const UserDashboardPage = () => {
   return (
     <div className="contestPage">
       <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col-md-9">
-          <UserDashboard />
+        <div className="col-lg-3"></div>
+        <div className="col-lg-9 col-sm-12">
+          <UserDashboardNavbar />
+          <div className="mt-5">
+            <UserDashboard />
+          </div>
         </div>
       </div>
     </div>
@@ -27,8 +31,8 @@ const UserDashboardPage = () => {
 
 const UserDashboard = () => {
   return (
-    <div className="row pt-5">
-      <div className="col-md-5 d-none d-md-block">
+    <div className="row">
+      <div className="col-lg-5 d-none d-md-block">
         <MiniProfileCard />
       </div>
       <div className="col-lg-7 col-sm-12 row">

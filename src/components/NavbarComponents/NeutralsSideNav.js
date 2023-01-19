@@ -82,7 +82,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DashboardIcon />
                 </div>
                 <NavLink
-                  to="neutraldashboardpage"
+                  to="home"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -209,7 +209,7 @@ const BigShow = () => {
                 <DashboardIcon />
               </div>
               <NavLink
-                to="neutraldashboardpage"
+                to="home"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
