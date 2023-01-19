@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import {
@@ -36,6 +36,10 @@ const SmallShowExample = ({ name, ...props }) => {
   const toggleShow = () => setShow((s) => !s);
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  const disappearEl = useRef(null);
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
   const navigate = useNavigate();
 
   const nav = () => {
@@ -68,6 +72,7 @@ const SmallShowExample = ({ name, ...props }) => {
         responsive="lg"
         className="w-75 d-lg-none text-white"
         {...props}
+        ref={disappearEl}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -86,6 +91,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Dashboard</span>
                 </NavLink>
@@ -111,6 +117,7 @@ const SmallShowExample = ({ name, ...props }) => {
                           className={({ isActive }) =>
                             isActive ? activeClassName : baseClassName
                           }
+                          onClick={handleDisappear}
                         >
                           Open Conflicts
                         </NavLink>
@@ -122,6 +129,7 @@ const SmallShowExample = ({ name, ...props }) => {
                           className={({ isActive }) =>
                             isActive ? activeClassName : baseClassName
                           }
+                          onClick={handleDisappear}
                         >
                           Ongoing Conflicts
                         </NavLink>
@@ -133,6 +141,7 @@ const SmallShowExample = ({ name, ...props }) => {
                           className={({ isActive }) =>
                             isActive ? activeClassName : baseClassName
                           }
+                          onClick={handleDisappear}
                         >
                           Closed Conflicts
                         </NavLink>
@@ -150,6 +159,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Notifications</span>
                 </NavLink>
@@ -163,6 +173,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Settings</span>
                 </NavLink>

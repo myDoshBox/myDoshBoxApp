@@ -10,9 +10,12 @@
       "Img2": "../../images/TicketImage/brokenScreen2.png",
       "Img3": "../../images/TicketImage/brokenScreen3.png",
       "Futher_info": "Auctor sem ut aliquam velit quis eu. Aliquam tortor eu interdum sodales eget maecenas sem. Ultrices a donec urna semperante Eget aliquet enim elit lorem hac feugiat. Eu convallis at amet pretium vestibulum et ultrices rutrum. Viverra vel congue laoreet cursus gravida morbi. A morbi nulla ut nisi, felis.Ultricies molestie pretium mauris, id amet vitae.",
-      "btn1": "Edit Ticket",
+      "btn1": "EDIT TICKET",
       "btn2": "PROCEED",
-      "btn3": "CANCEL"
+      "btn3": "CANCEL",
+      "link1": -1,
+      "link2": "../home",
+      "link3": "../home"
     }
   ],
   "Ticket2": [

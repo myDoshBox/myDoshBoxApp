@@ -106,7 +106,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <NavTransactionIcon />
                 </div>
                 <NavLink
-                  to="usertransaction"
+                  to="transaction"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -141,7 +141,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DisputeIcon />
                 </div>
                 <NavLink
-                  to="userdispute"
+                  to="dispute"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -155,7 +155,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <SettingsIcon />
                 </div>
                 <NavLink
-                  to="usersettings"
+                  to="settings"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -225,7 +225,7 @@ const BigShow = ({ name, ...props }) => {
                 <NavTransactionIcon />
               </div>
               <NavLink
-                to="usertransaction"
+                to="transaction"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
@@ -259,7 +259,7 @@ const BigShow = ({ name, ...props }) => {
                 <DisputeIcon />
               </div>
               <NavLink
-                to="userdispute"
+                to="dispute"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
@@ -273,7 +273,7 @@ const BigShow = ({ name, ...props }) => {
                 <SettingsIcon />
               </div>
               <NavLink
-                to="usersettings"
+                to="settings"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }

@@ -1,17 +1,16 @@
 import React from "react";
-import { MiniProfileCard } from "../../components/CardComponents/UsersCards";
-import { UserDashboardCard2 } from "../../components/CardComponents/UsersCards";
+import { MiniProfileCard } from "../../../components/CardComponents/UsersCards";
+import { UserDashboardCard2 } from "../../../components/CardComponents/UsersCards";
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
   CustomerCareIcon,
   InitiateDisputeIcon,
-} from "../../components/IconComponent/UserdashboardIcons";
-import { LearnMoreCard } from "../../components/CardComponents/InfoCards";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-import { MiniDisputesCard } from "../../components/CardComponents/ConflictIssuesCards";
-import { AllConflictsTable } from "../../components/TableComponents/ConflictsTable";
-import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+} from "../../../components/IconComponent/UserdashboardIcons";
+import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";
+import { MiniDisputesCard } from "../../../components/CardComponents/ConflictIssuesCards";
+import { AllConflictsTable } from "../../../components/TableComponents/ConflictsTable";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 
 const UserDashboardPage = () => {
   return (
@@ -40,14 +39,15 @@ const UserDashboard = () => {
           <div className="col-sm-12 mb-3 mb-md-2 col-lg-6 mt-4 mt-lg-0">
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
-              text={`Initiate
-Transaction`}
+              text={`Initiate Transaction`}
+              link={"../initiate-escrow"}
             />
           </div>
           <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
+              link={"../transaction"}
             />
           </div>
         </div>
@@ -60,8 +60,9 @@ Transaction`}
           </div>
           <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
             <UserDashboardCard2
-              text={`Settled Transactions`}
-              icon={<SettledTransactionIcon />}
+              text={`Initiate Disputes`}
+              icon={<InitiateDisputeIcon />}
+              link={"../initiate-dispute"}
             />
           </div>
         </div>

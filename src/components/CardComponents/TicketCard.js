@@ -1,10 +1,7 @@
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import TicketData from "../../data/TicketData.json";
-// import pop from "../../images/pop.PNG";
-// import brokenScreen1 from "../../images/brokenScreen1.png";
-// import brokenScreen2 from "../../images/brokenScreen2.png";
-// import brokenScreen3 from "../../images/brokenScreen3.png";
+import { Link } from "react-router-dom";
 
 // For Generated Ticket Card
 export const GeneratedTicketCard = (props) => {
@@ -20,6 +17,9 @@ export const GeneratedTicketCard = (props) => {
     btn1,
     btn2,
     btn3,
+    link1,
+    link2,
+    link3,
   } = props;
   return (
     <section>
@@ -27,7 +27,9 @@ export const GeneratedTicketCard = (props) => {
         <div className="card border-0 shadow" style={{ width: "40rem" }}>
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <GeneralBtn lefticon={<Cancel />} />
+              <Link to={"../home"}>
+                <GeneralBtn lefticon={<Cancel />} />
+              </Link>
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
@@ -104,18 +106,24 @@ export const GeneratedTicketCard = (props) => {
               <p>{Futher_info}</p>
             </div>
             <div className="mb-3 d-flex justify-content-evenly">
-              <GeneralBtn
-                text={btn1}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
-              <GeneralBtn
-                text={btn2}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
-              <GeneralBtn
-                text={btn3}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger"
-              />
+              <Link to={link1}>
+                <GeneralBtn
+                  text={btn1}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                />
+              </Link>
+              <Link to={link2}>
+                <GeneralBtn
+                  text={btn2}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                />
+              </Link>
+              <Link to={link3}>
+                <GeneralBtn
+                  text={btn3}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger"
+                />
+              </Link>
             </div>
           </div>
         </div>
