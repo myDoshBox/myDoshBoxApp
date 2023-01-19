@@ -2,11 +2,7 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
 
 import { CalendarButton } from "../ButtonsComponent/MiscBtns";
-
-// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-// import { Pie, Doughnut } from "react-chartjs-2";
-// ChartJS.register(ArcElement, Tooltip, Legend);
-
+import { Link } from "react-router-dom";
 // DisputesCard
 export const MiniDisputesCard = () => {
   return (
@@ -24,7 +20,7 @@ export const MiniDisputesCard = () => {
               <Nav.Item>
                 <Nav.Link eventKey="second">History</Nav.Link>
               </Nav.Item>
-              <Dropdown className="mt-2 mt-lg-3 ms-lg-5">
+              <Dropdown className="mt-2 ms-lg-5">
                 <Dropdown.Toggle
                   variant="secondary"
                   id="dropdown-basic"
@@ -111,7 +107,7 @@ export const MiniDisputesCard = () => {
               </Tab.Pane>
 
               <Tab.Pane eventKey="second">
-                <div className="d-flex justify-content-between px-4">
+                <div className="d-flex justify-content-between px-4 mt-3">
                   <div className="d-flex">
                     <div className=" rounded-circle p-3 bg-primary"></div>
                     <div className="d-flex flex-column ms-3">

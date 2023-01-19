@@ -1,9 +1,10 @@
 import {
   GeneralBtnStyle1,
   GeneralBtnStyle1Icon,
-  ViewDetailsButton,
 } from "../../../components/ButtonsComponent/Button";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { Link } from "react-router-dom";
 
 const UserDisputeHistory = () => {
   return (
@@ -11,8 +12,11 @@ const UserDisputeHistory = () => {
       <div className="row">
         <div className="col-lg-3 col-sm-12"></div>
 
-        <div className="col-lg-9 col-sm-12 mt-5">
-          <DisputeCard />
+        <div className="col-lg-9 col-sm-12">
+          <UserDashboardNavbar />
+          <div className="mt-5">
+            <DisputeCard />
+          </div>
         </div>
       </div>
     </div>
@@ -28,7 +32,9 @@ const DisputeCard = () => {
             <h5>Disputes</h5>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <GeneralBtnStyle1Icon text={"Back"} lefticon={<BackIcon />} />
+            <Link to={"../home"}>
+              <GeneralBtnStyle1Icon text={"Back"} lefticon={<BackIcon />} />
+            </Link>
           </div>
         </div>
         {DisputesData.disputes_data.map((history) => {

@@ -22,7 +22,11 @@ import UserDashboardPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserDashboardPa
 import NotifictionPage from "./pages/DASHBOARDS/USER_DASHBOARD/NotifictionPage";
 // import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
-import UserSettingsPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
+import UserSettingsPage, {
+  ReportIssuesformPage,
+  UpdateBankDetailsPage,
+  UpdateProfilePage,
+} from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
@@ -37,6 +41,13 @@ import {
   OngoingConflicts,
   OpenConflicts,
 } from "./pages/DISPUTE_PAGES/Conflicts";
+import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
+import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
+import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
+import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
+import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
+import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
+import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 
 function App() {
   return (
@@ -49,14 +60,27 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route path="usersettings" element={<UserSettingsPage />} />
-          <Route path="usertransaction" element={<UserTransactionHistory />} />
-          <Route path="userdispute" element={<UserDisputeHistory />} />
-          <Route path="userdashboardpage" element={<UserDashboardPage />} />
+          <Route path="home" element={<UserDashboardPage />} />
+          <Route path="settings" element={<UserSettingsPage />} />
+          <Route path="transaction" element={<UserTransactionHistory />} />
+          <Route path="dispute" element={<UserDisputeHistory />} />
           <Route path="notification" element={<NotifictionPage />} />
+          <Route path="updateprofile" element={<UpdateProfilePage />} />
+          <Route path="updatebank" element={<UpdateBankDetailsPage />} />
+          <Route path="reportissues" element={<ReportIssuesformPage />} />
+          <Route path="initiate-escrow" element={<InitiateEscrow />} />
+          <Route
+            path="transactionsummary"
+            element={<TransactionSummaryPage />}
+          />
+          <Route path="agreement" element={<EscrowAgreement />} />
+          <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
+          <Route path="ticket" element={<GeneratedTicket />} />
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
@@ -70,7 +94,7 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
 
-          <Route path="neutraldashboardpage" element={<NeutralDashboard />} />
+          <Route path="home" element={<NeutralDashboard />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
