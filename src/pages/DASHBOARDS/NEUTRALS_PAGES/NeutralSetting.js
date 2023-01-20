@@ -4,19 +4,17 @@ import { UpdatePassword } from "../../../components/FormComponents.js/UpdateForm
 import NeutralsSideNav from "../../../components/NavbarComponents/NeutralsSideNav";
 export const NeutralSetting = () => {
   return (
-    <section className="row" style={{ width: "54rem" }}>
+    <section className="row">
       {/* sideBar here */}
-      {/* <div className="col-3">
-        <NeutralsSideNav />
-      </div> */}
+      <div className="col-lg-3 col-sm-12 px-0"></div>
       {/* sideBar here */}
-      <div className="col-9">
-        <div className="row">
-          <div className="col">
+      <div className="col-lg-9 col-sm-12">
+        <div className="row mt-5">
+          <div className="col-3 px-0">
             <p className="fw-bold">UPDATE PROFILE</p>
             <p className="fw-bold">UPDATE PASSWORD</p>
           </div>
-          <div className="col">
+          <div className="col-9 px-0">
             {/* First Card Section Starts */}
             <div className="mb-4" style={{ width: "40rem" }}>
               <UpdateProfile />

@@ -138,13 +138,13 @@ export const SignInForm = () => {
         <div className="d-flex justify-content-center mt-2">
           <p>
             <span style={{ fontSize: "14px" }}>Don't have an account?</span>
-            <a
-              href="#"
+            <Link
+              to={"../signup"}
               className="text-decoration-none ms-1 text-success"
               style={{ fontSize: "14px" }}
             >
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>

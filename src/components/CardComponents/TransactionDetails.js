@@ -1,18 +1,21 @@
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import product from "../../images/productimage.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { Link } from "react-router-dom";
 
 // DashboardConflictCards (Buying,Selling,InitiateTransactionCards,SettledTransactionsCard, ConflictCards)
-export const DashboardConflictCards = ({ icon, text, value }) => {
+export const DashboardConflictCards = ({ icon, text, value,link }) => {
   return (
     <div class="col-md-4 mb-4 mb-lg-0">
-      <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow-sm border-0 rounded-2 DashboardCard">
+      <Link to={link} className="text-decoration-none">
+      <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow border-0 rounded-2 DashboardCard">
         {icon}
         <div>
           <p className="m-0 ms-2 opacity-50">{value}</p>
           <p className="m-0 ms-2">{text}</p>
         </div>
       </div>
+      </Link>
     </div>
   );
 };

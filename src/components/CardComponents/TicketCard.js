@@ -1,10 +1,7 @@
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import TicketData from "../../data/TicketData.json";
-// import pop from "../../images/pop.PNG";
-// import brokenScreen1 from "../../images/brokenScreen1.png";
-// import brokenScreen2 from "../../images/brokenScreen2.png";
-// import brokenScreen3 from "../../images/brokenScreen3.png";
+import { Link } from "react-router-dom";
 
 // For Generated Ticket Card
 export const GeneratedTicketCard = (props) => {
@@ -20,14 +17,19 @@ export const GeneratedTicketCard = (props) => {
     btn1,
     btn2,
     btn3,
+    link1,
+    link2,
+    link3,
   } = props;
   return (
     <section>
       <div>
-        <div className="card border-0 shadow" style={{ width: "40rem" }}>
+        <div className="card border-0 shadow">
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <GeneralBtn lefticon={<Cancel />} />
+              <Link to={"../home"}>
+                <GeneralBtn lefticon={<Cancel />} />
+              </Link>
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
@@ -103,19 +105,25 @@ export const GeneratedTicketCard = (props) => {
               <h5>FURTHER INFORMATION: </h5>
               <p>{Futher_info}</p>
             </div>
-            <div className="mb-3 d-flex justify-content-evenly">
-              <GeneralBtn
-                text={btn1}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
-              <GeneralBtn
-                text={btn2}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
-              <GeneralBtn
-                text={btn3}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger"
-              />
+            <div className="mb-3 d-flex justify-content-md-evenly flex-column flex-md-row">
+              <Link to={link1} className="mx-auto mb-2">
+                <GeneralBtn
+                  text={btn1}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3"
+                />
+              </Link>
+              <Link to={link2} className="mx-auto mb-2">
+                <GeneralBtn
+                  text={btn2}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4"
+                />
+              </Link>
+              <Link to={link3} className="mx-auto mb-2">
+                <GeneralBtn
+                  text={btn3}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4"
+                />
+              </Link>
             </div>
           </div>
         </div>

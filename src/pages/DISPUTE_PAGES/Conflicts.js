@@ -1,33 +1,55 @@
 import NeutralsSideNav from "../../components/NavbarComponents/NeutralsSideNav";
 // import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { AllConflictsTable } from "../../components/TableComponents/ConflictsTable";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 export const OpenConflicts = () => {
   return (
-    <div className="d-flex w-100">
-      {/* <NeutralsSideNav /> */}
+    <div>
+      <div className="d-flex w-100">
+        <NeutralsSideNav />
 
-      <AllConflictsTable conflictType="open" />
+        <div className="col-lg-9 col-sm-12 px-0">
+          <div className="mt-3 pe-lg-5">
+            <UserDashboardNavbar />
+          </div>
+          <AllConflictsTable conflictType="open" />
+        </div>
+      </div>
     </div>
   );
 };
 
 export const ClosedConflicts = () => {
   return (
-    <div className="d-flex w-100">
-      {/* <NeutralsSideNav /> */}
+    <div>
+      <div className="d-flex w-100">
+        <NeutralsSideNav />
 
-      <AllConflictsTable conflictType="closed" />
+        <div className="col-lg-9 col-sm-12 px-0">
+          <div className="mt-3 pe-lg-5">
+            <UserDashboardNavbar />
+          </div>
+          <AllConflictsTable conflictType="closed" />
+        </div>
+      </div>
     </div>
   );
 };
 
 export const OngoingConflicts = () => {
   return (
-    <div className="d-flex w-100">
-      {/* <NeutralsSideNav /> */}
+    <div>
+      <div className="d-flex w-100">
+        <NeutralsSideNav />
 
-      <AllConflictsTable conflictType="ongoing" />
+        <div className="col-lg-9 col-sm-12 px-0">
+          <div className="mt-3 pe-lg-5">
+            <UserDashboardNavbar />
+          </div>
+          <AllConflictsTable conflictType="ongoing" />
+        </div>
+      </div>
     </div>
   );
 };

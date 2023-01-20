@@ -76,7 +76,7 @@ export const GuestNavbar = () => {
               Contact Us
             </Link>
             <Link
-              to="/"
+              to="/signup"
               className="nav-links nav-btn"
               onClick={handleDisappear}
             >
@@ -96,7 +96,7 @@ export const GuestNavbar = () => {
 export const UserDashboardNavbar = () => {
   return (
     <Container>
-      <Nav className="justify-content-end userDashboardNav" activeKey="/home">
+      <Nav className="justify-content-end userDashboardNav position-sticky bg-white top-0 end-0">
         <Nav.Item className=" mx-md-5 mt-2">
           <Form className="searchField">
             <Form.Control

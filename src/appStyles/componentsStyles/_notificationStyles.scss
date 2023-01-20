@@ -2,7 +2,13 @@
 @use "../generalStyles/fonts" as *;
 
 @mixin notificationStyle {
-  
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .completed,
 .resolved {
@@ -57,37 +63,19 @@
 .PartnerStyle {
   background-color: #d9ebe5;
 }
-// @use "../color" as *;
-// @use "../fonts" as *;
 
-// @media screen and (max-width: 290px) {
-//   .completed,
-//   .awaiting,
-//   .canceled,
-//   .dispute,
-//   .pending-confirmation,
-//   .pending-payment,
-//   .refunded,
-//   .resolved,
-//   .unresolved {
-//     width: 80px !important;
-//     height: 20px !important;
-//     font-size: 12px !important;
-//   }
-// }
-
-// @media screen and (max-width: 687px) {
-//   .completed,
-//   .awaiting,
-//   .canceled,
-//   .dispute,
-//   .pending-confirmation,
-//   .pending-payment,
-//   .refunded,
-//   .resolved,
-//   .unresolved {
-//     // width: 80px !important;
-//     // height: 20px !important;
-//     font-size: 0.6rem !important;
-//   }
-// }
+@media screen and (max-width: 687px) {
+  .completed,
+  .awaiting,
+  .canceled,
+  .dispute,
+  .pending-confirmation,
+  .pending-payment,
+  .refunded,
+  .resolved,
+  .unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 0.6rem !important;
+  }
+}

@@ -885,29 +885,25 @@ input[type=color]:focus,
 }
 
 .offcanvas-lg,
-.offcanvas {
+.big-side-nav {
   background-color: #006747 !important;
   color: hsl(0deg, 0%, 100%) !important;
+  height: 100vh;
+}
+.offcanvas-lg span,
+.big-side-nav span {
+  letter-spacing: 1.3px !important;
 }
 
-.offcanvas {
-  width: 250px !important;
+.big-side-nav {
+  width: 290px !important;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
 }
 
 .bottom {
   bottom: 10% !important;
-}
-
-.SideNavLogo {
-  cursor: pointer !important;
-}
-
-.SideNavItem {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1rem !important;
-  color: hsl(0deg, 0%, 100%) !important;
-  cursor: pointer !important;
-  font-weight: 400;
 }
 
 .active-link {
@@ -931,10 +927,6 @@ input[type=color]:focus,
   outline: unset !important;
 }
 
-.SideNavDropdown .show {
-  transform: translate3d(180px, 1px, 0px) !important;
-}
-
 .SideNavDropdown .show a:hover,
 :focus {
   font-weight: 700 !important;
@@ -942,6 +934,13 @@ input[type=color]:focus,
 
 .completed,
 .resolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -953,6 +952,13 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -963,6 +969,13 @@ input[type=color]:focus,
 }
 
 .refunded {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -978,6 +991,13 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(103, 0, 99);
   background-color: rgba(103, 0, 99, 0.1);
 }
@@ -988,11 +1008,25 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 103, 4);
   background-color: rgba(0, 103, 4, 0.1);
 }
 
 .awaiting {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -1003,6 +1037,13 @@ input[type=color]:focus,
 }
 
 .pending-payment {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -1016,6 +1057,21 @@ input[type=color]:focus,
   background-color: #d9ebe5;
 }
 
+@media screen and (max-width: 687px) {
+  .completed,
+.awaiting,
+.canceled,
+.dispute,
+.pending-confirmation,
+.pending-payment,
+.refunded,
+.resolved,
+.unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 0.6rem !important;
+  }
+}
 .FooterBgColor {
   background-color: #006747;
 }
@@ -1060,11 +1116,9 @@ input[type=color]:focus,
 }
 .PaginationBar :first-child {
   margin-inline: unset !important;
-  margin-right: 3% !important;
 }
 .PaginationBar :last-child {
   margin-inline: unset !important;
-  margin-left: 3% !important;
 }
 
 @media screen and (max-width: 764px) {
