@@ -43,7 +43,6 @@ import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
 function App() {
   return (
     <Router>
-      <UserDashboardPage />
       <Routes>
         {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
@@ -52,6 +51,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          ``
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
         </Route>
@@ -78,7 +78,7 @@ function App() {
           <Route path="neutraldashboardpage" element={<NeutralDashboard />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-        <Route path="*" element={<Error404 />} />
+        {/* <Route path="*" element={<Error404 />} /> */}
       </Routes>
       <Footer />
     </Router>
