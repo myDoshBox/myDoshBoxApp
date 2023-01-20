@@ -10,8 +10,14 @@ import {
   WhatsAppIcon,
 } from "./IconComponent/SocialMediaIcons";
 import { SubscribeForm } from "../components/FormComponents.js/ContactForms";
+import { useRef } from "react";
 
 const Footer = () => {
+  const disappearEl = useRef(null);
+
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
   const location = useLocation();
   const [showFooter, setShowFooter] = useState(false);
   useEffect(() => {
@@ -50,6 +56,7 @@ const Footer = () => {
               <h6 className="text-white">The Project</h6>
               <span class="nav flex-column">
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to="/"
                   className="text-white opacity-75 nav-item text-white"
@@ -58,6 +65,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to="/aboutus"
                   className="text-white opacity-75 nav-item"
@@ -66,6 +74,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to=".."
                   className="text-white opacity-75 nav-item link"
@@ -74,6 +83,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to="/pricingpage"
                   className="text-white opacity-75 nav-item"
@@ -86,6 +96,7 @@ const Footer = () => {
               <h6 className="text-white">Support</h6>
               <ul class="nav flex-column">
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to="/contactus"
                   className="text-white opacity-75 nav-item"
@@ -94,6 +105,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to="/faqs"
                   className="text-white opacity-75
@@ -103,6 +115,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to=".."
                   className="text-white opacity-75 nav-item"
@@ -111,6 +124,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to=".."
                   className="text-white opacity-75 nav-item"
@@ -119,6 +133,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
+                  onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
                   to=".."
                   className="text-white opacity-75 nav-item"
