@@ -36,6 +36,8 @@ const SmallShowExample = ({ name, ...props }) => {
   const toggleShow = () => setShow((s) => !s);
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  let dropdownbaseClassName = "text-decoration-none , text-dark";
+  let dropdownactiveClassName = "text-decoration-none , text-success";
   const disappearEl = useRef(null);
   const handleDisappear = () => {
     disappearEl.style.display = "none";
@@ -115,9 +117,10 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="open-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
-                          onClick={handleDisappear}
                         >
                           Open Conflicts
                         </NavLink>
@@ -127,9 +130,10 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="ongoing-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
-                          onClick={handleDisappear}
                         >
                           Ongoing Conflicts
                         </NavLink>
@@ -139,9 +143,10 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="closed-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
-                          onClick={handleDisappear}
                         >
                           Closed Conflicts
                         </NavLink>
