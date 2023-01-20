@@ -110,10 +110,10 @@ const InitiateEscrowForm = () => {
     setShowServiceForm(true);
   };
   return (
-    <div className="w-100">
+    <div className="px-lg-5">
       <Form
         onSubmit={handleSubmit}
-        className="mx-lg-5 mt-5 shadow InitiateEscrow p-3 p-lg-5 "
+        className="w-100 mt-5 shadow InitiateEscrow p-3 p-lg-5 rounded"
       >
         <Form.Group className="">
           <Form.Label className="m-0">Phone Number</Form.Label>

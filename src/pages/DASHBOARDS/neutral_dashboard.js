@@ -11,30 +11,36 @@ import {
 } from "../../components/IconComponent/NeutralsDashboardIcons";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import NeutralsSideNav from "../../components/NavbarComponents/NeutralsSideNav";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const NeutralDashboard = () => {
   return (
-    <div>
       <div className="row">
         <div className="col-lg-3 col-sm-12 px-0"></div>
 
-        <div className="col-lg-9 col-sm-12 mt-5">
-          <div className="mx-auto w-100 px-3 pe-lg-5 ps-lg-0">
+        <div className="col-lg-9 col-sm-12">
+          <div className="mt-3 pe-lg-5">
+          <UserDashboardNavbar/>
+          </div>
+          <div className="mx-auto w-100 px-3 pe-lg-5 ps-lg-0 mt-5">
             <div className="row gx-lg-3 justify-content-between align-items-center mt-5">
               <DashboardConflictCards
                 value="100"
                 text="Open Conflicts"
                 icon={<OpenConflictIcon />}
+                link={`../open-conflicts`}
               />
               <DashboardConflictCards
                 value="75"
                 text="Ongoing Conflicts"
                 icon={<OngoingConflictIcon />}
+                link={`../ongoing-conflicts`}
               />
               <DashboardConflictCards
                 value="250"
                 text="Closed Conflicts"
                 icon={<ClosedConflictIcon />}
+                link={`../closed-conflicts`}
               />
             </div>
             <div className="card mx-auto mt-4 p-3 shadow border-0">
@@ -92,7 +98,7 @@ const NeutralDashboard = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

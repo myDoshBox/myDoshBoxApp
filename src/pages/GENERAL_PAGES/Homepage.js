@@ -42,7 +42,7 @@ const HeroSection = () => {
           <p>Lorem ipsum dolor sitamet dolor</p>
         </div>
         <div className="text-center">
-          <Link to="/">
+          <Link to="/signup">
             <GeneralBtn
               text={`START A TRANSACTION`}
               styles={`GeneralBtnStyle1 btn all-btn text-white`}

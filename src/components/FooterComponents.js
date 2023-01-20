@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ScrollUpIcon } from "./IconComponent/NavigationAndViewIcon";
 import FooterLogo from "../images/FooterLogo.jpg";
 import {
@@ -10,8 +10,26 @@ import {
   WhatsAppIcon,
 } from "./IconComponent/SocialMediaIcons";
 
-export const Footer = () => {
-  return (
+const Footer = () => {
+  const location = useLocation();
+  const [showFooter, setShowFooter] = useState(false);
+  useEffect(() => {
+    const paths = [
+      "/",
+      "/aboutus",
+      "/contactus",
+      "/pricingpage",
+      "/faqs",
+      "/signin",
+      "/signup",
+    ];
+    if (paths.includes(location.pathname)) {
+      setShowFooter(true);
+    } else {
+      setShowFooter(false);
+    }
+  }, [location.pathname]);
+  return showFooter ? (
     <footer className="FooterBgColor mt-5 pb-5">
       {/* Back to Top Icon Section starts  */}
       <div className="d-flex justify-content-end pt-3 me-3">
@@ -30,16 +48,16 @@ export const Footer = () => {
             <h6>The Project</h6>
             <ul className="fs-6 list-inline">
               <li>
-                <a href="">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="">About Us</a>
+                <Link to="/aboutus">About Us</Link>
               </li>
               <li>
-                <a href="">Services</a>
+                <Link to="">Services</Link>
               </li>
               <li>
-                <a href="">Pricing</a>
+                <Link to="/pricingpage">Pricing</Link>
               </li>
             </ul>
           </div>
@@ -47,19 +65,19 @@ export const Footer = () => {
             <h6>Support</h6>
             <ul className="fs-6 list-inline text-white">
               <li>
-                <a href="">Contact</a>
+                <Link to="/contactus">Contact</Link>
               </li>
               <li>
-                <a href="">FAQ</a>
+                <Link to="/faqs">FAQ</Link>
               </li>
               <li>
-                <a href="">Terms Of Use</a>
+                <Link to="">Terms Of Use</Link>
               </li>
               <li>
-                <a href="">Private Policy</a>
+                <Link to="">Private Policy</Link>
               </li>
               <li>
-                <a href="">Customer Care</a>
+                <Link to="">Customer Care</Link>
               </li>
             </ul>
           </div>
@@ -132,5 +150,7 @@ export const Footer = () => {
       </nav>
       {/* Footer Menu Section Ends  */}
     </footer>
-  );
+  ) : null;
 };
+
+export default Footer;
