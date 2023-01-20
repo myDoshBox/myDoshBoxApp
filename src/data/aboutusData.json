@@ -38,7 +38,7 @@
     }
   ],
 
-  "marketing_dev_team": [
+  "marketing_team": [
     {
       "id": 1,
       "images": "../../images/contactImgs/aboutusPix2.png",
@@ -56,7 +56,7 @@
     }
   ],
 
-  "founder_team": [
+  "developers_team": [
     {
       "id": 1,
       "images": "../../images/contactImgs/aboutusPix.png",
@@ -67,6 +67,22 @@
 
     {
       "id": 2,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "jack",
+      "job_description": "game dev"
+    },
+
+    {
+      "id": 3,
+      "images": "../../images/contactImgs/aboutusPix2.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
+      "name": "jack",
+      "job_description": "game dev"
+    },
+
+    {
+      "id": 4,
       "images": "../../images/contactImgs/aboutusPix2.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eligendi consectetur dolorum modi odio enim accusamus architecto at quibusdam officiis.",
       "name": "jack",
