@@ -23,8 +23,8 @@ const NotifictionPage = () => {
 
 const Notification = () => {
   return (
-    <div className="row">
-      <div className="card col-md-10 col-sm-12 mx-auto mt-4 p-4 shadow border-0">
+    <div className="row pe-lg-5">
+      <div className="card mx-auto mt-4 p-4 shadow border-0">
         <div className="card-body">
           <h3 className="pb-1">Notifications</h3>
         </div>
@@ -40,7 +40,7 @@ const Notification = () => {
             );
           })}
         </div>
-        <div className="p-5">
+        <div className="px-lg-5 py-4">
           <PaginationBar />
         </div>
       </div>

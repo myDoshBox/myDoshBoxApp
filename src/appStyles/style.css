@@ -1116,11 +1116,9 @@ input[type=color]:focus,
 }
 .PaginationBar :first-child {
   margin-inline: unset !important;
-  margin-right: 3% !important;
 }
 .PaginationBar :last-child {
   margin-inline: unset !important;
-  margin-left: 3% !important;
 }
 
 @media screen and (max-width: 764px) {

@@ -6,7 +6,7 @@ export const PaginationBar = () => {
   return (
     // NOTE: Dynamically add the aria-current on each page
     <nav role="navigation" aria-label="Page Navigation">
-      <ul className="list-unstyled d-flex justify-content-center align-items-center PaginationBar">
+      <ul className="list-unstyled d-flex justify-content-between align-items-center PaginationBar mb-0">
         <li className="page-item">
           <GeneralBtn
             lefticon={<PreviousIcon />}
