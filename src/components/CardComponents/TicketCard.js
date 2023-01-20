@@ -24,7 +24,7 @@ export const GeneratedTicketCard = (props) => {
   return (
     <section>
       <div>
-        <div className="card border-0 shadow" style={{ width: "40rem" }}>
+        <div className="card border-0 shadow">
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
               <Link to={"../home"}>
@@ -105,23 +105,23 @@ export const GeneratedTicketCard = (props) => {
               <h5>FURTHER INFORMATION: </h5>
               <p>{Futher_info}</p>
             </div>
-            <div className="mb-3 d-flex justify-content-evenly">
-              <Link to={link1}>
+            <div className="mb-3 d-flex justify-content-md-evenly flex-column flex-md-row">
+              <Link to={link1} className="mx-auto mb-2">
                 <GeneralBtn
                   text={btn1}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3"
                 />
               </Link>
-              <Link to={link2}>
+              <Link to={link2} className="mx-auto mb-2">
                 <GeneralBtn
                   text={btn2}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4"
                 />
               </Link>
-              <Link to={link3}>
+              <Link to={link3} className="mx-auto mb-2">
                 <GeneralBtn
                   text={btn3}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger"
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4"
                 />
               </Link>
             </div>
