@@ -1,14 +1,16 @@
 import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
 import { UpdateProfile } from "../../../components/FormComponents.js/UpdateForms";
 import { UpdatePassword } from "../../../components/FormComponents.js/UpdateForms";
-
+import NeutralsSideNav from "../../../components/NavbarComponents/NeutralsSideNav";
 export const NeutralSetting = () => {
   return (
     <section className="row" style={{ width: "54rem" }}>
       {/* sideBar here */}
-      <div></div>
+      {/* <div className="col-3">
+        <NeutralsSideNav />
+      </div> */}
       {/* sideBar here */}
-      <div>
+      <div className="col-9">
         <div className="row">
           <div className="col">
             <p className="fw-bold">UPDATE PROFILE</p>
