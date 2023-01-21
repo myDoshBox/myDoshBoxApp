@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
+import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
 
 export const UpdateProfile = () => {
   const initialValues = {
@@ -63,7 +64,7 @@ export const UpdateProfile = () => {
   return (
     <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Profile</p>
-      <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
+      <Form className="ms-3 mt-4 mb-5">
         <Form.Group className="Email mb-3" controlId="Email">
           <Form.Label className="m-0">Email Address</Form.Label>
           <Form.Control
@@ -72,7 +73,6 @@ export const UpdateProfile = () => {
             name="email"
             value={UpdateProfile.email}
             onChange={handleChange}
-            className=""
           />
           <small className="text-danger fw-lighter">
             {ValidationError.email}
@@ -86,16 +86,13 @@ export const UpdateProfile = () => {
             name="phone"
             value={UpdateProfile.phone}
             onChange={handleChange}
-            className=""
           />
           <small className="text-danger fw-lighter">
             {ValidationError.phone}
           </small>
         </Form.Group>
-        <div className="">
-          <Button type="submit" className="border-0" onClick={handleSubmit}>
-            Save Changes
-          </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -165,7 +162,7 @@ export const UpdatePassword = () => {
   return (
     <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Password</p>
-      <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
+      <Form className="ms-3 mt-4 mb-5">
         <Form.Group className="mb-3 Password" controlId="NewPassword">
           <Form.Label className="m-0" style={{ width: "15rem" }}>
             New Password
@@ -176,7 +173,6 @@ export const UpdatePassword = () => {
             name="NewPassword"
             value={UpdatePassword.NewPassword}
             onChange={handleChange}
-            className=""
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.NewPassword}
@@ -191,16 +187,13 @@ export const UpdatePassword = () => {
             name="ConfirmPassword"
             value={UpdatePassword.ConfirmPassword}
             onChange={handleChange}
-            className=""
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.ConfirmPassword}
           </small>
         </Form.Group>
-        <div className="">
-          <Button type="submit" className="border-0" onClick={handleSubmit}>
-            Save Changes
-          </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -312,9 +305,9 @@ export const UpdateBankDetails = () => {
         </small>
       </Form.Group>
       <div className="mb-4">
-        <Button type="submit" className="border-0" onClick={handleSubmit}>
-          Update
-        </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Update"} />
+        </div>
       </div>
     </Form>
   );
@@ -463,10 +456,8 @@ export const UserUpdateProfile = () => {
         </small>
       </Form.Group>
 
-      <div className="mb-4">
-        <Button type="submit" className="border-0" onClick={handleSubmit}>
-          Update Profile
-        </Button>
+      <div onClick={handleSubmit} className="mb-4">
+        <GeneralBtnStyle1 text={"Update Profile"} />
       </div>
     </Form>
   );
