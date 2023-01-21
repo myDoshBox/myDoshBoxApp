@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 

@@ -1,10 +1,8 @@
 import Table from "react-bootstrap/Table";
-import Sample_User from "../../images/SampleUserImage.png";
 // import { PaginationBar } from "../PaginationComponent";
 // import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
-import { Descripe } from "@mui/icons-material";
 
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;

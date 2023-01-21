@@ -1,8 +1,6 @@
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
-import { Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
+import { Nav, Tab, Dropdown } from "react-bootstrap";
 
-import { CalendarButton } from "../ButtonsComponent/MiscBtns";
-import { Link } from "react-router-dom";
 // DisputesCard
 export const MiniDisputesCard = () => {
   return (

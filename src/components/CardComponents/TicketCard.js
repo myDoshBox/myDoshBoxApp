@@ -1,6 +1,5 @@
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
-import TicketData from "../../data/TicketData.json";
 import { Link } from "react-router-dom";
 
 // For Generated Ticket Card
