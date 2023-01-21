@@ -78,7 +78,9 @@ const SmallShowExample = ({ name, ...props }) => {
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <img src={doshlogo} alt="logo" />
+            <Link to={"/"}>
+              <img src={doshlogo} alt="logo" />
+            </Link>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
@@ -216,7 +218,9 @@ const BigShow = () => {
   return (
     <>
       <div className="d-none d-lg-block big-side-nav">
-        <img src={doshlogo} alt="logo" className="mb-5" />
+        <Link to="/">
+          <img src={doshlogo} alt="logo" className="mb-5" />
+        </Link>
 
         <div className="d-flex justify-content-between flex-column">
           <ul className="ps-2">
@@ -321,6 +325,7 @@ const BigShow = () => {
             <li
               className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
               onClick={nav}
+              style={{ cursor: "pointer" }}
             >
               <div className="me-3">
                 <LogoutIcon />
