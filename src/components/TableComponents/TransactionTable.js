@@ -5,6 +5,9 @@ import Sample_User from "../../images/SampleUserImage.png";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import { Descripe } from "@mui/icons-material";
+import TransactionData from "../../data/dummyData/transactionData.json";
+import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import { Link } from "react-router-dom";
 
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
@@ -24,15 +27,18 @@ export const NotificationCard = (props) => {
 
 //RecentTransactionTable
 
-export const RecentTransactionTable = () => {
+export const MiniRecentTransactionTable = () => {
   return (
-    <div className="col-lg-9 border shadow" style={{ width: "58rem" }}>
+    <div className="border shadow p-3" style={{ width: "100%" }}>
+      {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        <div className="ms-md-5 ms-3 mb-3 mt-2">
-          <GeneralBtnStyle1 text="New Transaction" />
+        <div className="px-4 mb-3">
+          <Link to={"../initiate-escrow"}>
+            <GeneralBtnStyle1 text="New Transaction" />
+          </Link>
         </div>
 
-        <table className="table">
+        <table className="table transaction-table">
           <thead className="text-center">
             <tr>
               <th>Product Name</th>
@@ -42,24 +48,14 @@ export const RecentTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className=" text-center">35 cartorns of biscuits</td>
-              <td className="text-center">N3,275.45</td>
-              <td className="text-center">15/11/2022</td>
-              <td className="d-flex justify-content-center align-items-center">
-                <Notifications text={`Completed`} styles={`completed`} />
-              </td>
-            </tr>
-            <tr>
-              <td className="text-center">Hair brushes and attachments</td>
-              <td className="text-center">N3,275.45</td>
-              <td className="text-center">15/11/2022</td>
-              <td className="d-flex justify-content-center align-items-center">
-                <GeneralBtnStyle2 text="Await Delivery" />
-              </td>
-            </tr>
+            {TransactionData.mini_transaction.map((mini) => {
+              return <RecentTransactionTableData {...mini} key={mini.id} />;
+            })}
           </tbody>
         </table>
+        {/* <div className="p-4">
+          <PaginationBar />
+        </div> */}
       </div>
     </div>
   );

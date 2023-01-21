@@ -14,10 +14,13 @@ const TransactionHistory = (props) => {
         <td className="">{products}</td>
         <td className="">{date}</td>
         <td className="">
-          <Notifications text={status} styles={`text-center  rounded-pill ${ status }`} />
+          <Notifications
+            text={status}
+            styles={`text-center  rounded-pill ${status}`}
+          />
         </td>
         <td className="">
-          <GeneralBtn text="view" styles="text-success text-decoration-none"/>
+          <GeneralBtn text="view" styles="text-success text-decoration-none" />
         </td>
       </tr>
     </>

@@ -1,5 +1,6 @@
 import react, { useState } from "react";
 import Container from "react-bootstrap/Container";
+import { useNavigate } from "react-router-dom";
 
 // Reportissuesform Section Starts
 export const Reportissuesform = () => {
@@ -9,9 +10,11 @@ export const Reportissuesform = () => {
     ExpectedSolution: "",
   };
   const [values, setValue] = useState(initialState);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("../home");
   };
 
   const handleDefectNameInputChange = (e) => {
@@ -26,11 +29,11 @@ export const Reportissuesform = () => {
 
   return (
     <Container>
-      <form action="" className="form bg-white" style={{ width: "30rem" }}>
-        <div className="mb-3 mt-5">
+      <form action="" className="form bg-white UpdateProfileForm p-4">
+        <div className="mb-3">
           <label
             htmlFor="exampleFormControlInput1"
-            className="form-label  fw-bold"
+            className="form-label fw-bold"
           >
             Defect Name
           </label>
@@ -38,8 +41,7 @@ export const Reportissuesform = () => {
             onChange={handleDefectNameInputChange}
             value={values.DefectName}
             type="name"
-            className="form-control 
-          border-success"
+            className="form-control w-100"
             id="exampleFormControlInput1"
             placeholder="Defect Name"
             required
@@ -48,14 +50,14 @@ export const Reportissuesform = () => {
         <div className="mb-3">
           <label
             htmlFor="exampleFormControlTextarea1"
-            className="form-label  fw-bold"
+            className="form-label fw-bold"
           >
             Defect Description
           </label>
           <textarea
             onChange={handleDefectDescriptionInputChange}
             value={values.DefectDescription}
-            className="form-control border-success"
+            className="form-control w-100"
             id="exampleFormControlTextarea1"
             rows="3"
             placeholder="Describe exactly the problem"
@@ -72,7 +74,7 @@ export const Reportissuesform = () => {
           <textarea
             onChange={handleExpectedSolutionInputChange}
             value={values.ExpectedSolution}
-            className="form-control  border-success"
+            className="form-control w-100"
             id="exampleFormControlTextarea1"
             rows="3"
             placeholder=" The Expected Solution"
@@ -80,10 +82,10 @@ export const Reportissuesform = () => {
           ></textarea>
         </div>
 
-        <div className="text-center mt-5  ">
+        <div className="text-center mt-5">
           <button
             onClick={handleSubmit}
-            className="btn btn-success "
+            className="btn btn-success"
             type="submit"
           >
             Send Report

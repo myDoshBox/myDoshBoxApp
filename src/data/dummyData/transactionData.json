@@ -114,5 +114,32 @@
       "status_name": "Resolved",
       "status_style": "resolved"
     }
+  ],
+
+  "mini_transaction": [
+    {
+      "id": 1,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Completed",
+      "status_style": "completed"
+    },
+    {
+      "id": 2,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Awaiting Delivery",
+      "status_style": "awaiting"
+    },
+    {
+      "id": 3,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Refunded",
+      "status_style": "refunded"
+    }
   ]
 }

@@ -13,6 +13,7 @@ import {
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.png";
 import { Link, Outlet, NavLink, useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 const UsersSideNav = () => {
   return (
@@ -35,6 +36,11 @@ const SmallShowExample = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+  const disappearEl = useRef(null);
+
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
   const navigate = useNavigate();
@@ -69,6 +75,7 @@ const SmallShowExample = ({ name, ...props }) => {
         responsive="lg"
         className="w-75 d-lg-none text-white"
         {...props}
+        ref={disappearEl}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -85,10 +92,11 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DashboardIcon />
                 </div>
                 <NavLink
-                  to="userdashboardpage"
+                  to="home"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Dashboard</span>
                 </NavLink>
@@ -98,10 +106,11 @@ const SmallShowExample = ({ name, ...props }) => {
                   <NavTransactionIcon />
                 </div>
                 <NavLink
-                  to="usertransaction"
+                  to="transaction"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Transactions</span>
                 </NavLink>
@@ -122,6 +131,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Notifications</span>
                 </NavLink>
@@ -131,10 +141,11 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DisputeIcon />
                 </div>
                 <NavLink
-                  to="userdispute"
+                  to="dispute"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Disputes</span>
                 </NavLink>
@@ -144,10 +155,11 @@ const SmallShowExample = ({ name, ...props }) => {
                   <SettingsIcon />
                 </div>
                 <NavLink
-                  to="usersettings"
+                  to="settings"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Settings</span>
                 </NavLink>
@@ -200,7 +212,7 @@ const BigShow = ({ name, ...props }) => {
                 <DashboardIcon />
               </div>
               <NavLink
-                to="userdashboardpage"
+                to="home"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
@@ -213,7 +225,7 @@ const BigShow = ({ name, ...props }) => {
                 <NavTransactionIcon />
               </div>
               <NavLink
-                to="usertransaction"
+                to="transaction"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
@@ -247,7 +259,7 @@ const BigShow = ({ name, ...props }) => {
                 <DisputeIcon />
               </div>
               <NavLink
-                to="userdispute"
+                to="dispute"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
@@ -261,7 +273,7 @@ const BigShow = ({ name, ...props }) => {
                 <SettingsIcon />
               </div>
               <NavLink
-                to="usersettings"
+                to="settings"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }

@@ -1,11 +1,29 @@
-import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
-import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
 
 const InitiateEscrow = () => {
+  return (
+    <>
+      <div className="contestPage">
+        <div className="row">
+          <div className="col-lg-3 col-sm-12"></div>
+
+          <div className="col-lg-9 col-sm-12">
+            <UserDashboardNavbar />
+            <div className="mt-5">
+              <InitiateEscrowForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const InitiateEscrowForm = () => {
   const initialValues = {
     phoneNumber: "",
     description: "",
@@ -91,16 +109,11 @@ const InitiateEscrow = () => {
     setShowProductForm(false);
     setShowServiceForm(true);
   };
-
   return (
-    <div className="d-flex w-100">
-      <div className="d-none d-lg-block">
-        <UserSidenav />
-      </div>
-
+    <div className="w-100">
       <Form
         onSubmit={handleSubmit}
-        className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 "
+        className="mx-lg-5 mt-5 shadow InitiateEscrow p-3 p-lg-5 "
       >
         <Form.Group className="">
           <Form.Label className="m-0">Phone Number</Form.Label>
@@ -438,13 +451,13 @@ const InitiateEscrow = () => {
           </>
         )}
         <div className="d-flex justify-content-center">
-          <Link to="/">
+          <Link to="../home">
             <GeneralBtn
               text="Cancel"
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
             />
           </Link>
-          <Link to="/agreement">
+          <Link to="../transactionsummary">
             <GeneralBtn
               text="Proceed"
               styles="GeneralBtnStyle1 btn all-btn text-white"

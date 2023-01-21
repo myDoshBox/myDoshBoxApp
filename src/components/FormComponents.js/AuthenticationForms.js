@@ -30,7 +30,7 @@ export const SignUpIndividual = () => {
   const navigate = useNavigate();
 
   const nav = () => {
-    navigate("/userdashboard/userdashboardpage");
+    navigate("/userdashboard/home");
   };
 
   const handleSubmit = (e) => {

@@ -7,6 +7,7 @@ import {
   SignUpOrganization,
 } from "../../components/FormComponents.js/AuthenticationForms";
 import logo from "../../images/doshlogolight.png";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   return (
@@ -57,13 +58,13 @@ const SignUpForm = () => {
                 <span style={{ fontSize: "14px" }}>
                   Already have an account?
                 </span>
-                <a
-                  href="#"
+                <Link
+                  to={"/signin"}
                   className="text-decoration-none ms-1 text-success"
                   style={{ fontSize: "14px" }}
                 >
                   Sign In
-                </a>
+                </Link>
               </p>
             </div>
           </Col>

@@ -854,6 +854,13 @@ input[type=color]:focus,
 
 .completed,
 .resolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -865,6 +872,13 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -875,6 +889,13 @@ input[type=color]:focus,
 }
 
 .refunded {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -890,6 +911,13 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(103, 0, 99);
   background-color: rgba(103, 0, 99, 0.1);
 }
@@ -900,11 +928,25 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 103, 4);
   background-color: rgba(0, 103, 4, 0.1);
 }
 
 .awaiting {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -915,6 +957,13 @@ input[type=color]:focus,
 }
 
 .pending-payment {
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -928,6 +977,21 @@ input[type=color]:focus,
   background-color: #d9ebe5;
 }
 
+@media screen and (max-width: 687px) {
+  .completed,
+.awaiting,
+.canceled,
+.dispute,
+.pending-confirmation,
+.pending-payment,
+.refunded,
+.resolved,
+.unresolved {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 0.6rem !important;
+  }
+}
 .FooterBgColor {
   background-color: #006747;
 }

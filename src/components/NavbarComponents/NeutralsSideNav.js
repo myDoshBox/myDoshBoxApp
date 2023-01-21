@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import {
@@ -36,6 +36,12 @@ const SmallShowExample = ({ name, ...props }) => {
   const toggleShow = () => setShow((s) => !s);
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  let dropdownbaseClassName = "text-decoration-none , text-dark";
+  let dropdownactiveClassName = "text-decoration-none , text-success";
+  const disappearEl = useRef(null);
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
   const navigate = useNavigate();
 
   const nav = () => {
@@ -68,6 +74,7 @@ const SmallShowExample = ({ name, ...props }) => {
         responsive="lg"
         className="w-75 d-lg-none text-white"
         {...props}
+        ref={disappearEl}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -82,10 +89,11 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DashboardIcon />
                 </div>
                 <NavLink
-                  to="neutraldashboardpage"
+                  to="home"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Dashboard</span>
                 </NavLink>
@@ -109,7 +117,9 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="open-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
                         >
                           Open Conflicts
@@ -120,7 +130,9 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="ongoing-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
                         >
                           Ongoing Conflicts
@@ -131,7 +143,9 @@ const SmallShowExample = ({ name, ...props }) => {
                           to="closed-conflicts"
                           exact
                           className={({ isActive }) =>
-                            isActive ? activeClassName : baseClassName
+                            isActive
+                              ? dropdownactiveClassName
+                              : dropdownbaseClassName
                           }
                         >
                           Closed Conflicts
@@ -150,6 +164,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Notifications</span>
                 </NavLink>
@@ -163,6 +178,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  onClick={handleDisappear}
                 >
                   <span>Settings</span>
                 </NavLink>
@@ -209,7 +225,7 @@ const BigShow = () => {
                 <DashboardIcon />
               </div>
               <NavLink
-                to="neutraldashboardpage"
+                to="home"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }

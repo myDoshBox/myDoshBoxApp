@@ -105,9 +105,13 @@ export const UserTransactionsCard = () => {
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCard = (props) => {
-  const { text, icon, link } = props;
+  const { text, icon, link, relative } = props;
   return (
-    <Link to={link} className="text-decoration-none text-dark">
+    <Link
+      to={link}
+      relative={relative}
+      className="text-decoration-none text-dark"
+    >
       <div
         className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
         style={{ width: "100%", height: "80%" }}
@@ -176,10 +180,12 @@ export const MiniProfileCard = () => {
         </div>
         <hr></hr>
         <div className="text-end pe-2 py-3">
-          <GeneralBtn
-            text="Edit Profile"
-            styles="GeneralBtnStyle1 btn all-btn text-white"
-          />
+          <Link to={"../updateprofile"}>
+            <GeneralBtn
+              text="Edit Profile"
+              styles="GeneralBtnStyle1 btn all-btn text-white"
+            />
+          </Link>
         </div>
       </div>
     </>

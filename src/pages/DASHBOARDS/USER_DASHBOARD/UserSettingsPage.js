@@ -1,7 +1,6 @@
 // import { MiniProfileCard } from "../../components/CardComponents/UsersCards";
-import { UserDashboardCards } from "../../../components/CardComponents/UsersCards";
 import { UpdateBankDetails } from "../../../components/FormComponents.js/UpdateForms";
-import { UpdateProfile } from "../../../components/FormComponents.js/UpdateForms";
+import { UserUpdateProfile } from "../../../components/FormComponents.js/UpdateForms";
 import { Reportissuesform } from "../../../components/FormComponents.js/IssuesComplaintForms";
 import {
   BigLogoutIcon,
@@ -10,27 +9,30 @@ import {
   FaqIcon,
   FeedbackIcon,
   UpdateProfileIcon,
-  CameraIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
-import Avatar from "../../../images/Avatar.jpg";
-import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Outlet } from "react-router-dom";
 import {
   UserDashboardCard,
   MiniProfileCard,
 } from "../../../components/CardComponents/UsersCards";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 
 const UserSettingsPage = () => {
   return (
-    <div className="contestPage">
-      <div className="row">
-        <div className="col-lg-3 col-sm-12"></div>
+    <>
+      <div className="contestPage">
+        <div className="row">
+          <div className="col-lg-3 col-sm-12"></div>
 
-        <div className="col-lg-9 col-sm-12 mt-5">
-          <SettingsPage />
+          <div className="col-lg-9 col-sm-12">
+            <UserDashboardNavbar />
+            <div className="mt-5">
+              <SettingsPage />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -52,12 +54,14 @@ const SettingsPage = () => {
               <UserDashboardCard
                 icon={<UpdateProfileIcon />}
                 text={"Update Profile"}
+                link={"../updateprofile"}
               />
             </div>
             <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
               <UserDashboardCard
                 icon={<ChangeBankIcon />}
                 text={"Update Bank Details"}
+                link={"../updatebank"}
               />
             </div>
           </div>
@@ -66,6 +70,7 @@ const SettingsPage = () => {
               <UserDashboardCard
                 icon={<FeedbackIcon />}
                 text={"Report App Defect"}
+                link={"../reportissues"}
               />
             </div>
             <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
@@ -90,8 +95,60 @@ const SettingsPage = () => {
           </div>
         </div>
       </div>
+      <Outlet />
     </>
   );
 };
 
+export const UpdateBankDetailsPage = () => {
+  return (
+    <>
+      <div className="contestPage">
+        <div className="row">
+          <div className="col-lg-3 col-sm-12"></div>
+
+          <div className="col-lg-9 col-sm-12">
+            <UserDashboardNavbar />
+            <div className="mt-5">
+              <UpdateBankDetails />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Outlet />
+    </>
+  );
+};
+export const UpdateProfilePage = () => {
+  return (
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-lg-3 col-sm-12"></div>
+
+        <div className="col-lg-9 col-sm-12">
+          <UserDashboardNavbar />
+          <div className="mt-5">
+            <UserUpdateProfile />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export const ReportIssuesformPage = () => {
+  return (
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-lg-3 col-sm-12"></div>
+
+        <div className="col-lg-9 col-sm-12">
+          <UserDashboardNavbar />
+          <div className="mt-5">
+            <Reportissuesform />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default UserSettingsPage;
