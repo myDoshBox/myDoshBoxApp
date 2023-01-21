@@ -274,65 +274,8 @@ option,
   color: inherit !important;
 }
 
-.CoreValueCard {
-  background-color: #006747 !important;
-}
-
 .teamValueStyle {
   background-color: #e5f0ed !important;
-}
-
-.LearnMoreCard {
-  background-color: rgba(0, 103, 71, 0.7);
-}
-
-.MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-}
-.MiniUsersCard tr {
-  border-style: hidden;
-  font-size: 0.75rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-}
-.MiniUsersCard th {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.875rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard button {
-  margin: 0 !important;
-}
-.MiniUsersCard .small {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75em !important;
-  left: 45%;
-  bottom: 4%;
-}
-
-.LogoutCard p {
-  color: rgba(255, 0, 0, 0.7) !important;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  padding: 0.5rem;
 }
 
 .GreenBackgroundColor {
@@ -351,53 +294,6 @@ th {
 .accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
   color: #4b4453 !important;
-}
-
-.mini-disputes-card .nav-pills .nav-link.active {
-  color: #4b4453 !important;
-  border-bottom: 2.91696px solid #4b4453 !important;
-  background-color: inherit !important;
-  border-radius: 0 !important;
-}
-.mini-disputes-card .nav-link {
-  color: #4b4453 !important;
-}
-.mini-disputes-card .mini-disputes-mail {
-  color: rgba(75, 68, 83, 0.5);
-  font-size: 0.625rem;
-}
-.mini-disputes-card .mini-disputes-name {
-  font-size: 14px;
-  color: #4b4453;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-.mini-disputes-card .disputes-sort-btn {
-  background: rgba(0, 103, 71, 0.1) !important;
-  width: 70px;
-  height: 36.95px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  border: none;
-}
-.mini-disputes-card .dropdown-item:hover {
-  background: #e5f0ec !important;
-  border-radius: inherit;
-}
-.mini-disputes-card .disputes-sort-btn:hover {
-  color: #4b4453 !important;
-}
-
-.colorTextStyle {
-  color: rgb(165, 165, 165);
-}
-
-.textStyle {
-  color: rgb(19, 19, 19);
 }
 
 .warningStyle {
@@ -458,108 +354,6 @@ th {
   font-size: 3rem !important;
 }
 
-.BgColor {
-  background-color: #459079;
-}
-
-.BgColorScreen {
-  background-color: #006747;
-}
-
-.ScreenBgColor {
-  background-color: #e6f0ed;
-}
-
-.InputBgColor {
-  background-color: #b7bdbc;
-}
-
-.ActiveChat {
-  background-color: rgba(104, 228, 67, 0.6784313725) !important;
-}
-
-.Style404 h1 {
-  font-size: 10rem !important;
-  color: #006747;
-}
-.Style404 p {
-  font-size: 0.7rem !important;
-}
-
-.Email,
-.Password {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: rgba(75, 68, 83, 0.8);
-  font-size: 1rem !important;
-  font-weight: 700;
-}
-
-.Email input::-moz-placeholder, .Password input::-moz-placeholder {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.Email input::placeholder,
-.Password input::placeholder {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.AccountNum label,
-.AccountName label,
-.BankName label {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-.AccountNum input,
-.AccountName input,
-.BankName input {
-  border: 1.5px solid rgba(0, 103, 71, 0.3);
-}
-
-.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.AccountNum input::placeholder,
-.AccountName input::placeholder,
-.BankName input::placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.UpdateProfileForm {
-  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
-}
-.UpdateProfileForm button {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  font-size: 0.875rem !important;
-  color: hsl(0deg, 0%, 100%) !important;
-}
-.UpdateProfileForm button:hover,
-.UpdateProfileForm button:focus {
-  background-color: #006747 !important;
-}
-.UpdateProfileForm p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  font-weight: 700;
-}
-
 textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
@@ -580,63 +374,8 @@ input[type=color]:focus,
   outline: 0 none;
 }
 
-.Name label,
-.UpdateEmail label,
-.Phone label,
-.Pass label {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  letter-spacing: 0.08rem;
-  font-weight: 700;
-}
-.Name input,
-.UpdateEmail input,
-.Phone input,
-.Pass input {
-  border: 1.5px solid rgba(0, 103, 71, 0.3);
-}
-
-.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.Name input::placeholder,
-.UpdateEmail input::placeholder,
-.Phone input::placeholder,
-.Pass input::placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.escrow-form,
-.bank-transfer-form {
-  overflow-x: hidden;
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  color: #4b4453;
-}
-
-.escrow-form-label,
-.bank-transfer-form-label {
-  margin-left: 15px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-size: 1.125rem !important;
-}
-
 .escrow-price-field {
   border-radius: 5px 0 0 5px !important;
-}
-
-.price-field {
-  transform: translateX(12px);
 }
 
 .ngn {
@@ -656,7 +395,7 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
+.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder {
   font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -668,8 +407,7 @@ input[type=color]:focus,
 }
 
 .escrow-input-field::placeholder,
-.escrow-price-field::placeholder,
-.bank-transfer-input-field::placeholder {
+.escrow-price-field::placeholder {
   font-family: "Open Sans", sans-serif;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -681,12 +419,6 @@ input[type=color]:focus,
 }
 
 .form-check-label {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.confirm-delivery-pText {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
@@ -714,14 +446,6 @@ input[type=color]:focus,
   font-size: 12px !important;
 }
 
-.inputStyle input {
-  text-indent: 10px !important;
-}
-
-.labelStyle {
-  color: rgb(75, 68, 83) !important;
-}
-
 .labelStyle::-moz-placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
   font-size: 14px !important;
@@ -730,10 +454,6 @@ input[type=color]:focus,
 .labelStyle::placeholder {
   color: rgba(75, 68, 83, 0.5) !important;
   font-size: 14px !important;
-}
-
-.colorStyle h5 {
-  color: red !important;
 }
 
 .sign-up-form .nav-pills .nav-link.active {

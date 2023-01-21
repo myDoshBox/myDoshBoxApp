@@ -4,12 +4,12 @@ import { UserDashboardCard2 } from "../../../components/CardComponents/UsersCard
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
-  CustomerCareIcon,
+  // CustomerCareIcon,
   InitiateDisputeIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
-import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";
+// import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";
 import { MiniDisputesCard } from "../../../components/CardComponents/ConflictIssuesCards";
-import { AllConflictsTable } from "../../../components/TableComponents/ConflictsTable";
+// import { AllConflictsTable } from "../../../components/TableComponents/ConflictsTable";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 
 const UserDashboardPage = () => {

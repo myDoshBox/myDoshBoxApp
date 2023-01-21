@@ -44,9 +44,9 @@ export const UpdateProfile = () => {
 
   const validate = (formValues) => {
     const errorValues = {};
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     const phoneRegex =
-      /((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$/;
+      /((?:\+|00)[17](?: |-)?|(?:\+|00)[1-9]\d{0,2}(?: |-)?|(?:\+|00)1-\d{3}(?: |-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))$/;
     if (!formValues.email) {
       errorValues.email = "Email Address is Required";
     } else if (!emailRegex.test(formValues.email)) {
@@ -61,7 +61,7 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <div className="bg-white rounded-3 UpdateProfileForm p-4">
+    <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Profile</p>
       <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
         <Form.Group className="Email mb-3" controlId="Email">
@@ -163,7 +163,7 @@ export const UpdatePassword = () => {
   };
 
   return (
-    <div className="bg-white rounded-3 UpdateProfileForm p-4">
+    <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Password</p>
       <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
         <Form.Group className="mb-3 Password" controlId="NewPassword">
@@ -266,7 +266,7 @@ export const UpdateBankDetails = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3 UpdateProfileForm p-4 px-lg-5 py-lg-3"
+      className="bg-white rounded-3 shadow card p-4 px-lg-5 py-lg-3"
     >
       <Form.Group className="mb-3 AccountNum" controlId="AccountNum">
         <Form.Label className="mb-0">Account Number</Form.Label>
@@ -367,9 +367,9 @@ export const UserUpdateProfile = () => {
   const validate = (formValues) => {
     const errorValues = {};
 
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     const phoneRegex =
-      /((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$/;
+      /((?:\+|00)[17](?: |-)?|(?:\+|00)[1-9]\d{0,2}(?: |-)?|(?:\+|00)1-\d{3}(?: |-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))$/;
     const PasswordRegex =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
@@ -403,7 +403,7 @@ export const UserUpdateProfile = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3 UserUpdateProfile UpdateProfileForm p-3 px-lg-5 py-lg-4"
+      className="bg-white rounded-3 UserUpdateProfile shadow card p-3 px-lg-5 py-lg-4"
     >
       <Form.Group className="mb-4 UpdateEmail" controlId="Email">
         <Form.Label className="m-0">Email Address</Form.Label>

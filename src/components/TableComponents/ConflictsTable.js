@@ -1,4 +1,4 @@
-import { Table, Card, Container, Nav, Tab, Dropdown } from "react-bootstrap";
+import { Table, Card, Container } from "react-bootstrap";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 
 // AllConflictsCard

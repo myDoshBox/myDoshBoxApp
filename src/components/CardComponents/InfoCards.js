@@ -1,13 +1,12 @@
 // NotificationCard
 // LearnMoreCard
 
-import { height } from "@mui/system";
 import Learning_illustration from "../../images/Learninge.png";
 
 export const LearnMoreCard = () => {
   return (
     <div
-      className="d-flex card-body p-2 border rounded-3 LearnMoreCard "
+      className="d-flex card-body p-2 border rounded-3 GreenBackgroundColor "
       style={{ width: "100%" }}
     >
       <div className="">
@@ -20,7 +19,7 @@ export const LearnMoreCard = () => {
         <span>
           <button
             type="button"
-            className="btn LearnMoreCard text-white border border-white"
+            className="btn GreenBackgroundColor text-white border border-white"
           >
             Get Started
           </button>

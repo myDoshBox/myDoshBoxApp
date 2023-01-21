@@ -2,7 +2,6 @@ import React from "react";
 import AboutHero from "../../images/AboutUs Image/AboutHero.png";
 import mission from "../../images/AboutUs Image/mission.png";
 import Vision from "../../images/AboutUs Image/vision.png";
-import corevalue from "../../images/AboutUs Image/corevalue.png";
 import {
   CoreValueCard,
   TeamsCard,

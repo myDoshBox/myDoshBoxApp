@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
-import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
 import { Link } from "react-router-dom";
 
 const InitiateDisputesForm = () => {

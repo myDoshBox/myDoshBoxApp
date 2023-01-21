@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GoogleButton } from "../../components/ButtonsComponent/Button";
 import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
-import image from "../../images/SignInPageImage.png";
+import side from "../../images/SignInPageImage.png";
 import logo from "../../images/doshlogo.jpg";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,8 @@ const SignInPage = () => {
           {/* <div className="col-sm-12 col-lg-1"></div> */}
           <div className="col-sm-12 col-lg-5">
             <img
-              src={image}
-              alt="signIn image"
+              src={side}
+              alt="signIn"
               style={{ height: "100vh", width: "100%" }}
               className="img-fluid d-none d-lg-block"
             />
@@ -112,13 +112,12 @@ export const SignInForm = () => {
                 Remember Information
               </label>
             </div>
-            <a
-              href=""
+            <Link
               className="text-success text-decoration-none"
               style={{ fontSize: "14px" }}
             >
               Forgot Password?
-            </a>
+            </Link>
           </div>
           <div className="d-flex flex-column mt-4">
             <div className="mx-auto mb-2">

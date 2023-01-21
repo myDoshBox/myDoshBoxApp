@@ -1,5 +1,3 @@
-import { Form, Container } from "react-bootstrap";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { useState, useEffect } from "react";
 import { GoogleButton } from "../ButtonsComponent/Button";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
@@ -29,10 +27,6 @@ export const SignUpIndividual = () => {
 
   const navigate = useNavigate();
 
-  const nav = () => {
-    navigate("/userdashboard/home");
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -55,24 +49,26 @@ export const SignUpIndividual = () => {
   useEffect(() => {
     if (Object.keys(errors).length === 0 && submission) {
       console.log(personDetails);
+
+      navigate("/userdashboard/home");
     } else {
       console.log("Invalid Form");
     }
-  }, [errors]);
+  });
   const validate = () => {
     const errors = {};
 
     if (!person.email) {
       errors.email = "Email is required";
     } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(person.email)
+      !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(person.email)
     ) {
       errors.email = "Email is not valid";
     }
     if (!person.phoneNumber) {
       errors.phoneNumber = "Phone Number is required";
     } else if (
-      !/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/.test(person.phoneNumber)
+      !/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/.test(person.phoneNumber)
     ) {
       errors.phoneNumber = "Phone Number is not valid";
     }
@@ -226,7 +222,6 @@ export const SignUpIndividual = () => {
               type="submit"
               className="GeneralBtnStyle1 btn all-btn text-white"
               style={{ width: "210px" }}
-              onClick={nav}
             >
               Sign Up
             </button>
@@ -255,7 +250,6 @@ export const SignUpOrganization = () => {
   const [passwordToggle1, setpasswordToggle1] = useState(false);
   const [errors, setErrors] = useState({});
   const [submission, setSubmission] = useState(false);
-  const [isValid, setIsValid] = useState(false);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -298,7 +292,7 @@ export const SignUpOrganization = () => {
     } else {
       console.log("Invalid Form");
     }
-  }, [errors]);
+  });
 
   const validate = () => {
     const errors = {};
@@ -308,7 +302,7 @@ export const SignUpOrganization = () => {
     if (!organization.organizationEmail) {
       errors.organizationEmail = "Organization Email is Required";
     } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(
         organization.organizationEmail
       )
     ) {
@@ -318,7 +312,7 @@ export const SignUpOrganization = () => {
     if (!organization.contactEmail) {
       errors.contactEmail = "Contact person email is Required";
     } else if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
         organization.organizationEmail
       )
     ) {
