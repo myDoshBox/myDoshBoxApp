@@ -1,16 +1,8 @@
 @use "../generalStyles/color" as *;
 @use "../generalStyles/fonts" as *;
 
-.CoreValueCard {
-  background-color: $pryColor !important;
-}
-
 .teamValueStyle {
   background-color: $pryColorVariant !important;
-}
-
-.LearnMoreCard {
-  background-color: $pryColor7;
 }
 
 // .MiniUsersCard {
@@ -37,28 +29,9 @@
 //     margin: 0 !important;
 //   }
 
-//UsersCards
-
-.small {
-  @include pFont;
-  font-size: 0.75em !important;
-  left: 45%;
-  bottom: 4%;
+.GreenBackgroundColor {
+  background-color: $pryColor !important;
 }
-
-// .LogoutCard p {
-//   color: $LogoutBtnColor !important;
-// }
-
-// td,
-// th {
-//   border: 1px solid #dddddd;
-//   padding: 0.5rem;
-// }
-
-// .GreenBackgroundColor {
-//   background-color: $pryColor !important;
-// }
 
 .accordion-button {
   @include H6Font;
@@ -71,54 +44,6 @@
 .accordion-button:not(.collapsed) {
   background-color: $secColor !important;
   color: $bodyTextColor !important;
-}
-
-// .ConflictIssuesCard {
-// }
-// .mini-disputes-card {
-//   .nav-pills .nav-link.active {
-//     color: $bodyTextColor !important;
-//     border-bottom: 2.91696px solid #4b4453 !important;
-//     background-color: inherit !important;
-//     border-radius: 0 !important;
-//   }
-
-//   .nav-link {
-//     color: $bodyTextColor !important;
-//   }
-
-//   .mini-disputes-mail {
-//     color: $placeholderTextColor;
-//     font-size: 0.625rem;
-//   }
-
-//   .mini-disputes-name {
-//     font-size: 14px;
-//     color: $bodyTextColor;
-//     font-weight: 600;
-//     letter-spacing: 0.06em;
-//   }
-
-//   .disputes-sort-btn {
-//     background: rgba(0, 103, 71, 0.1) !important;
-//     width: 70px;
-//     height: 36.95px;
-//     @include pFont;
-//     border: none;
-//   }
-
-//   .dropdown-item:hover {
-//     background: #e5f0ec !important;
-//     border-radius: inherit;
-//   }
-
-//   .disputes-sort-btn:hover {
-//     color: $bodyTextColor !important;
-//   }
-// }
-
-.colorTextStyle {
-  color: rgb(165, 165, 165);
 }
 
 .textStyle {

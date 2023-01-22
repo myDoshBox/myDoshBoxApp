@@ -173,6 +173,7 @@ const SmallShowExample = ({ name, ...props }) => {
                 <li
                   className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
                   onClick={nav}
+                  style={{ cursor: "pointer" }}
                 >
                   <div className="me-3">
                     <LogoutIcon />
@@ -286,6 +287,7 @@ const BigShow = ({ name, ...props }) => {
             <li
               className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
               onClick={nav}
+              style={{ cursor: "pointer" }}
             >
               <div className="me-3">
                 <LogoutIcon />

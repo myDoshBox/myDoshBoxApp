@@ -1,11 +1,12 @@
 import { CloseConflictTable } from "../../../components/TableComponents/ConflictsTable";
-import { UsersSideNav } from "../../../components/NavbarComponents/UsersSideNav";
-
+import NeutralsSideNav from "../../../components/NavbarComponents/NeutralsSideNav";
 export const CloseConflict = () => {
   return (
-    <section>
-      <div>{/* <UsersSideNav /> */}</div>
-      <div>
+    <section className="row">
+      {/* <div className="col-3">
+        <NeutralsSideNav />
+      </div> */}
+      <div className="col-9">
         <CloseConflictTable />
       </div>
     </section>

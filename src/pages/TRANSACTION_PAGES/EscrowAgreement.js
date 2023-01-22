@@ -11,7 +11,7 @@ const EscrowAgreement = () => {
 
           <div className="col-lg-9 col-sm-12">
             <UserDashboardNavbar />
-            <div className="mt-5">
+            <div className="mt-5 px-lg-5">
               <EscrowAgreementText />
             </div>
           </div>
@@ -23,7 +23,7 @@ const EscrowAgreement = () => {
 
 const EscrowAgreementText = () => {
   return (
-    <div className="mx-lg-5 mt-5 shadow InitiateEscrow p-3 p-lg-5">
+    <div className="w-100 mt-5 shadow InitiateEscrow p-3 p-lg-5 rounded">
       <h1 className="fs-4 text-center">Escrow Initiation Agreement</h1>
       <div>
         <p className="mb-4">

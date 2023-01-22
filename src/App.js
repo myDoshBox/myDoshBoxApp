@@ -5,10 +5,6 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import {
-  NeutralsSidenav,
-  UserSidenav,
-} from "./components/NavbarComponents/SideNavbar";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
 import AboutUs from "./pages/GENERAL_PAGES/AboutUs";
@@ -16,7 +12,7 @@ import ContactUs from "./pages/GENERAL_PAGES/ContactUs";
 import PricingPage from "./pages/GENERAL_PAGES/PricingPage";
 import FAQs from "./pages/GENERAL_PAGES/FAQs";
 import Error404 from "./pages/GENERAL_PAGES/Error404";
-import { Footer } from "./components/FooterComponents";
+import Footer from "./components/FooterComponents";
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
 import UserDashboardPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserDashboardPage";
 import NotifictionPage from "./pages/DASHBOARDS/USER_DASHBOARD/NotifictionPage";
@@ -32,7 +28,6 @@ import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
-import { CloseConflict } from "./pages/DASHBOARDS/NEUTRALS_PAGES/CloseConflict";
 import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
 import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
 import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
@@ -85,6 +80,7 @@ function App() {
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
+          <Route path="home" element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
@@ -94,8 +90,6 @@ function App() {
             element={<NeutralViewTransaction />}
           />
           <Route path="notification" element={<NotifictionPage />} />
-
-          <Route path="home" element={<NeutralDashboard />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         {/* <Route path="*" element={<Error404 />} /> */}

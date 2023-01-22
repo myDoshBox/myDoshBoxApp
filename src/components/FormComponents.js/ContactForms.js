@@ -75,3 +75,40 @@ export const ContactUsForm = () => {
     </>
   );
 };
+
+export const SubscribeForm = () => {
+  const initialState = {
+    email: " ",
+  };
+  const [values, setValue] = useState(initialState);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handleemailInputChange = (e) => {
+    setValue({ ...values, email: e.target.value });
+  };
+
+  return (
+    <>
+      <form class="input-group">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter email to receive updates and newsletter"
+          aria-label="Subscribe"
+          aria-describedby="basic-addon2"
+          value={values.email}
+          onChange={handleemailInputChange}
+        />
+        <span
+          className="input-group-text btn border text-white "
+          id="basic-addon2"
+          onClick={handleSubmit}
+        >
+          SUBSCRIBE
+        </span>
+      </form>
+    </>
+  );
+};

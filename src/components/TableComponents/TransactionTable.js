@@ -8,6 +8,7 @@ import { Descripe } from "@mui/icons-material";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import { Link } from "react-router-dom";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
@@ -53,9 +54,12 @@ export const MiniRecentTransactionTable = () => {
             })}
           </tbody>
         </table>
-        {/* <div className="p-4">
-          <PaginationBar />
-        </div> */}
+        <div className="p-4">
+          <GeneralBtn
+            text={[`View more`]}
+            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          />
+        </div>
       </div>
     </div>
   );
