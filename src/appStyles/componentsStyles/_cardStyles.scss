@@ -5,30 +5,6 @@
   background-color: $pryColorVariant !important;
 }
 
-// .MiniUsersCard {
-//   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-
-//   p {
-//     @include H6Font;
-//     color: $bodyTextColor;
-//   }
-
-//   tr {
-//     border-style: hidden;
-//     font-size: 0.75rem !important;
-//     color: $bodyTextColor;
-//     line-height: 1.5rem;
-//   }
-
-//   th {
-//     @include pFont;
-//     font-size: 0.875rem !important;
-//     color: $placeholderTextColor;
-//   }
-//   button {
-//     margin: 0 !important;
-//   }
-
 .GreenBackgroundColor {
   background-color: $pryColor !important;
 }
@@ -46,9 +22,8 @@
   color: $bodyTextColor !important;
 }
 
-.textStyle {
-  color: rgb(19, 19, 19);
-}
+// .ConflictIssuesCard {
+// }
 
 .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;

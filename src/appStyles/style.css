@@ -296,14 +296,6 @@ option,
   color: #4b4453 !important;
 }
 
-.colorTextStyle {
-  color: rgb(165, 165, 165);
-}
-
-.textStyle {
-  color: rgb(19, 19, 19);
-}
-
 .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
@@ -362,34 +354,6 @@ option,
   font-size: 3rem !important;
 }
 
-.BgColor {
-  background-color: #459079;
-}
-
-.BgColorScreen {
-  background-color: #006747;
-}
-
-.ScreenBgColor {
-  background-color: #e6f0ed;
-}
-
-.InputBgColor {
-  background-color: #b7bdbc;
-}
-
-.ActiveChat {
-  background-color: rgba(104, 228, 67, 0.6784313725) !important;
-}
-
-.Style404 h1 {
-  font-size: 10rem !important;
-  color: #006747;
-}
-.Style404 p {
-  font-size: 0.7rem !important;
-}
-
 textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
@@ -408,6 +372,10 @@ input[type=color]:focus,
 .uneditable-input:focus {
   border-color: rgba(75, 68, 83, 0.5);
   outline: 0 none;
+}
+
+.escrow-price-field {
+  border-radius: 5px 0 0 5px !important;
 }
 
 .ngn {

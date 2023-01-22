@@ -7,12 +7,7 @@ import {
   ArrowUpIcon,
   CompletedTransactionIcon,
 } from "../IconComponent/AdminDashboardIcons";
-import {
-  CameraIcon,
-  RatingIcon,
-  CustomerCareIcon,
-  BigLogoutIcon,
-} from "../IconComponent/UserdashboardIcons";
+import { RatingIcon } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
@@ -20,9 +15,7 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 //All Image Import Starts
 import Avatar from "../../images/Avatar.jpg";
-import Table from "react-bootstrap/Table";
 //All Image Import Ends
-import { PaginationBar } from "../PaginationComponent";
 import { Link } from "react-router-dom";
 
 // AnalyticsNewUsersCard
@@ -152,7 +145,7 @@ export const MiniProfileCard = () => {
       >
         <div className="d-flex flex-column ">
           <div className="d-flex justify-content-center">
-            <img src={Avatar} className="img-fluid mx-auto" alt=" User Image" />
+            <img src={Avatar} className="img-fluid mx-auto" alt="User" />
             <span className="d-flex align-items-end">
               {/* <CameraIcon /> */}
             </span>

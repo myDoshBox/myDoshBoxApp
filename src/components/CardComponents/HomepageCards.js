@@ -1,12 +1,10 @@
-import { Container } from "react-bootstrap";
-
 // WhyChooseUsCard
 export const WhyChooseUsCard = (props) => {
   const { image, title, description } = props;
   return (
     <div className="container p-2">
       <div className="pt-3">
-        <img src={image} className="mx-auto" />
+        <img src={image} alt="" className="mx-auto" />
       </div>
       <div className="pt-4">
         <h5 className="text-center">{title}</h5>

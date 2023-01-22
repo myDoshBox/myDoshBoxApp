@@ -23,6 +23,10 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
+.escrow-price-field {
+  border-radius: 5px 0 0 5px !important;
+}
+
 .ngn {
   background-color: $pryColor !important;
   padding: 0.375rem 0.75rem;

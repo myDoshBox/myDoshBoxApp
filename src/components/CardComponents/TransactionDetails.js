@@ -1,20 +1,19 @@
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import product from "../../images/productimage.jpg";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
 
 // DashboardConflictCards (Buying,Selling,InitiateTransactionCards,SettledTransactionsCard, ConflictCards)
-export const DashboardConflictCards = ({ icon, text, value,link }) => {
+export const DashboardConflictCards = ({ icon, text, value, link }) => {
   return (
     <div class="col-md-4 mb-4 mb-lg-0">
       <Link to={link} className="text-decoration-none">
-      <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow border-0 rounded-2 DashboardCard">
-        {icon}
-        <div>
-          <p className="m-0 ms-2 opacity-50">{value}</p>
-          <p className="m-0 ms-2">{text}</p>
+        <div class="d-flex justify-content-center align-items-center px-0 py-4 shadow border-0 rounded-2 DashboardCard">
+          {icon}
+          <div>
+            <p className="m-0 ms-2 opacity-50">{value}</p>
+            <p className="m-0 ms-2">{text}</p>
+          </div>
         </div>
-      </div>
       </Link>
     </div>
   );
@@ -22,8 +21,8 @@ export const DashboardConflictCards = ({ icon, text, value,link }) => {
 
 // heading /sub_text /email /id /description /quality /price /date /total /alert,
 // HOW IT'S DONE WENT YOU INVOKE TRANSACTION DETAILs <TransactionDetails>//
-{
-  /* <TransactionDetails
+
+/* <TransactionDetails
   heading="Transaction Summary"
   sub_text="Please Confirm the following transaction initiated by user Eland Aaronson"
   email="christianugochukwugabriel@gmail.com"
@@ -35,7 +34,6 @@ export const DashboardConflictCards = ({ icon, text, value,link }) => {
   total="N3,600,000"
   alert=" by carefully read through and confirm the details you put in because once you click on proceed, it can nolonger be changed"
 />; */
-}
 
 //These are the component you can use below//
 

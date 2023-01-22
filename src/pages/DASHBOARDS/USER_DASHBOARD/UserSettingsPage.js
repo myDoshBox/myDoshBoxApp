@@ -10,7 +10,7 @@ import {
   FeedbackIcon,
   UpdateProfileIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
-import { Link, useNavigate, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   UserDashboardCard,
   MiniProfileCard,
@@ -95,7 +95,6 @@ const SettingsPage = () => {
           </div>
         </div>
       </div>
-      <Outlet />
     </>
   );
 };
@@ -115,7 +114,6 @@ export const UpdateBankDetailsPage = () => {
           </div>
         </div>
       </div>
-      <Outlet />
     </>
   );
 };

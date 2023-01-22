@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import ImageThree from "../../images/MainChatInterfacImages/ImageThree.png";
 import ImageOne from "../../images/MainChatInterfacImages/ImageOne.png";
 import ImageTwo from "../../images/MainChatInterfacImages/ImageTwo.png";
@@ -8,7 +7,6 @@ import ImageFive from "../../images/MainChatInterfacImages/ImageFive.png";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoMdCall } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { BsEmojiHeartEyes } from "react-icons/bs";
 import { GiPaperClip } from "react-icons/gi";
 import { BsMic } from "react-icons/bs";
 

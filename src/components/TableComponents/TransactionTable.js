@@ -1,5 +1,4 @@
 import Table from "react-bootstrap/Table";
-import Sample_User from "../../images/SampleUserImage.png";
 // import { PaginationBar } from "../PaginationComponent";
 // import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";

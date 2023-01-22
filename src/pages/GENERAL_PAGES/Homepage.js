@@ -1,6 +1,5 @@
 import React from "react";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
-import { GuestNavbar } from "../../components/NavbarComponents/TopNavbars";
 import HeroImage from "../../images/HeroImage.png";
 import WhatWeDoImage from "../../images/WhatwedoImage.png";
 import OurPartnerImg from "../../images/partners.png";
@@ -9,7 +8,7 @@ import {
   WhyChooseUsCard,
 } from "../../components/CardComponents/HomepageCards";
 import homepageData from "../../data/homepageData.json";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <div>
@@ -19,14 +18,6 @@ const Homepage = () => {
       <ProcessFlow />
       <WhyChooseUs />
       <OurPartners />
-    </div>
-  );
-};
-
-const NavBar = () => {
-  return (
-    <div className="container-fluid pb-2">
-      <GuestNavbar />
     </div>
   );
 };

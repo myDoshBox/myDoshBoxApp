@@ -4,7 +4,7 @@ import { UserDashboardCard2 } from "../../../components/CardComponents/UsersCard
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
-  CustomerCareIcon,
+  // CustomerCareIcon,
   InitiateDisputeIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
 import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";

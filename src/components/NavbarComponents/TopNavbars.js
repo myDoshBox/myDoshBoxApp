@@ -1,10 +1,9 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../images/doshlogo.jpg";
-import logo2 from "../../images/doshlogolight.png";
 import image from "../../images/Image.jpg";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Link, Outlet } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export const GuestNavbar = () => {
   const disappearEl = useRef(null);

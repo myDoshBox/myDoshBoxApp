@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +29,7 @@ export const Reportissuesform = () => {
 
   return (
     <Container>
-      <form action="" className="form bg-white UpdateProfileForm p-4">
+      <form action="" className="form bg-white shadow card p-4">
         <div className="mb-3">
           <label
             htmlFor="exampleFormControlInput1"

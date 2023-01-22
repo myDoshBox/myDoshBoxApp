@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import faqData from "../../data/dummyData/faqData.json";
-import { GuestNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const FAQs = () => {
   const [activeAccordion, setActiveAccordion] = useState("");
