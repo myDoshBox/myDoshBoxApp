@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Open+Sans&family=Roboto:wght@500&display=swap");
+.placeholderTextColor {
+  color: rgba(75, 68, 83, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -98,7 +102,7 @@ h6 {
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -132,7 +136,7 @@ p {
 }
 
 .normal-text {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -148,6 +152,10 @@ option,
   font-size: 0.85rem !important;
   font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
+}
+
+.text-small {
+  font-size: small !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -172,7 +180,7 @@ option,
 
 .GeneralBtnStyle2 {
   background-color: #006747 !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -181,7 +189,7 @@ option,
 }
 
 .GoogleAuthBtn {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -193,7 +201,7 @@ option,
 }
 
 .SignUpGroup {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -220,7 +228,7 @@ option,
 }
 
 .CancelBtn {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -246,7 +254,7 @@ option,
 .EscrowTransactTypeBtn {
   color: #006747 !important;
   border-color: #006747 !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -396,7 +404,7 @@ input[type=color]:focus,
 }
 
 .escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -408,7 +416,7 @@ input[type=color]:focus,
 
 .escrow-input-field::placeholder,
 .escrow-price-field::placeholder {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -426,7 +434,7 @@ input[type=color]:focus,
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -437,7 +445,7 @@ input[type=color]:focus,
 
 .escrow-form-error {
   color: rgba(180, 19, 10, 0.8) !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -481,63 +489,12 @@ input[type=color]:focus,
   font-weight: 300 !important;
 }
 
-.Modal-Btn {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: rgba(0, 103, 71, 0.9) !important;
-  color: hsl(0deg, 0%, 100%);
-}
-.Modal-Btn .Modal-Btn {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 0.2rem !important;
-}
-.Modal-Btn .Modal-Btn:hover,
-.Modal-Btn .Modal-Btn:focus {
-  background-color: #006747 !important;
-}
-.Modal-Btn .ModalMessage {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 0.2rem !important;
-}
-.Modal-Btn .Modal-Btn:hover,
-.Modal-Btn .Modal-Btn:focus {
-  background-color: #006747 !important;
-}
-.Modal-Btn .ModalMessage {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  color: rgba(75, 68, 83, 0.5);
-}
-.Modal-Btn .ModalTitle {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
+.GeneralModal .modal-dialog {
+  width: 20rem !important;
 }
 
 .nav-links {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -653,14 +610,20 @@ input[type=color]:focus,
 }
 
 .completed,
+.awaiting,
+.canceled,
+.dispute,
+.pending-confirmation,
+.pending-payment,
+.refunded,
+.resolved,
+.unresolved {
+  width: 11rem;
+  height: 1.8rem;
+}
+
+.completed,
 .resolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -672,13 +635,6 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -689,13 +645,6 @@ input[type=color]:focus,
 }
 
 .refunded {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -711,13 +660,6 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(103, 0, 99);
   background-color: rgba(103, 0, 99, 0.1);
 }
@@ -728,25 +670,11 @@ input[type=color]:focus,
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(0, 103, 4);
   background-color: rgba(0, 103, 4, 0.1);
 }
 
 .awaiting {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -757,13 +685,6 @@ input[type=color]:focus,
 }
 
 .pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
@@ -787,8 +708,8 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
-    width: 80px !important;
-    height: 20px !important;
+    width: 5rem !important;
+    height: 1.25rem !important;
     font-size: 0.6rem !important;
   }
 }
@@ -810,40 +731,5 @@ input[type=color]:focus,
 
 .pricing-table tr:nth-child(even) {
   background-color: #e5f0ed;
-}
-
-.PaginationBar button {
-  margin: 0 !important;
-}
-.PaginationBar a {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgba(75, 68, 83, 0.5);
-}
-.PaginationBar a:hover,
-.PaginationBar a:focus {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-size: 1.3rem !important;
-  color: #4b4453;
-}
-.PaginationBar li {
-  margin-inline: 2% !important;
-}
-.PaginationBar :first-child {
-  margin-inline: unset !important;
-}
-.PaginationBar :last-child {
-  margin-inline: unset !important;
-}
-
-@media screen and (max-width: 764px) {
-  .PaginationBar button {
-    font-size: 0.75rem !important;
-  }
 }
 /*# sourceMappingURL=style.css.map */
