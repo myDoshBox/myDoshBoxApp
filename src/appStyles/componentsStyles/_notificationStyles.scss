@@ -1,15 +1,15 @@
 @use "../generalStyles/color" as *;
 @use "../generalStyles/fonts" as *;
 
-@mixin notificationStyle {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// @mixin notificationStyle {
+//   width: 180px;
+//   height: 30px;
+//   border-radius: 20px;
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 .completed,
 .resolved {
   @include notificationStyle;
