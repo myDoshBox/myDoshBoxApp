@@ -66,7 +66,7 @@ const UserDashboard = () => {
           </div>
         </div>
       </div>
-      <div className="pt-5">
+      <div className="mt-5">
         <MiniRecentTransactionTable />
       </div>
     </div>

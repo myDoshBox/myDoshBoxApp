@@ -32,11 +32,11 @@ export const MiniRecentTransactionTable = () => {
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        <div className="px-4 mb-3">
-          <Link to={"../initiate-escrow"}>
+        {/* <div className="px-4 mb-3">
+          <Link to={"../transaction"}>
             <GeneralBtnStyle1 text="New Transaction" />
           </Link>
-        </div>
+        </div> */}
 
         <table className="table transaction-table">
           <thead className="text-center">
@@ -53,11 +53,13 @@ export const MiniRecentTransactionTable = () => {
             })}
           </tbody>
         </table>
-        <div className="p-4">
-          <GeneralBtn
-            text={[`View more`]}
-            styles={`GeneralBtnStyle1 btn all-btn text-white`}
-          />
+        <div className="p-4 text-sm-center text-md-end">
+          <Link to={"../transaction"}>
+            <GeneralBtn
+              text={[`View more`]}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
+          </Link>
         </div>
       </div>
     </div>
