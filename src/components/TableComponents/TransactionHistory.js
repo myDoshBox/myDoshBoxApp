@@ -7,19 +7,19 @@ const TransactionHistory = (props) => {
   return (
     <>
       <tr>
-        <td className=" d-none d-md-table-cell">{trans_id}</td>
-        <td className="d-none d-sm-table-cell">{buyer_name}</td>
-        <td className="d-none d-lg-table-cell">{seller_name}</td>
-        <td className="">{products}</td>
-        <td className="">{date}</td>
-        <td className="">
+        <td className=" d-none d-md-table-cell text-small">{trans_id}</td>
+        <td className="d-none d-sm-table-cell text-small">{buyer_name}</td>
+        <td className="d-none d-lg-table-cell text-small">{seller_name}</td>
+        <td className="text-small">{products}</td>
+        <td className="text-small">{date}</td>
+        <td className="text-small">
           <Notifications
             text={status}
             styles={`text-center  rounded-pill ${status}`}
           />
         </td>
-        <td className="">
-          <GeneralBtn text="view" styles="text-success text-decoration-none" />
+        <td className="d-none d-sm-table-cell">
+          <GeneralBtn text="view" styles="text-success text-decoration-none text-small" />
         </td>
       </tr>
     </>

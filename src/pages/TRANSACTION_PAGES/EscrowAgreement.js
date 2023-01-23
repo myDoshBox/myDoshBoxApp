@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { GeneralModal } from "../../components/Modal";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const EscrowAgreement = () => {
@@ -105,12 +106,14 @@ const EscrowAgreementText = () => {
             styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
           />
         </Link>
-        <Link to="">
-          <GeneralBtn
-            text="I Agree"
-            styles="GeneralBtnStyle1 btn all-btn text-white"
+          <GeneralModal
+           openModalText="I Agree"
+          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+          modalTitle="User Notified"
+          modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
+          modalRoute="../home"
+          closeModalText="Home"
           />
-        </Link>
       </div>
     </div>
   );

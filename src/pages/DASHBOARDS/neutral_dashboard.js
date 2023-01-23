@@ -74,7 +74,7 @@ const NeutralDashboard = () => {
                     <th scope="col" className="opacity-50">
                       Status
                     </th>
-                    <th scope="col" className="opacity-50">
+                    <th scope="col" className="opacity-50 d-none d-sm-table-cell">
                       ...
                     </th>
                   </tr>
