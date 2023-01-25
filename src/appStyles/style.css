@@ -732,4 +732,56 @@ input[type=color]:focus,
 .pricing-table tr:nth-child(even) {
   background-color: #e5f0ed;
 }
+
+.transaction-table thead tr th,
+.all-conflicts-table thead tr th {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  color: #bdbdbd !important;
+  font-weight: 400 !important;
+}
+.transaction-table tbody tr,
+.all-conflicts-table tbody tr {
+  border-bottom: 1px solid gray;
+}
+.transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+  border-bottom: none;
+  color: #4b4453;
+}
+
+.all-conflicts-table tbody tr {
+  border-bottom: none !important;
+}
+
+@media screen and (max-width: 290px) {
+  .transaction-table thead tr th,
+.all-conflicts-table thead tr th {
+    font-size: 0.375px !important;
+  }
+  .transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
+    font-size: 0.375px !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .transaction-table {
+    font-size: 0.625rem !important;
+  }
+  .small-hide {
+    display: none;
+  }
+}
+@media screen and (min-width: 688px) and (max-width: 992px) {
+  .transaction-table thead tr th,
+.all-conflicts-table thead tr th {
+    font-size: 0.75rem !important;
+  }
+  .transaction-table tbody tr td,
+.all-conflicts-table tbody tr td {
+    font-size: 0.75rem !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */
