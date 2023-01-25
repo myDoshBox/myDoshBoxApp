@@ -106,14 +106,14 @@ const EscrowAgreementText = () => {
             styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
           />
         </Link>
-          <GeneralModal
-           openModalText="I Agree"
+        <GeneralModal
+          openModalText="I Agree"
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
           modalTitle="User Notified"
           modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
           modalRoute="../home"
           closeModalText="Home"
-          />
+        />
       </div>
     </div>
   );
