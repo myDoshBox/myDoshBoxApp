@@ -10,6 +10,7 @@ import {
 } from "../../components/IconComponent/NeutralsDashboardIcons";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { Link } from "react-router-dom";
 
 const NeutralDashboard = () => {
   return (
@@ -74,7 +75,10 @@ const NeutralDashboard = () => {
                     <th scope="col" className="opacity-50">
                       Status
                     </th>
-                    <th scope="col" className="opacity-50 d-none d-sm-table-cell">
+                    <th
+                      scope="col"
+                      className="opacity-50 d-none d-sm-table-cell"
+                    >
                       ...
                     </th>
                   </tr>
@@ -86,10 +90,12 @@ const NeutralDashboard = () => {
                 </tbody>
               </table>
               <div className="d-flex justify-content-end my-4">
-                <GeneralBtn
-                  text="View More"
-                  styles="GeneralBtnStyle1 btn all-btn text-white"
-                />
+                <Link to={"../transaction"}>
+                  <GeneralBtn
+                    text="View More"
+                    styles="GeneralBtnStyle1 btn all-btn text-white"
+                  />
+                </Link>
               </div>
             </div>
           </div>

@@ -123,7 +123,7 @@ export const UserDashboardCard2 = (props) => {
   return (
     <Link to={link} className="text-decoration-none text-dark">
       <div
-        className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
+        className="card shadow mx-auto border-0 rounded-2  px-2 row justify-content-center"
         style={{ width: "100%", height: "9rem" }}
       >
         <div className="row justify-content-center align-items-center mx-auto">
