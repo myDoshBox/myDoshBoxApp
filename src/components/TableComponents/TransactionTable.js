@@ -53,7 +53,15 @@ export const MiniRecentTransactionTable = () => {
             })}
           </tbody>
         </table>
-        <div className="p-4 text-sm-center text-md-end">
+        <div className="p-4 text-md-end d-none d-md-block">
+          <Link to={"../transaction"}>
+            <GeneralBtn
+              text={[`View more`]}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
+          </Link>
+        </div>
+        <div className="text-center d-lg-none .d-xl-block">
           <Link to={"../transaction"}>
             <GeneralBtn
               text={[`View more`]}
