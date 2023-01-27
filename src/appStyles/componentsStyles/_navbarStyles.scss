@@ -19,7 +19,6 @@
 
 // User Dashboard Navbar Styles
 .userDashboardNav {
-  //   padding-right: 30px;
   @include userNavFont;
   font-size: 0.75rem !important;
 }
@@ -34,7 +33,7 @@
     width: 120px !important;
   }
 }
-@media screen and (min-width:281px) and (max-width: 540px) {
+@media screen and(min-width:281px) and (max-width: 540px) {
   .search {
     height: 30px;
     width: 150px !important;
@@ -109,4 +108,14 @@
 .SideNavDropdown .show a:hover,
 :focus {
   font-weight: 700 !important;
+}
+
+.offcanvas-header {
+  .btn-close {
+    background: url("https://api.iconify.design/ri/close-fill.svg?color=white")
+      no-repeat center center / contain;
+    opacity: 1 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
 }

@@ -75,6 +75,7 @@ const SmallShowExample = ({ name, ...props }) => {
         className="w-75 d-lg-none text-white"
         {...props}
         ref={disappearEl}
+        // id="off-canvas"
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -82,11 +83,17 @@ const SmallShowExample = ({ name, ...props }) => {
               <img src={doshlogo} alt="logo" />
             </Link>
           </Offcanvas.Title>
+          {/* <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            data-bs-dismiss="off-canvas"
+          ></button> */}
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="d-flex justify-content-between flex-column">
             <ul className="ps-2">
-              <li className="d-flex mb-4 align-items-center SideNavItem">
+              <li className="d-flex mb-5 align-items-center SideNavItem">
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
@@ -100,7 +107,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <span>Dashboard</span>
                 </NavLink>
               </li>
-              <li className="d-flex mb-4 align-items-center SideNavItem">
+              <li className="d-flex mb-5 align-items-center SideNavItem">
                 <div className="me-3">
                   <NavTransactionIcon />
                 </div>
@@ -115,13 +122,13 @@ const SmallShowExample = ({ name, ...props }) => {
                 </NavLink>
               </li>
 
-              <li className="d-flex align-items-center SideNavItem mb-4">
+              {/* <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <ChatIcon />
                 </div>
                 <span className="my-1">Chats</span>
-              </li>
-              <li className="d-flex align-items-center SideNavItem mb-4">
+              </li> */}
+              <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
@@ -135,7 +142,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <span>Notifications</span>
                 </NavLink>
               </li>
-              <li className="d-flex  align-items-center SideNavItem mb-4">
+              <li className="d-flex  align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <DisputeIcon />
                 </div>
@@ -207,7 +214,7 @@ const BigShow = ({ name, ...props }) => {
 
         <div className="d-flex justify-content-between flex-column">
           <ul className="ps-2">
-            <li className="d-flex mb-4 align-items-center SideNavItem">
+            <li className="d-flex mb-5 align-items-center SideNavItem">
               <div className="me-3">
                 <DashboardIcon />
               </div>
@@ -220,7 +227,7 @@ const BigShow = ({ name, ...props }) => {
                 <span>Dashboard</span>
               </NavLink>
             </li>
-            <li className="d-flex mb-4 align-items-center SideNavItem">
+            <li className="d-flex mb-5 align-items-center SideNavItem">
               <div className="me-3">
                 <NavTransactionIcon />
               </div>
@@ -234,13 +241,13 @@ const BigShow = ({ name, ...props }) => {
               </NavLink>
             </li>
 
-            <li className="d-flex align-items-center SideNavItem mb-4">
+            {/* <li className="d-flex align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <ChatIcon />
               </div>
               <span className="my-1">Chats</span>
-            </li>
-            <li className="d-flex align-items-center SideNavItem mb-4">
+            </li> */}
+            <li className="d-flex align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <NotificationIcon />
               </div>
@@ -254,7 +261,7 @@ const BigShow = ({ name, ...props }) => {
               </NavLink>
             </li>
 
-            <li className="d-flex  align-items-center SideNavItem mb-4">
+            <li className="d-flex  align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <DisputeIcon />
               </div>

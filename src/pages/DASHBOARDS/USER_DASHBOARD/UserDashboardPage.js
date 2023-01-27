@@ -34,15 +34,15 @@ const UserDashboard = () => {
         <MiniProfileCard />
       </div>
       <div className="col-lg-7 col-sm-12 row">
-        <div className="col-12 row">
-          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6 mt-4 mt-lg-0">
+        <div className="row">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6 mt-4 mt-lg-0">
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
               text={`Initiate Transaction`}
               link={"../initiate-escrow"}
             />
           </div>
-          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
@@ -50,8 +50,8 @@ const UserDashboard = () => {
             />
           </div>
         </div>
-        <div className="col-12 row">
-          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+        <div className="row">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
               text={`Initiate Transaction`}
               icon={<InitiateTransactionIcon />}
