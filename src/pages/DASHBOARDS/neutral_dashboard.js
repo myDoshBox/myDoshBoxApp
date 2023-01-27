@@ -41,7 +41,7 @@ const NeutralDashboard = () => {
               link={`../closed-conflicts`}
             />
           </div>
-          <div className="card mx-auto mt-4 p-3 shadow border-0">
+          <div className="card mx-auto mt-5 p-3 shadow border-0">
             <div className="card-body p-0">
               <h6 className="pb-3 m-0">Recent Transactions</h6>
               <table class="table">

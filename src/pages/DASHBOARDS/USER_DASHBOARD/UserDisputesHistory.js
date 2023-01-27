@@ -1,10 +1,13 @@
+import { lazy } from "react";
+import { Link } from "react-router-dom";
 import {
   GeneralBtnStyle1,
   GeneralBtnStyle1Icon,
 } from "../../../components/ButtonsComponent/Button";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { Link } from "react-router-dom";
+import { GeneralModal } from "../../../components/Modal";
+
 
 const UserDisputeHistory = () => {
   return (
@@ -61,7 +64,15 @@ const DisputeData = (props) => {
       </div>
 
       <div className="d-flex align-items-end flex-column">
-        <GeneralBtnStyle1 text={"View Details"} />
+        {/* <GeneralBtnStyle1 text={"View Details"} /> */}
+        <GeneralModal
+           openModalText="View Details"
+          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+          modalTitle="User Notified"
+          modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
+          // modalRoute="../home"
+          closeModalText="Close"
+          />
       </div>
     </div>
   );

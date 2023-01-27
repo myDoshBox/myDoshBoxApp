@@ -9,17 +9,19 @@ export const AllConflictsTable = ({ conflictType }) => {
     if (conflict.status_category === conflictType) {
       return (
         <tr key={conflict.ticket_id}>
-          <td>{conflict.date_issued}</td>
-          <td>{conflict.ticket_id}</td>
-          <td className="">{conflict.user_id}</td>
-          <td>{conflict.complaint_type}</td>
+          <td className="text-small" >{conflict.date_issued}</td>
+          <td className="text-small" >{conflict.ticket_id}</td>
+          <td className="text-small">{conflict.user_id}</td>
+          <td className="text-small" >{conflict.complaint_type}</td>
           <td
-            className={
-              conflict.status_category === "closed"
-                ? "text-success"
+            className={`
+              ${conflict.status_category === "closed"
+                ? "text-danger"
                 : conflict.status_category === "ongoing"
-                ? "text-warning"
-                : "text-primary"
+                ? "text-grey"
+                : "text-success"} 
+                  text-small
+              `
             }
           >
             {conflict.status}
