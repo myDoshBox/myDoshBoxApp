@@ -1,34 +1,19 @@
 import { useState } from "react";
 import { GoogleButton } from "../../components/ButtonsComponent/Button";
 import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
-import side from "../../images/SignInPageImage.png";
-import logo from "../../images/doshlogo.jpg";
+import logo from "../../images/doshlogolight.png";
 import { Link } from "react-router-dom";
 
 const SignInPage = () => {
   return (
     <>
       <div className="contestPage">
-        <div className="row mx-auto flex-column-reverse flex-md-row">
-          <div className="col-sm-12 col-lg-1"></div>
-          <div className="col-sm-12 col-lg-6 px-lg-5 my-5">
-            <Link to={"/"}>
-              <img
-                src={logo}
-                alt="doshboxlogo"
-                className="position-fixed start-0 top-0 px-4 py-3"
-              />
-            </Link>
-            <SignInForm />
+        <div className="row">
+          <div className="col-lg-6 col-sm-12">
+            <Side />
           </div>
-          {/* <div className="col-sm-12 col-lg-1"></div> */}
-          <div className="col-sm-12 col-lg-5">
-            <img
-              src={side}
-              alt="signIn"
-              style={{ height: "100vh", width: "100%" }}
-              className="img-fluid d-none d-lg-block"
-            />
+          <div className="col-lg-6 col-sm-12 container">
+            <SignInForm />
           </div>
         </div>
       </div>
@@ -148,6 +133,20 @@ export const SignInForm = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const Side = () => {
+  return (
+    <div className="pe-lg-5 signUp-bg text-white h-100">
+      <img src={logo} alt="" className="p-4" />
+      <div className="p-md-5 p-3">
+        <h1 className="">Start your journey with us.</h1>
+        <p className="text-white">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+        </p>
+      </div>
+    </div>
   );
 };
 

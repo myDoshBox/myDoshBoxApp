@@ -609,6 +609,13 @@ input[type=color]:focus,
   font-weight: 700 !important;
 }
 
+.offcanvas-header .btn-close {
+  background: url("https://api.iconify.design/ri/close-fill.svg?color=white") no-repeat center center/contain;
+  opacity: 1 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .completed,
 .awaiting,
 .canceled,

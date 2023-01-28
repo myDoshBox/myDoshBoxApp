@@ -50,14 +50,14 @@ const SettingsPage = () => {
         </div>
         <div className="col-lg-7 col-sm-12 row">
           <div className="col-12 row">
-            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6 mt-4 mt-lg-0">
+            <div className="col-sm-12 mb-2 col-lg-6 mt-4 mt-lg-0">
               <UserDashboardCard
                 icon={<UpdateProfileIcon />}
                 text={"Update Profile"}
                 link={"../updateprofile"}
               />
             </div>
-            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
+            <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<ChangeBankIcon />}
                 text={"Update Bank Details"}
@@ -66,14 +66,14 @@ const SettingsPage = () => {
             </div>
           </div>
           <div className="col-12 row">
-            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
+            <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<FeedbackIcon />}
                 text={"Report App Defect"}
                 link={"../reportissues"}
               />
             </div>
-            <div className="col-sm-12 mb-3 mb-md-4 col-lg-6">
+            <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<ContactUsIcon />}
                 text={"Contact Us"}

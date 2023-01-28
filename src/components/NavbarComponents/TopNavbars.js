@@ -95,7 +95,7 @@ export const GuestNavbar = () => {
 export const UserDashboardNavbar = () => {
   return (
     <Container>
-      <Nav className="justify-content-end userDashboardNav position-sticky bg-white top-0 end-0">
+      <Nav className="justify-content-end userDashboardNav position-sticky top-0 end-0">
         <Nav.Item className=" mx-md-5 mt-2">
           <Form className="searchField">
             <Form.Control

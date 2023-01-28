@@ -132,3 +132,12 @@ option,
 .text-small {
   font-size: small !important;
 }
+
+@media screen and (max-width: 578px) {
+  @mixin H1Font {
+    font-size: 2.5rem !important;
+  }
+  @mixin H2Font {
+    font-size: 2rem !important;
+  }
+}

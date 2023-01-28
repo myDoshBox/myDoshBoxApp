@@ -26,7 +26,7 @@ const NeutralsSideNav = () => {
 const options = [
   {
     scroll: true,
-    backdrop: false,
+    backdrop: true,
   },
 ];
 
@@ -86,7 +86,7 @@ const SmallShowExample = ({ name, ...props }) => {
         <Offcanvas.Body>
           <div className="d-flex justify-content-between flex-column">
             <ul className="ps-2">
-              <li className="d-flex mb-4 align-items-center SideNavItem">
+              <li className="d-flex mb-5 align-items-center SideNavItem">
                 <div className="me-3">
                   <DashboardIcon />
                 </div>
@@ -100,7 +100,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <span>Dashboard</span>
                 </NavLink>
               </li>
-              <li className="d-flex mb-4 align-items-center SideNavItem">
+              <li className="d-flex mb-5 align-items-center SideNavItem">
                 <div className="me-3">
                   <NavTransactionIcon />
                 </div>
@@ -157,7 +157,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   ))}
                 </span>
               </li>
-              <li className="d-flex align-items-center SideNavItem mb-4">
+              <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <NotificationIcon />
                 </div>
@@ -224,7 +224,7 @@ const BigShow = () => {
 
         <div className="d-flex justify-content-between flex-column">
           <ul className="ps-2">
-            <li className="d-flex mb-4 align-items-center SideNavItem">
+            <li className="d-flex mb-5 align-items-center SideNavItem">
               <div className="me-3">
                 <DashboardIcon />
               </div>
@@ -237,7 +237,7 @@ const BigShow = () => {
                 <span>Dashboard</span>
               </NavLink>
             </li>
-            <li className="d-flex mb-4 align-items-center SideNavItem">
+            <li className="d-flex mb-5 align-items-center SideNavItem">
               <div className="me-3">
                 <NavTransactionIcon />
               </div>
@@ -294,7 +294,7 @@ const BigShow = () => {
                 ))}
               </span>
             </li>
-            <li className="d-flex align-items-center SideNavItem mb-4">
+            <li className="d-flex align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <NotificationIcon />
               </div>
