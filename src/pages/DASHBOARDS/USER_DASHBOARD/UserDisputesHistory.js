@@ -1,4 +1,3 @@
-import { lazy } from "react";
 import { Link } from "react-router-dom";
 import {
   GeneralBtnStyle1,
@@ -6,7 +5,7 @@ import {
 } from "../../../components/ButtonsComponent/Button";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { GeneralModal } from "../../../components/Modal";
+import {DisputeDetailsModal  } from "../../../components/Modal";
 
 
 const UserDisputeHistory = () => {
@@ -65,13 +64,9 @@ const DisputeData = (props) => {
 
       <div className="d-flex align-items-end flex-column">
         {/* <GeneralBtnStyle1 text={"View Details"} /> */}
-        <GeneralModal
+        <DisputeDetailsModal
            openModalText="View Details"
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
-          modalTitle="User Notified"
-          modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
-          // modalRoute="../home"
-          closeModalText="Close"
           />
       </div>
     </div>
