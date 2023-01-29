@@ -135,9 +135,21 @@ option,
 
 @media screen and (max-width: 578px) {
   @mixin H1Font {
-    font-size: 2.5rem !important;
+    font-size: 0.5rem !important;
   }
   @mixin H2Font {
-    font-size: 2rem !important;
+    font-size: 0.5rem !important;
+  }
+  @mixin H3Font {
+    font-size: 0.5rem !important;
+  }
+  @mixin H4Font {
+    font-size: 0.5rem !important;
+  }
+  @mixin H5Font {
+    font-size: 0.5rem !important;
+  }
+  @mixin H6Font {
+    font-size: 0.5rem !important;
   }
 }
