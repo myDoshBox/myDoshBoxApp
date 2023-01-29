@@ -840,10 +840,4 @@ input[type=color]:focus,
 .PaginationBar :last-child {
   margin-inline: unset !important;
 }
-
-@media screen and (max-width: 764px) {
-  .PaginationBar button {
-    font-size: 0.75rem !important;
-  }
-}
 /*# sourceMappingURL=style.css.map */
