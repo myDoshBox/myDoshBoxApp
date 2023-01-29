@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 import {
   GeneralBtnStyle1,
   GeneralBtnStyle1Icon,
 } from "../../../components/ButtonsComponent/Button";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { Link } from "react-router-dom";
+import {DisputeDetailsModal  } from "../../../components/Modal";
+
 
 const UserDisputeHistory = () => {
   return (
@@ -61,7 +63,11 @@ const DisputeData = (props) => {
       </div>
 
       <div className="d-flex align-items-end flex-column">
-        <GeneralBtnStyle1 text={"View Details"} />
+        {/* <GeneralBtnStyle1 text={"View Details"} /> */}
+        <DisputeDetailsModal
+           openModalText="View Details"
+          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+          />
       </div>
     </div>
   );
