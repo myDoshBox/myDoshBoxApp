@@ -11,6 +11,12 @@
   background-color: $buttonColor !important;
 }
 
+.CloseBtnStyle {
+  background: rgba(255, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 0, 0, 0.3) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+}
+
 .GeneralBtnStyle2 {
   background-color: $pryColor !important;
   @include pFont;

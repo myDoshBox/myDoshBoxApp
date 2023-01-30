@@ -1,5 +1,5 @@
-import { UpdateProfile } from "../../../components/FormComponents.js/UpdateForms";
-import { UpdatePassword } from "../../../components/FormComponents.js/UpdateForms";
+import { UpdateProfile } from "../../components/FormComponents.js/UpdateForms";
+import { UpdatePassword } from "../../components/FormComponents.js/UpdateForms";
 export const NeutralSetting = () => {
   return (
     <section className="row">

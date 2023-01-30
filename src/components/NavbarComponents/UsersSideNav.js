@@ -75,7 +75,7 @@ const SmallShowExample = ({ name, ...props }) => {
         className="w-75 d-lg-none text-white"
         {...props}
         ref={disappearEl}
-        // id="off-canvas"
+        // id="off-canvas"x
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -184,7 +184,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <div className="me-3">
                     <LogoutIcon />
                   </div>
-                  <span>Logout</span>
+                  <span className="text-white">Logout</span>
                 </li>
               </li>
             </ul>
@@ -298,7 +298,7 @@ const BigShow = ({ name, ...props }) => {
               <div className="me-3">
                 <LogoutIcon />
               </div>
-              <span>Logout</span>
+              <span className="text-white">Logout</span>
             </li>
           </ul>
         </div>

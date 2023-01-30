@@ -33,8 +33,8 @@ const UserDashboard = () => {
       <div className="col-lg-5 d-none d-md-block">
         <MiniProfileCard />
       </div>
-      <div className="col-lg-7 col-sm-12 row">
-        <div className="row">
+      <div className="col-lg-7 col-sm-12">
+        <div className="row mb-3">
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6 mt-4 mt-lg-0">
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
@@ -50,7 +50,7 @@ const UserDashboard = () => {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row mb-3">
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
               text={`Initiate Transaction`}

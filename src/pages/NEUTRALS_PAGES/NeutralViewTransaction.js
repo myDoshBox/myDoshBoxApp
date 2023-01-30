@@ -1,4 +1,4 @@
-import { NeutralViewTransactionCard } from "../../../components/CardComponents/NeutralCards";
+import { NeutralViewTransactionCard } from "../../components/CardComponents/NeutralCards";
 
 export const NeutralViewTransaction = () => {
   return (
