@@ -101,7 +101,8 @@ h6 {
   font-size: 0.5rem;
 }
 
-p {
+p,
+div {
   font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -158,6 +159,30 @@ option,
   font-size: small !important;
 }
 
+@media screen and (max-width: 578px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  h6 {
+    font-size: 0.75rem !important;
+  }
+  p,
+div {
+    font-size: 0.8rem !important;
+  }
+}
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;
