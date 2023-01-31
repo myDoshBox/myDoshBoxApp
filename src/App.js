@@ -28,8 +28,8 @@ import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
-import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
-import { NeutralViewTransaction } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralViewTransaction";
+import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
+import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/NeutralViewTransaction";
 import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
 import {
   ClosedConflicts,

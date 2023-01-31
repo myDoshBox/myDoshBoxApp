@@ -1,4 +1,4 @@
-import { CloseConflictTable } from "../../../components/TableComponents/ConflictsTable";
+import { CloseConflictTable } from "../../components/TableComponents/ConflictsTable";
 export const CloseConflict = () => {
   return (
     <section className="row">
