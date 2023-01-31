@@ -1,6 +1,6 @@
 @use "./generalStyles/reset" as *;
 @use "./generalStyles/fonts" as *;
-@use "./generalStyles/fonts";
+
 @use "./generalStyles/color";
 @use "./generalStyles/mediaQueries";
 @use "./componentsStyles/buttonStyles";
@@ -12,4 +12,3 @@
 @use "./componentsStyles/notificationStyles";
 @use "./componentsStyles/footerStyles";
 @use "./componentsStyles/tableStyles";
-@use "./componentsStyles/paginationStyles";

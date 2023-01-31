@@ -1,6 +1,7 @@
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { GeneralModal } from "../Modal";
 
 //    <DeliveryForm
 //   heading="Confirm Product At Delivery"
@@ -35,12 +36,14 @@ export const DeliveryForm = ({ heading, sub_text, checkList }) => {
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
             />
           </Link>
-          <Link to="">
-            <GeneralBtn
-              text="Confirm"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
-          </Link>
+           <GeneralModal
+           openModalText="Confirm"
+          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+          modalTitle="Thank You"
+          modalMessage="The entire team at MyDoshBox is very grateful to you for trusting us to keep your transactions secure. For any improvements you may have in mind please contact our customer care."
+          modalRoute="../home"
+          closeModalText="Home"
+          />
         </div>
       </Form>
     </div>

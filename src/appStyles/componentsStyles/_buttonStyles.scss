@@ -11,6 +11,12 @@
   background-color: $buttonColor !important;
 }
 
+.CloseBtnStyle {
+  background: rgba(255, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 0, 0, 0.3) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+}
+
 .GeneralBtnStyle2 {
   background-color: $pryColor !important;
   @include pFont;
@@ -57,7 +63,6 @@
 .FilteBtnStyle {
   font-weight: 200 !important;
   color: #4b4453 !important;
-  background-color: #e5f0ed !important;
 }
 
 // LearnMoreCardButton
@@ -72,21 +77,22 @@
 
 // InitiateEscrow
 .EscrowTransactTypeBtn {
-	color: $pryColor !important;
-	border-color: $pryColor !important;
+  color: $pryColor !important;
+  border-color: $pryColor !important;
   @include pFont;
-	
 }
-.EscrowTransactTypeBtn:hover,.EscrowTransactTypeBtn:focus {
-	background-color: $pryColor !important;
-	border: 0;
-	color: white !important;
+.EscrowTransactTypeBtn:hover,
+.EscrowTransactTypeBtn:focus {
+  background-color: $pryColor !important;
+  border: 0;
+  color: white !important;
 }
 .pale-red {
-  background-color:$cancelBtnColor !important ;
+  background-color: $cancelBtnColor !important ;
 }
-.pale-red:hover,.pale-red:focus {
-  background-color:$canceledTextColor !important ;
+.pale-red:hover,
+.pale-red:focus {
+  background-color: $canceledTextColor !important ;
 }
 
 .link-color-reset {

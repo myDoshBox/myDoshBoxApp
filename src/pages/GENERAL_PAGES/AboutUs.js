@@ -2,7 +2,6 @@ import React from "react";
 import AboutHero from "../../images/AboutUs Image/AboutHero.png";
 import mission from "../../images/AboutUs Image/mission.png";
 import Vision from "../../images/AboutUs Image/vision.png";
-import corevalue from "../../images/AboutUs Image/corevalue.png";
 import {
   CoreValueCard,
   TeamsCard,
@@ -122,33 +121,39 @@ const TeamsSection = () => {
     <section className="mt-5 pt-5 container d-flex flex-column align-items-center pb-5">
       <div className="">
         <h2 className="text-center fw-bold">TEAMS</h2>
-        <div className="mb-3">
+        <div className="mb-3 row">
           <h4 className="mb-3 fw-bold">Founder Team</h4>
           {aboutusData.businessteam.map((busteam) => {
             return (
-              <div key={busteam.id}>
+              <div
+                className="col-lg-6 mx-auto col-md-auto mb-5"
+                key={busteam.id}
+              >
                 <TeamsCard {...busteam} />
               </div>
             );
           })}
         </div>
 
-        <div className="pt-5 ">
+        <div className="pt-5 row ">
           <h4 className="mb-3 fw-bold">Brand and Content Team</h4>
-          {aboutusData.marketing_dev_team.map((busteam) => {
+          {aboutusData.marketing_team.map((busteam) => {
             return (
-              <div key={busteam.id}>
+              <div
+                className="col-lg-6 mx-auto col-md-auto mb-5"
+                key={busteam.id}
+              >
                 <TeamsCard {...busteam} />
               </div>
             );
           })}
         </div>
 
-        <div className="pt-5">
+        <div className="pt-5 row">
           <h4 className="mb-3 fw-bold">Developer Team</h4>
-          {aboutusData.founder_team.map((busteam) => {
+          {aboutusData.developers_team.map((busteam) => {
             return (
-              <div key={busteam.id}>
+              <div className="col-lg-6 mx-auto mb-5 container" key={busteam.id}>
                 <TeamsCard {...busteam} />
               </div>
             );

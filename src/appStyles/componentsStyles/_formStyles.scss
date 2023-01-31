@@ -3,77 +3,6 @@
 
 $inputFieldColor: rgba(75, 68, 83, 0.8);
 
-.Email,
-.Password {
-  @include H5Font;
-  color: $inputFieldColor;
-  font-size: 1rem !important;
-  font-weight: 700;
-}
-
-.Email input::placeholder,
-.Password input::placeholder {
-  color: $placeholderTextColor !important;
-}
-
-// Contact Us Form Styles Ends//
-
-// .Email,
-// .Password {
-//   @include H5Font;
-//   color: $inputFieldColor;
-//   font-size: 1rem !important;
-//   font-weight: 700;
-// }
-
-// .Email input::placeholder,
-// .Password input::placeholder {
-//   color: $placeholderTextColor !important;
-// }
-
-.AccountNum,
-.AccountName,
-.BankName {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
-}
-
-.AccountNum,
-.AccountName,
-.BankName {
-  input::placeholder {
-    font-weight: 300 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04em !important;
-    color: $placeholderTextColor;
-  }
-}
-.UpdateProfileForm {
-  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
-  button {
-    @include pFont;
-    background-color: $buttonColor !important;
-    font-size: 0.875rem !important;
-    color: $secColor !important;
-  }
-  button:hover,
-  button:focus {
-    background-color: $pryColor !important;
-  }
-  p {
-    @include H6Font;
-    color: $bodyTextColor;
-    font-weight: 700;
-  }
-}
-
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -93,67 +22,9 @@ input[type="color"]:focus,
   border-color: $placeholderTextColor;
   outline: 0 none;
 }
-.Name,
-.UpdateEmail,
-.Phone,
-.Pass {
-  label {
-    @include H6Font;
-    color: $bodyTextColor;
-    letter-spacing: 0.08rem;
-    font-weight: 700;
-  }
-  input {
-    border: 1.5px solid rgba(0, 103, 71, 0.3);
-  }
-}
 
-.Name,
-.UpdateEmail,
-.Phone,
-.Pass {
-  input::placeholder {
-    font-weight: 300 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.04rem !important;
-    color: $placeholderTextColor;
-  }
-}
-
-.escrow-form,
-.bank-transfer-form {
-  overflow-x: hidden;
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  color: $bodyTextColor;
-}
-
-.escrow-form-label,
-.bank-transfer-form-label {
-  margin-left: 15px;
-  @include H5Font;
-  font-size: 1.125rem !important;
-}
-
-.bank-transfer-input-field {
-  width: 90% !important;
-  margin: 0 15px;
-}
 .escrow-price-field {
-  // width: 78% !important;
-  //   margin: 0 15px
   border-radius: 5px 0 0 5px !important;
-}
-
-.price-field {
-  transform: translateX(12px);
-}
-.total-input {
-  width: 38% !important;
-  background-color: $pryColor !important;
-  color: $secColor !important;
-  border-radius: 0 5px 5px 0 !important;
 }
 
 .ngn {
@@ -174,24 +45,13 @@ input[type="color"]:focus,
 }
 
 .escrow-input-field::placeholder,
-.escrow-price-field::placeholder,
-.bank-transfer-input-field::placeholder {
+.escrow-price-field::placeholder {
   @include pFont;
   font-size: 0.75rem !important;
   color: $placeholderTextColor !important;
 }
 
 .form-check-label {
-  color: $placeholderTextColor !important;
-}
-
-.confirm-delivery-head {
-  @include H4Font;
-  font-weight: 500 !important;
-}
-
-.confirm-delivery-pText {
-  @include H6Font;
   color: $placeholderTextColor !important;
 }
 
@@ -212,58 +72,32 @@ input[type="color"]:focus,
 // Authentication Form Style
 // SignIn Form Styling
 
-.inputStyle {
-  input {
-    text-indent: 10px !important;
-  }
-}
-
-.toggleBtnStyle {
-  margin-right: 30rem;
-}
-
-.checkboxStyle label {
-  color: $pryColorVariant !important;
-}
-
-.sign-up-section {
-  transform: translateX(130px);
-}
-
-.labelStyle {
-  color: #8cbbac !important;
-}
-
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
-.titleStyle {
-  @include H1Font;
-  color: $pryColor !important;
-}
+.sign-up-form {
+  .nav-pills .nav-link.active {
+    background-color: $pryColor !important;
+    font-weight: 400 !important;
+  }
 
-.contactStyle {
-  border: 2px solid $pryColor;
-  border-radius: 15px;
-  padding: 50px 15px;
-
-  hr {
+  .nav-pills .nav-link {
+    font-weight: 400 !important;
     color: $pryColor;
-  }
-  a:link {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited {
-    color: black;
+    border: 2px solid $pryColor;
   }
 }
 
-.colorStyle h5 {
-  color: red !important;
+// Contest Page styles
+.contestPage {
+  .row {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
-
 // Initiate Escrow
 .escrow-dropdown-field,
 .escrow-dropdown-field:focus,
@@ -272,12 +106,4 @@ input[type="color"]:focus,
   box-shadow: none !important;
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: 300 !important;
-}
-// Contest Page styles
-.contestPage {
-  .row {
-    margin-top: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
 }

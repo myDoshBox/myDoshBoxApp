@@ -5,11 +5,19 @@ import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 
 const TransactionAgreedPage = () => {
   return (
-    <div>
-      <TransactionAgreed />
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-md-3">
+          <UsersSideNav />
+        </div>
+        <div className="col-md-9">
+          <TransactionAgreed />
+        </div>
+      </div>
     </div>
   );
 };
@@ -17,7 +25,7 @@ const TransactionAgreedPage = () => {
 const TransactionAgreed = () => {
   return (
     <div className="row">
-      <div className="">
+      <div>
         <TransactionDetails
           heading={`Transaction Agreed`}
           sub_text={`The details of this transaction has been viewed and agreed to buy the seller`}

@@ -1,13 +1,29 @@
-import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { useState, useEffect } from "react";
-import {
-  Form,
-} from "react-bootstrap";
-import { GeneralBtnStyle1 } from "../../components/ButtonsComponent/Button";
+import { Form } from "react-bootstrap";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
 
 const InitiateEscrow = () => {
+  return (
+    <>
+      <div className="contestPage">
+        <div className="row">
+          <div className="col-lg-3 col-sm-12"></div>
+
+          <div className="col-lg-9 col-sm-12">
+            <UserDashboardNavbar />
+            <div className="mt-5">
+              <InitiateEscrowForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const InitiateEscrowForm = () => {
   const initialValues = {
     phoneNumber: "",
     description: "",
@@ -93,16 +109,12 @@ const InitiateEscrow = () => {
     setShowProductForm(false);
     setShowServiceForm(true);
   };
-  
-
-
   return (
-    <div className="d-flex w-100">
-      <div className="d-none d-lg-block">
-      <UserSidenav />
-      </div>
-
-      <Form onSubmit={handleSubmit} className="mx-lg-5 mt-5 shadow InitiateEscrow w-100 p-3 p-lg-5 ">
+    <div className="px-lg-5">
+      <Form
+        onSubmit={handleSubmit}
+        className="w-100 mt-5 shadow InitiateEscrow p-3 p-lg-5 rounded"
+      >
         <Form.Group className="">
           <Form.Label className="m-0">Phone Number</Form.Label>
           <Form.Control
@@ -114,7 +126,9 @@ const InitiateEscrow = () => {
             onChange={handleChange}
             className="escrow-input-field"
           />
-          <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
+          <small className="small-text text-danger fst-italic fw-lighter">
+            *This field is required
+          </small>
           <span className="escrow-form-error ms-3">
             {formErrors.phoneNumber}
           </span>
@@ -148,7 +162,9 @@ const InitiateEscrow = () => {
               />
             </div>
           </div>
-          <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
+          <small className="small-text text-danger fst-italic fw-lighter">
+            *This field is required
+          </small>
         </Form.Group>
 
         <Form.Group className="mb-3">
@@ -182,7 +198,9 @@ const InitiateEscrow = () => {
                 className="escrow-input-field"
                 placeholder="Enter product name"
               />
-              <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
+              <small className="small-text text-danger fst-italic fw-lighter">
+                *This field is required
+              </small>
             </Form.Group>
             <div className="form-group mb-3">
               <label for="category">Category</label>
@@ -191,11 +209,22 @@ const InitiateEscrow = () => {
                 id="category"
                 placeholder="Pick your product category"
               >
-                <option className="escrow-dropdown-field"  value="Jewelry and Ornaments">
+                <option
+                  className="escrow-dropdown-field"
+                  value="Jewelry and Ornaments"
+                >
                   Jewelry and Ornaments
                 </option>
-                <option  className="escrow-dropdown-field" value="Food and Nutrition">Food and Nutrition</option>
-                <option  className="escrow-dropdown-field" value="Clothing and Textiles">
+                <option
+                  className="escrow-dropdown-field"
+                  value="Food and Nutrition"
+                >
+                  Food and Nutrition
+                </option>
+                <option
+                  className="escrow-dropdown-field"
+                  value="Clothing and Textiles"
+                >
                   Clothing and Textiles
                 </option>
               </select>
@@ -218,15 +247,21 @@ const InitiateEscrow = () => {
             <Form.Group className="mb-3">
               <Form.Label className="m-0">Price</Form.Label>
               <div className="input-group">
-  <input className="form-control escrow-price-field" aria-label="price in Naira" type="number"
+                <input
+                  className="form-control escrow-price-field"
+                  aria-label="price in Naira"
+                  type="number"
                   placeholder="Enter the amount the product costs"
                   id="price"
                   name="price"
                   value={transaction.price}
-                  onChange={handleChange}/>
+                  onChange={handleChange}
+                />
                 <span className="input-group-text ngn2">₦</span>
-</div>
-                <small className="small-text text-danger fst-italic fw-lighter">*There is a 5% service charge on each transaction</small>
+              </div>
+              <small className="small-text text-danger fst-italic fw-lighter">
+                *There is a 5% service charge on each transaction
+              </small>
               <span className="escrow-form-error ms-3">{formErrors.price}</span>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -246,7 +281,7 @@ const InitiateEscrow = () => {
               <Form.Label className="">Description</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={3} 
+                rows={3}
                 placeholder="Enter product description"
                 id="description"
                 name="description"
@@ -263,16 +298,18 @@ const InitiateEscrow = () => {
                 Total
               </label>
               <span>
-              <span
-                id="total"
-                name="total"
-                value={transaction.total}
-                onChange={handleChange}
-                className="ngn btn rounded-1"
-              >
-                ₦ {transaction.total}
-              </span>
-              <small className="d-block small-text text-danger fst-italic fw-lighter">*Service charge included</small>
+                <span
+                  id="total"
+                  name="total"
+                  value={transaction.total}
+                  onChange={handleChange}
+                  className="ngn btn rounded-1"
+                >
+                  ₦ {transaction.total}
+                </span>
+                <small className="d-block small-text text-danger fst-italic fw-lighter">
+                  *Service charge included
+                </small>
               </span>
             </Form.Group>
           </>
@@ -287,9 +324,11 @@ const InitiateEscrow = () => {
                 name="name"
                 id="name"
                 className="escrow-input-field"
-                placeholder="Enter service name" />
-                            <small className="small-text text-danger fst-italic fw-lighter">*This field is required</small>
-
+                placeholder="Enter service name"
+              />
+              <small className="small-text text-danger fst-italic fw-lighter">
+                *This field is required
+              </small>
             </Form.Group>
             <Form.Group className="form-group mb-3">
               <label for="category">Category</label>
@@ -298,9 +337,16 @@ const InitiateEscrow = () => {
                 id="category"
                 placeholder="Pick your service category"
               >
-                <option className="escrow-dropdown-field" value="web design">web design</option>
-                <option className="escrow-dropdown-field" value="hair styling">hair styling</option>
-                <option className="escrow-dropdown-field" value="Catering and event planning">
+                <option className="escrow-dropdown-field" value="web design">
+                  web design
+                </option>
+                <option className="escrow-dropdown-field" value="hair styling">
+                  hair styling
+                </option>
+                <option
+                  className="escrow-dropdown-field"
+                  value="Catering and event planning"
+                >
                   Catering and event planning
                 </option>
               </select>
@@ -316,13 +362,14 @@ const InitiateEscrow = () => {
                   id="price"
                   name="price"
                   value={transaction.price}
-                  onChange={handleChange} />
+                  onChange={handleChange}
+                />
                 <span className="input-group-text ngn2">₦</span>
               </div>
-              <small className="small-text text-danger fst-italic fw-lighter">*There is a 5% service charge on each transaction</small>
-              <span className="escrow-form-error ms-3">
-                {formErrors.price}
-              </span>
+              <small className="small-text text-danger fst-italic fw-lighter">
+                *There is a 5% service charge on each transaction
+              </small>
+              <span className="escrow-form-error ms-3">{formErrors.price}</span>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className="">Image</Form.Label>
@@ -334,19 +381,21 @@ const InitiateEscrow = () => {
                 value={transaction.image}
                 onChange={handleChange}
                 className="escrow-input-field escrow-images"
-                accept="image/*" />
+                accept="image/*"
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className="m-0">Description</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={3} 
+                rows={3}
                 placeholder="Enter service description"
                 id="description"
                 name="description"
                 value={transaction.description}
                 onChange={handleChange}
-                className="escrow-input-field" />
+                className="escrow-input-field"
+              />
               <span className="escrow-form-error">
                 {formErrors.description}
               </span>
@@ -380,38 +429,40 @@ const InitiateEscrow = () => {
             </Form.Group>
             <Form.Group className="my-4 d-flex align-items-end text-end flex-column">
               <div>
-              <label for="total" className="me-3">
-                Total
-              </label>
-              <span
-                id="total"
-                name="total"
-                value={transaction.total}
-                onChange={handleChange}
-                className="ngn btn rounded-1"
-              >
-                ₦ {transaction.total}
+                <label for="total" className="me-3">
+                  Total
+                </label>
+                <span
+                  id="total"
+                  name="total"
+                  value={transaction.total}
+                  onChange={handleChange}
+                  className="ngn btn rounded-1"
+                >
+                  ₦ {transaction.total}
                 </span>
               </div>
               <div>
-              <small className="d-block small-text text-danger fst-italic fw-lighter">*Service charge included</small>
+                <small className="d-block small-text text-danger fst-italic fw-lighter">
+                  *Service charge included
+                </small>
               </div>
             </Form.Group>
           </>
         )}
         <div className="d-flex justify-content-center">
-          <Link to="/">
-          <GeneralBtn
+          <Link to="../home">
+            <GeneralBtn
               text="Cancel"
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
-          />
+            />
           </Link>
-          <Link to="/agreement">
-          <GeneralBtn
+          <Link to="../transactionsummary">
+            <GeneralBtn
               text="Proceed"
               styles="GeneralBtnStyle1 btn all-btn text-white"
             />
-        </Link>
+          </Link>
         </div>
       </Form>
     </div>

@@ -5,11 +5,19 @@ import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
+import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 
 const PaymentMadePage = () => {
   return (
-    <div>
-      <PaymentMade />
+    <div className="contestPage">
+      <div className="row">
+        <div className="col-md-3">
+          <UsersSideNav />
+        </div>
+        <div className="col-md-9">
+          <PaymentMade />
+        </div>
+      </div>
     </div>
   );
 };

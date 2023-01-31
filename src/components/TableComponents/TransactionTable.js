@@ -1,219 +1,44 @@
-<<<<<<< HEAD
-import Sample_User from "../../images/Sample User Image.png";
-=======
 import Table from "react-bootstrap/Table";
-import Sample_User from "../../images/SampleUserImage.png";
->>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
-import { PaginationBar } from "../PaginationComponent";
-import { FilterButton } from "../ButtonsComponent/MiscBtns";
+// import { PaginationBar } from "../PaginationComponent";
+// import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import { Descripe } from "@mui/icons-material";
+import TransactionData from "../../data/dummyData/transactionData.json";
+import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import { Link } from "react-router-dom";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
   return (
-<<<<<<< HEAD
-    <table className=" NotificationCardWrapper">
-      <button
-        aria-label="Leave Page"
-        className="border-0 bg-transparent pt-2 d-lg-none"
-      >
-        <span className="NotificationCardBackBtn">Back</span>
-      </button>
-      <thead className="NotificationCardHeader d-flex justify-content-between align-items-center px-lg-5 px-2 pt-2 pb-2">
-        <h1 className="">Notifications</h1>
-        <FilterButton />
-      </thead>
-      <tbody>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-        <tr className="NotificationCardDetails d-flex justify-content-between justify-content-sm-evenly  align-items-center py-3">
-          <div className="d-flex justify-content-lg-between align-items-center d-inline">
-            <img src={Sample_User} alt="SampleUserImg" className="me-3" />
-            <h6 className="d-none d-lg-block">Opeyemi Andrewson</h6>
-          </div>
-          <div className="d-inline">
-            <p>
-              Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the
-              product 100Gb Laptop
-            </p>
-            <small className="d-block d-lg-none">20s ago</small>
-          </div>
-          <button className="border border-0 bg-transparent d-none d-lg-inline">
-            View More...
-          </button>
-        </tr>
-      </tbody>
-      {/* Pagination Component Stays here */}
-      <div className="py-3">
-        <PaginationBar />
-=======
-    <div className="d-flex justify-content-around align-items-center">
+    <div className="d-flex justify-content-around align-items-center border-bottom p-2">
       <img src={image} alt="SampleUserImg" className="" />
       <h6 className="d-none d-lg-block mx-3">{title}</h6>
       <div className="d-inline">
-        <p className="w-100">{description}</p>
->>>>>>> c632b290d73c5c201d226c9abf2b9d1b80d8a38e
+        <p className="w-100 ps-3">{description}</p>
       </div>
-      <button className="p-4 btn text-primary">{link}</button>
+      <button className="btn text-primary border-0 d-none d-md-block">
+        {link}
+      </button>
     </div>
   );
 };
 
 //RecentTransactionTable
 
-export const RecentTransactionTable = () => {
+export const MiniRecentTransactionTable = () => {
   return (
-    <div className="col-lg-9 border shadow" style={{ width: "58rem" }}>
+    <div className="border shadow p-3" style={{ width: "100%" }}>
+      {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        <div className="ms-md-5 ms-3 mb-3 mt-2">
-          <GeneralBtnStyle1 text="New Transaction" />
-        </div>
+        {/* <div className="px-4 mb-3">
+          <Link to={"../transaction"}>
+            <GeneralBtnStyle1 text="New Transaction" />
+          </Link>
+        </div> */}
 
-        <table className="table">
+        <table className="table transaction-table">
           <thead className="text-center">
             <tr>
               <th>Product Name</th>
@@ -223,24 +48,27 @@ export const RecentTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className=" text-center">35 cartorns of biscuits</td>
-              <td className="text-center">N3,275.45</td>
-              <td className="text-center">15/11/2022</td>
-              <td className="d-flex justify-content-center align-items-center">
-                <Notifications text={`Completed`} styles={`completed`} />
-              </td>
-            </tr>
-            <tr>
-              <td className="text-center">Hair brushes and attachments</td>
-              <td className="text-center">N3,275.45</td>
-              <td className="text-center">15/11/2022</td>
-              <td className="d-flex justify-content-center align-items-center">
-                <GeneralBtnStyle2 text="Await Delivery" />
-              </td>
-            </tr>
+            {TransactionData.mini_transaction.map((mini) => {
+              return <RecentTransactionTableData {...mini} key={mini.id} />;
+            })}
           </tbody>
         </table>
+        <div className="p-4 text-md-end d-none d-md-block">
+          <Link to={"../transaction"}>
+            <GeneralBtn
+              text={[`View more`]}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
+          </Link>
+        </div>
+        <div className="text-center d-lg-none .d-xl-block">
+          <Link to={"../transaction"}>
+            <GeneralBtn
+              text={[`View more`]}
+              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

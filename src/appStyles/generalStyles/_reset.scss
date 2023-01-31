@@ -1,10 +1,18 @@
 @use "./color" as *;
 
 * {
+<<<<<<< HEAD
 	margin: 0;
 	padding: 0;
 	font: inherit;
 	box-sizing: border-box;
+=======
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  font-family: "Open Sans", Roboto;
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */

@@ -1,13 +1,23 @@
 import { useState } from "react";
-import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
-
-import Container from "react-bootstrap/Container";
+import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { Link } from "react-router-dom";
 
 const InitiateDisputesForm = () => {
   return (
-    <div>
-      <ComplaintForm />
-    </div>
+    <>
+      <div className="contestPage">
+        <div className="row">
+          <div className="col-lg-3 col-sm-12"></div>
+
+          <div className="col-lg-9 col-sm-12">
+            <UserDashboardNavbar />
+            <div className="mt-5">
+              <ComplaintForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
@@ -44,14 +54,14 @@ const ComplaintForm = () => {
 
   return (
     <>
-      <div className="w-75 mx-auto">
-        <div className="mt-5 text-center">
+      <div className="mx-auto">
+        <div className="text-center">
           <h5 className="fw-bold">COMPLAINT FORM</h5>
         </div>
 
         {/* Form Section Starts */}
 
-        <form className="form mt-5">
+        <form className="form mt-5" onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
               value={dispute.phoneNumber}
@@ -138,13 +148,11 @@ const ComplaintForm = () => {
           </div>
 
           <div className="d-grid gap-2 w-25 mx-auto mt-4">
-            <button
-              className="btn btn-success"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Submit
-            </button>
+            <Link to={"../ticket"}>
+              <button className="btn btn-success w-100" type="submit">
+                Submit
+              </button>
+            </Link>
           </div>
         </form>
       </div>

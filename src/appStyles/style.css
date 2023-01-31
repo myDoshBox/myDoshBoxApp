@@ -1,8 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=Open+Sans&family=Roboto:wght@500&display=swap");
+.placeholderTextColor {
+  color: rgba(75, 68, 83, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
   font: inherit;
   box-sizing: border-box;
+  font-family: "Open Sans", Roboto;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -94,8 +101,9 @@ h6 {
   font-size: 0.5rem;
 }
 
-p {
-  font-family: "Open Sans" !important;
+p,
+div {
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -104,12 +112,12 @@ p {
 }
 
 .mutedFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.5rem;
 }
 
 .notificationFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -117,7 +125,7 @@ p {
 }
 
 .userNavFont {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -129,7 +137,7 @@ p {
 }
 
 .normal-text {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -139,10 +147,38 @@ p {
 
 label, select, option, .escrow-images, .date-input-field {
   font-size: 0.85rem !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
 }
 
+.text-small {
+  font-size: small !important;
+}
+
+@media screen and (max-width: 578px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  h6 {
+    font-size: 0.75rem !important;
+  }
+  p,
+div {
+    font-size: 0.8rem !important;
+  }
+}
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;
@@ -163,9 +199,15 @@ label, select, option, .escrow-images, .date-input-field {
   background-color: #4d957e !important;
 }
 
+.CloseBtnStyle {
+  background: rgba(255, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 0, 0, 0.3) !important;
+  color: rgba(255, 0, 0, 0.7) !important;
+}
+
 .GeneralBtnStyle2 {
   background-color: #006747 !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -174,7 +216,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .GoogleAuthBtn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -186,7 +228,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .SignUpGroup {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -213,7 +255,7 @@ label, select, option, .escrow-images, .date-input-field {
 }
 
 .CancelBtn {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -225,7 +267,6 @@ label, select, option, .escrow-images, .date-input-field {
 .FilteBtnStyle {
   font-weight: 200 !important;
   color: #4b4453 !important;
-  background-color: #e5f0ed !important;
 }
 
 .LearnMoreCardButton {
@@ -240,7 +281,7 @@ label, select, option, .escrow-images, .date-input-field {
 .EscrowTransactTypeBtn {
   color: #006747 !important;
   border-color: #006747 !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -266,318 +307,15 @@ label, select, option, .escrow-images, .date-input-field {
   color: inherit !important;
 }
 
-.CoreValueCard {
-  background-color: #006747 !important;
-}
-
 .teamValueStyle {
   background-color: #e5f0ed !important;
 }
 
-.LearnMoreCard {
-  background-color: rgba(0, 103, 71, 0.7);
+.GreenBackgroundColor {
+  background-color: #006747 !important;
 }
 
-.MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-}
-.MiniUsersCard tr {
-  border-style: hidden;
-  font-size: 0.75rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-}
-.MiniUsersCard th {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.875rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard button {
-  margin: 0 !important;
-}
-.MiniUsersCard .LearnMoreCardWrapper {
-  background-color: rgba(0, 103, 71, 0.7);
-  color: hsl(0deg, 0%, 100%);
-  filter: drop-shadow(3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25));
-  border-radius: 0.608rem;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore {
-  width: 50%;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMore p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: hsl(0deg, 0%, 100%);
-  font-size: 0.972rem;
-  line-height: 23px;
-  text-align: justify;
-}
-.MiniUsersCard .LearnMoreCardWrapper .KnowMoreImg {
-  width: 35%;
-}
-.MiniUsersCard .NotificationCardWrapper {
-  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .NotificationCardHeader {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-}
-.MiniUsersCard .NotificationCardHeader button {
-  margin: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  background-color: transparent !important;
-}
-.MiniUsersCard .NotificationCardHeader h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.663rem;
-  line-height: 30px !important;
-  height: 1.938rem !important;
-}
-.MiniUsersCard .NotificationCardDetails {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-  padding-inline: 3.5% !important;
-}
-.MiniUsersCard .NotificationCardDetails h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  color: #4b4453;
-}
-.MiniUsersCard .NotificationCardDetails p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  width: 95%;
-}
-.MiniUsersCard .NotificationCardDetails button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  text-align: justify;
-  letter-spacing: 0.08rem;
-  color: #006747;
-}
-.MiniUsersCard .NotificationCardDetails {
-  width: 100% !important;
-}
-.MiniUsersCard .NotificationCardDetails p {
-  font-size: 0.75rem !important;
-  width: unset;
-  line-height: 16px;
-}
-.MiniUsersCard .NotificationCardDetails img {
-  width: 1.8rem;
-}
-.MiniUsersCard .NotificationCardDetails small {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300 !important;
-  font-size: 0.5rem !important;
-  letter-spacing: 0.04rem !important;
-}
-.MiniUsersCard .NotificationCardBackBtn {
-  color: #006747 !important;
-}
-.MiniUsersCard .AnalyticsNewUsersCard {
-  width: 13.7rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .AnalyticsNewUsersCard h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-}
-.MiniUsersCard .AnalyticsNewUsersCard p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .AnalyticsNewUsersCard .small {
-  font-size: 0.75em !important;
-}
-.MiniUsersCard .TotalUsersCard {
-  width: 20rem;
-  height: 9rem;
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .TotalUsersCard .TotalUsersCardText {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .TotalUsersCard .small {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75em !important;
-  left: 45%;
-  bottom: 4%;
-}
-.MiniUsersCard .MiniProfileCard {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  width: 22rem;
-  filter: drop-shadow(3.65px 3.65px 13.6875px rgba(0, 0, 0, 0.25));
-  font-size: 0.913rem !important;
-}
-.MiniUsersCard .MiniProfileCard img {
-  cursor: pointer;
-}
-.MiniUsersCard .MiniProfileCard .MiniProfileCardCameraIcon {
-  left: 64%;
-  top: 29.5%;
-  cursor: pointer;
-}
-.MiniUsersCard .MiniProfileCard .RatingIcon {
-  cursor: pointer;
-}
-.MiniUsersCard .MiniUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .MiniUsersCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-}
-.MiniUsersCard .MiniUsersCard tr {
-  border-style: hidden;
-  font-size: 0.75rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-}
-.MiniUsersCard .MiniUsersCard th {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.875rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard .MiniUsersCard button {
-  margin: 0 !important;
-}
-.MiniUsersCard .LogoutCard p {
-  color: rgba(255, 0, 0, 0.7) !important;
-}
-.MiniUsersCard td,
-.MiniUsersCard th {
-  border: 1px solid #dddddd;
-  padding: 0.5rem;
-}
-.MiniUsersCard .AllUsersCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .AllUsersCard img {
-  filter: drop-shadow(0px 0px 9.62329px rgba(119, 105, 105, 0.19));
-  border-radius: 3.6rem;
-  width: 1.99rem;
-  height: 2.44rem;
-}
-.MiniUsersCard .AllUsersCard tr:nth-child(1) {
-  color: rgba(75, 68, 83, 0.5);
-}
-.MiniUsersCard .AllUsersCard td {
-  max-width: 10rem;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: small !important;
-}
-.MiniUsersCard .AllUsersCard .lg-view {
-  display: none;
-}
-.MiniUsersCard .AllUsersCard .view {
-  color: #006747 !important;
-}
-.MiniUsersCard .AllUsersCard .view:hover,
-.MiniUsersCard .AllUsersCard :focus {
-  background-color: #006747 !important;
-  color: hsl(0deg, 0%, 100%) !important;
-}
-.MiniUsersCard .GreenBackgroundColor {
-  background-color: #006747 !important;
-}
-.MiniUsersCard .UserProfileCard {
-  filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-}
-.MiniUsersCard .UserProfileCard p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-size: small !important;
-  font-weight: 700 !important;
-}
-.MiniUsersCard .UserProfileCard td {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: #4b4453;
-  font-size: smaller !important;
-}
-.MiniUsersCard .UserProfileCard .UserProfileDetail {
-  color: rgba(75, 68, 83, 0.5);
-  letter-spacing: 0.08rem;
-}
-.MiniUsersCard .faq-head {
-  border: 1px solid #006747 !important;
-  padding: 16px 20px !important;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  background: #006747 !important;
-}
-.MiniUsersCard .faq-content {
-  padding: 5px 20px !important;
-}
-.MiniUsersCard .faq-card .accordion-item {
-  border-top: 1px solid !important;
-}
-.MiniUsersCard .faq-card .accordion-button {
+.accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
   box-shadow: none !important;
@@ -585,246 +323,13 @@ label, select, option, .escrow-images, .date-input-field {
   font-weight: 500;
   padding: 18px 22px !important;
 }
-.MiniUsersCard .faq-card .accordion-button:not(.collapsed) {
+
+.accordion-button:not(.collapsed) {
   background-color: hsl(0deg, 0%, 100%) !important;
   color: #4b4453 !important;
 }
-.MiniUsersCard .why-choose-us-card-head {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #006747 !important;
-}
-.MiniUsersCard .why-choose-us-card-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.84375rem !important;
-}
-.MiniUsersCard .escrow-terms-condition {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .escrow-terms-condition h2 {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .buying-selling-card {
-  width: 468px;
-  height: 227px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .buying-selling-card p {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-size: 1.5625rem !important;
-}
-.MiniUsersCard .transaction-summary-card h2 {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.MiniUsersCard .transaction-summary-card .header-text,
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
-  color: rgba(75, 68, 83, 0.5) !important;
-  font-family: "Open Sans" !important;
-}
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 500;
-}
-.MiniUsersCard .transaction-summary-card .transaction-summary-info-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .transaction-images {
-  width: 80%;
-  height: 300px;
-}
-.MiniUsersCard .individual-transaction-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-}
-.MiniUsersCard .individual-transaction-card .transaction-summary-info-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-.MiniUsersCard .individual-transaction-card .transaction-summary-info-text {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .individual-transaction-image {
-  width: 100%;
-  height: 379.79px;
-}
-.MiniUsersCard .conflicts-count {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 400 !important;
-}
-.MiniUsersCard .conflicts-type {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 500 !important;
-}
-.MiniUsersCard .mini-disputes-card .nav-pills .nav-link.active {
-  color: #4b4453;
-  border-bottom: 2.91696px solid #4b4453;
-  background-color: inherit !important;
-  border-radius: 0 !important;
-}
-.MiniUsersCard .mini-disputes-card .nav-link {
-  color: #4b4453 !important;
-}
-.MiniUsersCard .mini-disputes-card .mini-disputes-mail {
-  color: rgba(75, 68, 83, 0.5);
-  font-size: 0.625rem;
-}
-.MiniUsersCard .mini-disputes-card .mini-disputes-name {
-  font-size: 14px;
-  color: #4b4453;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-.MiniUsersCard .mini-disputes-card .disputes-view-btn {
-  background: rgba(0, 103, 71, 0.1);
-  font-size: 12px !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:hover,
-.MiniUsersCard .mini-disputes-card .disputes-view-btn:focus {
-  background: rgba(0, 103, 71, 0.1) !important;
-  border: none !important;
-  font-weight: 400 !important;
-}
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn {
-  background: rgba(0, 103, 71, 0.1) !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu.show {
-  background: #e5f0ec !important;
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-menu {
-  border: none;
-  min-width: 7rem;
-  padding: 0 0 !important;
-}
-.MiniUsersCard .mini-disputes-card .dropdown-item:hover {
-  background: #e5f0ec !important;
-  border-radius: inherit;
-}
-.MiniUsersCard .mini-disputes-card .disputes-sort-btn:hover {
-  color: #4b4453 !important;
-}
-.MiniUsersCard .issues-card {
-  border: 1px solid none;
-  border-radius: 10px;
-  box-shadow: 3.88929px 3.88929px 14.5848px rgba(0, 0, 0, 0.25);
-  width: 400px;
-  height: 277px !important;
-}
-.MiniUsersCard .issues-card h6 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-.MiniUsersCard .contact-card {
-  padding: 30px 15px;
-}
-.MiniUsersCard .why-choose-us-card-head {
-  font-size: 0.6875rem !important;
-  line-height: 15px !important;
-}
-.MiniUsersCard .why-choose-us-card-text {
-  font-size: 0.5rem !important;
-  line-height: 12px;
-}
-.MiniUsersCard .escrow-terms-condition {
-  font-size: 0.75rem !important;
-}
-.MiniUsersCard .escrow-terms-condition h2 {
-  font-size: 1rem !important;
-  line-height: 24px !important;
-  text-align: center;
-}
-.MiniUsersCard .payment-gateway-image {
-  width: 20vw;
-}
-.MiniUsersCard .buying-selling-card {
-  width: 80%;
-  height: 160px;
-}
-.MiniUsersCard .buying-selling-card p {
-  font-size: 1rem !important;
-}
-.MiniUsersCard .buying-selling-card svg {
-  width: 45.5px !important;
-  height: 45.5px !important;
-}
-.MiniUsersCard .update-cards {
-  width: 90%;
-  height: 60px;
-  padding: 10px 0 !important;
-  border: 2px solid rgba(0, 103, 71, 0.3);
-  border-radius: 5px;
-  box-shadow: none;
-}
-.MiniUsersCard .update-cards svg {
-  width: 24px;
-  height: 24px;
-}
-.MiniUsersCard .update-cards p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-}
-.MiniUsersCard .individual-transaction-image {
-  width: 100%;
-  height: 187px;
-}
-.MiniUsersCard .transaction-summary-info-text {
-  font-size: 10px !important;
-}
-.MiniUsersCard .ConflictIssuesCard-body {
-  background-color: #006747 !important;
-  color: #fff;
-}
-.MiniUsersCard .colorTextStyle {
-  color: rgb(165, 165, 165);
-}
-.MiniUsersCard .textStyle {
-  color: rgb(19, 19, 19);
-}
-.MiniUsersCard .warningStyle {
+
+.warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
@@ -834,10 +339,6 @@ label, select, option, .escrow-images, .date-input-field {
   font-size: 0.875rem !important;
 }
 
-.FAQs {
-  color: #e5f0ed;
-  font-family: "Open Sans" !important;
-}
 .FAQs .faqs-header {
   background-color: #006747;
 }
@@ -864,6 +365,7 @@ label, select, option, .escrow-images, .date-input-field {
 .payment-method-card:focus {
   border-color: #006747 !important;
 }
+<<<<<<< HEAD
 .payment-method-card:hover .resolve-card .nav-pills .nav-link.active,
 .payment-method-card:focus .resolve-card .nav-pills .nav-link.active {
   background-color: #006747 !important;
@@ -871,34 +373,28 @@ label, select, option, .escrow-images, .date-input-field {
 }
 .payment-method-card:hover .resolve-card .nav-pills .nav-link,
 .payment-method-card:focus .resolve-card .nav-pills .nav-link {
+=======
+
+.resolve-card .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
+}
+.resolve-card .nav-pills .nav-link {
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   background-color: #4d957e !important;
   font-weight: 400 !important;
   color: white;
 }
 
-.BgColor {
-  background-color: #459079;
-}
-
-.BgColorScreen {
+.signUp-bg {
   background-color: #006747;
+  background-size: auto;
+  border-radius: 5px;
+  overflow-y: hidden;
 }
-
-.ScreenBgColor {
-  background-color: #e6f0ed;
-}
-
-.InputBgColor {
-  background-color: #b7bdbc;
-}
-
-.ActiveChat {
-  background-color: rgba(104, 228, 67, 0.6784313725) !important;
-}
-
-.Email,
-.Password {
+.signUp-bg h1 {
   font-family: "Roboto", sans-serif;
+<<<<<<< HEAD
   font-size: 1rem;
   color: rgba(75, 68, 83, 0.8);
   font-size: 1rem !important;
@@ -968,6 +464,9 @@ label, select, option, .escrow-images, .date-input-field {
   font-size: 0.5rem;
   color: #4b4453;
   font-weight: 700;
+=======
+  font-size: 3rem !important;
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 }
 
 textarea:focus,
@@ -990,6 +489,7 @@ input[type=color]:focus,
   outline: 0 none;
 }
 
+<<<<<<< HEAD
 .Name label,
 .UpdateEmail label,
 .Phone label,
@@ -1046,19 +546,10 @@ input[type=color]:focus,
   margin: 0 15px;
 }
 
+=======
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 .escrow-price-field {
   border-radius: 5px 0 0 5px !important;
-}
-
-.price-field {
-  transform: translateX(12px);
-}
-
-.total-input {
-  width: 38% !important;
-  background-color: #006747 !important;
-  color: hsl(0deg, 0%, 100%) !important;
-  border-radius: 0 5px 5px 0 !important;
 }
 
 .ngn {
@@ -1078,8 +569,13 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
+<<<<<<< HEAD
 .escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
   font-family: "Open Sans" !important;
+=======
+.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder {
+  font-family: "Open Sans", sans-serif !important;
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1090,9 +586,8 @@ input[type=color]:focus,
 }
 
 .escrow-input-field::placeholder,
-.escrow-price-field::placeholder,
-.bank-transfer-input-field::placeholder {
-  font-family: "Open Sans" !important;
+.escrow-price-field::placeholder {
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1106,23 +601,11 @@ input[type=color]:focus,
   color: rgba(75, 68, 83, 0.5) !important;
 }
 
-.confirm-delivery-head {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 500 !important;
-}
-
-.confirm-delivery-pText {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
 .account-details {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
   background-color: rgba(255, 0, 0, 0.1);
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1133,7 +616,7 @@ input[type=color]:focus,
 
 .escrow-form-error {
   color: rgba(180, 19, 10, 0.8) !important;
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1142,58 +625,30 @@ input[type=color]:focus,
   font-size: 12px !important;
 }
 
-.inputStyle input {
-  text-indent: 10px !important;
-}
-
-.toggleBtnStyle {
-  margin-right: 30rem;
-}
-
-.checkboxStyle label {
-  color: #e5f0ed !important;
-}
-
-.sign-up-section {
-  transform: translateX(130px);
-}
-
-.labelStyle {
-  color: #8cbbac !important;
-}
-
 .labelStyle::-moz-placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
 .labelStyle::placeholder {
-  color: #8cbbac !important;
+  color: rgba(75, 68, 83, 0.5) !important;
+  font-size: 14px !important;
 }
 
-.titleStyle {
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem !important;
-  color: #006747 !important;
+.sign-up-form .nav-pills .nav-link.active {
+  background-color: #006747 !important;
+  font-weight: 400 !important;
 }
-
-.contactStyle {
-  border: 2px solid #006747;
-  border-radius: 15px;
-  padding: 50px 15px;
-}
-.contactStyle hr {
+.sign-up-form .nav-pills .nav-link {
+  font-weight: 400 !important;
   color: #006747;
-}
-.contactStyle a:link {
-  text-decoration: none;
-  color: black;
-}
-.contactStyle a:visited {
-  color: black;
+  border: 2px solid #006747;
 }
 
-.colorStyle h5 {
-  color: red !important;
+.contestPage .row {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .escrow-dropdown-field,
@@ -1204,70 +659,22 @@ input[type=color]:focus,
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: 300 !important;
 }
+<<<<<<< HEAD
 
 .contestPage .row {
   margin-top: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+=======
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 
-.Modal-Btn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: rgba(0, 103, 71, 0.9) !important;
-  color: hsl(0deg, 0%, 100%);
-}
-.Modal-Btn .Modal-Btn {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 0.2rem !important;
-}
-.Modal-Btn .Modal-Btn:hover,
-.Modal-Btn .Modal-Btn:focus {
-  background-color: #006747 !important;
-}
-.Modal-Btn .ModalMessage {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 0.2rem !important;
-}
-.Modal-Btn .Modal-Btn:hover,
-.Modal-Btn .Modal-Btn:focus {
-  background-color: #006747 !important;
-}
-.Modal-Btn .ModalMessage {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  color: rgba(75, 68, 83, 0.5);
-}
-.Modal-Btn .ModalTitle {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1.5rem !important;
+.GeneralModal .modal-dialog {
+  width: 20rem !important;
 }
 
 .nav-links {
-  font-family: "Open Sans" !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -1287,7 +694,7 @@ input[type=color]:focus,
 }
 
 .userDashboardNav {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1335,48 +742,34 @@ input[type=color]:focus,
 }
 
 .offcanvas-lg,
-.offcanvas {
+.big-side-nav {
   background-color: #006747 !important;
   color: hsl(0deg, 0%, 100%) !important;
+  height: 100vh;
+}
+.offcanvas-lg span,
+.big-side-nav span {
+  letter-spacing: 1.3px !important;
 }
 
-.SideNav {
-  background-color: #006747 !important;
-  color: hsl(0deg, 0%, 100%) !important;
+.big-side-nav {
+  width: 290px !important;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
 }
 
 .bottom {
   bottom: 10% !important;
 }
 
-.SideNavLogo {
-  cursor: pointer !important;
-}
-
-.SideNavItem {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1rem !important;
-  color: hsl(0deg, 0%, 100%) !important;
-  cursor: pointer !important;
-  font-weight: 400;
-}
-
-.hoverBlock {
-  border: 3px solid hsl(0deg, 0%, 100%);
-  border-radius: 0.3rem;
-  position: absolute !important;
-  height: 2rem !important;
-  transform: translate(200px, 0px);
-  display: none;
-}
-
-.SideNavItem:hover,
-:focus {
-  font-weight: 700 !important;
-}
-.SideNavItem:hover .hoverBlock,
-:focus .hoverBlock {
-  display: block;
+.active-link {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px 8px 8px 0;
+  padding: 5px;
+  color: #006747 !important;
+  background-color: white;
 }
 
 .SideNavDropdown button {
@@ -1391,25 +784,34 @@ input[type=color]:focus,
   outline: unset !important;
 }
 
-.SideNavDropdown .show {
-  transform: translate3d(180px, 1px, 0px) !important;
-}
-
 .SideNavDropdown .show a:hover,
 :focus {
   font-weight: 700 !important;
 }
 
+.offcanvas-header .btn-close {
+  background: url("https://api.iconify.design/ri/close-fill.svg?color=white") no-repeat center center/contain;
+  opacity: 1 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.completed,
+.awaiting,
+.canceled,
+.dispute,
+.pending-confirmation,
+.pending-payment,
+.refunded,
+.resolved,
+.unresolved {
+  width: 11rem;
+  height: 1.8rem;
+}
+
 .completed,
 .resolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1420,14 +822,7 @@ input[type=color]:focus,
 
 .canceled,
 .unresolved {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1437,14 +832,7 @@ input[type=color]:focus,
 }
 
 .refunded {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1454,48 +842,27 @@ input[type=color]:focus,
 }
 
 .dispute {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(103, 0, 99);
   background-color: rgba(103, 0, 99, 0.1);
 }
 
 .pending-confirmation {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
   letter-spacing: 0rem;
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(0, 103, 4);
   background-color: rgba(0, 103, 4, 0.1);
 }
 
 .awaiting {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1505,14 +872,7 @@ input[type=color]:focus,
 }
 
 .pending-payment {
-  width: 180px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   color: #4b4453;
   line-height: 1.5rem;
@@ -1535,9 +895,15 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
+<<<<<<< HEAD
     width: 80px !important;
     height: 20px !important;
     font-size: 0.4375rem !important;
+=======
+    width: 5rem !important;
+    height: 1.25rem !important;
+    font-size: 0.6rem !important;
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   }
 }
 .FooterBgColor {
@@ -1546,6 +912,18 @@ input[type=color]:focus,
 .FooterBgColor nav ul li a {
   text-decoration: none;
   color: rgba(220, 215, 215, 0.821);
+}
+
+.BgColor {
+  background-color: #006747;
+}
+
+.BgColor {
+  background-color: #006747;
+}
+
+.pricing-table tr:nth-child(even) {
+  background-color: #e5f0ed;
 }
 
 .transaction-table thead tr th,
@@ -1599,6 +977,7 @@ input[type=color]:focus,
     font-size: 0.75rem !important;
   }
 }
+<<<<<<< HEAD
 .BgColor {
   background-color: #006747;
 }
@@ -1730,4 +1109,6 @@ input[type=color]:focus,
     font-size: 0.75rem !important;
   }
 }
+=======
+>>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 /*# sourceMappingURL=style.css.map */

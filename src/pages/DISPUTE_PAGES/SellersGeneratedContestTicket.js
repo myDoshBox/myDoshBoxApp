@@ -6,9 +6,7 @@ export const SellersGeneratedContestTicket = () => {
   return (
     <section className="d-flex">
       {/* side Bar Section Starts */}
-      <div>
-        <UserSidenav />
-      </div>
+      <div>{/* <UserSidenav /> */}</div>
       {/* side Bar Section Ends*/}
       <div className="align-self-center mx-auto p-4">
         {TicketData.Ticket3.map((ticket) => {

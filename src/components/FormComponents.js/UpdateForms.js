@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
+import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
 
 export const UpdateProfile = () => {
   const initialValues = {
@@ -11,6 +13,7 @@ export const UpdateProfile = () => {
   const [NewProfile, setNewProfile] = useState([]);
   const [ValidationError, setValidationError] = useState({});
   const [FormSubmission, setFormSubmission] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -20,6 +23,7 @@ export const UpdateProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (UpdateProfile.email && UpdateProfile.phone) {
       setNewProfile({ ...NewProfile, UpdateProfile });
       setUpdateProfile({
@@ -35,14 +39,15 @@ export const UpdateProfile = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
+      navigate("../home");
     }
   }, [ValidationError]);
 
   const validate = (formValues) => {
     const errorValues = {};
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     const phoneRegex =
-      /((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$/;
+      /((?:\+|00)[17](?: |-)?|(?:\+|00)[1-9]\d{0,2}(?: |-)?|(?:\+|00)1-\d{3}(?: |-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))$/;
     if (!formValues.email) {
       errorValues.email = "Email Address is Required";
     } else if (!emailRegex.test(formValues.email)) {
@@ -57,9 +62,9 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <div className="bg-white rounded-3 UpdateProfileForm p-4">
+    <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Profile</p>
-      <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
+      <Form className="ms-3 mt-4 mb-5">
         <Form.Group className="Email mb-3" controlId="Email">
           <Form.Label className="m-0">Email Address</Form.Label>
           <Form.Control
@@ -68,8 +73,6 @@ export const UpdateProfile = () => {
             name="email"
             value={UpdateProfile.email}
             onChange={handleChange}
-            className=""
-            style={{ width: "35rem" }}
           />
           <small className="text-danger fw-lighter">
             {ValidationError.email}
@@ -83,17 +86,13 @@ export const UpdateProfile = () => {
             name="phone"
             value={UpdateProfile.phone}
             onChange={handleChange}
-            className=""
-            style={{ width: "35rem" }}
           />
           <small className="text-danger fw-lighter">
             {ValidationError.phone}
           </small>
         </Form.Group>
-        <div className="">
-          <Button type="submit" className="border-0" onClick={handleSubmit}>
-            Save Changes
-          </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -161,9 +160,9 @@ export const UpdatePassword = () => {
   };
 
   return (
-    <div className="bg-white rounded-3 UpdateProfileForm p-4">
+    <div className="bg-white rounded-3 shadow card p-4">
       <p className="text-uppercase">Update Password</p>
-      <Form className="ms-3 mt-4 mb-5" onSubmit={handleSubmit}>
+      <Form className="ms-3 mt-4 mb-5">
         <Form.Group className="mb-3 Password" controlId="NewPassword">
           <Form.Label className="m-0" style={{ width: "15rem" }}>
             New Password
@@ -174,8 +173,6 @@ export const UpdatePassword = () => {
             name="NewPassword"
             value={UpdatePassword.NewPassword}
             onChange={handleChange}
-            className=""
-            style={{ width: "35rem" }}
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.NewPassword}
@@ -190,17 +187,13 @@ export const UpdatePassword = () => {
             name="ConfirmPassword"
             value={UpdatePassword.ConfirmPassword}
             onChange={handleChange}
-            className=""
-            style={{ width: "35rem" }}
           />
           <small id="validatePrompt" className="text-danger fw-lighter">
             {ValidationError.ConfirmPassword}
           </small>
         </Form.Group>
-        <div className="">
-          <Button type="submit" className="border-0" onClick={handleSubmit}>
-            Save Changes
-          </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -219,6 +212,7 @@ export const UpdateBankDetails = () => {
   // States for validation
   const [ValidationError, setValidationError] = useState({});
   const [FormSubmission, setFormSubmission] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -244,6 +238,7 @@ export const UpdateBankDetails = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
+      navigate("../home");
     }
   }, [ValidationError]);
 
@@ -264,7 +259,7 @@ export const UpdateBankDetails = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3 UpdateProfileForm p-4 px-lg-5 py-lg-3"
+      className="bg-white rounded-3 shadow card p-4 px-lg-5 py-lg-3"
     >
       <Form.Group className="mb-3 AccountNum" controlId="AccountNum">
         <Form.Label className="mb-0">Account Number</Form.Label>
@@ -275,7 +270,6 @@ export const UpdateBankDetails = () => {
           value={BankDetails.AccountNumber}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.AccountNumber}
@@ -291,7 +285,6 @@ export const UpdateBankDetails = () => {
           value={BankDetails.BankName}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.BankName}
@@ -306,16 +299,15 @@ export const UpdateBankDetails = () => {
           value={BankDetails.AccountName}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.AccountName}
         </small>
       </Form.Group>
       <div className="mb-4">
-        <Button type="submit" className="border-0" onClick={handleSubmit}>
-          Update
-        </Button>
+        <div onClick={handleSubmit}>
+          <GeneralBtnStyle1 text={"Update"} />
+        </div>
       </div>
     </Form>
   );
@@ -323,8 +315,6 @@ export const UpdateBankDetails = () => {
 
 export const UserUpdateProfile = () => {
   const initialValues = {
-    FirstName: "",
-    LastName: "",
     Email: "",
     PhoneNumber: "",
     NewPassword: "",
@@ -332,6 +322,7 @@ export const UserUpdateProfile = () => {
   };
   const [UserDetails, setUserDetails] = useState(initialValues);
   const [NewUserDetails, setNewUserDetails] = useState([]);
+  const navigate = useNavigate();
 
   // States for validation
   const [ValidationError, setValidationError] = useState({});
@@ -346,8 +337,6 @@ export const UserUpdateProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      UserDetails.FirstName &&
-      UserDetails.LastName &&
       UserDetails.Email &&
       UserDetails.PhoneNumber &&
       UserDetails.NewPassword &&
@@ -364,24 +353,19 @@ export const UserUpdateProfile = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
+      navigate("../home");
     }
   }, [ValidationError]);
 
   const validate = (formValues) => {
     const errorValues = {};
 
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     const phoneRegex =
-      /((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$/;
+      /((?:\+|00)[17](?: |-)?|(?:\+|00)[1-9]\d{0,2}(?: |-)?|(?:\+|00)1-\d{3}(?: |-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))$/;
     const PasswordRegex =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
-    if (!formValues.FirstName) {
-      errorValues.FirstName = "First Name is Required";
-    }
-    if (!formValues.LastName) {
-      errorValues.LastName = "Last Name is Required";
-    }
     if (!formValues.Email) {
       errorValues.Email = "Email Address is Required";
     } else if (!emailRegex.test(formValues.Email)) {
@@ -412,39 +396,8 @@ export const UserUpdateProfile = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3 UserUpdateProfile UpdateProfileForm p-3 px-lg-5 py-lg-4"
+      className="bg-white rounded-3 UserUpdateProfile shadow card p-3 px-lg-5 py-lg-4"
     >
-      <Form.Group className="mb-4 Name" controlId="FirstName">
-        <Form.Label className="m-0">First Name</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter your first name"
-          name="FirstName"
-          value={UserDetails.FirstName}
-          onChange={handleChange}
-          className=""
-          style={{ width: "35rem" }}
-        />
-        <small id="validatePrompt" className="text-danger fw-lighter">
-          {ValidationError.FirstName}
-        </small>
-      </Form.Group>
-      <Form.Group className="mb-4 Name" controlId="LastName">
-        <Form.Label className="m-0">Last Name</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter your last name"
-          name="LastName"
-          value={UserDetails.LastName}
-          onChange={handleChange}
-          className=""
-          style={{ width: "35rem" }}
-        />
-        <small id="validatePrompt" className="text-danger fw-lighter">
-          {ValidationError.LastName}
-        </small>
-      </Form.Group>
-
       <Form.Group className="mb-4 UpdateEmail" controlId="Email">
         <Form.Label className="m-0">Email Address</Form.Label>
         <Form.Control
@@ -454,7 +407,6 @@ export const UserUpdateProfile = () => {
           value={UserDetails.Email}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.Email}
@@ -469,7 +421,6 @@ export const UserUpdateProfile = () => {
           value={UserDetails.PhoneNumber}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.PhoneNumber}
@@ -485,7 +436,6 @@ export const UserUpdateProfile = () => {
           value={UserDetails.NewPassword}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.NewPassword}
@@ -500,17 +450,14 @@ export const UserUpdateProfile = () => {
           value={UserDetails.ConfirmPassword}
           onChange={handleChange}
           className=""
-          style={{ width: "35rem" }}
         />
         <small id="validatePrompt" className="text-danger fw-lighter">
           {ValidationError.ConfirmPassword}
         </small>
       </Form.Group>
 
-      <div className="mb-4">
-        <Button type="submit" className="border-0" onClick={handleSubmit}>
-          Update Profile
-        </Button>
+      <div onClick={handleSubmit} className="mb-4">
+        <GeneralBtnStyle1 text={"Update Profile"} />
       </div>
     </Form>
   );

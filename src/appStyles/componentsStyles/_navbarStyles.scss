@@ -19,7 +19,6 @@
 
 // User Dashboard Navbar Styles
 .userDashboardNav {
-  //   padding-right: 30px;
   @include userNavFont;
   font-size: 0.75rem !important;
 }
@@ -67,43 +66,33 @@
   opacity: 0 !important;
 }
 .offcanvas-lg,
-.offcanvas {
+.big-side-nav {
   background-color: #006747 !important;
   color: $secColor !important;
+  height: 100vh;
+  span {
+    letter-spacing: 1.3px !important;
+  }
 }
-.SideNav {
-  background-color: #006747 !important;
-  color: $secColor !important;
+
+.big-side-nav {
+  width: 290px !important;
+  position: fixed;
+  padding: 20px;
+  z-index: 999;
 }
 
 .bottom {
   bottom: 10% !important;
 }
 
-.SideNavLogo {
-  cursor: pointer !important;
-}
-.SideNavItem {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 1rem !important;
-  color: $secColor !important;
-  cursor: pointer !important;
-  font-weight: 400;
-}
-.hoverBlock {
-  border: 3px solid $secColor;
-  border-radius: 0.3rem;
-  position: absolute !important;
-  height: 2rem !important;
-  transform: translate(200px, 0px);
-  display: none;
-}
-.SideNavItem:hover,
-:focus {
-  font-weight: 700 !important;
-  .hoverBlock {
-    display: block;
-  }
+.active-link {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px 8px 8px 0;
+  padding: 5px;
+  color: $pryColor !important;
+  background-color: white;
 }
 .SideNavDropdown button {
   background-color: unset !important;
@@ -116,10 +105,17 @@
   outline: unset !important;
 }
 
-.SideNavDropdown .show {
-  transform: translate3d(180px, 1px, 0px) !important;
-}
 .SideNavDropdown .show a:hover,
 :focus {
   font-weight: 700 !important;
+}
+
+.offcanvas-header {
+  .btn-close {
+    background: url("https://api.iconify.design/ri/close-fill.svg?color=white")
+      no-repeat center center / contain;
+    opacity: 1 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
 }

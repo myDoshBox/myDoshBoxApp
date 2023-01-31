@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Form, Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 
 //ContactUsForm
 export const ContactUsForm = () => {
@@ -55,7 +55,7 @@ export const ContactUsForm = () => {
             </FloatingLabel>
           </Form.Group>
 
-          <Form.Group className="mt-2 mb-3 fs-6">
+          <Form.Group className="mt-2 mb-3 fs-6 ">
             <Form.Check
               className="checkboxStyle"
               type="checkbox"
@@ -64,11 +64,51 @@ export const ContactUsForm = () => {
           </Form.Group>
 
           <div className="mt-1 d-flex justify-content-center">
-            <GeneralBtn text="Submit" />
+            <GeneralBtn
+              text="Submit"
+              styles="GeneralBtnStyle1 btn all-btn text-white"
+            />
           </div>
         </div>
         {/* Form Here End */}
       </Form>
+    </>
+  );
+};
+
+export const SubscribeForm = () => {
+  const initialState = {
+    email: " ",
+  };
+  const [values, setValue] = useState(initialState);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handleemailInputChange = (e) => {
+    setValue({ ...values, email: e.target.value });
+  };
+
+  return (
+    <>
+      <form class="input-group">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter email to receive updates and newsletter"
+          aria-label="Subscribe"
+          aria-describedby="basic-addon2"
+          value={values.email}
+          onChange={handleemailInputChange}
+        />
+        <span
+          className="input-group-text btn border text-white "
+          id="basic-addon2"
+          onClick={handleSubmit}
+        >
+          SUBSCRIBE
+        </span>
+      </form>
     </>
   );
 };
