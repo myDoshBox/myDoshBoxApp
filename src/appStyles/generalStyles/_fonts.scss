@@ -95,8 +95,7 @@ h6 {
   @include H6Font;
 }
 
-p,
-div {
+p {
   @include pFont;
 }
 

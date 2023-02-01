@@ -21,15 +21,7 @@ const Footer = () => {
   const location = useLocation();
   const [showFooter, setShowFooter] = useState(false);
   useEffect(() => {
-    const paths = [
-      "/",
-      "/aboutus",
-      "/contactus",
-      "/pricingpage",
-      "/faqs",
-      "/signin",
-      "/signup",
-    ];
+    const paths = ["/", "/aboutus", "/contactus", "/pricingpage", "/faqs"];
     if (paths.includes(location.pathname)) {
       setShowFooter(true);
     } else {

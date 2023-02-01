@@ -22,9 +22,6 @@
   color: $bodyTextColor !important;
 }
 
-// .ConflictIssuesCard {
-// }
-
 .warningStyle {
   border-left: 3px solid rgba(255, 0, 0, 0.7) !important;
   color: rgba(255, 0, 0, 0.7) !important;
@@ -87,7 +84,14 @@
   background-size: auto;
   border-radius: 5px;
   overflow-y: hidden;
+  height: 100vh !important;
   h1 {
     @include H1Font;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .signUp-bg {
+    height: 40vh !important;
   }
 }
