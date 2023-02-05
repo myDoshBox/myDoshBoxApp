@@ -393,9 +393,16 @@ div {
   font-size: 3rem !important;
 }
 
+.center-card {
+  transform: translateX(-1rem);
+}
+
 @media screen and (max-width: 991px) {
   .signUp-bg {
     height: 40vh !important;
+  }
+  .center-card {
+    transform: translateX(0);
   }
 }
 textarea:focus,
@@ -609,7 +616,7 @@ input[type=color]:focus,
 }
 
 .big-side-nav {
-  width: 290px !important;
+  width: 22.5% !important;
   position: fixed;
   padding: 20px;
   z-index: 999;

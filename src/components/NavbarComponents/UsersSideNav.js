@@ -98,7 +98,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   <DashboardIcon />
                 </div>
                 <NavLink
-                  to="../userdashboard"
+                  to="../../userdashboard"
                   end
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
@@ -220,7 +220,7 @@ const BigShow = ({ name, ...props }) => {
                 <DashboardIcon />
               </div>
               <NavLink
-                to="../userdashboard"
+                to="../../userdashboard"
                 end
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName

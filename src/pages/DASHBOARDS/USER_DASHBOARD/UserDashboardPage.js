@@ -39,14 +39,14 @@ const UserDashboard = () => {
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
               text={`Initiate Transaction`}
-              link={"../initiate-escrow"}
+              link={"initiate-escrow"}
             />
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
-              link={"../transaction"}
+              link={"transaction"}
             />
           </div>
         </div>
@@ -61,7 +61,7 @@ const UserDashboard = () => {
             <UserDashboardCard2
               text={`Initiate Disputes`}
               icon={<InitiateDisputeIcon />}
-              link={"../initiate-dispute"}
+              link={"initiate-dispute"}
             />
           </div>
         </div>

@@ -89,9 +89,18 @@
     @include H1Font;
   }
 }
+.center-card {
+  transform: translateX(-1rem);
+}
 
 @media screen and (max-width: 991px) {
   .signUp-bg {
     height: 40vh !important;
   }
+  .center-card {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
 }

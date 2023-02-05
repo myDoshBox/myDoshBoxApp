@@ -26,7 +26,7 @@ export const GeneratedTicketCard = (props) => {
         <div className="card border-0 shadow">
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <Link to={"../home"}>
+              <Link to={"../../userdashboard"}>
                 <GeneralBtn lefticon={<Cancel />} />
               </Link>
             </span>

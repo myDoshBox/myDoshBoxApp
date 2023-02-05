@@ -451,7 +451,7 @@ const InitiateEscrowForm = () => {
           </>
         )}
         <div className="d-flex justify-content-center">
-          <Link to="../home">
+          <Link to="../../userdashboard">
             <GeneralBtn
               text="Cancel"
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
