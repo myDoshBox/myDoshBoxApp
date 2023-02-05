@@ -14,7 +14,7 @@ export const Reportissuesform = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("../home");
+    navigate("../../userdashboard");
   };
 
   const handleDefectNameInputChange = (e) => {

@@ -76,10 +76,12 @@ const SignUpForm = () => {
 
 const Side = () => {
   return (
-    <div className="pe-lg-5 signUp-bg text-white h-100">
-      <img src={logo} alt="" className="p-4" />
+    <div className="pe-lg-5 signUp-bg text-white">
+      <Link to="/">
+        <img src={logo} alt="" className="p-4" />
+      </Link>
       <div className="p-md-5 p-3">
-        <h1 className="">Start your journey with us.</h1>
+        <h1 className="text-white">Start your journey with us.</h1>
         <p className="text-white">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
         </p>
