@@ -21,5 +21,18 @@
       "description": "Hi, Buyer Opeyemi Andrewson has just confirmed delivery of the product 100Gb Laptop",
       "link": "View more"
     }
+  ],
+
+  "UsersList": [
+    {
+      "id": 1,
+      "user": "../../images/contactImgs/usersImmage.png",
+      "user_id": "75638",
+      "name": "Jacob Jones",
+      "phone": "+234 902-121-232",
+      "email": "tim.jennings@example.com",
+      "address": "2715 Ash Dr. San Jose, South Dakota 83475",
+      "action": "..."
+    }
   ]
 }
