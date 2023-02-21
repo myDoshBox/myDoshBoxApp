@@ -12,9 +12,9 @@ const AdminTransaction = () => {
       <div className="row">
         <div className="col-lg-3 col-sm-12"></div>
 
-        <div className="col-lg-9 col-sm-12">
+        <div className="col-lg-9 col-sm-12 mt-4">
           <UserDashboardNavbar />
-          <div className="mt-5">
+          <div className="mt-4 me-5">
             <RecentTransactionTable />
           </div>
         </div>
