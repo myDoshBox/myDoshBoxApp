@@ -43,6 +43,8 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+import UserProfile from "./pages/UserProfile";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -76,6 +78,10 @@ function App() {
           <Route path="agreement" element={<EscrowAgreement />} />
           <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
           <Route path="ticket" element={<GeneratedTicket />} />
+          <Route path="profile" element={<UserProfile />} />
+          <Route path="admin" element={<AdminDashboard/>} />
+
+
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>

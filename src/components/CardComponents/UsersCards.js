@@ -1,12 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
+import { useContext } from "react";
 //All Buttons/Icon Import Starts
-import {
-  TotalUsersIcon,
-  ArrowDownIcon,
-  ArrowUpIcon,
-  CompletedTransactionIcon,
-} from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
@@ -16,81 +11,26 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Image Import Starts
 import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-// AnalyticsNewUsersCard
-export const AnalyticsNewUsersCard = () => {
+// UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
+export const AnalyticsCard = ({ BigIcon, SmallIcon, text, value, link, change }) => {
   return (
-    <div
-      className="card shadow rounded-3 text-nowrap"
-      style={{ width: "15rem" }}
-    >
-      <div class="card-body">
-        <div className="d-flex justify-content-center">
-          <TotalUsersIcon />
-        </div>
-        <div>
-          <h4 className="text-center">New Users</h4>
-          <p className="text-center">This Month : 150</p>
-        </div>
-        <div className="d-flex justify-content-center ">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-1 fw-lighter">3.5% less than last month</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-//TotalUsersCard
-export const TotalUsersCard = () => {
-  return (
-    <>
-      <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
-        <div class="card-body">
-          <div className="d-flex">
+    <div className="col-md-4 mb-4 mb-lg-0">
+      <div className="px-3 shadow border-0 rounded-2 DashboardCard">
+        <Link to={link} className="text-decoration-none ">
+          <div className="d-flex align-items-center py-3">
+            {BigIcon}
             <div>
-              <TotalUsersIcon width="24" />
-            </div>
-            <div className="ms-2">
-              <span className="fs-5 fw-bold">234589</span>
-              <p>TOTAL USERS</p>
+              <p className="m-0 ms-2 opacity-50">{value}</p>
+              <p className="m-0 ms-2">{text}</p>
             </div>
           </div>
-          <div className="d-flex justify-content-end p-0">
-            <span>
-              <ArrowUpIcon />
-            </span>
-            <p className=""> 5% More than last month</p>
-          </div>
+        <div className="d-flex align-items-center justify-content-end">
+          {SmallIcon}
+          <span class="text-small">{change ? change + " than last week" : null } </span>
         </div>
-      </div>
-    </>
-  );
-};
-
-// UserTransactionsCard
-export const UserTransactionsCard = () => {
-  return (
-    <div class="card shadow border-0 rounded-1" style={{ width: "20rem" }}>
-      <div class="card-body mx-auto ">
-        <div className="d-flex mx-auto">
-          <div className="m-2">
-            <CompletedTransactionIcon />
-          </div>
-          <div className="mx-auto">
-            <span className="fs-5 fw-bold">10034</span>
-            <p className="fs-6 ">TRANSACTIONS COMPLETED</p>
-          </div>
-        </div>
-        <div className="d-flex justify-content-end">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-2">5% Less than last month</p>
-        </div>
+        </Link>
       </div>
     </div>
   );
@@ -339,86 +279,52 @@ export const AllUsersCard = () => {
 
 // UserProfileCard {Done}
 export const UserProfileCard = () => {
+  const history = useNavigate();
+
   return (
     <>
-      <div class="card shadow-sm" style={{ width: "56rem" }}>
-        <div class="card-body d-flex mt-4">
-          <div className="d-flex align-items-center col-4">
-            <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
-          </div>
-          <div className="">
-            <h4 className="text-muted">PERSONAL INFORMATION</h4>
-            {/* Personal Info Section Starts */}
-            <div>
-              <table className="text-muted">
-                <thead>
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      USER ID :
-                    </th>
-                    <th scope="col">34522</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      FULL-NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel Ugochukwu</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      PHONE NUMBER:
-                    </th>
-                    <th scope="col">+234 9032166043</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      E-MAIL:
-                    </th>
-                    <th scope="col">gabrielChristian@gmail.com</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ADDRESS:
-                    </th>
-                    <th scope="col">Royal Palm villa Estate, Sangotedo</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Personal Info Section Ends */}
-            {/* Bank Info Section Starts*/}
-            <div className="mt-5">
-              <h4 className="text-muted">BANK INFORMATION</h4>
-              <table className="text-muted">
-                <thead className="mt-3">
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      ACCOUNT NUMBER:
-                    </th>
-                    <th scope="col">2395289752</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ACCOUNT NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel </th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      BANK:
-                    </th>
-                    <th scope="col">Zenith Bank</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Bank Info Section Ends */}
-          </div>
-          <div className="col-2 ms-lg-5">
-            <button type="button" className="btn btn-success fw-bold ">
-              Primary
-            </button>
-          </div>
+      <div class="shadow border-0 p-3 rounded-2">
+        <div className="">
+          <img src={Avatar} className="mx-auto" alt={Avatar} />
+        </div>
+        <div className="mt-4 mx-auto">
+          <table className="w-100">
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted">User Id</td>
+              <td className="text-end">34522</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Name</td>
+              <td className="text-end">Christian Gabriel Ugochukwu</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Phone</td>
+              <td className="text-end">+234 9032166043</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Email</td>
+              <td className="text-end">gabrielChristian@gmail.com</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Address</td>
+              <td className="text-end">Royal Palm villa Estate, Sangotedo</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Account No</td>
+              <td>2395289752</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Bank</td>
+              <td>Zenith Bank</td>
+            </tr>
+          </table>
+        </div>
+        <div className="d-flex justify-content-center  mt-5">
+          <GeneralBtn
+            text="Back"
+            styles="w-100 GeneralBtnStyle1 btn all-btn text-white text-small"
+            onclick={() => history(-1)}
+          />
         </div>
       </div>
     </>
