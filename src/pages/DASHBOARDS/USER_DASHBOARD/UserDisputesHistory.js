@@ -5,8 +5,7 @@ import {
 } from "../../../components/ButtonsComponent/Button";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import {DisputeDetailsModal  } from "../../../components/Modal";
-
+import { DisputeDetailsModal } from "../../../components/Modal";
 
 const UserDisputeHistory = () => {
   return (
@@ -16,7 +15,7 @@ const UserDisputeHistory = () => {
 
         <div className="col-lg-9 col-sm-12">
           <UserDashboardNavbar />
-          <div className="mt-5">
+          <div className="mt-5 center-card">
             <DisputeCard />
           </div>
         </div>
@@ -34,7 +33,7 @@ const DisputeCard = () => {
             <h5>Disputes</h5>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <Link to={"../home"}>
+            <Link to={"../../../userdashboard"}>
               <GeneralBtnStyle1Icon text={"Back"} lefticon={<BackIcon />} />
             </Link>
           </div>
@@ -65,9 +64,9 @@ const DisputeData = (props) => {
       <div className="d-flex align-items-end flex-column">
         {/* <GeneralBtnStyle1 text={"View Details"} /> */}
         <DisputeDetailsModal
-           openModalText="View Details"
+          openModalText="View Details"
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
-          />
+        />
       </div>
     </div>
   );

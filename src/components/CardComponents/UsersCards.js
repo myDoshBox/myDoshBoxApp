@@ -106,12 +106,14 @@ export const UserDashboardCard = (props) => {
       className="text-decoration-none text-dark"
     >
       <div
-        className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
+        className="card shadow mx-auto border-0 rounded-2 p-3 p-lg-none row justify-content-center"
         style={{ width: "100%", height: "80%" }}
       >
         <div className="row justify-content-center align-items-center mx-auto">
           <div className="col-2">{icon}</div>
-          <div className="col-10">{text}</div>
+          <div className="col-10" style={{ transform: "translateX(10px)" }}>
+            {text}
+          </div>
         </div>
       </div>
     </Link>

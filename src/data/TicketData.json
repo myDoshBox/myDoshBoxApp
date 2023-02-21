@@ -14,8 +14,8 @@
       "btn2": "PROCEED",
       "btn3": "CANCEL",
       "link1": -1,
-      "link2": "../home",
-      "link3": "../home"
+      "link2": "../../userdashboard",
+      "link3": "../../userdashboard"
     }
   ],
   "Ticket2": [

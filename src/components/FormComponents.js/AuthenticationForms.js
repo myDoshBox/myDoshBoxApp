@@ -50,7 +50,7 @@ export const SignUpIndividual = () => {
     if (Object.keys(errors).length === 0 && submission) {
       console.log(personDetails);
 
-      navigate("/userdashboard/home");
+      navigate("/userdashboard");
     } else {
       console.log("Invalid Form");
     }
@@ -265,7 +265,7 @@ export const SignUpOrganization = () => {
     setpasswordToggle1(!passwordToggle1);
     e.preventDefault();
   };
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -289,6 +289,7 @@ export const SignUpOrganization = () => {
   useEffect(() => {
     if (Object.keys(errors).length === 0 && submission) {
       console.log(organizationDetails);
+      navigate("/userdashboard");
     } else {
       console.log("Invalid Form");
     }

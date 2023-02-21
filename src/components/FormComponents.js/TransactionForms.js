@@ -36,13 +36,13 @@ export const DeliveryForm = ({ heading, sub_text, checkList }) => {
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
             />
           </Link>
-           <GeneralModal
-           openModalText="Confirm"
-          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
-          modalTitle="Thank You"
-          modalMessage="The entire team at MyDoshBox is very grateful to you for trusting us to keep your transactions secure. For any improvements you may have in mind please contact our customer care."
-          modalRoute="../home"
-          closeModalText="Home"
+          <GeneralModal
+            openModalText="Confirm"
+            modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+            modalTitle="Thank You"
+            modalMessage="The entire team at MyDoshBox is very grateful to you for trusting us to keep your transactions secure. For any improvements you may have in mind please contact our customer care."
+            modalRoute="../../userdashboard"
+            closeModalText="Home"
           />
         </div>
       </Form>
