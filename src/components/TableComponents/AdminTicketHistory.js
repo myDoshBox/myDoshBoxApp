@@ -42,13 +42,13 @@ const TicketHistoryData = (props) => {
   } = props;
   return (
     <tr className="text-center">
-      <td>{date}</td>
-      <td>{ticket_id}</td>
-      <td>{transaction_id}</td>
-      <td className="small-hide">{complaint_type}</td>
-      <td className="small-hide">{complainer}</td>
-      <td className="small-hide">{complainer_id}</td>
-      <td className="d-flex justify-content-center align-items-center">
+      <td className="py-3">{date}</td>
+      <td className="py-3">{ticket_id}</td>
+      <td className="py-3">{transaction_id}</td>
+      <td className="small-hide py-3">{complaint_type}</td>
+      <td className="small-hide py-3">{complainer}</td>
+      <td className="small-hide py-3">{complainer_id}</td>
+      <td className="d-flex justify-content-center align-items-center py-3">
         <Notifications text={status_name} styles={status_style} />
       </td>
     </tr>
