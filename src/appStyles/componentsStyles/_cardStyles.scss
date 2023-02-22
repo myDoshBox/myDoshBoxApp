@@ -9,6 +9,10 @@
   background-color: $pryColor !important;
 }
 
+.shadows {
+  filter: drop-shadow(3px 3px 14px rgba(0, 0, 0, 0.1)) !important;
+}
+
 .accordion-button {
   @include H6Font;
   box-shadow: none !important;
@@ -84,7 +88,9 @@
   background-size: auto;
   border-radius: 5px;
   overflow-y: hidden;
-  height: 100vh !important;
+  height: 100% !important;
+  position: fixed;
+  width: 50% !important;
   h1 {
     @include H1Font;
   }
@@ -95,7 +101,9 @@
 
 @media screen and (max-width: 991px) {
   .signUp-bg {
-    height: 40vh !important;
+    height: 100% !important;
+    width: 100% !important;
+    position: unset;
   }
   .center-card {
     transform: translateX(0);
