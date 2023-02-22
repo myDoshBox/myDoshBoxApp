@@ -25,6 +25,8 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
@@ -43,11 +45,14 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+
+// Customer Care Pages
+import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
 function App() {
   return (
     <Router>
       <Routes>
-        GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes
+        {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -84,6 +89,11 @@ function App() {
             element={<NeutralViewTransaction />}
           />
           <Route path="notification" element={<NotifictionPage />} />
+        </Route>
+        <Route path="customer-care" element={<CustomerCareSideNav />}>
+          <Route path="tickets-history" element={<TicketHistoryPage />} />
+          <Route path="notification" element={<NotifictionPage />} />
+          <Route path="settings" element={<NeutralSetting />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
