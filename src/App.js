@@ -46,10 +46,12 @@ import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 // import UsersPage from "./pages/UsersPage";
-import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
 
 // Customer Care Pages
+import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
 import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
+import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
+import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 function App() {
   return (
     <Router>
@@ -94,9 +96,12 @@ function App() {
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
         <Route path="customer-care" element={<CustomerCareSideNav />}>
+          <Route index element={<CustomerCareDashboardPage />} />
           <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="notification" element={<NotifictionPage />} />
           <Route path="settings" element={<NeutralSetting />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
+          <Route path="users" element={<UsersPage />} />
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
