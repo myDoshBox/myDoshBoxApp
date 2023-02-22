@@ -123,6 +123,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  to="notification"
                 >
                   <span>Notifications</span>
                 </NavLink>
@@ -135,6 +136,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  to="tickets-history"
                 >
                   <span>Tickets</span>
                 </NavLink>
@@ -147,6 +149,7 @@ const SmallShowExample = ({ name, ...props }) => {
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
+                  to="settings"
                 >
                   <span>Settings</span>
                 </NavLink>
@@ -230,6 +233,7 @@ const BigShow = ({ name, ...props }) => {
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
+                to="notification"
               >
                 <span>Notifications</span>
               </NavLink>
@@ -242,6 +246,7 @@ const BigShow = ({ name, ...props }) => {
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
+                to="tickets-history"
               >
                 <span>Tickets</span>
               </NavLink>
@@ -254,6 +259,7 @@ const BigShow = ({ name, ...props }) => {
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
+                to="settings"
               >
                 <span>Settings</span>
               </NavLink>

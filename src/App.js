@@ -25,6 +25,8 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
@@ -46,6 +48,8 @@ import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 // import UsersPage from "./pages/UsersPage";
 import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
 
+// Customer Care Pages
+import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
 function App() {
   return (
     <Router>
@@ -89,7 +93,12 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
-        {/* <Route path="*" element={<Navigate to={<Error404 />} />} />  */}
+        <Route path="customer-care" element={<CustomerCareSideNav />}>
+          <Route path="tickets-history" element={<TicketHistoryPage />} />
+          <Route path="notification" element={<NotifictionPage />} />
+          <Route path="settings" element={<NeutralSetting />} />
+        </Route>
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
         <Route path="*" element={<Error404 />} />
