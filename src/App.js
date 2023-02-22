@@ -43,11 +43,14 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+// import UsersPage from "./pages/UsersPage";
+import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
+
 function App() {
   return (
     <Router>
       <Routes>
-        GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes
+        {/* GENERAL PAGE ROUTE CAN BE FOUND AT GeneralPagesRoutes */}
         <Route element={<GuestNavbar />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -65,6 +68,7 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
+          <Route path="userspage" element={<CustomerCareTransaction />} />
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}
@@ -85,7 +89,7 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
-        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} />  */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
         <Route path="*" element={<Error404 />} />

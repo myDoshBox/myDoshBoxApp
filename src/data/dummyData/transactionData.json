@@ -141,5 +141,52 @@
       "status_name": "Refunded",
       "status_style": "refunded"
     }
+  ],
+
+  "customercare_transaction": [
+    {
+      "id": 1,
+      "transaction_id": "34rsGDrb4rP3",
+      "buyer_name": "Jacob Jones",
+      "seller_name": "Guy Hawkins",
+      "products": "35 cartons of biscuit",
+      "date": "16-08-22",
+      "status_name": "Completed",
+      "status_style": "completed",
+      "view": "view"
+    },
+    {
+      "id": 2,
+      "transaction_id": "34rsGDrb4rP3",
+      "buyer_name": "Jacob Jones",
+      "seller_name": "Guy Hawkins",
+      "products": "35 cartons of biscuit",
+      "date": "16-08-22",
+      "status_name": "Awaiting Delivery",
+      "status_style": "awaiting",
+      "view": "view"
+    },
+    {
+      "id": 3,
+      "transaction_id": "34rsGDrb4rP3",
+      "buyer_name": "Jacob Jones",
+      "seller_name": "Guy Hawkins",
+      "products": "35 cartons of biscuit",
+      "date": "16-08-22",
+      "status_name": "Canceled",
+      "status_style": "canceled",
+      "view": "view"
+    },
+    {
+      "id": 4,
+      "transaction_id": "34rsGDrb4rP3",
+      "buyer_name": "Jacob Jones",
+      "seller_name": "Guy Hawkins",
+      "products": "35 cartons of biscuit",
+      "date": "16-08-22",
+      "status_name": "Refunded",
+      "status_style": "refunded",
+      "view": "view"
+    }
   ]
 }
