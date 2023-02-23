@@ -43,12 +43,20 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
-import AdminTransaction from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminTransaction";
+import { FinancialReport } from "./components/CardComponents/Analytics";
+// import { UserInflow } from "./components/CardComponents/Analytics";
+import { Target } from "./components/CardComponents/Analytics";
+import { ComplaintType } from "./components/CardComponents/Analytics";
+import { AdminSetting } from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminSetting";
 
 function App() {
   return (
     <div>
-      <AdminTransaction />
+      <FinancialReport />
+      <ComplaintType />
+      {/* <UserInflow /> */}
+      <Target />
+      {/* <AdminSetting /> */}
     </div>
     // <Router>
     //   <Routes>
