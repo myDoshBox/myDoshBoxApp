@@ -16,8 +16,8 @@ import { Link, Outlet, NavLink, useNavigate } from "react-router-dom";
 const NeutralsSideNav = () => {
   return (
     <>
-      <SmallShow />
-      <BigShow />
+      <MobileScreen />
+      <DesktopScreen />
       <Outlet />
     </>
   );
@@ -30,7 +30,7 @@ const options = [
   },
 ];
 
-const SmallShowExample = ({ name, ...props }) => {
+const MobileScreenSideNav = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
@@ -205,7 +205,7 @@ const SmallShowExample = ({ name, ...props }) => {
   );
 };
 
-const BigShow = () => {
+const DesktopScreen = () => {
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
   let dropdownbaseClassName = "text-decoration-none , text-dark";
@@ -341,11 +341,11 @@ const BigShow = () => {
   );
 };
 
-const SmallShow = () => {
+const MobileScreen = () => {
   return (
     <>
       {options.map((props, idx) => (
-        <SmallShowExample key={idx} {...props} />
+        <MobileScreenSideNav key={idx} {...props} />
       ))}
     </>
   );
