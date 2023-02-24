@@ -51,8 +51,8 @@ export const TwitterIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width="22"
+      height="22"
       fill="#FFFFFF"
       class="bi bi-twitter"
       viewBox="0 0 16 16"
@@ -67,8 +67,8 @@ export const FacebookIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width="22"
+      height="22"
       fill="#FFFFFF"
       class="bi bi-facebook"
       viewBox="0 0 16 16"
@@ -101,8 +101,8 @@ export const WhatsAppIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width="22"
+      height="22"
       fill="#FFFFFF"
       class="bi bi-whatsapp"
       viewBox="0 0 16 16"
