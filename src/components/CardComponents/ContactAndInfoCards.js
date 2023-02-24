@@ -29,7 +29,7 @@ export const ContactUsCard = () => {
             </span>
           </div>
         </div>
-        <div className="col-md-6 col-sm-12 mt-sm-3 mt-xs-4">
+        <div className="col-md-6 col-sm-12 mt-sm-3">
           <ContactUsForm />
         </div>
       </div>

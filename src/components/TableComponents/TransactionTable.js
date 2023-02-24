@@ -1,9 +1,9 @@
 import Table from "react-bootstrap/Table";
 // import { PaginationBar } from "../PaginationComponent";
 // import { FilterButton } from "../ButtonsComponent/MiscBtns";
-import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
+// import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
-import { Descripe } from "@mui/icons-material";
+// import { Descripe } from "@mui/icons-material";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import { Link } from "react-router-dom";
@@ -75,37 +75,52 @@ export const MiniRecentTransactionTable = () => {
 };
 
 // AdminRecentTransactionsCard
-export const AdminRecentTransactionsCard = () => {
+export const AdminRecentTransactionsCard = ({ style }) => {
   return (
-    <>
-      <div className="pt-4 col-lg-9 col-md-6 col-sm-12 shadow-sm rounded-2">
-        <Table className="">
-          <thead className="text-center">
+    <div className={`${style} mb-3 mb-md-0`}>
+      <div className={`card p-3 shadow rounded border-0 h-100`}>
+        <h6 className="pb-3 m-0">Recent Transactions</h6>
+        <table class="table">
+          <thead>
             <tr>
-              <th>Transaction ID</th>
-              <th>Buyer Name</th>
-              <th>Seller Name</th>
-              <th className="">Products</th>
-              <th className="small-hide">Date</th>
-              <th>Status</th>
-              <th className="small-hide">...</th>
+              <th scope="col" className="opacity-50 text-center">
+                Transaction Id
+              </th>
+              <th scope="col" className="opacity-50 text-center">
+                Status
+              </th>
+              <th scope="col" className="opacity-50 text-center">
+                ...
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className=" text-center">4rsGDrb4rP3</td>
-              <td className="text-center">Jacob Jones</td>
-              <td className="text-center">Guy Hawkins</td>
-              <td className="text-center small-hide">35 cartons of biscuit</td>
-              <td className="text-center small-hide">16-08-22</td>
-              <td className="d-flex justify-content-center align-items-center">
-                <Notifications text={`Completed`} styles={`completed`} />
-              </td>
-              <td className="text-center small-hide text-muted">View</td>
-            </tr>
+            {TransactionData.mini_transaction.map((mini) => {
+              return (
+                <>
+                  <tr key={mini.id} className="text-center border-bottom">
+                    <td className="p-md-3 text-small">{mini.id}</td>
+                    {/* <td className="p-md-3 text-small">{mini.status_name}</td> */}
+                    <td className="p-md-3 d-flex justify-content-center align-items-center">
+                      <Notifications
+                        text={mini.status_name}
+                        styles={`text-small ${mini.status_style} border-0`}
+                      />
+                    </td>
+                    <td className="p-md-3 text-small">View</td>
+                  </tr>
+                </>
+              );
+            })}
+              <Link to={""} className="d-flex justify-content-center pe-2 py-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
+                <GeneralBtn
+                  text="View More"
+                  styles="GeneralBtnStyle1 btn all-btn text-white"
+                />
+              </Link>
           </tbody>
-        </Table>
+        </table>
       </div>
-    </>
+    </div>
   );
 };

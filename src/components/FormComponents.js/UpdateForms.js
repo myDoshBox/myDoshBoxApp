@@ -39,7 +39,7 @@ export const UpdateProfile = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
-      navigate("../home");
+      navigate("../../userdashboard");
     }
   }, [ValidationError]);
 
@@ -238,7 +238,7 @@ export const UpdateBankDetails = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
-      navigate("../home");
+      navigate("../../userdashboard");
     }
   }, [ValidationError]);
 
@@ -353,7 +353,7 @@ export const UserUpdateProfile = () => {
     // console.log(ValidationError);
     if (Object.keys(ValidationError).length === 0 && FormSubmission) {
       // console.log(UpdateProfile);
-      navigate("../home");
+      navigate("../../userdashboard");
     }
   }, [ValidationError]);
 

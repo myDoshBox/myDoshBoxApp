@@ -18,8 +18,8 @@ export const TeamsCard = (props) => {
   const { name, job_description, description, images } = props;
   return (
     <div className=" container-fluid">
-      <div class="shadow border-0 rounded-3 pt-1" style={{ width: "85%" }}>
-        <div class="col teamValueStyle p-3">
+      <div class="shadow-sm border-0 rounded-3 pt-1" style={{ width: "85%" }}>
+        <div class="col teamValueStyle p-3 rounded-2">
           <div class="card h-100 border-0 teamValueStyle">
             <img src={images} class="card-img-top 75" alt="..." />
             <div class="card-body">

@@ -27,19 +27,19 @@ const NeutralDashboard = () => {
               value="100"
               text="Open Conflicts"
               icon={<OpenConflictIcon />}
-              link={`../open-conflicts`}
+              link={`open-conflicts`}
             />
             <DashboardConflictCards
               value="75"
               text="Ongoing Conflicts"
               icon={<OngoingConflictIcon />}
-              link={`../ongoing-conflicts`}
+              link={`ongoing-conflicts`}
             />
             <DashboardConflictCards
               value="250"
               text="Closed Conflicts"
               icon={<ClosedConflictIcon />}
-              link={`../closed-conflicts`}
+              link={`closed-conflicts`}
             />
           </div>
           <div className="card mx-auto mt-5 p-3 shadow border-0">

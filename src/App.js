@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
+  // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
@@ -45,6 +45,8 @@ import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 import UserProfile from "./pages/UserProfile";
 import AdminDashboard from "./pages/AdminDashboard";
+// import UsersPage from "./pages/UsersPage";
+import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
 
 function App() {
   return (
@@ -57,12 +59,10 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
-          <Route path="/signin" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route path="home" element={<UserDashboardPage />} />
+          <Route index element={<UserDashboardPage />} />
           <Route path="settings" element={<UserSettingsPage />} />
           <Route path="transaction" element={<UserTransactionHistory />} />
           <Route path="dispute" element={<UserDisputeHistory />} />
@@ -71,6 +71,7 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
+          <Route path="userspage" element={<CustomerCareTransaction />} />
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}
@@ -85,7 +86,7 @@ function App() {
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route path="home" element={<NeutralDashboard />} />
+          <Route index element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
@@ -96,7 +97,9 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
-        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} />  */}
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="signup" element={<SignUpPage />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

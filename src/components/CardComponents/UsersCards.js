@@ -1,6 +1,6 @@
 // UserInflowCard {Postponed as it is a graph}
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 //All Buttons/Icon Import Starts
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
@@ -12,12 +12,13 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
 import { Link, useNavigate } from "react-router-dom";
+import TransactionData from "../../data/dummyData/transactionData.json";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
-export const AnalyticsCard = ({ BigIcon, SmallIcon, text, value, link, change }) => {
+export const AnalyticsCard = ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
   return (
-    <div className="col-md-4 mb-4 mb-lg-0">
-      <div className="px-3 shadow border-0 rounded-2 DashboardCard">
+    <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
+      <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
         <Link to={link} className="text-decoration-none ">
           <div className="d-flex align-items-center py-3">
             {BigIcon}
@@ -28,7 +29,7 @@ export const AnalyticsCard = ({ BigIcon, SmallIcon, text, value, link, change })
           </div>
         <div className="d-flex align-items-center justify-content-end">
           {SmallIcon}
-          <span class="text-small">{change ? change + " than last week" : null } </span>
+          <p className="text-small m-0">{change ? change + " than last week" : null } </p>
         </div>
         </Link>
       </div>
@@ -46,12 +47,14 @@ export const UserDashboardCard = (props) => {
       className="text-decoration-none text-dark"
     >
       <div
-        className="card shadow mx-auto border-0 rounded-2 py-4 pt-lg-5 px-2"
+        className="card shadow mx-auto border-0 rounded-2 p-3 p-lg-none row justify-content-center"
         style={{ width: "100%", height: "80%" }}
       >
         <div className="row justify-content-center align-items-center mx-auto">
           <div className="col-2">{icon}</div>
-          <div className="col-10">{text}</div>
+          <div className="col-10" style={{ transform: "translateX(10px)" }}>
+            {text}
+          </div>
         </div>
       </div>
     </Link>
@@ -126,58 +129,46 @@ export const MiniProfileCard = () => {
 };
 
 // MiniUsersCard
-export const MiniUsersCard = () => {
+export const MiniUsersCard = ({ style }) => {
+  const [max, setMax] = useState(5);
   return (
-    <div className="bg-white rounded-3 p-3 MiniUsersCard ">
-      <p className="border-bottom mb-2">All Users</p>
-      <table className=" table table-striped table-hover w-100 ">
-        <thead>
-          <tr>
-            <th className="text-center">Users ID</th>
-            <th className="text-end">Name</th>
-            <th className="text-center">Transactions Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="text-end mt-3">
-        <GeneralBtnStyle1 text="View More" />
+    <div className={`${style} mb-3 mb-md-0`}>
+      <div className={`card p-3 shadow rounded border-0 h-100`}>
+        <h6 className="pb-3 m-0">All Users</h6>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="opacity-50">
+              User Id
+              </th>
+              <th scope="col" className="opacity-50">
+              Name
+              </th>
+              <th scope="col" className="opacity-50">
+              Completed Transactions
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          {TransactionData.mini_transaction.map((mini) => {
+            return (
+              <>
+                <tr key={mini.id} className="text-center border-bottom">
+                  <td className="p-md-3 text-small">{mini.id}</td>
+                  <td className="p-md-3 text-small">Opeyemi</td>
+                  <td className="p-md-3 text-small">2000</td>
+                </tr>
+              </>
+            );
+          })}
+          <Link to={""} className="d-flex justify-content-center pe-2 py-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
+                <GeneralBtn
+                  text="View More"
+                  styles="GeneralBtnStyle1 btn all-btn text-white"
+                />
+              </Link>
+          </tbody>
+        </table>
       </div>
     </div>
   );

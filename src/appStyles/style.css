@@ -101,8 +101,7 @@ h6 {
   font-size: 0.5rem;
 }
 
-p,
-div {
+p {
   font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -145,7 +144,11 @@ div {
   letter-spacing: 0rem;
 }
 
-label, select, option, .escrow-images, .date-input-field {
+label,
+select,
+option,
+.escrow-images,
+.date-input-field {
   font-size: 0.85rem !important;
   font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
@@ -289,7 +292,8 @@ div {
   letter-spacing: 0rem;
 }
 
-.EscrowTransactTypeBtn:hover, .EscrowTransactTypeBtn:focus {
+.EscrowTransactTypeBtn:hover,
+.EscrowTransactTypeBtn:focus {
   background-color: #006747 !important;
   border: 0;
   color: white !important;
@@ -299,12 +303,18 @@ div {
   background-color: rgba(255, 0, 0, 0.7) !important;
 }
 
-.pale-red:hover, .pale-red:focus {
+.pale-red:hover,
+.pale-red:focus {
   background-color: rgb(255, 0, 0) !important;
 }
 
 .link-color-reset {
   color: inherit !important;
+}
+
+.switch-charts-btn:hover, .switch-charts-btn:focus {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .teamValueStyle {
@@ -365,22 +375,12 @@ div {
 .payment-method-card:focus {
   border-color: #006747 !important;
 }
-<<<<<<< HEAD
-.payment-method-card:hover .resolve-card .nav-pills .nav-link.active,
-.payment-method-card:focus .resolve-card .nav-pills .nav-link.active {
-  background-color: #006747 !important;
-  font-weight: 400 !important;
-}
-.payment-method-card:hover .resolve-card .nav-pills .nav-link,
-.payment-method-card:focus .resolve-card .nav-pills .nav-link {
-=======
 
 .resolve-card .nav-pills .nav-link.active {
   background-color: #006747 !important;
   font-weight: 400 !important;
 }
 .resolve-card .nav-pills .nav-link {
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   background-color: #4d957e !important;
   font-weight: 400 !important;
   color: white;
@@ -391,84 +391,25 @@ div {
   background-size: auto;
   border-radius: 5px;
   overflow-y: hidden;
+  height: 100vh !important;
 }
 .signUp-bg h1 {
   font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
-  font-size: 1rem;
-  color: rgba(75, 68, 83, 0.8);
-  font-size: 1rem !important;
-  font-weight: 700;
-}
-
-.Email input::-moz-placeholder, .Password input::-moz-placeholder {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.Email input::placeholder,
-.Password input::placeholder {
-  color: rgba(75, 68, 83, 0.5) !important;
-}
-
-.AccountNum label,
-.AccountName label,
-.BankName label {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-.AccountNum input,
-.AccountName input,
-.BankName input {
-  border: 1.5px solid rgba(0, 103, 71, 0.3);
-}
-
-.AccountNum input::-moz-placeholder, .AccountName input::-moz-placeholder, .BankName input::-moz-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.AccountNum input::placeholder,
-.AccountName input::placeholder,
-.BankName input::placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.UpdateProfileForm {
-  filter: drop-shadow(3.5942px 3.5942px 13.4783px rgba(0, 0, 0, 0.25));
-}
-.UpdateProfileForm button {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  background-color: #4d957e !important;
-  font-size: 0.875rem !important;
-  color: hsl(0deg, 0%, 100%) !important;
-}
-.UpdateProfileForm button:hover,
-.UpdateProfileForm button:focus {
-  background-color: #006747 !important;
-}
-.UpdateProfileForm p {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  font-weight: 700;
-=======
   font-size: 3rem !important;
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 }
 
+.center-card {
+  transform: translateX(-1rem);
+}
+
+@media screen and (max-width: 991px) {
+  .signUp-bg {
+    height: 40vh !important;
+  }
+  .center-card {
+    transform: translateX(0);
+  }
+}
 textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
@@ -489,65 +430,6 @@ input[type=color]:focus,
   outline: 0 none;
 }
 
-<<<<<<< HEAD
-.Name label,
-.UpdateEmail label,
-.Phone label,
-.Pass label {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  color: #4b4453;
-  letter-spacing: 0.08rem;
-  font-weight: 700;
-}
-.Name input,
-.UpdateEmail input,
-.Phone input,
-.Pass input {
-  border: 1.5px solid rgba(0, 103, 71, 0.3);
-}
-
-.Name input::-moz-placeholder, .UpdateEmail input::-moz-placeholder, .Phone input::-moz-placeholder, .Pass input::-moz-placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.Name input::placeholder,
-.UpdateEmail input::placeholder,
-.Phone input::placeholder,
-.Pass input::placeholder {
-  font-weight: 300 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.04rem !important;
-  color: rgba(75, 68, 83, 0.5);
-}
-
-.escrow-form,
-.bank-transfer-form {
-  overflow-x: hidden;
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  color: #4b4453;
-}
-
-.escrow-form-label,
-.bank-transfer-form-label {
-  margin-left: 15px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-size: 1.125rem !important;
-}
-
-.bank-transfer-input-field {
-  width: 90% !important;
-  margin: 0 15px;
-}
-
-=======
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 .escrow-price-field {
   border-radius: 5px 0 0 5px !important;
 }
@@ -569,13 +451,8 @@ input[type=color]:focus,
   border: 1px dashed rgba(75, 68, 83, 0.3) !important;
 }
 
-<<<<<<< HEAD
-.escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder, .bank-transfer-input-field::-moz-placeholder {
-  font-family: "Open Sans" !important;
-=======
 .escrow-input-field::-moz-placeholder, .escrow-price-field::-moz-placeholder {
   font-family: "Open Sans", sans-serif !important;
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   font-weight: 400 !important;
   font-size: 1rem !important;
   color: #4b4453;
@@ -659,15 +536,6 @@ input[type=color]:focus,
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: 300 !important;
 }
-<<<<<<< HEAD
-
-.contestPage .row {
-  margin-top: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-=======
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 
 .GeneralModal .modal-dialog {
   width: 20rem !important;
@@ -753,7 +621,7 @@ input[type=color]:focus,
 }
 
 .big-side-nav {
-  width: 290px !important;
+  width: 22.5% !important;
   position: fixed;
   padding: 20px;
   z-index: 999;
@@ -805,8 +673,9 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
-  width: 11rem;
-  height: 1.8rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.7rem;
+  white-space: nowrap;
 }
 
 .completed,
@@ -895,15 +764,7 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
-<<<<<<< HEAD
-    width: 80px !important;
-    height: 20px !important;
-    font-size: 0.4375rem !important;
-=======
-    width: 5rem !important;
-    height: 1.25rem !important;
     font-size: 0.6rem !important;
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
   }
 }
 .FooterBgColor {
@@ -977,138 +838,4 @@ input[type=color]:focus,
     font-size: 0.75rem !important;
   }
 }
-<<<<<<< HEAD
-.BgColor {
-  background-color: #006747;
-}
-
-.BgColor {
-  background-color: #006747;
-}
-
-.pricing-table tr:nth-child(even) {
-  background-color: #e5f0ed;
-}
-
-.NotificationCardWrapper {
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 0.594rem;
-  filter: drop-shadow(3.80085px 3.80085px 14.2532px rgba(0, 0, 0, 0.25));
-}
-
-.NotificationCardBackBtn {
-  color: #006747 !important;
-}
-
-.NotificationCardHeader {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-}
-.NotificationCardHeader button {
-  margin: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  background-color: transparent !important;
-}
-.NotificationCardHeader h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.663rem;
-  line-height: 30px !important;
-  height: 1.938rem !important;
-}
-
-.NotificationCardDetails {
-  border-bottom: 0.1px solid rgba(75, 68, 83, 0.3);
-  padding-inline: 3.5% !important;
-}
-.NotificationCardDetails h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  color: #4b4453;
-}
-.NotificationCardDetails p {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  text-align: justify;
-  width: 95%;
-}
-.NotificationCardDetails button {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-weight: 700;
-  text-align: justify;
-  letter-spacing: 0.08rem;
-  color: #006747;
-}
-
-.NotificationCardDetails {
-  width: 100% !important;
-}
-.NotificationCardDetails p {
-  font-size: 0.75rem !important;
-  width: unset;
-  line-height: 16px;
-}
-.NotificationCardDetails img {
-  width: 1.8rem;
-}
-.NotificationCardDetails small {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300 !important;
-  font-size: 0.5rem !important;
-  letter-spacing: 0.04rem !important;
-}
-
-@media screen and (max-width: 991px) {
-  .NotificationCardHeader button {
-    font-size: 0.75rem;
-  }
-  .NotificationCardHeader h1 {
-    font-size: 1.31rem !important;
-  }
-}
-.PaginationBar button {
-  margin: 0 !important;
-}
-.PaginationBar a {
-  font-family: "Open Sans" !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  color: #4b4453;
-  line-height: 1.5rem;
-  letter-spacing: 0rem;
-  color: rgba(75, 68, 83, 0.5);
-}
-.PaginationBar a:hover,
-.PaginationBar a:focus {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-  font-size: 1.3rem !important;
-  color: #4b4453;
-}
-.PaginationBar li {
-  margin-inline: 2% !important;
-}
-.PaginationBar :first-child {
-  margin-inline: unset !important;
-  margin-right: 3% !important;
-}
-.PaginationBar :last-child {
-  margin-inline: unset !important;
-  margin-left: 3% !important;
-}
-
-@media screen and (max-width: 764px) {
-  .PaginationBar button {
-    font-size: 0.75rem !important;
-  }
-}
-=======
->>>>>>> 0ba9bbd21915aac35e6245a92214f1bee4b2dd57
 /*# sourceMappingURL=style.css.map */

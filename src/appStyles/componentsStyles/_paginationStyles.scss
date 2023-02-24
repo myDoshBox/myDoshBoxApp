@@ -1,0 +1,28 @@
+@use "../generalStyles/color" as *;
+@use "../generalStyles/fonts" as *;
+
+.PaginationBar {
+  button {
+    margin: 0 !important;
+  }
+  a {
+    @include pFont;
+    color: $placeholderTextColor;
+  }
+  a:hover,
+  a:focus {
+    @include H6Font;
+    font-size: 1.3rem !important;
+    color: $bodyTextColor;
+  }
+
+  li {
+    margin-inline: 2% !important;
+  }
+  :first-child {
+    margin-inline: unset !important;
+  }
+  :last-child {
+    margin-inline: unset !important;
+  }
+}

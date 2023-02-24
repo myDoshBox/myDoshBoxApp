@@ -48,6 +48,8 @@
   border-radius: 20px;
 }
 
+
+
 // OTHER BUTTON STYLING
 .CalendarBtnStyle {
   font-weight: 200 !important;
@@ -97,4 +99,10 @@
 
 .link-color-reset {
   color: inherit !important;
+}
+
+// charts
+.switch-charts-btn:hover, .switch-charts-btn:focus {
+  text-decoration: underline;
+  opacity: .8;
 }

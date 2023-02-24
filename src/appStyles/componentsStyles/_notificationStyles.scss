@@ -10,8 +10,9 @@
 .refunded,
 .resolved,
 .unresolved {
-  width: 11rem;
-  height: 1.8rem;
+  padding-block:.1rem;
+  padding-inline: .7rem;
+  white-space: nowrap;
 }
 
 .completed,
@@ -71,8 +72,6 @@
   .refunded,
   .resolved,
   .unresolved {
-    width: 5rem !important;
-    height: 1.25rem !important;
     font-size: 0.6rem !important;
   }
 }
