@@ -1,11 +1,11 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
 import { GeneralBtnStyle1 } from "../../../components/ButtonsComponent/Button";
-import TransactionData from "../../../data/dummyData/transactionData.json";
+import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { Link } from "react-router-dom";
+import { FilterButton } from "../../../components/ButtonsComponent/MiscBtns";
 
-const UserTransactionHistory = () => {
+const CustomerCareTransaction = () => {
   return (
     <div className="contestPage">
       <div className="row">
@@ -14,7 +14,7 @@ const UserTransactionHistory = () => {
         <div className="col-lg-9 col-sm-12">
           <UserDashboardNavbar />
           <div className="mt-5 center-card">
-            <RecentTransactionTable />
+            <CustomerCareTransactionTable />
           </div>
         </div>
       </div>
@@ -22,32 +22,38 @@ const UserTransactionHistory = () => {
   );
 };
 
-export const RecentTransactionTable = () => {
+export const CustomerCareTransactionTable = () => {
   return (
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        <div className="px-4 mb-3">
-          <Link to={"../initiate-escrow"}>
-            <GeneralBtnStyle1 text="New Transaction" />
-          </Link>
+        <div className="d-flex justify-content-end pb-3">
+          <FilterButton />
         </div>
 
         <table className="table transaction-table">
           <thead className="text-center">
             <tr>
-              <th>Product Name</th>
-              <th>Amount</th>
+              <th>Transaction ID</th>
+              <th>Buyer Name</th>
+              <th>Seller Name</th>
+              <th>Products</th>
               <th>Date</th>
               <th>Status</th>
+              <th>...</th>
             </tr>
           </thead>
           <tbody>
-            {TransactionData.user_recent_transaction.map((history) => {
-              return (
-                <RecentTransactionTableData {...history} key={history.id} />
-              );
-            })}
+            {customercare_transaction.customercare_transaction.map(
+              (customercare) => {
+                return (
+                  <CustomerCareTransactionTableData
+                    {...customercare}
+                    key={customercare.id}
+                  />
+                );
+              }
+            )}
           </tbody>
         </table>
         <div className="p-4">
@@ -58,20 +64,32 @@ export const RecentTransactionTable = () => {
   );
 };
 
-export const RecentTransactionTableData = (props) => {
-  const { product, price, date, status_name, status_style } = props;
+export const CustomerCareTransactionTableData = (props) => {
+  const {
+    transaction_id,
+    buyer_name,
+    seller_name,
+    products,
+    date,
+    status_name,
+    status_style,
+    view,
+  } = props;
   return (
     <>
       <tr className="text-center border-bottom">
-        <td className="p-md-3">{product}</td>
-        <td className="p-md-3">N{price}</td>
+        <td className="p-md-3">{transaction_id}</td>
+        <td className="p-md-3">{buyer_name}</td>
+        <td className="p-md-3">{seller_name}</td>
+        <td className="p-md-3">{products}</td>
         <td className="p-md-3">{date}</td>
         <td className="p-md-3 d-flex justify-content-center align-items-center">
           <Notifications text={status_name} styles={status_style} />
         </td>
+        <td className="p-md-3">{view}</td>
       </tr>
     </>
   );
 };
 
-export default UserTransactionHistory;
+export default CustomerCareTransaction;

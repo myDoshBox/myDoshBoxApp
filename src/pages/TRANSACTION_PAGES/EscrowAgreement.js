@@ -111,7 +111,7 @@ const EscrowAgreementText = () => {
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
           modalTitle="User Notified"
           modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
-          modalRoute="../home"
+          modalRoute="../../userdashboard"
           closeModalText="Home"
         />
       </div>
