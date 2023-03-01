@@ -1,6 +1,7 @@
+import { memo } from "react";
 
-
-export const UsersList = (props) => {
+export const UsersList = memo((props) => {
+  console.count("UsersList: ")
   const { image, user_id, name, phone, email, address, action } = props;
   return (
     <>
@@ -17,4 +18,4 @@ export const UsersList = (props) => {
       </tr>
     </>
   );
-};
+});

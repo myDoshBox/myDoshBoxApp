@@ -1,5 +1,7 @@
+import { memo } from "react";
+import { FinancialReport, ComplaintType, Target, UserInflow, Issues, LineSparkline } from "../components/CardComponents/Analytics";
 import { AnalyticsCard, MiniUsersCard } from "../components/CardComponents/UsersCards";
-import { FinancialReport } from "../components/Charts";
+// import { FinancialReport } from "../components/Charts";
 import {
   ArrowUpIcon,
   ArrowDownIcon,
@@ -13,7 +15,7 @@ import { MiniTicketsHistory } from "../components/TableComponents/TicketTable";
 import { AdminRecentTransactionsCard } from "../components/TableComponents/TransactionTable";
 import { TopCustomers } from "./UsersPage";
 
-const AdminDashboard = () => {
+const AdminDashboard = memo(() => {
   return (
     <div className="row">
       <div className="col-lg-3 col-sm-12 px-0"></div>
@@ -43,7 +45,7 @@ const AdminDashboard = () => {
             <AnalyticsCard
               value="500,000"
               text="Total Profits"
-              BigIcon={<CompletedTransactionIcon />}
+              BigIcon={<LineSparkline />}
               SmallIcon={<ArrowDownIcon />}
               change="5% Less"
               ResponsiveWidth={`col-md-4`}
@@ -76,6 +78,6 @@ const AdminDashboard = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AdminDashboard;

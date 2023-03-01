@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Table from "react-bootstrap/Table";
 // import { PaginationBar } from "../PaginationComponent";
 // import { FilterButton } from "../ButtonsComponent/MiscBtns";
@@ -75,12 +76,13 @@ export const MiniRecentTransactionTable = () => {
 };
 
 // AdminRecentTransactionsCard
-export const AdminRecentTransactionsCard = ({ style }) => {
+export const AdminRecentTransactionsCard = memo(({ style }) => {
+  console.count("AdminRecentTransactionsCard: ");
   return (
     <div className={`${style} mb-3 mb-md-0`}>
       <div className={`card p-3 shadow rounded border-0 h-100`}>
         <h6 className="pb-3 m-0">Recent Transactions</h6>
-        <table class="table">
+        <table class="table m-0 h-100">
           <thead>
             <tr>
               <th scope="col" className="opacity-50 text-center">
@@ -94,14 +96,14 @@ export const AdminRecentTransactionsCard = ({ style }) => {
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="h-100">
             {TransactionData.mini_transaction.map((mini) => {
               return (
                 <>
                   <tr key={mini.id} className="text-center border-bottom">
                     <td className="p-md-3 text-small">{mini.id}</td>
                     {/* <td className="p-md-3 text-small">{mini.status_name}</td> */}
-                    <td className="p-md-3 d-flex justify-content-center align-items-center">
+                    <td className="p-md-3 d-flex justify-content-center align-items-center border-0">
                       <Notifications
                         text={mini.status_name}
                         styles={`text-small ${mini.status_style} border-0`}
@@ -112,15 +114,19 @@ export const AdminRecentTransactionsCard = ({ style }) => {
                 </>
               );
             })}
-              <Link to={""} className="d-flex justify-content-center pe-2 py-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
-                <GeneralBtn
-                  text="View More"
-                  styles="GeneralBtnStyle1 btn all-btn text-white"
-                />
-              </Link>
+            <Link
+              to={""}
+              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <GeneralBtn
+                text="View More"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+              />
+            </Link>
           </tbody>
         </table>
       </div>
     </div>
   );
-};
+});

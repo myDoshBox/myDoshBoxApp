@@ -1,6 +1,6 @@
 // UserInflowCard {Postponed as it is a graph}
 
-import { useContext, useState } from "react";
+import { memo, useContext, useState } from "react";
 //All Buttons/Icon Import Starts
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
@@ -15,7 +15,8 @@ import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
-export const AnalyticsCard = ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+export const AnalyticsCard = memo(({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+  console.count("AnalyticsCard: ")
   return (
     <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
       <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
@@ -35,7 +36,7 @@ export const AnalyticsCard = ({ ResponsiveWidth, BigIcon, SmallIcon, text, value
       </div>
     </div>
   );
-};
+});
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCard = (props) => {
@@ -129,13 +130,14 @@ export const MiniProfileCard = () => {
 };
 
 // MiniUsersCard
-export const MiniUsersCard = ({ style }) => {
+export const MiniUsersCard = memo(({ style }) => {
+  console.count("MiniUsersCard: ")
   const [max, setMax] = useState(5);
   return (
     <div className={`${style} mb-3 mb-md-0`}>
       <div className={`card p-3 shadow rounded border-0 h-100`}>
         <h6 className="pb-3 m-0">All Users</h6>
-        <table className="table">
+        <table className="table m-0 h-100">
           <thead>
             <tr>
               <th scope="col" className="opacity-50">
@@ -149,7 +151,7 @@ export const MiniUsersCard = ({ style }) => {
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="h-100">
           {TransactionData.mini_transaction.map((mini) => {
             return (
               <>
@@ -161,7 +163,7 @@ export const MiniUsersCard = ({ style }) => {
               </>
             );
           })}
-          <Link to={""} className="d-flex justify-content-center pe-2 py-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
+          <Link to={""} className="d-flex justify-content-center pt-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
                 <GeneralBtn
                   text="View More"
                   styles="GeneralBtnStyle1 btn all-btn text-white"
@@ -172,7 +174,7 @@ export const MiniUsersCard = ({ style }) => {
       </div>
     </div>
   );
-};
+});
 
 export const AllUsersCard = () => {
   return (
