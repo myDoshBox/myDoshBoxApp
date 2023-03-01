@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
@@ -81,8 +82,6 @@ function App() {
           <Route path="agreement" element={<EscrowAgreement />} />
           <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
           <Route path="ticket" element={<GeneratedTicket />} />
-          <Route path="profile" element={<UserProfile />} />
-          <Route path="admin" element={<AdminDashboard />} />
         </Route>
 
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
@@ -97,6 +96,12 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
+
+        {/* Admin Routes */}
+        <Route path="admin" element={<AdminDashboard />}>
+          <Route path="profile" element={<UserProfile />} />
+        </Route>
+
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>

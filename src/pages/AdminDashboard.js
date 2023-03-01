@@ -10,6 +10,7 @@ import {
   OpenTicketsIcon,
   ClosedTicketsIcon,
 } from "../components/IconComponent/AdminDashboardIcons";
+import AdminSideNav from "../components/NavbarComponents/AdminSideNav";
 import { UserDashboardNavbar } from "../components/NavbarComponents/TopNavbars";
 import { MiniTicketsHistory } from "../components/TableComponents/TicketTable";
 import { AdminRecentTransactionsCard } from "../components/TableComponents/TransactionTable";
@@ -22,7 +23,7 @@ const AdminDashboard = memo(() => {
 
       <div className="col-lg-9 col-sm-12">
         <div className="mt-3 pe-lg-5">
-          <UserDashboardNavbar />
+          <AdminSideNav />
         </div>
         <div className="mx-auto w-100 px-3 pe-lg-5 ps-lg-0 mt-5">
           <div className="row gx-lg-3 justify-content-between align-items-stretch mt-5 ps-sm-2">
