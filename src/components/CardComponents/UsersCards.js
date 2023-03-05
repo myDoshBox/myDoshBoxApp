@@ -1,12 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
+import { memo, useContext, useState } from "react";
 //All Buttons/Icon Import Starts
-import {
-  TotalUsersIcon,
-  ArrowDownIcon,
-  ArrowUpIcon,
-  CompletedTransactionIcon,
-} from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
 import { FilterButton } from "../ButtonsComponent/MiscBtns";
 import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
@@ -16,85 +11,36 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Image Import Starts
 import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import TransactionData from "../../data/dummyData/transactionData.json";
 
-// AnalyticsNewUsersCard
-export const AnalyticsNewUsersCard = () => {
-  return (
-    <div
-      className="card shadow rounded-3 text-nowrap"
-      style={{ width: "15rem" }}
-    >
-      <div class="card-body">
-        <div className="d-flex justify-content-center">
-          <TotalUsersIcon />
-        </div>
-        <div>
-          <h4 className="text-center">New Users</h4>
-          <p className="text-center">This Month : 150</p>
-        </div>
-        <div className="d-flex justify-content-center ">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-1 fw-lighter">3.5% less than last month</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-//TotalUsersCard
-export const TotalUsersCard = () => {
-  return (
-    <>
-      <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
-        <div class="card-body">
-          <div className="d-flex">
-            <div>
-              <TotalUsersIcon width="24" />
+// UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
+export const AnalyticsCard = memo(
+  ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+    console.count("AnalyticsCard: ");
+    return (
+      <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
+        <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
+          <Link to={link} className="text-decoration-none ">
+            <div className="d-flex align-items-center py-3">
+              {BigIcon}
+              <div>
+                <p className="m-0 ms-2 opacity-50">{value}</p>
+                <p className="m-0 ms-2">{text}</p>
+              </div>
             </div>
-            <div className="ms-2">
-              <span className="fs-5 fw-bold">234589</span>
-              <p>TOTAL USERS</p>
+            <div className="d-flex align-items-center justify-content-end">
+              {SmallIcon}
+              <p className="text-small m-0">
+                {change ? change + " than last week" : null}{" "}
+              </p>
             </div>
-          </div>
-          <div className="d-flex justify-content-end p-0">
-            <span>
-              <ArrowUpIcon />
-            </span>
-            <p className=""> 5% More than last month</p>
-          </div>
+          </Link>
         </div>
       </div>
-    </>
-  );
-};
-
-// UserTransactionsCard
-export const UserTransactionsCard = () => {
-  return (
-    <div class="card shadow border-0 rounded-1" style={{ width: "20rem" }}>
-      <div class="card-body mx-auto ">
-        <div className="d-flex mx-auto">
-          <div className="m-2">
-            <CompletedTransactionIcon />
-          </div>
-          <div className="mx-auto">
-            <span className="fs-5 fw-bold">10034</span>
-            <p className="fs-6 ">TRANSACTIONS COMPLETED</p>
-          </div>
-        </div>
-        <div className="d-flex justify-content-end">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-2">5% Less than last month</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCard = (props) => {
@@ -188,239 +134,104 @@ export const MiniProfileCard = () => {
 };
 
 // MiniUsersCard
-export const MiniUsersCard = () => {
+export const MiniUsersCard = memo(({ style }) => {
+  console.count("MiniUsersCard: ");
+  const [max, setMax] = useState(5);
   return (
-    <div className="bg-white rounded-3 p-3 MiniUsersCard ">
-      <p className="border-bottom mb-2">All Users</p>
-      <table className=" table table-striped table-hover w-100 ">
-        <thead>
-          <tr>
-            <th className="text-center">Users ID</th>
-            <th className="text-end">Name</th>
-            <th className="text-center">Transactions Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="text-end mt-3">
-        <GeneralBtnStyle1 text="View More" />
+    <div className={`${style} mb-3 mb-md-0`}>
+      <div className={`card p-3 shadow rounded border-0 h-100`}>
+        <h6 className="pb-3 m-0">All Users</h6>
+        <table className="table m-0 h-100">
+          <thead>
+            <tr>
+              <th scope="col" className="opacity-50">
+                User Id
+              </th>
+              <th scope="col" className="opacity-50">
+                Name
+              </th>
+              <th scope="col" className="opacity-50">
+                Completed Transactions
+              </th>
+            </tr>
+          </thead>
+          <tbody className="h-100">
+            {TransactionData.mini_transaction.map((mini) => {
+              return (
+                <>
+                  <tr key={mini.id} className="text-center border-bottom">
+                    <td className="p-md-3 text-small">{mini.id}</td>
+                    <td className="p-md-3 text-small">Opeyemi</td>
+                    <td className="p-md-3 text-small">2000</td>
+                  </tr>
+                </>
+              );
+            })}
+            <Link
+              to={""}
+              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <GeneralBtn
+                text="View More"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+              />
+            </Link>
+          </tbody>
+        </table>
       </div>
     </div>
   );
-};
-
-export const AllUsersCard = () => {
-  return (
-    <div className="col-lg-9 shadow rounded-1">
-      <aside className="d-flex justify-content-end">
-        <FilterButton />
-      </aside>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th className="text-muted text-center" scope="col">
-              Image
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Id
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Name
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Tel
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Email
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Address
-            </th>
-            <th className="text-muted text-center" scope="col">
-              Action
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">
-              {/* <img src={Avatar} className="img-thumbnail col-2" alt="" /> */}
-            </th>
-            <td className="p-3">3345</td>
-            <td className="p-3">Gabriel</td>
-            <td className="p-3">09032455678</td>
-            <td className="p-3">gabrielChristian@gmail.com</td>
-            <td className="p-3">Lorem ipsum dolor sit.</td>
-            <td>....</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              {/* <img src={Avatar} className="img-thumbnail col-2 " alt="" /> */}
-            </th>
-            <td className="p-3">3345</td>
-            <td className="p-3">Peter</td>
-            <td className="p-3">07009033421</td>
-            <td className="p-3">SupremePeter@gmail.com</td>
-            <td className="p-3">Lorem ipsum dolor sit.</td>
-            <td>....</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              {/* <img src={Avatar} className="img-thumbnail col-2  " alt="" /> */}
-            </th>
-            <td className="p-3">6634</td>
-            <td className="p-3">Andrew</td>
-            <td className="p-3">0818790345</td>
-            <td className="p-3">Andrewpaul@gmail.com</td>
-            <td className="p-3">Lorem ipsum dolor sit.</td>
-            <td className="p-3">....</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              {/* <img src={Avatar} className="img-thumbnail col-2  " alt="" /> */}
-            </th>
-            <td className="p-3">4421</td>
-            <td className="p-3">James</td>
-            <td className="p-3">0818849302</td>
-            <td className="p-3">Jamespaul@gmail.com</td>
-            <td className="p-3">Lorem ipsum dolor sit.</td>
-            <td className="p-3">....</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              {/* <img src={Avatar} className="img-thumbnail" alt="" /> */}
-            </th>
-            <td className="p-3">3244</td>
-            <td className="p-3">Mathew</td>
-            <td className="p-3"> 0818790345</td>
-            <td className="p-3">PhilipMathew@gmail.com</td>
-            <td className="p-3">Lorem ipsum dolor sit.</td>
-            <td className="p-3">....</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-};
+});
 
 // UserProfileCard {Done}
 export const UserProfileCard = () => {
+  const history = useNavigate();
+
   return (
     <>
-      <div class="card shadow-sm" style={{ width: "56rem" }}>
-        <div class="card-body d-flex mt-4">
-          <div className="d-flex align-items-center col-4">
-            <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
-          </div>
-          <div className="">
-            <h4 className="text-muted">PERSONAL INFORMATION</h4>
-            {/* Personal Info Section Starts */}
-            <div>
-              <table className="text-muted">
-                <thead>
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      USER ID :
-                    </th>
-                    <th scope="col">34522</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      FULL-NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel Ugochukwu</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      PHONE NUMBER:
-                    </th>
-                    <th scope="col">+234 9032166043</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      E-MAIL:
-                    </th>
-                    <th scope="col">gabrielChristian@gmail.com</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ADDRESS:
-                    </th>
-                    <th scope="col">Royal Palm villa Estate, Sangotedo</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Personal Info Section Ends */}
-            {/* Bank Info Section Starts*/}
-            <div className="mt-5">
-              <h4 className="text-muted">BANK INFORMATION</h4>
-              <table className="text-muted">
-                <thead className="mt-3">
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      ACCOUNT NUMBER:
-                    </th>
-                    <th scope="col">2395289752</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ACCOUNT NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel </th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      BANK:
-                    </th>
-                    <th scope="col">Zenith Bank</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Bank Info Section Ends */}
-          </div>
-          <div className="col-2 ms-lg-5">
-            <button type="button" className="btn btn-success fw-bold ">
-              Primary
-            </button>
-          </div>
+      <div class="shadow border-0 p-3 rounded-2">
+        <div className="">
+          <img src={Avatar} className="mx-auto" alt={Avatar} />
+        </div>
+        <div className="mt-4 mx-auto">
+          <table className="w-100">
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted">User Id</td>
+              <td className="text-end">34522</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Name</td>
+              <td className="text-end">Christian Gabriel Ugochukwu</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Phone</td>
+              <td className="text-end">+234 9032166043</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Email</td>
+              <td className="text-end">gabrielChristian@gmail.com</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Address</td>
+              <td className="text-end">Royal Palm villa Estate, Sangotedo</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Account No</td>
+              <td>2395289752</td>
+            </tr>
+            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
+              <td className="text-muted w-25">Bank</td>
+              <td>Zenith Bank</td>
+            </tr>
+          </table>
+        </div>
+        <div className="d-flex justify-content-center  mt-5">
+          <GeneralBtn
+            text="Back"
+            styles="w-100 GeneralBtnStyle1 btn all-btn text-white text-small"
+            onclick={() => history(-1)}
+          />
         </div>
       </div>
     </>

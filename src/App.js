@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
@@ -31,7 +32,6 @@ import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideN
 
 // Neutral Pages
 import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
-import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/NeutralViewTransaction";
 import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
 import {
   ClosedConflicts,
@@ -45,6 +45,8 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+import UserProfile from "./pages/UserProfile";
+import AdminDashboard from "./pages/AdminDashboard";
 // import UsersPage from "./pages/UsersPage";
 
 // Customer Care Pages
@@ -63,6 +65,8 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Route>
         <Route path="userdashboard" element={<UsersSideNav />}>
           <Route index element={<UserDashboardPage />} />
@@ -84,15 +88,11 @@ function App() {
           <Route path="ticket" element={<GeneratedTicket />} />
         </Route>
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route index element={<NeutralDashboard />} />
+          <Route path="home" element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
-          <Route
-            path="neutralviewtransaction"
-            element={<NeutralViewTransaction />}
-          />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
         <Route path="customer-care" element={<CustomerCareSideNav />}>
@@ -106,6 +106,14 @@ function App() {
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
+
+        {/* Admin Routes */}
+        <Route path="admin" element={<AdminSideNav />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="profile" element={<UserProfile />} />
+        </Route>
+
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

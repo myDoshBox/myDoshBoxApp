@@ -93,6 +93,7 @@ export const GuestNavbar = () => {
 };
 
 export const UserDashboardNavbar = () => {
+  console.count("UserDashboardNavbar: ")
   return (
     <Container>
       <Nav className="justify-content-end userDashboardNav position-sticky top-0 end-0">
