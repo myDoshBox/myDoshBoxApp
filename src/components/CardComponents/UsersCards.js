@@ -1,6 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
 //All Buttons/Icon Import Starts
+import { BackIcon } from "../IconComponent/NavigationAndViewIcon";
 import {
   TotalUsersIcon,
   ArrowDownIcon,
@@ -342,87 +343,88 @@ export const AllUsersCard = () => {
 // UserProfileCard {Done}
 export const UserProfileCard = () => {
   return (
-    <>
-      <div class="card shadow-sm" style={{ width: "56rem" }}>
-        <div class="card-body d-flex mt-4">
-          <div className="d-flex align-items-center col-4">
-            <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
-          </div>
-          <div className="">
-            <h4 className="text-muted">PERSONAL INFORMATION</h4>
-            {/* Personal Info Section Starts */}
-            <div>
-              <table className="text-muted">
-                <thead>
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      USER ID :
-                    </th>
-                    <th scope="col">34522</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      FULL-NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel Ugochukwu</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      PHONE NUMBER:
-                    </th>
-                    <th scope="col">+234 9032166043</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      E-MAIL:
-                    </th>
-                    <th scope="col">gabrielChristian@gmail.com</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ADDRESS:
-                    </th>
-                    <th scope="col">Royal Palm villa Estate, Sangotedo</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Personal Info Section Ends */}
-            {/* Bank Info Section Starts*/}
-            <div className="mt-5">
-              <h4 className="text-muted">BANK INFORMATION</h4>
-              <table className="text-muted">
-                <thead className="mt-3">
-                  <tr>
-                    <th className="fw-bold" scope="col ">
-                      ACCOUNT NUMBER:
-                    </th>
-                    <th scope="col">2395289752</th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      ACCOUNT NAME:
-                    </th>
-                    <th scope="col">Christian Gabriel </th>
-                  </tr>
-                  <tr>
-                    <th className="fw-bold" scope="col">
-                      BANK:
-                    </th>
-                    <th scope="col">Zenith Bank</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            {/* Bank Info Section Ends */}
-          </div>
-          <div className="col-2 ms-lg-5">
-            <button type="button" className="btn btn-success fw-bold ">
-              Primary
-            </button>
-          </div>
+    <section className="shadow border-0" style={{ width: "87%" }}>
+      <div className="row p-5">
+        <div className="col-lg-3 mb-5 d-flex justify-content-center align-items-center">
+          <img src={Avatar} className="img-fluid" alt="Avatar" />
+        </div>
+        <div className="col-lg-7 mx-auto text-muted d-flex flex-column justify-content-center mx-auto">
+          {/* Personal Info Section Starts */}
+          <h5 className="text-muted">PERSONAL INFORMATION</h5>
+          <table class="table table-borderless text-muted">
+            <thead className="">
+              <tr>
+                <th scope="col">USER ID :</th>
+                <th clasName="text-end" scope="col">
+                  1234
+                </th>
+              </tr>
+              <tr>
+                <th scope="col">FullName :</th>
+                <th clasName="text-end" scope="col">
+                  Olasunkanmi Idris
+                </th>
+              </tr>
+              <tr>
+                <th scope="col"> Phone Number :</th>
+                <th clasName="text-end" scope="col">
+                  +234 801 234 5678
+                </th>
+              </tr>
+              <tr>
+                <th scope="col"> Email :</th>
+                <th clasName="text-end" scope="col">
+                  sunkanmidris@gmail.com
+                </th>
+              </tr>
+              <tr>
+                <th scope="col"> Address :</th>
+                <th clasName="text-end" scope="col">
+                  1901 Thornridge Cir. Shiloh, Hawaii 81063
+                </th>
+              </tr>
+            </thead>
+            {/* <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+              </tr>
+            </tbody> */}
+          </table>
+          {/* Personal Info Section Ends*/}
+          {/* Bank Info Section Starts */}
+          <h5 className="text-muted">BANK INFORMATION</h5>
+          <ul className="mt-4">
+            <li className="d-flex justify-content-between align-items-center">
+              Account Number :<span className="text-end">1234567890</span>
+            </li>
+            <li className="d-flex justify-content-between align-items-center">
+              Account Name :<span className="text-end">Olasunkanmi Idris </span>
+            </li>
+            <li className="d-flex justify-content-between align-items-center">
+              Bank Name :<span className="text-end">United Bank of Africa</span>
+            </li>
+          </ul>
+          {/* Bank Info Section Ends */}
+        </div>
+        <div className="col-lg-2 d-none d-lg-block d-md-none">
+          <GeneralBtn
+            lefticon={<BackIcon />}
+            styles="GeneralBtnStyle1 btn all-btn text-white"
+            text="Back"
+          />
+        </div>
+        <div
+          className="d-block d-lg-none d-flex
+        justify-content-center mx-auto col-sm-12 mt-5"
+        >
+          <GeneralBtn
+            lefticon={<BackIcon />}
+            styles="GeneralBtnStyle1 btn all-btn text-white"
+            text="Back"
+          />
         </div>
       </div>
-    </>
+    </section>
   );
 };
