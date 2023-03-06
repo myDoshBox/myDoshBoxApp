@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
@@ -43,6 +44,11 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+import UserProfile from "./pages/UserProfile";
+import AdminDashboard from "./pages/AdminDashboard";
+// import UsersPage from "./pages/UsersPage";
+import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
+
 function App() {
   return (
     <Router>
@@ -59,7 +65,7 @@ function App() {
         </Route>
 
         <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route path="home" element={<UserDashboardPage />} />
+          <Route index element={<UserDashboardPage />} />
           <Route path="settings" element={<UserSettingsPage />} />
           <Route path="transaction" element={<UserTransactionHistory />} />
           <Route path="dispute" element={<UserDisputeHistory />} />
@@ -68,6 +74,7 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
+          <Route path="userspage" element={<CustomerCareTransaction />} />
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}
@@ -89,6 +96,12 @@ function App() {
           />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
+
+        {/* Admin Routes */}
+        <Route path="admin" element={<AdminDashboard />}>
+          <Route path="profile" element={<UserProfile />} />
+        </Route>
+
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>

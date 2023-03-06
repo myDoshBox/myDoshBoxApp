@@ -1,12 +1,12 @@
-import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
+// import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
 import { DeliveryForm } from "../../components/FormComponents.js/TransactionForms";
 
 export const SellerDeliveryForm = () => {
   return (
     <div className="d-flex w-100">
-      <div className="d-none d-lg-block">
+      {/* <div className="d-none d-lg-block">
         <UserSidenav />
-      </div>
+      </div> */}
       <DeliveryForm
         heading={`Product Inspection and Shipping Form`}
         sub_text={`Sincerely acknowledge and confirm the condition of the product before it is shipped to the customer`}
@@ -33,9 +33,9 @@ export const SellerDeliveryForm = () => {
 export const BuyerDeliveryForm = () => {
   return (
     <div className="d-flex w-100">
-      <div className="d-none d-lg-block">
+      {/* <div className="d-none d-lg-block">
         <UserSidenav />
-      </div>
+      </div> */}
       <DeliveryForm
         heading={`Product Condition and Delivery Confirmation`}
         sub_text={`Sincerely acknowledge that you are satisfied with the goods

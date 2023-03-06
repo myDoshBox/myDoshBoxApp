@@ -45,12 +45,12 @@ export const TotalUsersIcon = () => {
   );
 };
 
-export const CompletedTransactionIcon = () => {
+export const CompletedTransactionIcon = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={width ? `${width}`:"24"}
+      height={height ? `${height}`:"24"}
       fill="#006747"
       class="bi bi-check2-all"
       viewBox="0 0 16 16"
@@ -61,13 +61,13 @@ export const CompletedTransactionIcon = () => {
   );
 };
 
-export const ArrowDownIcon = () => {
+export const ArrowDownIcon = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="13"
-      height="13"
-      fill="#006747"
+      width={width ? `${width}`:"13"}
+      height={height ? `${height}`:"13"}
+      fill="red"
       class="bi bi-arrow-down"
       viewBox="0 0 16 16"
     >
@@ -79,12 +79,12 @@ export const ArrowDownIcon = () => {
   );
 };
 
-export const ArrowUpIcon = () => {
+export const ArrowUpIcon = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="13"
-      height="13"
+      width={width ? `${width}`:"13"}
+      height={height ? `${height}`:"13"}
       fill="#006747"
       class="bi bi-arrow-up"
       viewBox="0 0 16 16"

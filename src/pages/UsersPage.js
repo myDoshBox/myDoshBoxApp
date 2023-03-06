@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import usersData from "../data/usersData.json";
 import { UsersList } from "../components/TableComponents/UsersList";
 import { UserDashboardNavbar } from "../components/NavbarComponents/TopNavbars";
@@ -67,7 +67,8 @@ const UsersTable = () => {
   );
 };
 
-export const TopCustomers = () => {
+export const TopCustomers = memo(() => {
+  console.count("Top Customers: ")
   return (
     <div>
       <div className="card mx-auto mt-5 p-3 shadow border-0">
@@ -109,6 +110,6 @@ export const TopCustomers = () => {
       </div>
     </div>
   );
-};
+});
 
 export default UsersPage;

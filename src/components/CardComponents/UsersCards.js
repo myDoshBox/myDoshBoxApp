@@ -1,7 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
+import { memo, useContext, useState } from "react";
 //All Buttons/Icon Import Starts
-import { BackIcon } from "../IconComponent/NavigationAndViewIcon";
 import {
   TotalUsersIcon,
   ArrowDownIcon,
@@ -17,85 +17,32 @@ import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Image Import Starts
 import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import TransactionData from "../../data/dummyData/transactionData.json";
 
-// AnalyticsNewUsersCard
-export const AnalyticsNewUsersCard = () => {
+// UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
+export const AnalyticsCard = memo(({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+  console.count("AnalyticsCard: ")
   return (
-    <div
-      className="card shadow rounded-3 text-nowrap"
-      style={{ width: "15rem" }}
-    >
-      <div class="card-body">
-        <div className="d-flex justify-content-center">
-          <TotalUsersIcon />
-        </div>
-        <div>
-          <h4 className="text-center">New Users</h4>
-          <p className="text-center">This Month : 150</p>
-        </div>
-        <div className="d-flex justify-content-center ">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-1 fw-lighter">3.5% less than last month</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-//TotalUsersCard
-export const TotalUsersCard = () => {
-  return (
-    <>
-      <div class="card shadow border-0 rounded-1" style={{ width: "18rem" }}>
-        <div class="card-body">
-          <div className="d-flex">
+    <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
+      <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
+        <Link to={link} className="text-decoration-none ">
+          <div className="d-flex align-items-center py-3">
+            {BigIcon}
             <div>
-              <TotalUsersIcon width="24" />
-            </div>
-            <div className="ms-2">
-              <span className="fs-5 fw-bold">234589</span>
-              <p>TOTAL USERS</p>
+              <p className="m-0 ms-2 opacity-50">{value}</p>
+              <p className="m-0 ms-2">{text}</p>
             </div>
           </div>
-          <div className="d-flex justify-content-end p-0">
-            <span>
-              <ArrowUpIcon />
-            </span>
-            <p className=""> 5% More than last month</p>
-          </div>
+        <div className="d-flex align-items-center justify-content-end">
+          {SmallIcon}
+          <p className="text-small m-0">{change ? change + " than last week" : null } </p>
         </div>
-      </div>
-    </>
-  );
-};
-
-// UserTransactionsCard
-export const UserTransactionsCard = () => {
-  return (
-    <div class="card shadow border-0 rounded-1" style={{ width: "20rem" }}>
-      <div class="card-body mx-auto ">
-        <div className="d-flex mx-auto">
-          <div className="m-2">
-            <CompletedTransactionIcon />
-          </div>
-          <div className="mx-auto">
-            <span className="fs-5 fw-bold">10034</span>
-            <p className="fs-6 ">TRANSACTIONS COMPLETED</p>
-          </div>
-        </div>
-        <div className="d-flex justify-content-end">
-          <span>
-            <ArrowDownIcon />
-          </span>
-          <p className="ms-2">5% Less than last month</p>
-        </div>
+        </Link>
       </div>
     </div>
   );
-};
+});
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCard = (props) => {
@@ -189,62 +136,51 @@ export const MiniProfileCard = () => {
 };
 
 // MiniUsersCard
-export const MiniUsersCard = () => {
+export const MiniUsersCard = memo(({ style }) => {
+  console.count("MiniUsersCard: ")
+  const [max, setMax] = useState(5);
   return (
-    <div className="bg-white rounded-3 p-3 MiniUsersCard ">
-      <p className="border-bottom mb-2">All Users</p>
-      <table className=" table table-striped table-hover w-100 ">
-        <thead>
-          <tr>
-            <th className="text-center">Users ID</th>
-            <th className="text-end">Name</th>
-            <th className="text-center">Transactions Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-          <tr>
-            <td className="text-center">45453</td>
-            <td className="text-end">Guy Hawkins</td>
-            <td className="text-center">1245</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="text-end mt-3">
-        <GeneralBtnStyle1 text="View More" />
+    <div className={`${style} mb-3 mb-md-0`}>
+      <div className={`card p-3 shadow rounded border-0 h-100`}>
+        <h6 className="pb-3 m-0">All Users</h6>
+        <table className="table m-0 h-100">
+          <thead>
+            <tr>
+              <th scope="col" className="opacity-50">
+              User Id
+              </th>
+              <th scope="col" className="opacity-50">
+              Name
+              </th>
+              <th scope="col" className="opacity-50">
+              Completed Transactions
+              </th>
+            </tr>
+          </thead>
+          <tbody className="h-100">
+          {TransactionData.mini_transaction.map((mini) => {
+            return (
+              <>
+                <tr key={mini.id} className="text-center border-bottom">
+                  <td className="p-md-3 text-small">{mini.id}</td>
+                  <td className="p-md-3 text-small">Opeyemi</td>
+                  <td className="p-md-3 text-small">2000</td>
+                </tr>
+              </>
+            );
+          })}
+          <Link to={""} className="d-flex justify-content-center pt-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
+                <GeneralBtn
+                  text="View More"
+                  styles="GeneralBtnStyle1 btn all-btn text-white"
+                />
+              </Link>
+          </tbody>
+        </table>
       </div>
     </div>
   );
-};
+});
 
 export const AllUsersCard = () => {
   return (
@@ -342,87 +278,88 @@ export const AllUsersCard = () => {
 
 // UserProfileCard {Done}
 export const UserProfileCard = () => {
+  const history = useNavigate();
+
   return (
-    <section className="shadow border-0" style={{ width: "87%" }}>
-      <div className="row p-5">
-        <div className="col-lg-3 mb-5 d-flex justify-content-center align-items-center">
-          <img src={Avatar} className="img-fluid" alt="Avatar" />
-        </div>
-        <div className="col-lg-7 mx-auto text-muted d-flex flex-column justify-content-center mx-auto">
-          {/* Personal Info Section Starts */}
-          <h5 className="text-muted">PERSONAL INFORMATION</h5>
-          <table class="table table-borderless text-muted">
-            <thead className="">
-              <tr>
-                <th scope="col">USER ID :</th>
-                <th clasName="text-end" scope="col">
-                  1234
-                </th>
-              </tr>
-              <tr>
-                <th scope="col">FullName :</th>
-                <th clasName="text-end" scope="col">
-                  Olasunkanmi Idris
-                </th>
-              </tr>
-              <tr>
-                <th scope="col"> Phone Number :</th>
-                <th clasName="text-end" scope="col">
-                  +234 801 234 5678
-                </th>
-              </tr>
-              <tr>
-                <th scope="col"> Email :</th>
-                <th clasName="text-end" scope="col">
-                  sunkanmidris@gmail.com
-                </th>
-              </tr>
-              <tr>
-                <th scope="col"> Address :</th>
-                <th clasName="text-end" scope="col">
-                  1901 Thornridge Cir. Shiloh, Hawaii 81063
-                </th>
-              </tr>
-            </thead>
-            {/* <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-              </tr>
-            </tbody> */}
-          </table>
-          {/* Personal Info Section Ends*/}
-          {/* Bank Info Section Starts */}
-          <h5 className="text-muted">BANK INFORMATION</h5>
-          <ul className="mt-4">
-            <li className="d-flex justify-content-between align-items-center">
-              Account Number :<span className="text-end">1234567890</span>
-            </li>
-            <li className="d-flex justify-content-between align-items-center">
-              Account Name :<span className="text-end">Olasunkanmi Idris </span>
-            </li>
-            <li className="d-flex justify-content-between align-items-center">
-              Bank Name :<span className="text-end">United Bank of Africa</span>
-            </li>
-          </ul>
-          {/* Bank Info Section Ends */}
-        </div>
-        <div className="col-lg-2 d-none d-lg-block d-md-none">
-          <GeneralBtn
-            lefticon={<BackIcon />}
-            styles="GeneralBtnStyle1 btn all-btn text-white"
-            text="Back"
-          />
-        </div>
-        <div
-          className="d-block d-lg-none d-flex
-        justify-content-center mx-auto col-sm-12 mt-5"
-        >
-          <GeneralBtn
-            lefticon={<BackIcon />}
-            styles="GeneralBtnStyle1 btn all-btn text-white"
-            text="Back"
-          />
+    <>
+      <div class="card shadow-sm" style={{ width: "56rem" }}>
+        <div class="card-body d-flex mt-4">
+          <div className="d-flex align-items-center col-4">
+            <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
+          </div>
+          <div className="">
+            <h4 className="text-muted">PERSONAL INFORMATION</h4>
+            {/* Personal Info Section Starts */}
+            <div>
+              <table className="text-muted">
+                <thead>
+                  <tr>
+                    <th className="fw-bold" scope="col ">
+                      USER ID :
+                    </th>
+                    <th scope="col">34522</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      FULL-NAME:
+                    </th>
+                    <th scope="col">Christian Gabriel Ugochukwu</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      PHONE NUMBER:
+                    </th>
+                    <th scope="col">+234 9032166043</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      E-MAIL:
+                    </th>
+                    <th scope="col">gabrielChristian@gmail.com</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      ADDRESS:
+                    </th>
+                    <th scope="col">Royal Palm villa Estate, Sangotedo</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            {/* Personal Info Section Ends */}
+            {/* Bank Info Section Starts*/}
+            <div className="mt-5">
+              <h4 className="text-muted">BANK INFORMATION</h4>
+              <table className="text-muted">
+                <thead className="mt-3">
+                  <tr>
+                    <th className="fw-bold" scope="col ">
+                      ACCOUNT NUMBER:
+                    </th>
+                    <th scope="col">2395289752</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      ACCOUNT NAME:
+                    </th>
+                    <th scope="col">Christian Gabriel </th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      BANK:
+                    </th>
+                    <th scope="col">Zenith Bank</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            {/* Bank Info Section Ends */}
+          </div>
+          <div className="col-2 ms-lg-5">
+            <button type="button" className="btn btn-success fw-bold ">
+              Primary
+            </button>
+          </div>
         </div>
       </div>
     </section>
