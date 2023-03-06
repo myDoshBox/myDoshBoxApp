@@ -312,6 +312,11 @@ div {
   color: inherit !important;
 }
 
+.switch-charts-btn:hover, .switch-charts-btn:focus {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 .teamValueStyle {
   background-color: #e5f0ed !important;
 }
@@ -413,6 +418,10 @@ div {
     transform: translateX(0);
   }
 }
+.Targets .apexcharts-datalabel-value {
+  font-size: 2rem !important;
+}
+
 textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
@@ -676,8 +685,9 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
-  width: 11rem;
-  height: 1.8rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.7rem;
+  white-space: nowrap;
 }
 
 .completed,
@@ -766,8 +776,6 @@ input[type=color]:focus,
 .refunded,
 .resolved,
 .unresolved {
-    width: 5rem !important;
-    height: 1.25rem !important;
     font-size: 0.6rem !important;
   }
 }

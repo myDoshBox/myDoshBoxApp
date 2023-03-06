@@ -63,6 +63,8 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Route>
         <Route path="userdashboard" element={<UsersSideNav />}>
           <Route index element={<UserDashboardPage />} />
@@ -85,7 +87,7 @@ function App() {
           <Route path="ticket" element={<GeneratedTicket />} />
         </Route>
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route index element={<NeutralDashboard />} />
+          <Route path="home" element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />

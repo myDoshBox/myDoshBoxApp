@@ -1,43 +1,56 @@
-import { Table, Card, Container, Tab } from "react-bootstrap";
-
-import { Unresolved } from "../NotificationComponent/NotificationComponents";
+import { memo } from "react";
+import { Table, Card, Container } from "react-bootstrap";
+import { useState } from "react";
+import ticketsData from "../../data/TicketData.json";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { Link } from "react-router-dom";
 
 // AdminDashbordTicketHistoryCard
-export const AdminDashbordTicketHistoryTable = () => {
+export const MiniTicketsHistory = memo(({ style }) => {
+  console.count("MiniTicketsHistory: ")
+  const [max, setMax] = useState(5);
   return (
-    <Container>
-      <div
-        className="card shadow rounded-3 border-0  pt-4"
-        style={{ width: "35rem" }}
-      >
-        <Table className="">
-          <thead className="text-center ">
+    <div className={`${style} mb-3 mb-md-0`}>
+      <div className={`card p-3 shadow rounded border-0 h-100`}>
+        <h6 className="pb-3 m-0">Tickets History</h6>
+        <table className="table m-0 h-100">
+          <thead>
             <tr>
-              <th>Ticket ID</th>
-              <th>Date Issued</th>
-              <th>Date Resolved</th>
+              <th scope="col" className="opacity-50">
+                Ticket Id
+              </th>
+              <th scope="col" className="opacity-50">
+                Date Issued
+              </th>
+              <th scope="col" className="opacity-50">
+                Date Resolved
+              </th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className="text-center">2tsYFXb4rP3</td>
-              <td className="text-center">16-08-22 </td>
-              <td className="text-center small-hide">20-08-22</td>
-            </tr>
-            <tr>
-              <td className="text-center">2tsYFXb4rP3</td>
-              <td className="text-center">16-08-22 </td>
-              <td className="text-center small-hide">20-08-22</td>
-            </tr>
+          <tbody className="h-100">
+            {Object.entries(ticketsData)
+              .slice(0, max)
+              .map(([key, value]) => {
+                return (
+                  <tr key={key}>
+                    <td className="text-center text-small">{value[0].id}</td>
+                    <td className="text-center text-small">{value[0].date_issued}</td>
+                    <td className="text-center text-small">{value[0].date_resolved}</td>
+                  </tr>
+                );
+              })}
+            <Link to={""} className="d-flex justify-content-center pt-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
+                <GeneralBtn
+                  text="View More"
+                  styles="GeneralBtnStyle1 btn all-btn text-white"
+                />
+              </Link>
           </tbody>
-          {/* <div className="">
-              <ViewMoreButton />
-            </div> */}
-        </Table>
+        </table>
       </div>
-    </Container>
+    </div>
   );
-};
+});
 
 // AdminTicketHistoryCard
 export const AdminTicketHistoryTable = () => {
@@ -66,7 +79,7 @@ export const AdminTicketHistoryTable = () => {
               <td className="text-center">Kristin Watson</td>
               <td className="text-center  ">25138</td>
               <td className="d-flex justify-content-center align-items-center">
-                <Unresolved />
+                {/* <Unresolved /> */}
               </td>
             </tr>
           </tbody>
@@ -99,7 +112,7 @@ export const CustomerCareTicketHistoryTable = () => {
               <td className="text-center">75638</td>
               <td className="text-center">Wrong Item</td>
               <td className="d-flex justify-content-center align-items-center">
-                <Unresolved />
+                {/* <Unresolved /> */}
               </td>
             </tr>
           </tbody>
