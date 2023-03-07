@@ -116,11 +116,9 @@ function App() {
         <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
           <Route path="profile" element={<UserProfile />} />
+          <Route path="AdminAnalytics" element={<AdminAnalytics />} />
+          <Route path="AdminTransaction" element={<AdminTransaction />} />
         </Route>
-
-        {/* AdminAnalytics Routes */}
-        <Route path="AdminAnalytics" element={<AdminAnalytics />} />
-        <Route path="AdminTransaction" element={<AdminTransaction />} />
 
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
