@@ -1,6 +1,16 @@
 import { memo } from "react";
-import { FinancialReport, ComplaintType, Target, UserInflow, Issues, LineSparkline } from "../components/CardComponents/Analytics";
-import { AnalyticsCard, MiniUsersCard } from "../components/CardComponents/UsersCards";
+import {
+  FinancialReport,
+  ComplaintType,
+  Target,
+  UserInflow,
+  Issues,
+  LineSparkline,
+} from "../components/CardComponents/Analytics";
+import {
+  AnalyticsCard,
+  MiniUsersCard,
+} from "../components/CardComponents/UsersCards";
 // import { FinancialReport } from "../components/Charts";
 import {
   ArrowUpIcon,
@@ -44,8 +54,8 @@ const AdminDashboard = memo(() => {
               ResponsiveWidth={`col-md-4`}
             />
             <AnalyticsCard
-              value="500,000"
               text="Total Profits"
+              value="500,000"
               BigIcon={<LineSparkline />}
               SmallIcon={<ArrowDownIcon />}
               change="5% Less"
@@ -57,24 +67,24 @@ const AdminDashboard = memo(() => {
             <MiniUsersCard style={`col-md-6`} />
           </div>
           <div className="row gx-md-3 justify-content-between align-items-stretch mt-5 ps-sm-2">
-              <AnalyticsCard
-                value="100"
-                text="Open Conflicts"
-                BigIcon={<OpenTicketsIcon />}
-                ResponsiveWidth={`col-md-6`}
-              />
-              <AnalyticsCard
-                value="350"
-                text="Closed Conflicts"
-                BigIcon={<ClosedTicketsIcon />}
-                ResponsiveWidth={`col-md-6`}
-              />
+            <AnalyticsCard
+              value="100"
+              text="Open Conflicts"
+              BigIcon={<OpenTicketsIcon />}
+              ResponsiveWidth={`col-md-6`}
+            />
+            <AnalyticsCard
+              value="350"
+              text="Closed Conflicts"
+              BigIcon={<ClosedTicketsIcon />}
+              ResponsiveWidth={`col-md-6`}
+            />
           </div>
           <div className="row gx-lg-3 justify-content-between align-items-stretch mt-5 ps-sm-2">
             <MiniTicketsHistory style={`col-md-6`} />
             <AdminRecentTransactionsCard style={`col-md-6`} />
           </div>
-          <TopCustomers/>
+          <TopCustomers />
         </div>
       </div>
     </div>

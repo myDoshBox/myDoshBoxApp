@@ -9,8 +9,7 @@ import {
   CompletedTransactionIcon,
 } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/MiscBtns";
-import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
+import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
@@ -21,28 +20,32 @@ import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
-export const AnalyticsCard = memo(({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
-  console.count("AnalyticsCard: ")
-  return (
-    <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
-      <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
-        <Link to={link} className="text-decoration-none ">
-          <div className="d-flex align-items-center py-3">
-            {BigIcon}
-            <div>
-              <p className="m-0 ms-2 opacity-50">{value}</p>
-              <p className="m-0 ms-2">{text}</p>
+export const AnalyticsCard = memo(
+  ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+    console.count("AnalyticsCard: ");
+    return (
+      <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
+        <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
+          <Link to={link} className="text-decoration-none ">
+            <div className="d-flex align-items-center py-3">
+              {BigIcon}
+              <div>
+                <p className="m-0 ms-2 opacity-50">{value}</p>
+                <p className="m-0 ms-2">{text}</p>
+              </div>
             </div>
-          </div>
-        <div className="d-flex align-items-center justify-content-end">
-          {SmallIcon}
-          <p className="text-small m-0">{change ? change + " than last week" : null } </p>
+            <div className="d-flex align-items-center justify-content-end">
+              {SmallIcon}
+              <p className="text-small m-0">
+                {change ? change + " than last week" : null}{" "}
+              </p>
+            </div>
+          </Link>
         </div>
-        </Link>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
 export const UserDashboardCard = (props) => {
@@ -137,7 +140,7 @@ export const MiniProfileCard = () => {
 
 // MiniUsersCard
 export const MiniUsersCard = memo(({ style }) => {
-  console.count("MiniUsersCard: ")
+  console.count("MiniUsersCard: ");
   const [max, setMax] = useState(5);
   return (
     <div className={`${style} mb-3 mb-md-0`}>
@@ -147,34 +150,38 @@ export const MiniUsersCard = memo(({ style }) => {
           <thead>
             <tr>
               <th scope="col" className="opacity-50">
-              User Id
+                User Id
               </th>
               <th scope="col" className="opacity-50">
-              Name
+                Name
               </th>
               <th scope="col" className="opacity-50">
-              Completed Transactions
+                Completed Transactions
               </th>
             </tr>
           </thead>
           <tbody className="h-100">
-          {TransactionData.mini_transaction.map((mini) => {
-            return (
-              <>
-                <tr key={mini.id} className="text-center border-bottom">
-                  <td className="p-md-3 text-small">{mini.id}</td>
-                  <td className="p-md-3 text-small">Opeyemi</td>
-                  <td className="p-md-3 text-small">2000</td>
-                </tr>
-              </>
-            );
-          })}
-          <Link to={""} className="d-flex justify-content-center pt-3 text-decoration-none w-100" style={{whiteSpace: "nowrap"}}>
-                <GeneralBtn
-                  text="View More"
-                  styles="GeneralBtnStyle1 btn all-btn text-white"
-                />
-              </Link>
+            {TransactionData.mini_transaction.map((mini) => {
+              return (
+                <>
+                  <tr key={mini.id} className="text-center border-bottom">
+                    <td className="p-md-3 text-small">{mini.id}</td>
+                    <td className="p-md-3 text-small">Opeyemi</td>
+                    <td className="p-md-3 text-small">2000</td>
+                  </tr>
+                </>
+              );
+            })}
+            <Link
+              to={""}
+              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <GeneralBtn
+                text="View More"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+              />
+            </Link>
           </tbody>
         </table>
       </div>
@@ -188,7 +195,7 @@ export const AllUsersCard = () => {
       <aside className="d-flex justify-content-end">
         <FilterButton />
       </aside>
-      <table class="table table-hover">
+      <table className="table table-hover">
         <thead>
           <tr>
             <th className="text-muted text-center" scope="col">
@@ -281,9 +288,9 @@ export const UserProfileCard = () => {
   const history = useNavigate();
 
   return (
-    <>
-      <div class="card shadow-sm" style={{ width: "56rem" }}>
-        <div class="card-body d-flex mt-4">
+    <section>
+      <div className="card shadow-sm" style={{ width: "56rem" }}>
+        <div className="card-body d-flex mt-4">
           <div className="d-flex align-items-center col-4">
             <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
           </div>

@@ -1,9 +1,8 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
-import { GeneralBtnStyle1 } from "../../../components/ButtonsComponent/Button";
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { FilterButton } from "../../../components/ButtonsComponent/MiscBtns";
+import { FilterButton } from "../../../components/ButtonsComponent/GenandAuthBtn";
 
 const CustomerCareTransaction = () => {
   return (

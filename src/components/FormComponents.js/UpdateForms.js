@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
+// import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 
 export const UpdateProfile = () => {
   const initialValues = {
@@ -92,7 +93,7 @@ export const UpdateProfile = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtnStyle1 text={"Save Changes"} />
+          <GeneralBtn text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -193,7 +194,7 @@ export const UpdatePassword = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtnStyle1 text={"Save Changes"} />
+          <GeneralBtn text={"Save Changes"} />
         </div>
       </Form>
     </div>
@@ -306,7 +307,7 @@ export const UpdateBankDetails = () => {
       </Form.Group>
       <div className="mb-4">
         <div onClick={handleSubmit}>
-          <GeneralBtnStyle1 text={"Update"} />
+          <GeneralBtn text={"Update"} />
         </div>
       </div>
     </Form>
@@ -457,7 +458,7 @@ export const UserUpdateProfile = () => {
       </Form.Group>
 
       <div onClick={handleSubmit} className="mb-4">
-        <GeneralBtnStyle1 text={"Update Profile"} />
+        <GeneralBtn text={"Update Profile"} />
       </div>
     </Form>
   );

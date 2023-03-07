@@ -48,6 +48,10 @@ import UserProfile from "./pages/UserProfile";
 import AdminDashboard from "./pages/AdminDashboard";
 // import UsersPage from "./pages/UsersPage";
 import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
+//
+//
+import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+import AdminTransaction from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminTransaction";
 
 function App() {
   return (
@@ -101,6 +105,10 @@ function App() {
         <Route path="admin" element={<AdminDashboard />}>
           <Route path="profile" element={<UserProfile />} />
         </Route>
+
+        {/* AdminAnalytics Routes */}
+        <Route path="AdminAnalytics" element={<AdminAnalytics />} />
+        <Route path="AdminTransaction" element={<AdminTransaction />} />
 
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />

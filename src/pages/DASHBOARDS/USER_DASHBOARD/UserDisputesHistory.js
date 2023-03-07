@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  GeneralBtnStyle1,
-  GeneralBtnStyle1Icon,
-} from "../../../components/ButtonsComponent/Button";
+import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { DisputeDetailsModal } from "../../../components/Modal";
@@ -34,7 +31,7 @@ const DisputeCard = () => {
           </div>
           <div className="col-6 d-flex justify-content-end">
             <Link to={"../../../userdashboard"}>
-              <GeneralBtnStyle1Icon text={"Back"} lefticon={<BackIcon />} />
+              <GeneralBtn text={"Back"} lefticon={<BackIcon />} />
             </Link>
           </div>
         </div>
