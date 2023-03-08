@@ -1,10 +1,12 @@
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import AdminTicketDetails from "../../data/TicketData.json";
 import { PaginationBar } from "../PaginationComponent";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+
 export const TicketHistoryTable = () => {
   return (
     <>
-      <div className="card container border-0 shadows p-4">
+      <div className="border-0 rounded shadow container p-4">
         <table className="table transaction-table">
           <thead>
             <tr className="text-center">
@@ -29,6 +31,38 @@ export const TicketHistoryTable = () => {
   );
 };
 
+export const CustomerCareTickets = () => {
+  const data = AdminTicketDetails.AdminTicketDetails.slice(0, 5);
+  return (
+    <>
+      <div className="border-0 rounded shadow container p-3 mb-5">
+        <table className="table transaction-table">
+          <thead>
+            <tr className="text-center">
+              <th className="fsw-light">Date Issued</th>
+              <th className="fsw-light">Ticket ID</th>
+              <th className="fsw-light">Transaction ID</th>
+              <th className="small-hide">Complaint Type</th>
+              <th className="small-hide">Complainer</th>
+              <th className="small-hide">Complainer ID</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((data) => {
+              return <TicketHistoryData {...data} key={data.id} />;
+            })}
+          </tbody>
+          <GeneralBtn
+            text={"View More"}
+            styles={"GeneralBtnStyle2 btn all-btn text-white m-3"}
+          />
+        </table>
+      </div>
+    </>
+  );
+};
+
 const TicketHistoryData = (props) => {
   const {
     date,
@@ -41,7 +75,7 @@ const TicketHistoryData = (props) => {
     status_style,
   } = props;
   return (
-    <tr className="text-center">
+    <tr className="text-center border-bottom">
       <td className="py-3">{date}</td>
       <td className="py-3">{ticket_id}</td>
       <td className="py-3">{transaction_id}</td>
@@ -130,9 +164,9 @@ const SmallAdminRecentTransactionsData = (props) => {
   return (
     <>
       <tr className="text-center">
-        <td className="pt-2">{transaction_id}</td>
-        <td className="pt-2">{status}</td>
-        <td className="pt-2">{view}</td>
+        <td className="pt-4">{transaction_id}</td>
+        <td className="pt-4">{status}</td>
+        <td className="pt-4">{view}</td>
       </tr>
     </>
   );

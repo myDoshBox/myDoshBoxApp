@@ -37,10 +37,10 @@ export const CustomerCareTransactionTable = () => {
               <th>Transaction ID</th>
               <th>Buyer Name</th>
               <th>Seller Name</th>
-              <th>Products</th>
-              <th>Date</th>
+              <th className="small-hide">Products</th>
+              <th className="small-hide">Date</th>
               <th>Status</th>
-              <th>...</th>
+              <th className="small-hide">...</th>
             </tr>
           </thead>
           <tbody>
@@ -81,12 +81,12 @@ export const CustomerCareTransactionTableData = (props) => {
         <td className="p-md-3">{transaction_id}</td>
         <td className="p-md-3">{buyer_name}</td>
         <td className="p-md-3">{seller_name}</td>
-        <td className="p-md-3">{products}</td>
-        <td className="p-md-3">{date}</td>
+        <td className="p-md-3 small-hide">{products}</td>
+        <td className="p-md-3 small-hide">{date}</td>
         <td className="p-md-3 d-flex justify-content-center align-items-center">
           <Notifications text={status_name} styles={status_style} />
         </td>
-        <td className="p-md-3">{view}</td>
+        <td className="p-md-3 small-hide">{view}</td>
       </tr>
     </>
   );
