@@ -325,6 +325,10 @@ div {
   background-color: #006747 !important;
 }
 
+.shadows {
+  filter: drop-shadow(3px 3px 14px rgba(0, 0, 0, 0.1)) !important;
+}
+
 .accordion-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
@@ -391,7 +395,9 @@ div {
   background-size: auto;
   border-radius: 5px;
   overflow-y: hidden;
-  height: 100vh !important;
+  height: 100% !important;
+  position: fixed;
+  width: 50% !important;
 }
 .signUp-bg h1 {
   font-family: "Roboto", sans-serif;
@@ -404,7 +410,9 @@ div {
 
 @media screen and (max-width: 991px) {
   .signUp-bg {
-    height: 40vh !important;
+    height: 100% !important;
+    width: 100% !important;
+    position: unset;
   }
   .center-card {
     transform: translateX(0);
@@ -800,7 +808,7 @@ input[type=color]:focus,
 }
 .transaction-table tbody tr,
 .all-conflicts-table tbody tr {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bdbdbd;
 }
 .transaction-table tbody tr td,
 .all-conflicts-table tbody tr td {

@@ -7,7 +7,6 @@ import {
   // CustomerCareIcon,
   InitiateDisputeIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
-import { LearnMoreCard } from "../../../components/CardComponents/InfoCards";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { MiniRecentTransactionTable } from "../../../components/TableComponents/TransactionTable";
 

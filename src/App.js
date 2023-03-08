@@ -26,11 +26,12 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
 import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
-import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/NeutralViewTransaction";
 import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
 import {
   ClosedConflicts,
@@ -47,8 +48,12 @@ import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 import UserProfile from "./pages/UserProfile";
 import AdminDashboard from "./pages/AdminDashboard";
 // import UsersPage from "./pages/UsersPage";
-import CustomerCareTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/CustomerCareTransaction";
 
+// Customer Care Pages
+import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
+import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
+import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
+import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 function App() {
   return (
     <Router>
@@ -63,7 +68,6 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
         </Route>
-
         <Route path="userdashboard" element={<UsersSideNav />}>
           <Route index element={<UserDashboardPage />} />
           <Route path="settings" element={<UserSettingsPage />} />
@@ -83,22 +87,29 @@ function App() {
           <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
           <Route path="ticket" element={<GeneratedTicket />} />
         </Route>
-
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
           <Route path="home" element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
-          <Route
-            path="neutralviewtransaction"
-            element={<NeutralViewTransaction />}
-          />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
+        <Route path="customer-care" element={<CustomerCareSideNav />}>
+          <Route index element={<CustomerCareDashboardPage />} />
+          <Route path="tickets-history" element={<TicketHistoryPage />} />
+          <Route path="notification" element={<NotifictionPage />} />
+          <Route path="settings" element={<NeutralSetting />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
+          <Route path="users" element={<UsersPage />} />
+        </Route>
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="signup" element={<SignUpPage />} />
 
         {/* Admin Routes */}
-        <Route path="admin" element={<AdminDashboard />}>
+        <Route path="admin" element={<AdminSideNav />}>
+          <Route index element={<AdminDashboard />} />
           <Route path="profile" element={<UserProfile />} />
         </Route>
 
