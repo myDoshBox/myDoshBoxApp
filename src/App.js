@@ -54,6 +54,10 @@ import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/
 import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
 import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
+
+// Admin DashBoard Page
+import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+import AdminTransaction from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminTransaction";
 function App() {
   return (
     <Router>
@@ -111,6 +115,8 @@ function App() {
         <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
           <Route path="profile" element={<UserProfile />} />
+          <Route path="AdminAnalytics" element={<AdminAnalytics />} />
+          <Route path="AdminTransaction" element={<AdminTransaction />} />
         </Route>
 
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}

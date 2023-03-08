@@ -2,9 +2,14 @@
 
 import { memo, useContext, useState } from "react";
 //All Buttons/Icon Import Starts
+import {
+  TotalUsersIcon,
+  ArrowDownIcon,
+  ArrowUpIcon,
+  CompletedTransactionIcon,
+} from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/MiscBtns";
-import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
+import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
@@ -189,51 +194,87 @@ export const UserProfileCard = () => {
   const history = useNavigate();
 
   return (
-    <>
-      <div class="shadow border-0 p-3 rounded-2">
-        <div className="">
-          <img src={Avatar} className="mx-auto" alt={Avatar} />
-        </div>
-        <div className="mt-4 mx-auto">
-          <table className="w-100">
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted">User Id</td>
-              <td className="text-end">34522</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Name</td>
-              <td className="text-end">Christian Gabriel Ugochukwu</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Phone</td>
-              <td className="text-end">+234 9032166043</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Email</td>
-              <td className="text-end">gabrielChristian@gmail.com</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Address</td>
-              <td className="text-end">Royal Palm villa Estate, Sangotedo</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Account No</td>
-              <td>2395289752</td>
-            </tr>
-            <tr className="d-flex justify-content-between py-3 border-0 border-bottom">
-              <td className="text-muted w-25">Bank</td>
-              <td>Zenith Bank</td>
-            </tr>
-          </table>
-        </div>
-        <div className="d-flex justify-content-center  mt-5">
-          <GeneralBtn
-            text="Back"
-            styles="w-100 GeneralBtnStyle1 btn all-btn text-white text-small"
-            onclick={() => history(-1)}
-          />
+    <section>
+      <div className="card shadow-sm" style={{ width: "56rem" }}>
+        <div className="card-body d-flex mt-4">
+          <div className="d-flex align-items-center col-4">
+            <img src={Avatar} className="w-75 img-fluid" alt="Avatar" />
+          </div>
+          <div className="">
+            <h4 className="text-muted">PERSONAL INFORMATION</h4>
+            {/* Personal Info Section Starts */}
+            <div>
+              <table className="text-muted">
+                <thead>
+                  <tr>
+                    <th className="fw-bold" scope="col ">
+                      USER ID :
+                    </th>
+                    <th scope="col">34522</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      FULL-NAME:
+                    </th>
+                    <th scope="col">Christian Gabriel Ugochukwu</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      PHONE NUMBER:
+                    </th>
+                    <th scope="col">+234 9032166043</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      E-MAIL:
+                    </th>
+                    <th scope="col">gabrielChristian@gmail.com</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      ADDRESS:
+                    </th>
+                    <th scope="col">Royal Palm villa Estate, Sangotedo</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            {/* Personal Info Section Ends */}
+            {/* Bank Info Section Starts*/}
+            <div className="mt-5">
+              <h4 className="text-muted">BANK INFORMATION</h4>
+              <table className="text-muted">
+                <thead className="mt-3">
+                  <tr>
+                    <th className="fw-bold" scope="col ">
+                      ACCOUNT NUMBER:
+                    </th>
+                    <th scope="col">2395289752</th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      ACCOUNT NAME:
+                    </th>
+                    <th scope="col">Christian Gabriel </th>
+                  </tr>
+                  <tr>
+                    <th className="fw-bold" scope="col">
+                      BANK:
+                    </th>
+                    <th scope="col">Zenith Bank</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            {/* Bank Info Section Ends */}
+          </div>
+          <div className="col-2 ms-lg-5">
+            <button type="button" className="btn btn-success fw-bold ">
+              Primary
+            </button>
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
