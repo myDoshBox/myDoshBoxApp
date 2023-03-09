@@ -17,11 +17,11 @@ import TransactionData from "../../data/dummyData/transactionData.json";
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
   ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
-    console.count("AnalyticsCard: ");
+    console.count(`AnalyticsCard-${text}`);
     return (
       <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
         <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
-          <Link to={link} className="text-decoration-none ">
+          <Link to={link} className="d-flex flex-column justify-content-between h-100 text-decoration-none ">
             <div className="d-flex align-items-center py-3">
               {BigIcon}
               <div>
