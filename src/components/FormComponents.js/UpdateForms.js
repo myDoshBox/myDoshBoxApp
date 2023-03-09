@@ -93,7 +93,10 @@ export const UpdateProfile = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtn text={"Save Changes"} />
+          <GeneralBtn
+            styles={"GeneralBtnStyle2 btn all-btn text-white"}
+            text={"Save Changes"}
+          />
         </div>
       </Form>
     </div>
@@ -194,7 +197,10 @@ export const UpdatePassword = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtn text={"Save Changes"} />
+          <GeneralBtn
+            styles={"GeneralBtnStyle2 btn all-btn text-white"}
+            text={"Save Changes"}
+          />
         </div>
       </Form>
     </div>

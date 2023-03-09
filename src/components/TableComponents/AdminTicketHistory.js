@@ -56,6 +56,7 @@ export const CustomerCareTickets = () => {
           <GeneralBtn
             text={"View More"}
             styles={"GeneralBtnStyle2 btn all-btn text-white m-3"}
+            link={"tickets-history"}
           />
         </table>
       </div>

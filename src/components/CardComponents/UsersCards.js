@@ -180,6 +180,7 @@ export const MiniUsersCard = memo(({ style }) => {
               <GeneralBtn
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
+                link={"users"}
               />
             </Link>
           </tbody>

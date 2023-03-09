@@ -485,7 +485,7 @@ export const SignUpOrganization = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GeneralBtn text="Sign Up With Google" icon={<GoogleIcon />} />
+        <GeneralBtn text="Sign Up With Google" lefticon={<GoogleIcon />} />
       </div>
     </>
   );

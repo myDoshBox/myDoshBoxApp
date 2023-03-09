@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
 
@@ -22,11 +23,11 @@ export const GeneralBtn = ({
   onclick,
 }) => {
   return (
-    <a href={link} type="submit" className={styles} onClick={onclick}>
+    <Link to={link} type="submit" className={styles} onClick={onclick}>
       {lefticon}
       <span className="ms-1 me-2">{text}</span>
       {righticon}
-    </a>
+    </Link>
   );
 };
 

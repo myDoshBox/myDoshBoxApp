@@ -57,7 +57,6 @@ import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOAR
 
 // Admin DashBoard Page
 import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
-import AdminTransaction from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminTransaction";
 function App() {
   return (
     <Router>
@@ -69,8 +68,6 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
-          <Route path="/signin" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
         </Route>
         <Route path="userdashboard" element={<UsersSideNav />}>
           <Route index element={<UserDashboardPage />} />
@@ -114,9 +111,13 @@ function App() {
         {/* Admin Routes */}
         <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
+          <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="profile" element={<UserProfile />} />
           <Route path="AdminAnalytics" element={<AdminAnalytics />} />
-          <Route path="AdminTransaction" element={<AdminTransaction />} />
+          <Route path="notification" element={<NotifictionPage />} />
+          <Route path="settings" element={<NeutralSetting />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
+          <Route path="users" element={<UsersPage />} />
         </Route>
 
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}

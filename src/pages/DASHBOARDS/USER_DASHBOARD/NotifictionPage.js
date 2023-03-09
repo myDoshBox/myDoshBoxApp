@@ -25,10 +25,8 @@ const Notification = () => {
   return (
     <div className="row pe-lg-5">
       <div className="card mx-auto mt-4 p-4 shadow border-0">
-        <div className="card-body">
+        <div className="card-body d-flex justify-content-between pb-3">
           <h3 className="pb-1">Notifications</h3>
-        </div>
-        <div className="d-flex justify-content-end pb-3">
           <FilterButton />
         </div>
         <div>
