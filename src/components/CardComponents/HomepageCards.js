@@ -26,5 +26,3 @@ export const OurProcessFlow = ({ image, title }) => {
     </div>
   );
 };
-
-// ContactUsCard

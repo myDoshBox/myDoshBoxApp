@@ -32,7 +32,6 @@ import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideN
 
 // Neutral Pages
 import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
-import { NeutralViewTransaction } from "./pages/NEUTRALS_PAGES/NeutralViewTransaction";
 import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
 import {
   ClosedConflicts,
@@ -92,10 +91,6 @@ function App() {
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
-          <Route
-            path="neutralviewtransaction"
-            element={<NeutralViewTransaction />}
-          />
           <Route path="notification" element={<NotifictionPage />} />
         </Route>
         <Route path="customer-care" element={<CustomerCareSideNav />}>
@@ -109,6 +104,14 @@ function App() {
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
+
+        {/* Admin Routes */}
+        {/* <Route path="admin" element={<AdminSideNav />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="profile" element={<UserProfile />} />
+        </Route> */}
+
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
