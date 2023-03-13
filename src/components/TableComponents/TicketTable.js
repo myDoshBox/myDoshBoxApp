@@ -43,13 +43,14 @@ export const MiniTicketsHistory = memo(({ style }) => {
                 );
               })}
             <Link
-              to={""}
+              to={"/tickets-history"}
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
               <GeneralBtn
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
+                link={"tickets-history"}
               />
             </Link>
           </tbody>
