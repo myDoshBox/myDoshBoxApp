@@ -104,9 +104,6 @@ function App() {
           <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="users" element={<UsersPage />} />
         </Route>
-        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="signup" element={<SignUpPage />} />
 
         {/* Admin Routes */}
         <Route path="admin" element={<AdminSideNav />}>
@@ -120,6 +117,9 @@ function App() {
           <Route path="users" element={<UsersPage />} />
         </Route>
 
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="signup" element={<SignUpPage />} />
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>

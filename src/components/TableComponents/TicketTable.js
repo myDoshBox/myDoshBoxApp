@@ -43,7 +43,7 @@ export const MiniTicketsHistory = memo(({ style }) => {
                 );
               })}
             <Link
-              to={"/tickets-history"}
+              to={""}
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
