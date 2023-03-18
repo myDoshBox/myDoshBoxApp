@@ -50,6 +50,7 @@ export const MiniTicketsHistory = memo(({ style }) => {
               <GeneralBtn
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
+                link={"tickets-history"}
               />
             </Link>
           </tbody>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { GoogleButton } from "../ButtonsComponent/Button";
+// import { GoogleButton } from "../ButtonsComponent/Button";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
 
@@ -229,7 +230,7 @@ export const SignUpIndividual = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GoogleButton text="Sign Up With Google" icon={<GoogleIcon />} />
+        <GeneralBtn text="Sign Up With Google" icon={<GoogleIcon />} />
       </div>
     </>
   );
@@ -484,7 +485,7 @@ export const SignUpOrganization = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GoogleButton text="Sign Up With Google" icon={<GoogleIcon />} />
+        <GeneralBtn text="Sign Up With Google" lefticon={<GoogleIcon />} />
       </div>
     </>
   );

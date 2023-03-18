@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import {
@@ -12,7 +12,7 @@ import {
   TicketsIcon,
 } from "../IconComponent/SideNavIcons";
 import doshlogo from "../../images/doshlogolight.png";
-import { NavLink, Outlet, Link } from "react-router-dom";
+import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
 
 const CustomerCareSideNav = () => {
   return (
@@ -37,6 +37,15 @@ const MobileScreenSideNav = ({ name, ...props }) => {
   const toggleShow = () => setShow((s) => !s);
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  const disappearEl = useRef(null);
+  const navigate = useNavigate();
+  const handleDisappear = () => {
+    disappearEl.style.display = "none";
+  };
+
+  const nav = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -64,6 +73,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
         responsive="lg"
         className="w-75 d-lg-none text-white"
         {...props}
+        ref={disappearEl}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
@@ -83,6 +93,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="../customer-care"
+                  onClick={handleDisappear}
                 >
                   <span>Dashboard</span>
                 </NavLink>
@@ -96,6 +107,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="transactions"
+                  onClick={handleDisappear}
                 >
                   <span>Transactions</span>
                 </NavLink>
@@ -109,6 +121,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="users"
+                  onClick={handleDisappear}
                 >
                   <span>Users</span>
                 </NavLink>
@@ -128,6 +141,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="notification"
+                  onClick={handleDisappear}
                 >
                   <span>Notifications</span>
                 </NavLink>
@@ -141,6 +155,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="tickets-history"
+                  onClick={handleDisappear}
                 >
                   <span>Tickets</span>
                 </NavLink>
@@ -154,17 +169,22 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                   to="settings"
+                  onClick={handleDisappear}
                 >
                   <span>Settings</span>
                 </NavLink>
               </li>
             </ul>
             <ul className="ps-3">
-              <li className="d-flex align-items-center SideNavItem mt-5 position-fixed bottom">
+              <li
+                className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
+                onClick={nav}
+                style={{ cursor: "pointer" }}
+              >
                 <div className="me-3">
                   <LogoutIcon />
                 </div>
-                <span>Logout</span>
+                <span className="text-white">Logout</span>
               </li>
             </ul>
           </div>
@@ -177,6 +197,11 @@ const MobileScreenSideNav = ({ name, ...props }) => {
 const DesktopScreen = ({ name, ...props }) => {
   let activeClassName = "active-link";
   let baseClassName = "text-decoration-none text-white";
+  const navigate = useNavigate();
+
+  const nav = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -273,11 +298,15 @@ const DesktopScreen = ({ name, ...props }) => {
             </li>
           </ul>
           <ul className="ps-3">
-            <li className="d-flex align-items-center SideNavItem mt-5 position-fixed bottom">
+            <li
+              className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
+              onClick={nav}
+              style={{ cursor: "pointer" }}
+            >
               <div className="me-3">
                 <LogoutIcon />
               </div>
-              <span>Logout</span>
+              <span className="text-white">Logout</span>
             </li>
           </ul>
         </div>

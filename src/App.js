@@ -51,6 +51,9 @@ import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/
 import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
 import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
+
+// Admin DashBoard Page
+import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
 function App() {
   return (
     <Router>
@@ -62,8 +65,6 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
-          <Route path="/signin" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
         </Route>
         <Route path="userdashboard" element={<UsersSideNav />}>
           <Route index element={<UserDashboardPage />} />
@@ -101,16 +102,22 @@ function App() {
           <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="users" element={<UsersPage />} />
         </Route>
-        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="signup" element={<SignUpPage />} />
 
         {/* Admin Routes */}
         {/* <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
+          <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="profile" element={<UserProfile />} />
-        </Route> */}
+          <Route path="AdminAnalytics" element={<AdminAnalytics />} />
+          <Route path="notification" element={<NotifictionPage />} />
+          <Route path="settings" element={<NeutralSetting />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
+          <Route path="users" element={<UsersPage />} />
+        </Route>
 
+        {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="signup" element={<SignUpPage />} />
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>

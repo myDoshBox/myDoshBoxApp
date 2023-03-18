@@ -1,9 +1,9 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
-import { GeneralBtnStyle1 } from "../../../components/ButtonsComponent/Button";
 import TransactionData from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
+import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
 
 const UserTransactionHistory = () => {
   return (
@@ -29,7 +29,7 @@ export const RecentTransactionTable = () => {
       <div>
         <div className="px-4 mb-3">
           <Link to={"../initiate-escrow"}>
-            <GeneralBtnStyle1 text="New Transaction" />
+            <GeneralBtn text="New Transaction" />
           </Link>
         </div>
 
