@@ -233,12 +233,12 @@ export const Target = ({ style }) => {
             offsetY: 20,
             show: true,
             color: "#636363",
-            fontFamily: 'Open Sans',
+            fontFamily: "Open Sans",
           },
           value: {
             offsetY: -20,
             color: "#111",
-            fontFamily: 'Open Sans',
+            fontFamily: "Open Sans",
             show: true,
           },
         },
@@ -246,9 +246,9 @@ export const Target = ({ style }) => {
     },
     fill: {
       opacity: 1.5,
-      colors: ['#28C76F'],
-      type: 'solid',
-  },
+      colors: ["#28C76F"],
+      type: "solid",
+    },
     stroke: {
       lineCap: ["round"],
     },
@@ -276,50 +276,62 @@ export const Target = ({ style }) => {
           </div>
         </div>
         <div className="h-100">
-          <Chart options={options} series={series} type="radialBar" height={250}/>
+          <Chart
+            options={options}
+            series={series}
+            type="radialBar"
+            height={250}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-
 export const LineSparkline = () => {
   const [options, setOptions] = useState({
-    series: [{
-      data: [25, 66, 41, 89, 63, 90, 95, 200]
-    }],
+    series: [
+      {
+        data: [25, 66, 41, 89, 63, 90, 95, 200],
+      },
+    ],
     chart: {
-      type: 'line',
+      type: "line",
       sparkline: {
-        enabled: true
-      }
+        enabled: true,
+      },
     },
     stroke: {
       width: 1.5,
-      curve: 'straight',
-      colors: ['#006747']
+      curve: "straight",
+      colors: ["#006747"],
     },
     tooltip: {
       fixed: {
-        enabled: false
+        enabled: false,
       },
       x: {
-        show: false
+        show: false,
       },
       y: {
         title: {
           formatter: function (seriesName) {
-            return ''
-          }
-        }
+            return "";
+          },
+        },
       },
       marker: {
-        show: false
-      }
-    }
+        show: false,
+      },
+    },
   });
   return (
-    <Chart options={options} series={options.series} type="line" height={30} width={24} />
+    <Chart
+      options={options}
+      series={options.series}
+      type="line"
+      height={30}
+      width={24}
+    />
   );
 };
