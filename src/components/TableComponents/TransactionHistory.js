@@ -19,7 +19,10 @@ const TransactionHistory = (props) => {
           />
         </td>
         <td className="d-none d-sm-table-cell">
-          <GeneralBtn text="view" styles="text-success text-decoration-none text-small" />
+          <GeneralBtn
+            text="view"
+            styles="text-success text-decoration-none text-small"
+          />
         </td>
       </tr>
     </>

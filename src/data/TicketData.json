@@ -89,6 +89,39 @@
       "complainer_id": "25138",
       "status_name": "Resolved",
       "status_style": "completed"
+    },
+    {
+      "id": 4,
+      "date": "16-08-23",
+      "ticket_id": "2tsYFXb4rP3",
+      "transaction_id": "4rsGDrb4rP3",
+      "complaint_type": "Incomplete Items",
+      "complainer": "Kristin Watson",
+      "complainer_id": "25138",
+      "status_name": "Resolved",
+      "status_style": "completed"
+    },
+    {
+      "id": 5,
+      "date": "16-08-23",
+      "ticket_id": "2tsYFXb4rP3",
+      "transaction_id": "4rsGDrb4rP3",
+      "complaint_type": "Incomplete Items",
+      "complainer": "Kristin Watson",
+      "complainer_id": "25138",
+      "status_name": "Resolved",
+      "status_style": "completed"
+    },
+    {
+      "id": 6,
+      "date": "16-08-23",
+      "ticket_id": "2tsYFXb4rP3",
+      "transaction_id": "4rsGDrb4rP3",
+      "complaint_type": "Incomplete Items",
+      "complainer": "Kristin Watson",
+      "complainer_id": "25138",
+      "status_name": "Resolved",
+      "status_style": "completed"
     }
   ],
   "SmallTicketHistory": [

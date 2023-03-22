@@ -122,6 +122,7 @@ export const AdminRecentTransactionsCard = memo(({ style }) => {
               <GeneralBtn
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
+                link={"transactions"}
               />
             </Link>
           </tbody>

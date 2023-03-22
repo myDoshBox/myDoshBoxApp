@@ -55,8 +55,8 @@ const AdminDashboard = memo(() => {
               ResponsiveWidth={`col-md-4`}
             />
             <AnalyticsCard
-              value="500,000"
               text="Total Profits"
+              value="500,000"
               BigIcon={<LineSparkline />}
               SmallIcon={<ArrowDownIcon />}
               change="5% Less"
