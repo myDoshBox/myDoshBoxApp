@@ -21,7 +21,7 @@ export const TeamsCard = (props) => {
       <div class="shadow-sm border-0 rounded-3 pt-1" style={{ width: "85%" }}>
         <div class="col teamValueStyle p-3 rounded-2">
           <div class="card h-100 border-0 teamValueStyle">
-            <img src={images} class="card-img-top 75" alt="..." />
+            <img src={images} class="card-img-top 75" title="img" alt="..." />
             <div class="card-body">
               <p class="card-text text-center">{description}</p>
             </div>
