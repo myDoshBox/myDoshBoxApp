@@ -4,7 +4,7 @@ export const WhyChooseUsCard = (props) => {
   return (
     <div className="container p-2">
       <div className="pt-3">
-        <img src={image} alt="" className="mx-auto" title="img" />
+        <img src={image} alt="" className="mx-auto" />
       </div>
       <div className="pt-4">
         <h5 className="text-center">{title}</h5>
@@ -19,7 +19,7 @@ export const OurProcessFlow = ({ image, title }) => {
     <div className="p-5">
       <div>
         <div className="pb-3">
-          <img src={image} className="mx-auto" title="img" alt="..." />
+          <img src={image} className="mx-auto" alt="..." />
         </div>
         <div className="text-center">{title}</div>
       </div>
