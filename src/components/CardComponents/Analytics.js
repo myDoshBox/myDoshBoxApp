@@ -1,7 +1,7 @@
 import Chart from "react-apexcharts";
-import { useState, memo } from "react";
+import { useState } from "react";
 
-export const FinancialReport = memo(({ style }) => {
+export const FinancialReport = ({ style }) => {
   console.count("Financial Report: ");
   const [series, setSeries] = useState([
     {
@@ -76,9 +76,9 @@ export const FinancialReport = memo(({ style }) => {
       </div>
     </div>
   );
-});
+};
 
-export const UserInflow = memo(({ style }) => {
+export const UserInflow = ({ style }) => {
   console.count("User Inflow: ");
   const [series, setSeries] = useState([
     {
@@ -149,7 +149,7 @@ export const UserInflow = memo(({ style }) => {
       </div>
     </div>
   );
-});
+};
 
 export const Issues = ({ style }) => {
   const [options, setOptions] = useState({

@@ -16,7 +16,7 @@ import TransactionData from "../../data/dummyData/transactionData.json";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
-  ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+  ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, percentChange }) => {
     console.count(`AnalyticsCard-${text}`);
     return (
       <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
@@ -32,7 +32,7 @@ export const AnalyticsCard = memo(
             <div className="d-flex align-items-center justify-content-end">
               {SmallIcon}
               <p className="text-small m-0">
-                {change ? change + " than last week" : null}{" "}
+                {percentChange ? percentChange + " than last week" : null}{" "}
               </p>
             </div>
           </Link>
@@ -168,7 +168,7 @@ export const MiniUsersCard = memo(({ style }) => {
               );
             })}
             <Link
-              to={""}
+              to={"users"}
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
