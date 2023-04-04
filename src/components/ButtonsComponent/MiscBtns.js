@@ -1,23 +1,5 @@
 import { Button } from "react-bootstrap";
 
-// export const CalendarButton = () => {
-// 	today = new Date();
-// 	return (
-// 		<Button className="CalendarBtnStyle border-0">
-// 			<span className="">
-// 				<Icon
-// 					className="mx-2"
-//
-// 					color="#A2A5AA"
-// 					width="20"
-// 				/>
-
-// 				{today.getTime()}
-// 			</span>
-// 		</Button>
-// 	);
-// };
-
 export const FilterButton = () => {
   return (
     <Button className="FilteBtnStyle bg-transparent border-0">

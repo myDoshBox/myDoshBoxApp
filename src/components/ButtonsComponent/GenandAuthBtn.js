@@ -13,12 +13,11 @@ import { Button } from "react-bootstrap";
 // LearnMoreCardButton - className(d-none d-sm-block LearnMoreCardButton)
 // styles for GeneralBtnStyle1 - GeneralBtnStyle1 btn all-btn text-white
 // styles for GeneralBtnStyle2 - GeneralBtnStyle2 btn all-btn text-white
-export const GeneralBtn = ({ text, link, lefticon, righticon, styles, onclick }) => {
+export const CustomBtn = (props) => {
+  if (props.href) {
+    return <a {...props}/>
+  }
   return (
-    <a href={link} type="submit" className={styles} onClick={onclick}>
-      {lefticon}
-      <span className="ms-1 me-2">{text}</span>
-      {righticon}
-    </a>
+    <button {...props} />
   );
 };
