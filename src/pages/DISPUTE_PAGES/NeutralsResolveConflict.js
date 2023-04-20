@@ -1,5 +1,5 @@
 // import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { CustomBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import brokenScreen1 from "../../images/brokenScreen1.png";
 import brokenScreen2 from "../../images/brokenScreen2.png";
@@ -77,13 +77,13 @@ const NeutralsResolveConflictCard = () => {
           ></textarea>
           <div className="row mt-5">
             <div className="col-md-6 col-sm-12 mb-2 text-center text-md-end">
-              <GeneralBtn
+              <CustomBtn
                 value="Sellers Fault"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
               />
             </div>
             <div className="col-md-6 col-sm-12 text-center text-sm-start">
-              <GeneralBtn
+              <CustomBtn
                 value="Buyers Fault"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
               />

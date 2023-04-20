@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { CustomBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GeneralModal } from "../Modal";
 
 //    <DeliveryForm
@@ -31,7 +31,7 @@ export const DeliveryForm = ({ heading, sub_text, checkList }) => {
 
         <div className="d-flex justify-content-center mt-5">
           <Link to="/escrow">
-            <GeneralBtn
+            <CustomBtn
               value="Cancel"
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
             />

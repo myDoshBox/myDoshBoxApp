@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-// import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
 import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 
 export const UpdateProfile = () => {

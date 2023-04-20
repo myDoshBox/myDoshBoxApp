@@ -9,7 +9,6 @@ import { memo, useState } from "react";
 //   CompletedTransactionIcon,
 // } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-// import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
 import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
@@ -129,7 +128,7 @@ export const MiniProfileCard = () => {
           <Link to={"../updateprofile"}>
             <CustomBtn
               value="Edit Profile"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
+              className="GeneralBtnStyle1 btn all-btn text-white"
             />
           </Link>
         </div>

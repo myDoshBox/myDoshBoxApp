@@ -1,6 +1,6 @@
 import React from "react";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { CustomBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
@@ -38,14 +38,14 @@ const PaymentMade = () => {
           total={`N3,600,000`}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
-            <GeneralBtn
+            <CustomBtn
               value="Cancel Transaction"
               styles="CancelBtn btn all-btn text-white"
               icon={<BackIcon />}
             />
           }
           rightBtn={
-            <GeneralBtn
+            <CustomBtn
               value="Delete  Product"
               styles="GeneralBtnStyle1 btn all-btn text-white"
               icon={<NextIcon />}

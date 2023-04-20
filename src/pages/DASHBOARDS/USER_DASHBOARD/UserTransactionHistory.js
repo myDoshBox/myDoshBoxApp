@@ -2,7 +2,6 @@ import { Notifications } from "../../../components/NotificationComponent/Notific
 import TransactionData from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { Link } from "react-router-dom";
 import CustomBtn from "../../../components/ButtonsComponent/GenandAuthBtn";
 
 const UserTransactionHistory = () => {
@@ -28,7 +27,7 @@ export const RecentTransactionTable = () => {
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="px-4 mb-3">
-            <CustomBtn value="New Transaction" to={"../initiate-escrow"} />
+            <CustomBtn value="New Transaction" to={"../initiate-escrow"} className="GeneralBtnStyle1 btn all-btn text-white"/>
         </div>
 
         <table className="table transaction-table">
@@ -65,7 +64,7 @@ export const RecentTransactionTableData = (props) => {
         <td className="p-md-3">N{price}</td>
         <td className="p-md-3">{date}</td>
         <td className="p-md-3 d-flex justify-content-center align-items-center">
-          <Notifications value={status_name} className={status_style} />
+          <Notifications text={status_name} styles={status_style} />
         </td>
       </tr>
     </>

@@ -61,7 +61,7 @@ const SignUpForm = () => {
                   to={"/signin"}
                   className="text-decoration-none ms-1 text-success"
                   style={{ fontSize: "14px" }}
-                  value="Sign Up"
+                  value="Sign In"
                 />
             </div>
           </Col>

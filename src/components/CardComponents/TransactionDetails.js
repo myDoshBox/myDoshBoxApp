@@ -1,7 +1,6 @@
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import product from "../../images/productimage.jpg";
 import { Link } from "react-router-dom";
-// import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 // import { BackIcon } from "../../components/IconComponent/NavigationAndViewIcon";
 // import { RatingIcon } from "../../components/IconComponent/UserdashboardIcons";
 // import { Notifications } from "../../components/NotificationComponent/NotificationComponents";
@@ -129,7 +128,7 @@ export const TransactionDetails = ({
 //   return (
 //     <section className="card border-0 shadow p-2" style={{ width: "45rem" }}>
 //       <div className="align-self-end mt-3">
-//         <GeneralBtn
+//         <CustomBtn
 //           lefticon={<BackIcon />}
 //           text="Back"
 //           styles="GeneralBtnStyle1 btn all-btn text-white"

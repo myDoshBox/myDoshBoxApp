@@ -29,7 +29,7 @@ const DisputeCard = () => {
             <h5>Disputes</h5>
           </div>
           <div className="col-6 d-flex justify-content-end">
-              <CustomBtn value={"Back"} lefticon={<BackIcon />} to={"../../../userdashboard"} />
+              <CustomBtn value={"Back"} lefticon={<BackIcon />} to={"../../../userdashboard"} className="GeneralBtnStyle1 btn all-btn text-white"/>
           </div>
         </div>
         {DisputesData.disputes_data.map((history) => {
@@ -56,7 +56,6 @@ const DisputeData = (props) => {
       </div>
 
       <div className="d-flex align-items-end flex-column">
-        {/* <GeneralBtnStyle1 value={"View Details"} /> */}
         <DisputeDetailsModal
           openModalText="View Details"
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"

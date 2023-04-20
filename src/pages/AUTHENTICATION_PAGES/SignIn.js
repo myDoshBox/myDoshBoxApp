@@ -106,18 +106,18 @@ export const SignInForm = () => {
           </div>
           <div className="d-flex flex-column mt-4">
             <div className="mx-auto mb-2">
-              <button
+              <CustomBtn
                 type="submit"
                 className="GeneralBtnStyle1 btn all-btn text-white"
                 style={{ width: "210px" }}
               >
                 Sign In
-              </button>
+              </CustomBtn>
             </div>
           </div>
         </form>
         <div className="d-flex justify-content-center">
-          <CustomBtn value="Sign In With Google" icon={<GoogleIcon />} />
+          <CustomBtn value="Sign In With Google" lefticon={<GoogleIcon />} className="btn GoogleAuthBtn"/>
         </div>
         <div className="d-flex justify-content-center mt-2">
           <p>

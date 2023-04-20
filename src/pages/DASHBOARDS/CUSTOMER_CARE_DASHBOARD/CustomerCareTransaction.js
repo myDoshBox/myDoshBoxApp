@@ -2,7 +2,9 @@ import { Notifications } from "../../../components/NotificationComponent/Notific
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { FilterButton } from "../../../components/ButtonsComponent/GenandAuthBtn";
+import CustomButton from "../../../components/ButtonsComponent/GenandAuthBtn";
+import { ArrowDownIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
+import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
 
 const CustomerCareTransaction = () => {
   return (
@@ -27,7 +29,7 @@ export const CustomerCareTransactionTable = () => {
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-flex justify-content-end pb-3">
-          <FilterButton />
+        <CustomButton value="Sort by: Recent" className="FilteBtnStyle bg-transparent border-0" lefticon={<SortIcon/>} righticon={<ArrowDownIcon/>} />
         </div>
 
         <table className="table transaction-table">

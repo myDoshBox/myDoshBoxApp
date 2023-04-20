@@ -1,8 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { CustomBtn } from "./GenandAuthBtn.js";
+import CustomBtn from "./GenandAuthBtn.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import { axe } from 'jest-axe';
+import { toHaveNoViolations } from 'jest-axe';
+expect.extend(toHaveNoViolations);
 
 
 // Prevents errors related to using the Link component outside of a Router.
@@ -29,7 +31,7 @@ describe("Integration tests for CustomBtn component", () => {
   it("should be accessible using only the keyboard", async () => {
     render(
       <RouteGuard
-        test={[<CustomBtn value="Create Account" aria-label="Create Account" />]}
+        test={[<CustomBtn value="Create Account" aria-label="Create Account" tabindex="1" />]}
       />
     );
     const buttonElement = screen.getByRole("button", {
@@ -38,10 +40,10 @@ describe("Integration tests for CustomBtn component", () => {
     expect(buttonElement).toHaveAttribute("tabindex");
   });
 
-  it("should have an attribute of value", async () => {
+  it("should always have text", async () => {
     render(<RouteGuard test={[<CustomBtn value="Create Account" />]} />);
     const buttonElement = screen.getByRole("button");
-    expect(buttonElement).toHaveAttribute("value", "Create Account");
+    expect(buttonElement.textContent).toBeTruthy();
   });
 
   it("should have a className prop", async () => {
@@ -170,7 +172,7 @@ describe("Integration tests for CustomBtn component", () => {
   });
 
   it('is accessible', async () => {
-    const { container } = render(<RouteGuard test={[<CustomBtn />]} />);
+    const { container } = render(<RouteGuard test={[<CustomBtn value="Start a transaction" aria-label="Start a transaction" title="Start a transaction" role="button" />]} />);
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

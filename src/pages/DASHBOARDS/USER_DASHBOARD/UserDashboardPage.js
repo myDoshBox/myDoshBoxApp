@@ -1,10 +1,8 @@
-import React from "react";
 import { MiniProfileCard } from "../../../components/CardComponents/UsersCards";
 import { UserDashboardCard2 } from "../../../components/CardComponents/UsersCards";
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
-  // CustomerCareIcon,
   InitiateDisputeIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
@@ -37,13 +35,13 @@ const UserDashboard = () => {
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6 mt-4 mt-lg-0">
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
-              value={`Initiate Transaction`}
+              text={`Initiate Transaction`}
               link={"initiate-escrow"}
             />
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
-              value={`Settled Transactions`}
+              text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
               link={"transaction"}
             />
@@ -52,13 +50,13 @@ const UserDashboard = () => {
         <div className="row mb-3">
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
             <UserDashboardCard2
-              value={`Initiate Transaction`}
+              text={`Initiate Transaction`}
               icon={<InitiateTransactionIcon />}
             />
           </div>
           <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
             <UserDashboardCard2
-              value={`Initiate Disputes`}
+              text={`Initiate Disputes`}
               icon={<InitiateDisputeIcon />}
               link={"initiate-dispute"}
             />

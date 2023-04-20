@@ -66,7 +66,7 @@ export const ContactUsForm = () => {
           <div className="mt-1 d-flex justify-content-center">
             <CustomBtn
               value="Submit"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
+              className="GeneralBtnStyle1 btn all-btn text-white"
             />
           </div>
         </div>

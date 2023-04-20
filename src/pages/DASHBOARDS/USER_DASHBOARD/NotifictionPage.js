@@ -1,9 +1,11 @@
 import React from "react";
 import { NotificationCard } from "../../../components/TableComponents/TransactionTable";
 import usersData from "../../../data/usersData.json";
-import { FilterButton } from "../../../components/ButtonsComponent/GenandAuthBtn";
+import CustomButton  from "../../../components/ButtonsComponent/GenandAuthBtn";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
+import { ArrowDownIcon, FilterIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
 
 const NotifictionPage = () => {
   return (
@@ -27,7 +29,7 @@ const Notification = () => {
       <div className="card mx-auto mt-4 p-4 shadow border-0">
         <div className="card-body d-flex justify-content-between pb-3">
           <h3 className="pb-1">Notifications</h3>
-          <FilterButton />
+          <CustomButton value="Sort by: Recent" className="FilteBtnStyle bg-transparent border-0" lefticon={<SortIcon/>} righticon={<ArrowDownIcon/>} />
         </div>
         <div>
           {usersData.notificationData.map((notificationData) => {
