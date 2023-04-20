@@ -28,7 +28,7 @@ const PaymentMade = () => {
       <div className="">
         <TransactionDetails
           heading={`Payment Made`}
-          sub_text={`Buyer Elland Aaronson has made payment into MyDoshBox account for this transaction`}
+          sub_value={`Buyer Elland Aaronson has made payment into MyDoshBox account for this transaction`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -39,14 +39,14 @@ const PaymentMade = () => {
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <GeneralBtn
-              text="Cancel Transaction"
+              value="Cancel Transaction"
               styles="CancelBtn btn all-btn text-white"
               icon={<BackIcon />}
             />
           }
           rightBtn={
             <GeneralBtn
-              text="Delete  Product"
+              value="Delete  Product"
               styles="GeneralBtnStyle1 btn all-btn text-white"
               icon={<NextIcon />}
             />

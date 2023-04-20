@@ -1,5 +1,5 @@
 import React from "react";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import HeroImage from "../../images/HeroImage.png";
 import WhatWeDoImage from "../../images/WhatwedoImage.png";
 import OurPartnerImg from "../../images/partners.png";
@@ -8,7 +8,7 @@ import {
   WhyChooseUsCard,
 } from "../../components/CardComponents/HomepageCards";
 import homepageData from "../../data/homepageData.json";
-import { Link } from "react-router-dom";
+
 const Homepage = () => {
   return (
     <div>
@@ -33,12 +33,11 @@ const HeroSection = () => {
           <p>Lorem ipsum dolor sitamet dolor</p>
         </div>
         <div className="text-center">
-          <Link to="/signup">
-            <GeneralBtn
-              text={`START A TRANSACTION`}
-              styles={`GeneralBtnStyle1 btn all-btn text-white`}
+            <CustomBtn
+              value={`START A TRANSACTION`}
+              className={`GeneralBtnStyle1 btn all-btn text-white`}
+              to="/signup"
             />
-          </Link>
         </div>
         <div className="mt-4">
           <img src={HeroImage} alt={`Hero Section Image`} className="mx-auto" />
@@ -69,9 +68,9 @@ const WhatWeDo = () => {
             lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
             condimentum ac, vestibulum eu nisl.
           </p>
-          <GeneralBtn
-            text={`LEANRN MORE`}
-            styles={`GeneralBtnStyle1 btn all-btn text-white`}
+          <CustomBtn
+            value={`Learn More`}
+            className={`GeneralBtnStyle1 btn all-btn text-white`}
           />
         </div>
         <div className="col-md-4  d-none d-md-block">
@@ -99,9 +98,9 @@ const ProcessFlow = () => {
         })}
       </div>
       <div className="text-center">
-        <GeneralBtn
-          text={`Get Started`}
-          styles={`GeneralBtnStyle1 btn all-btn text-white`}
+        <CustomBtn
+          value={`Get Started`}
+          className={`GeneralBtnStyle1 btn all-btn text-white`}
         />
       </div>
     </div>

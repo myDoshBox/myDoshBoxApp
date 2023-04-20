@@ -1,7 +1,7 @@
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import AdminTicketDetails from "../../data/TicketData.json";
 import { PaginationBar } from "../PaginationComponent";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 
 export const TicketHistoryTable = () => {
   return (
@@ -53,9 +53,9 @@ export const CustomerCareTickets = () => {
               return <TicketHistoryData {...data} key={data.id} />;
             })}
           </tbody>
-          <GeneralBtn
-            text={"View More"}
-            styles={"GeneralBtnStyle2 btn all-btn text-white m-3"}
+          <CustomBtn
+            value={"View More"}
+            className={"GeneralBtnStyle2 btn all-btn text-white m-3"}
             link={"tickets-history"}
           />
         </table>
@@ -84,7 +84,7 @@ const TicketHistoryData = (props) => {
       <td className="small-hide py-3">{complainer}</td>
       <td className="small-hide py-3">{complainer_id}</td>
       <td className="d-flex justify-content-center align-items-center py-3">
-        <Notifications text={status_name} styles={status_style} />
+        <Notifications value={status_name} className={status_style} />
       </td>
     </tr>
   );

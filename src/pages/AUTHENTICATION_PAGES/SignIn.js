@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
 import logo from "../../images/doshlogolight.png";
 import { Link } from "react-router-dom";
@@ -117,7 +117,7 @@ export const SignInForm = () => {
           </div>
         </form>
         <div className="d-flex justify-content-center">
-          <GeneralBtn text="Sign In With Google" icon={<GoogleIcon />} />
+          <CustomBtn value="Sign In With Google" icon={<GoogleIcon />} />
         </div>
         <div className="d-flex justify-content-center mt-2">
           <p>

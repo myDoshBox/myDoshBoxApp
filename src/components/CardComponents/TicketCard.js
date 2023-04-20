@@ -1,6 +1,5 @@
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
-import { Link } from "react-router-dom";
 
 // For Generated Ticket Card
 export const GeneratedTicketCard = (props) => {
@@ -26,9 +25,7 @@ export const GeneratedTicketCard = (props) => {
         <div className="card border-0 shadow">
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <Link to={"../../userdashboard"}>
-                <GeneralBtn lefticon={<Cancel />} />
-              </Link>
+                <CustomBtn lefticon={<Cancel />} to={"../../userdashboard"} />
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
@@ -105,24 +102,21 @@ export const GeneratedTicketCard = (props) => {
               <p>{Futher_info}</p>
             </div>
             <div className="mb-3 d-flex justify-content-md-evenly flex-column flex-md-row">
-              <Link to={link1} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn1}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3"
+                <CustomBtn
+                  value={btn1}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3 mx-auto mb-2"
+                  to={link1}
                 />
-              </Link>
-              <Link to={link2} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn2}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4"
+                <CustomBtn
+                  value={btn2}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4 mx-auto mb-2"
+                  to={link2}
                 />
-              </Link>
-              <Link to={link3} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn3}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4"
+                <CustomBtn
+                  value={btn3}
+                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4mx-auto mb-2 "
+                  to={link3}
                 />
-              </Link>
             </div>
           </div>
         </div>
@@ -151,7 +145,7 @@ export const OtherTicket = (props) => {
         <div className="card border-0 shadow" style={{ width: "40rem" }}>
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <GeneralBtn lefticon={<Cancel />} />
+              <CustomBtn lefticon={<Cancel />} />
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
@@ -229,12 +223,12 @@ export const OtherTicket = (props) => {
               <p>{Futher_info}</p>
             </div>
             <div className="mb-3 d-flex justify-content-evenly">
-              <GeneralBtn
-                text={btn1}
+              <CustomBtn
+                value={btn1}
                 styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
               />
-              <GeneralBtn
-                text={btn2}
+              <CustomBtn
+                value={btn2}
                 styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
               />
             </div>

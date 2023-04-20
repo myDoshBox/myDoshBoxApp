@@ -1,5 +1,3 @@
-import React from "react";
-// import { ViewMoreButton } from "../components/ButtonsComponent/NavigationAndViewButtons";
 import TransactionHistory from "../components/TableComponents/TransactionHistory";
 import transactionData from "../data/dummyData/transactionData.json";
 import { UserSidenav } from "../components/NavbarComponents/SideNavbar";
@@ -9,7 +7,7 @@ import {
   OngoingConflictIcon,
   OpenConflictIcon,
 } from "../components/IconComponent/NeutralsDashboardIcons";
-import { GeneralBtn } from "../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../components/ButtonsComponent/GenandAuthBtn";
 
 const NeutralDashboard = () => {
   return (
@@ -60,7 +58,7 @@ const NeutralDashboard = () => {
                   <th scope="col" className="opacity-50">
                     Status
                   </th>
-                  <th scope="col" className="opacity-50">
+                  <th scope="col" className="opacity-50 text-center">
                     ...
                   </th>
                 </tr>
@@ -72,9 +70,10 @@ const NeutralDashboard = () => {
               </tbody>
             </table>
             <div className="d-flex justify-content-end mt-4">
-              <GeneralBtn
-                text="View More"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
+              <CustomBtn
+                value="View More"
+                className="GeneralBtnStyle1 btn all-btn text-white"
+                to="/transactions"
               />
             </div>
           </div>

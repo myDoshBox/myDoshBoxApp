@@ -1,11 +1,10 @@
 import React from "react";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
-import { Link } from "react-router-dom";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
 const TransactionSummaryPage = () => {
@@ -34,7 +33,7 @@ const TransactionSummary = () => {
         <TransactionDetails
           heading={`Transaction Summary
 `}
-          sub_text={`Please Confirm the following transaction initiated by user Eland Aaronson`}
+          sub_value={`Please Confirm the following transaction initiated by user Eland Aaronson`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -44,22 +43,20 @@ const TransactionSummary = () => {
           total={`N3,600,000`}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
-            <Link to={"../initiate-escrow"}>
-              <GeneralBtn
-                text="Back"
+              <CustomBtn
+                value="Back"
                 styles="CancelBtn btn all-btn text-white"
                 icon={<BackIcon />}
+                to={"../initiate-escrow"}
               />
-            </Link>
           }
           rightBtn={
-            <Link to={"../agreement"}>
-              <GeneralBtn
-                text="Proceed"
+              <CustomBtn
+                value="Proceed"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
                 icon={<NextIcon />}
+                to={"../agreement"}
               />
-            </Link>
           }
         />
       </div>

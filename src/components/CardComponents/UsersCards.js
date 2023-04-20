@@ -1,16 +1,16 @@
 // UserInflowCard {Postponed as it is a graph}
 
-import { memo, useContext, useState } from "react";
+import { memo, useState } from "react";
 //All Buttons/Icon Import Starts
-import {
-  TotalUsersIcon,
-  ArrowDownIcon,
-  ArrowUpIcon,
-  CompletedTransactionIcon,
-} from "../IconComponent/AdminDashboardIcons";
+// import {
+//   TotalUsersIcon,
+//   ArrowDownIcon,
+//   ArrowUpIcon,
+//   CompletedTransactionIcon,
+// } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+// import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -127,8 +127,8 @@ export const MiniProfileCard = () => {
         <hr></hr>
         <div className="text-end pe-2 py-3">
           <Link to={"../updateprofile"}>
-            <GeneralBtn
-              text="Edit Profile"
+            <CustomBtn
+              value="Edit Profile"
               styles="GeneralBtnStyle1 btn all-btn text-white"
             />
           </Link>
@@ -172,17 +172,12 @@ export const MiniUsersCard = memo(({ style }) => {
                 </>
               );
             })}
-            <Link
-              to={""}
-              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
-              style={{ whiteSpace: "nowrap" }}
-            >
-              <GeneralBtn
-                text="View More"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-                link={"users"}
+            <CustomBtn
+                value="View More"
+                className="GeneralBtnStyle1 btn all-btn text-white text-decoration-none mt-4"
+                to="users"
+                style={{ whiteSpace: "nowrap" }}
               />
-            </Link>
           </tbody>
         </table>
       </div>

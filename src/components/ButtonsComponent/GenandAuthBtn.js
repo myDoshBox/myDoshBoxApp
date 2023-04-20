@@ -1,64 +1,36 @@
-<<<<<<< HEAD
-import { Button } from "react-bootstrap";
-
-// GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
-
-//BuyersStatement/InitiateDispute/ConfirmDeliveryButton/ConfirmButton/DeliverProductButton
-
-// SignUpOrganization/SignUpIndividual|className(Sign Up as an Organization|SignUpGroup, btn)
-// GoogleSignUpButton/GoogleSignUpButton(Sign Up with Google/Sign In with Google|GoogleAuthBtn, btn)
-//PreviousButton/NextButton/BackButton/StartTransactionButton - className(GeneralBtnStyle1 btn all-btn text-white)
-//ViewMoreButton - className(ViewComplaintBtnStyle border-0 mt-5 ms-3)
-//ScrollUpButton - className(ScrollUpBtnStyle border )
-// CancelButton - className(CancelBtn border-0)
-// LearnMoreCardButton - className(d-none d-sm-block LearnMoreCardButton)
-// styles for GeneralBtnStyle1 - GeneralBtnStyle1 btn all-btn text-white
-// styles for GeneralBtnStyle2 - GeneralBtnStyle2 btn all-btn text-white
-export const CustomBtn = (props) => {
-  if (props.href) {
-    return <a {...props}/>
-  }
-  return (
-    <button {...props} />
-  );
-};
-=======
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
 
-//BuyersStatement/InitiateDispute/ConfirmDeliveryButton/ConfirmButton/DeliverProductButton
-
-// SignUpOrganization/SignUpIndividual|className(Sign Up as an Organization|SignUpGroup, btn)
-// GoogleSignUpButton/GoogleSignUpButton(Sign Up with Google/Sign In with Google|GoogleAuthBtn, btn)
-//PreviousButton/NextButton/BackButton/StartTransactionButton - className(GeneralBtnStyle1 btn all-btn text-white)
-//ViewMoreButton - className(ViewComplaintBtnStyle border-0 mt-5 ms-3)
-//ScrollUpButton - className(ScrollUpBtnStyle border )
-// CancelButton - className(CancelBtn border-0)
-// LearnMoreCardButton - className(d-none d-sm-block LearnMoreCardButton)
-// styles for GeneralBtnStyle1 - GeneralBtnStyle1 btn all-btn text-white
-// styles for GeneralBtnStyle2 - GeneralBtnStyle2 btn all-btn text-white
-export const GeneralBtn = ({
-  text,
-  link,
-  lefticon,
-  righticon,
-  styles,
-  onclick,
-}) => {
+const BtnContent = (props) => {
   return (
-    <Link to={link} type="submit" className={styles} onClick={onclick}>
-      {lefticon}
-      <span className="ms-1 me-2">{text}</span>
-      {righticon}
-    </Link>
+    <>
+      <span>{props.lefticon}</span>
+      <span className="mx-2">{props.value}</span>
+      <span>{props.righticon}</span>
+    </>
   );
+};
+
+const CustomBtn = (props) => {
+  const { value, lefticon, righticon, ...rest } = props;
+
+  const btnContent = (
+    <BtnContent value={value} lefticon={lefticon} righticon={righticon} />
+  );
+
+  if (props.href || props.to) {
+    return (
+      <Link to={props.to || props.href} {...rest}>
+        {btnContent}
+      </Link>
+    );
+  }
+  return <button {...rest}>{btnContent}</button>;
 };
 
 export const FilterButton = () => {
   return (
-    <Button className="FilteBtnStyle bg-transparent border-0">
+    <button className="FilteBtnStyle bg-transparent border-0">
       <span className="">
         <svg
           className="mb-1 me-2"
@@ -91,7 +63,30 @@ export const FilterButton = () => {
           />
         </svg>
       </span>
-    </Button>
+    </button>
   );
 };
->>>>>>> 57570ddf3d7d1958b191034773c6d0fa98abffee
+
+export default CustomBtn;
+/*
+ * To pass the tests for the CustomBtn component, make sure to include the following attributes:
+ *
+ * - aria-label or text content: A clear and descriptive label that communicates the button's function.
+ * - type: Specify the type of button as "button", "submit", or "reset".
+ * - form: If the button is used inside a form, include this attribute with the value set to the id of the parent form.
+ *
+ * Additionally, make sure that the button is designed to be responsive and work well on all devices,
+ * has sufficient contrast between its text and background, and is accessible to people with disabilities.
+ *
+ * Here are some common button types and their associated class names:
+ *
+ * - GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
+ * - BuyersStatement/InitiateDispute/ConfirmDeliveryButton/ConfirmButton/DeliverProductButton
+ * - SignUpOrganization/SignUpIndividual|className(Sign Up as an Organization|SignUpGroup, btn)
+ * - GoogleSignUpButton/GoogleSignUpButton(Sign Up with Google/Sign In with Google|GoogleAuthBtn, btn)
+ * - PreviousButton/NextButton/BackButton/StartTransactionButton - className(GeneralBtnStyle1 btn all-btn text-white)
+ * - ViewMoreButton - className(ViewComplaintBtnStyle border-0 mt-5 ms-3)
+ * - ScrollUpButton - className(ScrollUpBtnStyle border )
+ * - CancelButton - className(CancelBtn border-0)
+ * - LearnMoreCardButton - className(d-none d-sm-block LearnMoreCardButton)
+ */

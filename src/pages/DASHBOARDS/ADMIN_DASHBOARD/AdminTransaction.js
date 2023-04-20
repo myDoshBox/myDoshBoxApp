@@ -68,7 +68,7 @@ export const RecentTransactionTableData = (props) => {
         <td className="p-md-3">N{price}</td>
         <td className="p-md-3">{date}</td>
         <td className="p-md-3 d-flex justify-content-center align-items-center">
-          <Notifications text={status_name} styles={status_style} />
+          <Notifications value={status_name} className={status_style} />
         </td>
       </tr>
     </>

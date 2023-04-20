@@ -78,13 +78,13 @@ const NeutralsResolveConflictCard = () => {
           <div className="row mt-5">
             <div className="col-md-6 col-sm-12 mb-2 text-center text-md-end">
               <GeneralBtn
-                text="Sellers Fault"
+                value="Sellers Fault"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
               />
             </div>
             <div className="col-md-6 col-sm-12 text-center text-sm-start">
               <GeneralBtn
-                text="Buyers Fault"
+                value="Buyers Fault"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
               />
             </div>

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GeneralModal } from "../../components/Modal";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 
@@ -100,12 +99,11 @@ const EscrowAgreementText = () => {
         </div>
       </div>
       <div className="d-flex justify-content-center mt-5">
-        <Link to={-1}>
-          <GeneralBtn
-            text="I Reject"
+          <CustomBtn
+            value="I Reject"
             styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
+            to={-1}
           />
-        </Link>
         <GeneralModal
           openModalText="I Agree"
           modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"

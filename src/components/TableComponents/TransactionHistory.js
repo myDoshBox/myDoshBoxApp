@@ -1,5 +1,4 @@
-import React from "react";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 
 const TransactionHistory = (props) => {
@@ -14,14 +13,14 @@ const TransactionHistory = (props) => {
         <td className="text-small">{date}</td>
         <td className="text-small">
           <Notifications
-            text={status}
-            styles={`text-center  rounded-pill ${status}`}
+            value={status}
+            className={status}
           />
         </td>
-        <td className="d-none d-sm-table-cell">
-          <GeneralBtn
-            text="view"
-            styles="text-success text-decoration-none text-small"
+        <td className="d-none d-sm-table-cell text-center">
+          <CustomBtn
+            value="view"
+            className="btn border text-success text-small"
           />
         </td>
       </tr>

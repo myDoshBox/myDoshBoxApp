@@ -1,5 +1,4 @@
 import { Table, Card, Container } from "react-bootstrap";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 
 // AllConflictsCard
 import conflictsData from "../../data/dummyData/conflictsData.json";

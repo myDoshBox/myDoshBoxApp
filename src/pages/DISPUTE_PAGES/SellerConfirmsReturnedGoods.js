@@ -57,8 +57,8 @@ const SellerDeliverGoodsForm = () => {
 
             <div className="d-flex justify-content-center pb-3 mt-3">
               <GeneralBtn
-                text={"Confirm Delivery"}
-                styles={"GeneralBtnStyle2 btn all-btn text-white"}
+                value={"Confirm Delivery"}
+                className={"GeneralBtnStyle2 btn all-btn text-white"}
               />
             </div>
           </Form>

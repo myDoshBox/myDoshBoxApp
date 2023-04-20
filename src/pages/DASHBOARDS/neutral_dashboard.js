@@ -8,7 +8,7 @@ import {
   OngoingConflictIcon,
   OpenConflictIcon,
 } from "../../components/IconComponent/NeutralsDashboardIcons";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
 
@@ -90,12 +90,11 @@ const NeutralDashboard = () => {
                 </tbody>
               </table>
               <div className="d-flex justify-content-end my-4">
-                <Link to={"../transaction"}>
-                  <GeneralBtn
-                    text="View More"
+                  <CustomBtn
+                    value="View More"
                     styles="GeneralBtnStyle1 btn all-btn text-white"
+                    to={"../transaction"}
                   />
-                </Link>
               </div>
             </div>
           </div>

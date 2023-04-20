@@ -1,6 +1,6 @@
 import React from "react";
 import { GuestNavbar } from "../../components/NavbarComponents/TopNavbars";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
 
 const Error404 = () => {
@@ -19,12 +19,11 @@ const Error = () => {
         <h1>404</h1>
         <p>The page you are looking for does not exist</p>
       </div>
-      <Link to="/" className="text-center">
-        <GeneralBtn
-          text={`Go Back Home`}
-          styles={`GeneralBtnStyle1 btn all-btn text-white`}
+        <CustomBtn
+          value={`Go Back Home`}
+          className={`GeneralBtnStyle1 btn all-btn text-white text-center`}
+          to="/" 
         />
-      </Link>
     </div>
   );
 };

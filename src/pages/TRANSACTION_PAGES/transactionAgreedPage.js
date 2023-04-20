@@ -28,7 +28,7 @@ const TransactionAgreed = () => {
       <div>
         <TransactionDetails
           heading={`Transaction Agreed`}
-          sub_text={`The details of this transaction has been viewed and agreed to buy the seller`}
+          sub_value={`The details of this transaction has been viewed and agreed to buy the seller`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -39,14 +39,14 @@ const TransactionAgreed = () => {
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <GeneralBtn
-              text="Back"
+              value="Back"
               styles="CancelBtn btn all-btn text-white"
               icon={<BackIcon />}
             />
           }
           rightBtn={
             <GeneralBtn
-              text="Proceed"
+              value="Proceed"
               styles="GeneralBtnStyle1 btn all-btn text-white"
               icon={<NextIcon />}
             />

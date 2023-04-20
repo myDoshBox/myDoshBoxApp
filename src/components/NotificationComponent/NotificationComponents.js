@@ -2,7 +2,7 @@
 // completed|Completed, canceled|Canceled, refunded|Refunded, dispute|In Dispute, pending-confirmation|Pending Confirmation, awaiting|Awaiting Delivery, pending-payment|Pending Payment, resolved|Resolved, unresolved|Unresolved
 
 export const Notifications = ({ text, styles }) => {
-  return <div className={`text-center d-flex justify-content-center align-items-center rounded-pill ${styles}`}>{text}</div>;
+  return <div className={`text-center rounded-pill ${styles}`}>{text}</div>;
 };
 
 

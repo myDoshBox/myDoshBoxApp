@@ -31,7 +31,7 @@ export const NeutalsInvolvementNotification = () => {
         </div>
         <div className="align-self-end">
           <GeneralBtn
-            text="PROCEED"
+            value="PROCEED"
             styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
           />
         </div>
