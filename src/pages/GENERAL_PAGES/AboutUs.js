@@ -21,7 +21,7 @@ const AboutUs = () => {
 
 const HeroSection = () => {
   return (
-    <section className="container hero pt-5 mt-5 pb-5">
+    <section className="container hero pt-5 mt-5 pb-5" id="BackTop">
       <div className="row mb-5">
         <div className="col-md-6 col-sm-12 col-lg-7 align-self-center">
           <h2 className="text-success fw-bold ">
