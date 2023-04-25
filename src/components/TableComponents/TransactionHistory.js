@@ -7,7 +7,9 @@ const TransactionHistory = (props) => {
   return (
     <>
       <tr>
-        <td className=" d-none d-md-table-cell text-small">{trans_id}</td>
+        <td className=" d-none d-md-table-cell text-small">
+          {trans_id}
+        </td>
         <td className="d-none d-sm-table-cell text-small">{buyer_name}</td>
         <td className="d-none d-lg-table-cell text-small">{seller_name}</td>
         <td className="text-small">{products}</td>

@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="row mb-5">
         <div className="col-md-6 col-sm-12 col-lg-7 align-self-center">
           <h2 className="text-success fw-bold ">
-            We're a team of creators & innovators
+            We're a team of creators & innovatorsx
           </h2>
           <p className="fw-light col-10">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
@@ -135,7 +135,7 @@ const TeamsSection = () => {
           })}
         </div>
 
-        <div className="pt-5 row ">
+        <div className="pt-5 row">
           <h4 className="mb-3 fw-bold">Brand and Content Team</h4>
           {aboutusData.marketing_team.map((busteam) => {
             return (
