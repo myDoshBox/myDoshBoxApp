@@ -3,6 +3,11 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+<<<<<<< HEAD
+=======
+
+  // Navigate,
+>>>>>>> f1c15354ce33c777e94a8890d7b4e467d0188836
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
@@ -24,7 +29,7 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
-import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+// import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
@@ -43,9 +48,12 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
+<<<<<<< HEAD
 
 // import UsersPage from "./pages/UsersPage";
 import UserProfile from "./pages/UserProfile";
+=======
+>>>>>>> f1c15354ce33c777e94a8890d7b4e467d0188836
 
 // Customer Care Pages
 import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
@@ -54,10 +62,14 @@ import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 
 // Admin DashBoard Page
+<<<<<<< HEAD
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
 
 
+=======
+// import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+>>>>>>> f1c15354ce33c777e94a8890d7b4e467d0188836
 function App() {
   return (
     <Router>
@@ -80,6 +92,11 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
+<<<<<<< HEAD
+=======
+          <Route path="userspage" element={<UsersPage />} />
+          <Route path="customercare" element={<CustomerCareTransaction />} />
+>>>>>>> f1c15354ce33c777e94a8890d7b4e467d0188836
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}
@@ -106,7 +123,7 @@ function App() {
         </Route>
 
         {/* Admin Routes */}
-        <Route path="admin" element={<AdminSideNav />}>
+        {/* <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
           <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="profile" element={<UserProfile />} />

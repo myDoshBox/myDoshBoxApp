@@ -30,21 +30,24 @@ const Footer = () => {
   }, [location.pathname]);
   return showFooter ? (
     <footer className="FooterBgColor mt-5 pb-5">
-      {/* Back to Top Icon Section starts  */}
+      {/* Back to Top  icon Starts */}
       <div className="d-flex justify-content-end pt-3 me-3">
         <a href="#BackTop">
           <ScrollUpIcon />
         </a>
       </div>
-      {/* Back to Top Icon Section Ends */}
-      {/* Footer Menu Section Starts  */}
-      <div className="container d-none d-md-block d-lg-block">
+      {/* Back to Top  icon Ends */}
+      <section className="container-fluid w-75 mt-2">
         <div className="row">
-          <div className="col-lg-3 col-md-12">
+          {/* image section starts */}
+          <div className="col-sm-12 col-md-6 col-lg-3 mx-auto">
             <img src={FooterLogo} className="w-75" alt="Logo" />
           </div>
-          <div className="col-lg-4 mx-auto d-flex col-md-12">
-            <div className="mb-5">
+          {/* image section Ends */}
+
+          {/* Menu Section starts */}
+          <div className="d-flex col-sm-12 col-md-6 col-lg-4">
+            <div className="mb-5 mx-sm-auto">
               <h6 className="text-white">The Project</h6>
               <span class="nav flex-column">
                 <Link
@@ -135,7 +138,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-5">
+          {/* Menu Section Ends */}
+
+          {/* Address section starts */}
+          <div className="col-sm-12 col-md-12 col-lg-5">
             <div className="row">
               <h6 className="text-center text-white">ADDRESS</h6>
               <span className="text-break text-white fw-lighter fs-6 opacity-75">
@@ -185,165 +191,11 @@ const Footer = () => {
                 {/* Social Medial Icon Sectin Ends */}
               </div>
             </div>
+            {/* Address section Ends */}
           </div>
         </div>
-      </div>
-      {/* Mobile Phone Footer */}
-      <div className="d-block d-sm-block d-md-none">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 ms-3">
-              <img src={FooterLogo} className="w-75" alt="Logo" />
-            </div>
-            <div className="col-sm-12 mx-auto d-flex ms-4">
-              <div className="mb-5">
-                <h6 className="text-white">The Project</h6>
-                <span class="nav flex-column">
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to="/"
-                    className="text-white opacity-75 nav-item text-white"
-                  >
-                    Home
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to="/aboutus"
-                    className="text-white opacity-75 nav-item"
-                  >
-                    About
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to=".."
-                    className="text-white opacity-75 nav-item link"
-                  >
-                    Service
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to="/pricingpage"
-                    className="text-white opacity-75 nav-item"
-                  >
-                    Pricing
-                  </Link>
-                </span>
-              </div>
-              <div className="mb-5 mx-auto">
-                <h6 className="text-white">Support</h6>
-                <ul class="nav flex-column">
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to="/contactus"
-                    className="text-white opacity-75 nav-item"
-                  >
-                    Contact
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to="/faqs"
-                    className="text-white opacity-75
-                  nav-item"
-                  >
-                    FAQ
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to=".."
-                    className="text-white opacity-75 nav-item"
-                  >
-                    Terms of Use
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to=".."
-                    className="text-white opacity-75 nav-item"
-                  >
-                    Private Policy
-                  </Link>
-
-                  <Link
-                    onClick={handleDisappear}
-                    style={{ textDecoration: "none" }}
-                    to=".."
-                    className="text-white opacity-75 nav-item"
-                  >
-                    Customer Care
-                  </Link>
-                </ul>
-              </div>
-            </div>
-            <div className="col-sm-12">
-              <div className="row">
-                <h6 className="text-center text-white">ADDRESS</h6>
-                <span className="text-break text-white fw-lighter fs-6 opacity-75">
-                  The 8thGear Space, 11b Colin Onabule Crescent, Diamond Estate
-                  Off CMD Road (beside Secretariat/Magodo gate) Lagos Nigeria
-                </span>
-              </div>
-              <div className="row">
-                <span className="mt-3">
-                  <SubscribeForm />
-                </span>
-                <div className="mt-3">
-                  <h6 className="mb-3 text-white">Connect With US</h6>
-                  {/* Social Medial Icon Sectin Starts */}
-                  <span className="mt-2 mb-5">
-                    <a
-                      href=""
-                      className="border border-white  rounded-circle p-2 me-2 "
-                    >
-                      <InstagramIcon />
-                    </a>
-                    <a
-                      href=""
-                      className="border border-white  rounded-circle p-2 me-2 "
-                    >
-                      <LinkedinIcon />
-                    </a>
-                    <a
-                      href=""
-                      className="border border-white  rounded-circle p-2 me-2"
-                    >
-                      <FacebookIcon />
-                    </a>
-                    <a
-                      href=""
-                      className="border border-white  rounded-circle p-2 me-2 "
-                    >
-                      <TwitterIcon />
-                    </a>
-                    <a
-                      href=""
-                      className="border border-white  rounded-circle p-2 me-2 "
-                    >
-                      <WhatsAppIcon />
-                    </a>
-                  </span>
-                  {/* Social Medial Icon Sectin Ends */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Footer Menu Section Ends  */}
+      </section>
     </footer>
   ) : null;
 };
-
 export default Footer;

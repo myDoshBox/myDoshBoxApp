@@ -77,7 +77,7 @@ export const Reportissuesform = () => {
             className="form-control w-100"
             id="exampleFormControlTextarea1"
             rows="3"
-            placeholder=" The Expected Solution"
+            placeholder="The Expected Solution"
             required
           ></textarea>
         </div>
