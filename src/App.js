@@ -3,8 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
-  // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
@@ -45,9 +43,9 @@ import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummary
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
-import UserProfile from "./pages/UserProfile";
-import AdminDashboard from "./pages/AdminDashboard";
+
 // import UsersPage from "./pages/UsersPage";
+import UserProfile from "./pages/UserProfile";
 
 // Customer Care Pages
 import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
@@ -56,7 +54,10 @@ import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 
 // Admin DashBoard Page
+import AdminDashboard from "./pages/AdminDashboard";
 import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+
+
 function App() {
   return (
     <Router>
@@ -79,7 +80,6 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
-          <Route path="userspage" element={<CustomerCareTransaction />} />
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}

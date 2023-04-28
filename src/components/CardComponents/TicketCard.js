@@ -104,17 +104,17 @@ export const GeneratedTicketCard = (props) => {
             <div className="mb-3 d-flex justify-content-md-evenly flex-column flex-md-row">
                 <CustomBtn
                   value={btn1}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3 mx-auto mb-2"
+                  className=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3 mx-auto mb-2"
                   to={link1}
                 />
                 <CustomBtn
                   value={btn2}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4 mx-auto mb-2"
+                  className=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4 mx-auto mb-2"
                   to={link2}
                 />
                 <CustomBtn
                   value={btn3}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4mx-auto mb-2 "
+                  className=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4mx-auto mb-2 "
                   to={link3}
                 />
             </div>

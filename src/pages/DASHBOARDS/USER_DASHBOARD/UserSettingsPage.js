@@ -52,14 +52,14 @@ const SettingsPage = () => {
             <div className="col-sm-12 mb-2 col-lg-6 mt-4 mt-lg-0">
               <UserDashboardCard
                 icon={<UpdateProfileIcon />}
-                value={"Update Profile"}
+                text={"Update Profile"}
                 link={"../updateprofile"}
               />
             </div>
             <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<ChangeBankIcon />}
-                value={"Update Bank Details"}
+                text={"Update Bank Details"}
                 link={"../updatebank"}
               />
             </div>
@@ -68,14 +68,14 @@ const SettingsPage = () => {
             <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<FeedbackIcon />}
-                value={"Report App Defect"}
+                text={"Report App Defect"}
                 link={"../reportissues"}
               />
             </div>
             <div className="col-sm-12 mb-2 col-lg-6">
               <UserDashboardCard
                 icon={<ContactUsIcon />}
-                value={"Contact Us"}
+                text={"Contact Us"}
                 link={"/contactus"}
               />
             </div>
@@ -84,12 +84,12 @@ const SettingsPage = () => {
             <div className="col-sm-12 col-lg-6">
               <UserDashboardCard
                 icon={<FaqIcon />}
-                value={"FAQs"}
+                text={"FAQs"}
                 link={"/faqs"}
               />
             </div>
             <div className="col-sm-12 col-lg-6" onClick={nav}>
-              <UserDashboardCard icon={<BigLogoutIcon />} value={"Logout"} />
+              <UserDashboardCard icon={<BigLogoutIcon />} text={"Logout"} />
             </div>
           </div>
         </div>

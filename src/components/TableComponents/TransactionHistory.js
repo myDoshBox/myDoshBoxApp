@@ -12,15 +12,12 @@ const TransactionHistory = (props) => {
         <td className="text-small">{products}</td>
         <td className="text-small">{date}</td>
         <td className="text-small">
-          <Notifications
-            value={status}
-            className={status}
-          />
+          <Notifications text={status} styles={status} />
         </td>
         <td className="d-none d-sm-table-cell text-center">
           <CustomBtn
             value="view"
-            className="btn border text-success text-small"
+            className="btn border text-success text-small viewBtn"
           />
         </td>
       </tr>

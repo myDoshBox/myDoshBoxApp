@@ -36,7 +36,7 @@ const AdminDashboard = memo(() => {
               text="New Users"
               BigIcon={<TotalUsersIcon />}
               SmallIcon={<ArrowUpIcon />}
-              percentChange="15% More"
+              change="15% More"
               ResponsiveWidth={`col-md-4`}
             />
             <AnalyticsCard
@@ -44,7 +44,7 @@ const AdminDashboard = memo(() => {
               text="Completed Transactions"
               BigIcon={<CompletedTransactionIcon />}
               SmallIcon={<ArrowUpIcon />}
-              percentChange="5% More"
+              change="5% More"
               ResponsiveWidth={`col-md-4`}
             />
             <AnalyticsCard
@@ -52,7 +52,7 @@ const AdminDashboard = memo(() => {
               text="Total Profits"
               BigIcon={<LineSparkline />}
               SmallIcon={<ArrowDownIcon />}
-              percentChange="5% Less"
+              change="5% Less"
               ResponsiveWidth={`col-md-4`}
             />
           </div>

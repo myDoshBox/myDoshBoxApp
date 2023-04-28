@@ -317,6 +317,12 @@ div {
   opacity: 0.8;
 }
 
+.viewBtn:hover,
+.viewBtn:focus {
+  border-color: currentColor !important;
+  font-weight: bold;
+}
+
 .teamValueStyle {
   background-color: #e5f0ed !important;
 }

@@ -5,6 +5,7 @@ import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNav
 import CustomButton from "../../../components/ButtonsComponent/GenandAuthBtn";
 import { ArrowDownIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
 import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
+import CustomBtn from "../../../components/ButtonsComponent/GenandAuthBtn";
 
 const CustomerCareTransaction = () => {
   return (
@@ -25,11 +26,16 @@ const CustomerCareTransaction = () => {
 
 export const CustomerCareTransactionTable = () => {
   return (
-    <div className="border shadow p-3" style={{ width: "100%" }}>
+    <div className="shadow p-3 rounded-3 p-4" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-flex justify-content-end pb-3">
-        <CustomButton value="Sort by: Recent" className="FilteBtnStyle bg-transparent border-0" lefticon={<SortIcon/>} righticon={<ArrowDownIcon/>} />
+          <CustomButton
+            value="Sort by: Recent"
+            className="btn border text-success text-small viewBtn"
+            lefticon={<SortIcon />}
+            righticon={<ArrowDownIcon />}
+          />
         </div>
 
         <table className="table transaction-table">
@@ -85,9 +91,15 @@ export const CustomerCareTransactionTableData = (props) => {
         <td className="p-md-3 small-hide">{products}</td>
         <td className="p-md-3 small-hide">{date}</td>
         <td className="p-md-3 d-flex justify-content-center align-items-center">
-          <Notifications value={status_name} className={status_style} />
+          <Notifications text={status_name} styles={status_style} />
         </td>
-        <td className="p-md-3 small-hide">{view}</td>
+        <td className="p-md-3 small-hide">
+          <CustomBtn
+            value={view}
+            className="btn border text-success text-small viewBtn"
+            style={{ whiteSpace: "nowrap" }}
+          />
+        </td>
       </tr>
     </>
   );

@@ -45,16 +45,14 @@ const TransactionSummary = () => {
           leftBtn={
               <CustomBtn
                 value="Back"
-                styles="CancelBtn btn all-btn text-white"
-                icon={<BackIcon />}
+                className="CancelBtn btn all-btn text-white"
                 to={"../initiate-escrow"}
               />
           }
           rightBtn={
               <CustomBtn
                 value="Proceed"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-                icon={<NextIcon />}
+                className="GeneralBtnStyle1 btn all-btn text-white"
                 to={"../agreement"}
               />
           }

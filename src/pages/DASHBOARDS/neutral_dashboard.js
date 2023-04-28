@@ -72,12 +72,12 @@ const NeutralDashboard = () => {
                     <th scope="col" className="opacity-50">
                       Date
                     </th>
-                    <th scope="col" className="opacity-50">
+                    <th scope="col" className="opacity-50 text-center">
                       Status
                     </th>
                     <th
                       scope="col"
-                      className="opacity-50 d-none d-sm-table-cell"
+                      className="opacity-50 d-none d-sm-table-cell text-center"
                     >
                       ...
                     </th>
@@ -92,7 +92,7 @@ const NeutralDashboard = () => {
               <div className="d-flex justify-content-end my-4">
                   <CustomBtn
                     value="View More"
-                    styles="GeneralBtnStyle1 btn all-btn text-white"
+                    className="GeneralBtnStyle1 btn all-btn text-white"
                     to={"../transaction"}
                   />
               </div>

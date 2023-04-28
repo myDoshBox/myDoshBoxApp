@@ -101,7 +101,7 @@ const EscrowAgreementText = () => {
       <div className="d-flex justify-content-center mt-5">
           <CustomBtn
             value="I Reject"
-            styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
+            className="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
             to={-1}
           />
         <GeneralModal

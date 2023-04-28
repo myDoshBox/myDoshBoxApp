@@ -6,7 +6,7 @@ import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 export const TicketHistoryTable = () => {
   return (
     <>
-      <div className="border-0 rounded shadow container p-4">
+      <div className="border-0 rounded shadow p-4">
         <table className="table transaction-table">
           <thead>
             <tr className="text-center">
@@ -84,7 +84,7 @@ const TicketHistoryData = (props) => {
       <td className="small-hide py-3">{complainer}</td>
       <td className="small-hide py-3">{complainer_id}</td>
       <td className="d-flex justify-content-center align-items-center py-3">
-        <Notifications value={status_name} className={status_style} />
+        <Notifications text={status_name} styles={status_style} />
       </td>
     </tr>
   );

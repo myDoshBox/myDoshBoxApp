@@ -450,16 +450,16 @@ const InitiateEscrowForm = () => {
           </>
         )}
         <div className="d-flex justify-content-center">
-            <CustomBtn
+          <CustomBtn
             to="../../userdashboard"
-              value="Cancel"
-              styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
-            />
-            <CustomBtn
+            value="Cancel"
+            className="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
+          />
+          <CustomBtn
             to="../transactionsummary"
-              value="Proceed"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
+            value="Proceed"
+            className="GeneralBtnStyle1 btn all-btn text-white"
+          />
         </div>
       </Form>
     </div>

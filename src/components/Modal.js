@@ -23,7 +23,7 @@ export const GeneralModal = ({
     <>
       <CustomBtn
         className={modalBtnStyle}
-        onclick={handleShow}
+        onClick={handleShow}
         value={openModalText}
       />
       <Modal show={show} onHide={handleClose} className="GeneralModal">
@@ -37,7 +37,7 @@ export const GeneralModal = ({
         <Modal.Footer className="border border-0 text-center justify-content-center pt-0">
             <CustomBtn
               className={modalBtnStyle}
-              onclick={handleClose}
+              onClick={handleClose}
               value={closeModalText}
               to={modalRoute}
             />

@@ -264,7 +264,7 @@ export const UpdateBankDetails = () => {
   return (
     <Form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3 shadow card p-4 px-lg-5 py-lg-3"
+      className="border-0 bg-white rounded-3 shadow card p-4 px-lg-5 py-lg-3"
     >
       <Form.Group className="mb-3 AccountNum" controlId="AccountNum">
         <Form.Label className="mb-0">Account Number</Form.Label>
@@ -311,7 +311,10 @@ export const UpdateBankDetails = () => {
       </Form.Group>
       <div className="mb-4">
         <div onClick={handleSubmit}>
-          <CustomBtn value={"Update"} />
+          <CustomBtn
+            value={"Update"}
+            className="GeneralBtnStyle1 btn all-btn text-white"
+          />
         </div>
       </div>
     </Form>
@@ -462,7 +465,10 @@ export const UserUpdateProfile = () => {
       </Form.Group>
 
       <div onClick={handleSubmit} className="mb-4">
-        <CustomBtn value={"Update Profile"} />
+        <CustomBtn
+          value={"Update Profile"}
+          className="GeneralBtnStyle1 btn all-btn text-white"
+        />
       </div>
     </Form>
   );

@@ -21,7 +21,6 @@ import TransactionData from "../../data/dummyData/transactionData.json";
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
   ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
-    console.count("AnalyticsCard: ");
     return (
       <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
         <div className="px-3 shadow border-0 rounded-2 DashboardCard h-100">
@@ -144,17 +143,25 @@ export const MiniUsersCard = memo(({ style }) => {
   return (
     <div className={`${style} mb-3 mb-md-0`}>
       <div className={`card p-3 shadow rounded border-0 h-100`}>
-        <h6 className="pb-3 m-0">All Users</h6>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <h6 className="m-0">All Users</h6>
+          <CustomBtn
+            value="View More"
+            className="btn border text-success text-small viewBtn"
+            to="users"
+            style={{ whiteSpace: "nowrap" }}
+          />
+        </div>
         <table className="table m-0 h-100">
           <thead>
             <tr>
-              <th scope="col" className="opacity-50">
+              <th scope="col" className="opacity-50 text-center">
                 User Id
               </th>
-              <th scope="col" className="opacity-50">
+              <th scope="col" className="opacity-50 text-center">
                 Name
               </th>
-              <th scope="col" className="opacity-50">
+              <th scope="col" className="opacity-50 text-center">
                 Completed Transactions
               </th>
             </tr>
@@ -171,12 +178,6 @@ export const MiniUsersCard = memo(({ style }) => {
                 </>
               );
             })}
-            <CustomBtn
-                value="View More"
-                className="GeneralBtnStyle1 btn all-btn text-white text-decoration-none mt-4"
-                to="users"
-                style={{ whiteSpace: "nowrap" }}
-              />
           </tbody>
         </table>
       </div>

@@ -106,3 +106,9 @@
   text-decoration: underline;
   opacity: .8;
 }
+
+.viewBtn:hover,
+.viewBtn:focus {
+  border-color: currentColor !important;
+  font-weight: bold;
+}
