@@ -1,5 +1,3 @@
-// UserInflowCard {Postponed as it is a graph}
-
 import { memo, useState } from "react";
 //All Buttons/Icon Import Starts
 // import {
@@ -15,6 +13,7 @@ import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 //All Image Import Starts
 import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
+
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
 
@@ -35,7 +34,7 @@ export const AnalyticsCard = memo(
             <div className="d-flex align-items-center justify-content-end">
               {SmallIcon}
               <p className="text-small m-0">
-                {change ? change + " than last week" : null}{" "}
+                {change ? change + " than last week" : null}
               </p>
             </div>
           </Link>
@@ -113,13 +112,14 @@ export const MiniProfileCard = () => {
           <p className="ms-lg-1">100 deals completed</p>
         </div>
         <div className="d-flex px-3 ">
-          <span>
-            <RatingIcon />
-            <RatingIcon />
-            <RatingIcon />
-            <RatingIcon />
-            <RatingIcon />
+          <span role="button" data-testid="rating-icons-container">
+            <RatingIcon id={1} />
+            <RatingIcon id={2} />
+            <RatingIcon id={3} />
+            <RatingIcon id={4} />
+            <RatingIcon id={5} />
           </span>
+
           <p className="mx-2"> 0.0 rating </p>
         </div>
         <hr></hr>
@@ -128,6 +128,7 @@ export const MiniProfileCard = () => {
             <CustomBtn
               value="Edit Profile"
               className="GeneralBtnStyle1 btn all-btn text-white"
+              data-testid="updateprofile-page"
             />
           </Link>
         </div>

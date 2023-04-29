@@ -9,7 +9,7 @@ expect.extend(toHaveNoViolations);
 
 // Prevents errors related to using the Link component outside of a Router.
 // This allows to test the CustomBtn component in isolation without having to set up a full Router for each test.
-const RouteGuard = ({ test, text }) => {
+const RouteGuard = ({ test}) => {
   return <Router>{test}</Router>;
 };
 

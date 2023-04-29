@@ -24,7 +24,7 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
-// import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
@@ -106,7 +106,7 @@ function App() {
         </Route>
 
         {/* Admin Routes */}
-        {/* <Route path="admin" element={<AdminSideNav />}>
+        <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
           <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="profile" element={<UserProfile />} />
