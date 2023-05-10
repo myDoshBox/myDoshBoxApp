@@ -56,6 +56,7 @@ export const SignUpIndividual = () => {
       console.log("Invalid Form");
     }
   });
+
   const validate = () => {
     const errors = {};
 
@@ -230,7 +231,7 @@ export const SignUpIndividual = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GeneralBtn text="Sign Up With Google" icon={<GoogleIcon />} />
+        <GoogleButton text="Sign Up With Google" icon={<GoogleIcon />} />
       </div>
     </>
   );
@@ -485,7 +486,7 @@ export const SignUpOrganization = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GeneralBtn text="Sign Up With Google" lefticon={<GoogleIcon />} />
+        <GoogleButton text="Sign Up With Google" icon={<GoogleIcon />} />
       </div>
     </>
   );
