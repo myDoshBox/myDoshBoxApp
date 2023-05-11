@@ -28,9 +28,9 @@ const HeroSection = () => {
       <div className="row" id="BackTop">
         <div className="col-md-12 col-sm-12 text-center">
           <h1>
-            Lorem usumm <br /> hums ipsumsera
+            Lorem dolor ipsum usumm <br /> hums ipsumsera
           </h1>
-          <p>Lorem ipsum sitamet dolor </p>
+          <p>Lorem ipsum dolor mniuy sitamet </p>
         </div>
         <div className="text-center">
           <Link to="/signup">
