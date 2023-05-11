@@ -30,7 +30,7 @@ const HeroSection = () => {
           <h1>
             Lorem ipsum usumm <br /> hums ipsumsera
           </h1>
-          <p>Lorem ipsum dolor sitamet dolor</p>
+          <p>Lorem ipsum dolor sitamet </p>
         </div>
         <div className="text-center">
           <Link to="/signup">
