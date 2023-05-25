@@ -1,4 +1,5 @@
-import { GeneralBtn } from ".//ButtonsComponent/GenandAuthBtn";
+import React from "react";
+import { GeneralBtn } from "./ButtonsComponent/GenandAuthBtn";
 
 export const PaginationBar = () => {
   return (

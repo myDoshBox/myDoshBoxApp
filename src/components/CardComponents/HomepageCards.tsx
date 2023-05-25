@@ -1,5 +1,11 @@
+import React from "react";
+import {
+  WhyChooseUsCardProps,
+  OurProcessFlowProps,
+} from "../ComponentInterfaces/CardInterface/HomepageCardsInterface";
+
 // WhyChooseUsCard
-export const WhyChooseUsCard = (props) => {
+export const WhyChooseUsCard = (props: WhyChooseUsCardProps) => {
   const { image, title, description } = props;
   return (
     <div className="container p-2">
@@ -14,7 +20,7 @@ export const WhyChooseUsCard = (props) => {
   );
 };
 
-export const OurProcessFlow = ({ image, title }) => {
+export const OurProcessFlow = ({ image, title }: OurProcessFlowProps) => {
   return (
     <div className="p-5">
       <div>

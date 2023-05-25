@@ -18,10 +18,24 @@ import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
+import React from "react";
+import {
+  AnalyticsCardProps,
+  UserDashboardCardProps,
+  UserDashboardCard2Props,
+} from "../ComponentInterfaces/CardInterface/UsersCardsInterface";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
-  ({ ResponsiveWidth, BigIcon, SmallIcon, text, value, link, change }) => {
+  ({
+    ResponsiveWidth,
+    BigIcon,
+    SmallIcon,
+    text,
+    value,
+    link,
+    change,
+  }: AnalyticsCardProps) => {
     console.count("AnalyticsCard: ");
     return (
       <div className={`${ResponsiveWidth} mb-4 mb-lg-0`}>
@@ -48,7 +62,7 @@ export const AnalyticsCard = memo(
 );
 
 //LogoutCard /ContactCustomerCareCard /IntiateDisputeCard /ClosedConflictsCard /OngoingConflictCard,   OpenConflictsCard /Logout /Contact Us /Report App Defect /Change Bank Details /Update Profile /FAQs
-export const UserDashboardCard = (props) => {
+export const UserDashboardCard = (props: UserDashboardCardProps) => {
   const { text, icon, link, relative } = props;
   return (
     <Link
@@ -71,7 +85,7 @@ export const UserDashboardCard = (props) => {
   );
 };
 
-export const UserDashboardCard2 = (props) => {
+export const UserDashboardCard2 = (props: UserDashboardCard2Props) => {
   const { text, icon, link } = props;
   return (
     <Link to={link} className="text-decoration-none text-dark">
@@ -130,6 +144,14 @@ export const MiniProfileCard = () => {
             <GeneralBtn
               text="Edit Profile"
               styles="GeneralBtnStyle1 btn all-btn text-white"
+              link={""}
+              lefticon={""}
+              righticon={""}
+              onclick={function (
+                event: React.MouseEvent<HTMLElement, MouseEvent>
+              ): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           </Link>
         </div>
@@ -139,7 +161,7 @@ export const MiniProfileCard = () => {
 };
 
 // MiniUsersCard
-export const MiniUsersCard = memo(({ style }) => {
+export const MiniUsersCard = memo(({ style }: any) => {
   console.count("MiniUsersCard: ");
   const [max, setMax] = useState(5);
   return (
@@ -181,6 +203,13 @@ export const MiniUsersCard = memo(({ style }) => {
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
                 link={"users"}
+                lefticon={""}
+                righticon={""}
+                onclick={function (
+                  event: React.MouseEvent<HTMLElement, MouseEvent>
+                ): void {
+                  throw new Error("Function not implemented.");
+                }}
               />
             </Link>
           </tbody>

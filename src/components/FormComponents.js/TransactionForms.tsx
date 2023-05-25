@@ -1,7 +1,8 @@
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { GeneralModal } from "../Modal";
+import React from "react";
 
 //    <DeliveryForm
 //   heading="Confirm Product At Delivery"
@@ -34,6 +35,10 @@ export const DeliveryForm = ({ heading, sub_text, checkList }) => {
             <GeneralBtn
               text="Cancel"
               styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
+              link={""}
+              lefticon={""}
+              righticon={""}
+              onclick={undefined}
             />
           </Link>
           <GeneralModal

@@ -3,6 +3,14 @@ import { useState, useEffect } from "react";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
+import {
+  personProps,
+  personDetailsProps,
+  passwordToggleProps,
+  passwordToggle1Props,
+  submissionProps,
+  errorsProps,
+} from "../ComponentInterfaces/FormInterface/AuthenticationFormsInterface";
 
 export const SignUpIndividual = () => {
   const initialValues = {
@@ -13,14 +21,18 @@ export const SignUpIndividual = () => {
     checked: false,
   };
 
-  const [person, setPerson] = useState(initialValues);
-  const [personDetails, setPersonDetails] = useState([]);
-  const [passwordToggle, setpasswordToggle] = useState(false);
-  const [passwordToggle1, setpasswordToggle1] = useState(false);
-  const [errors, setErrors] = useState({});
-  const [submission, setSubmission] = useState(false);
+  const [person, setPerson] = useState<personProps>(initialValues);
+  const [personDetails, setPersonDetails] = useState<personDetailsProps>(
+    {} as personDetailsProps
+  );
+  const [passwordToggle, setpasswordToggle] =
+    useState<passwordToggleProps | null>(null);
+  const [passwordToggle1, setpasswordToggle1] =
+    useState<passwordToggle1Props | null>(null);
+  const [errors, setErrors] = useState<errorsProps>({} as errorsProps);
+  const [submission, setSubmission] = useState<submissionProps | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const name = e.target.name;
     const value = e.target.value;
     setPerson({ ...person, [name]: value });
@@ -28,7 +40,7 @@ export const SignUpIndividual = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (
       person.password !== person.confirmPassword &&
@@ -93,11 +105,11 @@ export const SignUpIndividual = () => {
     return errors;
   };
 
-  const handleShowHide = (e) => {
+  const handleShowHide = (e: { preventDefault: () => void }) => {
     setpasswordToggle(!passwordToggle);
     e.preventDefault();
   };
-  const handleShowHide2 = (e) => {
+  const handleShowHide2 = (e: { preventDefault: () => void }) => {
     setpasswordToggle1(!passwordToggle1);
     e.preventDefault();
   };
@@ -252,22 +264,22 @@ export const SignUpOrganization = () => {
   const [errors, setErrors] = useState({});
   const [submission, setSubmission] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const name = e.target.name;
     const value = e.target.value;
     setOrganization({ ...organization, [name]: value });
     // setErrors(validate(organization));
   };
-  const handleShowHide = (e) => {
+  const handleShowHide = (e: { preventDefault: () => void }) => {
     setpasswordToggle(!passwordToggle);
     e.preventDefault();
   };
-  const handleShowHide2 = (e) => {
+  const handleShowHide2 = (e: { preventDefault: () => void }) => {
     setpasswordToggle1(!passwordToggle1);
     e.preventDefault();
   };
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (
       organization.password2 !== organization.confirmPassword2 &&

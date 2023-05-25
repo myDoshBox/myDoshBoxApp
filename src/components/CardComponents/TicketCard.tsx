@@ -1,9 +1,14 @@
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
-import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
+import React from "react";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { Cancel } from "../IconComponent/NeutralsDashboardIcons";
 import { Link } from "react-router-dom";
+import {
+  GeneratedTicketCardProps,
+  OtherTicketProps,
+} from "../ComponentInterfaces/CardInterface/TicketCardInterface";
 
 // For Generated Ticket Card
-export const GeneratedTicketCard = (props) => {
+export const GeneratedTicketCard = (props: GeneratedTicketCardProps) => {
   const {
     tell,
     transaction_id,
@@ -24,13 +29,13 @@ export const GeneratedTicketCard = (props) => {
     <section>
       <div>
         <div className="card border-0 shadow">
-          <div class="card-body p-4">
+          <div className="card-body p-4">
             <span className="d-flex justify-content-end">
               <Link to={"../../userdashboard"}>
                 <GeneralBtn lefticon={<Cancel />} />
               </Link>
             </span>
-            <h5 class="card-title text-center">TICKET No.19234</h5>
+            <h5 className="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
               <tr>
                 <td className="fw-bold">PHONE NUMBER :</td>
@@ -82,18 +87,27 @@ export const GeneratedTicketCard = (props) => {
                 </span>
               </div>
               <span className="d-flex mb-3">
-                <div class="collapse collapse-horizontal" id="collapseExample">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img1} className="" alt="" />
                   </div>
                 </div>
-                <div class="collapse collapse-horizontal" id="collapseExample1">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample1"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img2} className="" alt="" />
                   </div>
                 </div>
-                <div class="collapse collapse-horizontal" id="collapseExample2">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample2"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img3} className="" alt="" />
                   </div>
                 </div>
@@ -109,18 +123,30 @@ export const GeneratedTicketCard = (props) => {
                 <GeneralBtn
                   text={btn1}
                   styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3"
+                  link={""}
+                  lefticon={""}
+                  righticon={""}
+                  onclick={undefined}
                 />
               </Link>
               <Link to={link2} className="mx-auto mb-2">
                 <GeneralBtn
                   text={btn2}
                   styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4"
+                  link={""}
+                  lefticon={""}
+                  righticon={""}
+                  onclick={undefined}
                 />
               </Link>
               <Link to={link3} className="mx-auto mb-2">
                 <GeneralBtn
                   text={btn3}
                   styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4"
+                  link={""}
+                  lefticon={""}
+                  righticon={""}
+                  onclick={undefined}
                 />
               </Link>
             </div>
@@ -132,7 +158,7 @@ export const GeneratedTicketCard = (props) => {
 };
 
 // For | SellerResolveCoflictNotification |SellersGeneratedContestTicket
-export const OtherTicket = (props) => {
+export const OtherTicket = (props: OtherTicketProps) => {
   const {
     full_name,
     transaction_id,
@@ -149,11 +175,11 @@ export const OtherTicket = (props) => {
     <section>
       <div>
         <div className="card border-0 shadow" style={{ width: "40rem" }}>
-          <div class="card-body p-4">
+          <div className="card-body p-4">
             <span className="d-flex justify-content-end">
               <GeneralBtn lefticon={<Cancel />} />
             </span>
-            <h5 class="card-title text-center">TICKET No.19234</h5>
+            <h5 className="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
               <tr>
                 <td className="fw-bold">Full Name :</td>
@@ -206,18 +232,27 @@ export const OtherTicket = (props) => {
                 </span>
               </div>
               <span className="d-flex mb-3">
-                <div class="collapse collapse-horizontal" id="collapseExample">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img1} className="" alt="" />
                   </div>
                 </div>
-                <div class="collapse collapse-horizontal" id="collapseExample1">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample1"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img2} className="" alt="" />
                   </div>
                 </div>
-                <div class="collapse collapse-horizontal" id="collapseExample2">
-                  <div class="w-75 d-flex">
+                <div
+                  className="collapse collapse-horizontal"
+                  id="collapseExample2"
+                >
+                  <div className="w-75 d-flex">
                     <img src={Img3} className="" alt="" />
                   </div>
                 </div>
@@ -232,10 +267,18 @@ export const OtherTicket = (props) => {
               <GeneralBtn
                 text={btn1}
                 styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                link={""}
+                lefticon={""}
+                righticon={""}
+                onclick={undefined}
               />
               <GeneralBtn
                 text={btn2}
                 styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
+                link={""}
+                lefticon={""}
+                righticon={""}
+                onclick={undefined}
               />
             </div>
           </div>

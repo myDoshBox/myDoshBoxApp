@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import React from "react";
 
 //ContactUsForm
 export const ContactUsForm = () => {
@@ -67,6 +68,10 @@ export const ContactUsForm = () => {
             <GeneralBtn
               text="Submit"
               styles="GeneralBtnStyle1 btn all-btn text-white"
+              link={""}
+              lefticon={""}
+              righticon={""}
+              onclick={undefined}
             />
           </div>
         </div>
@@ -91,7 +96,7 @@ export const SubscribeForm = () => {
 
   return (
     <>
-      <form class="input-group">
+      <form className="input-group">
         <input
           type="text"
           className="form-control"

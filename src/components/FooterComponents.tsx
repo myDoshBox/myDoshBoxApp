@@ -9,8 +9,9 @@ import {
   TwitterIcon,
   WhatsAppIcon,
 } from "./IconComponent/SocialMediaIcons";
-import { SubscribeForm } from "../components/FormComponents.js/ContactForms";
+import { SubscribeForm } from "./FormComponents.js/ContactForms";
 import { useRef } from "react";
+import React from "react";
 
 const Footer = () => {
   const disappearEl = useRef(null);
@@ -49,7 +50,7 @@ const Footer = () => {
           <div className="d-flex col-sm-12 col-md-6 col-lg-4">
             <div className="mb-5 mx-sm-auto">
               <h6 className="text-white">The Project</h6>
-              <span class="nav flex-column">
+              <span clas="nav flex-column">
                 <Link
                   onClick={handleDisappear}
                   style={{ textDecoration: "none" }}
@@ -89,7 +90,7 @@ const Footer = () => {
             </div>
             <div className="mb-5 mx-auto">
               <h6 className="text-white">Support</h6>
-              <ul class="nav flex-column">
+              <ul clas="nav flex-column">
                 <Link
                   onClick={handleDisappear}
                   style={{ textDecoration: "none" }}

@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { GeneralBtnProps } from "../ComponentInterfaces/ButtonInterface/GenandAuthBtnInterface";
+import React from "react";
 // GetStarted /SignUp /SignIn /ResolveConflict /SellersStatement /BuyersFault /SellersFault /DropConflict /InvolveNeutrals /Submit /EditProfile /EditTicket /ResendProduct /ContestComplaint /ViewMore /ViewComplaint /LearnMore /NewTransactionButton /ProceedButton /IAgreeButton
 
 //BuyersStatement/InitiateDispute/ConfirmDeliveryButton/ConfirmButton/DeliverProductButton
@@ -21,7 +22,7 @@ export const GeneralBtn = ({
   righticon,
   styles,
   onclick,
-}) => {
+}: GeneralBtnProps) => {
   return (
     <Link to={link} type="submit" className={styles} onClick={onclick}>
       {lefticon}
@@ -57,7 +58,7 @@ export const FilterButton = () => {
           width="16"
           height="16"
           fill="currentColor"
-          class="bi bi-chevron-down"
+          className="bi bi-chevron-down"
           viewBox="0 0 16 16"
         >
           <path
