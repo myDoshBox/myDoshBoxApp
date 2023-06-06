@@ -32,7 +32,7 @@ import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideN
 
 // Neutral Pages
 import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
-import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
+import NeutralDashboard from "./pages/NEUTRALS_PAGES/neutral_dashboard";
 import {
   ClosedConflicts,
   OngoingConflicts,
@@ -53,7 +53,11 @@ import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 
 // Admin DashBoard Page
-// import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
+import AdminDashboard from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminDashboard";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import UserProfile from "./pages/DASHBOARDS/USER_DASHBOARD/UserProfile";
+
 function App() {
   return (
     <Router>
@@ -104,7 +108,7 @@ function App() {
         </Route>
 
         {/* Admin Routes */}
-        {/* <Route path="admin" element={<AdminSideNav />}>
+        <Route path="admin" element={<AdminSideNav />}>
           <Route index element={<AdminDashboard />} />
           <Route path="tickets-history" element={<TicketHistoryPage />} />
           <Route path="profile" element={<UserProfile />} />
@@ -114,7 +118,6 @@ function App() {
           <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="users" element={<UsersPage />} />
         </Route>
-
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />

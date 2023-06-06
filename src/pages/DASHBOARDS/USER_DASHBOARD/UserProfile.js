@@ -1,5 +1,5 @@
-import { UserProfileCard } from "../components/CardComponents/UsersCards";
-import { UserDashboardNavbar } from "../components/NavbarComponents/TopNavbars";
+import { UserProfileCard } from "../../../components/CardComponents/UsersCards";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 
 const UserProfile = () => {
   return (

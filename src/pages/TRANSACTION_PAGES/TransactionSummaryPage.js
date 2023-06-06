@@ -17,7 +17,7 @@ const TransactionSummaryPage = () => {
 
           <div className="col-lg-9 col-sm-12">
             <UserDashboardNavbar />
-            <div className="mt-5">
+            <div className="mt-5 mb-5">
               <TransactionSummary />
             </div>
           </div>

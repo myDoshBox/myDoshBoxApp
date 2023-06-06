@@ -6,11 +6,11 @@ import {
   UserInflow,
   Issues,
   LineSparkline,
-} from "../components/CardComponents/Analytics";
+} from "../../../components/CardComponents/Analytics";
 import {
   AnalyticsCard,
   MiniUsersCard,
-} from "../components/CardComponents/UsersCards";
+} from "../../../components/CardComponents/UsersCards";
 // import { FinancialReport } from "../components/Charts";
 import {
   ArrowUpIcon,
@@ -19,13 +19,12 @@ import {
   TotalUsersIcon,
   OpenTicketsIcon,
   ClosedTicketsIcon,
-} from "../components/IconComponent/AdminDashboardIcons";
-import { UsersIcon } from "../components/IconComponent/SideNavIcons";
-import AdminSideNav from "../components/NavbarComponents/AdminSideNav";
-import { UserDashboardNavbar } from "../components/NavbarComponents/TopNavbars";
-import { MiniTicketsHistory } from "../components/TableComponents/TicketTable";
-import { AdminRecentTransactionsCard } from "../components/TableComponents/TransactionTable";
-import { TopCustomers } from "./UsersPage";
+} from "../../../components/IconComponent/AdminDashboardIcons";
+import { UsersIcon } from "../../../components/IconComponent/SideNavIcons";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { MiniTicketsHistory } from "../../../components/TableComponents/TicketTable";
+import { AdminRecentTransactionsCard } from "../../../components/TableComponents/TransactionTable";
+import { TopCustomers } from "../CUSTOMER_CARE_DASHBOARD/UsersPage";
 
 const AdminDashboard = memo(() => {
   return (

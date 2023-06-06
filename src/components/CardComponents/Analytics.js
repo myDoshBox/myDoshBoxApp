@@ -7,7 +7,18 @@ export const FinancialReport = memo(({ style }) => {
     {
       name: "Revenue",
       data: [
-        1000, 1200, 800, 1100, 1300, 1400, 1500, 1600, 1800, 2000, 2200, 2400,
+        1000,
+        1200,
+        800,
+        1100,
+        1300,
+        1400,
+        1500,
+        1600,
+        1800,
+        2000,
+        2200,
+        2400,
       ],
     },
     {
@@ -84,7 +95,18 @@ export const UserInflow = memo(({ style }) => {
     {
       name: "Users",
       data: [
-        1000, 1200, 800, 1100, 1300, 1400, 1500, 1600, 1800, 2000, 2200, 2400,
+        1000,
+        1200,
+        800,
+        1100,
+        1300,
+        1400,
+        1500,
+        1600,
+        1800,
+        2000,
+        2200,
+        2400,
       ],
     },
   ]);
@@ -315,7 +337,7 @@ export const LineSparkline = () => {
       },
       y: {
         title: {
-          formatter: function (seriesName) {
+          formatter: function(seriesName) {
             return "";
           },
         },
