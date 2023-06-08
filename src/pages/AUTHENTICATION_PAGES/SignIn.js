@@ -2,6 +2,10 @@ import { useState } from "react";
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
 import logo from "../../images/doshlogolight.png";
+import {
+  SignInButton,
+  GoogleSignInButton,
+} from "../../components/ButtonsComponent/AuthenticationButtons";
 import { Link } from "react-router-dom";
 
 const SignInPage = () => {
@@ -106,18 +110,12 @@ export const SignInForm = () => {
           </div>
           <div className="d-flex flex-column mt-4">
             <div className="mx-auto mb-2">
-              <button
-                type="submit"
-                className="GeneralBtnStyle1 btn all-btn text-white"
-                style={{ width: "210px" }}
-              >
-                Sign In
-              </button>
+              <SignInButton />
             </div>
           </div>
         </form>
-        <div className="d-flex justify-content-center">
-          <GeneralBtn text="Sign In With Google" icon={<GoogleIcon />} />
+        <div className="d-flex justify-content-center ">
+          <GoogleSignInButton />
         </div>
         <div className="d-flex justify-content-center mt-2">
           <p>
