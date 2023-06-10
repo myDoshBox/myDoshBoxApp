@@ -11,7 +11,10 @@ export const EditProfileButton = () => {
 //TicketButton
 export const EditTicketButton = () => {
   return (
-    <Button className="edit-ticket-btn all-btn border-0 rounded-1">
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
       EDIT TICKET
     </Button>
   );

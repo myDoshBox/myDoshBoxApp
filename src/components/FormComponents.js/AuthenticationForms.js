@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 // import { GoogleButton } from "../ButtonsComponent/Button";
 import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import {
+  SignUpButton,
+  GoogleSignUpButton,
+} from "../ButtonsComponent/AuthenticationButtons";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
 
@@ -219,18 +223,12 @@ export const SignUpIndividual = () => {
         )}
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
-            <button
-              type="submit"
-              className="GeneralBtnStyle1 btn all-btn text-white"
-              style={{ width: "210px" }}
-            >
-              Sign Up
-            </button>
+            <SignUpButton />
           </div>
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GeneralBtn text="Sign Up With Google" icon={<GoogleIcon />} />
+        <GoogleSignUpButton />
       </div>
     </>
   );
@@ -474,18 +472,12 @@ export const SignUpOrganization = () => {
         )} */}
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
-            <button
-              type="submit"
-              className="GeneralBtnStyle1 btn all-btn text-white"
-              style={{ width: "210px" }}
-            >
-              Sign Up
-            </button>
+            <SignUpButton />
           </div>
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GeneralBtn text="Sign Up With Google" lefticon={<GoogleIcon />} />
+        <GoogleSignUpButton />
       </div>
     </>
   );

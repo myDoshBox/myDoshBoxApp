@@ -32,7 +32,10 @@ export const NewTransactionButton = () => {
 
 export const ProceedButton = () => {
   return (
-    <Button className="edit-ticket-btn border-0 all-btn rounded-1">
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
       PROCEED
     </Button>
   );

@@ -1,6 +1,9 @@
 import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import { Link } from "react-router-dom";
+import { EditTicketButton } from "../ButtonsComponent/EditButtons";
+import { ProceedButton } from "../ButtonsComponent/TransactionButtons";
+import { CancelButton } from "../ButtonsComponent/OtherButtons";
 
 // For Generated Ticket Card
 export const GeneratedTicketCard = (props) => {
@@ -106,22 +109,13 @@ export const GeneratedTicketCard = (props) => {
             </div>
             <div className="mb-3 d-flex justify-content-md-evenly flex-column flex-md-row">
               <Link to={link1} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn1}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-3"
-                />
+                <EditTicketButton />
               </Link>
               <Link to={link2} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn2}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 px-4"
-                />
+                <ProceedButton />
               </Link>
               <Link to={link3} className="mx-auto mb-2">
-                <GeneralBtn
-                  text={btn3}
-                  styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1 bg-danger px-4"
-                />
+                <CancelButton />
               </Link>
             </div>
           </div>

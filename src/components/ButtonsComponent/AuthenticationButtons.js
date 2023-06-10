@@ -2,7 +2,14 @@ import { Button } from "react-bootstrap";
 
 //SignUpButton
 export const SignUpButton = () => {
-  return <Button className=" SignUpBtn all-btn border-0 mt-5">Sign Up</Button>;
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "210px" }}
+    >
+      Sign Up
+    </Button>
+  );
 };
 //SignInButton
 export const SignInButton = () => {
@@ -23,7 +30,7 @@ export const GuestNavSignInButton = () => {
 //GoogleSignUpButton
 export const GoogleSignUpButton = () => {
   return (
-    <Button className=" GoogleSignUpBtn">
+    <Button className="btn btn-outline-success bg-light text-dark">
       <svg
         width="28"
         height="28"
@@ -85,15 +92,15 @@ export const GoogleSignInButton = () => {
   );
 };
 //SignUpIndividual
-export const SignUpIndividual = () => {
-  return <Button className=" SignUpGroup mt-3">As an Individual</Button>;
-};
-//SignUpOrganization
-export const SignUpOrganization = () => {
-  return <Button className=" SignUpGroup mt-3">As an Organization</Button>;
-};
-//GetStarted
-export const GetStarted = () => {
-  return <Button className=" border-0 getStarted mt-3"> Get Started</Button>;
-};
+// export const SignUpIndividual = () => {
+//   return <Button className=" SignUpGroup mt-3">As an Individual</Button>;
+// };
+// //SignUpOrganization
+// export const SignUpOrganization = () => {
+//   return <Button className=" SignUpGroup mt-3">As an Organization</Button>;
+// };
+// //GetStarted
+// export const GetStarted = () => {
+//   return <Button className=" border-0 getStarted mt-3"> Get Started</Button>;
+// };
 //SidebarLogoutButton

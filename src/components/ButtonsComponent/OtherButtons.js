@@ -1,22 +1,22 @@
 import { Button } from "react-bootstrap";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 // CalendarButton
-export const CalendarButton = () => {
-  return (
-    <Button className="CalendarBtnStyle border-0 mt-5 ms-3">
-      <span className="">
-        <Icon
-          className="mx-2"
-          icon="material-symbols:calendar-month-outline-sharp"
-          color="#A2A5AA"
-          width="20"
-        />
-        8 Aug 20 - 14 Aug 22
-      </span>
-    </Button>
-  );
-};
+// export const CalendarButton = () => {
+//   return (
+//     <Button className="CalendarBtnStyle border-0 mt-5 ms-3">
+//       <span className="">
+//         <Icon
+//           className="mx-2"
+//           icon="material-symbols:calendar-month-outline-sharp"
+//           color="#A2A5AA"
+//           width="20"
+//         />
+//         8 Aug 20 - 14 Aug 22
+//       </span>
+//     </Button>
+//   );
+// };
 
 // FilterButton
 // export const FilterButton = () => {
@@ -53,5 +53,12 @@ export const CalendarButton = () => {
 
 // CancelButton
 export const CancelButton = () => {
-  return <Button className="CancelBtn border-0 mt-5 ms-3">Cancel</Button>;
+  return (
+    <Button
+      className="border-0 mt-3 btn btn-danger text-white"
+      style={{ width: "140px" }}
+    >
+      CANCEL
+    </Button>
+  );
 };

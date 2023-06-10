@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
 import logo from "../../images/doshlogolight.png";
 import {
