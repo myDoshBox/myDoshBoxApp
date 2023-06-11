@@ -1,7 +1,7 @@
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import AdminTicketDetails from "../../data/TicketData.json";
 import { PaginationBar } from "../PaginationComponent";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 export const TicketHistoryTable = () => {
   return (
@@ -53,11 +53,7 @@ export const CustomerCareTickets = () => {
               return <TicketHistoryData {...data} key={data.id} />;
             })}
           </tbody>
-          <GeneralBtn
-            text={"View More"}
-            styles={"GeneralBtnStyle2 btn all-btn text-white m-3"}
-            link={"tickets-history"}
-          />
+          <ViewMoreButton link={"tickets-history"} />
         </table>
       </div>
     </>

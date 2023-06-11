@@ -30,13 +30,13 @@ const Footer = () => {
   }, [location.pathname]);
   return showFooter ? (
     <footer className="FooterBgColor mt-5 pb-5">
-      {/* Back to Top  icon Starts */}
+      {/* Back to Top  icon sections Starts */}
       <div className="d-flex justify-content-end pt-3 me-3">
         <a href="#BackTop">
           <ScrollUpIcon />
         </a>
       </div>
-      {/* Back to Top  icon Ends */}
+      {/* Back to Top  icon sections Ends */}
       <section className="container-fluid w-75 mt-2">
         <div className="row">
           {/* image section starts */}
