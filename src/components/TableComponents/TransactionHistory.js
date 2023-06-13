@@ -1,6 +1,6 @@
 import React from "react";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
-import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
+import { ViewBtn } from "../ButtonsComponent/NavigationAndViewButtons";
 
 const TransactionHistory = (props) => {
   const { trans_id, buyer_name, seller_name, products, date, status } = props;
@@ -19,7 +19,7 @@ const TransactionHistory = (props) => {
           />
         </td>
         <td className="d-none d-sm-table-cell">
-          <ViewMoreButton />
+          <ViewBtn />
         </td>
       </tr>
     </>

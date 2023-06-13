@@ -91,7 +91,7 @@ function App() {
           <Route path="ticket" element={<GeneratedTicket />} />
         </Route>
         <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route path="home" element={<NeutralDashboard />} />
+          <Route index element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />

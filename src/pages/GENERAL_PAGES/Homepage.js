@@ -70,7 +70,9 @@ const WhatWeDo = () => {
             lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
             condimentum ac, vestibulum eu nisl.
           </p>
-          <LearnMoreButton />
+          <Link to="/aboutus">
+            <LearnMoreButton />
+          </Link>
         </div>
         <div className="col-md-4  d-none d-md-block">
           <img src={WhatWeDoImage} className="" alt="..." />
@@ -97,7 +99,9 @@ const ProcessFlow = () => {
         })}
       </div>
       <div className="text-center">
-        <GetStarted />
+        <Link to="/signup">
+          <GetStarted />
+        </Link>
       </div>
     </div>
   );

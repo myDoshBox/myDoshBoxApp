@@ -126,6 +126,52 @@ export const MiniProfileCard = () => {
         </div>
         <hr></hr>
         <div className="text-end pe-2 py-3">
+          <Link to={"./updateprofile"}>
+            <EditProfileButton />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};
+// MiniProfileCardSettind
+export const MiniProfileCardSettings = () => {
+  return (
+    <>
+      <div
+        className="card shadow border-0 rounded-2 p-3 mx-auto"
+        style={{ width: "90%" }}
+      >
+        <div className="d-flex flex-column ">
+          <div className="d-flex justify-content-center">
+            <img src={Avatar} className="img-fluid mx-auto" alt="User" />
+            <span className="d-flex align-items-end">
+              {/* <CameraIcon /> */}
+            </span>
+          </div>
+          <span className="text-center">
+            <h5 className="mt-2 fw-lighter">Olasunkanmi Idris</h5>
+            <p>+234 801 234 5678</p>
+            <p>sunkanmidris@gmail.com</p>
+          </span>
+        </div>
+        <hr></hr>
+        <div className="d-flex px-3">
+          <div>{/* <CompletedDealsIcon width="30" /> */}</div>
+          <p className="ms-lg-1">100 deals completed</p>
+        </div>
+        <div className="d-flex px-3 ">
+          <span>
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+          </span>
+          <p className="mx-2"> 0.0 rating </p>
+        </div>
+        <hr></hr>
+        <div className="text-end pe-2 py-3">
           <Link to={"../updateprofile"}>
             <EditProfileButton />
           </Link>

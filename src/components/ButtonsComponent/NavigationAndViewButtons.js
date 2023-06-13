@@ -77,10 +77,20 @@ export const GetStarted = () => {
 export const ViewMoreButton = () => {
   return (
     <Button
-      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      className="border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
       style={{ width: "120px" }}
     >
       View more
+    </Button>
+  );
+};
+export const ViewBtn = () => {
+  return (
+    <Button
+      className="border-0 btn btn-outline-light btn-link text-decoration-none mb-2"
+      style={{ width: "120px" }}
+    >
+      view
     </Button>
   );
 };
@@ -88,7 +98,7 @@ export const ViewMoreButton = () => {
 export const ConfirmDelivery = () => {
   return (
     <Button
-      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn text-white"
       style={{ width: "120px" }}
     >
       Confirm Delivery

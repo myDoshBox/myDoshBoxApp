@@ -64,7 +64,7 @@ export const DeleteProduct = () => {
   );
 };
 
-export const GeneralBtn = ({
+export const ModalBtn = ({
   text,
   link,
 

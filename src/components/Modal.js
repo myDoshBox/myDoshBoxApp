@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 import ThankYouPopUpImg from "../images/Happy People.jpg";
-import { GeneralBtn } from "./ButtonsComponent/OtherButtons";
+import { ModalBtn } from "./ButtonsComponent/OtherButtons";
 import evidence from "../images/productimage.jpg";
 
 /** Please Note that the GeneralModal works with the openModalText Button **/
@@ -21,7 +21,7 @@ export const GeneralModal = ({
 
   return (
     <>
-      <GeneralBtn
+      <ModalBtn
         styles={modalBtnStyle}
         onclick={handleShow}
         text={openModalText}
@@ -37,7 +37,7 @@ export const GeneralModal = ({
         </Modal.Body>
         <Modal.Footer className="border border-0 text-center justify-content-center pt-0">
           <Link to={modalRoute}>
-            <GeneralBtn
+            <ModalBtn
               styles={modalBtnStyle}
               onclick={handleClose}
               text={closeModalText}
@@ -82,7 +82,7 @@ export const DisputeDetailsModal = ({
 
   return (
     <>
-      <GeneralBtn
+      <ModalBtn
         styles={modalBtnStyle}
         onclick={handleShow}
         text={openModalText}
@@ -370,14 +370,14 @@ export const DisputeDetailsModal = ({
           </div>
         </Modal.Body>
         <Modal.Footer className="w-100 justify-content-between">
-          <GeneralBtn
+          <ModalBtn
             styles={`w-25 m-0 text-small CloseBtnStyle GeneralBtnStyle1 btn all-btn`}
             onclick={handleClose}
             text="Close"
           />
 
           <Link className="m-0" style={{ width: "72%" }}>
-            <GeneralBtn
+            <ModalBtn
               styles={`w-100 m-0 text-small GeneralBtnStyle1 btn all-btn text-white`}
               onclick={handleClose}
               lefticon={

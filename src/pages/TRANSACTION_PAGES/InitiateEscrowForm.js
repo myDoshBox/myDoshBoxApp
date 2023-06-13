@@ -456,7 +456,7 @@ const InitiateEscrowForm = () => {
             <CancelButton />
           </Link>
           <Link to="../transactionsummary">
-            <ProceedButton />
+            <ProceedButton className="ms-3" />
           </Link>
         </div>
       </Form>

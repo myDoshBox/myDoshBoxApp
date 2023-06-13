@@ -55,12 +55,12 @@ export const MiniRecentTransactionTable = () => {
           </tbody>
         </table>
         <div className="p-4 text-md-end d-none d-md-block">
-          <Link to={"../transaction"}>
+          <Link to={"./transaction"}>
             <ViewMoreButton />
           </Link>
         </div>
         <div className="text-center d-lg-none .d-xl-block">
-          <Link to={"../transaction"}>
+          <Link to={"./transaction"}>
             <ViewMoreButton />
           </Link>
         </div>
@@ -109,7 +109,7 @@ export const AdminRecentTransactionsCard = memo(({ style }) => {
               );
             })}
             <Link
-              to={""}
+              to="../transaction"
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
