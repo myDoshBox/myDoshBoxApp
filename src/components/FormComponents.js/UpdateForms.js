@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-// import { GeneralBtnStyle1 } from "../ButtonsComponent/Button";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+
+import {
+  SaveChanges,
+  SaveChangesBtn,
+  UpdateBtn,
+  UpdateProfileBtn,
+} from "../ButtonsComponent/EditButtons";
 
 export const UpdateProfile = () => {
   const initialValues = {
@@ -93,10 +98,7 @@ export const UpdateProfile = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtn
-            styles={"GeneralBtnStyle2 btn all-btn text-white"}
-            text={"Save Changes"}
-          />
+          <SaveChangesBtn />
         </div>
       </Form>
     </div>
@@ -197,10 +199,7 @@ export const UpdatePassword = () => {
           </small>
         </Form.Group>
         <div onClick={handleSubmit}>
-          <GeneralBtn
-            styles={"GeneralBtnStyle2 btn all-btn text-white"}
-            text={"Save Changes"}
-          />
+          <SaveChangesBtn />
         </div>
       </Form>
     </div>
@@ -313,7 +312,7 @@ export const UpdateBankDetails = () => {
       </Form.Group>
       <div className="mb-4">
         <div onClick={handleSubmit}>
-          <GeneralBtn text={"Update"} />
+          <UpdateBtn />
         </div>
       </div>
     </Form>
@@ -464,7 +463,7 @@ export const UserUpdateProfile = () => {
       </Form.Group>
 
       <div onClick={handleSubmit} className="mb-4">
-        <GeneralBtn text={"Update Profile"} />
+        <UpdateProfileBtn />
       </div>
     </Form>
   );

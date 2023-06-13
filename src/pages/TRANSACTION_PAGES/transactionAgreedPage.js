@@ -1,11 +1,13 @@
 import React from "react";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
+
 import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
 import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
+import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
+import { BackButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
 
 const TransactionAgreedPage = () => {
   return (
@@ -37,20 +39,8 @@ const TransactionAgreed = () => {
           date={`14 Aug 2022`}
           total={`N3,600,000`}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
-          leftBtn={
-            <GeneralBtn
-              text="Back"
-              styles="CancelBtn btn all-btn text-white"
-              icon={<BackIcon />}
-            />
-          }
-          rightBtn={
-            <GeneralBtn
-              text="Proceed"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-              icon={<NextIcon />}
-            />
-          }
+          leftBtn={<BackButton />}
+          rightBtn={<ProceedButton />}
         />
       </div>
     </div>

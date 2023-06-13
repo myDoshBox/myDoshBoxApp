@@ -1,9 +1,12 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../images/doshlogo.jpg";
 import image from "../../images/Image.jpg";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Link, Outlet } from "react-router-dom";
 import { useRef } from "react";
+import {
+  HomePageSignUpBtn,
+  SignUpButton,
+} from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {
   const disappearEl = useRef(null);
@@ -79,10 +82,7 @@ export const GuestNavbar = () => {
               className="nav-links nav-btn"
               onClick={handleDisappear}
             >
-              <GeneralBtn
-                text={"Sign Up"}
-                styles={"GeneralBtnStyle1 btn all-btn text-white"}
-              />
+              <HomePageSignUpBtn />
             </Link>
           </Nav>
         </Navbar.Collapse>

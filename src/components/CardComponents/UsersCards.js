@@ -9,8 +9,6 @@ import {
   CompletedTransactionIcon,
 } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -18,6 +16,8 @@ import Avatar from "../../images/Avatar.jpg";
 //All Image Import Ends
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
+import { EditProfileButton } from "../ButtonsComponent/EditButtons";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
@@ -127,10 +127,7 @@ export const MiniProfileCard = () => {
         <hr></hr>
         <div className="text-end pe-2 py-3">
           <Link to={"../updateprofile"}>
-            <GeneralBtn
-              text="Edit Profile"
-              styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
+            <EditProfileButton />
           </Link>
         </div>
       </div>
@@ -173,15 +170,11 @@ export const MiniUsersCard = memo(({ style }) => {
               );
             })}
             <Link
-              to={""}
+              to={"users"}
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
-              <GeneralBtn
-                text="View More"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-                link={"users"}
-              />
+              <ViewMoreButton />
             </Link>
           </tbody>
         </table>

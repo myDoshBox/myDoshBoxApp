@@ -11,6 +11,17 @@ export const SignUpButton = () => {
     </Button>
   );
 };
+// HomePageSignUpBtn;
+export const HomePageSignUpBtn = () => {
+  return (
+    <Button
+      className="all-btn border-0 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "100px" }}
+    >
+      Sign Up
+    </Button>
+  );
+};
 //SignInButton
 export const SignInButton = () => {
   return (

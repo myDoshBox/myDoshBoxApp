@@ -34,9 +34,19 @@ export const ProceedButton = () => {
   return (
     <Button
       className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
-      style={{ width: "140px" }}
+      style={{ width: "120px" }}
     >
       PROCEED
+    </Button>
+  );
+};
+export const StartTransaction = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "210px" }}
+    >
+      START A TRANSACTION
     </Button>
   );
 };
@@ -49,7 +59,14 @@ export const ConfirmDeliveryButton = () => {
 };
 // IAgreeButton
 export const IAgreeButton = () => {
-  return <Button className="i-agree-btn all-btn border-0">I Agree</Button>;
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "110px" }}
+    >
+      I Agree
+    </Button>
+  );
 };
 // ConfirmButton
 export const ConfirmButton = () => {

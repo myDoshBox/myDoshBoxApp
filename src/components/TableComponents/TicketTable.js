@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { useState } from "react";
 import ticketsData from "../../data/TicketData.json";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 // AdminDashbordTicketHistoryCard
 export const MiniTicketsHistory = memo(({ style }) => {
@@ -43,15 +43,11 @@ export const MiniTicketsHistory = memo(({ style }) => {
                 );
               })}
             <Link
-              to={""}
+              to={"tickets-history"}
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
-              <GeneralBtn
-                text="View More"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-                link={"tickets-history"}
-              />
+              <ViewMoreButton />
             </Link>
           </tbody>
         </table>

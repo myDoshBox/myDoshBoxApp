@@ -1,12 +1,13 @@
 import React from "react";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
 import { Link } from "react-router-dom";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { BackButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
+import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
 
 const TransactionSummaryPage = () => {
   return (
@@ -45,20 +46,12 @@ const TransactionSummary = () => {
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <Link to={"../initiate-escrow"}>
-              <GeneralBtn
-                text="Back"
-                styles="CancelBtn btn all-btn text-white"
-                icon={<BackIcon />}
-              />
+              <BackButton />
             </Link>
           }
           rightBtn={
             <Link to={"../agreement"}>
-              <GeneralBtn
-                text="Proceed"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-                icon={<NextIcon />}
-              />
+              <ProceedButton />
             </Link>
           }
         />

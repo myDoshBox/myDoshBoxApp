@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { GeneralModal } from "../../components/Modal";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { Ireject } from "../../components/ButtonsComponent/OtherButtons";
 
 const EscrowAgreement = () => {
   return (
@@ -101,14 +101,11 @@ const EscrowAgreementText = () => {
       </div>
       <div className="d-flex justify-content-center mt-5">
         <Link to={-1}>
-          <GeneralBtn
-            text="I Reject"
-            styles="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
-          />
+          <Ireject />
         </Link>
         <GeneralModal
           openModalText="I Agree"
-          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white"
+          modalBtnStyle="GeneralBtnStyle1 btn all-btn text-white mx-5 my-3"
           modalTitle="User Notified"
           modalMessage="User Opeyemi Andrewson has just been notified of the transaction you created. You will be notified once the transaction is accepted"
           modalRoute="../../userdashboard"

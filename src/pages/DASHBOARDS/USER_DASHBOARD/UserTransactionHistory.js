@@ -3,7 +3,7 @@ import TransactionData from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
-import { GeneralBtn } from "../../../components/ButtonsComponent/GenandAuthBtn";
+import { NewTransaction } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
 
 const UserTransactionHistory = () => {
   return (
@@ -29,7 +29,7 @@ export const RecentTransactionTable = () => {
       <div>
         <div className="px-4 mb-3">
           <Link to={"../initiate-escrow"}>
-            <GeneralBtn text="New Transaction" />
+            <NewTransaction />
           </Link>
         </div>
 

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 // import { GoogleButton } from "../ButtonsComponent/Button";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import {
   SignUpButton,
   GoogleSignUpButton,

@@ -1,5 +1,4 @@
 import React from "react";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import HeroImage from "../../images/HeroImage.png";
 import WhatWeDoImage from "../../images/WhatwedoImage.png";
 import OurPartnerImg from "../../images/partners.png";
@@ -9,6 +8,11 @@ import {
 } from "../../components/CardComponents/HomepageCards";
 import homepageData from "../../data/homepageData.json";
 import { Link } from "react-router-dom";
+import { StartTransaction } from "../../components/ButtonsComponent/TransactionButtons";
+import {
+  GetStarted,
+  LearnMoreButton,
+} from "../../components/ButtonsComponent/NavigationAndViewButtons";
 const Homepage = () => {
   return (
     <div>
@@ -34,10 +38,7 @@ const HeroSection = () => {
         </div>
         <div className="text-center">
           <Link to="/signup">
-            <GeneralBtn
-              text={`START A TRANSACTION`}
-              styles={`GeneralBtnStyle1 btn all-btn text-white`}
-            />
+            <StartTransaction />
           </Link>
         </div>
         <div className="mt-4">
@@ -69,10 +70,7 @@ const WhatWeDo = () => {
             lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
             condimentum ac, vestibulum eu nisl.
           </p>
-          <GeneralBtn
-            text={`LEANRN MORE`}
-            styles={`GeneralBtnStyle1 btn all-btn text-white`}
-          />
+          <LearnMoreButton />
         </div>
         <div className="col-md-4  d-none d-md-block">
           <img src={WhatWeDoImage} className="" alt="..." />
@@ -99,10 +97,7 @@ const ProcessFlow = () => {
         })}
       </div>
       <div className="text-center">
-        <GeneralBtn
-          text={`Get Started`}
-          styles={`GeneralBtnStyle1 btn all-btn text-white`}
-        />
+        <GetStarted />
       </div>
     </div>
   );

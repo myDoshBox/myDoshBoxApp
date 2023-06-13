@@ -3,8 +3,11 @@ import { Button } from "react-bootstrap";
 //Edit Profile Button
 export const EditProfileButton = () => {
   return (
-    <Button className="edit-profile-btn  all-btn border-0 rounded-1">
-      Edit Profile
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      Edit profile
     </Button>
   );
 };
@@ -16,6 +19,39 @@ export const EditTicketButton = () => {
       style={{ width: "140px" }}
     >
       EDIT TICKET
+    </Button>
+  );
+};
+// SaveChanges;
+export const SaveChangesBtn = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      Save Changes
+    </Button>
+  );
+};
+// UpdateProfileBtn;
+export const UpdateProfileBtn = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      Update Profile
+    </Button>
+  );
+};
+// UpdateBtn;
+export const UpdateBtn = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      Update
     </Button>
   );
 };

@@ -1,6 +1,6 @@
 import { Form, Container } from "react-bootstrap";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
+import { ConfirmDelivery } from "../../components/ButtonsComponent/NavigationAndViewButtons";
 
 const SellerConfirmsReturnedGoods = () => {
   return (
@@ -56,10 +56,7 @@ const SellerDeliverGoodsForm = () => {
             />
 
             <div className="d-flex justify-content-center pb-3 mt-3">
-              <GeneralBtn
-                text={"Confirm Delivery"}
-                styles={"GeneralBtnStyle2 btn all-btn text-white"}
-              />
+              <ConfirmDelivery />
             </div>
           </Form>
         </div>

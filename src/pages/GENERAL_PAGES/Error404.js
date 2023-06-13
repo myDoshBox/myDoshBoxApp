@@ -1,7 +1,7 @@
 import React from "react";
 import { GuestNavbar } from "../../components/NavbarComponents/TopNavbars";
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
+import { GoBackHomeBtn } from "../../components/ButtonsComponent/OtherButtons";
 
 const Error404 = () => {
   return (
@@ -20,10 +20,7 @@ const Error = () => {
         <p>The page you are looking for does not exist</p>
       </div>
       <Link to="/" className="text-center">
-        <GeneralBtn
-          text={`Go Back Home`}
-          styles={`GeneralBtnStyle1 btn all-btn text-white`}
-        />
+        <GoBackHomeBtn />
       </Link>
     </div>
   );

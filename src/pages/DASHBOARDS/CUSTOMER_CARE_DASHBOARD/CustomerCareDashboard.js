@@ -11,7 +11,7 @@ import {
   AnalyticsCard,
 } from "../../../components/CardComponents/UsersCards";
 import { TopCustomers } from "./UsersPage";
-import { AdminRecentTransactionsCard } from "../../../components/TableComponents/TransactionTable";
+// import { AdminRecentTransactionsCard } from "../../../components/NotificationComponent/TableComponents/TransactionTable";
 
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 

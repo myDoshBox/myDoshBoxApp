@@ -1,15 +1,13 @@
 import React from "react";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 const TransactionHistory = (props) => {
   const { trans_id, buyer_name, seller_name, products, date, status } = props;
   return (
     <>
       <tr>
-        <td className=" d-none d-md-table-cell text-small">
-          {trans_id}
-        </td>
+        <td className=" d-none d-md-table-cell text-small">{trans_id}</td>
         <td className="d-none d-sm-table-cell text-small">{buyer_name}</td>
         <td className="d-none d-lg-table-cell text-small">{seller_name}</td>
         <td className="text-small">{products}</td>
@@ -21,10 +19,7 @@ const TransactionHistory = (props) => {
           />
         </td>
         <td className="d-none d-sm-table-cell">
-          <GeneralBtn
-            text="view"
-            styles="text-success text-decoration-none text-small"
-          />
+          <ViewMoreButton />
         </td>
       </tr>
     </>

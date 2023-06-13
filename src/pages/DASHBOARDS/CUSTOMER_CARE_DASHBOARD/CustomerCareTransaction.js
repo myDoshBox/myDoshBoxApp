@@ -2,7 +2,7 @@ import { Notifications } from "../../../components/NotificationComponent/Notific
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { FilterButton } from "../../../components/ButtonsComponent/GenandAuthBtn";
+import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
 
 const CustomerCareTransaction = () => {
   return (

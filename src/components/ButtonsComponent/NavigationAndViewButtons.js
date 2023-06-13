@@ -14,7 +14,7 @@ import { Button } from "react-bootstrap";
 // PreviousButton
 export const PreviousButton = () => {
   return (
-    <Button className="PrevioustBtnStyle border-0 mt-5 ms-3">
+    <Button className="border-0 GeneralBtnStyle1 btn all-btn text-white text-small">
       <span className="BtnPrevTexttStyle">Prev</span>
     </Button>
   );
@@ -23,7 +23,7 @@ export const PreviousButton = () => {
 // Next
 export const NextButton = () => {
   return (
-    <Button className="PrevioustBtnStyle border-0 mt-5 ms-3">
+    <Button className="border-0 GeneralBtnStyle1 btn all-btn text-white text-small">
       <span className="BtnNextTextStyle">Next</span>
     </Button>
   );
@@ -32,8 +32,21 @@ export const NextButton = () => {
 // BackButton
 export const BackButton = () => {
   return (
-    <Button className="PrevioustBtnStyle border-0 mt-5 ms-3">
-      <span className="BackBtnStyle">Back</span>
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "80px" }}
+    >
+      Back
+    </Button>
+  );
+};
+export const NewTransaction = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "170px" }}
+    >
+      New Transaction
     </Button>
   );
 };
@@ -41,18 +54,47 @@ export const BackButton = () => {
 // LearnMore
 export const LearnMoreButton = () => {
   return (
-    <Button className="LearnMoreBtnStyle border-0 mt-5 ms-3">LEARN MORE</Button>
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      LEARN MORE
+    </Button>
+  );
+};
+export const GetStarted = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "140px" }}
+    >
+      Get Started
+    </Button>
   );
 };
 
 // ViewMore
 export const ViewMoreButton = () => {
   return (
-    <Button className="ViewMoreBtnStyle border-0 mt-5 ms-3">View More</Button>
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "120px" }}
+    >
+      View more
+    </Button>
   );
 };
-
-// ViewDetailsButton
+// ConfirmDelivery;
+export const ConfirmDelivery = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "120px" }}
+    >
+      Confirm Delivery
+    </Button>
+  );
+};
 
 // ViewComplaint
 export const ViewComplaintButton = () => {

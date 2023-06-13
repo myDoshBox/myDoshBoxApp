@@ -81,7 +81,7 @@ function App() {
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
           <Route path="userspage" element={<UsersPage />} />
-          <Route path="customercare" element={<CustomerCareTransaction />} />
+
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}

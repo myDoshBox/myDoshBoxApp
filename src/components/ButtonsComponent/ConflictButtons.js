@@ -28,14 +28,24 @@ export const SellersStatementButton = () => {
 // BuyersFault
 export const BuyersFaultButton = () => {
   return (
-    <Button className="BuyersFaultBtn border-0 mt-5 ms-3">Buyers Fault</Button>
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "110px" }}
+    >
+      Buyer Fault
+    </Button>
   );
 };
 
 // SellersFault
 export const SellersFaultButton = () => {
   return (
-    <Button className="BuyersFaultBtn border-0 mt-5 ms-3">Sellers Fault</Button>
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "110px" }}
+    >
+      Seller Fault
+    </Button>
   );
 };
 // InitiateDisputeButton
@@ -67,5 +77,12 @@ export const InvolveNeutralsButton = () => {
 
 // Submit
 export const SubmitButton = () => {
-  return <Button className="SubmitBtn border-0 mt-5 ms-3">Submit</Button>;
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "110px" }}
+    >
+      Submit
+    </Button>
+  );
 };

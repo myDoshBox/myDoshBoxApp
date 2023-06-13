@@ -1,4 +1,3 @@
-import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import { Link } from "react-router-dom";
 import { EditTicketButton } from "../ButtonsComponent/EditButtons";
@@ -30,7 +29,7 @@ export const GeneratedTicketCard = (props) => {
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
               <Link to={"../../userdashboard"}>
-                <GeneralBtn lefticon={<Cancel />} />
+                <Cancel />
               </Link>
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
@@ -145,7 +144,7 @@ export const OtherTicket = (props) => {
         <div className="card border-0 shadow" style={{ width: "40rem" }}>
           <div class="card-body p-4">
             <span className="d-flex justify-content-end">
-              <GeneralBtn lefticon={<Cancel />} />
+              <Cancel />
             </span>
             <h5 class="card-title text-center">TICKET No.19234</h5>
             <table className="mt-4">
@@ -223,14 +222,9 @@ export const OtherTicket = (props) => {
               <p>{Futher_info}</p>
             </div>
             <div className="mb-3 d-flex justify-content-evenly">
-              <GeneralBtn
-                text={btn1}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
-              <GeneralBtn
-                text={btn2}
-                styles=" GeneralBtnStyle1 btn all-btn text-white rounded-1"
-              />
+              <EditTicketButton />
+
+              <ProceedButton />
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 import ThankYouPopUpImg from "../images/Happy People.jpg";
-import { GeneralBtn } from "./ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "./ButtonsComponent/OtherButtons";
 import evidence from "../images/productimage.jpg";
 
 /** Please Note that the GeneralModal works with the openModalText Button **/
@@ -26,6 +26,7 @@ export const GeneralModal = ({
         onclick={handleShow}
         text={openModalText}
       />
+
       <Modal show={show} onHide={handleClose} className="GeneralModal">
         <Modal.Header className="text-center border border-0 justify-content-center flex-column pb-0">
           <img className="w-50 mb-3" src={ThankYouPopUpImg} alt={modalTitle} />
@@ -86,6 +87,7 @@ export const DisputeDetailsModal = ({
         onclick={handleShow}
         text={openModalText}
       />
+
       <Modal show={show} onHide={handleClose} className="DisputeDetailsModal">
         <Modal.Header closeButton>
           <h6 className="m-0 text-small">
@@ -154,9 +156,7 @@ export const DisputeDetailsModal = ({
             </div>
           </div>
           <div className="">
-            <div
-              class="row g-2 mb-4 pb-2"
-            >
+            <div class="row g-2 mb-4 pb-2">
               <button
                 type="button"
                 class="w-100 w-md-50 btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
@@ -375,6 +375,7 @@ export const DisputeDetailsModal = ({
             onclick={handleClose}
             text="Close"
           />
+
           <Link className="m-0" style={{ width: "72%" }}>
             <GeneralBtn
               styles={`w-100 m-0 text-small GeneralBtnStyle1 btn all-btn text-white`}

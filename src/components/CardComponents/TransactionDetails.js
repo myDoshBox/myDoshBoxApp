@@ -1,7 +1,6 @@
 import { CautionIcon } from "../IconComponent/UserdashboardIcons";
 import product from "../../images/productimage.jpg";
 import { Link } from "react-router-dom";
-// import { GeneralBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 // import { BackIcon } from "../../components/IconComponent/NavigationAndViewIcon";
 // import { RatingIcon } from "../../components/IconComponent/UserdashboardIcons";
 // import { Notifications } from "../../components/NotificationComponent/NotificationComponents";
