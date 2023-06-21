@@ -7,7 +7,8 @@ import { memo, useState } from "react";
 //   CompletedTransactionIcon,
 // } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
+import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
+import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -16,6 +17,8 @@ import Avatar from "../../images/Avatar.jpg";
 
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
+import { EditProfileButton } from "../ButtonsComponent/EditButtons";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
@@ -112,6 +115,52 @@ export const MiniProfileCard = () => {
           <p className="ms-lg-1">100 deals completed</p>
         </div>
         <div className="d-flex px-3 ">
+          <span>
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+            <RatingIcon />
+          </span>
+          <p className="mx-2"> 0.0 rating </p>
+        </div>
+        <hr></hr>
+        <div className="text-end pe-2 py-3">
+          <Link to={"./updateprofile"}>
+            <EditProfileButton />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};
+// MiniProfileCardSettind
+export const MiniProfileCardSettings = () => {
+  return (
+    <>
+      <div
+        className="card shadow border-0 rounded-2 p-3 mx-auto"
+        style={{ width: "90%" }}
+      >
+        <div className="d-flex flex-column ">
+          <div className="d-flex justify-content-center">
+            <img src={Avatar} className="img-fluid mx-auto" alt="User" />
+            <span className="d-flex align-items-end">
+              {/* <CameraIcon /> */}
+            </span>
+          </div>
+          <span className="text-center">
+            <h5 className="mt-2 fw-lighter">Olasunkanmi Idris</h5>
+            <p>+234 801 234 5678</p>
+            <p>sunkanmidris@gmail.com</p>
+          </span>
+        </div>
+        <hr></hr>
+        <div className="d-flex px-3">
+          <div>{/* <CompletedDealsIcon width="30" /> */}</div>
+          <p className="ms-lg-1">100 deals completed</p>
+        </div>
+        <div className="d-flex px-3 ">
           <span role="button" data-testid="rating-icons-container">
             <RatingIcon id={1} />
             <RatingIcon id={2} />
@@ -125,10 +174,9 @@ export const MiniProfileCard = () => {
         <hr></hr>
         <div className="text-end pe-2 py-3">
           <Link to={"../updateprofile"}>
-            <CustomBtn
-              value="Edit Profile"
-              className="GeneralBtnStyle1 btn all-btn text-white"
-              data-testid="updateprofile-page"
+            <GeneralBtn
+              text="Edit Profile"
+              styles="GeneralBtnStyle1 btn all-btn text-white"
             />
           </Link>
         </div>
@@ -179,6 +227,17 @@ export const MiniUsersCard = memo(({ style }) => {
                 </>
               );
             })}
+            <Link
+              to={""}
+              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <GeneralBtn
+                text="View More"
+                styles="GeneralBtnStyle1 btn all-btn text-white"
+                link={"users"}
+              />
+            </Link>
           </tbody>
         </table>
       </div>

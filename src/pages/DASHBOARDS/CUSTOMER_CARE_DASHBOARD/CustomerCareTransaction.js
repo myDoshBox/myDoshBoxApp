@@ -2,10 +2,14 @@ import { Notifications } from "../../../components/NotificationComponent/Notific
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+<<<<<<< HEAD
 import CustomButton from "../../../components/ButtonsComponent/GenandAuthBtn";
 import { ArrowDownIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
 import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
 import CustomBtn from "../../../components/ButtonsComponent/GenandAuthBtn";
+=======
+import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
+>>>>>>> d33e0a703df7fbeef6e8d3913d554613b304586b
 
 const CustomerCareTransaction = () => {
   return (

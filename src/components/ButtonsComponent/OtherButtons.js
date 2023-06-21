@@ -1,13 +1,79 @@
 import { Link } from "react-router-dom";
+// import { Icon } from "@iconify/react";
 
+// CalendarButton
+// export const CalendarButton = () => {
+//   return (
+//     <Button className="CalendarBtnStyle border-0 mt-5 ms-3">
+//       <span className="">
+//         <Icon
+//           className="mx-2"
+//           icon="material-symbols:calendar-month-outline-sharp"
+//           color="#A2A5AA"
+//           width="20"
+//         />
+//         8 Aug 20 - 14 Aug 22
+//       </span>
+//     </Button>
+//   );
+// };
 
-const BtnContent = (props) => {
+// CancelButton
+export const CancelButton = () => {
   return (
-    <>
-      <span>{props.lefticon}</span>
-      <span className="mx-2">{props.value}</span>
-      <span>{props.righticon}</span>
-    </>
+    <Button
+      className="border-0 mt-3 btn btn-danger text-white pale-red"
+      style={{ width: "140px" }}
+    >
+      CANCEL
+    </Button>
+  );
+};
+
+export const GoBackHomeBtn = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      style={{ width: "160px" }}
+    >
+      Go Back Home
+    </Button>
+  );
+};
+// Ireject
+export const Ireject = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "110px" }}
+    >
+      I Reject
+    </Button>
+  );
+};
+// DeleteProduct;
+export const DeleteProduct = () => {
+  return (
+    <Button
+      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+      style={{ width: "110px" }}
+    >
+      Delete Product
+    </Button>
+  );
+};
+
+export const ModalBtn = ({
+  text,
+  link,
+
+  styles,
+  onclick,
+}) => {
+  return (
+    <Link to={link} type="submit" className={styles} onClick={onclick}>
+      <span className="ms-1 me-2">{text}</span>
+    </Link>
   );
 };
 

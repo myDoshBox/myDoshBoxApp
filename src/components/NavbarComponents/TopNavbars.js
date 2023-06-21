@@ -1,9 +1,12 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../images/doshlogo.jpg";
 import image from "../../images/Image.jpg";
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 import { Link, Outlet } from "react-router-dom";
 import { useRef } from "react";
+import {
+  HomePageSignUpBtn,
+  SignUpButton,
+} from "../ButtonsComponent/AuthenticationButtons";
 
 export const GuestNavbar = () => {
   const disappearEl = useRef(null);
@@ -74,12 +77,13 @@ export const GuestNavbar = () => {
             >
               Contact Us
             </Link>
-            <CustomBtn
-              value="Sign Up"
-              className="nav-links nav-btn GeneralBtnStyle1 btn all-btn text-white"
+            <Link
               to="/signup"
+              className="nav-links nav-btn"
               onClick={handleDisappear}
-            />
+            >
+              <HomePageSignUpBtn />
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -89,6 +93,7 @@ export const GuestNavbar = () => {
 };
 
 export const UserDashboardNavbar = () => {
+  console.count("UserDashboardNavbar: ");
   return (
     <Container>
       <Nav className="justify-content-end userDashboardNav position-sticky top-0 end-0">

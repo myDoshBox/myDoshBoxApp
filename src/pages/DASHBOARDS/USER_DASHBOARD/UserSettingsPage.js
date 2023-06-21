@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import {
   UserDashboardCard,
   MiniProfileCard,
+  MiniProfileCardSettings,
 } from "../../../components/CardComponents/UsersCards";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 
@@ -45,7 +46,7 @@ const SettingsPage = () => {
     <>
       <div className="row mt-5">
         <div className="col-lg-5 col-sm-12">
-          <MiniProfileCard />
+          <MiniProfileCardSettings />
         </div>
         <div className="col-lg-7 col-sm-12 row">
           <div className="col-12 row">

@@ -1,7 +1,7 @@
 import React from "react";
 import { NotificationCard } from "../../../components/TableComponents/TransactionTable";
 import usersData from "../../../data/usersData.json";
-import CustomButton  from "../../../components/ButtonsComponent/GenandAuthBtn";
+import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";

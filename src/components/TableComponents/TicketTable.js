@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { useState } from "react";
 import ticketsData from "../../data/TicketData.json";
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
 import { Link } from "react-router-dom";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 // AdminDashbordTicketHistoryCard
 export const MiniTicketsHistory = memo(({ style }) => {
@@ -42,12 +42,13 @@ export const MiniTicketsHistory = memo(({ style }) => {
                   </tr>
                 );
               })}
-            <CustomBtn
-                value="View More"
-                className="GeneralBtnStyle1 btn all-btn text-white text-decoration-none mt-4 w-100"
-                to="tickets-history"
-                style={{ whiteSpace: "nowrap" }}
-              />
+            <Link
+              to={"tickets-history"}
+              className="d-flex justify-content-center pt-3 text-decoration-none w-100"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              <ViewMoreButton />
+            </Link>
           </tbody>
         </table>
       </div>

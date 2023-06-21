@@ -1,5 +1,4 @@
 import React from "react";
-import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import HeroImage from "../../images/HeroImage.png";
 import WhatWeDoImage from "../../images/WhatwedoImage.png";
 import OurPartnerImg from "../../images/partners.png";
@@ -8,7 +7,12 @@ import {
   WhyChooseUsCard,
 } from "../../components/CardComponents/HomepageCards";
 import homepageData from "../../data/homepageData.json";
-
+import { Link } from "react-router-dom";
+import { StartTransaction } from "../../components/ButtonsComponent/TransactionButtons";
+import {
+  GetStarted,
+  LearnMoreButton,
+} from "../../components/ButtonsComponent/NavigationAndViewButtons";
 const Homepage = () => {
   return (
     <div>
@@ -28,16 +32,14 @@ const HeroSection = () => {
       <div className="row" id="BackTop">
         <div className="col-md-12 col-sm-12 text-center">
           <h1>
-            Lorem ipsum usumm <br /> hums ipsumsera
+            Lorem dolor ipsum usumm <br /> hums ipsumsera
           </h1>
-          <p>Lorem ipsum dolor sitamet dolor</p>
+          <p>Lorem ipsum dolor mniuy sitamet </p>
         </div>
         <div className="text-center">
-            <CustomBtn
-              value={`START A TRANSACTION`}
-              className={`GeneralBtnStyle1 btn all-btn text-white`}
-              to="/signup"
-            />
+          <Link to="/signup">
+            <StartTransaction />
+          </Link>
         </div>
         <div className="mt-4">
           <img src={HeroImage} alt={`Hero Section Image`} className="mx-auto" />
@@ -68,10 +70,9 @@ const WhatWeDo = () => {
             lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
             condimentum ac, vestibulum eu nisl.
           </p>
-          <CustomBtn
-            value={`Learn More`}
-            className={`GeneralBtnStyle1 btn all-btn text-white`}
-          />
+          <Link to="/aboutus">
+            <LearnMoreButton />
+          </Link>
         </div>
         <div className="col-md-4  d-none d-md-block">
           <img src={WhatWeDoImage} className="" alt="..." />
@@ -98,10 +99,9 @@ const ProcessFlow = () => {
         })}
       </div>
       <div className="text-center">
-        <CustomBtn
-          value={`Get Started`}
-          className={`GeneralBtnStyle1 btn all-btn text-white`}
-        />
+        <Link to="/signup">
+          <GetStarted />
+        </Link>
       </div>
     </div>
   );

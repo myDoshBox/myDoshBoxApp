@@ -629,13 +629,17 @@ input[type=color]:focus,
 
 .offcanvas-lg,
 .big-side-nav {
-  background-color: #006747 !important;
+  background-color: #fff !important;
   color: hsl(0deg, 0%, 100%) !important;
   height: 100vh;
 }
 .offcanvas-lg span,
 .big-side-nav span {
   letter-spacing: 1.3px !important;
+}
+
+.offcanvas-sm {
+  background-color: #fff !important;
 }
 
 .big-side-nav {
@@ -651,11 +655,53 @@ input[type=color]:focus,
 
 .active-link {
   text-decoration: none;
-  border: 1px solid white;
-  border-radius: 8px 8px 8px 0;
-  padding: 5px;
-  color: #006747 !important;
-  background-color: white;
+  border-radius: 4px 4px;
+  padding: 15px 43px;
+  color: #fff !important;
+  background-color: #006747;
+}
+
+.active-link .icon {
+  text-decoration: none;
+  color: #ffffff !important;
+  margin-right: 15px;
+}
+
+.inactive-link {
+  text-decoration: none;
+  color: #757575 !important;
+}
+
+.inactive-link .icon {
+  text-decoration: none;
+  color: #757575 !important;
+  margin-right: 15px;
+}
+
+.active-linkSm {
+  text-decoration: none;
+  border-radius: 4px 4px;
+  padding: 7px 14px;
+  color: #ffffff !important;
+  background-color: #006747;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.inactive-linkSm .icon {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 14px !important;
+  color: #757575;
+}
+
+.smlogo {
+  width: 25px;
+  margin-left: 20px;
 }
 
 .SideNavDropdown button {

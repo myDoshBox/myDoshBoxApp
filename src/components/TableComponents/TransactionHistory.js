@@ -1,26 +1,25 @@
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
+import React from "react";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
+import { ViewBtn } from "../ButtonsComponent/NavigationAndViewButtons";
 
 const TransactionHistory = (props) => {
   const { trans_id, buyer_name, seller_name, products, date, status } = props;
   return (
     <>
       <tr>
-        <td className=" d-none d-md-table-cell text-small">
-          {trans_id}
-        </td>
+        <td className=" d-none d-md-table-cell text-small">{trans_id}</td>
         <td className="d-none d-sm-table-cell text-small">{buyer_name}</td>
         <td className="d-none d-lg-table-cell text-small">{seller_name}</td>
         <td className="text-small">{products}</td>
         <td className="text-small">{date}</td>
         <td className="text-small">
-          <Notifications text={status} styles={status} />
-        </td>
-        <td className="d-none d-sm-table-cell text-center">
-          <CustomBtn
-            value="view"
-            className="btn border text-success text-small viewBtn"
+          <Notifications
+            text={status}
+            styles={`text-center  rounded-pill ${status}`}
           />
+        </td>
+        <td className="d-none d-sm-table-cell">
+          <ViewBtn />
         </td>
       </tr>
     </>

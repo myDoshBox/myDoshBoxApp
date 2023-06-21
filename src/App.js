@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+
+  // Navigate,
 } from "react-router-dom";
 import { GuestNavbar } from "./components/NavbarComponents/TopNavbars";
 import Homepage from "./pages/GENERAL_PAGES/Homepage";
@@ -24,13 +26,13 @@ import UserSettingsPage, {
 } from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
 import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
-import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+// import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
 
 // Neutral Pages
 import { NeutralSetting } from "./pages/NEUTRALS_PAGES/NeutralSetting";
-import NeutralDashboard from "./pages/DASHBOARDS/neutral_dashboard";
+import NeutralDashboard from "./pages/NEUTRALS_PAGES/neutral_dashboard";
 import {
   ClosedConflicts,
   OngoingConflicts,
@@ -44,9 +46,6 @@ import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 
-// import UsersPage from "./pages/UsersPage";
-import UserProfile from "./pages/UserProfile";
-
 // Customer Care Pages
 import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
 import TicketHistoryPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/TicketHistory";
@@ -54,9 +53,10 @@ import UsersPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/UsersPage";
 import CustomerCareDashboardPage from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareDashboard";
 
 // Admin DashBoard Page
-import AdminDashboard from "./pages/AdminDashboard";
 import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
-
+import AdminDashboard from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminDashboard";
+import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
+import UserProfile from "./pages/DASHBOARDS/USER_DASHBOARD/UserProfile";
 
 function App() {
   return (
@@ -80,6 +80,8 @@ function App() {
           <Route path="updatebank" element={<UpdateBankDetailsPage />} />
           <Route path="reportissues" element={<ReportIssuesformPage />} />
           <Route path="initiate-escrow" element={<InitiateEscrow />} />
+          <Route path="userspage" element={<UsersPage />} />
+
           <Route
             path="transactionsummary"
             element={<TransactionSummaryPage />}
@@ -92,6 +94,7 @@ function App() {
           <Route index element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
           <Route path="notification" element={<NotifictionPage />} />
@@ -116,7 +119,6 @@ function App() {
           <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="users" element={<UsersPage />} />
         </Route>
-
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />

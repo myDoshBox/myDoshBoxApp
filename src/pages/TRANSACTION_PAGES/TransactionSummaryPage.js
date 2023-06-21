@@ -1,11 +1,13 @@
 import React from "react";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
-import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import {
   BackIcon,
   NextIcon,
 } from "../../components/IconComponent/NavigationAndViewIcon";
+import { Link } from "react-router-dom";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { BackButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
+import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
 
 const TransactionSummaryPage = () => {
   return (
@@ -16,7 +18,7 @@ const TransactionSummaryPage = () => {
 
           <div className="col-lg-9 col-sm-12">
             <UserDashboardNavbar />
-            <div className="mt-5">
+            <div className="mt-5 mb-5">
               <TransactionSummary />
             </div>
           </div>
@@ -33,7 +35,7 @@ const TransactionSummary = () => {
         <TransactionDetails
           heading={`Transaction Summary
 `}
-          sub_value={`Please Confirm the following transaction initiated by user Eland Aaronson`}
+          sub_text={`Please Confirm the following transaction initiated by user Eland Aaronson`}
           email={`Opeyemi Andrewson`}
           id={`AXSQWEDSC`}
           description={`AXSQWEDSC`}
@@ -43,18 +45,14 @@ const TransactionSummary = () => {
           total={`N3,600,000`}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
-              <CustomBtn
-                value="Back"
-                className="CancelBtn btn all-btn text-white"
-                to={"../initiate-escrow"}
-              />
+            <Link to={"../initiate-escrow"}>
+              <BackButton />
+            </Link>
           }
           rightBtn={
-              <CustomBtn
-                value="Proceed"
-                className="GeneralBtnStyle1 btn all-btn text-white"
-                to={"../agreement"}
-              />
+            <Link to={"../agreement"}>
+              <ProceedButton />
+            </Link>
           }
         />
       </div>

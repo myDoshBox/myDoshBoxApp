@@ -128,7 +128,7 @@ export const TransactionDetails = ({
 //   return (
 //     <section className="card border-0 shadow p-2" style={{ width: "45rem" }}>
 //       <div className="align-self-end mt-3">
-//         <CustomBtn
+//         <GeneralBtn
 //           lefticon={<BackIcon />}
 //           text="Back"
 //           styles="GeneralBtnStyle1 btn all-btn text-white"

@@ -1,5 +1,4 @@
 // import { UserSidenav } from "../../components/NavbarComponents/SideNavbar";
-import { CustomBtn } from "../../components/ButtonsComponent/GenandAuthBtn";
 import { Cancel } from "../../components/IconComponent/NeutralsDashboardIcons";
 import brokenScreen1 from "../../images/brokenScreen1.png";
 import brokenScreen2 from "../../images/brokenScreen2.png";
@@ -13,6 +12,10 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import UsersSideNav from "../../components/NavbarComponents/UsersSideNav";
 import { useState } from "react";
+import {
+  BuyersFaultButton,
+  SellersFaultButton,
+} from "../../components/ButtonsComponent/ConflictButtons";
 
 const NeutralsResolveConflict = () => {
   return (
@@ -77,16 +80,10 @@ const NeutralsResolveConflictCard = () => {
           ></textarea>
           <div className="row mt-5">
             <div className="col-md-6 col-sm-12 mb-2 text-center text-md-end">
-              <CustomBtn
-                value="Sellers Fault"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-              />
+              <SellersFaultButton />
             </div>
             <div className="col-md-6 col-sm-12 text-center text-sm-start">
-              <CustomBtn
-                value="Buyers Fault"
-                styles="GeneralBtnStyle1 btn all-btn text-white"
-              />
+              <BuyersFaultButton />
             </div>
           </div>
         </form>

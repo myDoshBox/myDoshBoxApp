@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
-import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { Link } from "react-router-dom";
+import { CancelButton } from "../../components/ButtonsComponent/OtherButtons";
+import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
 
 const InitiateEscrow = () => {
   return (
@@ -450,16 +452,12 @@ const InitiateEscrowForm = () => {
           </>
         )}
         <div className="d-flex justify-content-center">
-          <CustomBtn
-            to="../../userdashboard"
-            value="Cancel"
-            className="GeneralBtnStyle1 btn all-btn text-white me-3 pale-red"
-          />
-          <CustomBtn
-            to="../transactionsummary"
-            value="Proceed"
-            className="GeneralBtnStyle1 btn all-btn text-white"
-          />
+          <Link to="../../userdashboard">
+            <CancelButton />
+          </Link>
+          <Link to="../transactionsummary">
+            <ProceedButton className="ms-3" />
+          </Link>
         </div>
       </Form>
     </div>

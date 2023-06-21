@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
+// import { GoogleButton } from "../ButtonsComponent/Button";
+import {
+  SignUpButton,
+  GoogleSignUpButton,
+} from "../ButtonsComponent/AuthenticationButtons";
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
 
@@ -219,18 +223,12 @@ export const SignUpIndividual = () => {
         )}
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
-            <button
-              type="submit"
-              className="GeneralBtnStyle1 btn all-btn text-white"
-              style={{ width: "210px" }}
-            >
-              Sign Up
-            </button>
+            <SignUpButton />
           </div>
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <CustomBtn value="Sign Up With Google" lefticon={<GoogleIcon />} className="btn GoogleAuthBtn" />
+        <GoogleSignUpButton />
       </div>
     </>
   );
@@ -474,18 +472,12 @@ export const SignUpOrganization = () => {
         )} */}
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
-            <CustomBtn
-              type="submit"
-              className="GeneralBtnStyle1 btn all-btn text-white"
-              style={{ width: "210px" }}
-              value="Sign Up"
-            />
-            
+            <SignUpButton />
           </div>
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <CustomBtn value="Sign Up With Google" lefticon={<GoogleIcon />} className="btn GoogleAuthBtn" />
+        <GoogleSignUpButton />
       </div>
     </>
   );

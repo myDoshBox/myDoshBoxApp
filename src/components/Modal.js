@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 import ThankYouPopUpImg from "../images/Happy People.jpg";
-import CustomBtn from "./ButtonsComponent/GenandAuthBtn";
+import { ModalBtn } from "./ButtonsComponent/OtherButtons";
 import evidence from "../images/productimage.jpg";
 
 /** Please Note that the GeneralModal works with the openModalText Button **/
@@ -21,11 +21,12 @@ export const GeneralModal = ({
 
   return (
     <>
-      <CustomBtn
-        className={modalBtnStyle}
-        onClick={handleShow}
-        value={openModalText}
+      <ModalBtn
+        styles={modalBtnStyle}
+        onclick={handleShow}
+        text={openModalText}
       />
+
       <Modal show={show} onHide={handleClose} className="GeneralModal">
         <Modal.Header className="text-center border border-0 justify-content-center flex-column pb-0">
           <img className="w-50 mb-3" src={ThankYouPopUpImg} alt={modalTitle} />
@@ -35,12 +36,13 @@ export const GeneralModal = ({
           {modalMessage}
         </Modal.Body>
         <Modal.Footer className="border border-0 text-center justify-content-center pt-0">
-            <CustomBtn
-              className={modalBtnStyle}
-              onClick={handleClose}
-              value={closeModalText}
-              to={modalRoute}
+          <Link to={modalRoute}>
+            <ModalBtn
+              styles={modalBtnStyle}
+              onclick={handleClose}
+              text={closeModalText}
             />
+          </Link>
         </Modal.Footer>
       </Modal>
     </>
@@ -80,11 +82,12 @@ export const DisputeDetailsModal = ({
 
   return (
     <>
-      <CustomBtn
-        className={modalBtnStyle}
+      <ModalBtn
+        styles={modalBtnStyle}
         onclick={handleShow}
-        value={openModalText}
+        text={openModalText}
       />
+
       <Modal show={show} onHide={handleClose} className="DisputeDetailsModal">
         <Modal.Header closeButton>
           <h6 className="m-0 text-small">
@@ -153,9 +156,7 @@ export const DisputeDetailsModal = ({
             </div>
           </div>
           <div className="">
-            <div
-              class="row g-2 mb-4 pb-2"
-            >
+            <div class="row g-2 mb-4 pb-2">
               <button
                 type="button"
                 class="w-100 w-md-50 btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
@@ -369,14 +370,15 @@ export const DisputeDetailsModal = ({
           </div>
         </Modal.Body>
         <Modal.Footer className="w-100 justify-content-between">
-          <CustomBtn
-            className={`w-25 m-0 text-small CloseBtnStyle GeneralBtnStyle1 btn all-btn`}
+          <ModalBtn
+            styles={`w-25 m-0 text-small CloseBtnStyle GeneralBtnStyle1 btn all-btn`}
             onclick={handleClose}
-            value="Close"
+            text="Close"
           />
+
           <Link className="m-0" style={{ width: "72%" }}>
-            <CustomBtn
-              className={`w-100 m-0 text-small GeneralBtnStyle1 btn all-btn text-white`}
+            <ModalBtn
+              styles={`w-100 m-0 text-small GeneralBtnStyle1 btn all-btn text-white`}
               onclick={handleClose}
               lefticon={
                 <svg
@@ -394,7 +396,7 @@ export const DisputeDetailsModal = ({
                   />
                 </svg>
               }
-              value="Download"
+              text="Download"
             />
           </Link>
         </Modal.Footer>

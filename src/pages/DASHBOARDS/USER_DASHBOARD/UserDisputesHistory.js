@@ -1,7 +1,8 @@
-import CustomBtn from "../../../components/ButtonsComponent/GenandAuthBtn";
+import { Link } from "react-router-dom";
 import DisputesData from "../../../data/dummyData/disputeshistorydata.json";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { DisputeDetailsModal } from "../../../components/Modal";
+import { BackButton } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
 
 const UserDisputeHistory = () => {
   return (
@@ -29,7 +30,13 @@ const DisputeCard = () => {
             <h5>Disputes</h5>
           </div>
           <div className="col-6 d-flex justify-content-end">
+<<<<<<< HEAD
               <CustomBtn value={"Back"} lefticon={<BackIcon />} to={"../../../userdashboard"} className="GeneralBtnStyle1 btn all-btn text-white"/>
+=======
+            <Link to={"../../../userdashboard"}>
+              <BackButton />
+            </Link>
+>>>>>>> d33e0a703df7fbeef6e8d3913d554613b304586b
           </div>
         </div>
         {DisputesData.disputes_data.map((history) => {

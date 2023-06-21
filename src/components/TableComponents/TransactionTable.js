@@ -3,7 +3,7 @@ import { Notifications } from "../NotificationComponent/NotificationComponents";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import { Link } from "react-router-dom";
-import CustomBtn from "../ButtonsComponent/GenandAuthBtn";
+import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 
 export const NotificationCard = (props) => {
   const { image, title, description, link } = props;
@@ -52,18 +52,14 @@ export const MiniRecentTransactionTable = () => {
           </tbody>
         </table>
         <div className="p-4 text-md-end d-none d-md-block">
-            <CustomBtn
-              value={[`View more`]}
-              className={`GeneralBtnStyle1 btn all-btn text-white`}
-              to={"../transaction"}
-            />
+          <Link to={"./transaction"}>
+            <ViewMoreButton />
+          </Link>
         </div>
         <div className="text-center d-lg-none .d-xl-block">
-            <CustomBtn
-              value={[`View more`]}
-              className={`GeneralBtnStyle1 btn all-btn text-white`}
-              to={"../transaction"}
-            />
+          <Link to={"./transaction"}>
+            <ViewMoreButton />
+          </Link>
         </div>
       </div>
     </div>
@@ -110,15 +106,11 @@ export const AdminRecentTransactionsCard = memo(({ style }) => {
               );
             })}
             <Link
-              to={""}
+              to="../transaction"
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
-              <CustomBtn
-                value="View More"
-                className="GeneralBtnStyle1 btn all-btn text-white"
-                to={"transactions"}
-              />
+              <ViewMoreButton />
             </Link>
           </tbody>
         </table>
