@@ -655,23 +655,6 @@ input[type=color]:focus,
   background-color: #006747;
 }
 
-.active-linkSm {
-  text-decoration: none;
-  border-radius: 4px 4px;
-  padding: 10px 10px;
-  color: #ffffff !important;
-  background-color: #006747;
-}
-
-.inactive-linkSm .icon {
-  display: flex;
-  align-items: center;
-}
-
-.bgSmallscreen {
-  width: 100% !important;
-}
-
 .active-link .icon {
   text-decoration: none;
   color: #ffffff !important;
@@ -687,6 +670,32 @@ input[type=color]:focus,
   text-decoration: none;
   color: #757575 !important;
   margin-right: 15px;
+}
+
+.active-linkSm {
+  text-decoration: none;
+  border-radius: 4px 4px;
+  padding: 7px 14px;
+  color: #ffffff !important;
+  background-color: #006747;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.inactive-linkSm .icon {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 14px !important;
+  color: #757575;
+}
+
+.smlogo {
+  width: 25px;
+  margin-left: 20px;
 }
 
 .SideNavDropdown button {
