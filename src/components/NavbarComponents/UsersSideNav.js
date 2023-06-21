@@ -53,7 +53,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
     <>
       <Button
         onClick={toggleShow}
-        className="me-2 bg-white border-0 shadow d-lg-none position-fixed start-0 top-0"
+        className="me-2 bg-white border-0 d-lg-none position-fixed start-0 top-0"
       >
         <svg
           width="30"
@@ -73,16 +73,16 @@ const MobileScreenSideNav = ({ name, ...props }) => {
         show={show}
         onHide={handleClose}
         responsive="lg"
-        className="d-lg-none text-white"
-        style={{ width: "5rem" }}
+        className="d-lg-none text-white border-0 shadow"
+        style={{ width: "6rem" }}
         {...props}
         ref={disappearEl}
         // id="off-canvas"x
       >
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header>
           <Offcanvas.Title>
             <Link to={"/"}>
-              <img src={smdoshlogo} alt="logo" />
+              <img src={smdoshlogo} alt="logo" className="smlogo" />
             </Link>
           </Offcanvas.Title>
         </Offcanvas.Header>
@@ -141,31 +141,31 @@ const MobileScreenSideNav = ({ name, ...props }) => {
               </li>
               <li className="d-flex  align-items-center SideNavItem mb-5">
                 <div className="me-3">
-                  <DisputeIcon />
+                  <NavLink
+                    to="dispute"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                    {/* <span>Disputes</span> */}
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="dispute"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  {/* <span>Disputes</span> */}
-                </NavLink>
               </li>
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
-                  <SettingsIcon />
+                  <NavLink
+                    to="settings"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                    {/* <span>Settings</span> */}
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="settings"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  {/* <span>Settings</span> */}
-                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">
