@@ -194,12 +194,12 @@ export const MiniUsersCard = memo(({ style }) => {
       <div className={`card p-3 shadow rounded border-0 h-100`}>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h6 className="m-0">All Users</h6>
-          <CustomBtn
+          {/* <CustomBtn
             value="View More"
             className="btn border text-success text-small viewBtn"
             to="users"
             style={{ whiteSpace: "nowrap" }}
-          />
+          /> */}
         </div>
         <table className="table m-0 h-100">
           <thead>

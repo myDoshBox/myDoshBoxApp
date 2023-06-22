@@ -14,11 +14,11 @@ export const NotificationCard = (props) => {
       <div className="d-inline">
         <p className="w-100 ps-3 ps-md-0 text-small m-0">{description}</p>
       </div>
-      <CustomBtn
+      {/* <CustomBtn
         value={link}
         className="btn border text-success text-small viewBtn"
         style={{ "whiteSpace": "nowrap" }}
-          />
+          /> */}
     </div>
   );
 };

@@ -2,14 +2,7 @@ import { Notifications } from "../../../components/NotificationComponent/Notific
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-<<<<<<< HEAD
-import CustomButton from "../../../components/ButtonsComponent/GenandAuthBtn";
-import { ArrowDownIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
-import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
-import CustomBtn from "../../../components/ButtonsComponent/GenandAuthBtn";
-=======
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
->>>>>>> d33e0a703df7fbeef6e8d3913d554613b304586b
 
 const CustomerCareTransaction = () => {
   return (
@@ -34,12 +27,12 @@ export const CustomerCareTransactionTable = () => {
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-flex justify-content-end pb-3">
-          <CustomButton
+          {/* <CustomButton
             value="Sort by: Recent"
             className="btn border text-success text-small viewBtn"
             lefticon={<SortIcon />}
             righticon={<ArrowDownIcon />}
-          />
+          /> */}
         </div>
 
         <table className="table transaction-table">
@@ -98,11 +91,11 @@ export const CustomerCareTransactionTableData = (props) => {
           <Notifications text={status_name} styles={status_style} />
         </td>
         <td className="p-md-3 small-hide">
-          <CustomBtn
+          {/* <CustomBtn
             value={view}
             className="btn border text-success text-small viewBtn"
             style={{ whiteSpace: "nowrap" }}
-          />
+          /> */}
         </td>
       </tr>
     </>
