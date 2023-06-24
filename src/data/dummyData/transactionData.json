@@ -57,66 +57,97 @@
       "alert": " By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above"
     }
   ],
-  "user_recent_transaction": [
+  "recent_notification": [
+    {
+      "id": 1,
+      "goalType": "Event Goal",
+      "subject": "Test Goal",
+      "targetAchievement": "Best Work 2022",
+      "date": "1 Jan 2022",
+      "Slip": "Unread",
+      "status": "view more"
+    },
+    {
+      "id": 2,
+      "goalType": "Invoice Goal",
+      "subject": "Test Goal",
+      "targetAchievement": "Best Work 2022",
+      "date": "2 Jan 2022",
+      "Slip": "Unread",
+      "status": "view more"
+    },
+    {
+      "id": 3,
+      "goalType": "Employee Goal",
+      "subject": "Test Goal",
+      "targetAchievement": "Best Work 2022",
+      "date": "3 Jan 2022",
+      "Slip": "Read",
+      "status": "view more"
+    },
+    {
+      "id": 4,
+      "goalType": "Invoice Goal",
+      "subject": "Test Goal",
+      "targetAchievement": "Best Work 2022",
+      "date": "4 Jan 2022",
+      "Slip": "Read",
+      "status": "view more"
+    },
+    {
+      "id": 5,
+      "goalType": "Project Goal",
+      "subject": "Test Goal",
+      "targetAchievement": "Best Work 2022",
+      "date": "5 Jan 2022",
+      "Slip": "Read",
+      "status": "view more"
+    }
+  ],
+  "all_transaction": [
     {
       "id": 1,
       "product": "35 cartorns of biscuits",
-      "price": 3275.45,
+      "amount": "3275.45",
       "date": "2/01/23",
       "status_name": "Completed",
       "status_style": "completed"
     },
     {
-      "id": 2,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Awaiting Delivery",
-      "status_style": "awaiting"
-    },
-    {
       "id": 3,
       "product": "35 cartorns of biscuits",
-      "price": 3275.45,
+      "amount": "3275.45",
       "date": "2/01/23",
-      "status_name": "Refunded",
-      "status_style": "refunded"
+      "status_name": "Completed",
+      "status_style": "completed"
+    },
+    {
+      "id": 1,
+      "product": "35 cartorns of biscuits",
+      "amount": "3275.45",
+      "date": "2/01/23",
+      "status_name": "Completed",
+      "status_style": "completed"
     },
     {
       "id": 4,
       "product": "35 cartorns of biscuits",
-      "price": 3275.45,
+      "amount": "3275.45",
       "date": "2/01/23",
       "status_name": "Canceled",
-      "status_style": "canceled"
+      "status_style": "completed"
     },
     {
       "id": 5,
       "product": "35 cartorns of biscuits",
-      "price": 3275.45,
+      "amount": "3275.45",
       "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
-    },
-    {
-      "id": 6,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
-    },
-    {
-      "id": 7,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
+      "status_name": "Incomplete",
+      "status_style": "completed"
     }
   ],
 
-  "mini_transaction": [
+  "user_recent_transaction": [
     {
       "id": 1,
       "product": "35 cartorns of biscuits",

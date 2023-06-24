@@ -12,7 +12,8 @@ import {
   TicketsIcon,
   AnalyticsIcon,
 } from "../IconComponent/SideNavIcons";
-import doshlogo from "../../images/doshlogolight.png";
+import doshlogo from "../../images/NewDoshLogo.png";
+import smdoshlogo from "../../images/doshnewlogo.png";
 import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
 
 const AdminSideNav = () => {
@@ -36,8 +37,8 @@ const MobileScreenSideNav = ({ name, ...props }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
-  let activeClassName = "active-link";
-  let baseClassName = "text-decoration-none text-white";
+  let activeClassName = "active-linkSm";
+  let baseClassName = "inactive-linkSm";
   const disappearEl = useRef(null);
   const navigate = useNavigate();
 
@@ -72,74 +73,71 @@ const MobileScreenSideNav = ({ name, ...props }) => {
         show={show}
         onHide={handleClose}
         responsive="lg"
-        className="w-75 d-lg-none text-white"
+        className="d-lg-none text-white border-0 shadow"
+        style={{ width: "6rem" }}
         {...props}
         ref={disappearEl}
       >
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header>
           <Offcanvas.Title>
-            <img src={doshlogo} alt="logo" />
+            <img src={smdoshlogo} alt="logo" className="smlogo" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="d-flex justify-content-between flex-column">
             <ul className="ps-2">
               <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <DashboardIcon />
+                <div>
+                  <NavLink
+                    to="../admin"
+                    end
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="../admin"
-                  end
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Dashboard</span>
-                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <AnalyticsIcon />
+                <div>
+                  <NavLink
+                    to="AdminAnalytics"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="AdminAnalytics"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Analytics</span>
-                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <NavTransactionIcon />
+                <div>
+                  <NavLink
+                    to="transactions"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="transactions"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Transactions</span>
-                </NavLink>
               </li>
               <li className="d-flex mb-4 align-items-center SideNavItem">
-                <div className="me-3">
-                  <UsersIcon />
+                <div>
+                  <NavLink
+                    to="users"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="users"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Users</span>
-                </NavLink>
               </li>
               {/* <li className="d-flex align-items-center SideNavItem mb-4">
                 <div className="me-3">
@@ -148,46 +146,43 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                 <span className="my-1">Chats</span>
               </li> */}
               <li className="d-flex align-items-center SideNavItem mb-4">
-                <div className="me-3">
-                  <NotificationIcon />
+                <div>
+                  <NavLink
+                    to="notification"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="notification"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Notifications</span>
-                </NavLink>
               </li>
               <li className="d-flex  align-items-center SideNavItem mb-4">
-                <div className="me-3">
-                  <TicketsIcon />
+                <div>
+                  <NavLink
+                    to="tickets"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="tickets"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Tickets</span>
-                </NavLink>
               </li>
               <li className="d-flex align-items-center SideNavItem mb-5">
-                <div className="me-3">
-                  <SettingsIcon />
+                <div>
+                  <NavLink
+                    to="settings"
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <i class="bi bi-house icon"></i>
+                  </NavLink>
                 </div>
-                <NavLink
-                  to="settings"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                  onClick={handleDisappear}
-                >
-                  <span>Settings</span>
-                </NavLink>
               </li>
             </ul>
             <ul className="ps-3">
@@ -211,7 +206,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
 
 const DesktopScreen = ({ name, ...props }) => {
   let activeClassName = "active-link";
-  let baseClassName = "text-decoration-none text-white";
+  let baseClassName = "inactive-link";
   const navigate = useNavigate();
 
   const nav = () => {
@@ -227,57 +222,57 @@ const DesktopScreen = ({ name, ...props }) => {
         <div className="d-flex justify-content-between flex-column">
           <ul className="ps-2">
             <li className="d-flex mb-4 align-items-center SideNavItem">
-              <div className="me-3">
-                <DashboardIcon />
+              <div>
+                <NavLink
+                  to="../admin"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Dashboard</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="../admin"
-                end
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Dashboard</span>
-              </NavLink>
             </li>
             <li className="d-flex mb-4 align-items-center SideNavItem">
-              <div className="me-3">
-                <AnalyticsIcon />
+              <div>
+                <NavLink
+                  to="AdminAnalytics"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Analytics</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="AdminAnalytics"
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Analytics</span>
-              </NavLink>
             </li>
             <li className="d-flex mb-4 align-items-center SideNavItem">
-              <div className="me-3">
-                <NavTransactionIcon />
+              <div>
+                <NavLink
+                  to="transactions"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Transactions</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="transactions"
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Transactions</span>
-              </NavLink>
             </li>
             <li className="d-flex mb-4 align-items-center SideNavItem">
-              <div className="me-3">
-                <UsersIcon />
+              <div>
+                <NavLink
+                  to="users"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Users</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="users"
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Users</span>
-              </NavLink>
             </li>
             {/* <li className="d-flex align-items-center SideNavItem mb-4">
               <div className="me-3">
@@ -286,41 +281,40 @@ const DesktopScreen = ({ name, ...props }) => {
               <span className="my-1">Chats</span>
             </li> */}
             <li className="d-flex align-items-center SideNavItem mb-4">
-              <div className="me-3">
-                <NotificationIcon />
+              <div>
+                <NavLink
+                  to="notification"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Notifications</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="notification"
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Notifications</span>
-              </NavLink>
             </li>
             <li className="d-flex  align-items-center SideNavItem mb-4">
-              <div className="me-3">
-                <TicketsIcon />
+              <div>
+                <NavLink
+                  to="tickets-history"
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <i class="bi bi-house icon"></i>
+                  <span>Tickets</span>
+                </NavLink>
               </div>
-              <NavLink
-                to="tickets-history"
-                className={({ isActive }) =>
-                  isActive ? activeClassName : baseClassName
-                }
-              >
-                <span>Tickets</span>
-              </NavLink>
             </li>
             <li className="d-flex align-items-center SideNavItem mb-5">
-              <div className="me-3">
-                <SettingsIcon />
-              </div>
+              <div></div>
               <NavLink
                 to="settings"
                 className={({ isActive }) =>
                   isActive ? activeClassName : baseClassName
                 }
               >
+                <i class="bi bi-house icon"></i>
                 <span>Settings</span>
               </NavLink>
             </li>

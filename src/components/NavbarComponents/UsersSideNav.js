@@ -99,8 +99,9 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Dashboard</span> */}
+                    {/* <i class="bi bi-house icon"></i> */}
+
+                    <span>Dashboard</span>
                   </NavLink>
                 </div>
               </li>
@@ -206,7 +207,7 @@ const DesktopScreen = ({ name, ...props }) => {
     <>
       <div className="d-none d-lg-block big-side-nav shadow">
         <Link to="/">
-          <img src={doshlogo} alt="logo" className="mb-5" />
+          <img src={doshlogo} alt="logo" className="mb-5 w-50" />
         </Link>
 
         <div className="d-flex justify-content-between flex-column">
@@ -220,10 +221,11 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="mx-3 icon">
-                    <DashboardIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <span>
+                    <DashboardIcon icon="icon" />
+                  </span>
+
+                  {/* <i class="bi bi-house icon"></i> */}
                   <span>Dashboards</span>
                 </NavLink>
               </div>
@@ -245,12 +247,6 @@ const DesktopScreen = ({ name, ...props }) => {
               </div>
             </li>
 
-            {/* <li className="d-flex align-items-center SideNavItem mb-5">
-              <div className="me-3">
-                <ChatIcon />
-              </div>
-              <span className="my-1">Chats</span>
-            </li> */}
             <li className="d-flex align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <NavLink
