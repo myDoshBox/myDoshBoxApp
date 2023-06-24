@@ -7,7 +7,7 @@ import {
   SignUpOrganization,
 } from "../../components/FormComponents.js/AuthenticationForms";
 import logo from "../../images/doshlogolight.png";
-import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
+// import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 
 const SignUpPage = () => {
   return (
@@ -57,12 +57,12 @@ const SignUpForm = () => {
                 <span style={{ fontSize: "14px" }}>
                   Already have an account?
                 </span>
-                <CustomBtn
+                {/* <CustomBtn
                   to={"/signin"}
                   className="text-decoration-none ms-1 text-success"
                   style={{ fontSize: "14px" }}
                   value="Sign In"
-                />
+                /> */}
             </div>
           </Col>
         </Row>
@@ -74,9 +74,9 @@ const SignUpForm = () => {
 const Side = () => {
   return (
     <div className="pe-lg-5 signUp-bg text-white">
-      <CustomBtn to="/">
+      {/* <CustomBtn to="/">
         <img src={logo} alt="" className="p-4" />
-      </CustomBtn>
+      </CustomBtn> */}
       <div className="p-md-5 p-3">
         <h1 className="text-white">Start your journey with us.</h1>
         <p className="text-white">

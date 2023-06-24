@@ -59,60 +59,104 @@
   ],
   "user_recent_transaction": [
     {
-      "id": 1,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Completed",
-      "status_style": "completed"
+      "item": "ROG Laptop",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Annisa Kim",
+      "amount": 1300,
+      "status": "Completed",
+      "status_color": "#00FF00",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 2,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Awaiting Delivery",
-      "status_style": "awaiting"
+      "item": "Macbook M1 Pro",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Alex Rons",
+      "amount": 1250,
+      "status": "Canceled",
+      "status_color": "#FF0000",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 3,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Refunded",
-      "status_style": "refunded"
+      "item": "Iphone 14",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Vinnales",
+      "amount": 1300,
+      "status": "Awaiting Delivery",
+      "status_color": "#FFFF00",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 4,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Canceled",
-      "status_style": "canceled"
+      "item": "Samsung Fold",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Shakir Rai",
+      "amount": 1450,
+      "status": "Refunded",
+      "status_color": "#9747FF",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 5,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
+      "item": "MSI Monitor",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Jack Guy",
+      "amount": 550,
+      "status": "Completed",
+      "status_color": "#00FF00",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 6,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
+      "item": "Samsung Fold",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Shakir Rai",
+      "amount": 1450,
+      "status": "Pending",
+      "status_color": "#FFFF00",
+      "buyer_image": "../../../images/transact_person.png"
     },
     {
-      "id": 7,
-      "product": "35 cartorns of biscuits",
-      "price": 3275.45,
-      "date": "2/01/23",
-      "status_name": "Resolved",
-      "status_style": "resolved"
+      "item": "I Watch",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Jacob Onic",
+      "amount": 800,
+      "status": "Completed",
+      "status_color": "#00FF00",
+      "buyer_image": "../../../images/transact_person.png"
+    },
+    {
+      "item": "Samsung Flip",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Michael",
+      "amount": 1350,
+      "status": "Pending",
+      "status_color": "#FFFF00",
+      "buyer_image": "../../../images/transact_person.png"
+    },
+    {
+      "item": "Mi Watch",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Vin Diesel",
+      "amount": 750,
+      "status": "Approved",
+      "status_color": "#0000FF",
+      "buyer_image": "../../../images/transact_person.png"
+    },
+    {
+      "item": "Macbook M2",
+      "purchase_from": "Amazon",
+      "purchase_date": "5 Jan 2022",
+      "purchase_by": "Sugiyono",
+      "amount": 1250,
+      "status": "Resolved",
+      "status_color": "#00FF00",
+      "buyer_image": "../../../images/transact_person.png"
     }
   ],
 

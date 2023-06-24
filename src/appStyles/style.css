@@ -182,6 +182,10 @@ div {
     font-size: 0.8rem !important;
   }
 }
+.fs-sm {
+  font-size: 0.75rem !important;
+}
+
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;

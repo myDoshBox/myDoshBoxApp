@@ -7,8 +7,8 @@ import { memo, useState } from "react";
 //   CompletedTransactionIcon,
 // } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
-import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
-import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
+// import { FilterButton } from "../ButtonsComponent/GenandAuthBtn";
+// import { GeneralBtn } from "../ButtonsComponent/GenandAuthBtn";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -174,10 +174,10 @@ export const MiniProfileCardSettings = () => {
         <hr></hr>
         <div className="text-end pe-2 py-3">
           <Link to={"../updateprofile"}>
-            <GeneralBtn
+            {/* <GeneralBtn
               text="Edit Profile"
               styles="GeneralBtnStyle1 btn all-btn text-white"
-            />
+            /> */}
           </Link>
         </div>
       </div>
@@ -232,11 +232,11 @@ export const MiniUsersCard = memo(({ style }) => {
               className="d-flex justify-content-center pt-3 text-decoration-none w-100"
               style={{ whiteSpace: "nowrap" }}
             >
-              <GeneralBtn
+              {/* <GeneralBtn
                 text="View More"
                 styles="GeneralBtnStyle1 btn all-btn text-white"
                 link={"users"}
-              />
+              /> */}
             </Link>
           </tbody>
         </table>
