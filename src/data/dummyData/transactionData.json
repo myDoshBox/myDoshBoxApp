@@ -65,7 +65,8 @@
       "purchase_by": "Annisa Kim",
       "amount": 1300,
       "status": "Completed",
-      "status_color": "#00FF00",
+      "status_color": "#239A3C",
+      "status_message": "You have successfully sent ₦1300 to Annisa Kim.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -75,7 +76,8 @@
       "purchase_by": "Alex Rons",
       "amount": 1250,
       "status": "Canceled",
-      "status_color": "#FF0000",
+      "status_color": "#B51629",
+      "status_message": "Your transaction to Alex Rons was not successful.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -85,7 +87,8 @@
       "purchase_by": "Vinnales",
       "amount": 1300,
       "status": "Awaiting Delivery",
-      "status_color": "#FFFF00",
+      "status_color": "#F6B700",
+      "status_message": "Your transaction to Vinnales is awaiting delivery.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -96,6 +99,7 @@
       "amount": 1450,
       "status": "Refunded",
       "status_color": "#9747FF",
+      "status_message": "Your transaction to Shakir Rai has been refunded.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -105,7 +109,8 @@
       "purchase_by": "Jack Guy",
       "amount": 550,
       "status": "Completed",
-      "status_color": "#00FF00",
+      "status_color": "#239A3C",
+      "status_message": "You have successfully sent ₦550 to Jack Guy.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -115,7 +120,8 @@
       "purchase_by": "Shakir Rai",
       "amount": 1450,
       "status": "Pending",
-      "status_color": "#FFFF00",
+      "status_color": "#B51629",
+      "status_message": "Your transaction to Shakir Rai is pending.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -125,7 +131,8 @@
       "purchase_by": "Jacob Onic",
       "amount": 800,
       "status": "Completed",
-      "status_color": "#00FF00",
+      "status_color": "#239A3C",
+      "status_message": "You have successfully sent ₦800 to Jacob Onic.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -135,7 +142,8 @@
       "purchase_by": "Michael",
       "amount": 1350,
       "status": "Pending",
-      "status_color": "#FFFF00",
+      "status_color": "#B51629",
+      "status_message": "Your transaction to Michael is pending.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -145,7 +153,8 @@
       "purchase_by": "Vin Diesel",
       "amount": 750,
       "status": "Approved",
-      "status_color": "#0000FF",
+      "status_color": "#239A3C",
+      "status_message": "Your transaction to Vin Diesel has been approved.",
       "buyer_image": "../../../images/transact_person.png"
     },
     {
@@ -155,7 +164,8 @@
       "purchase_by": "Sugiyono",
       "amount": 1250,
       "status": "Resolved",
-      "status_color": "#00FF00",
+      "status_color": "#F6B700",
+      "status_message": "Your transaction to Sugiyono has been resolved.",
       "buyer_image": "../../../images/transact_person.png"
     }
   ],

@@ -1,114 +1,41 @@
-import {
-  NextButton,
-  PreviousButton,
-} from "./ButtonsComponent/NavigationAndViewButtons";
+import { Button } from "react-bootstrap";
 
 export const PaginationBar = () => {
   return (
-    // NOTE: Dynamically add the aria-current on each page
-    <nav role="navigation" aria-label="Page Navigation">
+    <nav
+      role="navigation"
+      aria-label="Page Navigation"
+      className="d-flex justify-content-center justify-content-md-between align-items-center fs-sm"
+    >
+      <p className="d-none d-md-block page-link placeholderTextColor fs-sm m-0">
+        Showing 1 to 10 of 90 entries
+      </p>
       <ul className="list-unstyled d-flex justify-content-between align-items-center PaginationBar mb-0">
-        <li className="page-item mx-0">
-          <PreviousButton />
+        <li className="page-item mx-0 pe-2">
+          <Button className="bg-transparent lightTextColor fs-sm border-0">
+            Previous
+          </Button>
         </li>
-        <li className="page-item " aria-label="Goto Page 1">
-          <a className="page-link placeholderTextColor" href="/page-1">
+        <li className="page-item mx-1" aria-label="Goto Page 1">
+          <a
+            className="page-link text-black all-btn btn px-2 py-1 fs-sm border border-1 rounded-1"
+            href="./"
+          >
             1
           </a>
         </li>
-        <li className="page-item " aria-current="page" aria-label="Goto Page 2">
-          <a className="page-link placeholderTextColor" href="/page-2">
+        <li className="page-item mx-1" aria-current="page">
+          <a
+            className="page-link text-black all-btn btn px-2 py-1 fs-sm border border-1 rounded-1"
+            href="./"
+          >
             2
           </a>
         </li>
-        <li className="page-item " aria-label="Goto Page 3" aria-current="true">
-          <a className="page-link placeholderTextColor" href="/page-3">
-            3
-          </a>
-        </li>
-        <li
-          className="page-item d-md-none d-lg-none"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            ...
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            4
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            5
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            6
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block d-lg-none"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            ...
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            7
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            8
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            9
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            10
-          </a>
-        </li>
-        <li className="page-item mx-0">
-          <NextButton />
+        <li className="page-item mx-0 ps-2">
+          <Button className="bg-transparent lightTextColor fs-sm border-0">
+            Next
+          </Button>
         </li>
       </ul>
     </nav>
