@@ -94,6 +94,7 @@ function App() {
           <Route index element={<NeutralDashboard />} />
           <Route path="open-conflicts" element={<OpenConflicts />} />
           <Route path="closed-conflicts" element={<ClosedConflicts />} />
+          <Route path="transactions" element={<CustomerCareTransaction />} />
           <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
           <Route path="neutralsetting" element={<NeutralSetting />} />
           <Route path="notification" element={<NotifictionPage />} />
