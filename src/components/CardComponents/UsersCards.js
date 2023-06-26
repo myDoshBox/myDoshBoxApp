@@ -112,7 +112,7 @@ export const MiniProfileCard = () => {
         <hr></hr>
         <div className="d-flex px-3">
           <div>{/* <CompletedDealsIcon width="30" /> */}</div>
-          <p className="ms-lg-1">100 deals completed</p>
+          <p className="ms-lg-1">100 deal complete</p>
         </div>
         <div className="d-flex px-3 ">
           <span>
