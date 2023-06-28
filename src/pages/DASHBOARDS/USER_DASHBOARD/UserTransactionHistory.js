@@ -32,9 +32,27 @@ export const RecentTransactionTable = () => {
     { label: "2021", value_1: "2022", value_2: "2023" },
   ];
 
+const itemsPerPage = 10;
+
+const [currentPage, setCurrentPage] = useState(1);
+const [totalPages, setTotalPages] = useState(0);
+
+const handlePageChange = (page) => {
+  if (page > 0 && page <= totalPages) {
+    setCurrentPage(page);
+  }
+};
+
+const getSlicedData = () => {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  return TransactionData.user_recent_transaction.slice(startIndex, endIndex);
+};
+
+
   return (
     <div className="bg-white rounded-1 p-3" style={{ width: "100%" }}>
-      {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-md-flex justify-content-between align-items-center mb-3">
           <h3 className="fs-6 m-0 mb-3 mb-md-0" style={{}}>
@@ -103,14 +121,22 @@ export const RecentTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            {TransactionData.user_recent_transaction.map((history) => {
+            {/* Use the getSlicedData function to map over only the data for the current page */}
+            {getSlicedData().map((history) => {
               return (
                 <RecentTransactionTableData {...history} key={history.id} />
               );
             })}
           </tbody>
         </table>
-        <PaginationBar />
+        <PaginationBar
+          data={TransactionData.user_recent_transaction}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+          itemsPerPage={itemsPerPage}
+          totalPages={totalPages}
+          setTotalPages={setTotalPages}
+        />
       </div>
     </div>
   );

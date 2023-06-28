@@ -1,148 +1,108 @@
 {
   "conflicts": [
     {
-      "date_issued": "2022-01-01",
-      "ticket_id": "123456",
-      "user_id": "789",
+      "date_issued": "1 Jan 2020",
+      "email": "daffanaufal@gmail.com",
+      "name": "Daffanaufal",
       "complaint_type": "dispute over goods received",
-      "status": "closed",
-      "status_category": "closed"
+      "ticket_id": "abc123",
+      "details": "I ordered a new laptop from your website and when it arrived, it was damaged. The screen was cracked and the keyboard was broken. I would like a refund or a replacement laptop."
     },
     {
-      "date_issued": "2022-01-03",
-      "ticket_id": "234567",
-      "user_id": "456",
-      "complaint_type": "payment issue",
-      "status": "closed",
-      "status_category": "closed"
+      "date_issued": "1 Jan 2020",
+      "email": "vindiesel@gmail.com",
+      "name": "Vin Diesel",
+      "complaint_type": "late delivery",
+      "ticket_id": "def456",
+      "details": "I ordered a new TV from your website and it was supposed to be delivered on January 1st. However, it didn't arrive until January 3rd. I would like a refund for the shipping costs."
     },
     {
-      "date_issued": "2022-01-05",
-      "ticket_id": "345678",
-      "user_id": "012",
-      "complaint_type": "delayed delivery",
-      "status": "closed",
-      "status_category": "closed"
+      "date_issued": "1 Jan 2020",
+      "email": "michaellin@gmail.com",
+      "name": "Michael Lin",
+      "complaint_type": "damaged goods",
+      "ticket_id": "ghi789",
+      "details": "I ordered a new phone case from your website and when it arrived, it was damaged. The corner was chipped and the case was scratched. I would like a replacement phone case."
     },
     {
-      "date_issued": "2022-01-06",
-      "ticket_id": "456789",
-      "user_id": "234",
-      "complaint_type": "dispute over goods received",
-      "status": "resolved",
-      "status_category": "closed"
+      "date_issued": "1 Jan 2020",
+      "email": "jackmiller@gmail.com",
+      "name": "Jack Miller",
+      "complaint_type": "wrong quantity",
+      "ticket_id": "jkl101",
+      "details": "I ordered 10 widgets from your website, but I only received 5. I would like the missing widgets or a refund."
     },
     {
-      "date_issued": "2022-01-07",
-      "ticket_id": "567890",
-      "user_id": "345",
-      "complaint_type": "payment issue",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-08",
-      "ticket_id": "678901",
-      "user_id": "456",
+      "date_issued": "1 Jan 2020",
+      "email": "kimlawn@gmail.com",
+      "name": "Kim Lawn",
       "complaint_type": "unauthorized transaction",
-      "status": "resolved",
-      "status_category": "closed"
+      "ticket_id": "mno123",
+      "details": "I noticed that a fraudulent charge was made on my credit card. The charge was for $100 from your website. I would like the charge reversed."
     },
     {
-      "date_issued": "2022-01-09",
-      "ticket_id": "789012",
-      "user_id": "567",
-      "complaint_type": "delayed delivery",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-10",
-      "ticket_id": "890123",
-      "user_id": "678",
+      "date_issued": "2 Jan 2020",
+      "email": "johndoe@gmail.com",
+      "name": "John Doe",
       "complaint_type": "dispute over goods received",
-      "status": "resolved",
-      "status_category": "closed"
+      "ticket_id": "pqr456",
+      "details": "I ordered a new smartphone from your website and when it arrived, it was not as described. The screen was smaller than I expected and the battery life was not as good as I was told. I would like a refund or a replacement smartphone."
     },
     {
-      "date_issued": "2022-01-11",
-      "ticket_id": "901234",
-      "user_id": "789",
+      "date_issued": "2 Jan 2020",
+      "email": "janedoe@gmail.com",
+      "name": "Jane Doe",
+      "complaint_type": "late delivery",
+      "ticket_id": "stu789",
+      "details": "I ordered a new pair of shoes from your website and they were supposed to be delivered on January 2nd. However, they didn't arrive until January 4th. I would like a refund for the shipping costs."
+    },
+    {
+      "date_issued": "3 Jan 2020",
+      "email": "bobsmith@gmail.com",
+      "name": "Bob Smith",
+      "complaint_type": "damaged goods",
+      "ticket_id": "vwx101",
+      "details": "I ordered a new coffee maker from your website and when it arrived, it was damaged. The glass carafe was shattered and the machine was dented. I would like a replacement coffee maker."
+    },
+    {
+      "date_issued": "3 Jan 2020",
+      "email": "lisawang@gmail.com",
+      "name": "Lisa Wang",
+      "complaint_type": "wrong quantity",
+      "ticket_id": "yz1234",
+      "details": "I ordered 20 candles from your website, but I only received 15. I would like the missing candles or a refund."
+    },
+    {
+      "date_issued": "3 Jan 2020",
+      "email": "tomjones@gmail.com",
+      "name": "Tom Jones",
       "complaint_type": "unauthorized transaction",
-      "status": "open",
-      "status_category": "open"
+      "ticket_id": "abc4567",
+      "details": "I noticed that a fraudulent charge was made on my debit card. The charge was for $50 from your website. I would like the charge reversed."
     },
     {
-      "date_issued": "2022-01-12",
-      "ticket_id": "012345",
-      "user_id": "456",
-      "complaint_type": "payment issue",
-      "status": "open",
-      "status_category": "open"
-    },
-    {
-      "date_issued": "2022-01-13",
-      "ticket_id": "123456",
-      "user_id": "012",
+      "date_issued": "4 Jan 2020",
+      "email": "marylee@gmail.com",
+      "name": "Mary Lee",
       "complaint_type": "dispute over goods received",
-      "status": "open",
-      "status_category": "open"
+      "ticket_id": "def8910",
+      "details": "I ordered a new dress from your website and when it arrived, it was not as described. The color was different from the picture and the size was too small. I would like a refund or a replacement dress."
     },
     {
-      "date_issued": "2022-01-14",
-      "ticket_id": "234567",
-      "user_id": "234",
-      "complaint_type": "delayed delivery",
-      "status": "open",
-      "status_category": "open"
+      "date_issued": "4 Jan 2020",
+      "email": "peterbrown@gmail.com",
+      "name": "Peter Brown",
+      "complaint_type": "late delivery",
+      "ticket_id": "ghi1112",
+      "details": "I ordered a new watch from your website and it was supposed to be delivered on January 4th. However, it didn't arrive until January 6th. I would like a refund for the shipping costs."
     },
     {
-      "date_issued": "2022-01-15",
-      "ticket_id": "345678",
-      "user_id": "345",
-      "complaint_type": "quality issue",
-      "status": "open",
-      "status_category": "open"
-    },
-    {
-      "date_issued": "2022-01-16",
-      "ticket_id": "456789",
-      "user_id": "456",
-      "complaint_type": "payment issue",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-17",
-      "ticket_id": "567890",
-      "user_id": "567",
-      "complaint_type": "dispute over goods received",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-18",
-      "ticket_id": "678901",
-      "user_id": "678",
-      "complaint_type": "delayed delivery",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-19",
-      "ticket_id": "789012",
-      "user_id": "789",
-      "complaint_type": "unauthorized transaction",
-      "status": "pending",
-      "status_category": "ongoing"
-    },
-    {
-      "date_issued": "2022-01-20",
-      "ticket_id": "890123",
-      "user_id": "012",
-      "complaint_type": "payment issue",
-      "status": "pending",
-      "status_category": "ongoing"
+      "date_issued": "2 Jan 2020",
+      "email": "marysmith@gmail.com",
+      "name": "Mary Smith",
+      "complaint_type": "damaged goods",
+      "ticket_id": "vwx101",
+      "details": "I ordered a new dress from your website and when it arrived, it was damaged. The hem was torn and the fabric was stained. I would like a replacement dress."
     }
   ]
 }

@@ -8,6 +8,10 @@
   color: #757575 !important;
 }
 
+.blueTextColor {
+  color: #2e2a40 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -342,7 +346,8 @@ div {
   color: inherit !important;
 }
 
-.switch-charts-btn:hover, .switch-charts-btn:focus {
+.switch-charts-btn:hover,
+.switch-charts-btn:focus {
   text-decoration: underline;
   opacity: 0.8;
 }
@@ -351,6 +356,13 @@ div {
 .viewBtn:focus {
   border-color: currentColor !important;
   font-weight: bold;
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+  font-weight: unset !important;
 }
 
 .teamValueStyle {
