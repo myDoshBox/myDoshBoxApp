@@ -68,7 +68,7 @@ export const RecentTransactionTable = () => {
                 </Dropdown>
               );
             })}
-            <Link to={"../initiate-escrow"}>
+            <Link to={"../initiate-escrow"} className="text-decoration-none">
               <Button
                 className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block"
                 style={{
@@ -110,7 +110,7 @@ export const RecentTransactionTable = () => {
             })}
           </tbody>
         </table>
-          <PaginationBar />
+        <PaginationBar />
       </div>
     </div>
   );
