@@ -1,10 +1,8 @@
-import { useRef, useEffect, useState } from "react";
-import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
+import { useState } from "react";
 import TransactionData from "../../../data/dummyData/transactionData.json";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
-import { NewTransaction } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
 import { Button } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import buyerImage from "../../../images/transact_person.png";
