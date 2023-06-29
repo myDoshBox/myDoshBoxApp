@@ -99,8 +99,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Dashboard</span> */}
+                    <DashboardIcon />
                   </NavLink>
                 </div>
               </li>
@@ -113,8 +112,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Transactions</span> */}
+                    <NavTransactionIcon />
                   </NavLink>
                 </div>
               </li>
@@ -134,8 +132,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Notifications</span> */}
+                    <NotificationIcon />
                   </NavLink>
                 </div>
               </li>
@@ -148,8 +145,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Disputes</span> */}
+                    <DisputeIcon />
                   </NavLink>
                 </div>
               </li>
@@ -162,8 +158,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    <i class="bi bi-house icon"></i>
-                    {/* <span>Settings</span> */}
+                    <SettingsIcon />
                   </NavLink>
                 </div>
               </li>
@@ -220,10 +215,7 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="mx-3 icon">
-                    <DashboardIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <DashboardIcon />
                   <span>Dashboards</span>
                 </NavLink>
               </div>
@@ -236,10 +228,7 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="mx-3">
-                    <NavTransactionIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <NavTransactionIcon />
                   <span>Transactions</span>
                 </NavLink>
               </div>
@@ -259,10 +248,7 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="">
-                    <NotificationIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <NotificationIcon />
                   <span>Notifications</span>
                 </NavLink>
               </div>
@@ -276,10 +262,7 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="">
-                    <DisputeIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <DisputeIcon />
                   <span>Disputes</span>
                 </NavLink>
               </div>
@@ -293,10 +276,8 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  {/* <span className="">
-                    <SettingsIcon />
-                  </span> */}
-                  <i class="bi bi-house icon"></i>
+                  <SettingsIcon />
+
                   <span>Settings</span>
                 </NavLink>
               </div>

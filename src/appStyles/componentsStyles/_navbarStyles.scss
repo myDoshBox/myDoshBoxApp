@@ -96,44 +96,53 @@
   padding: 15px 43px;
   color: #fff !important;
   background-color: $pryColor;
-}
-
-.active-link .icon {
-  text-decoration: none;
-  color: #ffffff !important;
-  margin-right: 15px;
+  .fill {
+    fill: white !important;
+    path {
+      fill: white !important;
+    }
+  }
+  svg {
+    margin-right: 10px;
+    path {
+      stroke: white;
+    }
+  }
 }
 
 .inactive-link {
   text-decoration: none;
   color: #757575 !important;
-}
-
-.inactive-link .icon {
-  text-decoration: none;
-  color: #757575 !important;
-  margin-right: 15px;
+  svg {
+    margin-right: 10px;
+  }
 }
 
 .active-linkSm {
   text-decoration: none;
   border-radius: 4px 4px;
   padding: 7px 14px;
-  color: #ffffff !important;
   background-color: $pryColor;
-  position: relative;
   width: 70px;
   height: 40px;
   font-size: 20px;
+  .fill {
+    fill: white !important;
+    path {
+      fill: white !important;
+    }
+  }
+  svg {
+    path {
+      stroke: white;
+    }
+  }
 }
 
-.inactive-linkSm .icon {
-  position: relative;
-  width: 70px;
-  height: 40px;
-  font-size: 20px;
-  margin-left: 14px !important;
-  color: #757575;
+.inactive-linkSm {
+  svg {
+    transform: translateX(10px) !important;
+  }
 }
 
 .smlogo {
