@@ -24,5 +24,31 @@
       "transaction_id": "32422524",
       "status": " Ongoing"
     }
+  ],
+  "recent_dispute": [
+    {
+      "id": 1,
+      "image": "../../images/userDashboardImage/People.png",
+      "name": "Mostania Siaw",
+      "date": "3 Sept",
+      "status": "Pending",
+      "status_style": "pending"
+    },
+    {
+      "id": 2,
+      "image": "../../images/userDashboardImage/kabamaya.png",
+      "name": "Kabiaya Haua",
+      "date": "6 Sept",
+      "status": "Approved",
+      "status_style": "approved"
+    },
+    {
+      "id": 3,
+      "image": "../../images/userDashboardImage/Burnmaya.png",
+      "name": "Burnmaya Gou",
+      "date": "4 Sept",
+      "status": "Approved",
+      "status_style": "approved"
+    }
   ]
 }

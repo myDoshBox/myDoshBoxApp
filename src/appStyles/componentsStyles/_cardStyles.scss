@@ -48,6 +48,25 @@
   border-radius: 50% !important;
 }
 
+.OpenConflictLineStyling {
+  position: absolute;
+  background-color: #ffc306;
+  height: 3px;
+  width: 15.7rem;
+}
+.OngoingConflictLineStyling {
+  position: absolute;
+  background-color: #1fd431;
+  height: 3px;
+  width: 15.7rem;
+}
+.CloseConflictLineStyling {
+  position: absolute;
+  background-color: #d82027;
+  height: 3px;
+  width: 15.7rem;
+}
+
 // FAQ Styles
 .FAQs {
   .faqs-header {

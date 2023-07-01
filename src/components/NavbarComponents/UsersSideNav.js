@@ -99,9 +99,8 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                     }
                     onClick={handleDisappear}
                   >
-                    {/* <i class="bi bi-house icon"></i> */}
-
-                    <span>Dashboard</span>
+                    <i class="bi bi-house icon"></i>
+                    {/* <span>Dashboard</span> */}
                   </NavLink>
                 </div>
               </li>
@@ -221,11 +220,10 @@ const DesktopScreen = ({ name, ...props }) => {
                     isActive ? activeClassName : baseClassName
                   }
                 >
-                  <span>
-                    <DashboardIcon icon="icon" />
-                  </span>
-
-                  {/* <i class="bi bi-house icon"></i> */}
+                  {/* <span className="mx-3 icon">
+                    <DashboardIcon />
+                  </span> */}
+                  <i class="bi bi-house icon"></i>
                   <span>Dashboards</span>
                 </NavLink>
               </div>
@@ -247,6 +245,12 @@ const DesktopScreen = ({ name, ...props }) => {
               </div>
             </li>
 
+            {/* <li className="d-flex align-items-center SideNavItem mb-5">
+              <div className="me-3">
+                <ChatIcon />
+              </div>
+              <span className="my-1">Chats</span>
+            </li> */}
             <li className="d-flex align-items-center SideNavItem mb-5">
               <div className="me-3">
                 <NavLink

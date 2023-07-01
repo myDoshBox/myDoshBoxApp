@@ -84,6 +84,7 @@ export const ViewMoreButton = () => {
     </Button>
   );
 };
+
 export const ViewBtn = () => {
   return (
     <Button
@@ -94,6 +95,28 @@ export const ViewBtn = () => {
     </Button>
   );
 };
+export const ViewMoreDisputeBtn = ({ styling }) => {
+  return (
+    <Button
+      className={`border-0  GeneralBtnStyle1 btn all-btn text-white ${styling}`}
+      style={{ width: "60px" }}
+    >
+      view
+    </Button>
+  );
+};
+
+export const OpenConflitBtn = ({ styling }) => {
+  return (
+    <Button
+      className={`border-0 btn text-white ${styling}`}
+      style={{ width: "46px", height: "2.3rem" }}
+    >
+      42
+    </Button>
+  );
+};
+
 // ConfirmDelivery;
 export const ConfirmDelivery = () => {
   return (
