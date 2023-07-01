@@ -12,6 +12,10 @@
   color: #2e2a40 !important;
 }
 
+.yellow {
+  color: #ffc306 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -468,6 +472,16 @@ div {
 }
 .Targets .apexcharts-datalabel-value {
   font-size: 2rem !important;
+}
+
+.disputing-party {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.respondent {
+  z-index: 100;
+  transform: translateX(-30%);
 }
 
 textarea:focus,

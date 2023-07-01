@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
-export const PaginationBar = ({ data, currentPage, handlePageChange, itemsPerPage,totalPages, setTotalPages }) => {
+export const PaginationBar = ({ data, currentPage, handlePageChange, itemsPerPage,totalPages, setTotalPages, className }) => {
   // const [totalPages, setTotalPages] = useState(0);
 
   // Calculated the total pages based on the data length and items per page
@@ -22,7 +22,7 @@ export const PaginationBar = ({ data, currentPage, handlePageChange, itemsPerPag
     <nav
       role="navigation"
       aria-label="Page Navigation"
-      className="d-flex justify-content-center justify-content-md-between align-items-center fs-sm"
+      className={`d-flex justify-content-center justify-content-md-between align-items-center fs-sm ${className}`} 
     >
       <p className="d-none d-md-block page-link placeholderTextColor fs-sm m-0">
         Showing {entriesRange()} entries

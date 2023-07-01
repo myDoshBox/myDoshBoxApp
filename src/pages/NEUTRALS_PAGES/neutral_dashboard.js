@@ -11,10 +11,11 @@ import {
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
 import { ViewMoreButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
+import { TaskBoard, TaskCard } from "../../components/CardComponents/UsersCards";
 
 const NeutralDashboard = () => {
   return (
-    <div className="row">
+    <div className="row" style={{backgroundColor: '#F9F9FB'}}>
       <div className="col-lg-3 col-sm-12 px-0"></div>
 
       <div className="col-lg-9 col-sm-12">
@@ -22,7 +23,7 @@ const NeutralDashboard = () => {
           <UserDashboardNavbar />
         </div>
         <div className="mx-auto w-100 px-3 pe-lg-5 ps-lg-0 mt-5">
-          <div className="row gx-lg-3 justify-content-between align-items-center mt-5">
+          <div className="row gx-lg-3 justify-content-between align-items-center my-5">
             <DashboardConflictCards
               value="100"
               text="Open Conflicts"
@@ -42,7 +43,7 @@ const NeutralDashboard = () => {
               link={`closed-conflicts`}
             />
           </div>
-          <div className="card mx-auto mt-5 p-3 shadow border-0">
+          {/* <div className="card mx-auto mt-5 p-3 shadow border-0">
             <div className="card-body p-0">
               <h6 className="pb-3 m-0">Recent Transactions</h6>
               <table class="table">
@@ -95,7 +96,10 @@ const NeutralDashboard = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          <TaskBoard BoardName={"Recent Conflict Table"} itemsShown={6} />
+          
         </div>
       </div>
     </div>
