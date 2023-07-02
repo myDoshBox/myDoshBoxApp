@@ -11,6 +11,19 @@
   background-color: $buttonColor !important;
 }
 
+.openConflitBtnStyle {
+  @include H5Font;
+  background-color: #ffc306 !important;
+}
+.ongoingConflitBtnStyle {
+  @include H5Font;
+  background-color: #1fd431 !important;
+}
+.closeConflitBtnStyle {
+  @include H5Font;
+  background-color: #d82027 !important;
+}
+
 .CloseBtnStyle {
   background: rgba(255, 0, 0, 0.1) !important;
   border: 1px solid rgba(255, 0, 0, 0.3) !important;
@@ -47,8 +60,6 @@
   border: 2px solid black !important;
   border-radius: 20px;
 }
-
-
 
 // OTHER BUTTON STYLING
 .CalendarBtnStyle {
@@ -102,7 +113,8 @@
 }
 
 // charts
-.switch-charts-btn:hover, .switch-charts-btn:focus {
+.switch-charts-btn:hover,
+.switch-charts-btn:focus {
   text-decoration: underline;
-  opacity: .8;
+  opacity: 0.8;
 }

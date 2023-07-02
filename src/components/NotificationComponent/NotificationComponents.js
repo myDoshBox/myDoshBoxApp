@@ -1,12 +1,21 @@
 // the text and design(design|text) used for this component includes:
 // completed|Completed, canceled|Canceled, refunded|Refunded, dispute|In Dispute, pending-confirmation|Pending Confirmation, awaiting|Awaiting Delivery, pending-payment|Pending Payment, resolved|Resolved, unresolved|Unresolved
 import TransactionData from "../../data/dummyData/transactionData.json";
-// import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 
 export const Notifications = ({ text, styles }) => {
   return (
     <div
       className={`text-center d-flex justify-content-center align-items-center rounded-pill ${styles}`}
+    >
+      {text}
+    </div>
+  );
+};
+
+export const Styling = ({ text, styles }) => {
+  return (
+    <div
+      className={`text-center d-flex justify-content-center align-items-center ${styles}`}
     >
       {text}
     </div>
@@ -29,8 +38,8 @@ export const RecentNotification = () => {
             <h4 className="">Recent Notification</h4>
             <tr>
               <th>Goal Type</th>
-              <th>Subject</th>
-              <th>Target Achievement</th>
+              <th className="d-none d-lg-table-cell">Subject</th>
+              <th className="d-none d-lg-table-cell">Target Achievement</th>
               <th>Date</th>
               <th>Slip</th>
               <th>Status</th>
@@ -70,14 +79,17 @@ const UserDashboardNotification = (props) => {
   return (
     <>
       <tr className="text-center border-bottom">
-        <td className="p-md-3">{goalType}</td>
-        <td className="p-md-3">{subject}</td>
-        <td className="p-md-3">{targetAchievement}</td>
-        <td className="p-md-3 d-flex justify-content-center align-items-center">
-          <Notifications text={date} styles={status_style} />
+        <td className="p-md-3 text-small">{goalType}</td>
+        <td className="p-md-3 d-none d-lg-table-cell text-small">{subject}</td>
+        <td className="p-md-3 d-none d-lg-table-cell text-small">
+          {targetAchievement}
         </td>
-        <td className="p-md-3">{Slip}</td>
-        <td className="p-md-3">{status}</td>
+
+        <td className="p-md-3 text-small">{date}</td>
+        <td className="p-md-3 text-small">{Slip}</td>
+        <td className="p-md-3 d-flex justify-content-center align-items-center text-small">
+          <Styling text={status} styles={status_style} />
+        </td>
       </tr>
     </>
   );

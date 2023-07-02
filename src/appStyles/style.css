@@ -202,6 +202,24 @@ div {
   background-color: #4d957e !important;
 }
 
+.openConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #ffc306 !important;
+}
+
+.ongoingConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #1fd431 !important;
+}
+
+.closeConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #d82027 !important;
+}
+
 .CloseBtnStyle {
   background: rgba(255, 0, 0, 0.1) !important;
   border: 1px solid rgba(255, 0, 0, 0.3) !important;
@@ -312,7 +330,8 @@ div {
   color: inherit !important;
 }
 
-.switch-charts-btn:hover, .switch-charts-btn:focus {
+.switch-charts-btn:hover,
+.switch-charts-btn:focus {
   text-decoration: underline;
   opacity: 0.8;
 }
@@ -363,6 +382,27 @@ div {
   text-decoration: none;
   font-size: 1.3rem;
   border-radius: 50% !important;
+}
+
+.OpenConflictLineStyling {
+  position: absolute;
+  background-color: #ffc306;
+  height: 3px;
+  width: 15.7rem;
+}
+
+.OngoingConflictLineStyling {
+  position: absolute;
+  background-color: #1fd431;
+  height: 3px;
+  width: 15.7rem;
+}
+
+.CloseConflictLineStyling {
+  position: absolute;
+  background-color: #d82027;
+  height: 3px;
+  width: 15.7rem;
 }
 
 .FAQs .faqs-header {
@@ -770,6 +810,53 @@ input[type=color]:focus,
   background-color: rgba(255, 0, 0, 0.1);
 }
 
+.cancel {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(255, 0, 0);
+}
+
+.complete {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #006747;
+}
+
+.pending {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(255, 0, 0);
+}
+
+.viewMore {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #3469f9;
+  border: 1px solid #adcafe;
+  border-radius: 5px;
+}
+
+.approved {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(0, 103, 4);
+}
+
 .refunded {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
@@ -831,6 +918,8 @@ input[type=color]:focus,
 .dispute,
 .pending-confirmation,
 .pending-payment,
+.pending,
+.approved,
 .refunded,
 .resolved,
 .unresolved {

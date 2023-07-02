@@ -40,23 +40,6 @@
       "view": "......."
     }
   ],
-
-  "transaction_agreed": [
-    {
-      "id": 1,
-      "heading": "Transaction Agreed",
-      "sub_text": "The details of this transaction has been viewed and agreed to buy the seller",
-      "product": "./../images/contactImgs/calculator.png",
-      "email": "Opeyemi Andrewson",
-      "trans_id": "AXSQWEDSC",
-      "description": "AXSQWEDSC",
-      "quality": 30,
-      "price": "N 120,000",
-      "date": "14 Aug 2022",
-      "total": "N3,600,000",
-      "alert": " By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above"
-    }
-  ],
   "recent_notification": [
     {
       "id": 1,
@@ -65,7 +48,8 @@
       "targetAchievement": "Best Work 2022",
       "date": "1 Jan 2022",
       "Slip": "Unread",
-      "status": "view more"
+      "status": "view more",
+      "status_style": "viewMore"
     },
     {
       "id": 2,
@@ -104,50 +88,113 @@
       "status": "view more"
     }
   ],
-  "all_transaction": [
+
+  "recent_transaction": [
+    {
+      "id": 1,
+      "name": "Martin Lewis",
+      "email": "martinslewis@gmail.com",
+      "paidDate": "2/01/23",
+      "paidAmount": 140,
+      "status": "Cancelled",
+      "status_style": "cancel"
+    },
+    {
+      "id": 2,
+      "name": "Martin Lewis",
+      "email": "martinslewis@gmail.com",
+      "paidDate": "2/01/23",
+      "paidAmount": 240,
+      "status": "Cancelled",
+      "status_style": "cancel"
+    },
+    {
+      "id": 3,
+      "name": "Martin Lewis",
+      "email": "martinslewis@gmail.com",
+      "paidDate": "2/01/23",
+      "paidAmount": 840,
+      "status": "Completed",
+      "status_style": "complete"
+    }
+  ],
+
+  "transaction_agreed": [
+    {
+      "id": 1,
+      "heading": "Transaction Agreed",
+      "sub_text": "The details of this transaction has been viewed and agreed to buy the seller",
+      "product": "./../images/contactImgs/calculator.png",
+      "email": "Opeyemi Andrewson",
+      "trans_id": "AXSQWEDSC",
+      "description": "AXSQWEDSC",
+      "quality": 30,
+      "price": "N 120,000",
+      "date": "14 Aug 2022",
+      "total": "N3,600,000",
+      "alert": " By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above"
+    }
+  ],
+  "user_recent_transaction": [
     {
       "id": 1,
       "product": "35 cartorns of biscuits",
-      "amount": "3275.45",
+      "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Completed",
       "status_style": "completed"
+    },
+    {
+      "id": 2,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Awaiting Delivery",
+      "status_style": "awaiting"
     },
     {
       "id": 3,
       "product": "35 cartorns of biscuits",
-      "amount": "3275.45",
+      "price": 3275.45,
       "date": "2/01/23",
-      "status_name": "Completed",
-      "status_style": "completed"
-    },
-    {
-      "id": 1,
-      "product": "35 cartorns of biscuits",
-      "amount": "3275.45",
-      "date": "2/01/23",
-      "status_name": "Completed",
-      "status_style": "completed"
+      "status_name": "Refunded",
+      "status_style": "refunded"
     },
     {
       "id": 4,
       "product": "35 cartorns of biscuits",
-      "amount": "3275.45",
+      "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Canceled",
-      "status_style": "completed"
+      "status_style": "canceled"
     },
     {
       "id": 5,
       "product": "35 cartorns of biscuits",
-      "amount": "3275.45",
+      "price": 3275.45,
       "date": "2/01/23",
-      "status_name": "Incomplete",
-      "status_style": "completed"
+      "status_name": "Resolved",
+      "status_style": "resolved"
+    },
+    {
+      "id": 6,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Resolved",
+      "status_style": "resolved"
+    },
+    {
+      "id": 7,
+      "product": "35 cartorns of biscuits",
+      "price": 3275.45,
+      "date": "2/01/23",
+      "status_name": "Resolved",
+      "status_style": "resolved"
     }
   ],
 
-  "user_recent_transaction": [
+  "mini_transaction": [
     {
       "id": 1,
       "product": "35 cartorns of biscuits",

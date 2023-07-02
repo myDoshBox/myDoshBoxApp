@@ -1,6 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
 import { memo, useContext, useState } from "react";
+import { Button } from "react-bootstrap";
 //All Buttons/Icon Import Starts
 import {
   TotalUsersIcon,
@@ -9,6 +10,7 @@ import {
   CompletedTransactionIcon,
 } from "../IconComponent/AdminDashboardIcons";
 import { RatingIcon } from "../IconComponent/UserdashboardIcons";
+import ProgressBar from "react-bootstrap/ProgressBar";
 //All Buttons/icon Import Ends
 
 //All Image Import Starts
@@ -17,7 +19,11 @@ import Avatar from "../../images/Avatar.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { EditProfileButton } from "../ButtonsComponent/EditButtons";
-import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
+import {
+  ViewMoreButton,
+  ViewMoreDisputeBtn,
+} from "../ButtonsComponent/NavigationAndViewButtons";
+import disputehistorydata from "../../data/dummyData/disputeshistorydata.json";
 
 // UserTransactionsCard, TotalUsersCard, AnalyticsNewUsersCard
 export const AnalyticsCard = memo(
@@ -76,8 +82,8 @@ export const UserDashboardCard2 = (props) => {
   return (
     <Link to={link} className="text-decoration-none text-dark">
       <div
-        className="card shadow mx-auto border-0 rounded-2  p-2 row justify-content-center"
-        style={{ width: "100%", height: "5.5rem" }}
+        className="card shadow mx-auto border-0 rounded-2  px-2 row justify-content-center"
+        style={{ width: "100%", height: "5.7rem" }}
       >
         <div className="row justify-content-center align-items-center mx-auto">
           <div className="col-4">{icon}</div>
@@ -86,6 +92,48 @@ export const UserDashboardCard2 = (props) => {
       </div>
     </Link>
   );
+};
+
+export const ConflitCard = (props) => {
+  const { text, icon, link, style, styling, btnNumber } = props;
+  let BtnStyle = "mt-3 mb-3";
+  return (
+    <Link to={link} className="text-decoration-none text-dark">
+      <div
+        className="card shadow mx-auto border-0 rounded-2  px-2 row justify-content-center"
+        style={{ width: "19rem", height: "8.7rem" }}
+      >
+        <div className="row justify-content-center align-items-center mx-auto mb-3">
+          <div className="col-4">{icon}</div>
+          <div className="col-8 text-nowrap">{text}</div>
+        </div>
+        <div>{style}</div>
+        <div className="d-flex justify-content-between">
+          <div>
+            <ViewMoreDisputeBtn styling={BtnStyle} />
+          </div>
+          <div>
+            <Button
+              className={`border-0 btn text-white mt-3 mb-3 ${styling}`}
+              style={{ width: "46px", height: "2.3rem" }}
+            >
+              {btnNumber}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export const OpenConflictLineStyling = ({ styles }) => {
+  return <div className="OpenConflictLineStyling ms-2"></div>;
+};
+export const OngoingConflictLineStyling = ({ styles }) => {
+  return <div className="OngoingConflictLineStyling ms-2"></div>;
+};
+export const CloseConflictLineStyling = ({ styles }) => {
+  return <div className="CloseConflictLineStyling ms-2"></div>;
 };
 
 // MiniProfileCard

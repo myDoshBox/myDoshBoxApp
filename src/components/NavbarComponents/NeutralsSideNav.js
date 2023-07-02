@@ -207,7 +207,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
 
 const DesktopScreen = () => {
   let activeClassName = "active-link";
-  let baseClassName = "inactive-link";
+  let baseClassName = "text-decoration-none text-white";
   let dropdownbaseClassName = "text-decoration-none , text-dark";
   let dropdownactiveClassName = "text-decoration-none , text-success";
   const navigate = useNavigate();
@@ -226,101 +226,101 @@ const DesktopScreen = () => {
         <div className="d-flex justify-content-between flex-column">
           <ul className="ps-2">
             <li className="d-flex mb-5 align-items-center SideNavItem">
-              <div>
-                <NavLink
-                  to="../neutraldashboard"
-                  end
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <i class="bi bi-house icon"></i>
-                  <span>Dashboard</span>
-                </NavLink>
+              <div className="me-3">
+                <DashboardIcon />
               </div>
+              <NavLink
+                to="../neutraldashboard"
+                end
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Dashboard</span>
+              </NavLink>
             </li>
             <li className="d-flex mb-5 align-items-center SideNavItem">
-              <div>
-                <span>
-                  {["end"].map((direction) => (
-                    <DropdownButton
-                      key={direction}
-                      id={`dropdown-button-drop-${direction}`}
-                      drop={direction}
-                      variant="secondary"
-                      title={`Conflicts`}
-                      className="SideNavDropdown"
-                    >
-                      <Dropdown.Item eventKey="1">
-                        <NavLink
-                          to="open-conflicts"
-                          exact
-                          className={({ isActive }) =>
-                            isActive
-                              ? dropdownactiveClassName
-                              : dropdownbaseClassName
-                          }
-                        >
-                          <i class="bi bi-house icon"></i>
-                          Open Conflicts
-                        </NavLink>
-                      </Dropdown.Item>
-                      <Dropdown.Item eventKey="2">
-                        <NavLink
-                          to="ongoing-conflicts"
-                          exact
-                          className={({ isActive }) =>
-                            isActive
-                              ? dropdownactiveClassName
-                              : dropdownbaseClassName
-                          }
-                        >
-                          Ongoing Conflicts
-                        </NavLink>
-                      </Dropdown.Item>
-                      <Dropdown.Item eventKey="3">
-                        <NavLink
-                          to="closed-conflicts"
-                          exact
-                          className={({ isActive }) =>
-                            isActive
-                              ? dropdownactiveClassName
-                              : dropdownbaseClassName
-                          }
-                        >
-                          Closed Conflicts
-                        </NavLink>
-                      </Dropdown.Item>
-                    </DropdownButton>
-                  ))}
-                </span>
+              <div className="me-3">
+                <NavTransactionIcon />
               </div>
+              <span>
+                {["end"].map((direction) => (
+                  <DropdownButton
+                    key={direction}
+                    id={`dropdown-button-drop-${direction}`}
+                    drop={direction}
+                    variant="secondary"
+                    title={`Conflicts`}
+                    className="SideNavDropdown"
+                  >
+                    <Dropdown.Item eventKey="1">
+                      <NavLink
+                        to="open-conflicts"
+                        exact
+                        className={({ isActive }) =>
+                          isActive
+                            ? dropdownactiveClassName
+                            : dropdownbaseClassName
+                        }
+                      >
+                        Open Conflicts
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="2">
+                      <NavLink
+                        to="ongoing-conflicts"
+                        exact
+                        className={({ isActive }) =>
+                          isActive
+                            ? dropdownactiveClassName
+                            : dropdownbaseClassName
+                        }
+                      >
+                        Ongoing Conflicts
+                      </NavLink>
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="3">
+                      <NavLink
+                        to="closed-conflicts"
+                        exact
+                        className={({ isActive }) =>
+                          isActive
+                            ? dropdownactiveClassName
+                            : dropdownbaseClassName
+                        }
+                      >
+                        Closed Conflicts
+                      </NavLink>
+                    </Dropdown.Item>
+                  </DropdownButton>
+                ))}
+              </span>
             </li>
             <li className="d-flex align-items-center SideNavItem mb-5">
-              <div>
-                <NavLink
-                  to="notification"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <i class="bi bi-house icon"></i>
-                  <span>Notifications</span>
-                </NavLink>
+              <div className="me-3">
+                <NotificationIcon />
               </div>
+              <NavLink
+                to="notification"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Notifications</span>
+              </NavLink>
             </li>
             <li className="d-flex align-items-center SideNavItem mb-5">
-              <div>
-                <NavLink
-                  to="neutralsetting"
-                  className={({ isActive }) =>
-                    isActive ? activeClassName : baseClassName
-                  }
-                >
-                  <i class="bi bi-house icon"></i>
-                  <span>Settings</span>
-                </NavLink>
+              <div className="me-3">
+                <SettingsIcon />
               </div>
+              <NavLink
+                to="neutralsetting"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : baseClassName
+                }
+              >
+                <span>Settings</span>
+              </NavLink>
             </li>
           </ul>
           <ul className="ps-3">
