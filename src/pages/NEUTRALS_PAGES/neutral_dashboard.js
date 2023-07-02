@@ -38,7 +38,7 @@ const NeutralDashboard = () => {
                   <ConflitCard
                     icon={<OpenConflictIcon />}
                     text={`Open Conflict`}
-                    link={"initiate-escrow"}
+                    link={"open-conflicts"}
                     style={<OpenConflictLineStyling />}
                     styling={"openConflitBtnStyle"}
                     btnNumber={"19"}
@@ -48,7 +48,7 @@ const NeutralDashboard = () => {
                   <ConflitCard
                     icon={<OngoingConflictIcon />}
                     text={`Ongoing Conflict`}
-                    link={"initiate-escrow"}
+                    link={"ongoing-conflicts"}
                     style={<OngoingConflictLineStyling />}
                     styling={"ongoingConflitBtnStyle"}
                     btnNumber={"59"}
@@ -58,7 +58,7 @@ const NeutralDashboard = () => {
                   <ConflitCard
                     icon={<ClosedConflictIcon />}
                     text={`Closed Conflict`}
-                    link={"initiate-escrow"}
+                    link={"closed-conflicts"}
                     style={<CloseConflictLineStyling />}
                     styling={"closeConflitBtnStyle"}
                     btnNumber={"78"}
