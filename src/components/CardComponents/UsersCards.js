@@ -1,6 +1,7 @@
 // UserInflowCard {Postponed as it is a graph}
 
 import { memo, useContext, useState } from "react";
+import { Button } from "react-bootstrap";
 //All Buttons/Icon Import Starts
 import {
   TotalUsersIcon,
@@ -19,7 +20,6 @@ import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { EditProfileButton } from "../ButtonsComponent/EditButtons";
 import {
-  OpenConflitBtn,
   ViewMoreButton,
   ViewMoreDisputeBtn,
 } from "../ButtonsComponent/NavigationAndViewButtons";
@@ -95,9 +95,8 @@ export const UserDashboardCard2 = (props) => {
 };
 
 export const ConflitCard = (props) => {
-  const { text, icon, link, style } = props;
+  const { text, icon, link, style, styling, btnNumber } = props;
   let BtnStyle = "mt-3 mb-3";
-  let BtnStyless = "mt-3 mb-3";
   return (
     <Link to={link} className="text-decoration-none text-dark">
       <div
@@ -114,7 +113,12 @@ export const ConflitCard = (props) => {
             <ViewMoreDisputeBtn styling={BtnStyle} />
           </div>
           <div>
-            <OpenConflitBtn styling={BtnStyless} />
+            <Button
+              className={`border-0 btn text-white mt-3 mb-3 ${styling}`}
+              style={{ width: "46px", height: "2.3rem" }}
+            >
+              {btnNumber}
+            </Button>
           </div>
         </div>
       </div>

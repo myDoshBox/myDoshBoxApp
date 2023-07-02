@@ -15,6 +15,14 @@
   @include H5Font;
   background-color: #ffc306 !important;
 }
+.ongoingConflitBtnStyle {
+  @include H5Font;
+  background-color: #1fd431 !important;
+}
+.closeConflitBtnStyle {
+  @include H5Font;
+  background-color: #d82027 !important;
+}
 
 .CloseBtnStyle {
   background: rgba(255, 0, 0, 0.1) !important;

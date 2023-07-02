@@ -40,6 +40,8 @@ const NeutralDashboard = () => {
                     text={`Open Conflict`}
                     link={"initiate-escrow"}
                     style={<OpenConflictLineStyling />}
+                    styling={"openConflitBtnStyle"}
+                    btnNumber={"19"}
                   />
                 </div>
                 <div className="col-lg-4 col-sm-12">
@@ -48,6 +50,8 @@ const NeutralDashboard = () => {
                     text={`Ongoing Conflict`}
                     link={"initiate-escrow"}
                     style={<OngoingConflictLineStyling />}
+                    styling={"ongoingConflitBtnStyle"}
+                    btnNumber={"59"}
                   />
                 </div>
                 <div className="col-lg-4 col-sm-12">
@@ -56,6 +60,8 @@ const NeutralDashboard = () => {
                     text={`Closed Conflict`}
                     link={"initiate-escrow"}
                     style={<CloseConflictLineStyling />}
+                    styling={"closeConflitBtnStyle"}
+                    btnNumber={"78"}
                   />
                 </div>
               </div>

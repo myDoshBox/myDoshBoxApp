@@ -106,17 +106,6 @@ export const ViewMoreDisputeBtn = ({ styling }) => {
   );
 };
 
-export const OpenConflitBtn = ({ styling }) => {
-  return (
-    <Button
-      className={`border-0 btn text-white ${styling}`}
-      style={{ width: "46px", height: "2.3rem" }}
-    >
-      42
-    </Button>
-  );
-};
-
 // ConfirmDelivery;
 export const ConfirmDelivery = () => {
   return (
