@@ -837,6 +837,7 @@ input[type=color]:focus,
   background-color: unset !important;
   border: none !important;
   padding: 0 !important;
+  color: #757575 !important;
 }
 
 .SideNavDropdown button::after {
@@ -1030,5 +1031,30 @@ input[type=color]:focus,
 .all-conflicts-table tbody tr td {
     font-size: 0.75rem !important;
   }
+}
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image {
+  position: relative;
+  width: 450px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.carousel-button {
+  position: absolute;
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-button.next {
+  transform: translateX(370px);
 }
 /*# sourceMappingURL=style.css.map */

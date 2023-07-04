@@ -292,7 +292,7 @@ const DesktopScreen = ({ name, ...props }) => {
               <div className="me-3">
                 <LogoutIcon />
               </div>
-              <span className="text-dark">Logout</span>
+              <span className="inactive-link">Logout</span>
             </li>
           </ul>
         </div>
