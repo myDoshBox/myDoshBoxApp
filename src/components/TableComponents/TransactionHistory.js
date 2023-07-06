@@ -91,6 +91,19 @@ export const UserdashboardTransaction = () => {
             })}
           </tbody>
         </table>
+        <Link
+          to={"./"}
+          className="d-flex justify-content-end text-decoration-none"
+        >
+          <Button
+            className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block"
+            style={{
+              backgroundColor: "#006747EB",
+            }}
+          >
+            View All
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 // completed|Completed, canceled|Canceled, refunded|Refunded, dispute|In Dispute, pending-confirmation|Pending Confirmation, awaiting|Awaiting Delivery, pending-payment|Pending Payment, resolved|Resolved, unresolved|Unresolved
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Notifications = ({ text, styles }) => {
   return (
@@ -28,15 +29,22 @@ export const RecentNotification = () => {
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
-        {/* <div className="px-4 mb-3">
-          <Link to={"../transaction"}>
-            <GeneralBtnStyle1 text="New Transaction" />
+        <div className="d-flex justify-content-between mb-3 mt-3">
+          <h5 className="ms-4">Recent Notification</h5>
+          <Link to={"./"} className="text-decoration-none">
+            <Button
+              className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block me-5"
+              style={{
+                backgroundColor: "#006747EB",
+              }}
+            >
+              View All
+            </Button>
           </Link>
-        </div> */}
+        </div>
 
         <table className="table transaction-table">
           <thead className="text-center">
-            <h4 className="">Recent Notification</h4>
             <tr>
               <th>Goal Type</th>
               <th className="d-none d-lg-table-cell">Subject</th>
@@ -52,16 +60,6 @@ export const RecentNotification = () => {
             })}
           </tbody>
         </table>
-        {/* <div className="p-4 text-md-end d-none d-md-block">
-          <Link to={"./transaction"}>
-            <ViewMoreButton />
-          </Link>
-        </div> */}
-        {/* <div className="text-center d-lg-none .d-xl-block">
-          <Link to={"./transaction"}>
-            <ViewMoreButton />
-          </Link>
-        </div> */}
       </div>
     </div>
   );
