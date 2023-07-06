@@ -34,8 +34,8 @@ const TransactionHistory = (props) => {
 
 export const UserdashboardTransaction = () => {
   const dropdownBtnValues = [
-    { label: "Filter", value_1: "Last 7 days", value_2: "Over $1000" },
-    { label: "Sort", value_1: "Newest", value_2: "Oldest" },
+    { label: "All Data", value_1: "Last 7 days", value_2: "Over $1000" },
+    { label: "2022", value_1: "Newest", value_2: "Oldest" },
   ];
 
   return (
@@ -96,7 +96,7 @@ export const UserdashboardTransaction = () => {
           className="d-flex justify-content-end text-decoration-none"
         >
           <Button
-            className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block"
+            className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block me-5"
             style={{
               backgroundColor: "#006747EB",
             }}
