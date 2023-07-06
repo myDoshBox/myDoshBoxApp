@@ -151,3 +151,13 @@
 // .Targets .apexcharts-datalabel-label {
 //   font-size: .8rem !important;
 // }
+
+.disputing-party {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.respondent {
+  z-index: 100;
+  transform: translateX(-30%);
+}

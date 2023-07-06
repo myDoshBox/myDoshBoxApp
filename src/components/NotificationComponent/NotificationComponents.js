@@ -1,6 +1,7 @@
 // the text and design(design|text) used for this component includes:
 // completed|Completed, canceled|Canceled, refunded|Refunded, dispute|In Dispute, pending-confirmation|Pending Confirmation, awaiting|Awaiting Delivery, pending-payment|Pending Payment, resolved|Resolved, unresolved|Unresolved
 import TransactionData from "../../data/dummyData/transactionData.json";
+import { Button } from "react-bootstrap";
 
 export const Notifications = ({ text, styles }) => {
   return (
@@ -41,8 +42,8 @@ export const RecentNotification = () => {
               <th className="d-none d-lg-table-cell">Subject</th>
               <th className="d-none d-lg-table-cell">Target Achievement</th>
               <th>Date</th>
-              <th>Slip</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -73,8 +74,8 @@ const UserDashboardNotification = (props) => {
     targetAchievement,
     date,
     status_style,
-    Slip,
     status,
+    action,
   } = props;
   return (
     <>
@@ -86,9 +87,13 @@ const UserDashboardNotification = (props) => {
         </td>
 
         <td className="p-md-3 text-small">{date}</td>
-        <td className="p-md-3 text-small">{Slip}</td>
-        <td className="p-md-3 d-flex justify-content-center align-items-center text-small">
+        <td className="p-md-3 text-small">
           <Styling text={status} styles={status_style} />
+        </td>
+        <td className="d-none d-md-table-cell py-md-3 text-center">
+          <Button variant="outline-primary" className="rounded-1 fs-sm">
+            {action}
+          </Button>
         </td>
       </tr>
     </>

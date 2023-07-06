@@ -1,10 +1,5 @@
 import { memo } from "react";
-import Table from "react-bootstrap/Table";
-// import { PaginationBar } from "../PaginationComponent";
-// import { FilterButton } from "../ButtonsComponent/MiscBtns";
-// import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";
-// import { Descripe } from "@mui/icons-material";
 import TransactionData from "../../data/dummyData/transactionData.json";
 import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import { Link } from "react-router-dom";
@@ -15,13 +10,15 @@ export const NotificationCard = (props) => {
   return (
     <div className="d-flex justify-content-around align-items-center border-bottom p-2">
       <img src={image} alt="SampleUserImg" className="" />
-      <h6 className="d-none d-lg-block mx-3">{title}</h6>
+      <h6 className="d-none d-lg-block mx-3 text-small mb-0">{title}</h6>
       <div className="d-inline">
-        <p className="w-100 ps-3">{description}</p>
+        <p className="w-100 ps-3 ps-md-0 text-small m-0">{description}</p>
       </div>
-      <button className="btn text-primary border-0 d-none d-md-block">
-        {link}
-      </button>
+      {/* <CustomBtn
+        value={link}
+        className="btn border text-success text-small viewBtn"
+        style={{ "whiteSpace": "nowrap" }}
+          /> */}
     </div>
   );
 };
@@ -30,7 +27,7 @@ export const NotificationCard = (props) => {
 
 export const MiniRecentTransactionTable = () => {
   return (
-    <div className="border shadow p-3" style={{ width: "100%" }}>
+    <div className="rounded-3 shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         {/* <div className="px-4 mb-3">
@@ -99,8 +96,8 @@ export const AdminRecentTransactionsCard = memo(({ style }) => {
                     {/* <td className="p-md-3 text-small">{mini.status_name}</td> */}
                     <td className="p-md-3 d-flex justify-content-center align-items-center border-0">
                       <Notifications
-                        text={mini.status_name}
-                        styles={`text-small ${mini.status_style} border-0`}
+                        value={mini.status_name}
+                        className={`text-small ${mini.status_style} border-0`}
                       />
                     </td>
                     <td className="p-md-3 text-small">View</td>

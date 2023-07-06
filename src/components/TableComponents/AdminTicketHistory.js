@@ -7,7 +7,7 @@ import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 export const TicketHistoryTable = () => {
   return (
     <>
-      <div className="border-0 rounded shadow container p-4">
+      <div className="border-0 rounded shadow p-4">
         <table className="table transaction-table">
           <thead>
             <tr className="text-center">

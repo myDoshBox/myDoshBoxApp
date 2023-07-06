@@ -20,10 +20,14 @@ import {
 import { InitiateTransactionIcon } from "../../components/IconComponent/UserdashboardIcons";
 import { RecentDispute } from "../../components/CardComponents/TransactionDetails";
 import { UserdashboardTransaction } from "../../components/TableComponents/TransactionHistory";
+import {
+  TaskBoard,
+  TaskCard,
+} from "../../components/CardComponents/UsersCards";
 
 const NeutralDashboard = () => {
   return (
-    <div className="row">
+    <div className="row" style={{ backgroundColor: "#F9F9FB" }}>
       <div className="col-lg-3 col-sm-12 px-0"></div>
 
       <div className="col-lg-9 col-sm-12">
@@ -67,7 +71,6 @@ const NeutralDashboard = () => {
               </div>
             </div>
           </div>
-
           <div className="row">
             <div className="col-lg-12 col-sm-12">
               <div className="row">
@@ -81,61 +84,7 @@ const NeutralDashboard = () => {
               </div>
             </div>
           </div>
-
-          <div className="card mx-auto mt-5 p-3 shadow border-0">
-            <div className="card-body p-0">
-              <h6 className="pb-3 m-0">Recent Transactions</h6>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th
-                      scope="col"
-                      className="opacity-50 d-none d-md-table-cell"
-                    >
-                      Transaction Id
-                    </th>
-                    <th
-                      scope="col"
-                      className="opacity-50 d-none d-sm-table-cell"
-                    >
-                      Buyer
-                    </th>
-                    <th
-                      scope="col"
-                      className="opacity-50 d-none d-lg-table-cell"
-                    >
-                      Seller
-                    </th>
-                    <th scope="col" className="opacity-50">
-                      Products
-                    </th>
-                    <th scope="col" className="opacity-50">
-                      Date
-                    </th>
-                    <th scope="col" className="opacity-50">
-                      Status
-                    </th>
-                    <th
-                      scope="col"
-                      className="opacity-50 d-none d-sm-table-cell"
-                    >
-                      ...
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {transactionData.recent_transactions.map((rec_trans) => {
-                    return <TransactionHistory {...rec_trans} />;
-                  })}
-                </tbody>
-              </table>
-              <div className="d-flex justify-content-end my-4">
-                <Link to={"../transaction"}>
-                  <ViewMoreButton />
-                </Link>
-              </div>
-            </div>
-          </div>
+          <TaskBoard BoardName={"Recent Conflict Table"} itemsShown={6} />
         </div>
       </div>
     </div>

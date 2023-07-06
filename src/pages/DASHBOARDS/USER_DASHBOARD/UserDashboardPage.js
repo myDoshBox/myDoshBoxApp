@@ -7,17 +7,13 @@ import {
 import {
   InitiateTransactionIcon,
   SettledTransactionIcon,
-  // CustomerCareIcon,
+  CustomerCareIcon,
   InitiateDisputeIcon,
 } from "../../../components/IconComponent/UserdashboardIcons";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-<<<<<<< HEAD
-import { MiniRecentTransactionTable } from "../../../components/TableComponents/TransactionTable";
-=======
 import { RecentNotification } from "../../../components/NotificationComponent/NotificationComponents";
 import { UserdashboardTransaction } from "../../../components/TableComponents/TransactionHistory";
 import { RecentDispute } from "../../../components/CardComponents/TransactionDetails";
->>>>>>> 1683cd92a4954a1348caaf4bf29a983b951d3694
 
 const UserDashboardPage = () => {
   return (
@@ -38,38 +34,29 @@ const UserDashboardPage = () => {
 const UserDashboard = () => {
   return (
     <div className="row">
-<<<<<<< HEAD
-      <div className="col-lg-5 d-none d-md-block">
-        <MiniProfileCard />
-      </div>
-      <div className="col-lg-7 col-sm-12">
-=======
       <div className="col-lg-12 col-sm-12">
->>>>>>> 1683cd92a4954a1348caaf4bf29a983b951d3694
         <div className="row mb-3">
-          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6 mt-4 mt-lg-0">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-3 mt-4 mt-lg-0">
             <UserDashboardCard2
               icon={<InitiateTransactionIcon />}
               text={`Initiate Transaction`}
               link={"initiate-escrow"}
             />
           </div>
-          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
               link={"transaction"}
             />
           </div>
-        </div>
-        <div className="row mb-3">
-          <div className="col-sm-12 mb-4 mb-md-2 col-lg-6">
+          <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">
             <UserDashboardCard2
-              text={`Initiate Transaction`}
-              icon={<InitiateTransactionIcon />}
+              text={`Customer Care`}
+              icon={<CustomerCareIcon />}
             />
           </div>
-          <div className="col-sm-12 mb-3 mb-md-2 col-lg-6">
+          <div className="col-sm-12 mb-3 mb-md-2 col-lg-3">
             <UserDashboardCard2
               text={`Initiate Disputes`}
               icon={<InitiateDisputeIcon />}
@@ -94,7 +81,7 @@ const UserDashboard = () => {
       </div>
 
       <div className="mt-5 mb-5">
-        <MiniRecentTransactionTable />
+        <RecentNotification />
       </div>
     </div>
   );

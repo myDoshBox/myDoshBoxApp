@@ -43,7 +43,7 @@ export const BackButton = () => {
 export const NewTransaction = () => {
   return (
     <Button
-      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+      className="all-btn border-0 mt-3 rounded-1 GeneralBtnStyle1 btn all-btn text-white"
       style={{ width: "170px" }}
     >
       New Transaction

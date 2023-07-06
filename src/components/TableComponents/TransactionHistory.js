@@ -5,6 +5,8 @@ import {
 } from "../NotificationComponent/NotificationComponents";
 import { ViewBtn } from "../ButtonsComponent/NavigationAndViewButtons";
 import TransactionData from "../../data/dummyData/transactionData.json";
+import { Button, Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const TransactionHistory = (props) => {
   const { trans_id, buyer_name, seller_name, products, date, status } = props;
@@ -31,12 +33,50 @@ const TransactionHistory = (props) => {
 };
 
 export const UserdashboardTransaction = () => {
+  const dropdownBtnValues = [
+    { label: "Filter", value_1: "Last 7 days", value_2: "Over $1000" },
+    { label: "Sort", value_1: "Newest", value_2: "Oldest" },
+  ];
+
   return (
     <div className="shadow-sm p-2" style={{ width: "100%" }}>
       <div>
+        <div className="d-flex justify-content-between">
+          <div className="">
+            <h6 className="text-nowrap mt-2 ms-3">Recent Transaction</h6>
+          </div>
+          <div className="d-flex">
+            {dropdownBtnValues.map((item) => {
+              return (
+                <Dropdown>
+                  <Dropdown.Toggle
+                    id="dropdown-basic"
+                    className="border-1 border-gray my-1 rounded-1 btn bg-transparent text-black border-black me-3 fs-sm"
+                    style={{
+                      outline: "none",
+                      borderColor: "#E7E7E7",
+                    }}
+                  >
+                    {item.label}
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu style={{ minWidth: "inherit" }}>
+                    <div key={item.label}>
+                      <Dropdown.Item className="fs-sm">
+                        {item.value_1}
+                      </Dropdown.Item>
+                      <Dropdown.Item className="fs-sm">
+                        {item.value_2}
+                      </Dropdown.Item>
+                    </div>
+                  </Dropdown.Menu>
+                </Dropdown>
+              );
+            })}
+          </div>
+        </div>
         <table className="table transaction-table">
           <thead className="text-center">
-            <h5 className="text-nowrap mt-3">Recent Transaction</h5>
             <tr>
               <th>Name</th>
               <th className="d-none d-lg-table-cell">Email</th>
@@ -51,16 +91,6 @@ export const UserdashboardTransaction = () => {
             })}
           </tbody>
         </table>
-        {/* <div className="p-4 text-md-end d-none d-md-block">
-          <Link to={"./transaction"}>
-            <ViewMoreButton />
-          </Link>
-        </div> */}
-        {/* <div className="text-center d-lg-none .d-xl-block">
-          <Link to={"./transaction"}>
-            <ViewMoreButton />
-          </Link>
-        </div> */}
       </div>
     </div>
   );
@@ -71,7 +101,7 @@ const MiniTransaction = (props) => {
   return (
     <>
       <tr className="text-center border-bottom">
-        <td className="p-md-3  text-small">{name}</td>
+        <td className="p-md-3 text-small">{name}</td>
         <td className="p-md-3 d-none d-lg-table-cell text-small">{email}</td>
         <td className="p-md-3 text-small">{paidDate}</td>
         <td className="p-md-3 text-small">${paidAmount}</td>

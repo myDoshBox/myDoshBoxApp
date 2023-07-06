@@ -4,6 +4,18 @@
   color: rgba(75, 68, 83, 0.5);
 }
 
+.lightTextColor {
+  color: #757575 !important;
+}
+
+.blueTextColor {
+  color: #2e2a40 !important;
+}
+
+.yellow {
+  color: #ffc306 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +83,14 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+.border-style-0 {
+  border-style: none !important;
+}
+
+.no-table-border-width {
+  border-bottom-width: 0 !important;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
@@ -182,6 +202,10 @@ div {
     font-size: 0.8rem !important;
   }
 }
+.fs-sm {
+  font-size: 0.75rem !important;
+}
+
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;
@@ -190,6 +214,20 @@ div {
 @media screen and (max-width: 767px) {
   .EscrowChoice {
     width: 50% !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .border-md-style-1 {
+    border-style: solid !important;
+  }
+  .fw-md-normal {
+    font-weight: 400 !important;
+  }
+  .lightTextColor-md {
+    color: #757575 !important;
+  }
+  .border-md-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
   }
 }
 .all-btn:hover {
@@ -336,6 +374,19 @@ div {
   opacity: 0.8;
 }
 
+.viewBtn:hover,
+.viewBtn:focus {
+  border-color: currentColor !important;
+  font-weight: bold;
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+  font-weight: unset !important;
+}
+
 .teamValueStyle {
   background-color: #e5f0ed !important;
 }
@@ -472,6 +523,16 @@ div {
 }
 .Targets .apexcharts-datalabel-value {
   font-size: 2rem !important;
+}
+
+.disputing-party {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.respondent {
+  z-index: 100;
+  transform: translateX(-30%);
 }
 
 textarea:focus,

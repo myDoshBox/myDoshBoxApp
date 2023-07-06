@@ -118,3 +118,16 @@
   text-decoration: underline;
   opacity: 0.8;
 }
+
+.viewBtn:hover,
+.viewBtn:focus {
+  border-color: currentColor !important;
+  font-weight: bold;
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus {
+  background-color: $pryColor !important;
+  color: $secColor !important;
+  font-weight: unset !important;
+}
