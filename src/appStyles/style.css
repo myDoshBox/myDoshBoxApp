@@ -493,6 +493,104 @@ div {
   color: white;
 }
 
+.initiating-escrow .nav-pills .nav-link.active {
+  border-radius: 3px !important;
+  background: rgba(0, 103, 71, 0.92) !important;
+  border: 1px solid rgba(0, 103, 71, 0.92) !important;
+  display: flex;
+  width: 11rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+}
+.initiating-escrow .nav-pills .nav-link.active svg path {
+  fill: white !important;
+}
+.initiating-escrow .nav-pills .nav-link {
+  border-radius: 3px !important;
+  border: 1px solid #4d957e !important;
+  display: flex;
+  width: 11rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  background-color: white !important;
+  font-weight: 400 !important;
+  color: rgba(0, 103, 71, 0.92);
+}
+.initiating-escrow .nav-pills .nav-link svg path {
+  fill: rgba(0, 103, 71, 0.92) !important;
+}
+
+.box {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10% !important;
+  padding-bottom: 1.25rem !important;
+  width: 100%;
+}
+
+.box .group-wrapper {
+  border: 0px none;
+  position: relative;
+}
+
+.box .group {
+  height: 78px;
+  width: 197px;
+}
+
+.box .div {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 26px;
+  width: 117px;
+}
+
+.box .vector {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 23px;
+}
+
+.box .text-wrapper {
+  color: rgba(0, 103, 71, 0.9215686275);
+  font-weight: 500;
+  left: 26px;
+  position: absolute;
+  white-space: nowrap;
+  width: 89px;
+}
+
+.box .overlap-group-wrapper {
+  left: 117px;
+  position: absolute;
+}
+
+.box .overlap-group {
+  background-color: rgba(0, 103, 71, 0.9215686275);
+  border-radius: 40px/39px;
+  height: 78px;
+  position: relative;
+  width: 80px;
+}
+
+.box .text-wrapper-2 {
+  color: #ffffff;
+  font-size: 2.5rem !important;
+  font-weight: 600;
+  left: 28px;
+  line-height: 60px;
+  position: absolute;
+  top: 9px;
+}
+
 .signUp-bg {
   background-color: #006747;
   background-size: auto;
@@ -509,6 +607,24 @@ div {
 
 .center-card {
   transform: translateX(-1rem);
+}
+
+.new-escrow {
+  width: 90%;
+  border-radius: 2px;
+  background: rgba(0, 103, 71, 0.13);
+  display: flex;
+  padding: 2.1875rem 1.125rem 2.1875rem 1.25rem;
+  align-items: center;
+  gap: -5.25rem;
+}
+.new-escrow .small-head {
+  border-bottom: 1px solid #2e2a40;
+  font-size: 19px !important;
+  padding-bottom: 10px;
+}
+.new-escrow h3 {
+  font-size: 1.4375rem !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -767,43 +883,48 @@ input[type=color]:focus,
   color: #fff !important;
   background-color: #006747;
 }
-
-.active-link .icon {
-  text-decoration: none;
-  color: #ffffff !important;
-  margin-right: 15px;
+.active-link .fill {
+  fill: white !important;
+}
+.active-link .fill path {
+  fill: white !important;
+}
+.active-link svg {
+  margin-right: 10px;
+}
+.active-link svg path {
+  stroke: white;
 }
 
 .inactive-link {
   text-decoration: none;
   color: #757575 !important;
 }
-
-.inactive-link .icon {
-  text-decoration: none;
-  color: #757575 !important;
-  margin-right: 15px;
+.inactive-link svg {
+  margin-right: 10px;
 }
 
 .active-linkSm {
   text-decoration: none;
   border-radius: 4px 4px;
   padding: 7px 14px;
-  color: #ffffff !important;
   background-color: #006747;
-  position: relative;
   width: 70px;
   height: 40px;
   font-size: 20px;
 }
+.active-linkSm .fill {
+  fill: white !important;
+}
+.active-linkSm .fill path {
+  fill: white !important;
+}
+.active-linkSm svg path {
+  stroke: white;
+}
 
-.inactive-linkSm .icon {
-  position: relative;
-  width: 70px;
-  height: 40px;
-  font-size: 20px;
-  margin-left: 14px !important;
-  color: #757575;
+.inactive-linkSm svg {
+  transform: translateX(10px) !important;
 }
 
 .smlogo {
@@ -815,6 +936,7 @@ input[type=color]:focus,
   background-color: unset !important;
   border: none !important;
   padding: 0 !important;
+  color: #757575 !important;
 }
 
 .SideNavDropdown button::after {
@@ -1057,5 +1179,30 @@ input[type=color]:focus,
 .all-conflicts-table tbody tr td {
     font-size: 0.75rem !important;
   }
+}
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image {
+  position: relative;
+  width: 450px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.carousel-button {
+  position: absolute;
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-button.next {
+  transform: translateX(370px);
 }
 /*# sourceMappingURL=style.css.map */
