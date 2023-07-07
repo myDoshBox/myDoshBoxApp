@@ -4,6 +4,7 @@ import { Button, Dropdown } from "react-bootstrap";
 // AllConflictsCard
 import conflictsData from "../../data/dummyData/conflictsData.json";
 import { PaginationBar } from "../PaginationComponent";
+import { Styling } from "../NotificationComponent/NotificationComponents";
 //All Buttons/Icon Import Starts
 // import {
 //   TotalUsersIcon,
@@ -22,6 +23,7 @@ import Avatar from "../../images/Avatar.jpg";
 
 import { Link, useNavigate } from "react-router-dom";
 import TransactionData from "../../data/dummyData/transactionData.json";
+import disputeshistorydata from "../../data/dummyData/disputeshistorydata.json";
 import { EditProfileButton } from "../ButtonsComponent/EditButtons";
 import { ViewMoreDisputeBtn } from "../ButtonsComponent/NavigationAndViewButtons";
 
@@ -93,9 +95,8 @@ export const UserDashboardCard2 = (props) => {
   );
 };
 
-export const ConflitCard = (props) => {
-  const { text, icon, link, style, styling, btnNumber } = props;
-  let BtnStyle = "mt-3 mb-3";
+export const NewConflitCard = (props) => {
+  const { text, icon, link, style, styling, btnNumber, view } = props;
   return (
     <Link to={link} className="text-decoration-none text-dark">
       <div
@@ -103,17 +104,25 @@ export const ConflitCard = (props) => {
         style={{ width: "19rem", height: "9.8rem" }}
       >
         <div className="row justify-content-center align-items-center mx-auto mb-3">
-          <div className="col-4">{icon}</div>
+          {/* <div className="col-4">{icon}</div> */}
+          <img src={icon} alt="" className="w-25" />
           <div className="col-8 text-nowrap">{text}</div>
         </div>
-        <div>{style}</div>
+        <div>
+          <Styling styles={style} />
+        </div>
         <div className="d-flex justify-content-between">
           <div>
-            <ViewMoreDisputeBtn styling={BtnStyle} />
+            <Button
+              variant="outline-dark"
+              className="rounded-1 fs-sm mt-3 mb-3 opacity-50"
+            >
+              {view}
+            </Button>
           </div>
           <div>
             <Button
-              className={`border-0 btn text-white mt-3 mb-3 ${styling}`}
+              className={`border-0 btn mt-3 mb-3 ${styling}`}
               style={{ width: "46px", height: "2.3rem" }}
             >
               {btnNumber}
@@ -125,14 +134,18 @@ export const ConflitCard = (props) => {
   );
 };
 
-export const OpenConflictLineStyling = ({ styles }) => {
-  return <div className="OpenConflictLineStyling ms-2"></div>;
-};
-export const OngoingConflictLineStyling = ({ styles }) => {
-  return <div className="OngoingConflictLineStyling ms-2"></div>;
-};
-export const CloseConflictLineStyling = ({ styles }) => {
-  return <div className="CloseConflictLineStyling ms-2"></div>;
+export const ConflitCard = () => {
+  return (
+    <div className="row mx-auto px-3 pe-lg-5 ps-lg-0">
+      {disputeshistorydata.new_conflictsCard.map((mini) => {
+        return (
+          <div className="col-lg-4 col-md-4 col-sm-12 mt-3">
+            <NewConflitCard {...mini} key={mini.id} />
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 // MiniProfileCard

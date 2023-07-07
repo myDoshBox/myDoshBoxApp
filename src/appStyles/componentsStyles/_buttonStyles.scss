@@ -14,6 +14,7 @@
 .openConflitBtnStyle {
   @include H5Font;
   background-color: #ffc306 !important;
+  color: $pryColor !important;
 }
 .ongoingConflitBtnStyle {
   @include H5Font;
