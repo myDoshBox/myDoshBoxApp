@@ -90,8 +90,7 @@ const CustomBtn = (props) => {
         {btnContent}
       </Link>
     );
-  }
-  else if (props.href) {
+  } else if (props.href) {
     return (
       <a href={props.href} {...rest}>
         {btnContent}
