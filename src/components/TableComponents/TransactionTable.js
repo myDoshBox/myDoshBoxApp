@@ -1,6 +1,6 @@
 import { memo } from "react";
 import Table from "react-bootstrap/Table";
-// import { PaginationBar } from "../PaginationComponent";
+// import { Pagination } from "../PaginationComponent";
 // import { FilterButton } from "../ButtonsComponent/MiscBtns";
 // import { GeneralBtnStyle1, GeneralBtnStyle2 } from "../ButtonsComponent/Button";
 import { Notifications } from "../NotificationComponent/NotificationComponents";

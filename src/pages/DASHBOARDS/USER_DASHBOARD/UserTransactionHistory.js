@@ -1,9 +1,10 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
 import TransactionData from "../../../data/dummyData/transactionData.json";
-import { PaginationBar } from "../../../components/PaginationComponent";
+import { Pagination } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
 import { NewTransaction } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
+import { useState } from "react";
 
 const UserTransactionHistory = () => {
   return (
@@ -23,6 +24,15 @@ const UserTransactionHistory = () => {
 };
 
 export const RecentTransactionTable = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [total, setTotal] = useState(5);
+  const [limit, setLimit] = useState(10);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const end = currentPage * limit;
+  const start = end - limit;
   return (
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
@@ -43,15 +53,22 @@ export const RecentTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            {TransactionData.user_recent_transaction.map((history) => {
-              return (
-                <RecentTransactionTableData {...history} key={history.id} />
-              );
-            })}
+            {TransactionData.user_recent_transaction
+              .slice(start, end)
+              .map((history) => {
+                return (
+                  <RecentTransactionTableData {...history} key={history.id} />
+                );
+              })}
           </tbody>
         </table>
         <div className="p-4">
-          <PaginationBar />
+          <Pagination
+            total={total}
+            limit={limit}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </div>

@@ -1,10 +1,20 @@
 import { Notifications } from "../NotificationComponent/NotificationComponents";
 import AdminTicketDetails from "../../data/TicketData.json";
-import { PaginationBar } from "../PaginationComponent";
+import { Pagination } from "../PaginationComponent";
 import { Link } from "react-router-dom";
 import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
+import { useState } from "react";
 
 export const TicketHistoryTable = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [total, setTotal] = useState(5);
+  const [limit, setLimit] = useState(10);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const end = currentPage * limit;
+  const start = end - limit;
   return (
     <>
       <div className="border-0 rounded shadow container p-4">
@@ -21,12 +31,19 @@ export const TicketHistoryTable = () => {
             </tr>
           </thead>
           <tbody>
-            {AdminTicketDetails.AdminTicketDetails.map((data) => {
-              return <TicketHistoryData {...data} key={data.id} />;
-            })}
+            {AdminTicketDetails.AdminTicketDetails.slice(start, end).map(
+              (data) => {
+                return <TicketHistoryData {...data} key={data.id} />;
+              }
+            )}
           </tbody>
         </table>
-        <PaginationBar />
+        <Pagination
+          total={total}
+          limit={limit}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
       </div>
     </>
   );

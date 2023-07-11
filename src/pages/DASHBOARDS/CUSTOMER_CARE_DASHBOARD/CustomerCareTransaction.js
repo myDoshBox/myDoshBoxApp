@@ -1,8 +1,9 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
-import { PaginationBar } from "../../../components/PaginationComponent";
+import { Pagination } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
+import { useState } from "react";
 
 const CustomerCareTransaction = () => {
   return (
@@ -22,6 +23,15 @@ const CustomerCareTransaction = () => {
 };
 
 export const CustomerCareTransactionTable = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [total, setTotal] = useState(5);
+  const [limit, setLimit] = useState(10);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const end = currentPage * limit;
+  const start = end - limit;
   return (
     <div className="border shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
@@ -43,20 +53,25 @@ export const CustomerCareTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            {customercare_transaction.customercare_transaction.map(
-              (customercare) => {
+            {customercare_transaction.customercare_transaction
+              .slice(start, end)
+              .map((customercare) => {
                 return (
                   <CustomerCareTransactionTableData
                     {...customercare}
                     key={customercare.id}
                   />
                 );
-              }
-            )}
+              })}
           </tbody>
         </table>
         <div className="p-4">
-          <PaginationBar />
+          <Pagination
+            total={total}
+            limit={limit}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </div>

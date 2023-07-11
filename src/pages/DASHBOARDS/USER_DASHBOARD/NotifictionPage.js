@@ -2,8 +2,9 @@ import React from "react";
 import { NotificationCard } from "../../../components/TableComponents/TransactionTable";
 import usersData from "../../../data/usersData.json";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
-import { PaginationBar } from "../../../components/PaginationComponent";
+import { Pagination } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { useState } from "react";
 
 const NotifictionPage = () => {
   return (
@@ -22,6 +23,15 @@ const NotifictionPage = () => {
 };
 
 const Notification = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [total, setTotal] = useState(5);
+  const [limit, setLimit] = useState(10);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const end = currentPage * limit;
+  const start = end - limit;
   return (
     <div className="row pe-lg-5">
       <div className="card mx-auto mt-4 p-4 shadow border-0">
@@ -39,7 +49,12 @@ const Notification = () => {
           })}
         </div>
         <div className="px-lg-5 py-4">
-          <PaginationBar />
+          <Pagination
+            total={total}
+            limit={limit}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </div>

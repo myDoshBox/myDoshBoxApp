@@ -1,116 +1,84 @@
-import {
-  NextButton,
-  PreviousButton,
-} from "./ButtonsComponent/NavigationAndViewButtons";
+const range = (start, end) => {
+  return [...Array(end - start).keys()].map((el) => el + start);
+};
 
-export const PaginationBar = () => {
+const getPagesCut = ({ pagesCount, pagesCutCount, currentPage }) => {
+  const ceiling = Math.ceil(pagesCutCount / 2);
+  const floor = Math.floor(pagesCutCount / 2);
+  console.log("ceiling", ceiling);
+  console.log("floor", floor);
+
+  if (pagesCount < pagesCutCount) {
+    return { start: 1, end: pagesCount + 1 };
+  } else if (currentPage >= 1 && currentPage <= ceiling) {
+    return { start: 1, end: pagesCutCount + 1 };
+  } else if (currentPage + floor >= pagesCount) {
+    return { start: pagesCount - pagesCutCount + 1, end: pagesCount + 1 };
+  } else {
+    return { start: currentPage - ceiling + 1, end: currentPage + floor + 1 };
+  }
+};
+
+const PaginationItem = ({ page, currentPage, onPageChange, isDisabled }) => {
+  const handleClick = () => {
+    if (!isDisabled) {
+      onPageChange(page);
+    }
+  };
+
   return (
-    // NOTE: Dynamically add the aria-current on each page
-    <nav role="navigation" aria-label="Page Navigation">
-      <ul className="list-unstyled d-flex justify-content-between align-items-center PaginationBar mb-0">
-        <li className="page-item mx-0">
-          <PreviousButton />
-        </li>
-        <li className="page-item " aria-label="Goto Page 1">
-          <a className="page-link placeholderTextColor" href="/page-1">
-            1
-          </a>
-        </li>
-        <li className="page-item " aria-current="page" aria-label="Goto Page 2">
-          <a className="page-link placeholderTextColor" href="/page-2">
-            2
-          </a>
-        </li>
-        <li className="page-item " aria-label="Goto Page 3" aria-current="true">
-          <a className="page-link placeholderTextColor" href="/page-3">
-            3
-          </a>
-        </li>
-        <li
-          className="page-item d-md-none d-lg-none"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            ...
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            4
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            5
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            6
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-md-block d-lg-none"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            ...
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            7
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            8
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            9
-          </a>
-        </li>
-        <li
-          className="page-item d-none d-lg-block"
-          aria-label="Goto Page 3"
-          aria-current="true"
-        >
-          <a className="page-link placeholderTextColor" href="/page-3">
-            10
-          </a>
-        </li>
-        <li className="page-item mx-0">
-          <NextButton />
-        </li>
-      </ul>
-    </nav>
+    <li
+      className={`page-item ${page === currentPage ? "active" : ""} ${
+        isDisabled ? "disabled" : ""
+      }`}
+      onClick={handleClick}
+    >
+      <span className="page-link">{page}</span>
+    </li>
   );
 };
+
+export const Pagination = ({ currentPage, total, limit, onPageChange }) => {
+  const pagesCount = Math.ceil(total / limit);
+  const pagesCut = getPagesCut({ pagesCount, pagesCutCount: 5, currentPage });
+  const pages = range(pagesCut.start, pagesCut.end);
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === pagesCount;
+  return (
+    <ul className="pagination">
+      <PaginationItem
+        page="First"
+        currentPage={currentPage}
+        onPageChange={() => onPageChange(1)}
+        isDisabled={isFirstPage}
+      />
+      <PaginationItem
+        page="Prev"
+        currentPage={currentPage}
+        onPageChange={() => onPageChange(currentPage - 1)}
+        isDisabled={isFirstPage}
+      />
+      {pages.map((page) => (
+        <PaginationItem
+          page={page}
+          key={page}
+          currentPage={currentPage}
+          onPageChange={onPageChange}
+        />
+      ))}
+      <PaginationItem
+        page="Next"
+        currentPage={currentPage}
+        onPageChange={() => onPageChange(currentPage + 1)}
+        isDisabled={isLastPage}
+      />
+      <PaginationItem
+        page="Last"
+        currentPage={currentPage}
+        onPageChange={() => onPageChange(pages.length)}
+        isDisabled={isLastPage}
+      />
+    </ul>
+  );
+};
+// export default Pagination;

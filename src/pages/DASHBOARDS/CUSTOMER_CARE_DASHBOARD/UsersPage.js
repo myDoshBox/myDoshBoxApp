@@ -2,7 +2,8 @@ import React from "react";
 import usersData from "../../../data/usersData.json";
 import { UsersList } from "../../../components/TableComponents/UsersList";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
-import { PaginationBar } from "../../../components/PaginationComponent";
+import { Pagination } from "../../../components/PaginationComponent";
+import { useState } from "react";
 
 const UsersPage = () => {
   return (
@@ -21,6 +22,15 @@ const UsersPage = () => {
 };
 
 const UsersTable = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [total, setTotal] = useState(5);
+  const [limit, setLimit] = useState(10);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const end = currentPage * limit;
+  const start = end - limit;
   return (
     <div>
       <div className="card mx-auto mt-5 p-3 shadow border-0">
@@ -53,14 +63,19 @@ const UsersTable = () => {
               </tr>
             </thead>
             <tbody>
-              {usersData.UsersList.map((user_table) => {
+              {usersData.UsersList.slice(start, end).map((user_table) => {
                 return <UsersList {...user_table} />;
               })}
             </tbody>
           </table>
         </div>
         <div className="px-lg-5 py-4">
-          <PaginationBar />
+          <Pagination
+            total={total}
+            limit={limit}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </div>
