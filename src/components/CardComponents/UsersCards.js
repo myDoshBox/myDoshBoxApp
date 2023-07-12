@@ -461,7 +461,7 @@ export const TaskBoard = ({ BoardName, itemsShown }) => {
           <div className="d-flex">
             {dropdownBtnValues.map((item) => {
               return (
-                <Dropdown>
+                <Dropdown key={item.label}>
                   <Dropdown.Toggle
                     id="dropdown-basic"
                     className="border-1 border-gray my-1 rounded-1 btn bg-transparent text-black border-black me-3 fs-sm"
