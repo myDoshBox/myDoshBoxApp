@@ -39,8 +39,8 @@ export const UserdashboardTransaction = () => {
   ];
 
   return (
-    <div className="shadow-sm p-2" style={{ width: "100%" }}>
-      <div>
+    <div className="card border-0 shadow-sm p-2" style={{ width: "100%" }}>
+      <div className="card-body">
         <div className="d-flex justify-content-between">
           <div className="">
             <h6 className="text-nowrap mt-2 ms-3">Recent Transaction</h6>
