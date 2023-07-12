@@ -2,6 +2,7 @@ $pryColor: #006747;
 $pryColorVariant: #e5f0ed;
 $secColor: hsl(0, 0%, 100%);
 $GrayTextColor: #bdbdbd;
+$FooterColor: #b9f1df16;
 
 // Button Color
 $buttonColor: #4d957e;
@@ -53,14 +54,6 @@ $LogoutBtnColor: rgba(255, 0, 0, 0.7);
   color: rgba(75, 68, 83, 0.5);
 }
 
-.lightTextColor {
-  color: #757575 !important;
-}
-
-.blueTextColor {
-  color: #2e2a40 !important;
-}
-
-.yellow {
-  color: #ffc306 !important;
-}
+// NavBar & hero Section color
+$NavBarColor: rgba(0, 103, 71, 0.06);
+$HeroColor: rgba(0, 103, 71, 0.06);

@@ -4,18 +4,6 @@
   color: rgba(75, 68, 83, 0.5);
 }
 
-.lightTextColor {
-  color: #757575 !important;
-}
-
-.blueTextColor {
-  color: #2e2a40 !important;
-}
-
-.yellow {
-  color: #ffc306 !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -652,6 +640,20 @@ div {
   transform: translateX(-30%);
 }
 
+.cardBgColor {
+  background-color: rgba(210, 205, 205, 0.2274509804) !important;
+}
+.cardBgColor:hover {
+  background-color: rgba(181, 178, 178, 0.262745098) !important;
+}
+.cardBgColor .cardNumberbg {
+  background-color: #ebe1fc !important;
+  font-size: large;
+}
+.cardBgColor .textColor {
+  color: #9a6af2 !important;
+}
+
 textarea:focus,
 input[type=text]:focus,
 input[type=password]:focus,
@@ -1111,11 +1113,11 @@ input[type=color]:focus,
   }
 }
 .FooterBgColor {
-  background-color: #006747;
+  background-color: rgba(185, 241, 223, 0.0862745098);
 }
 .FooterBgColor nav ul li a {
   text-decoration: none;
-  color: rgba(220, 215, 215, 0.821);
+  color: rgba(220, 215, 215, 0.178);
 }
 
 .BgColor {
@@ -1205,5 +1207,34 @@ input[type=color]:focus,
 
 .carousel-button.next {
   transform: translateX(370px);
+}
+
+.heroColor {
+  background-color: rgba(0, 103, 71, 0.06);
+}
+
+.BgColor {
+  background-color: rgba(189, 250, 181, 0.033) !important;
+}
+.BgColor .cardBgColor {
+  background-color: rgba(210, 205, 205, 0.2274509804) !important;
+}
+.BgColor .cardBgColor:hover {
+  background-color: rgba(181, 178, 178, 0.262745098) !important;
+}
+.BgColor .cardBgColor .cardNumberbg {
+  background-color: #ebe1fc !important;
+  font-size: large;
+}
+.BgColor .cardBgColor .textColor {
+  color: #9a6af2 !important;
+}
+
+.bgColor {
+  background-color: #006747;
+}
+
+.bgColorSection {
+  background-color: rgba(0, 103, 71, 0.1);
 }
 /*# sourceMappingURL=style.css.map */

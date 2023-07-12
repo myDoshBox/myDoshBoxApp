@@ -1,5 +1,5 @@
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
-import logo from "../../images/doshlogo.jpg";
+import logo from "../../images/Homepage Img/logo.png";
 import image from "../../images/Image.jpg";
 import { Link, Outlet } from "react-router-dom";
 import { useRef } from "react";
@@ -17,7 +17,7 @@ export const GuestNavbar = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="guest-nav sticky-top bg-white mb-5">
+      <Navbar expand="lg" className="guest-nav sticky-top bg-white mb-2">
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="hamburgerIcon"

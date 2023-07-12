@@ -126,3 +126,12 @@ export const ViewComplaintButton = () => {
     </Button>
   );
 };
+
+// ReadMore
+export const ReadMore = () => {
+  return (
+    <Button className="bg-white p-3 rounded-1 text-success">
+      <i class="bi bi-arrow-right-square-fill me-2"></i>Read More
+    </Button>
+  );
+};

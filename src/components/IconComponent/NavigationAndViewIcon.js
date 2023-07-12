@@ -1,16 +1,28 @@
 export const ScrollUpIcon = () => {
   return (
     <svg
+      width="50"
+      height="50"
+      viewBox="0 0 50 50"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      width="35"
-      height="35"
-      fill="#FFFFFF"
-      className="bi bi-arrow-up-square"
-      viewBox="0 0 16 16"
     >
+      <rect width="50" height="50" fill="#006747" fill-opacity="0.92" />
       <path
-        fillRule="evenodd"
-        d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+        d="M28.8911 23.4438L25 19.5527L21.109 23.4438"
+        stroke="#F3F3F3"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M25 30.4506V19.6621"
+        stroke="#F3F3F3"
+        stroke-width="2"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   );
@@ -99,21 +111,38 @@ export const FilterIcon = () => {
     </svg>
   );
 };
+export const Icon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 70 71"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="70" height="71" rx="35" fill="#309777" />
+      <path
+        d="M32.3333 40.0455L25.6667 34.3636L27.5467 32.75L32.3333 36.8295L42.4533 28.2045L44.3333 29.8182M44.3333 23H25.6667C24.1867 23 23 24.0114 23 25.2727V39.9659C23 40.75 23.4667 41.4432 24.1733 41.8523L35 48L45.8133 41.8523C46.52 41.4432 47 40.75 47 39.9659V25.2727C47 24.0114 45.8 23 44.3333 23Z"
+        fill="white"
+      />
+    </svg>
+  );
+};
 
 export const ArrowDownIcon = () => {
   return (
     <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    fill="currentColor"
-    className="bi bi-chevron-down"
-    viewBox="0 0 16 16"
-  >
-    <path
-      fillRule="evenodd"
-      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-    />
-  </svg>
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      className="bi bi-chevron-down"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fillRule="evenodd"
+        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
   );
 };
