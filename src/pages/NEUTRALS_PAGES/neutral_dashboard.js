@@ -3,23 +3,9 @@ import React from "react";
 import TransactionHistory from "../../components/TableComponents/TransactionHistory";
 import transactionData from "../../data/dummyData/transactionData.json";
 import { DashboardConflictCards } from "../../components/CardComponents/TransactionDetails";
-import {
-  ClosedConflictIcon,
-  OngoingConflictIcon,
-  OpenConflictIcon,
-} from "../../components/IconComponent/NeutralsDashboardIcons";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link } from "react-router-dom";
-import { ViewMoreButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
-import {
-  ConflitCard,
-  NewConflitCard,
-  RecentNotification,
-  OpenConflictLineStyling,
-  OngoingConflictLineStyling,
-  CloseConflictLineStyling,
-} from "../../components/CardComponents/UsersCards";
-import { InitiateTransactionIcon } from "../../components/IconComponent/UserdashboardIcons";
+import { ConflitCard } from "../../components/CardComponents/UsersCards";
 import { RecentDispute } from "../../components/CardComponents/TransactionDetails";
 import { UserdashboardTransaction } from "../../components/TableComponents/TransactionHistory";
 import {
