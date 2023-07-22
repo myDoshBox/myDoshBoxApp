@@ -1,15 +1,15 @@
 export const InitiateTransactionIcon = () => {
   return (
     <svg
-      width="56"
-      height="56"
-      viewBox="0 0 56 56"
+      width="45"
+      height="45"
+      viewBox="0 0 45 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#006747" />
+      <rect x="0.5" y="0.5" width="44" height="44" rx="22" stroke="#006747" />
       <path
-        d="M34.04 29.55C33.62 29.96 33.38 30.55 33.44 31.18C33.53 32.26 34.52 33.05 35.6 33.05H37.5V34.24C37.5 36.31 35.81 38 33.74 38H22.26C20.19 38 18.5 36.31 18.5 34.24V27.51C18.5 25.44 20.19 23.75 22.26 23.75H33.74C35.81 23.75 37.5 25.44 37.5 27.51V28.95H35.48C34.92 28.95 34.41 29.17 34.04 29.55Z"
+        d="M29.04 23.9446C28.62 24.3363 28.38 24.9001 28.44 25.5021C28.53 26.5341 29.52 27.289 30.6 27.289H32.5V28.4261C32.5 30.4041 30.81 32.019 28.74 32.019H17.26C15.19 32.019 13.5 30.4041 13.5 28.4261V21.9952C13.5 20.0172 15.19 18.4023 17.26 18.4023H28.74C30.81 18.4023 32.5 20.0172 32.5 21.9952V23.3712H30.48C29.92 23.3712 29.41 23.5814 29.04 23.9446Z"
         stroke="#006747"
         stroke-opacity="0.92"
         stroke-width="1.5"
@@ -17,7 +17,7 @@ export const InitiateTransactionIcon = () => {
         stroke-linejoin="round"
       />
       <path
-        d="M18.5 28.4113V23.8413C18.5 22.6513 19.23 21.5913 20.34 21.1713L28.28 18.1713C29.52 17.7013 30.85 18.6213 30.85 19.9513V23.7513"
+        d="M13.5 22.8569V18.49C13.5 17.3529 14.23 16.34 15.34 15.9387L23.28 13.072C24.52 12.6229 25.85 13.502 25.85 14.7729V18.404"
         stroke="#006747"
         stroke-opacity="0.92"
         stroke-width="1.5"
@@ -25,7 +25,7 @@ export const InitiateTransactionIcon = () => {
         stroke-linejoin="round"
       />
       <path
-        d="M38.5588 29.9731V32.0331C38.5588 32.5831 38.1188 33.0331 37.5588 33.0531H35.5988C34.5188 33.0531 33.5288 32.2631 33.4388 31.1831C33.3788 30.5531 33.6188 29.9631 34.0388 29.5531C34.4088 29.1731 34.9188 28.9531 35.4788 28.9531H37.5588C38.1188 28.9731 38.5588 29.4231 38.5588 29.9731Z"
+        d="M33.5588 24.3496V26.3181C33.5588 26.8437 33.1188 27.2736 32.5588 27.2928H30.5988C29.5188 27.2928 28.5288 26.5379 28.4388 25.5059C28.3788 24.9039 28.6188 24.3401 29.0388 23.9483C29.4088 23.5852 29.9188 23.375 30.4788 23.375H32.5588C33.1188 23.3941 33.5588 23.8241 33.5588 24.3496Z"
         stroke="#006747"
         stroke-opacity="0.92"
         stroke-width="1.5"
@@ -33,7 +33,7 @@ export const InitiateTransactionIcon = () => {
         stroke-linejoin="round"
       />
       <path
-        d="M23 28H30"
+        d="M18 22.4648H25"
         stroke="#006747"
         stroke-opacity="0.92"
         stroke-width="1.5"
@@ -41,14 +41,16 @@ export const InitiateTransactionIcon = () => {
         stroke-linejoin="round"
       />
     </svg>
+
+    // <i class="bi bi-bookmarks iconStyle"></i>
   );
 };
 
 export const SettledTransactionIcon = () => {
   return (
     <svg
-      width="56"
-      height="56"
+      width="45"
+      height="45"
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -89,8 +91,8 @@ export const SettledTransactionIcon = () => {
 export const CustomerCareIcon = () => {
   return (
     <svg
-      width="56"
-      height="56"
+      width="45"
+      height="45"
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -121,8 +123,8 @@ export const CustomerCareIcon = () => {
 export const InitiateDisputeIcon = () => {
   return (
     <svg
-      width="56"
-      height="56"
+      width="45"
+      height="45"
       viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

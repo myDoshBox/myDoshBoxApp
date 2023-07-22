@@ -57,6 +57,8 @@ import AdminAnalytics from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminAnalytics";
 import AdminDashboard from "./pages/DASHBOARDS/ADMIN_DASHBOARD/AdminDashboard";
 import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import UserProfile from "./pages/DASHBOARDS/USER_DASHBOARD/UserProfile";
+import { RecentDispute } from "./components/CardComponents/TransactionDetails";
+
 function App() {
   return (
     <Router>

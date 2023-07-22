@@ -1,6 +1,6 @@
 import { Notifications } from "../../../components/NotificationComponent/NotificationComponents";
 import customercare_transaction from "../../../data/dummyData/transactionData.json";
-import { Pagination } from "../../../components/PaginationComponent";
+import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
 import { useState } from "react";
@@ -23,21 +23,17 @@ const CustomerCareTransaction = () => {
 };
 
 export const CustomerCareTransactionTable = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [total, setTotal] = useState(5);
-  const [limit, setLimit] = useState(10);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-  const end = currentPage * limit;
-  const start = end - limit;
   return (
-    <div className="border shadow p-3" style={{ width: "100%" }}>
+    <div className="shadow p-3 rounded-3 p-4" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-flex justify-content-end pb-3">
-          <FilterButton />
+          {/* <CustomButton
+            value="Sort by: Recent"
+            className="btn border text-success text-small viewBtn"
+            lefticon={<SortIcon />}
+            righticon={<ArrowDownIcon />}
+          /> */}
         </div>
 
         <table className="table transaction-table">
@@ -53,25 +49,20 @@ export const CustomerCareTransactionTable = () => {
             </tr>
           </thead>
           <tbody>
-            {customercare_transaction.customercare_transaction
-              .slice(start, end)
-              .map((customercare) => {
+            {customercare_transaction.customercare_transaction.map(
+              (customercare) => {
                 return (
                   <CustomerCareTransactionTableData
                     {...customercare}
                     key={customercare.id}
                   />
                 );
-              })}
+              }
+            )}
           </tbody>
         </table>
         <div className="p-4">
-          <Pagination
-            total={total}
-            limit={limit}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
+          <PaginationBar />
         </div>
       </div>
     </div>
@@ -100,7 +91,13 @@ export const CustomerCareTransactionTableData = (props) => {
         <td className="p-md-3 d-flex justify-content-center align-items-center">
           <Notifications text={status_name} styles={status_style} />
         </td>
-        <td className="p-md-3 small-hide">{view}</td>
+        <td className="p-md-3 small-hide">
+          {/* <CustomBtn
+            value={view}
+            className="btn border text-success text-small viewBtn"
+            style={{ whiteSpace: "nowrap" }}
+          /> */}
+        </td>
       </tr>
     </>
   );

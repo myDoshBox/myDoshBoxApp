@@ -2,9 +2,14 @@ import React from "react";
 import { NotificationCard } from "../../../components/TableComponents/TransactionTable";
 import usersData from "../../../data/usersData.json";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
-import { Pagination } from "../../../components/PaginationComponent";
+import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { useState } from "react";
+import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
+import {
+  ArrowDownIcon,
+  FilterIcon,
+} from "../../../components/IconComponent/NavigationAndViewIcon";
 
 const NotifictionPage = () => {
   return (
@@ -23,21 +28,17 @@ const NotifictionPage = () => {
 };
 
 const Notification = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [total, setTotal] = useState(5);
-  const [limit, setLimit] = useState(10);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-  const end = currentPage * limit;
-  const start = end - limit;
   return (
     <div className="row pe-lg-5">
       <div className="card mx-auto mt-4 p-4 shadow border-0">
-        <div className="card-body d-flex justify-content-between pb-3">
-          <h3 className="pb-1">Notifications</h3>
-          <FilterButton />
+        <div className="card-body d-flex justify-content-between pb-3 border-bottom pt-0">
+          <h5 className="m-0">Notifications</h5>
+          {/* <CustomButton
+            value="Sort by: Recent"
+            className="btn border text-success text-small viewBtn"
+            lefticon={<SortIcon />}
+            righticon={<ArrowDownIcon />}
+          /> */}
         </div>
         <div>
           {usersData.notificationData.map((notificationData) => {
@@ -48,14 +49,7 @@ const Notification = () => {
             );
           })}
         </div>
-        <div className="px-lg-5 py-4">
-          <Pagination
-            total={total}
-            limit={limit}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
-        </div>
+        <div className="px-lg-5 py-4">{/* <PaginationBar /> */}</div>
       </div>
     </div>
   );

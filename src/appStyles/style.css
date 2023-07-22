@@ -4,6 +4,18 @@
   color: rgba(75, 68, 83, 0.5);
 }
 
+.lightTextColor {
+  color: #757575 !important;
+}
+
+.blueTextColor {
+  color: #2e2a40 !important;
+}
+
+.yellow {
+  color: #ffc306 !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +83,14 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+.border-style-0 {
+  border-style: none !important;
+}
+
+.no-table-border-width {
+  border-bottom-width: 0 !important;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem !important;
@@ -182,6 +202,10 @@ div {
     font-size: 0.8rem !important;
   }
 }
+.fs-sm {
+  font-size: 0.75rem !important;
+}
+
 @media screen and (min-width: 992px) {
   .InitiateEscrow {
     width: 75% !important;
@@ -192,6 +216,20 @@ div {
     width: 50% !important;
   }
 }
+@media screen and (min-width: 768px) {
+  .border-md-style-1 {
+    border-style: solid !important;
+  }
+  .fw-md-normal {
+    font-weight: 400 !important;
+  }
+  .lightTextColor-md {
+    color: #757575 !important;
+  }
+  .border-md-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}
 .all-btn:hover {
   background-color: #006747 !important;
 }
@@ -200,6 +238,25 @@ div {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   background-color: #4d957e !important;
+}
+
+.openConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #ffc306 !important;
+  color: #006747 !important;
+}
+
+.ongoingConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #1fd431 !important;
+}
+
+.closeConflitBtnStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: #d82027 !important;
 }
 
 .CloseBtnStyle {
@@ -318,17 +375,17 @@ div {
   opacity: 0.8;
 }
 
-.escrow-button {
-  border-radius: 3px !important;
-  background: rgba(0, 103, 71, 0.92) !important;
-  border: 1px solid rgba(0, 103, 71, 0.92) !important;
-  display: flex;
-  width: 11rem;
-  padding: 0.9375rem 1.25rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.375rem;
-  flex-shrink: 0;
+.viewBtn:hover,
+.viewBtn:focus {
+  border-color: currentColor !important;
+  font-weight: bold;
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus {
+  background-color: #006747 !important;
+  color: hsl(0deg, 0%, 100%) !important;
+  font-weight: unset !important;
 }
 
 .teamValueStyle {
@@ -365,6 +422,39 @@ div {
   max-width: 46.875rem;
   padding: 1.25rem;
   font-size: 0.875rem !important;
+}
+
+.iconStyle {
+  display: block;
+  line-height: 45px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #006747;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  border-radius: 50% !important;
+}
+
+.OpenConflictLineStyling {
+  position: absolute;
+  background-color: #ffc306;
+  height: 3px;
+  width: 15.7rem;
+}
+
+.OngoingConflictLineStyling {
+  position: absolute;
+  background-color: #1fd431;
+  height: 3px;
+  width: 15.7rem;
+}
+
+.CloseConflictLineStyling {
+  position: absolute;
+  background-color: #d82027;
+  height: 3px;
+  width: 15.7rem;
 }
 
 .FAQs .faqs-header {
@@ -550,6 +640,16 @@ div {
 }
 .Targets .apexcharts-datalabel-value {
   font-size: 2rem !important;
+}
+
+.disputing-party {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.respondent {
+  z-index: 100;
+  transform: translateX(-30%);
 }
 
 textarea:focus,
@@ -894,6 +994,53 @@ input[type=color]:focus,
   background-color: rgba(255, 0, 0, 0.1);
 }
 
+.cancel {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(255, 0, 0);
+}
+
+.complete {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #006747;
+}
+
+.pending {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(255, 0, 0);
+}
+
+.viewMore {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: #3469f9;
+  border: 1px solid #adcafe;
+  border-radius: 5px;
+}
+
+.approved {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #4b4453;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(0, 103, 4);
+}
+
 .refunded {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
@@ -955,6 +1102,8 @@ input[type=color]:focus,
 .dispute,
 .pending-confirmation,
 .pending-payment,
+.pending,
+.approved,
 .refunded,
 .resolved,
 .unresolved {

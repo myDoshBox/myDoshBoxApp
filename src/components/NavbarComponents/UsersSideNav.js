@@ -201,7 +201,7 @@ const DesktopScreen = ({ name, ...props }) => {
     <>
       <div className="d-none d-lg-block big-side-nav shadow">
         <Link to="/">
-          <img src={doshlogo} alt="logo" className="mb-5" />
+          <img src={doshlogo} alt="logo" className="mb-5 w-50" />
         </Link>
 
         <div className="d-flex justify-content-between flex-column">
