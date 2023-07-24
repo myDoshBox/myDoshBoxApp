@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 // import { Icon } from "@iconify/react";
 
 // CalendarButton
@@ -77,31 +79,31 @@ export const ModalBtn = ({
   );
 };
 
-const CustomBtn = (props) => {
-  const { value, lefticon, righticon, ...rest } = props;
+// const CustomBtn = (props) => {
+//   const { value, lefticon, righticon, ...rest } = props;
 
-  const btnContent = (
-    <BtnContent value={value} lefticon={lefticon} righticon={righticon} />
-  );
+//   const btnContent = (
+//     <BtnContent value={value} lefticon={lefticon} righticon={righticon} />
+//   );
 
-  if (props.to) {
-    return (
-      <Link to={props.to} {...rest}>
-        {btnContent}
-      </Link>
-    );
-  }
-  else if (props.href) {
-    return (
-      <a href={props.href} {...rest}>
-        {btnContent}
-      </a>
-    );
-  }
-  return <button {...rest}>{btnContent}</button>;
-};
+//   if (props.to) {
+//     return (
+//       <Link to={props.to} {...rest}>
+//         {btnContent}
+//       </Link>
+//     );
+//   }
+//   else if (props.href) {
+//     return (
+//       <a href={props.href} {...rest}>
+//         {btnContent}
+//       </a>
+//     );
+//   }
+//   return <button {...rest}>{btnContent}</button>;
+// };
 
-export default CustomBtn;
+// export default CustomBtn;
 /*
  * To pass the tests for the CustomBtn component, make sure to include the following attributes:
  *

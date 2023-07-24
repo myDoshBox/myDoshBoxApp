@@ -26,7 +26,7 @@ export const Styling = ({ text, styles }) => {
 
 export const RecentNotification = () => {
   return (
-    <div className="border shadow p-3" style={{ width: "100%" }}>
+    <div className="border-0 shadow p-3" style={{ width: "100%" }}>
       {/* <div className="col-lg-9 border shadow" style={{ width: "100%" }}> */}
       <div>
         <div className="d-flex justify-content-between mb-3 mt-3">

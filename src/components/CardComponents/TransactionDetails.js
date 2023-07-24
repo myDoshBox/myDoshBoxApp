@@ -32,7 +32,7 @@ export const DashboardConflictCards = ({ icon, text, value, link }) => {
 export const RecentDispute = () => {
   return (
     <>
-      <div className="card border-0 shadow mx-auto" style={{ width: "18rem" }}>
+      <div className="card border-0 shadow mx-auto" style={{ width: "100%" }}>
         <div className="card-body">
           <div className="d-flex justify-content-between mt-3 mb-5">
             <h6 className="mt-2">Recent Disputes</h6>

@@ -7,7 +7,6 @@ import {
 import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
 
-
 export const SignUpIndividual = () => {
   const initialValues = {
     email: "",

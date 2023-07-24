@@ -72,7 +72,7 @@ const UserDashboard = () => {
                 <RecentDispute />
               </div>
 
-              <div className="col-lg-8 col-sm-12">
+              <div className="col-lg-8 col-sm-12 mt-3">
                 <UserdashboardTransaction />
               </div>
             </div>
