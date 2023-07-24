@@ -3,6 +3,7 @@ import customercare_transaction from "../../../data/dummyData/transactionData.js
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
+import { useState } from "react";
 
 const CustomerCareTransaction = () => {
   return (

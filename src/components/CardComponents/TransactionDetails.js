@@ -36,7 +36,9 @@ export const RecentDispute = () => {
         <div className="card-body">
           <div className="d-flex justify-content-between mt-3 mb-5">
             <h6 className="mt-2">Recent Disputes</h6>
-            <ViewMoreDisputeBtn />
+            <Link to={"./dispute"}>
+              <ViewMoreDisputeBtn />
+            </Link>
           </div>
           {disputehistorydata.recent_dispute.map((miniDis) => {
             return <MiniRecentDispute {...miniDis} key={miniDis.id} />;

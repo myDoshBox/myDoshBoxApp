@@ -31,7 +31,7 @@ export const RecentNotification = () => {
       <div>
         <div className="d-flex justify-content-between mb-3 mt-3">
           <h5 className="ms-4">Recent Notification</h5>
-          <Link to={"./"} className="text-decoration-none">
+          <Link to={"./notification"} className="text-decoration-none">
             <Button
               className="border-0 my-1 rounded-1 btn all-btn text-white fs-sm d-none d-md-block me-5"
               style={{

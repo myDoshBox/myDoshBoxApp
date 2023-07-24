@@ -4,8 +4,12 @@ import usersData from "../../../data/usersData.json";
 import { FilterButton } from "../../../components/ButtonsComponent/OtherButtons";
 import { PaginationBar } from "../../../components/PaginationComponent";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { useState } from "react";
 import { SortIcon } from "../../../components/IconComponent/UserdashboardIcons";
-import { ArrowDownIcon, FilterIcon } from "../../../components/IconComponent/NavigationAndViewIcon";
+import {
+  ArrowDownIcon,
+  FilterIcon,
+} from "../../../components/IconComponent/NavigationAndViewIcon";
 
 const NotifictionPage = () => {
   return (
@@ -45,9 +49,7 @@ const Notification = () => {
             );
           })}
         </div>
-        <div className="px-lg-5 py-4">
-          <PaginationBar />
-        </div>
+        <div className="px-lg-5 py-4">{/* <PaginationBar /> */}</div>
       </div>
     </div>
   );

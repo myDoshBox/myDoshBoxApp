@@ -30,24 +30,23 @@ export const RecentTransactionTable = () => {
     { label: "2021", value_1: "2022", value_2: "2023" },
   ];
 
-const itemsPerPage = 10;
+  const itemsPerPage = 10;
 
-const [currentPage, setCurrentPage] = useState(1);
-const [totalPages, setTotalPages] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
-const handlePageChange = (page) => {
-  if (page > 0 && page <= totalPages) {
-    setCurrentPage(page);
-  }
-};
+  const handlePageChange = (page) => {
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
 
-const getSlicedData = () => {
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+  const getSlicedData = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
 
-  return TransactionData.user_recent_transaction.slice(startIndex, endIndex);
-};
-
+    return TransactionData.user_recent_transaction.slice(startIndex, endIndex);
+  };
 
   return (
     <div className="bg-white rounded-1 p-3" style={{ width: "100%" }}>
@@ -160,7 +159,7 @@ export const RecentTransactionTableData = (props) => {
     maxWidth = "9rem";
   } else if (maxWidth < 450) {
     maxWidth = "12rem";
-  } 
+  }
 
   const style = {
     maxWidth,

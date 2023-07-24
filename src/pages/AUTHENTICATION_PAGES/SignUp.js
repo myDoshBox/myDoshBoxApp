@@ -6,6 +6,7 @@ import {
   SignUpIndividual,
   SignUpOrganization,
 } from "../../components/FormComponents.js/AuthenticationForms";
+import { Link } from "react-router-dom";
 import logo from "../../images/doshlogolight.png";
 // import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 
@@ -55,12 +56,13 @@ const SignUpForm = () => {
             </Tab.Content>
             <div className="d-flex justify-content-center mt-2">
               <span style={{ fontSize: "14px" }}>Already have an account?</span>
-              {/* <CustomBtn
-                  to={"/signin"}
-                  className="text-decoration-none ms-1 text-success"
-                  style={{ fontSize: "14px" }}
-                  value="Sign In"
-                /> */}
+              <Link
+                to={"../signin"}
+                className="text-decoration-none ms-1 text-success"
+                style={{ fontSize: "14px" }}
+              >
+                Sign In
+              </Link>
             </div>
           </Col>
         </Row>

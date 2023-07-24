@@ -3,12 +3,13 @@ import { Button } from "react-bootstrap";
 //SignUpButton
 export const SignUpButton = () => {
   return (
-    <Button
+    <button
       className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
       style={{ width: "210px" }}
+      type="submit"
     >
       Sign Up
-    </Button>
+    </button>
   );
 };
 // HomePageSignUpBtn;
