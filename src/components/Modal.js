@@ -156,10 +156,10 @@ export const DisputeDetailsModal = ({
             </div>
           </div>
           <div className="">
-            <div class="row g-2 mb-4 pb-2">
+            <div className="row g-2 mb-4 pb-2">
               <button
                 type="button"
-                class="w-100 w-md-50 btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
+                className="w-100 w-md-50 btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
                 onClick={handleYouBtnClick}
               >
                 You
@@ -167,7 +167,7 @@ export const DisputeDetailsModal = ({
               <div className="d-flex justify-content-between align-items-center p-0">
                 <button
                   type="button"
-                  class="btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
+                  className="btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
                   onClick={handleCounterPartyBtnClick}
                   style={{ width: "49%" }}
                 >
@@ -175,7 +175,7 @@ export const DisputeDetailsModal = ({
                 </button>
                 <button
                   type="button"
-                  class="btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
+                  className="btn btn-outline-secondary EscrowTransactTypeBtn rounded-1"
                   onClick={handleNeutralBtnClick}
                   style={{ width: "49%" }}
                 >

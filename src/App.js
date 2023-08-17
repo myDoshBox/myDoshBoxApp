@@ -36,26 +36,26 @@ import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
 // import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import CustomerCareSideNav from "./components/NavbarComponents/CustomerCareSideNav";
 // import GeneralPagesRoutes from "./pages/ROUTES/GeneralPagesRoutes";
-import { NeutralSetting } from "./features/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
-import NeutralDashboard from "./features/DASHBOARDS/NEUTRALS_PAGES/neutral_dashboard";
+import { NeutralSetting } from "./pages/DASHBOARDS/NEUTRALS_PAGES/NeutralSetting";
+import NeutralDashboard from "./pages/DASHBOARDS/NEUTRALS_PAGES/neutral_dashboard";
 
 // Auth Pages
-import SignInPage from "./features/AUTHENTICATION_PAGES/SignIn";
-import SignUpPage from "./features/AUTHENTICATION_PAGES/SignUp";
+import SignInPage from "./pages/AUTHENTICATION_PAGES/SignUp";
+import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignIn";
 
 // Transaction Pages
-import InitiateEscrow from "./features/TRANSACTION_PAGES/InitiateEscrowForm";
-import TransactionSummaryPage from "./features/TRANSACTION_PAGES/TransactionSummaryPage";
-import EscrowAgreement from "./features/TRANSACTION_PAGES/EscrowAgreement";
+import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
+import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
+import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 
 // Dispute Pages
 import {
 	ClosedConflicts,
 	OngoingConflicts,
 	OpenConflicts,
-} from "./features/DISPUTE_PAGES/Conflicts";
-import InitiateDisputesForm from "./features/DISPUTE_PAGES/InitiateDisputesForm";
-import { GeneratedTicket } from "./features/DISPUTE_PAGES/GeneratedTicket";
+} from "./pages/DISPUTE_PAGES/Conflicts";
+import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
+import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
 
 // Customer Care Pages
 import CustomerCareTransaction from "./pages/DASHBOARDS/CUSTOMER_CARE_DASHBOARD/CustomerCareTransaction";
@@ -79,6 +79,8 @@ function App() {
 					<Route path="/contactus" element={<ContactUs />} />
 					<Route path="/pricingpage" element={<PricingPage />} />
 					<Route path="/faqs" element={<FAQs />} />
+					<Route path="signin" element={<SignInPage />} />
+					<Route path="signup" element={<SignUpPage />} />
 				</Route>
 
 				{/* User Dashboard */}
@@ -138,8 +140,8 @@ function App() {
 
 				{/* Auth Routes */}
 				{/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
-				<Route path="signin" element={<SignInPage />} />
-				<Route path="signup" element={<SignUpPage />} />
+				{/* <Route path="signin" element={<SignInPage />} />
+				<Route path="signup" element={<SignUpPage />} /> */}
 				{/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
 				<Route path="*" element={<Error404 />} />
 			</Routes>
