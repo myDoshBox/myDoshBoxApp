@@ -7,6 +7,8 @@ import {
 	SignInButton,
 	GoogleSignInButton,
 } from "../../components/ButtonsComponent/AuthenticationButtons";
+import { useLoginIndUserMutation } from "../../app/slices/users/individualUser/individualUsersApiSlice";
+import { setCredentials } from "../../app/slices/authSlice";
 
 const SignInPage = () => {
 	return (
@@ -30,6 +32,21 @@ export const SignInForm = () => {
 	const [user, setUser] = useState({ email: "", password: "" });
 	const [userDetails, setUserDetails] = useState([]);
 
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
+	// to fire off our mutation
+	const [login, { isLoading }] = useLoginIndUserMutation;
+
+	// to get the user data gotten from our authSlice
+	const { userInfo } = useSelector((state) => state.auth);
+
+	useEffect(() => {
+		if (!isLoading && userInfo) {
+			navigate("/userdashboard");
+		}
+	}, [navigate, userInfo]);
+
 	const handleChange = (e) => {
 		const name = e.target.name;
 		const value = e.target.value;
@@ -40,6 +57,7 @@ export const SignInForm = () => {
 		e.preventDefault();
 		setpasswordToggle(!passwordToggle);
 	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (user.email && user.password) {
