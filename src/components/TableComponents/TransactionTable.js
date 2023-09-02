@@ -8,7 +8,7 @@ import { Notifications } from "../NotificationComponent/NotificationComponents";
 // import TransactionData from "../../data/dummyData/transactionData.json";
 import TransactionData from "../../data/dummyData/transactionData.json";
 // import { RecentTransactionTableData } from "../../features/USER_DASHBOARD/UserTransactionHistory";
-import { RecentTransactionTableData } from "../../features/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import { RecentTransactionTableData } from "../../pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
 import { Link } from "react-router-dom";
 import { ViewMoreButton } from "../ButtonsComponent/NavigationAndViewButtons";
 

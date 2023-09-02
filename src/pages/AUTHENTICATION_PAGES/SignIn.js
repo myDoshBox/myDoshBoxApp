@@ -7,7 +7,7 @@ import {
 	SignInButton,
 	GoogleSignInButton,
 } from "../../components/ButtonsComponent/AuthenticationButtons";
-import { useLoginIndUserMutation } from "../../app/slices/users/individualUser/individualUsersApiSlice";
+import { useLoginIndUserMutation } from "../../app/slices/users/individualUser/individualUserAuthSlice";
 import { setCredentials } from "../../app/slices/authSlice";
 
 const SignInPage = () => {
@@ -36,7 +36,7 @@ export const SignInForm = () => {
 	const dispatch = useDispatch();
 
 	// to fire off our mutation
-	const [login, { isLoading }] = useLoginIndUserMutation;
+	const [login, { isLoading }] = useLoginIndUserMutation();
 
 	// to get the user data gotten from our authSlice
 	const { userInfo } = useSelector((state) => state.auth);
@@ -58,11 +58,23 @@ export const SignInForm = () => {
 		setpasswordToggle(!passwordToggle);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		if (user.email && user.password) {
-			setUserDetails([...userDetails, user]);
-			setUser({ email: "", password: "" });
+		try {
+			if (user.email && user.password) {
+				const res = await login({
+					email: user.email,
+					password: user.password,
+				}).unwrap();
+				dispatch(setCredentials({ ...res }));
+				navigate("/userdashboard");
+				// setUserDetails([...userDetails, user]);
+				// setUser({ email: "", password: "" });
+			}
+		} catch (err) {
+			// throw new Error(err);
+			console.log(err?.data?.error || err.error);
+			// console.log(err);
 		}
 	};
 
@@ -77,7 +89,8 @@ export const SignInForm = () => {
 				<p className="text-center mb-4">
 					Welcome back to MyDoshBox! Please enter your details
 				</p>
-				<form className="container form" onSubmit={handleSubmit}>
+				{/* <form className="container form" onSubmit={handleSubmit}> */}
+				<form className="container form">
 					<div className="form-outline mb-2">
 						<input
 							type="email"
@@ -126,7 +139,14 @@ export const SignInForm = () => {
 					</div>
 					<div className="d-flex flex-column mt-4">
 						<div className="mx-auto mb-2">
-							<SignInButton />
+							{/* <SignInButton /> */}
+
+							<button
+								className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+								style={{ width: "210px" }}
+								onClick={handleSubmit}>
+								Sign In
+							</button>
 						</div>
 					</div>
 				</form>
@@ -137,7 +157,7 @@ export const SignInForm = () => {
 					<p>
 						<span style={{ fontSize: "14px" }}>Don't have an account?</span>
 						<Link
-							to={"../signup"}
+							to={"/signup"}
 							className="text-decoration-none ms-1 text-success"
 							style={{ fontSize: "14px" }}>
 							Sign Up

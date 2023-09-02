@@ -19,17 +19,17 @@ import Footer from "./components/FooterComponents";
 
 // User Dashoard Pages
 import UsersSideNav from "./components/NavbarComponents/UsersSideNav";
-import UserDashboardPage from "./features/DASHBOARDS/USER_DASHBOARD/UserDashboardPage";
-import NotifictionPage from "./features/DASHBOARDS/USER_DASHBOARD/NotifictionPage";
+import UserDashboardPage from "./pages/DASHBOARDS/USER_DASHBOARD/UserDashboardPage";
+import NotifictionPage from "./pages/DASHBOARDS/USER_DASHBOARD/NotifictionPage";
 // import FAQs from "./pages/GENERAL_PAGES/FAQs";
-import UserDisputeHistory from "./features/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
+import UserDisputeHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserDisputesHistory";
 import UserSettingsPage, {
 	ReportIssuesformPage,
 	UpdateBankDetailsPage,
 	UpdateProfilePage,
-} from "./features/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
-import UserTransactionHistory from "./features/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
-import UserProfile from "./features/DASHBOARDS/USER_DASHBOARD/UserProfile";
+} from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettingsPage";
+import UserTransactionHistory from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionHistory";
+import UserProfile from "./pages/DASHBOARDS/USER_DASHBOARD/UserProfile";
 
 // Neutral Dashboard Pages
 import NeutralsSideNav from "./components/NavbarComponents/NeutralsSideNav";
@@ -79,8 +79,8 @@ function App() {
 					<Route path="/contactus" element={<ContactUs />} />
 					<Route path="/pricingpage" element={<PricingPage />} />
 					<Route path="/faqs" element={<FAQs />} />
-					<Route path="signin" element={<SignInPage />} />
-					<Route path="signup" element={<SignUpPage />} />
+					<Route path="/signin" element={<SignInPage />} />
+					<Route path="/signup" element={<SignUpPage />} />
 				</Route>
 
 				{/* User Dashboard */}
