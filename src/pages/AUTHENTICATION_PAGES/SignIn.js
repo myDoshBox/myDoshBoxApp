@@ -1,11 +1,14 @@
-import { useState } from "react";
-import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
+import { useState, useEffect } from "react";
+// import { GoogleIcon } from "../../components/IconComponent/SocialMediaIcons";
 import logo from "../../images/doshlogolight.png";
 import {
   SignInButton,
-  GoogleSignInButton,
+  // GoogleSignInButton,
 } from "../../components/ButtonsComponent/AuthenticationButtons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser, setCredentials } from "../../redux/slices/authSlice";
+import { useLoginUserMutation } from "../../redux/slices/apiSlice";
 
 const SignInPage = () => {
   return (
@@ -29,6 +32,19 @@ export const SignInForm = () => {
   const [user, setUser] = useState({ email: "", password: "" });
   const [userDetails, setUserDetails] = useState([]);
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [login, { isLoading }] = useLoginUserMutation();
+
+  // const { userInfo } = useSelector((state) => state.auth);
+
+  // useEffect(() => {
+  //   if (userInfo) {
+  //     navigate("/userdashboard");
+  //   }
+  // }, [navigate, userInfo]);
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -39,17 +55,36 @@ export const SignInForm = () => {
     e.preventDefault();
     setpasswordToggle(!passwordToggle);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (user.email && user.password) {
       setUserDetails([...userDetails, user]);
       setUser({ email: "", password: "" });
+      const postDataInfo = {
+        email: user.email,
+        password: user.password,
+      };
+      console.log(postDataInfo);
+      try {
+        login(postDataInfo)
+          .then((res) => {
+            const responseData = res.data;
+            if (responseData.message === "Login successful") {
+              console.log(res.data);
+              dispatch(addUser(responseData.user));
+              alert("Account created successfully");
+              navigate("/userdashboard");
+            } else {
+              console.log("Invalid credential");
+              return;
+            }
+          })
+          .catch((error) => console.error(error));
+      } catch (e) {
+        console.error(e);
+      }
     }
   };
-
-  //   const dontSubmit = (e) => {
-  //     e.preventDefault();
-  //   };
 
   return (
     <>
@@ -96,7 +131,7 @@ export const SignInForm = () => {
                 id="flexCheckDefault"
                 // onClick={dontSubmit}
               />
-              <label className="text-success" for="flexCheckDefault">
+              <label className="text-success" htmlFor="flexCheckDefault">
                 Remember Information
               </label>
             </div>
@@ -114,7 +149,7 @@ export const SignInForm = () => {
           </div>
         </form>
         <div className="d-flex justify-content-center ">
-          <GoogleSignInButton />
+          {/* <GoogleSignInButton /> */}
         </div>
         <div className="d-flex justify-content-center mt-2">
           <p>
