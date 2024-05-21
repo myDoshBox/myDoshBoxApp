@@ -10,7 +10,7 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     loginUser: builder.mutation({
       query: (data) => ({
-        url: "individual/login",
+        url: "login",
         method: "POST",
         body: data,
       }),
@@ -24,14 +24,14 @@ export const apiSlice = createApi({
     }),
     createOrganization: builder.mutation({
       query: (data) => ({
-        url: "organization/signup",
+        url: "organization/organizationUserSignup",
         method: "POST",
         body: data,
       }),
     }),
     createOrganizationGoogle: builder.mutation({
       query: (data) => ({
-        url: "auth/org/oauth/google",
+        url: "organization/oauth",
         method: "POST",
 
         //   return{

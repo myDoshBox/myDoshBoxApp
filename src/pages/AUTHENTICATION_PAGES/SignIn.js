@@ -9,6 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, setCredentials } from "../../redux/slices/authSlice";
 import { useLoginUserMutation } from "../../redux/slices/apiSlice";
+import { toast } from "react-toastify";
+// import forgetPassword from "../AUTHENTICATION_PAGES/forgetPassword";
 
 const SignInPage = () => {
   return (
@@ -62,20 +64,22 @@ export const SignInForm = () => {
       setUser({ email: "", password: "" });
       const postDataInfo = {
         email: user.email,
-        password: user.password,
+        user_password: user.password,
       };
       console.log(postDataInfo);
       try {
         login(postDataInfo)
           .then((res) => {
-            const responseData = res.data;
-            if (responseData.message === "Login successful") {
-              console.log(res.data);
+            const responseData = res.data.message;
+            console.log(responseData);
+            if (responseData) {
+              // console.log(res.data);
               dispatch(addUser(responseData.user));
-              alert("Account created successfully");
+              toast.success("Account Login successfully");
               navigate("/userdashboard");
             } else {
               console.log("Invalid credential");
+              // toast.success("Invalid credential");
               return;
             }
           })
@@ -136,6 +140,7 @@ export const SignInForm = () => {
               </label>
             </div>
             <Link
+              to={"../VerifyEmailForm"}
               className="text-success text-decoration-none"
               style={{ fontSize: "14px" }}
             >
