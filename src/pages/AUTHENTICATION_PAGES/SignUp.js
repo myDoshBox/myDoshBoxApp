@@ -20,6 +20,13 @@ const SignUpPage = () => {
           </div>
           <div className="col-lg-6 col-sm-12 container">
             <SignUpForm />
+            <Link
+              to={"../LinkVerificationMsg"}
+              className="text-decoration-none ms-1 text-success"
+              style={{ fontSize: "14px" }}
+            >
+              LinkVerificationMsg
+            </Link>
           </div>
         </div>
       </div>

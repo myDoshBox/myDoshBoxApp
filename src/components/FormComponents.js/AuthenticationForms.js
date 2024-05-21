@@ -8,7 +8,10 @@ import {
 // import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
 import { useCreateUserMutation } from "../../redux/slices/apiSlice";
+import { addUser, setCredentials } from "../../redux/slices/authSlice";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Sign Up For Individual
 export const SignUpIndividual = () => {
@@ -56,19 +59,20 @@ export const SignUpIndividual = () => {
     if (Object.keys(errors).length === 0) {
       const postDataInfo = {
         email: person.email,
+        phone_number: person.phoneNumber,
         password: person.password,
-        phoneNumber: person.phoneNumber,
-        confirmPassword: person.confirmPassword,
+        confirm_password: person.confirmPassword,
       };
       console.log(postDataInfo);
       try {
         createUser(postDataInfo)
           .then((res) => {
-            console.log(res);
-            if (res.data) {
+            // const responseData = res.data;
+            const responseData = res.data.message;
+            if (responseData) {
               console.log(res.data);
-              //dispatch(addUser(res.data.data));
-              //alert("Account created successfully");
+              console.log(res);
+              navigate("/LinkVerificationMsg");
             } else {
               console.log("Invalid credential");
               return;
@@ -78,13 +82,8 @@ export const SignUpIndividual = () => {
       } catch (e) {
         console.error(e);
       }
-
-      // navigate("/userdashboard");
-    } else {
-      alert("Invalid Form");
     }
   };
-
   // Creating A Responds Start
 
   // Creating A Responds Sends

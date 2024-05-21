@@ -40,6 +40,9 @@ import {
 } from "./pages/DISPUTE_PAGES/Conflicts";
 import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
 import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
+import VerifyEmailForm from "./pages/AUTHENTICATION_PAGES/VerifyEmailForm";
+import LinkVerificationMsg from "./pages/AUTHENTICATION_PAGES/linkVerificationMsg";
+import ResetPassword from "./pages/AUTHENTICATION_PAGES/resetPassword";
 import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
 import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
@@ -59,6 +62,10 @@ import AdminSideNav from "./components/NavbarComponents/AdminSideNav";
 import UserProfile from "./pages/DASHBOARDS/USER_DASHBOARD/UserProfile";
 import { RecentDispute } from "./components/CardComponents/TransactionDetails";
 // import { ToastContainer } from "react-bootstrap";
+// react_toastify starts
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// react_toastify ends
 
 function App() {
   return (
@@ -124,10 +131,14 @@ function App() {
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
+        <Route path="VerifyEmailForm" element={<VerifyEmailForm />} />
+        <Route path="ResetPassword" element={<ResetPassword />} />
+        <Route path="LinkVerificationMsg" element={<LinkVerificationMsg />} />
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
+      <ToastContainer theme="dark" />
     </Router>
   );
 }
