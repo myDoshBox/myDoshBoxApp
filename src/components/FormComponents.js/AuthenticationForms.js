@@ -2,11 +2,15 @@ import { useState, useEffect } from "react";
 // import { GoogleButton } from "../ButtonsComponent/Button";
 import {
   SignUpButton,
-  GoogleSignUpButton,
+  GoogleIndividualSignUpButton,
+  GoogleOrganizationSignUpButton,
 } from "../ButtonsComponent/AuthenticationButtons";
-import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
+// import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
 import { useNavigate } from "react-router-dom";
+import { useCreateUserMutation } from "../../redux/slices/apiSlice";
+import { useDispatch } from "react-redux";
 
+// Sign Up For Individual
 export const SignUpIndividual = () => {
   const initialValues = {
     email: "",
@@ -21,7 +25,8 @@ export const SignUpIndividual = () => {
   const [passwordToggle, setpasswordToggle] = useState(false);
   const [passwordToggle1, setpasswordToggle1] = useState(false);
   const [errors, setErrors] = useState({});
-  const [submission, setSubmission] = useState(false);
+  const [createUser, { isLoading }] = useCreateUserMutation();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -47,18 +52,44 @@ export const SignUpIndividual = () => {
       setPerson(initialValues);
     }
     setErrors(validate(person));
-    setSubmission(true);
+
+    if (Object.keys(errors).length === 0) {
+      const postDataInfo = {
+        email: person.email,
+        password: person.password,
+        phoneNumber: person.phoneNumber,
+        confirmPassword: person.confirmPassword,
+      };
+      console.log(postDataInfo);
+      try {
+        createUser(postDataInfo)
+          .then((res) => {
+            console.log(res);
+            if (res.data) {
+              console.log(res.data);
+              //dispatch(addUser(res.data.data));
+              //alert("Account created successfully");
+            } else {
+              console.log("Invalid credential");
+              return;
+            }
+          })
+          .catch((error) => console.error(error));
+      } catch (e) {
+        console.error(e);
+      }
+
+      // navigate("/userdashboard");
+    } else {
+      alert("Invalid Form");
+    }
   };
 
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && submission) {
-      console.log(personDetails);
+  // Creating A Responds Start
 
-      navigate("/userdashboard");
-    } else {
-      console.log("Invalid Form");
-    }
-  });
+  // Creating A Responds Sends
+  //
+
   const validate = () => {
     const errors = {};
 
@@ -227,19 +258,21 @@ export const SignUpIndividual = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GoogleSignUpButton />
+        <GoogleIndividualSignUpButton />
       </div>
     </>
   );
 };
 
+// Sign Up for Organization
+
 export const SignUpOrganization = () => {
   const initialValues = {
-    organizationName: "",
-    organizationEmail: "",
-    contactEmail: "",
-    password2: "",
-    confirmPassword2: "",
+    organization_name: "",
+    organization_email: "",
+    user_email: "",
+    password: "",
+    password_Confirmation: "",
     checked: false,
   };
   const [organization, setOrganization] = useState(initialValues);
@@ -267,16 +300,16 @@ export const SignUpOrganization = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      organization.password2 !== organization.confirmPassword2 &&
-      !organization.organizationName &&
-      !organization.organizationEmail &&
-      !organization.contactEmail &&
-      !organization.password2 &&
-      !organization.confirmPassword2 &&
+      organization.password !== organization.password_Confirmation &&
+      !organization.organization_name &&
+      !organization.organization_email &&
+      !organization.user_email &&
+      !organization.password &&
+      !organization.password_Confirmation &&
       !organization.checked
     ) {
       e.preventDefault();
-    } else if (organization.password2 === organization.confirmPassword2) {
+    } else if (organization.password === organization.password_Confirmation) {
       setOrganizationDetails([...organizationDetails, organization]);
       setOrganization(initialValues);
     }
@@ -295,40 +328,40 @@ export const SignUpOrganization = () => {
 
   const validate = () => {
     const errors = {};
-    if (!organization.organizationName) {
-      errors.organizationName = "Organization Name is Required";
+    if (!organization.organization_name) {
+      errors.organization_name = "Organization Name is Required";
     }
-    if (!organization.organizationEmail) {
-      errors.organizationEmail = "Organization Email is Required";
+    if (!organization.organization_email) {
+      errors.organization_email = "Organization Email is Required";
     } else if (
       !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(
-        organization.organizationEmail
+        organization.organization_email
       )
     ) {
-      errors.organizationEmail = "Email is not valid";
+      errors.organization_email = "Email is not valid";
     }
 
-    if (!organization.contactEmail) {
-      errors.contactEmail = "Contact person email is Required";
+    if (!organization.contact_email) {
+      errors.contact_email = "Contact person email is Required";
     } else if (
       !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
-        organization.organizationEmail
+        organization.organization_email
       )
     ) {
-      errors.organizationEmail = "Email is not valid";
+      errors.organization_email = "Email is not valid";
     }
-    if (!organization.password2) {
-      errors.password2 = "Password is required";
+    if (!organization.password) {
+      errors.password = "Password is required";
     } else if (
       !/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(
-        organization.password2
+        organization.password
       )
     ) {
-      errors.password2 =
+      errors.password =
         "Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, and one number or special character";
     }
-    if (organization.password2 !== organization.confirmPassword2) {
-      errors.confirmPassword2 = "Passwords do not match";
+    if (organization.password !== organization.password_Confirmation) {
+      errors.password_confirmation = "Passwords do not match";
     }
     if (!organization.checked) {
       errors.checked =
@@ -342,38 +375,39 @@ export const SignUpOrganization = () => {
         <div className="form-outline mb-2">
           <input
             type="text"
-            id="organizationName"
-            name="organizationName"
-            value={organization.organizationName}
+            // from Control
+            // className="form-control"
+            name="organization_name"
+            value={organization.organization_name}
             onChange={handleChange}
             className="border rounded p-2 w-100 labelStyle mb-1"
             placeholder="Organization Name"
           />
-          {errors.organizationName && (
+          {errors.organization_name && (
             <div
               className="text-white bg-danger border-danger border rounded p-1"
               style={{ fontSize: "10px" }}
             >
-              {errors.organizationName}
+              {errors.organization_name}
             </div>
           )}
         </div>
         <div className="form-outline mb-4">
           <input
             type="email"
-            id="organizationEmail"
-            name="organizationEmail"
-            value={organization.organizationEmail}
+            id="organization_email"
+            name="organization_email"
+            value={organization.organization_email}
             onChange={handleChange}
             className="border rounded p-2 w-100 labelStyle mb-1"
             placeholder="Organization Email"
           />
-          {errors.organizationEmail && (
+          {errors.organization_email && (
             <div
               className="text-white bg-danger border-danger border rounded p-1"
               style={{ fontSize: "10px" }}
             >
-              {errors.organizationEmail}
+              {errors.organization_email}
             </div>
           )}
         </div>
@@ -383,28 +417,28 @@ export const SignUpOrganization = () => {
         <div className="form-outline mb-4">
           <input
             type="email"
-            id="contactEmail"
-            name="contactEmail"
-            value={organization.contactEmail}
+            id="contact_email"
+            name="contact_email"
+            value={organization.contact_email}
             onChange={handleChange}
             className="border rounded p-2 w-100 labelStyle mb-1"
             placeholder="Email"
           />
-          {errors.contactEmail && (
+          {errors.contact_email && (
             <div
               className="text-white bg-danger border-danger border rounded p-1"
               style={{ fontSize: "10px" }}
             >
-              {errors.contactEmail}
+              {errors.contact_email}
             </div>
           )}
         </div>
         <div className="form-outline d-flex">
           <input
             type={passwordToggle ? "text" : "password"}
-            id="password2"
-            name="password2"
-            value={organization.password2}
+            id="password"
+            name="password"
+            value={organization.password}
             onChange={handleChange}
             className="border border-end-0 rounded-start p-2 w-100 labelStyle mb-1"
             placeholder="Password"
@@ -427,9 +461,9 @@ export const SignUpOrganization = () => {
         <div className="form-outline d-flex">
           <input
             type={passwordToggle1 ? "text" : "password"}
-            id="confirmPassword2"
-            name="confirmPassword2"
-            value={organization.confirmPassword2}
+            id="password_confirmation"
+            name="password_confirmation"
+            value={organization.password_Confirmation}
             onChange={handleChange}
             className="border border-end-0 rounded-start p-2 w-100 labelStyle mt-2 mb-1"
             placeholder="Confirm Password"
@@ -441,12 +475,12 @@ export const SignUpOrganization = () => {
             {passwordToggle1 ? <HidePassWordIcon /> : <ShowPassWordIcon />}
           </button>
         </div>
-        {errors.confirmPassword2 && (
+        {errors.password_Confirmation && (
           <div
             className="text-white bg-danger border-danger border rounded p-1"
             style={{ fontSize: "10px" }}
           >
-            {errors.confirmPassword2}
+            {errors.password_Confirmation}
           </div>
         )}
         <div className="form-check mt-2">
@@ -476,7 +510,7 @@ export const SignUpOrganization = () => {
         </div>
       </form>
       <div className="d-flex justify-content-center">
-        <GoogleSignUpButton />
+        <GoogleOrganizationSignUpButton />
       </div>
     </>
   );

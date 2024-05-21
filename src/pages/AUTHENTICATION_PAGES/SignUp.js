@@ -6,15 +6,16 @@ import {
   SignUpIndividual,
   SignUpOrganization,
 } from "../../components/FormComponents.js/AuthenticationForms";
-import logo from "../../images/doshlogolight.png";
 import { Link } from "react-router-dom";
+import logo from "../../images/doshlogolight.png";
+// import CustomBtn from "../../components/ButtonsComponent/GenandAuthBtn";
 
 const SignUpPage = () => {
   return (
     <>
       <div className="contestPage">
         <div className="row">
-          <div className="col-lg-6 col-sm-12">
+          <div className="col-lg-6 col-sm-12 ps-0">
             <Side />
           </div>
           <div className="col-lg-6 col-sm-12 container">
@@ -54,18 +55,14 @@ const SignUpForm = () => {
               </Tab.Pane>
             </Tab.Content>
             <div className="d-flex justify-content-center mt-2">
-              <p>
-                <span style={{ fontSize: "14px" }}>
-                  Already have an account?
-                </span>
-                <Link
-                  to={"/signin"}
-                  className="text-decoration-none ms-1 text-success"
-                  style={{ fontSize: "14px" }}
-                >
-                  Sign In
-                </Link>
-              </p>
+              <span style={{ fontSize: "14px" }}>Already have an account?</span>
+              <Link
+                to={"../signin"}
+                className="text-decoration-none ms-1 text-success"
+                style={{ fontSize: "14px" }}
+              >
+                Sign In
+              </Link>
             </div>
           </Col>
         </Row>
@@ -77,9 +74,9 @@ const SignUpForm = () => {
 const Side = () => {
   return (
     <div className="pe-lg-5 signUp-bg text-white">
-      <Link to="/">
+      {/* <CustomBtn to="/">
         <img src={logo} alt="" className="p-4" />
-      </Link>
+      </CustomBtn> */}
       <div className="p-md-5 p-3">
         <h1 className="text-white">Start your journey with us.</h1>
         <p className="text-white">
