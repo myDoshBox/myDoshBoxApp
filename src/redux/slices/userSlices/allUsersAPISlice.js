@@ -48,12 +48,12 @@ export const usersAPISlice = createApi({
     }),
 
     getGoogleUrl: builder.query({
-      query: () => "/individual/oauth",
+      query: () => "individual/oauth",
     }),
 
     createIndividualGoogle: builder.mutation({
       query: (code) => ({
-        url: "/individual/oauth/callback",
+        url: "individual/oauth/callback",
         method: "POST",
         body: { code },
       }),

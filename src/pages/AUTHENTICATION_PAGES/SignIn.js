@@ -140,9 +140,9 @@ export const SignInForm = () => {
               <SignInButton />
             </div>
           </div>
-          {/* <div className="d-flex justify-content-center ">
+          <div className="d-flex justify-content-center ">
             <OAuthLogin />
-          </div> */}
+          </div>
 
           <div className="d-flex justify-content-center mt-2">
             <p>
