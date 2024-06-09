@@ -42,7 +42,7 @@ import {
 import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
 import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
 import VerifyEmailForm from "./pages/AUTHENTICATION_PAGES/VerifyEmailForm";
-import LinkVerificationMsg from "./pages/AUTHENTICATION_PAGES/LinkVerificationMsg";
+import EmailVerificationMsg from "./pages/AUTHENTICATION_PAGES/EmailVerificationMsg";
 import ResetPassword from "./pages/AUTHENTICATION_PAGES/resetPassword";
 import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
 import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
@@ -139,7 +139,7 @@ function App() {
         <Route path="signup" element={<SignUpPage />} />
         <Route path="VerifyEmailForm" element={<VerifyEmailForm />} />
         <Route path="ResetPassword" element={<ResetPassword />} />
-        <Route path="linkverification" element={<LinkVerificationMsg />} />
+        <Route path="linkverification" element={<EmailVerificationMsg />} />
         <Route path={`auth/verify-email`} element={<VerifyEmail />} />
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
