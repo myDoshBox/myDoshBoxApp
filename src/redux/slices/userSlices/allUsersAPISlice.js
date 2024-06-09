@@ -1,0 +1,87 @@
+// import { apiSlice } from "./apiSlice";
+// import { testSlice } from "./testSlice";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
+// const URL = "/auth";
+
+const baseQuery = fetchBaseQuery({
+  // baseUrl: "https://mydoshbox-be.onrender.com/auth/",
+  baseUrl: "http://localhost:5000/auth",
+});
+
+export const usersAPISlice = createApi({
+  baseQuery,
+  tagTypes: ["Users"],
+  endpoints: (builder) => ({
+    createIndUser: builder.mutation({
+      query: (data) => ({
+        url: `individual/signup`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+
+    createOrgUser: builder.mutation({
+      query: (data) => ({
+        url: `organization/signup`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+
+    verifyUser: builder.mutation({
+      // query: ({ token }) => ({
+      query: (token) => ({
+        url: `verify-email`,
+        method: "POST",
+        // params: { token },
+        body: { token },
+      }),
+    }),
+
+    login: builder.mutation({
+      query: (data) => ({
+        url: `/login`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+
+    getGoogleUrl: builder.query({
+      query: () => "/individual/oauth",
+    }),
+
+    createIndividualGoogle: builder.mutation({
+      query: (code) => ({
+        url: "/individual/oauth/callback",
+        method: "POST",
+        body: { code },
+      }),
+    }),
+
+    // createIndividualGoogle: builder.mutation({
+    //   query: (code) => ({
+    //     url: `/individual/oauth/callback?code=${code}`,
+    //     method: "GET",
+    //   }),
+    // }),
+
+    logout: builder.mutation({
+      query: () => ({
+        url: "/logout",
+        method: "POST",
+      }),
+    }),
+  }),
+});
+
+export const {
+  useCreateIndUserMutation,
+  useLoginMutation,
+  useCreateOrgUserMutation,
+  useLazyCreateIndividualGoogleQuery,
+  useGetGoogleUrlQuery,
+  useCreateIndividualGoogleMutation,
+  useVerifyUserMutation,
+  useLogoutMutation,
+} = usersAPISlice;

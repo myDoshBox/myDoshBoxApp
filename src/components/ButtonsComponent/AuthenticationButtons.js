@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { useCreateOrganizationGoogleMutation } from "../../redux/slices/apiSlice";
+// import { useCreateOrganizationGoogleMutation } from "../../redux/slices/apiSlice";
 
 //SignUpButton
 export const SignUpButton = () => {
@@ -69,24 +69,24 @@ export const GoogleIndividualSignUpButton = () => {
           fill="#1976D2"
         />
       </svg>
-      <span className="ms-2">Sign Up With Google one</span>
+      <span className="ms-2">Continue with Google</span>
     </Button>
   );
 };
 //GoogleSignInButton
 export const GoogleOrganizationSignUpButton = () => {
-  let [createAuth] = useCreateOrganizationGoogleMutation();
+  // let [createAuth] = useCreateOrganizationGoogleMutation();
   return (
     <Button
       type="button"
       className="btn btn-outline-success bg-light text-dark"
-      onClick={async () => {
-        await createAuth()
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => console.log(err));
-      }}
+      // onClick={async () => {
+      //   await createAuth()
+      //     .then((res) => {
+      //       console.log(res);
+      //     })
+      //     .catch((err) => console.log(err));
+      // }}
     >
       <svg
         width="28"
@@ -112,20 +112,7 @@ export const GoogleOrganizationSignUpButton = () => {
           fill="#1976D2"
         />
       </svg>
-      <span className="ms-2">Sign Up With Google two</span>
+      <span className="ms-2">Continue with Google</span>
     </Button>
   );
 };
-//SignUpIndividual
-// export const SignUpIndividual = () => {
-//   return <Button className=" SignUpGroup mt-3">As an Individual</Button>;
-// };
-// //SignUpOrganization
-// export const SignUpOrganization = () => {
-//   return <Button className=" SignUpGroup mt-3">As an Organization</Button>;
-// };
-// //GetStarted
-// export const GetStarted = () => {
-//   return <Button className=" border-0 getStarted mt-3"> Get Started</Button>;
-// };
-//SidebarLogoutButton

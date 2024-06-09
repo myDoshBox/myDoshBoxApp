@@ -2,6 +2,7 @@ import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "../../images/Homepage Img/logo.png";
 import image from "../../images/Image.jpg";
 import { Link, Outlet } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
 import {
   HomePageSignUpBtn,
@@ -93,7 +94,12 @@ export const GuestNavbar = () => {
 };
 
 export const UserDashboardNavbar = () => {
-  console.count("UserDashboardNavbar: ");
+  // console.count("UserDashboardNavbar: ");
+
+  const { userInfo } = useSelector((state) => state.usersauth);
+  // console.log(userInfo?.user?.email);
+  // console.log(userInfo?.user?.phone_number);
+  // console.log(userInfo?.status);
   return (
     <Container>
       <Nav className="justify-content-end userDashboardNav position-sticky top-0 end-0">
@@ -108,8 +114,28 @@ export const UserDashboardNavbar = () => {
         </Nav.Item>
         <Nav.Item className="d-flex ms-md-5">
           <div>
-            <span className="d-block text-end">John Doe</span>
-            <span className="d-block text-end">Admin</span>
+            {/* <span className="d-block text-end">John Doe</span>
+            <span className="d-block text-end">Admin</span> */}
+
+            {userInfo ? (
+              <>
+                <span
+                  className="d-block text-end"
+                  title={userInfo?.status}
+                  id="email"
+                >
+                  {userInfo?.user?.email || userInfo?.user?.organization_email}
+                  {/* <Link to={}></Link> */}
+                </span>
+
+                <span className="d-block text-end">
+                  {userInfo?.user?.phone_number ||
+                    userInfo?.user?.contact_number}
+                </span>
+              </>
+            ) : (
+              <p>None</p>
+            )}
           </div>
           <div className="mt-1 ms-2">
             <img src={image} alt="" />

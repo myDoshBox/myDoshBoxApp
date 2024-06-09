@@ -14,6 +14,9 @@ import doshlogo from "../../images/NewDoshLogo.png";
 import smdoshlogo from "../../images/doshnewlogo.png";
 import { Link, Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/slices/userSlices/allUsersAuthSlice";
+import { useLogoutMutation } from "../../redux/slices/userSlices/allUsersAPISlice";
 
 const UsersSideNav = () => {
   return (
@@ -43,10 +46,24 @@ const MobileScreenSideNav = ({ name, ...props }) => {
   };
   let activeClassName = "active-linkSm";
   let baseClassName = "inactive-linkSm";
-  const navigate = useNavigate();
 
   const nav = () => {
     navigate("/");
+  };
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logoutHandler = async () => {
+    try {
+      // await logout().unwrap();
+      console.log("Dispatching logout action");
+      dispatch(logout());
+      console.log("Navigating to home");
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -170,13 +187,12 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                 </div>
                 <li
                   className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
-                  onClick={nav}
+                  onClick={logoutHandler}
                   style={{ cursor: "pointer" }}
                 >
                   <div className="me-3">
                     <LogoutIcon />
                   </div>
-                  {/* <span className="text-white">Logout</span> */}
                 </li>
               </li>
             </ul>
@@ -192,9 +208,26 @@ const DesktopScreen = ({ name, ...props }) => {
   let baseClassName = "inactive-link";
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const nav = () => {
-    navigate("/");
+  // const nav = () => {
+  //   navigate("/");
+  // };
+
+  // const { userInfo } = useSelector((state) => state.usersauth);
+  // const [logout] = useLogoutMutation();
+  // console.log(logout());
+
+  const logoutHandler = async () => {
+    try {
+      // await logout().unwrap();
+      console.log("Dispatching logout action");
+      dispatch(logout());
+      console.log("Navigating to home");
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -286,13 +319,15 @@ const DesktopScreen = ({ name, ...props }) => {
           <ul className="ps-3">
             <li
               className="d-flex align-items-center SideNavItem mt-5 bottom position-fixed"
-              onClick={nav}
+              // onClick={nav}
               style={{ cursor: "pointer" }}
             >
               <div className="me-3">
                 <LogoutIcon />
               </div>
-              <span className="inactive-link">Logout</span>
+              <span className="inactive-link" onClick={logoutHandler}>
+                Logout
+              </span>
             </li>
           </ul>
         </div>

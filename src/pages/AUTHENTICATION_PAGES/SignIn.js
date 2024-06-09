@@ -7,9 +7,12 @@ import {
 } from "../../components/ButtonsComponent/AuthenticationButtons";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, setCredentials } from "../../redux/slices/authSlice";
-import { useLoginUserMutation } from "../../redux/slices/apiSlice";
+// import { addUser, setCredentials } from "../../redux/slices/authSlice";
+import { useLoginMutation } from "../../redux/slices/userSlices/allUsersAPISlice";
+import { setCredentials } from "../../redux/slices/userSlices/allUsersAuthSlice";
 import { toast } from "react-toastify";
+import Loader from "../../components/Loader";
+import OAuthLogin from "../../components/GoogleAuth/OAuthLogin";
 // import forgetPassword from "../AUTHENTICATION_PAGES/forgetPassword";
 
 const SignInPage = () => {
@@ -31,21 +34,21 @@ const SignInPage = () => {
 
 export const SignInForm = () => {
   const [passwordToggle, setpasswordToggle] = useState(false);
-  const [user, setUser] = useState({ email: "", password: "" });
-  const [userDetails, setUserDetails] = useState([]);
+  const [user, setUser] = useState({ email: "", user_password: "" });
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [login, { isLoading }] = useLoginUserMutation();
+  const [login, { isLoading }] = useLoginMutation();
 
-  // const { userInfo } = useSelector((state) => state.auth);
+  const { userInfo } = useSelector((state) => state.usersauth);
+  // console.log(userInfo);
 
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     navigate("/userdashboard");
-  //   }
-  // }, [navigate, userInfo]);
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/userdashboard");
+    }
+  }, [navigate, userInfo]);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -57,38 +60,23 @@ export const SignInForm = () => {
     e.preventDefault();
     setpasswordToggle(!passwordToggle);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (user.email && user.password) {
-      setUserDetails([...userDetails, user]);
-      setUser({ email: "", password: "" });
-      const postDataInfo = {
-        email: user.email,
-        user_password: user.password,
-      };
-      console.log(postDataInfo);
-      try {
-        login(postDataInfo)
-          .then((res) => {
-            const responseData = res.data.message;
-            console.log(responseData);
-            if (responseData) {
-              // console.log(res.data);
-              dispatch(addUser(responseData.user));
-              toast.success("Account Login successfully");
-              navigate("/userdashboard");
-            } else {
-              console.log("Invalid credential");
-              // toast.success("Invalid credential");
-              return;
-            }
-          })
-          .catch((error) => console.error(error));
-      } catch (e) {
-        console.error(e);
-      }
+    try {
+      const res = await login({ ...user }).unwrap();
+      dispatch(setCredentials({ ...res }));
+      navigate("/userdashboard");
+    } catch (err) {
+      console.error(err);
+      toast.error(err?.data?.message || err?.error);
     }
+    // }
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
@@ -112,9 +100,9 @@ export const SignInForm = () => {
           <div className="form-outline mb-2 d-flex">
             <input
               type={passwordToggle ? "text" : "password"}
-              id="password"
-              name="password"
-              value={user.password}
+              id="user_password"
+              name="user_password"
+              value={user.user_password}
               onChange={handleChange}
               className="border border-end-0 rounded-start p-2 w-100 labelStyle"
               placeholder="Password"
@@ -152,22 +140,23 @@ export const SignInForm = () => {
               <SignInButton />
             </div>
           </div>
+          {/* <div className="d-flex justify-content-center ">
+            <OAuthLogin />
+          </div> */}
+
+          <div className="d-flex justify-content-center mt-2">
+            <p>
+              <span style={{ fontSize: "14px" }}>Don't have an account?</span>
+              <Link
+                to={"../signup"}
+                className="text-decoration-none ms-1 text-success"
+                style={{ fontSize: "14px" }}
+              >
+                Sign Up
+              </Link>
+            </p>
+          </div>
         </form>
-        <div className="d-flex justify-content-center ">
-          {/* <GoogleSignInButton /> */}
-        </div>
-        <div className="d-flex justify-content-center mt-2">
-          <p>
-            <span style={{ fontSize: "14px" }}>Don't have an account?</span>
-            <Link
-              to={"../signup"}
-              className="text-decoration-none ms-1 text-success"
-              style={{ fontSize: "14px" }}
-            >
-              Sign Up
-            </Link>
-          </p>
-        </div>
       </div>
     </>
   );

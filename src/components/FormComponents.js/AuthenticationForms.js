@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
-// import { GoogleButton } from "../ButtonsComponent/Button";
-import {
-  SignUpButton,
-  GoogleIndividualSignUpButton,
-  GoogleOrganizationSignUpButton,
-} from "../ButtonsComponent/AuthenticationButtons";
-// import { GoogleIcon } from "../IconComponent/SocialMediaIcons";
+import { SignUpButton } from "../ButtonsComponent/AuthenticationButtons";
 import { useNavigate } from "react-router-dom";
-import { useCreateUserMutation } from "../../redux/slices/apiSlice";
-import { addUser, setCredentials } from "../../redux/slices/authSlice";
-import { useDispatch } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
+import {
+  useCreateIndUserMutation,
+  useCreateOrgUserMutation,
+} from "../../redux/slices/userSlices/allUsersAPISlice";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import OAuth from "../GoogleAuth/OAuth";
+import OAuthRedirect from "../GoogleAuth/OAuthRedirect";
+import OAuthLogin from "../GoogleAuth/OAuthLogin";
 
 // Sign Up For Individual
 export const SignUpIndividual = () => {
@@ -28,8 +26,9 @@ export const SignUpIndividual = () => {
   const [passwordToggle, setpasswordToggle] = useState(false);
   const [passwordToggle1, setpasswordToggle1] = useState(false);
   const [errors, setErrors] = useState({});
-  const [createUser, { isLoading }] = useCreateUserMutation();
-  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+  const [signup, { isLoading }] = useCreateIndUserMutation();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -37,57 +36,48 @@ export const SignUpIndividual = () => {
     setPerson({ ...person, [name]: value });
   };
 
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (
-      person.password !== person.confirmPassword &&
-      !person.email &&
-      !person.phoneNumber &&
-      !person.password &&
-      !person.confirmPassword &&
-      !person.checked
+      person.password === person.confirmPassword &&
+      person.email &&
+      person.phoneNumber &&
+      person.password &&
+      person.confirmPassword &&
+      person.checked
     ) {
-      e.preventDefault();
-    } else if (person.password === person.confirmPassword) {
       setPersonDetails([...personDetails, person]);
-      setPerson(initialValues);
     }
-    setErrors(validate(person));
 
-    if (Object.keys(errors).length === 0) {
+    // Validate and set errors
+    const validationErrors = validate(person);
+    setErrors(validationErrors);
+
+    // Proceed only if there are no validation errors
+    if (Object.keys(validationErrors).length === 0) {
       const postDataInfo = {
         email: person.email,
         phone_number: person.phoneNumber,
         password: person.password,
         confirm_password: person.confirmPassword,
       };
-      console.log(postDataInfo);
+
       try {
-        createUser(postDataInfo)
-          .then((res) => {
-            // const responseData = res.data;
-            const responseData = res.data.message;
-            if (responseData) {
-              console.log(res.data);
-              console.log(res);
-              navigate("/LinkVerificationMsg");
-            } else {
-              console.log("Invalid credential");
-              return;
-            }
-          })
-          .catch((error) => console.error(error));
-      } catch (e) {
-        console.error(e);
+        const res = await signup({ ...postDataInfo }).unwrap();
+        if (res?.status === "true") {
+          isLoading ? <p>Verifying.......</p> : navigate("/linkverification");
+          toast.success(res?.message);
+        } else {
+          toast.error(res?.data?.message);
+        }
+      } catch (err) {
+        console.log(err);
+        toast.error(err?.data?.message);
       }
+    } else {
+      toast.error("All Fields are required");
     }
   };
-  // Creating A Responds Start
-
-  // Creating A Responds Sends
-  //
 
   const validate = () => {
     const errors = {};
@@ -149,10 +139,7 @@ export const SignUpIndividual = () => {
             placeholder="Email"
           />
           {errors.email && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
               {errors.email}
             </div>
           )}
@@ -168,10 +155,7 @@ export const SignUpIndividual = () => {
             placeholder="Phone Number"
           />
           {errors.phoneNumber && (
-            <div
-              className="text-white bg-danger border-danger border rounded p-1"
-              style={{ fontSize: "10px" }}
-            >
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
               {errors.phoneNumber}
             </div>
           )}
@@ -194,10 +178,7 @@ export const SignUpIndividual = () => {
           </button>
         </div>
         {errors.password && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
+          <div className="text-danger p-1" style={{ fontSize: "10px" }}>
             {errors.password}
           </div>
         )}
@@ -220,10 +201,7 @@ export const SignUpIndividual = () => {
           </button>
         </div>
         {errors.confirmPassword && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
+          <div className="text-danger p-1" style={{ fontSize: "10px" }}>
             {errors.confirmPassword}
           </div>
         )}
@@ -243,93 +221,117 @@ export const SignUpIndividual = () => {
           </label>
         </div>
         {errors.checked && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
+          <div className="text-danger p-1" style={{ fontSize: "10px" }}>
             {errors.checked}
           </div>
         )}
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
-            <SignUpButton />
+            <button
+              className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+              style={{ width: "210px" }}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Sign Up
+            </button>
           </div>
         </div>
+
+        {/* <div className="d-flex justify-content-center ">
+          <OAuthLogin />
+        </div> */}
       </form>
-      <div className="d-flex justify-content-center">
-        <GoogleIndividualSignUpButton />
-      </div>
     </>
   );
 };
 
 // Sign Up for Organization
-
 export const SignUpOrganization = () => {
   const initialValues = {
     organization_name: "",
     organization_email: "",
-    user_email: "",
+    contact_email: "",
+    contact_number: "",
     password: "",
-    password_Confirmation: "",
+    password_confirmation: "",
     checked: false,
   };
+
   const [organization, setOrganization] = useState(initialValues);
   const [organizationDetails, setOrganizationDetails] = useState([]);
   const [passwordToggle, setpasswordToggle] = useState(false);
   const [passwordToggle1, setpasswordToggle1] = useState(false);
   const [errors, setErrors] = useState({});
-  const [submission, setSubmission] = useState(false);
 
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setOrganization({ ...organization, [name]: value });
-    // setErrors(validate(organization));
   };
   const handleShowHide = (e) => {
     setpasswordToggle(!passwordToggle);
     e.preventDefault();
   };
+
   const handleShowHide2 = (e) => {
     setpasswordToggle1(!passwordToggle1);
     e.preventDefault();
   };
+
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const [orgsignup, { isLoading }] = useCreateOrgUserMutation();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (
-      organization.password !== organization.password_Confirmation &&
-      !organization.organization_name &&
-      !organization.organization_email &&
-      !organization.user_email &&
-      !organization.password &&
-      !organization.password_Confirmation &&
-      !organization.checked
+      organization.organization_name &&
+      organization.organization_email &&
+      organization.contact_email &&
+      organization.contact_number &&
+      organization.password &&
+      organization.password_confirmation &&
+      organization.checked
     ) {
-      e.preventDefault();
-    } else if (organization.password === organization.password_Confirmation) {
       setOrganizationDetails([...organizationDetails, organization]);
-      setOrganization(initialValues);
     }
-    setErrors(validate(organization));
-    setSubmission(true);
-  };
 
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && submission) {
-      console.log(organizationDetails);
-      navigate("/userdashboard");
+    const validationErrors = validate(organization);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      const postDataInfo = {
+        organization_name: organization.organization_name,
+        organization_email: organization.organization_email,
+        contact_email: organization.contact_email,
+        contact_number: organization.contact_number,
+        password: organization.password,
+        password_confirmation: organization.password_confirmation,
+      };
+
+      try {
+        const res = await orgsignup({ ...postDataInfo }).unwrap();
+        if (res?.status === "true") {
+          isLoading ? <p>Verifying.......</p> : navigate("/linkverification");
+          toast.success(res?.message);
+        } else {
+          toast.error(res?.data?.message);
+        }
+      } catch (err) {
+        console.log(err);
+        toast.error(err?.data?.message);
+      }
     } else {
-      console.log("Invalid Form");
+      toast.error("All Fields are required");
     }
-  });
+  };
 
   const validate = () => {
     const errors = {};
     if (!organization.organization_name) {
       errors.organization_name = "Organization Name is Required";
     }
+
     if (!organization.organization_email) {
       errors.organization_email = "Organization Email is Required";
     } else if (
@@ -344,11 +346,22 @@ export const SignUpOrganization = () => {
       errors.contact_email = "Contact person email is Required";
     } else if (
       !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
-        organization.organization_email
+        organization.contact_email
       )
     ) {
-      errors.organization_email = "Email is not valid";
+      errors.contact_email = "Contact person Email is not valid";
     }
+
+    if (!organization.contact_number) {
+      errors.contact_number = "Contact person Phone Number is required";
+    } else if (
+      !/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/.test(
+        organization.contact_number
+      )
+    ) {
+      errors.contact_number = "Phone Number is not valid";
+    }
+
     if (!organization.password) {
       errors.password = "Password is required";
     } else if (
@@ -359,23 +372,24 @@ export const SignUpOrganization = () => {
       errors.password =
         "Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, and one number or special character";
     }
-    if (organization.password !== organization.password_Confirmation) {
+
+    if (organization.password !== organization.password_confirmation) {
       errors.password_confirmation = "Passwords do not match";
     }
+
     if (!organization.checked) {
       errors.checked =
         "You must agree to the terms and conditions before submitting";
     }
     return errors;
   };
+
   return (
     <>
       <form className="container form" onSubmit={handleSubmit}>
         <div className="form-outline mb-2">
           <input
             type="text"
-            // from Control
-            // className="form-control"
             name="organization_name"
             value={organization.organization_name}
             onChange={handleChange}
@@ -384,7 +398,7 @@ export const SignUpOrganization = () => {
           />
           {errors.organization_name && (
             <div
-              className="text-white bg-danger border-danger border rounded p-1"
+              className="text-danger rounded p-1"
               style={{ fontSize: "10px" }}
             >
               {errors.organization_name}
@@ -403,7 +417,7 @@ export const SignUpOrganization = () => {
           />
           {errors.organization_email && (
             <div
-              className="text-white bg-danger border-danger border rounded p-1"
+              className="text-danger rounded p-1"
               style={{ fontSize: "10px" }}
             >
               {errors.organization_email}
@@ -421,17 +435,35 @@ export const SignUpOrganization = () => {
             value={organization.contact_email}
             onChange={handleChange}
             className="border rounded p-2 w-100 labelStyle mb-1"
-            placeholder="Email"
+            placeholder="Contact Person Email"
           />
           {errors.contact_email && (
             <div
-              className="text-white bg-danger border-danger border rounded p-1"
+              className="text-danger rounded p-1"
               style={{ fontSize: "10px" }}
             >
               {errors.contact_email}
             </div>
           )}
         </div>
+
+        <div className="form-outline mb-2">
+          <input
+            type="tel"
+            id="contact_number"
+            name="contact_number"
+            value={organization.contact_number}
+            onChange={handleChange}
+            className="border rounded p-2 w-100 labelStyle mb-1"
+            placeholder="Contact Person Phone Number"
+          />
+          {errors.contact_number && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {errors.contact_number}
+            </div>
+          )}
+        </div>
+
         <div className="form-outline d-flex">
           <input
             type={passwordToggle ? "text" : "password"}
@@ -449,12 +481,9 @@ export const SignUpOrganization = () => {
             {passwordToggle ? <HidePassWordIcon /> : <ShowPassWordIcon />}
           </button>
         </div>
-        {errors.password2 && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
-            {errors.password2}
+        {errors.password && (
+          <div className="text-danger rounded p-1" style={{ fontSize: "10px" }}>
+            {errors.password}
           </div>
         )}
         <div className="form-outline d-flex">
@@ -462,7 +491,7 @@ export const SignUpOrganization = () => {
             type={passwordToggle1 ? "text" : "password"}
             id="password_confirmation"
             name="password_confirmation"
-            value={organization.password_Confirmation}
+            value={organization.password_confirmation}
             onChange={handleChange}
             className="border border-end-0 rounded-start p-2 w-100 labelStyle mt-2 mb-1"
             placeholder="Confirm Password"
@@ -474,43 +503,38 @@ export const SignUpOrganization = () => {
             {passwordToggle1 ? <HidePassWordIcon /> : <ShowPassWordIcon />}
           </button>
         </div>
-        {errors.password_Confirmation && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
-            {errors.password_Confirmation}
+        {errors.password_confirmation && (
+          <div className="text-danger rounded p-1" style={{ fontSize: "10px" }}>
+            {errors.password_confirmation}
           </div>
         )}
         <div className="form-check mt-2">
           <input
             className="form-check-input"
             type="checkbox"
-            value=""
-            id="flexCheckDefault"
+            value={organization.checked}
+            id="checked"
+            name="checked"
+            onChange={handleChange}
+            checked={organization.checked}
           />
           <label className="text-secondary fw-bold" htmlFor="flexCheckDefault">
             By ticking this box you are indicating you have read and accept our
             terms and privacy policy.
           </label>
         </div>
-        {/* {errors.checked && (
-          <div
-            className="text-white bg-danger border-danger border rounded p-1"
-            style={{ fontSize: "10px" }}
-          >
+        {errors.checked && (
+          <div className="text-danger p-1" style={{ fontSize: "10px" }}>
             {errors.checked}
           </div>
-        )} */}
+        )}
+
         <div className="d-flex flex-column mt-4">
           <div className="mx-auto mb-2">
             <SignUpButton />
           </div>
         </div>
       </form>
-      <div className="d-flex justify-content-center">
-        <GoogleOrganizationSignUpButton />
-      </div>
     </>
   );
 };

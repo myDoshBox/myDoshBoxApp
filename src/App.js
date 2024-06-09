@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -41,7 +42,7 @@ import {
 import SignInPage from "./pages/AUTHENTICATION_PAGES/SignIn";
 import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
 import VerifyEmailForm from "./pages/AUTHENTICATION_PAGES/VerifyEmailForm";
-import LinkVerificationMsg from "./pages/AUTHENTICATION_PAGES/linkVerificationMsg";
+import LinkVerificationMsg from "./pages/AUTHENTICATION_PAGES/LinkVerificationMsg";
 import ResetPassword from "./pages/AUTHENTICATION_PAGES/resetPassword";
 import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
 import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
@@ -65,7 +66,9 @@ import { RecentDispute } from "./components/CardComponents/TransactionDetails";
 // react_toastify starts
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import VerifyEmail from "./pages/AUTHENTICATION_PAGES/EmailVerification";
 // react_toastify ends
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -78,67 +81,71 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/pricingpage" element={<PricingPage />} />
           <Route path="/faqs" element={<FAQs />} />
+          {/* <Route path="/linkverification" element={<LinkVerificationMsg />} /> */}
         </Route>
-        <Route path="userdashboard" element={<UsersSideNav />}>
-          <Route index element={<UserDashboardPage />} />
-          <Route path="settings" element={<UserSettingsPage />} />
-          <Route path="transaction" element={<UserTransactionHistory />} />
-          <Route path="dispute" element={<UserDisputeHistory />} />
-          <Route path="notification" element={<NotifictionPage />} />
-          <Route path="updateprofile" element={<UpdateProfilePage />} />
-          <Route path="updatebank" element={<UpdateBankDetailsPage />} />
-          <Route path="reportissues" element={<ReportIssuesformPage />} />
-          <Route path="initiate-escrow" element={<InitiateEscrow />} />
-          <Route path="userspage" element={<UsersPage />} />
+        <Route path="" element={<PrivateRoute />}>
+          <Route path="userdashboard" element={<UsersSideNav />}>
+            <Route index element={<UserDashboardPage />} />
+            <Route path="settings" element={<UserSettingsPage />} />
+            <Route path="transaction" element={<UserTransactionHistory />} />
+            <Route path="dispute" element={<UserDisputeHistory />} />
+            <Route path="notification" element={<NotifictionPage />} />
+            <Route path="updateprofile" element={<UpdateProfilePage />} />
+            <Route path="updatebank" element={<UpdateBankDetailsPage />} />
+            <Route path="reportissues" element={<ReportIssuesformPage />} />
+            <Route path="initiate-escrow" element={<InitiateEscrow />} />
+            <Route path="userspage" element={<UsersPage />} />
 
-          <Route
-            path="transactionsummary"
-            element={<TransactionSummaryPage />}
-          />
-          <Route path="agreement" element={<EscrowAgreement />} />
-          <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
-          <Route path="ticket" element={<GeneratedTicket />} />
-        </Route>
-        <Route path="neutraldashboard" element={<NeutralsSideNav />}>
-          <Route index element={<NeutralDashboard />} />
-          <Route path="open-conflicts" element={<OpenConflicts />} />
-          <Route path="closed-conflicts" element={<ClosedConflicts />} />
-          <Route path="transactions" element={<CustomerCareTransaction />} />
-          <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
-          <Route path="neutralsetting" element={<NeutralSetting />} />
-          <Route path="notification" element={<NotifictionPage />} />
-        </Route>
-        <Route path="customer-care" element={<CustomerCareSideNav />}>
-          <Route index element={<CustomerCareDashboardPage />} />
-          <Route path="tickets-history" element={<TicketHistoryPage />} />
-          <Route path="notification" element={<NotifictionPage />} />
-          <Route path="settings" element={<NeutralSetting />} />
-          <Route path="transactions" element={<CustomerCareTransaction />} />
-          <Route path="users" element={<UsersPage />} />
-        </Route>
+            <Route
+              path="transactionsummary"
+              element={<TransactionSummaryPage />}
+            />
+            <Route path="agreement" element={<EscrowAgreement />} />
+            <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
+            <Route path="ticket" element={<GeneratedTicket />} />
+          </Route>
+          <Route path="neutraldashboard" element={<NeutralsSideNav />}>
+            <Route index element={<NeutralDashboard />} />
+            <Route path="open-conflicts" element={<OpenConflicts />} />
+            <Route path="closed-conflicts" element={<ClosedConflicts />} />
+            <Route path="transactions" element={<CustomerCareTransaction />} />
+            <Route path="ongoing-conflicts" element={<OngoingConflicts />} />
+            <Route path="neutralsetting" element={<NeutralSetting />} />
+            <Route path="notification" element={<NotifictionPage />} />
+          </Route>
+          <Route path="customer-care" element={<CustomerCareSideNav />}>
+            <Route index element={<CustomerCareDashboardPage />} />
+            <Route path="tickets-history" element={<TicketHistoryPage />} />
+            <Route path="notification" element={<NotifictionPage />} />
+            <Route path="settings" element={<NeutralSetting />} />
+            <Route path="transactions" element={<CustomerCareTransaction />} />
+            <Route path="users" element={<UsersPage />} />
+          </Route>
 
-        {/* Admin Routes */}
-        <Route path="admin" element={<AdminSideNav />}>
-          <Route index element={<AdminDashboard />} />
-          <Route path="tickets-history" element={<TicketHistoryPage />} />
-          <Route path="profile" element={<UserProfile />} />
-          <Route path="AdminAnalytics" element={<AdminAnalytics />} />
-          <Route path="notification" element={<NotifictionPage />} />
-          <Route path="settings" element={<NeutralSetting />} />
-          <Route path="transactions" element={<CustomerCareTransaction />} />
-          <Route path="users" element={<UsersPage />} />
+          {/* Admin Routes */}
+          <Route path="admin" element={<AdminSideNav />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="tickets-history" element={<TicketHistoryPage />} />
+            <Route path="profile" element={<UserProfile />} />
+            <Route path="AdminAnalytics" element={<AdminAnalytics />} />
+            <Route path="notification" element={<NotifictionPage />} />
+            <Route path="settings" element={<NeutralSetting />} />
+            <Route path="transactions" element={<CustomerCareTransaction />} />
+            <Route path="users" element={<UsersPage />} />
+          </Route>
         </Route>
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="signin" element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
         <Route path="VerifyEmailForm" element={<VerifyEmailForm />} />
         <Route path="ResetPassword" element={<ResetPassword />} />
-        <Route path="LinkVerificationMsg" element={<LinkVerificationMsg />} />
+        <Route path="linkverification" element={<LinkVerificationMsg />} />
+        <Route path={`auth/verify-email`} element={<VerifyEmail />} />
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
-      <ToastContainer theme="dark" />
+      <ToastContainer theme="light" />
     </Router>
   );
 }
