@@ -15,12 +15,12 @@ const LinkVerificationMsg = () => {
                 Your account has been created! We just sent a verification link
                 to your email address. Enter it to complete your registration
               </p>
-              <p className="text-center">
+              {/* <p className="text-center">
                 Didn’t get the Link?
                 <Link to="" className="text-decoration-none ms-1">
                   <span className="text-primary ">Resend link.</span>
                 </Link>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
