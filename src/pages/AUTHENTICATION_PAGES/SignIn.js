@@ -64,7 +64,7 @@ export const SignInForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!user.email && !user.user_password) {
+    if (!user.email || !user.user_password) {
       return toast.error("all fields are required");
     }
     try {
