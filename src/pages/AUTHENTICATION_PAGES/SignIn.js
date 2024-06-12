@@ -13,6 +13,7 @@ import { setCredentials } from "../../redux/slices/userSlices/allUsersAuthSlice"
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader";
 import OAuthLogin from "../../components/GoogleAuth/OAuthLogin";
+import OAuth from "../../components/GoogleAuth/OAuth";
 // import forgetPassword from "../AUTHENTICATION_PAGES/forgetPassword";
 
 const SignInPage = () => {
@@ -63,6 +64,9 @@ export const SignInForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!user.email && !user.user_password) {
+      return toast.error("all fields are required");
+    }
     try {
       const res = await login({ ...user }).unwrap();
       dispatch(setCredentials({ ...res }));
@@ -142,6 +146,7 @@ export const SignInForm = () => {
           </div>
           <div className="d-flex justify-content-center ">
             <OAuthLogin />
+            {/* <OAuth /> */}
           </div>
 
           <div className="d-flex justify-content-center mt-2">

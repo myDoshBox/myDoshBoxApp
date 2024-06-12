@@ -1,7 +1,10 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { Button } from "react-bootstrap";
 import { app } from "./firebase";
-import { useLazyCreateIndividualGoogleQuery } from "../../redux/slices/userSlices/allUsersAPISlice";
+import {
+  useCreateIndividualGooglesMutation,
+  useLazyCreateIndividualGoogleQuery,
+} from "../../redux/slices/userSlices/allUsersAPISlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -28,7 +31,7 @@ const OAuth = () => {
     }
   }, [navigate, userInfo]);
 
-  const [googlesignup, { isLoading }] = useLazyCreateIndividualGoogleQuery();
+  const [googlesignup, { isLoading }] = useCreateIndividualGooglesMutation();
 
   const handleGoogleSubmit = async () => {
     try {
@@ -38,38 +41,42 @@ const OAuth = () => {
       const gooagleAuthDetails = async () => {
         const result = await signInWithPopup(auth, provider);
         console.log(result);
-        console.log(result?.user?.phoneNumber);
         // console.log(result?.user?.displayName);
-        // console.log(result?.user?.email);
-        // console.log(result?.user?.emailVerified);
-        // console.log(result?.user?.photoURL);
-        // console.log(result?.user?.refreshToken);
+        console.log(result?.user?.email);
+        console.log(result?.user?.phoneNumber);
+        console.log(result?.user?.uid);
+        console.log(result?.user?.emailVerified);
+        console.log(result?.user?.photoURL);
+        console.log(result?.user?.refreshToken);
+        console.log("at", result?.user?.accessToken);
         // console.log((await result?.user?.getIdTokenResult()).token);
 
         const postDataInfo = {
           email: result?.user?.email,
           phone_number: result?.user?.phoneNumber,
+          password: result?.user?.uid,
+          email_verified: result?.user?.emailVerified,
         };
 
         console.log({ ...postDataInfo });
 
         const res = await googlesignup({ ...postDataInfo }).unwrap();
-        console.log(res);
-        try {
-          if (res?.status === "true") {
-            // isLoading ? <p>Verifying.......</p> : navigate("/userdashboard");
-            dispatch(setCredentials({ ...res }));
-            navigate("/userdashboard");
-            toast.success(res?.message);
-          } else {
-            toast.error(res?.data?.message); // Display error to the user
-          }
-        } catch (err) {
-          // Log the error and display an appropriate message
-          console.log(err);
+        console.log("res", res);
+        // try {
+        //   if (res?.status === "true") {
+        //     // isLoading ? <p>Verifying.......</p> : navigate("/userdashboard");
+        //     dispatch(setCredentials({ ...res }));
+        //     navigate("/userdashboard");
+        //     toast.success(res?.message);
+        //   } else {
+        //     toast.error(res?.data?.message); // Display error to the user
+        //   }
+        // } catch (err) {
+        //   // Log the error and display an appropriate message
+        //   console.log(err);
 
-          toast.error(err?.data?.message);
-        }
+        //   toast.error(err?.data?.message);
+        // }
       };
 
       gooagleAuthDetails();

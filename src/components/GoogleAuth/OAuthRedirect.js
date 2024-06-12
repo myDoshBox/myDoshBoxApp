@@ -2,9 +2,8 @@ const OAuthRedirect = () => {
   const handleGoogleOAuth = () => {
     const clientId =
       "523049804056-br4u17er496b94oqc2s22jj5gv1mk009.apps.googleusercontent.com";
-    const redirectUri =
-      "https://mydoshbox-be.onrender.com/auth/individual/oauth/callback";
-    // const redirectUri = "https://mydoshbox.vercel.app/userdashboard";
+    // const redirectUri = "http://localhost:5000/auth/individual/oauth/callback";
+    const redirectUri = "https://mydoshbox.vercel.app/userdashboard";
     const scope = encodeURIComponent(
       "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"
     );

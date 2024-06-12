@@ -14,34 +14,34 @@ const OAuthLogin = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (googleUrlData?.authorizeUrl) {
       window.location.href = googleUrlData.authorizeUrl; // Redirect to Google OAuth page
     }
   };
 
-  const handleOAuthCallback = async (code) => {
-    try {
-      const response = await createIndividualGoogle(code).unwrap();
-      console.log("OAuth Callback Response:", response);
-      // Handle login success (e.g., save tokens, redirect, etc.)
-      //   const { user, accessToken, refreshToken } = response;
+  //   const handleOAuthCallback = async (code) => {
+  //     try {
+  //       const response = await createIndividualGoogle(code).unwrap();
+  //       console.log("OAuth Callback Response:", response);
+  //       // Handle login success (e.g., save tokens, redirect, etc.)
+  //       //   const { user, accessToken, refreshToken } = response;
 
-      //   dispatch(setCredentials(user, accessToken, refreshToken));
-      dispatch(setCredentials({ ...response }));
-      navigate("/userdashboard");
-    } catch (error) {
-      console.error("Error during OAuth callback:", error);
-    }
-  };
+  //       //   dispatch(setCredentials(user, accessToken, refreshToken));
+  //       dispatch(setCredentials({ ...response }));
+  //       navigate("/userdashboard");
+  //     } catch (error) {
+  //       console.error("Error during OAuth callback:", error);
+  //     }
+  //   };
 
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get("code");
-    if (code) {
-      handleOAuthCallback(code);
-    }
-  }, []);
+  //   useEffect(() => {
+  //     const urlParams = new URLSearchParams(window.location.search);
+  //     const code = urlParams.get("code");
+  //     if (code) {
+  //       handleOAuthCallback(code);
+  //     }
+  //   }, []);
 
   //   return <button onClick={handleLogin}>Login with Google</button>;
 

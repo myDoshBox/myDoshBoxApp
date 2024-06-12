@@ -5,8 +5,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // const URL = "/auth";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://mydoshbox-be.onrender.com/auth/",
-  // baseUrl: "http://localhost:5000/auth",
+  // baseUrl: "https://mydoshbox-be.onrender.com/auth/",
+  baseUrl: "http://localhost:5000/auth",
 });
 
 export const usersAPISlice = createApi({
@@ -59,12 +59,13 @@ export const usersAPISlice = createApi({
       }),
     }),
 
-    // createIndividualGoogle: builder.mutation({
-    //   query: (code) => ({
-    //     url: `/individual/oauth/callback?code=${code}`,
-    //     method: "GET",
-    //   }),
-    // }),
+    createIndividualGoogles: builder.mutation({
+      query: (data) => ({
+        url: `/individual/googleauth`,
+        method: "POST",
+        body: data,
+      }),
+    }),
 
     logout: builder.mutation({
       query: () => ({
@@ -80,6 +81,7 @@ export const {
   useLoginMutation,
   useCreateOrgUserMutation,
   useLazyCreateIndividualGoogleQuery,
+  useCreateIndividualGooglesMutation,
   useGetGoogleUrlQuery,
   useCreateIndividualGoogleMutation,
   useVerifyUserMutation,
