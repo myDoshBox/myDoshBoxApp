@@ -12,8 +12,8 @@ import { useLoginMutation } from "../../redux/slices/userSlices/allUsersAPISlice
 import { setCredentials } from "../../redux/slices/userSlices/allUsersAuthSlice";
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader";
-import OAuthLogin from "../../components/GoogleAuth/OAuthLogin";
-import OAuth from "../../components/GoogleAuth/OAuth";
+// import OAuthLogin from "../../components/GoogleAuth/OAuthLogin";
+// import OAuth from "../../components/GoogleAuth/OAuth";
 // import forgetPassword from "../AUTHENTICATION_PAGES/forgetPassword";
 
 const SignInPage = () => {
@@ -67,10 +67,21 @@ export const SignInForm = () => {
     if (!user.email || !user.user_password) {
       return toast.error("all fields are required");
     }
+
     try {
       const res = await login({ ...user }).unwrap();
-      dispatch(setCredentials({ ...res }));
-      navigate("/userdashboard");
+      // if (res?.status === "true") {
+      //   dispatch(setCredentials({ ...res }));
+      //   navigate("/userdashboard");
+      // }
+
+      if (res?.status === "false") {
+        toast.error(res?.message);
+        navigate("/signin");
+      } else {
+        dispatch(setCredentials({ ...res }));
+        navigate("/userdashboard");
+      }
     } catch (err) {
       console.error(err);
       toast.error(err?.data?.message || err?.error);
@@ -144,10 +155,10 @@ export const SignInForm = () => {
               <SignInButton />
             </div>
           </div>
-          <div className="d-flex justify-content-center ">
-            <OAuthLogin />
-            {/* <OAuth /> */}
-          </div>
+          {/* <div className="d-flex justify-content-center ">
+        
+            <OAuth />
+          </div> */}
 
           <div className="d-flex justify-content-center mt-2">
             <p>

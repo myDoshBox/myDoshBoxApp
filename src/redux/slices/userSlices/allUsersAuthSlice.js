@@ -16,7 +16,6 @@ const usersAuthSlice = createSlice({
     },
 
     logout: (state) => {
-      console.log("action dispatched");
       state.userInfo = null;
       localStorage.removeItem("userInfo");
       localStorage.removeItem("accessToken");

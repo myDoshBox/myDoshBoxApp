@@ -26,14 +26,34 @@ const VerifyEmail = () => {
     }
 
     try {
-      const response = await verifyUser(token).unwrap();
-      console.log(response);
-      toast.success(response?.message);
-      navigate("/signin");
-    } catch (error) {
-      console.error("Error response:", error);
-      toast.error(error?.data?.message);
+      const res = await verifyUser(token).unwrap();
+      // if (res?.status === "true") {
+      //   dispatch(setCredentials({ ...res }));
+      //   navigate("/userdashboard");
+      // }
+
+      if (res?.status === "false") {
+        toast.error(res?.message);
+        // navigate("/signin");
+      } else {
+        toast.success(res?.message);
+        navigate("/signin");
+      }
+    } catch (err) {
+      console.error(err);
+      // toast.error(err?.data?.message || err?.error);
+      toast.error(err?.data?.message);
     }
+
+    // try {
+    //   const response = await verifyUser(token).unwrap();
+    //   console.log(response);
+    //   toast.success(response?.message);
+    //   navigate("/signin");
+    // } catch (error) {
+    //   console.error("Error response:", error);
+    //   toast.error(error?.data?.message);
+    // }
   };
 
   useEffect(() => {

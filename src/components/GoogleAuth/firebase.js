@@ -1,12 +1,4 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -18,16 +10,7 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyD64i8g0WufbmZ3sgdGK4HZkPv-aQjXito",
-//   authDomain: "mydoshboxapp.firebaseapp.com",
-//   projectId: "mydoshboxapp",
-//   storageBucket: "mydoshboxapp.appspot.com",
-//   messagingSenderId: "523049804056",
-//   appId: "1:523049804056:web:e3e27d8f44e8b32cb0fe6d",
-//   measurementId: "G-0HM8QSTN12",
-// };
+// console.log("fire", firebaseConfig);
 
-// Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+// console.log("app", app);

@@ -141,6 +141,11 @@ function App() {
         <Route path="ResetPassword" element={<ResetPassword />} />
         <Route path="linkverification" element={<EmailVerificationMsg />} />
         <Route path={`auth/verify-email`} element={<VerifyEmail />} />
+        {/* CHECCCCCCCCCCCCCCCCCCCCCCCCKKKKKKKKK */}
+        {/* <Route
+          path={`auth/verify-email?token={token}`}
+          element={<VerifyEmail />}
+        /> */}
         {/* <Route path="*" element={<Navigate to={<Error404 />} />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
