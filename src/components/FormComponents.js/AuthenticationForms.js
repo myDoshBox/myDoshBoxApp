@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import OAuth from "../GoogleAuth/OAuth";
 import OAuthRedirect from "../GoogleAuth/OAuthRedirect";
 import OAuthLogin from "../GoogleAuth/OAuthLogin";
+import Loader from "../Loader";
 
 // Sign Up For Individual
 export const SignUpIndividual = () => {
@@ -26,9 +27,10 @@ export const SignUpIndividual = () => {
   const [passwordToggle, setpasswordToggle] = useState(false);
   const [passwordToggle1, setpasswordToggle1] = useState(false);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-  const [signup, { isLoading }] = useCreateIndUserMutation();
+  const [signup] = useCreateIndUserMutation();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -38,6 +40,7 @@ export const SignUpIndividual = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (
       person.password === person.confirmPassword &&
       person.email &&
@@ -65,7 +68,8 @@ export const SignUpIndividual = () => {
       try {
         const res = await signup({ ...postDataInfo }).unwrap();
         if (res?.status === "true") {
-          isLoading ? <p>Verifying.......</p> : navigate("/linkverification");
+          navigate("/linkverification");
+          setLoading(false);
           toast.success(res?.message);
         } else {
           toast.error(res?.data?.message);
@@ -73,6 +77,8 @@ export const SignUpIndividual = () => {
       } catch (err) {
         console.log(err);
         toast.error(err?.data?.message);
+      } finally {
+        setLoading(false);
       }
     } else {
       toast.error("All Fields are required");
@@ -124,6 +130,10 @@ export const SignUpIndividual = () => {
     setpasswordToggle1(!passwordToggle1);
     e.preventDefault();
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>

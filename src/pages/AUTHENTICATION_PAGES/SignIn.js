@@ -41,6 +41,7 @@ export const SignInForm = () => {
   const dispatch = useDispatch();
 
   const [login, { isLoading }] = useLoginMutation();
+  const [loading, setLoading] = useState(false);
 
   const { userInfo } = useSelector((state) => state.usersauth);
   // console.log(userInfo);
@@ -64,6 +65,7 @@ export const SignInForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (!user.email || !user.user_password) {
       return toast.error("all fields are required");
     }
@@ -77,6 +79,7 @@ export const SignInForm = () => {
 
       if (res?.status === "false") {
         toast.error(res?.message);
+        setLoading(false);
         navigate("/signin");
       } else {
         dispatch(setCredentials({ ...res }));
@@ -85,11 +88,12 @@ export const SignInForm = () => {
     } catch (err) {
       console.error(err);
       toast.error(err?.data?.message || err?.error);
+    } finally {
+      setLoading(false);
     }
-    // }
   };
 
-  if (isLoading) {
+  if (loading) {
     return <Loader />;
   }
 
