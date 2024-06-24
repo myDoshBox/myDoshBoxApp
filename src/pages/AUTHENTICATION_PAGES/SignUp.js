@@ -64,7 +64,7 @@ const SignUpForm = () => {
             <div className="d-flex justify-content-center mt-2">
               <span style={{ fontSize: "14px" }}>Already have an account?</span>
               <Link
-                to={"../signin"}
+                to={"/signin"}
                 className="text-decoration-none ms-1 text-success"
                 style={{ fontSize: "14px" }}
               >

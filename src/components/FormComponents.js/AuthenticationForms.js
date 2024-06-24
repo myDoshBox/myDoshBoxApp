@@ -40,7 +40,7 @@ export const SignUpIndividual = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
     if (
       person.password === person.confirmPassword &&
       person.email &&
@@ -137,7 +137,7 @@ export const SignUpIndividual = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="container form">
+      <form className="container form">
         <div className="form-outline mb-2">
           <input
             type="email"

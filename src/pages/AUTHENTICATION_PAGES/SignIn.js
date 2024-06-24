@@ -79,8 +79,8 @@ export const SignInForm = () => {
 
       if (res?.status === "false") {
         toast.error(res?.message);
-        setLoading(false);
         navigate("/signin");
+        setLoading(false);
       } else {
         dispatch(setCredentials({ ...res }));
         navigate("/userdashboard");
