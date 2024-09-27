@@ -1,4 +1,4 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
 import {
   BackIcon,
@@ -6,8 +6,11 @@ import {
 } from "../../components/IconComponent/NavigationAndViewIcon";
 import { Link } from "react-router-dom";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { useSelector } from "react-redux";
+
 import { BackButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
 import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
+import { Button } from "react-bootstrap";
 
 const TransactionSummaryPage = () => {
   return (
@@ -29,20 +32,40 @@ const TransactionSummaryPage = () => {
 };
 
 const TransactionSummary = () => {
+  const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
+  const loggedInUser = localStorage.getItem("userInfo");
+  const userInfo = JSON.parse(loggedInUser).user.email;
+
+  const navigate = useNavigate();
+
+  // console.log(escrowProductInfo.phoneNumber);
+  // console.log(escrowProductInfo.description);
+  // console.log(escrowProductInfo.quantity);
+  // console.log(escrowProductInfo.price);
+  // console.log(escrowProductInfo.completionDate);
+  // console.log(escrowProductInfo.total);
+  // console.log(escrowProductInfo.image);
+  // console.log(userInfo.email);
+
+  const handleSubmit = () => {
+    navigate("/userdashboard/agreement");
+  };
+
   return (
     <div className="row">
       <div>
         <TransactionDetails
-          heading={`Transaction Summary
-`}
-          sub_text={`Please Confirm the following transaction initiated by user Eland Aaronson`}
-          email={`Opeyemi Andrewson`}
-          id={`AXSQWEDSC`}
-          description={`AXSQWEDSC`}
-          quality={`30`}
-          price={`N 120,000`}
-          date={`14 Aug 2022`}
-          total={`N3,600,000`}
+          heading={`Transaction Summary`}
+          buyer_email={`Please Confirm the following transaction initiated by user ${userInfo}`}
+          product_image={escrowProductInfo.product_image}
+          product_name={escrowProductInfo.product_name}
+          transaction_type={escrowProductInfo.transaction_type}
+          product_price={escrowProductInfo.product_price}
+          product_quantity={escrowProductInfo.product_quantity}
+          vendor_phone_number={escrowProductInfo.vendor_phone_number}
+          vendor_email={escrowProductInfo.vendor_email}
+          transaction_total={escrowProductInfo.transaction_total}
+          product_description={escrowProductInfo.product_description}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <Link to={"../initiate-escrow"}>
@@ -50,9 +73,13 @@ const TransactionSummary = () => {
             </Link>
           }
           rightBtn={
-            <Link to={"../agreement"}>
-              <ProceedButton />
-            </Link>
+            <Button
+              className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+              style={{ width: "120px" }}
+              onClick={handleSubmit}
+            >
+              PROCEED
+            </Button>
           }
         />
       </div>

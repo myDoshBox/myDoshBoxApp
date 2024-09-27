@@ -35,6 +35,7 @@ export const ProceedButton = () => {
     <Button
       className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
       style={{ width: "120px" }}
+      type="submit"
     >
       PROCEED
     </Button>

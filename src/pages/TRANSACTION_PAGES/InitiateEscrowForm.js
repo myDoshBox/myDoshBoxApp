@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CancelButton } from "../../components/ButtonsComponent/OtherButtons";
 import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
+
+import { useDispatch, useSelector } from "react-redux";
+import { setEscrowProduct } from "../../redux/slices/escrowProductSlices/escrowProductContentSlice";
 
 const InitiateEscrow = () => {
   return (
@@ -25,116 +28,196 @@ const InitiateEscrow = () => {
 };
 
 const InitiateEscrowForm = () => {
+  // const { userInfo } = useSelector((state) => state.usersauth);
+  const loggedInUser = localStorage.getItem("userInfo");
+  const userInfo = JSON.parse(loggedInUser).user.email;
+
+  const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
+
   const initialValues = {
-    phoneNumber: "",
-    description: "",
-    quantity: "",
-    price: "",
-    completionDate: Date,
-    total: 0,
-    image: File,
+    vendor_phone_number: "",
+    // buyer_email: userInfo.email,
+    vendor_email: "",
+    transaction_type: "",
+    product_name: "",
+    // product_category: "",
+    product_quantity: 0,
+    product_price: 0,
+    transaction_total: 0,
+    product_image: "",
+    product_description: "",
   };
-  const [transaction, setTransaction] = useState(initialValues);
+  const [transaction, setTransaction] = useState(
+    initialValues || escrowProductInfo
+  );
 
   const [transactionDetails, setTransactionDetails] = useState([]);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [buySellChoice, setBuySellChoice] = useState();
 
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setTransaction({ ...transaction, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      transaction.phoneNumber &&
-      transaction.description &&
-      transaction.quantity &&
-      transaction.price &&
-      transaction.completionDate &&
-      transaction.total &&
-      transaction.image
-    ) {
-      setTransactionDetails([...transactionDetails, transaction]);
-      setTransaction(initialValues);
+    setTransactionDetails([...transactionDetails, transaction]);
+    // setTransaction(initialValues);
+    // }
+
+    //  setFormErrors(validate(transaction));
+    //  setIsSubmit(true);
+
+    if (Object.keys(formErrors).length === 0) {
+      // console.log(transaction);
+      setIsSubmit(true);
+      dispatch(setEscrowProduct(transaction));
+      navigate("/userdashboard/transactionsummary");
+      // console.log("HI");
     }
-    setFormErrors(validate(transaction));
-    setIsSubmit(true);
   };
 
+  // console.log(transaction);
+
   useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(transaction);
-    }
-  }, [formErrors]);
+    // console.log(formErrors);
+    // if (Object.keys(formErrors).length !== 0 && !isSubmit) {
+    //   // console.log(transaction);
+    //   setFormErrors(validate(transaction));
+    // }
+    setFormErrors(validate(transaction));
+  }, [transaction]);
 
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-    if (!values.phoneNumber) {
-      errors.phoneNumber = "*This field is required";
+    if (!values.vendor_phone_number) {
+      errors.vendor_phone_number = "Please provide the vendor's phone number";
     }
-    if (!values.description) {
-      errors.description = "*This field is required";
+    if (!values.vendor_email) {
+      errors.vendor_email = "Please provide the vendor's email";
+    } else if (
+      !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(values.vendor_email)
+    ) {
+      errors.vendor_email = "Email is not valid";
     }
-    if (!values.quantity) {
-      errors.quantity = "*This field is required";
+    if (!values.transaction_type) {
+      errors.transaction_type = "Please select a transaction type";
     }
-    if (!values.price) {
-      errors.price = "*This field is required";
+    if (!values.product_name) {
+      errors.product_name =
+        "Please provide the name of the product that you are buying";
+    }
+    // if (!values.product_category) {
+    //   errors.product_category =
+    //     "Please provide the category of the product that you are buying";
+    // }
+    if (!values.product_quantity) {
+      errors.product_quantity =
+        "Please provide the quantity of the product you would like to purchase";
+    }
+    if (!values.product_price) {
+      errors.product_price =
+        "Please provide the price of the product you would like to purchase";
+    }
+    if (!values.product_image) {
+      errors.product_image =
+        "Please upload an image of the product you would like to purchase";
+    } else {
+      const imageExtension = values.product_image
+        .split(".")
+        .pop()
+        .toLowerCase();
+
+      if (
+        imageExtension !== "png" &&
+        imageExtension !== "jpg" &&
+        imageExtension !== "jpeg"
+      ) {
+        errors.product_image = "Only .jpg, .jpeg, and .png files are allowed";
+      }
+    }
+
+    if (!values.product_description) {
+      errors.product_description =
+        "Please provide the description of the product that you are buying";
     }
 
     return errors;
   };
 
   const totalCalc = () => {
-    transaction.total =
-      parseInt(transaction.quantity) * parseFloat(transaction.price) +
-      0.05 * parseFloat(transaction.price);
-    transaction.total = transaction.total.toFixed(2);
+    transaction.transaction_total =
+      parseInt(transaction.product_quantity) *
+        parseFloat(transaction.product_price) +
+      0.025 * parseFloat(transaction.product_price);
+    transaction.transaction_total = transaction.transaction_total.toFixed(2);
   };
   totalCalc();
 
-  const [showProductForm, setShowProductForm] = useState(false);
-  const [showServiceForm, setShowServiceForm] = useState(false);
+  // const [showProductForm, setShowProductForm] = useState(false);
+  // const [showServiceForm, setShowServiceForm] = useState(false);
 
-  const handleProductButtonClick = () => {
-    setShowProductForm(true);
-    setShowServiceForm(false);
-  };
+  // const handleProductButtonClick = () => {
+  //   setShowProductForm(true);
+  //   setShowServiceForm(false);
+  // };
 
-  const handleServiceButtonClick = () => {
-    setShowProductForm(false);
-    setShowServiceForm(true);
-  };
+  // const handleServiceButtonClick = () => {
+  //   setShowProductForm(false);
+  //   setShowServiceForm(true);
+  // };
+
   return (
     <div className="px-lg-5">
       <Form
         onSubmit={handleSubmit}
         className="w-100 mt-5 shadow InitiateEscrow p-3 p-lg-5 rounded"
       >
-        <Form.Group className="">
-          <Form.Label className="m-0">Phone Number</Form.Label>
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Vendor Phone Number</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter phone number"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={transaction.phoneNumber}
+            placeholder="Enter vendor's phone number"
+            id="vendor_phone_number"
+            name="vendor_phone_number"
+            value={transaction.vendor_phone_number}
             onChange={handleChange}
             className="escrow-input-field"
           />
-          <small className="small-text text-danger fst-italic fw-lighter">
-            *This field is required
-          </small>
-          <span className="escrow-form-error ms-3">
-            {formErrors.phoneNumber}
-          </span>
-        </Form.Group>
 
+          {formErrors.vendor_phone_number && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.vendor_phone_number}
+            </div>
+          )}
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Vendor Email</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter vendor's email"
+            id="vendor_email"
+            name="vendor_email"
+            value={transaction.vendor_email}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.vendor_email && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.vendor_email}
+            </div>
+          )}
+        </Form.Group>
         <Form.Group className="mb-3">
           <label className="">What type of transaction are you making?</label>
           <div className="d-flex">
@@ -145,30 +228,60 @@ const InitiateEscrowForm = () => {
               <input
                 type="radio"
                 className="form-check"
-                id="buying"
-                name="choice"
-                value="buying"
+                checked={buySellChoice === "buy"}
+                onChange={(e) => {
+                  setBuySellChoice("buy");
+                  handleChange(e);
+                }}
+                id="transaction_type"
+                name="transaction_type"
+                // value="buy"
+                value={"buy"}
               />
             </div>
             <div className="d-flex justify-content-between border border-1 rounded-1 px-2 pt-2 pb-1 EscrowChoice">
               <label className="form-check-label me-2 me-lg-3" for="selling">
-                Selling
+                Sell
               </label>
               <input
                 type="radio"
                 className="form-check"
-                id="selling"
-                name="choice"
-                value="selling"
+                checked={buySellChoice === "sell"}
+                onChange={(e) => {
+                  setBuySellChoice("sell");
+                  handleChange(e);
+                }}
+                id="transaction_type"
+                name="transaction_type"
+                value={"sell"}
               />
             </div>
           </div>
-          <small className="small-text text-danger fst-italic fw-lighter">
-            *This field is required
-          </small>
+          {formErrors.transaction_type && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.transaction_type}
+            </div>
+          )}
         </Form.Group>
-
         <Form.Group className="mb-3">
+          <Form.Label className="m-0">Product Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter product name"
+            id="product_name"
+            name="product_name"
+            value={transaction.product_name}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.product_name && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.product_name}
+            </div>
+          )}
+        </Form.Group>
+        {/* <Form.Group className="mb-3">
           <label className="">What are you transacting?</label>
           <div class="d-flex">
             <button
@@ -186,136 +299,165 @@ const InitiateEscrowForm = () => {
               Service
             </button>
           </div>
+        </Form.Group> */}
+        {/* {showProductForm && ( */}
+        {/* <> */}
+        {/* <Form.Group className="mb-3">
+            <Form.Label className="m-0">Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              id="name"
+              className="escrow-input-field"
+              placeholder="Enter product name"
+            />
+            <small className="small-text text-danger fst-italic fw-lighter">
+              *This field is required
+            </small>
+        </Form.Group> */}
+        {/* <div className="form-group mb-3">
+            <label for="category">Category</label>
+            <select
+              className="form-select escrow-dropdown-field border"
+              id="category"
+              placeholder="Pick your product category"
+            >
+              <option
+                className="escrow-dropdown-field"
+                value="Jewelry and Ornaments"
+              >
+                Jewelry and Ornaments
+              </option>
+              <option
+                className="escrow-dropdown-field"
+                value="Food and Nutrition"
+              >
+                Food and Nutrition
+              </option>
+              <option
+                className="escrow-dropdown-field"
+                value="Clothing and Textiles"
+              >
+                Clothing and Textiles
+              </option>
+            </select>
+          </div> */}
+        {/* <Form.Group className="">
+            <Form.Label className="m-0">Quantity</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Enter quantity"
+              id="quantity"
+              name="quantity"
+              value={transaction.quantity}
+              onChange={handleChange}
+              className="escrow-input-field"
+            />
+            <span className="escrow-form-error ms-3">
+              {formErrors.quantity}
+            </span>
+        </Form.Group> */}
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Product Quantity</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter product quantity"
+            id="product_quantity"
+            name="product_quantity"
+            value={transaction.product_quantity}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.product_quantity && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.product_quantity}
+            </div>
+          )}
         </Form.Group>
 
-        {showProductForm && (
-          <>
-            <Form.Group className="mb-3">
-              <Form.Label className="m-0">Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                id="name"
-                className="escrow-input-field"
-                placeholder="Enter product name"
-              />
-              <small className="small-text text-danger fst-italic fw-lighter">
-                *This field is required
-              </small>
-            </Form.Group>
-            <div className="form-group mb-3">
-              <label for="category">Category</label>
-              <select
-                className="form-select escrow-dropdown-field border"
-                id="category"
-                placeholder="Pick your product category"
-              >
-                <option
-                  className="escrow-dropdown-field"
-                  value="Jewelry and Ornaments"
-                >
-                  Jewelry and Ornaments
-                </option>
-                <option
-                  className="escrow-dropdown-field"
-                  value="Food and Nutrition"
-                >
-                  Food and Nutrition
-                </option>
-                <option
-                  className="escrow-dropdown-field"
-                  value="Clothing and Textiles"
-                >
-                  Clothing and Textiles
-                </option>
-              </select>
-            </div>
-            <Form.Group className="">
-              <Form.Label className="m-0">Quantity</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="Enter quantity"
-                id="quantity"
-                name="quantity"
-                value={transaction.quantity}
-                onChange={handleChange}
-                className="escrow-input-field"
-              />
-              <span className="escrow-form-error ms-3">
-                {formErrors.quantity}
-              </span>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="m-0">Price</Form.Label>
-              <div className="input-group">
-                <input
-                  className="form-control escrow-price-field"
-                  aria-label="price in Naira"
-                  type="number"
-                  placeholder="Enter the amount the product costs"
-                  id="price"
-                  name="price"
-                  value={transaction.price}
-                  onChange={handleChange}
-                />
-                <span className="input-group-text ngn2">₦</span>
-              </div>
-              <small className="small-text text-danger fst-italic fw-lighter">
-                *There is a 5% service charge on each transaction
-              </small>
-              <span className="escrow-form-error ms-3">{formErrors.price}</span>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="">Image</Form.Label>
-              <Form.Control
-                type="file"
-                placeholder="Attach Image(s)"
-                id="image"
-                name="image"
-                value={transaction.image}
-                onChange={handleChange}
-                className="escrow-input-field escrow-images"
-                accept="image/*"
-              />
-            </Form.Group>
-            <Form.Group className="">
-              <Form.Label className="">Description</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Enter product description"
-                id="description"
-                name="description"
-                value={transaction.description}
-                onChange={handleChange}
-                className="escrow-input-field"
-              />
-              <span className="escrow-form-error">
-                {formErrors.description}
-              </span>
-            </Form.Group>
-            <Form.Group className="my-3 d-flex align-items-center justify-content-end text-end">
-              <label for="total" className="">
-                Total
-              </label>
-              <span>
-                <span
-                  id="total"
-                  name="total"
-                  value={transaction.total}
-                  onChange={handleChange}
-                  className="ngn btn rounded-1"
-                >
-                  ₦ {transaction.total}
-                </span>
-                <small className="d-block small-text text-danger fst-italic fw-lighter">
-                  *Service charge included
-                </small>
-              </span>
-            </Form.Group>
-          </>
-        )}
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Product Price</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter product price"
+            id="product_price"
+            name="product_price"
+            value={transaction.product_price}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
 
+          {formErrors.product_price && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.product_price}
+            </div>
+          )}
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label className="">Product Image</Form.Label>
+          <Form.Control
+            type="file"
+            placeholder="Attach an Image"
+            id="product_image"
+            name="product_image"
+            value={transaction.product_image}
+            onChange={handleChange}
+            className="escrow-input-field escrow-images"
+            accept="image/*"
+          />
+
+          {formErrors.product_image && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.product_image}
+            </div>
+          )}
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Description</Form.Label>
+          <Form.Control
+            type="text"
+            as="textarea"
+            aria-label="With textarea"
+            placeholder="Enter product description"
+            id="product_description"
+            name="product_description"
+            value={transaction.product_description}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.product_description && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.product_description}
+            </div>
+          )}
+        </Form.Group>
+
+        <Form.Group className="my-3 d-flex align-items-center justify-content-end text-end">
+          <label for="total" className="">
+            Total
+          </label>
+          <span>
+            <span
+              id="total"
+              name="total"
+              value={transaction.product_price}
+              onChange={handleChange}
+              className="ngn btn rounded-1"
+            >
+              ₦ {transaction.transaction_total}
+            </span>
+            {/* <small className="d-block small-text text-danger fst-italic fw-lighter">
+              *Service charge included
+            </small> */}
+          </span>
+        </Form.Group>
+        {/* </> */}
+        {/* )} */}
+        {/* 
         {showServiceForm && (
           <>
             <Form.Group className="mb-3">
@@ -450,14 +592,14 @@ const InitiateEscrowForm = () => {
               </div>
             </Form.Group>
           </>
-        )}
+        )} */}
         <div className="d-flex justify-content-center">
           <Link to="../../userdashboard">
             <CancelButton />
           </Link>
-          <Link to="../transactionsummary">
-            <ProceedButton className="ms-3" />
-          </Link>
+          {/* <Link to="../transactionsummary"> */}
+          <ProceedButton className="ms-3" />
+          {/* </Link> */}
         </div>
       </Form>
     </div>

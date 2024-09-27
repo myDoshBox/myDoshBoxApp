@@ -5,11 +5,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // const URL = "/auth";
 
 const baseQuery = fetchBaseQuery({
+  // baseUrl: "http://localhost:9000/auth/",
   baseUrl: "https://mydoshbox-be.onrender.com/auth",
-  // baseUrl: "http://localhost:5000/auth",
+  // baseUrl: "https://my-dosh-box-be.vercel.app",
 });
 
 export const usersAPISlice = createApi({
+  reducerPath: "usersAPI",
   baseQuery,
   tagTypes: ["Users"],
   endpoints: (builder) => ({

@@ -42,7 +42,7 @@ const SignUpForm = () => {
       </h3>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={12}>
+          {/* <Col sm={12}>
             <Nav className="justify-content-center mb-4 row" variant="pills">
               <Nav.Item className="mx-auto my-2 col-md-6 col-sm-12 text-center">
                 <Nav.Link eventKey="first">As an Individual</Nav.Link>
@@ -51,15 +51,15 @@ const SignUpForm = () => {
                 <Nav.Link eventKey="second">As a Company</Nav.Link>
               </Nav.Item>
             </Nav>
-          </Col>
+          </Col> */}
           <Col sm={12}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <SignUpIndividual />
               </Tab.Pane>
-              <Tab.Pane eventKey="second">
+              {/* <Tab.Pane eventKey="second">
                 <SignUpOrganization />
-              </Tab.Pane>
+              </Tab.Pane> */}
             </Tab.Content>
             <div className="d-flex justify-content-center mt-2">
               <span style={{ fontSize: "14px" }}>Already have an account?</span>

@@ -46,42 +46,42 @@ export const GuestNavbar = () => {
             <Link
               to="/"
               className="nav-link nav-links"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               Home
             </Link>
             <Link
               to="/aboutus"
               className="nav-link nav-links"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               About Us
             </Link>
             <Link
               to="/pricingpage"
               className="nav-link nav-links"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               Pricing
             </Link>
             <Link
               to="/faqs"
               className="nav-link nav-links"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               FAQs
             </Link>
             <Link
               to="/contactus"
               className="nav-link nav-links"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               Contact Us
             </Link>
             <Link
               to="/signup"
               className="nav-links nav-btn"
-              onClick={handleDisappear}
+              onClick={() => handleDisappear}
             >
               <HomePageSignUpBtn />
             </Link>

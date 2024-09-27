@@ -42,16 +42,16 @@ export const GoBackHomeBtn = () => {
   );
 };
 // Ireject
-export const Ireject = () => {
-  return (
-    <Button
-      className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
-      style={{ width: "110px" }}
-    >
-      I Reject
-    </Button>
-  );
-};
+// export const Ireject = () => {
+//   return (
+//     <Button
+//       className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red"
+//       style={{ width: "110px" }}
+//     >
+//       I Reject
+//     </Button>
+//   );
+// };
 // DeleteProduct;
 export const DeleteProduct = () => {
   return (

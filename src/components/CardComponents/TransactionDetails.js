@@ -97,16 +97,20 @@ export const MiniRecentDispute = ({
 export const TransactionDetails = ({
   heading,
   sub_text,
-  email,
-  id,
-  description,
-  quality,
-  price,
-  date,
-  total,
   alert,
   leftBtn,
   rightBtn,
+  vendor_phone_number,
+  buyer_email,
+  vendor_email,
+  transaction_type,
+  product_name,
+  // product_category: "",
+  product_quantity,
+  product_price,
+  transaction_total,
+  product_image,
+  product_description,
 }) => {
   return (
     <>
@@ -114,11 +118,11 @@ export const TransactionDetails = ({
         <div className="col-md-12 col-sm-12">
           <header className="mt-3">
             <h4 className="text-center">{heading}</h4>
-            <p className="text-center text-muted fw-light">{sub_text}</p>
+            <p className="text-center text-muted fw-light">{buyer_email}</p>
           </header>
           <span className="mx-auto img-fluid">
             <img
-              src={product}
+              src={product_image}
               className="mx-auto"
               style={{ width: "100%" }}
               alt=""
@@ -128,32 +132,36 @@ export const TransactionDetails = ({
           <div className="card-body">
             <div className="p-3 mt-3">
               <div className="d-flex justify-content-between">
-                <h5>Sellers Email</h5>
-                <p>{email}</p>
+                <h5>Product Name</h5>
+                <p>{product_name}</p>
               </div>
               <div className="d-flex justify-content-between">
-                <h5>Transaction id</h5>
-                <p>{id}</p>
+                <h5>Transaction Type</h5>
+                <p>{transaction_type}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Product Price</h5>
+                <p>{product_price}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Product Quantity</h5>
+                <p>{product_quantity}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Seller's Phone</h5>
+                <p>{vendor_phone_number}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Seller's Email</h5>
+                <p>{vendor_email}</p>
+              </div>
+              <div className="d-flex justify-content-between">
+                <h5>Transaction Total</h5>
+                <p>{transaction_total}</p>
               </div>
               <div className="d-flex justify-content-between">
                 <h5>Description</h5>
-                <p>{description}</p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h5>Quality</h5>
-                <p>{quality}</p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h5>Price</h5>
-                <p>{price}</p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h5>Delivery compilation Date</h5>
-                <p>{date}</p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <h5>Total</h5>
-                <p>{total}</p>
+                <p>{product_description}</p>
               </div>
             </div>
             <div className="d-flex align-items-center border-danger border-start border-5 mx-auto mt-4 alert alert-danger border-0 rounded-0">
