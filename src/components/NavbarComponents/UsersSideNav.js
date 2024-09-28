@@ -123,7 +123,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
               <li className="d-flex mb-5 align-items-center SideNavItem">
                 <div className="me-3">
                   <NavLink
-                    to="transaction"
+                    to="transaction-history"
                     className={({ isActive }) =>
                       isActive ? activeClassName : baseClassName
                     }
@@ -256,7 +256,7 @@ const DesktopScreen = ({ name, ...props }) => {
             <li className="d-flex mb-5 align-items-center SideNavItem">
               <div>
                 <NavLink
-                  to="transaction"
+                  to="transaction-history"
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }

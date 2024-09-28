@@ -87,7 +87,10 @@ function App() {
           <Route path="userdashboard" element={<UsersSideNav />}>
             <Route index element={<UserDashboardPage />} />
             <Route path="settings" element={<UserSettingsPage />} />
-            <Route path="transaction" element={<UserTransactionHistory />} />
+            <Route
+              path="transaction-history"
+              element={<UserTransactionHistory />}
+            />
             <Route path="dispute" element={<UserDisputeHistory />} />
             <Route path="notification" element={<NotifictionPage />} />
             <Route path="updateprofile" element={<UpdateProfilePage />} />

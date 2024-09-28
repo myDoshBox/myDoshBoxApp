@@ -47,7 +47,7 @@ const UserDashboard = () => {
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
-              link={"transaction"}
+              link={"transaction-history"}
             />
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">

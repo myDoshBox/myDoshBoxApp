@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: "https://mydoshbox-be.onrender.com/transactions/",
+  // baseUrl: "http://localhost:9000/transactions/",
 });
 
 export const escrowProductsAPISlice = createApi({
