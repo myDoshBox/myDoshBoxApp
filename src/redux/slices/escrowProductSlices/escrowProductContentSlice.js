@@ -5,7 +5,7 @@ const initialState = {
   //     ? JSON.parse(localStorage.getItem("userInfo"))
   //     : null,
 
-  escrowProductInfo: {},
+  escrowProductInfo: null,
 };
 
 const escrowProductInfoSlice = createSlice({

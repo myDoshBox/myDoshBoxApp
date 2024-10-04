@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
 import { Link, useNavigate } from "react-router-dom";
 import { CancelButton } from "../../components/ButtonsComponent/OtherButtons";
@@ -7,6 +7,8 @@ import { ProceedButton } from "../../components/ButtonsComponent/TransactionButt
 
 import { useDispatch, useSelector } from "react-redux";
 import { setEscrowProduct } from "../../redux/slices/escrowProductSlices/escrowProductContentSlice";
+import { useAppContext } from "../../context/appContext";
+import { toast } from "react-toastify";
 
 const InitiateEscrow = () => {
   return (
@@ -30,7 +32,10 @@ const InitiateEscrow = () => {
 const InitiateEscrowForm = () => {
   // const { userInfo } = useSelector((state) => state.usersauth);
   const loggedInUser = localStorage.getItem("userInfo");
+
   const userInfo = JSON.parse(loggedInUser).user.email;
+  const { storeInitiateEscrowProductForm, initiateEscrowProductForm } =
+    useAppContext();
 
   const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
 
@@ -44,14 +49,19 @@ const InitiateEscrowForm = () => {
     product_quantity: 0,
     product_price: 0,
     transaction_total: 0,
-    product_image: "",
+    product_image: null,
     product_description: "",
   };
   const [transaction, setTransaction] = useState(
-    initialValues || escrowProductInfo
+    escrowProductInfo || initialValues
   );
 
+  // console.log("escrowProductInfo", escrowProductInfo);
+
   const [transactionDetails, setTransactionDetails] = useState([]);
+  const [productImageFile, setProductImageFile] = useState(null);
+  const [productImageURL, setProductImageURL] = useState("");
+
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
@@ -60,10 +70,141 @@ const InitiateEscrowForm = () => {
 
   const [buySellChoice, setBuySellChoice] = useState();
 
+  // const handleChange = (e) => {
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+  //   setTransaction({ ...transaction, [name]: value });
+  // };
+
+  // const handleChange = (e) => {
+  //   const name = e.target.name;
+
+  //   if (e.target.type === "file") {
+  //     // Handle file input
+  //     const file = e.target.files[0];
+  //     setTransaction({ ...transaction, [name]: file });
+  //   } else {
+  //     // Handle other inputs
+  //     const value = e.target.value;
+  //     setTransaction({ ...transaction, [name]: value });
+  //   }
+  // };
+
+  // const handleChange = (e) => {
+  //   const name = e.target.name;
+
+  //   if (e.target.type === "file") {
+  //     // Handle file input
+  //     const file = e.target.files[0];
+
+  //     setProductImageFile(file);
+
+  //     console.log("file.name", file.name);
+
+  //     // console.log("file", file);
+
+  //     if (file && (file.type === "image/png" || file.type === "image/jpeg")) {
+  //       // Only accept .png or .jpg files
+  //       setTransaction({ ...transaction, [name]: file });
+  //     } else {
+  //       console.error("Please upload an image file in .png or .jpg format");
+  //       // You can also set an error state here if needed
+  //       setTransaction({ ...transaction, [name]: file });
+  //       // setFormErrors(validate(transaction));
+  //     }
+  //   } else {
+  //     // Handle other inputs
+  //     const value = e.target.value;
+  //     setTransaction({ ...transaction, [name]: value });
+  //   }
+  // };
+
+  // const handleChange = (e) => {
+  //   const { name, type, value, files } = e.target;
+
+  //   if (type === "file") {
+  //     const file = files && files[0];
+  //     if (file && (file.type === "image/png" || file.type === "image/jpeg")) {
+  //       setProductImageFile(file);
+
+  //       // const filePreviewURL = URL.createObjectURL(file);
+  //       setTransaction({ ...transaction, [name]: file });
+  //       // setTransaction({
+  //       //   ...transaction,
+  //       //   [`${name}filePreviewURL`]: filePreviewURL,
+  //       // });
+  //     } else {
+  //       console.error("Please upload an image file in .png or .jpg format");
+  //     }
+  //   } else {
+  //     setTransaction({ ...transaction, [name]: value });
+  //   }
+  // };
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append("file", file);
+    // the upload_preset is a naming convention from cloudinary do not rename it.
+    formData.append("upload_preset", "ldk7mrmm");
+    formData.append("cloud_name", "dotkplv0d");
+
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/dotkplv0d/image/upload`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+    const data = await response.json();
+    setProductImageURL(data.secure_url);
+    setTransaction({ ...transaction, product_image: data.secure_url });
+    console.log(data.secure_url);
+  };
+
   const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setTransaction({ ...transaction, [name]: value });
+    const { name, type, files, value } = e.target;
+    // console.log({
+    //   e: e.target,
+    // });
+
+    if (type === "file") {
+      const file = files && files[0];
+      if (file && (file.type === "image/png" || file.type === "image/jpeg")) {
+        const url = URL.createObjectURL(file);
+        setProductImageURL(url);
+        setProductImageFile(file);
+        // setTransaction({ ...transaction, [name]: file });
+        setTransaction({
+          ...transaction,
+          [name]: value || file,
+        });
+      } else {
+        console.error("Please upload an image file in .png or .jpg format");
+        setFormErrors({
+          ...formErrors,
+          [name]: "Please upload an image file in .png or .jpg format",
+        });
+      }
+    } else {
+      setTransaction({ ...transaction, [name]: e.target.value });
+      setFormErrors({ ...formErrors, [name]: "" });
+    }
+  };
+
+  const handleImageUpload = () => {
+    if (!productImageFile) {
+      console.error("No image selected for upload");
+      setFormErrors({
+        ...formErrors,
+        product_image: "No image selected for upload",
+      });
+      return;
+    }
+  };
+
+  const handleCancel = () => {
+    dispatch(setEscrowProduct(null));
+    navigate("../../userdashboard");
   };
 
   const handleSubmit = (e) => {
@@ -79,10 +220,14 @@ const InitiateEscrowForm = () => {
       // console.log(transaction);
       setIsSubmit(true);
       dispatch(setEscrowProduct(transaction));
+      // console.log("transaction", transaction);
+      // storeInitiateEscrowProductForm()
       navigate("/userdashboard/transactionsummary");
       // console.log("HI");
     }
   };
+
+  // console.log("escrowProductInfo", escrowProductInfo);
 
   // console.log(transaction);
 
@@ -132,16 +277,24 @@ const InitiateEscrowForm = () => {
       errors.product_image =
         "Please upload an image of the product you would like to purchase";
     } else {
-      const imageExtension = values.product_image
-        .split(".")
-        .pop()
-        .toLowerCase();
+      const allowedExtensions = [
+        "png",
+        "jpg",
+        "jpeg",
+        "image/png",
+        "image/jpg",
+        "image/jpeg",
+      ];
 
-      if (
-        imageExtension !== "png" &&
-        imageExtension !== "jpg" &&
-        imageExtension !== "jpeg"
-      ) {
+      const imageExtension = values.product_image;
+      // .split(".")
+      // .pop()
+      // .toLowerCase();
+
+      // console.log("values.product_image", values.product_image);
+      // console.log("values.product_image.type", values.product_image.type);
+
+      if (!allowedExtensions.includes(productImageFile?.type)) {
         errors.product_image = "Only .jpg, .jpeg, and .png files are allowed";
       }
     }
@@ -154,14 +307,33 @@ const InitiateEscrowForm = () => {
     return errors;
   };
 
-  const totalCalc = () => {
-    transaction.transaction_total =
-      parseInt(transaction.product_quantity) *
-        parseFloat(transaction.product_price) +
-      0.025 * parseFloat(transaction.product_price);
-    transaction.transaction_total = transaction.transaction_total.toFixed(2);
-  };
-  totalCalc();
+  useEffect(() => {
+    if (!escrowProductInfo) {
+      const totalCalc = () => {
+        transaction.transaction_total =
+          parseInt(transaction.product_quantity) *
+            parseFloat(transaction.product_price) +
+          0.025 * parseFloat(transaction.product_price);
+        transaction.transaction_total =
+          transaction.transaction_total.toFixed(2);
+      };
+
+      totalCalc();
+
+      // console.log("ifcheck");
+    }
+  }, [escrowProductInfo, transaction]);
+
+  useEffect(() => {
+    if (escrowProductInfo) {
+      setBuySellChoice(transaction.transaction_type);
+      setProductImageFile(transaction.product_image);
+    }
+  }, [
+    escrowProductInfo,
+    transaction.product_image,
+    transaction.transaction_type,
+  ]);
 
   // const [showProductForm, setShowProductForm] = useState(false);
   // const [showServiceForm, setShowServiceForm] = useState(false);
@@ -402,11 +574,19 @@ const InitiateEscrowForm = () => {
             placeholder="Attach an Image"
             id="product_image"
             name="product_image"
-            value={transaction.product_image}
+            value={transaction.product_image.name}
             onChange={handleChange}
             className="escrow-input-field escrow-images"
             accept="image/*"
           />
+
+          {productImageURL ? (
+            <div className="mt-2">
+              <img src={productImageURL} alt="Selected product" width="100" />
+            </div>
+          ) : (
+            <div className="mt-2">No image selected</div>
+          )}
 
           {formErrors.product_image && (
             <div className="text-danger p-1" style={{ fontSize: "10px" }}>
@@ -444,11 +624,11 @@ const InitiateEscrowForm = () => {
             <span
               id="total"
               name="total"
-              value={transaction.product_price}
+              // value={transaction.product_price}
               onChange={handleChange}
               className="ngn btn rounded-1"
             >
-              ₦ {transaction.transaction_total}
+              ₦ {transaction.transaction_total || ""}
             </span>
             {/* <small className="d-block small-text text-danger fst-italic fw-lighter">
               *Service charge included
@@ -594,9 +774,16 @@ const InitiateEscrowForm = () => {
           </>
         )} */}
         <div className="d-flex justify-content-center">
-          <Link to="../../userdashboard">
-            <CancelButton />
-          </Link>
+          {/* <Link to="../../userdashboard"> */}
+          {/* <CancelButton onClick={handleCancel} /> */}
+          <Button
+            className="border-0 mt-3 btn btn-danger text-white pale-red"
+            style={{ width: "140px" }}
+            onClick={handleCancel}
+          >
+            CANCEL
+          </Button>
+          {/* </Link> */}
           {/* <Link to="../transactionsummary"> */}
           <ProceedButton className="ms-3" />
           {/* </Link> */}
