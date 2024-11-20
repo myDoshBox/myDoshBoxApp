@@ -146,7 +146,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Completed",
-      "status_style": "completed"
+      "status_style": "completed",
+      "transaction_type": "buy"
     },
     {
       "id": 2,
@@ -154,7 +155,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Awaiting Delivery",
-      "status_style": "awaiting"
+      "status_style": "awaiting",
+      "transaction_type": "buy"
     },
     {
       "id": 3,
@@ -162,7 +164,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Refunded",
-      "status_style": "refunded"
+      "status_style": "refunded",
+      "transaction_type": "buy"
     },
     {
       "id": 4,
@@ -170,7 +173,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Canceled",
-      "status_style": "canceled"
+      "status_style": "canceled",
+      "transaction_type": "buy"
     },
     {
       "id": 5,
@@ -178,7 +182,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Resolved",
-      "status_style": "resolved"
+      "status_style": "resolved",
+      "transaction_type": "buy"
     },
     {
       "id": 6,
@@ -186,7 +191,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Resolved",
-      "status_style": "resolved"
+      "status_style": "resolved",
+      "transaction_type": "buy"
     },
     {
       "id": 7,
@@ -194,7 +200,8 @@
       "price": 3275.45,
       "date": "2/01/23",
       "status_name": "Resolved",
-      "status_style": "resolved"
+      "status_style": "resolved",
+      "transaction_type": "buy"
     }
   ],
 

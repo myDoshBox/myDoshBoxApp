@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { TransactionDetails } from "../../components/CardComponents/TransactionDetails";
+import { TransactionDetails } from "../../../components/CardComponents/TransactionDetails";
 import {
   BackIcon,
   NextIcon,
-} from "../../components/IconComponent/NavigationAndViewIcon";
+} from "../../../components/IconComponent/NavigationAndViewIcon";
 import { Link } from "react-router-dom";
-import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { useSelector } from "react-redux";
 
-import { BackButton } from "../../components/ButtonsComponent/NavigationAndViewButtons";
-import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
+import { BackButton } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
+import { ProceedButton } from "../../../components/ButtonsComponent/TransactionButtons";
 import { Button } from "react-bootstrap";
 
-const TransactionSummaryPage = () => {
+const ProductTransactionSummaryPage = () => {
   return (
     <>
       <div className="contestPage">
@@ -33,19 +33,15 @@ const TransactionSummaryPage = () => {
 
 const TransactionSummary = () => {
   const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
-  const loggedInUser = localStorage.getItem("userInfo");
-  const userInfo = JSON.parse(loggedInUser).user.email;
+  // const loggedInUser = localStorage.getItem("userInfo");
+  // const userInfo = JSON.parse(loggedInUser).user.email;
+
+  const { userInfo } = useSelector((state) => state.usersauth);
+
+  // console.log("userEmail", userEmail);
+  const userEmail = userInfo?.user?.email;
 
   const navigate = useNavigate();
-
-  // console.log(escrowProductInfo.phoneNumber);
-  // console.log(escrowProductInfo.description);
-  // console.log(escrowProductInfo.quantity);
-  // console.log(escrowProductInfo.price);
-  // console.log(escrowProductInfo.completionDate);
-  // console.log(escrowProductInfo.total);
-  // console.log(escrowProductInfo.image);
-  // console.log(userInfo.email);
 
   const handleSubmit = () => {
     navigate("/userdashboard/agreement");
@@ -56,7 +52,7 @@ const TransactionSummary = () => {
       <div>
         <TransactionDetails
           heading={`Transaction Summary`}
-          buyer_email={`Please Confirm the following transaction initiated by user ${userInfo}`}
+          buyer_email={`Please Confirm the following transaction initiated by user ${userEmail}`}
           product_image={escrowProductInfo.product_image}
           product_name={escrowProductInfo.product_name}
           transaction_type={escrowProductInfo.transaction_type}
@@ -66,6 +62,7 @@ const TransactionSummary = () => {
           vendor_email={escrowProductInfo.vendor_email}
           transaction_total={escrowProductInfo.transaction_total}
           product_description={escrowProductInfo.product_description}
+          delivery_address={escrowProductInfo.delivery_address}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
             <Link to={"../initiate-escrow"}>
@@ -87,4 +84,4 @@ const TransactionSummary = () => {
   );
 };
 
-export default TransactionSummaryPage;
+export default ProductTransactionSummaryPage;

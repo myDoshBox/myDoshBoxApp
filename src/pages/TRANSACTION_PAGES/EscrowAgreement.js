@@ -4,7 +4,7 @@ import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbar
 // import { Ireject } from "../../components/ButtonsComponent/OtherButtons";
 import { Button } from "react-bootstrap";
 import { useInitiateEscrowProductTransactionMutation } from "../../redux/slices/escrowProductSlices/escrowProductsAPISlice";
-import { useVerifyEscrowProductTransactionPaymentMutation } from "../../redux/slices/escrowProductSlices/escrowProductsAPISlice";
+// import { useVerifyEscrowProductTransactionPaymentMutation } from "../../redux/slices/escrowProductSlices/escrowProductsAPISlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -33,51 +33,56 @@ const EscrowAgreementText = () => {
   const [initiateEscrowProduct, { data }] =
     useInitiateEscrowProductTransactionMutation();
 
-  const [verifyEscrowProductTransactionPayment] =
-    useVerifyEscrowProductTransactionPaymentMutation();
+  // const [verifyEscrowProductTransactionPayment] =
+  //   useVerifyEscrowProductTransactionPaymentMutation();
 
   const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
-  const loggedInUser = localStorage.getItem("userInfo");
-  const userInfo = JSON.parse(loggedInUser).user.email;
+  // const loggedInUser = localStorage.getItem("userInfo");
+  // const userInfo = JSON.parse(loggedInUser).user.email;
+
+  const { userInfo } = useSelector((state) => state.usersauth);
+
+  // console.log("userEmail", userEmail);
+  const userEmail = userInfo?.user?.email;
 
   // const navigate = useNavigate();
 
-  // Get the current URL's query parameters
-  const urlParams = new URLSearchParams(window.location.search);
+  // // Get the current URL's query parameters
+  // const urlParams = new URLSearchParams(window.location.search);
 
-  // Extract the 'reference' parameter from the URL
-  const reference = urlParams.get("reference");
+  // // Extract the 'reference' parameter from the URL
+  // const reference = urlParams.get("reference");
 
-  // Log or use the 'reference'
-  console.log(reference); // This will output: db917a34-7d04-4400-85fc-4c8d1918cbda
+  // // Log or use the 'reference'
+  // console.log(reference); // This will output: db917a34-7d04-4400-85fc-4c8d1918cbda
 
-  // console.log(escrowProductInfo);
-  // console.log(userInfo);
+  // // console.log(escrowProductInfo);
+  // // console.log(userInfo);
 
-  useEffect(() => {
-    if (reference) {
-      const verifyEscrowProductTransaction = async () => {
-        await verifyEscrowProductTransactionPayment(reference)
-          .unwrap()
-          .then((res) => {
-            // console.log(res);
+  // useEffect(() => {
+  //   if (reference) {
+  //     const verifyEscrowProductTransaction = async () => {
+  //       await verifyEscrowProductTransactionPayment(reference)
+  //         .unwrap()
+  //         .then((res) => {
+  //           // console.log(res);
 
-            toast.success(res?.message);
-          })
-          .catch((error) => {
-            // console.log(error);
-          });
-      };
-      verifyEscrowProductTransaction();
-    }
-  }, [reference]);
+  //           toast.success(res?.message);
+  //         })
+  //         .catch((error) => {
+  //           // console.log(error);
+  //         });
+  //     };
+  //     verifyEscrowProductTransaction();
+  //   }
+  // }, [reference, verifyEscrowProductTransactionPayment]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     await initiateEscrowProduct({
       ...escrowProductInfo,
-      buyer_email: userInfo,
+      buyer_email: userEmail,
     })
       .unwrap()
       .then((res) => {
@@ -172,12 +177,13 @@ const EscrowAgreementText = () => {
           <Ireject />
         </Link> */}
 
-        <Button
+        <Link
+          to="/userdashboard/transactionsummary"
           className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white pale-red  me-3"
           style={{ width: "110px" }}
         >
           I Reject
-        </Button>
+        </Link>
 
         <Button
           className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"

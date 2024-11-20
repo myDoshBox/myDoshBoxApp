@@ -6,6 +6,7 @@ const initialState = {
   //     : null,
 
   escrowProductInfo: null,
+  shippingInfo: null,
 };
 
 const escrowProductInfoSlice = createSlice({
@@ -15,9 +16,24 @@ const escrowProductInfoSlice = createSlice({
     setEscrowProduct: (state, action) => {
       state.escrowProductInfo = action.payload;
     },
+
+    setShippingInfo: (state, action) => {
+      state.shippingInfo = action.payload;
+    },
   },
 });
 
-export const { setEscrowProduct } = escrowProductInfoSlice.actions;
+// const shippingInfoSlice = createSlice({
+//   name: "shippingInfo",
+//   initialState,
+//   reducers: {
+//     setShippingInfo: (state, action) => {
+//       state.shippingInfo = action.payload;
+//     },
+//   },
+// });
+
+export const { setEscrowProduct, setShippingInfo } =
+  escrowProductInfoSlice.actions;
 
 export default escrowProductInfoSlice.reducer;

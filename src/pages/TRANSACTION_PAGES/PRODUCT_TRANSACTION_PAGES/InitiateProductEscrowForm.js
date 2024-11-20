@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
-import { UserDashboardNavbar } from "../../components/NavbarComponents/TopNavbars";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { Link, useNavigate } from "react-router-dom";
-import { CancelButton } from "../../components/ButtonsComponent/OtherButtons";
-import { ProceedButton } from "../../components/ButtonsComponent/TransactionButtons";
+import { CancelButton } from "../../../components/ButtonsComponent/OtherButtons";
+import { ProceedButton } from "../../../components/ButtonsComponent/TransactionButtons";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setEscrowProduct } from "../../redux/slices/escrowProductSlices/escrowProductContentSlice";
-import { useAppContext } from "../../context/appContext";
+import { setEscrowProduct } from "../../../redux/slices/escrowProductSlices/escrowProductContentSlice";
+import { useAppContext } from "../../../context/appContext";
 import { toast } from "react-toastify";
 
-const InitiateEscrow = () => {
+const InitiateProductEscrowForm = () => {
   return (
     <>
       <div className="contestPage">
@@ -42,6 +42,7 @@ const InitiateEscrowForm = () => {
   const initialValues = {
     vendor_phone_number: "",
     // buyer_email: userInfo.email,
+    vendor_name: "",
     vendor_email: "",
     transaction_type: "",
     product_name: "",
@@ -51,6 +52,7 @@ const InitiateEscrowForm = () => {
     transaction_total: 0,
     product_image: null,
     product_description: "",
+    delivery_address: "",
   };
   const [transaction, setTransaction] = useState(
     escrowProductInfo || initialValues
@@ -61,6 +63,8 @@ const InitiateEscrowForm = () => {
   const [transactionDetails, setTransactionDetails] = useState([]);
   const [productImageFile, setProductImageFile] = useState(null);
   const [productImageURL, setProductImageURL] = useState("");
+
+  const [transactionTotal, setTransactionTotal] = useState(0);
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -244,6 +248,9 @@ const InitiateEscrowForm = () => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
+    if (!values.vendor_name) {
+      errors.vendor_name = "Please provide the vendor's name";
+    }
     if (!values.vendor_phone_number) {
       errors.vendor_phone_number = "Please provide the vendor's phone number";
     }
@@ -304,35 +311,74 @@ const InitiateEscrowForm = () => {
         "Please provide the description of the product that you are buying";
     }
 
+    if (!values.delivery_address) {
+      errors.delivery_address =
+        "Please provide the delivery address where you want the product is to be delivered";
+    }
+
     return errors;
   };
 
-  useEffect(() => {
-    if (!escrowProductInfo) {
-      const totalCalc = () => {
-        transaction.transaction_total =
-          parseInt(transaction.product_quantity) *
-            parseFloat(transaction.product_price) +
-          0.025 * parseFloat(transaction.product_price);
-        transaction.transaction_total =
-          transaction.transaction_total.toFixed(2);
-      };
+  // useEffect(() => {
+  // if (escrowProductInfo) {
+  //   const totalCalc = () => {
+  //     transaction.transaction_total =
+  //       parseInt(transaction.product_quantity) *
+  //         parseFloat(transaction.product_price) +
+  //       0.025 * parseFloat(transaction.product_price);
+  //     transaction.transaction_total =
+  //       transaction.transaction_total.toFixed(2);
+  //   };
 
-      totalCalc();
+  //   totalCalc();
 
-      // console.log("ifcheck");
-    }
-  }, [escrowProductInfo, transaction]);
+  //   // console.log("ifcheck");
+  // }
+
+  //   const totalCalc = () => {
+  //     // Create a new copy of the transaction object to avoid mutating the original
+  //     const updatedTransaction = {
+  //       ...transaction,
+  //       transaction_total:
+  //         parseInt(transaction.product_quantity) *
+  //           parseFloat(transaction.product_price) +
+  //         0.025 * parseFloat(transaction.product_price),
+  //     };
+
+  //     updatedTransaction.transaction_total =
+  //       updatedTransaction.transaction_total.toFixed(2);
+
+  //     // Update the state with the new transaction object
+  //     setTransaction(updatedTransaction);
+  //   };
+
+  //   totalCalc();
+  // }, [escrowProductInfo, transaction]);
 
   useEffect(() => {
     if (escrowProductInfo) {
-      setBuySellChoice(transaction.transaction_type);
-      setProductImageFile(transaction.product_image);
+      const totalCalc = () => {
+        const total =
+          parseInt(escrowProductInfo.product_quantity) *
+            parseFloat(escrowProductInfo.product_price) +
+          0.025 * parseFloat(escrowProductInfo.product_price);
+
+        setTransactionTotal(total.toFixed(2)); // Store the calculated total
+      };
+
+      totalCalc();
+    }
+  }, [escrowProductInfo]);
+
+  useEffect(() => {
+    if (escrowProductInfo) {
+      setBuySellChoice(transaction?.transaction_type);
+      setProductImageFile(transaction?.product_image);
     }
   }, [
     escrowProductInfo,
-    transaction.product_image,
-    transaction.transaction_type,
+    transaction?.product_image,
+    transaction?.transaction_type,
   ]);
 
   // const [showProductForm, setShowProductForm] = useState(false);
@@ -354,6 +400,24 @@ const InitiateEscrowForm = () => {
         onSubmit={handleSubmit}
         className="w-100 mt-5 shadow InitiateEscrow p-3 p-lg-5 rounded"
       >
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Vendor Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter vendor's phone number"
+            id="vendor_name"
+            name="vendor_name"
+            value={transaction?.vendor_name}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.vendor_name && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.vendor_name}
+            </div>
+          )}
+        </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label className="m-0">Vendor Phone Number</Form.Label>
           <Form.Control
@@ -450,6 +514,25 @@ const InitiateEscrowForm = () => {
           {formErrors.product_name && (
             <div className="text-danger p-1" style={{ fontSize: "10px" }}>
               {formErrors.product_name}
+            </div>
+          )}
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label className="m-0">Delivery Address</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter delivery address"
+            id="delivery_address"
+            name="delivery_address"
+            value={transaction.delivery_address}
+            onChange={handleChange}
+            className="escrow-input-field"
+          />
+
+          {formErrors.delivery_address && (
+            <div className="text-danger p-1" style={{ fontSize: "10px" }}>
+              {formErrors.delivery_address}
             </div>
           )}
         </Form.Group>
@@ -574,7 +657,7 @@ const InitiateEscrowForm = () => {
             placeholder="Attach an Image"
             id="product_image"
             name="product_image"
-            value={transaction.product_image.name}
+            value={transaction.product_image?.name}
             onChange={handleChange}
             className="escrow-input-field escrow-images"
             accept="image/*"
@@ -793,4 +876,4 @@ const InitiateEscrowForm = () => {
   );
 };
 
-export default InitiateEscrow;
+export default InitiateProductEscrowForm;

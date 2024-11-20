@@ -44,8 +44,8 @@ import SignUpPage from "./pages/AUTHENTICATION_PAGES/SignUp";
 import VerifyEmailForm from "./pages/AUTHENTICATION_PAGES/VerifyEmailForm";
 import EmailVerificationMsg from "./pages/AUTHENTICATION_PAGES/EmailVerificationMsg";
 import ResetPassword from "./pages/AUTHENTICATION_PAGES/resetPassword";
-import InitiateEscrow from "./pages/TRANSACTION_PAGES/InitiateEscrowForm";
-import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/TransactionSummaryPage";
+import InitiateEscrow from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/InitiateProductEscrowForm";
+import TransactionSummaryPage from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/ProductTransactionSummaryPage";
 import EscrowAgreement from "./pages/TRANSACTION_PAGES/EscrowAgreement";
 import InitiateDisputesForm from "./pages/DISPUTE_PAGES/InitiateDisputesForm";
 import { GeneratedTicket } from "./pages/DISPUTE_PAGES/GeneratedTicket";
@@ -69,6 +69,17 @@ import "react-toastify/dist/ReactToastify.css";
 import VerifyEmail from "./pages/AUTHENTICATION_PAGES/EmailVerification";
 // react_toastify ends
 import PrivateRoute from "./components/PrivateRoute";
+import ShippingDetails from "./pages/TRANSACTION_PAGES/unused_pages/ConfirmEscrowProductDetails";
+import InitiateProductEscrowForm from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/InitiateProductEscrowForm";
+import ProductTransactionSummaryPage from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/ProductTransactionSummaryPage";
+import ConfirmEscrowProductDetails from "./pages/TRANSACTION_PAGES/unused_pages/ConfirmEscrowProductDetails";
+import SellerProductTransactionSummary from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/SellerProductTransactionSummary";
+import ShippingDetailsForm from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/ShippingDetailsForm";
+import ShippingDetailsSummary from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/ShippingDetailsSummary";
+import SellerShippingHistory from "./pages/DASHBOARDS/USER_DASHBOARD/SellerShippingHistory";
+import UserSettledTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettledTransactions";
+import UserSettledTransactions from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettledTransactions";
+import UserTransactionsInProgress from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionsInProgress";
 
 function App() {
   return (
@@ -91,17 +102,54 @@ function App() {
               path="transaction-history"
               element={<UserTransactionHistory />}
             />
+            <Route
+              path="transaction-history/transactions-in-progress"
+              element={<UserTransactionsInProgress />}
+            />
+            <Route
+              path="transaction-history/settled-transactions"
+              element={<UserSettledTransactions />}
+            />
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/:transaction_id"
+              element={<SellerProductTransactionSummary />}
+            />
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/shipping-details-form/:transaction_id"
+              element={<ShippingDetailsForm />}
+            />
+
+            {/* http://localhost:3000/userdashboard/transaction-history/confirm-escrow-product-transaction/shipping-details-form/43a38896-a0a8-4334-8d0a-f7da90e8b43a */}
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/shipping-details-form/shipping-details-summary/:transaction_id"
+              element={<ShippingDetailsSummary />}
+            />
+            <Route
+              path="shipping-history"
+              element={<SellerShippingHistory />}
+            />
+            {/* <Route
+                path="confirm-escrow-product-transaction/:transaction_id"
+                element={<ProductTransactionSummaryPage />}
+              />
+            </Route> */}
             <Route path="dispute" element={<UserDisputeHistory />} />
             <Route path="notification" element={<NotifictionPage />} />
             <Route path="updateprofile" element={<UpdateProfilePage />} />
             <Route path="updatebank" element={<UpdateBankDetailsPage />} />
             <Route path="reportissues" element={<ReportIssuesformPage />} />
-            <Route path="initiate-escrow" element={<InitiateEscrow />} />
-            <Route path="userspage" element={<UsersPage />} />
-
             <Route
-              path="transactionsummary"
-              element={<TransactionSummaryPage />}
+              path="initiate-escrow"
+              element={<InitiateProductEscrowForm />}
+            />
+            <Route path="userspage" element={<UsersPage />} />
+            {/* <Route
+              path={`transactions-in-progress`}
+              element={<ConfirmEscrowProductDetails />}
+            /> */}
+            <Route
+              path={`transactionsummary`}
+              element={<ProductTransactionSummaryPage />}
             />
             <Route path="agreement" element={<EscrowAgreement />} />
             <Route path="initiate-dispute" element={<InitiateDisputesForm />} />

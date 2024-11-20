@@ -45,17 +45,19 @@ const UserDashboard = () => {
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">
             <UserDashboardCard2
-              text={`Settled Transactions`}
-              icon={<SettledTransactionIcon />}
-              link={"transaction-history"}
+              text={`Transactions in Progress`}
+              icon={<CustomerCareIcon />}
+              link={"transaction-history/transactions-in-progress"}
             />
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">
             <UserDashboardCard2
-              text={`Customer Care`}
-              icon={<CustomerCareIcon />}
+              text={`Settled Transactions`}
+              icon={<SettledTransactionIcon />}
+              link={"transaction-history/settled-transactions"}
             />
           </div>
+
           <div className="col-sm-12 mb-3 mb-md-2 col-lg-3">
             <UserDashboardCard2
               text={`Initiate Disputes`}

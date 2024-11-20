@@ -1,5 +1,8 @@
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
+// import { useFetchAllTransactionsQuery } from "../../../redux/slices/escrowProductSlices/escrowProductsAPISlice";
+import { useFetchAllTransactionsQuery } from "../redux/slices/escrowProductSlices/escrowProductsAPISlice";
+import { useSelector } from "react-redux";
 
 export const PaginationBar = ({
   data,
@@ -10,20 +13,38 @@ export const PaginationBar = ({
   setTotalPages,
   className,
 }) => {
+  const { userInfo } = useSelector((state) => state.usersauth);
+  const userEmail = userInfo?.user?.email;
+
+  const {
+    data: transactions,
+    error,
+    isLoading,
+  } = useFetchAllTransactionsQuery(userEmail);
   // const [totalPages, setTotalPages] = useState(0);
 
   // Calculated the total pages based on the data length and items per page
+
+  const fetchedTransactions = transactions?.transactions;
+
   useEffect(() => {
-    setTotalPages(Math.ceil(data.length / itemsPerPage));
-  }, [data]);
+    if (fetchedTransactions && fetchedTransactions?.length > 0) {
+      setTotalPages(Math.ceil(fetchedTransactions?.length / itemsPerPage));
+    }
+  }, [fetchedTransactions, itemsPerPage, setTotalPages]);
 
   const entriesRange = () => {
-    const initial = (currentPage - 1) * itemsPerPage;
-    const final = initial + itemsPerPage;
+    if (!fetchedTransactions || fetchedTransactions.length === 0) {
+      return "0 of 0"; // Handle no data case
+    }
 
-    const adjustedFinal = final > data.length ? data.length : final;
+    const initial = (currentPage - 1) * itemsPerPage + 1; // Starting from 1, not 0
+    const final = initial + itemsPerPage - 1;
 
-    return `${initial} to ${adjustedFinal} of ${data.length}`;
+    const adjustedFinal =
+      final > fetchedTransactions.length ? fetchedTransactions.length : final;
+
+    return `Showing ${initial} to ${adjustedFinal} of ${fetchedTransactions.length} entries`;
   };
   return (
     <nav
