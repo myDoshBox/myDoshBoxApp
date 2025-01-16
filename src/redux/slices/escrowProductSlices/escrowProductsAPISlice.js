@@ -2,7 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
   // baseUrl: "https://mydoshbox-be.onrender.com/transactions/",
-  baseUrl: "http://localhost:9000/transactions/",
+  baseUrl: "https://mydoshbox-be.vercel.app/transactions/",
+  // baseUrl: "http://localhost:9000/transactions/",
 });
 
 export const escrowProductsAPISlice = createApi({
@@ -40,26 +41,50 @@ export const escrowProductsAPISlice = createApi({
       }),
     }),
 
-    confirmEscrowProduct: builder.mutation({
+    sellerFillOutShippingDetails: builder.mutation({
       // query: ({ token }) => ({
-      query: (transaction_id) => ({
+      query: (data) => ({
         url: `seller-fill-out-shipping-details`,
         method: "POST",
         // params: { token },
-        body: { transaction_id },
+        body: data,
       }),
     }),
 
-    fetchAllShippingDetails: builder.query({
-      query: ({ buyerEmail, vendorEmail }) => {
-        // Check if buyerEmail or sellerEmail is provided and construct the query accordingly
-        const email = buyerEmail ? buyerEmail : vendorEmail;
+    // sellerConfirmEscrowProduct: builder.mutation({
+    //   // query: ({ token }) => ({
+    //   query: (transaction_id) => ({
+    //     url: `seller-fill-out-shipping-details`,
+    //     method: "POST",
+    //     // params: { token },
+    //     body: { transaction_id },
+    //   }),
+    // }),
 
-        return {
-          url: `get-all-escrow-product-transaction/${email}`,
-          method: "GET",
-        };
-      },
+    // fetchAllShippingDetails: builder.query({
+    //   query: ({ buyerEmail, vendorEmail }) => {
+    //     // Check if buyerEmail or sellerEmail is provided and construct the query accordingly
+    //     const email = buyerEmail ? buyerEmail : vendorEmail;
+
+    //     return {
+    //       url: `/seller-fill-out-shipping-details/${email}`,
+    //       method: "GET",
+    //     };
+    //   },
+    // }),
+    fetchAllShippingDetails: builder.query({
+      query: (buyerEmail) => ({
+        url: `get-all-shipping-details/${buyerEmail}`, // Assuming your endpoint is /transactions/:buyerEmail
+        method: "GET",
+      }),
+    }),
+
+    buyerConfirmsProduct: builder.mutation({
+      query: (transaction_id) => ({
+        url: `buyer-confirms-product`,
+        method: "PUT",
+        body: { transaction_id },
+      }),
     }),
   }),
 });
@@ -67,8 +92,10 @@ export const escrowProductsAPISlice = createApi({
 export const {
   useInitiateEscrowProductTransactionMutation,
   useVerifyEscrowProductTransactionPaymentMutation,
+  useBuyerConfirmsProductMutation,
   useFetchAllTransactionsQuery,
   useFetchSingleTransactionsQuery,
-  useConfirmEscrowProductMutation,
+  // useSellerConfirmEscrowProductMutation,
+  useSellerFillOutShippingDetailsMutation,
   useFetchAllShippingDetailsQuery,
 } = escrowProductsAPISlice;

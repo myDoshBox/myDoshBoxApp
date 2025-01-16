@@ -86,7 +86,7 @@ const ShippingDetailsFormLogic = () => {
 
   const handleCancel = () => {
     dispatch(setShippingInfo(null));
-    navigate("../../userdashboard/shipping-history");
+    navigate("/userdashboard/transaction-history");
   };
 
   const handleSubmit = (e) => {

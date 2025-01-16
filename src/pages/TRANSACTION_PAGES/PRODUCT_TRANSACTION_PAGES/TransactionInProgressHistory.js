@@ -13,7 +13,7 @@ import { useVerifyEscrowProductTransactionPaymentMutation } from "../../../redux
 import { useFetchAllTransactionsQuery } from "../../../redux/slices/escrowProductSlices/escrowProductsAPISlice"; // Assume this is the query hook for fetching transactions
 import { useSelector } from "react-redux";
 
-const ConfirmEscrowProductDetails = () => {
+const TransactionInProgressHistory = () => {
   return (
     <div className="contestPage" style={{ "background-color": "#F9F9FB" }}>
       <div className="row">
@@ -31,51 +31,9 @@ const ConfirmEscrowProductDetails = () => {
 };
 
 export const RecentTransactionTable = () => {
-  // Get the current URL's query parameters
-  const urlParams = new URLSearchParams(window.location.search);
-
-  // Extract the 'reference' parameter from the URL
-  const reference = urlParams.get("reference");
-
-  // Log or use the 'reference'
-  console.log(reference); // This will output: db917a34-7d04-4400-85fc-4c8d1918cbda
-
-  // console.log(escrowProductInfo);
-  // console.log(userInfo);
-
-  const [
-    verifyEscrowProductTransactionPayment,
-    { isLoading: verifyingEscrow },
-  ] = useVerifyEscrowProductTransactionPaymentMutation();
-
-  useEffect(() => {
-    if (reference) {
-      const verifyEscrowProductTransaction = async () => {
-        await verifyEscrowProductTransactionPayment(reference)
-          .unwrap()
-          .then((res) => {
-            // console.log(res);
-
-            toast.success(res?.message);
-          })
-          .catch((error) => {
-            // console.log(error);
-          });
-      };
-      verifyEscrowProductTransaction();
-    }
-  }, [reference, verifyEscrowProductTransactionPayment]);
-
   // user detail for single user
   const { userInfo } = useSelector((state) => state.usersauth);
   const userEmail = userInfo?.user?.email;
-  console.log(userEmail);
-
-  // transaction detail for single user
-  // const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
-  // const transactionId = escrowProductInfo;
-
-  // console.log("transactionId", transactionId);
 
   const {
     data: transactions,
@@ -86,28 +44,6 @@ export const RecentTransactionTable = () => {
   });
 
   // console.log("transactions", transactions);
-
-  // const {
-  //   data: singleTransaction,
-  //   isLoading: singleLoading,
-  //   error: errMsg,
-  //   // {skip: !selectedTransactionId}
-  // } = useFetchSingleTransactionsQuery(selectedTransactionId, {
-  //   skip: !selectedTransactionId,
-  // });
-
-  // console.log("singleTransaction", singleTransaction);
-  // console.log("errMsg", errMsg);
-
-  // const {
-  //   data: singleTransaction,
-  //   // error,
-  //   // isLoading,
-  // } = fetchSingleTransactions(userEmail);
-
-  // console.log("transactions", transactions);
-  // console.log("transactions_ss", transactions?.transactions);
-  // console.log("error", error);
 
   const dropdownBtnValues = [
     { label: "All Data", value_1: "Last 7 days", value_2: "Over $1000" },
@@ -134,14 +70,8 @@ export const RecentTransactionTable = () => {
   };
 
   const handleShowMore = (transactionId) => {
-    // const selectedTransaction = fetchedTransactions?.find(
-    //   (transaction) => transaction.id === transactionId
-    // );
     setSelectedTransaction(transactionId);
     setShow(true);
-
-    // console.log("selectedTransaction", selectedTransaction);
-    // console.log("transactionid", transactionId);
   };
 
   const handleCloseModal = () => {
@@ -156,24 +86,35 @@ export const RecentTransactionTable = () => {
     if (!fetchedTransactions || fetchedTransactions?.length === 0) {
       return []; // Return an empty array if there is no data
     }
+    console.log("ft", fetchedTransactions);
+
+    const transactionsInProgress = fetchedTransactions?.filter(
+      (transaction) =>
+        // transaction?.transaction_status === "completed" &&
+        // userEmail === transaction?.vendor_email &&
+        // transaction?.buyer_email !== transaction?.vendor_email &&
+        // transaction?.seller_confirm_status === false
+        transaction?.transaction_status === "processing"
+    );
+
+    console.log("ct", transactionsInProgress);
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
-    return fetchedTransactions?.slice(startIndex, endIndex);
+    return transactionsInProgress?.slice(startIndex, endIndex);
   };
 
   // console.log("getSlicedData", getSlicedData());
 
   // if (isLoading) return <p>Loading...</p>;
   // if (error) return <p>Error loading transactions: {error?.data?.message}</p>;
-  if (verifyingEscrow) return <h1>Loading...</h1>;
   return (
     <div className="bg-white rounded-1 p-3" style={{ width: "100%" }}>
       <div>
         <div className="d-md-flex justify-content-between align-items-center mb-3">
           <h3 className="fs-6 m-0 mb-3 mb-md-0" style={{}}>
-            All Transactions
+            Transactions in Progress
           </h3>
           <div className="d-flex">
             {dropdownBtnValues.map((item) => {
@@ -297,6 +238,11 @@ export const RecentTransactionTable = () => {
 
         <Modal.Body>
           <Modal.Body>
+            {/* {selectedTransaction &&
+            userEmail === selectedTransaction?.vendor_email &&
+            selectedTransaction?.buyer_email !==
+              selectedTransaction?.vendor_email &&
+            selectedTransaction?.seller_confirm_status === false ? ( */}
             {selectedTransaction ? (
               <>
                 {selectedTransaction.transaction_type === "buy" ? (
@@ -541,7 +487,7 @@ export const RecentTransactionTableData = (props) => {
           </Button>
         </td> */}
 
-        {userEmail === vendor_email &&
+        {/* {userEmail === vendor_email &&
         buyer_email !== vendor_email &&
         seller_confirm_status === false &&
         transaction_status === "processing" ? (
@@ -568,10 +514,39 @@ export const RecentTransactionTableData = (props) => {
               View More
             </Button>
           </td>
+        )} */}
+
+        {userEmail === vendor_email &&
+        buyer_email !== vendor_email &&
+        seller_confirm_status === false &&
+        transaction_status === "processing" ? (
+          <td className="d-none d-md-table-cell py-md-3 text-center">
+            <Button
+              variant="outline-primary"
+              className="rounded-1 fs-sm"
+              onClick={() =>
+                navigate(
+                  `/userdashboard/transaction-history/confirm-escrow-product-transaction/shipping-details-form/${transaction_id}`
+                )
+              }
+            >
+              Confirm Transaction
+            </Button>
+          </td>
+        ) : (
+          <td className="d-none d-md-table-cell py-md-3 text-center">
+            <Button
+              variant="outline-primary"
+              className="rounded-1 fs-sm"
+              onClick={onViewMore}
+            >
+              View More
+            </Button>
+          </td>
         )}
       </tr>
     </>
   );
 };
 
-export default ConfirmEscrowProductDetails;
+export default TransactionInProgressHistory;

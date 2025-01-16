@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { TransactionDetails } from "../../../components/CardComponents/TransactionDetails";
-import {
-  BackIcon,
-  NextIcon,
-} from "../../../components/IconComponent/NavigationAndViewIcon";
 import { Link } from "react-router-dom";
-import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { useSelector } from "react-redux";
-
-import { BackButton } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
-import { ProceedButton } from "../../../components/ButtonsComponent/TransactionButtons";
 import { Button } from "react-bootstrap";
+// import { TransactionDetails } from "../../../components/CardComponents/TransactionDetails";
+// import {
+//   BackIcon,
+//   NextIcon,
+// } from "../../../components/IconComponent/NavigationAndViewIcon";
+// import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+// import { ProceedButton } from "../../../components/ButtonsComponent/TransactionButtons";
+import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
+import { BackButton } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
 import { ShippingDetails } from "../../../components/CardComponents/ShippingDetails";
 
 const ShippingDetailsSummary = () => {
@@ -46,7 +46,15 @@ const TransactionSummary = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/userdashboard/agreement");
+    navigate(
+      `/userdashboard/transaction-history/confirm-escrow-product-transaction/shipping-details-form/shipping-details-summary/${shippingInfo?.transaction_id}/agreement`
+    );
+  };
+
+  const handleBack = () => {
+    navigate(
+      `/userdashboard/transaction-history/confirm-escrow-product-transaction/shipping-details-form/${shippingInfo?.transaction_id}`
+    );
   };
 
   return (
@@ -64,9 +72,20 @@ const TransactionSummary = () => {
           pick_up_address={shippingInfo?.pick_up_address}
           alert={` By clicking proceed you are hereby accepting the terms and conditions of the buyer as stated above`}
           leftBtn={
-            <Link to={"../initiate-escrow"}>
-              <BackButton />
-            </Link>
+            // <Link
+            //   to={`confirm-escrow-product-transaction/shipping-details-form/${shippingInfo?.transaction_id}`}
+            // >
+
+            //   <BackButton />
+            // </Link>
+
+            <Button
+              className="all-btn border-0 mt-3 GeneralBtnStyle1 btn all-btn text-white"
+              style={{ width: "120px" }}
+              onClick={handleBack}
+            >
+              Back
+            </Button>
           }
           rightBtn={
             <Button

@@ -47,14 +47,18 @@ const UserDashboard = () => {
             <UserDashboardCard2
               text={`Transactions in Progress`}
               icon={<CustomerCareIcon />}
-              link={"transaction-history/transactions-in-progress"}
+              link={
+                "transaction-history/confirm-escrow-product-transaction/transactions-in-progress-history"
+              }
             />
           </div>
           <div className="col-sm-12 mb-4 mb-md-2 col-lg-3">
             <UserDashboardCard2
               text={`Settled Transactions`}
               icon={<SettledTransactionIcon />}
-              link={"transaction-history/settled-transactions"}
+              link={
+                "transaction-history/confirm-escrow-product-transaction/settled-transactions-history"
+              }
             />
           </div>
 

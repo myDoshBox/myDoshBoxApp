@@ -80,6 +80,10 @@ import SellerShippingHistory from "./pages/DASHBOARDS/USER_DASHBOARD/SellerShipp
 import UserSettledTransaction from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettledTransactions";
 import UserSettledTransactions from "./pages/DASHBOARDS/USER_DASHBOARD/UserSettledTransactions";
 import UserTransactionsInProgress from "./pages/DASHBOARDS/USER_DASHBOARD/UserTransactionsInProgress";
+import SellerConfirmationEscrowAgreement from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/SellerConfirmationEscrowAgreement";
+import ShippingDetailsHistory from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/ShippingDetailsHistory";
+import SettledTransactionHistory from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/SettledTransactionHistory";
+import TransactionInProgressHistory from "./pages/TRANSACTION_PAGES/PRODUCT_TRANSACTION_PAGES/TransactionInProgressHistory";
 
 function App() {
   return (
@@ -125,14 +129,36 @@ function App() {
               element={<ShippingDetailsSummary />}
             />
             <Route
-              path="shipping-history"
+              path="transaction-history/confirm-escrow-product-transaction/shipping-details-form/shipping-details-summary/:transaction_id/agreement"
+              element={<SellerConfirmationEscrowAgreement />}
+            />
+            {/* <Route
+              path="transaction-history/confirm-escrow-product-transaction/shipping-history"
               element={<SellerShippingHistory />}
+            /> */}
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/shipping-history"
+              element={<ShippingDetailsHistory />}
+            />
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/settled-transactions-history"
+              element={<SettledTransactionHistory />}
+            />
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/transactions-in-progress-history"
+              element={<TransactionInProgressHistory />}
             />
             {/* <Route
                 path="confirm-escrow-product-transaction/:transaction_id"
                 element={<ProductTransactionSummaryPage />}
               />
             </Route> */}
+
+            <Route
+              path="transaction-history/confirm-escrow-product-transaction/shipping-history/:transaction_id/initiate-dispute"
+              element={<InitiateDisputesForm />}
+            />
+
             <Route path="dispute" element={<UserDisputeHistory />} />
             <Route path="notification" element={<NotifictionPage />} />
             <Route path="updateprofile" element={<UpdateProfilePage />} />
@@ -152,7 +178,7 @@ function App() {
               element={<ProductTransactionSummaryPage />}
             />
             <Route path="agreement" element={<EscrowAgreement />} />
-            <Route path="initiate-dispute" element={<InitiateDisputesForm />} />
+
             <Route path="ticket" element={<GeneratedTicket />} />
           </Route>
           <Route path="neutraldashboard" element={<NeutralsSideNav />}>

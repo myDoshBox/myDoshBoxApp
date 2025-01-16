@@ -124,6 +124,52 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                 <div className="me-3">
                   <NavLink
                     to="transaction-history"
+                    end
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <NavTransactionIcon />
+                  </NavLink>
+                </div>
+              </li>
+
+              <li className="d-flex mb-5 align-items-center SideNavItem">
+                <div className="me-3">
+                  <NavLink
+                    to="transaction-history/confirm-escrow-product-transaction/transactions-in-progress-history"
+                    end
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <NavTransactionIcon />
+                  </NavLink>
+                </div>
+              </li>
+
+              <li className="d-flex mb-5 align-items-center SideNavItem">
+                <div className="me-3">
+                  <NavLink
+                    to="transaction-history/confirm-escrow-product-transaction/settled-transactions-history"
+                    end
+                    className={({ isActive }) =>
+                      isActive ? activeClassName : baseClassName
+                    }
+                    onClick={handleDisappear}
+                  >
+                    <NavTransactionIcon />
+                  </NavLink>
+                </div>
+              </li>
+
+              <li className="d-flex mb-5 align-items-center SideNavItem">
+                <div className="me-3">
+                  <NavLink
+                    to="transaction-history/confirm-escrow-product-transaction/shipping-history"
+                    end
                     className={({ isActive }) =>
                       isActive ? activeClassName : baseClassName
                     }
@@ -144,6 +190,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                 <div>
                   <NavLink
                     to="notification"
+                    end
                     className={({ isActive }) =>
                       isActive ? activeClassName : baseClassName
                     }
@@ -153,10 +200,12 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                   </NavLink>
                 </div>
               </li>
+
               <li className="d-flex  align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <NavLink
                     to="dispute"
+                    end
                     className={({ isActive }) =>
                       isActive ? activeClassName : baseClassName
                     }
@@ -166,10 +215,12 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                   </NavLink>
                 </div>
               </li>
+
               <li className="d-flex align-items-center SideNavItem mb-5">
                 <div className="me-3">
                   <NavLink
                     to="settings"
+                    end
                     className={({ isActive }) =>
                       isActive ? activeClassName : baseClassName
                     }
@@ -180,6 +231,7 @@ const MobileScreenSideNav = ({ name, ...props }) => {
                 </div>
               </li>
             </ul>
+
             <ul className="ps-3">
               <li className="d-flex align-items-center SideNavItem mt-5 position-fixed bottom">
                 <div className="me-3">
@@ -253,16 +305,63 @@ const DesktopScreen = ({ name, ...props }) => {
                 </NavLink>
               </div>
             </li>
+
             <li className="d-flex mb-5 align-items-center SideNavItem">
               <div>
                 <NavLink
                   to="transaction-history"
+                  end
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
                 >
                   <NavTransactionIcon />
                   <span>Transactions</span>
+                </NavLink>
+              </div>
+            </li>
+
+            <li className="d-flex mb-5 align-items-center SideNavItem">
+              <div>
+                <NavLink
+                  to="transaction-history/confirm-escrow-product-transaction/transactions-in-progress-history"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <NavTransactionIcon />
+                  <span>Transactions in Progress</span>
+                </NavLink>
+              </div>
+            </li>
+
+            <li className="d-flex mb-5 align-items-center SideNavItem">
+              <div>
+                <NavLink
+                  to="transaction-history/confirm-escrow-product-transaction/settled-transactions-history"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <NavTransactionIcon />
+                  <span>Settled Transactions</span>
+                </NavLink>
+              </div>
+            </li>
+
+            <li className="d-flex mb-5 align-items-center SideNavItem">
+              <div>
+                <NavLink
+                  to="transaction-history/confirm-escrow-product-transaction/shipping-history"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? activeClassName : baseClassName
+                  }
+                >
+                  <NavTransactionIcon />
+                  <span>Shipping Details</span>
                 </NavLink>
               </div>
             </li>
@@ -277,6 +376,7 @@ const DesktopScreen = ({ name, ...props }) => {
               <div className="me-3">
                 <NavLink
                   to="notification"
+                  end
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -291,6 +391,7 @@ const DesktopScreen = ({ name, ...props }) => {
               <div>
                 <NavLink
                   to="dispute"
+                  end
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
@@ -305,6 +406,7 @@ const DesktopScreen = ({ name, ...props }) => {
               <div>
                 <NavLink
                   to="settings"
+                  end
                   className={({ isActive }) =>
                     isActive ? activeClassName : baseClassName
                   }
