@@ -181,6 +181,7 @@ const InitiateEscrowForm = () => {
     if (!values.vendor_name) {
       errors.vendor_name = "Please provide the vendor's name";
     }
+    // check for numbers
     if (!values.vendor_phone_number) {
       errors.vendor_phone_number = "Please provide the vendor's phone number";
     }
