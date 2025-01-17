@@ -265,39 +265,59 @@ const InitiateEscrowForm = () => {
   //   }));
   // };
 
+  // useEffect(() => {
+  //   if (
+  //     escrowProductInfo &&
+  //     escrowProductInfo.product_quantity &&
+  //     escrowProductInfo.product_price
+  //   ) {
+  //     const totalCalc = () => {
+  //       const total =
+  //         parseInt(escrowProductInfo.product_quantity) *
+  //           parseFloat(escrowProductInfo.product_price) +
+  //         0.025 * parseFloat(escrowProductInfo.product_price);
+
+  //       // setTransactionTotal(total.toFixed(2)); // Store the calculated total
+  //       const calculatedTotal = total.toFixed(2);
+  //       setTransactionTotal(calculatedTotal);
+
+  //       // Update transaction object with transaction_total
+  //       setTransaction((prevTransaction) => ({
+  //         ...prevTransaction,
+  //         transaction_total: calculatedTotal,
+  //       }));
+  //     };
+
+  //     // Run calculation only if the required fields are filled
+  //     // if (transaction.product_quantity && transaction.product_price) {
+  //     totalCalc();
+  //     // }
+  //   }
+  // }, [
+  //   transaction.product_quantity,
+  //   transaction.product_price,
+  //   escrowProductInfo,
+  // ]);
+
   useEffect(() => {
-    if (
-      escrowProductInfo &&
-      escrowProductInfo.product_quantity &&
-      escrowProductInfo.product_price
-    ) {
-      const totalCalc = () => {
-        const total =
-          parseInt(escrowProductInfo.product_quantity) *
-            parseFloat(escrowProductInfo.product_price) +
-          0.025 * parseFloat(escrowProductInfo.product_price);
+    const calculateTotal = () => {
+      const total =
+        parseInt(transaction?.product_quantity) *
+          parseFloat(transaction?.product_price) +
+        0.025 * parseFloat(transaction?.product_price);
 
-        // setTransactionTotal(total.toFixed(2)); // Store the calculated total
-        const calculatedTotal = total.toFixed(2);
-        setTransactionTotal(calculatedTotal);
+      // Update both state and the transaction object
+      setTransactionTotal(total.toFixed(2));
+      setTransaction((prevTransaction) => ({
+        ...prevTransaction,
+        transaction_total: total.toFixed(2),
+      }));
+    };
 
-        // Update transaction object with transaction_total
-        setTransaction((prevTransaction) => ({
-          ...prevTransaction,
-          transaction_total: calculatedTotal,
-        }));
-      };
-
-      // Run calculation only if the required fields are filled
-      // if (transaction.product_quantity && transaction.product_price) {
-      totalCalc();
-      // }
+    if (transaction?.product_quantity && transaction?.product_price) {
+      calculateTotal();
     }
-  }, [
-    transaction.product_quantity,
-    transaction.product_price,
-    escrowProductInfo,
-  ]);
+  }, [transaction?.product_quantity, transaction?.product_price]);
 
   useEffect(() => {
     if (escrowProductInfo) {
