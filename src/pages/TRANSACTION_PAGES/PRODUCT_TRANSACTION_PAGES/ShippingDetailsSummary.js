@@ -11,6 +11,7 @@ import { Button } from "react-bootstrap";
 // import { ProceedButton } from "../../../components/ButtonsComponent/TransactionButtons";
 import { UserDashboardNavbar } from "../../../components/NavbarComponents/TopNavbars";
 import { BackButton } from "../../../components/ButtonsComponent/NavigationAndViewButtons";
+// import { ShippingDetails } from "../../../components/CardComponents/ShippingDetails";
 import { ShippingDetails } from "../../../components/CardComponents/ShippingDetails";
 
 const ShippingDetailsSummary = () => {
