@@ -2,8 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
   // baseUrl: "https://mydoshbox-be.onrender.com/transactions/",
-  baseUrl: "https://mydoshbox-be.vercel.app/transactions/",
-  // baseUrl: "http://localhost:9000/transactions/",
+  // baseUrl: "http://localhost:54020/transactions/",
+  baseUrl: "http://localhost:9000/transactions/",
 });
 
 export const escrowProductsAPISlice = createApi({
@@ -73,8 +73,8 @@ export const escrowProductsAPISlice = createApi({
     //   },
     // }),
     fetchAllShippingDetails: builder.query({
-      query: (buyerEmail) => ({
-        url: `get-all-shipping-details/${buyerEmail}`, // Assuming your endpoint is /transactions/:buyerEmail
+      query: (userEmail) => ({
+        url: `get-all-shipping-details/${userEmail}`, // Assuming your endpoint is /transactions/:buyerEmail
         method: "GET",
       }),
     }),

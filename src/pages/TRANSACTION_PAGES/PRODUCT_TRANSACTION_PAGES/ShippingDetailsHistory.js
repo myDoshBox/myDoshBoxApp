@@ -37,7 +37,7 @@ export const RecentTransactionTable = () => {
   // user detail for single user
   const { userInfo } = useSelector((state) => state.usersauth);
   const userEmail = userInfo?.user?.email;
-  // console.log(userEmail);
+  console.log("userEmail", userEmail);
 
   // transaction detail for single user
   // const { escrowProductInfo } = useSelector((state) => state.escrowProductInfo);
@@ -49,12 +49,9 @@ export const RecentTransactionTable = () => {
     data: shippingDetails,
     error,
     isLoading,
-  } = useFetchAllShippingDetailsQuery(
-    { userEmail },
-    {
-      refetchOnMountOrArgChange: true,
-    }
-  );
+  } = useFetchAllShippingDetailsQuery(userEmail, {
+    refetchOnMountOrArgChange: true,
+  });
 
   console.log("shippingDetails", shippingDetails?.transactions);
   // console.log("transactions_ss", transactions?.transactions);

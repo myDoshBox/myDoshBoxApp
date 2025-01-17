@@ -5,9 +5,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // const URL = "/auth";
 
 const baseQuery = fetchBaseQuery({
-  // baseUrl: "http://localhost:9000/auth/",
+  baseUrl: "http://localhost:9000/auth/",
   // baseUrl: "https://mydoshbox-be.onrender.com/auth",
-  baseUrl: "https://mydoshbox-be.vercel.app/auth",
+  // baseUrl: "http://localhost:54020/auth",
   // baseUrl: "https://my-dosh-box-be.vercel.app",
 });
 
